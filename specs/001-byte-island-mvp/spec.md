@@ -1,6 +1,6 @@
 # Byte Island MVP Specification
 
-- Status: Draft
+- Status: Approved
 - Owner: Project team
 - Source: `plan.md`
 - Last updated: 2026-09-11
@@ -21,7 +21,8 @@ Included:
 - One playable learning zone: Path Garden.
 - A four-step sequence puzzle: Water, Plant, Wait, Harvest.
 - Soft failure, retry, completion feedback, and return to the hub.
-- Solo play and shared-state multiplayer verification.
+- Solo play and isolated per-player multiplayer progression for 2–4 players.
+- A small Verse state manager connected to Creative devices.
 
 Excluded:
 
@@ -29,8 +30,6 @@ Excluded:
 - Persistent progress between sessions.
 - A general-purpose visual coding editor.
 - Combat, weapons, player elimination, and punitive fail states.
-- Custom Verse code unless a required behavior cannot be achieved reliably
-  with Creative devices.
 
 ## Player Stories
 
@@ -39,17 +38,17 @@ Excluded:
 As a first-time player, I want to understand what happened and where to go so
 that I can start playing without outside explanation.
 
-### P1 - Solve a sequence
+### P2 - Solve a sequence
 
 As a learner, I want immediate feedback while entering a sequence so that I
 can discover why order matters.
 
-### P1 - Recover safely
+### P3 - Recover safely
 
 As a learner, I want an incorrect attempt to reset quickly without eliminating
 me so that mistakes feel safe and useful.
 
-### P1 - Complete the learning loop
+### P4 - Complete the learning loop
 
 As a learner, I want a visible reward and concise recap after solving the
 puzzle so that I understand what I learned and know what to do next.
@@ -63,11 +62,11 @@ puzzle so that I understand what I learned and know what to do next.
   without relying on color alone.
 - `FR-004`: Path Garden MUST present four distinct inputs corresponding to
   Water, Plant, Wait, and Harvest.
-- `FR-005`: The puzzle MUST accept only the sequence Water, Plant, Wait,
-  Harvest as a successful attempt.
+- `FR-005`: For each player, the puzzle MUST accept only the sequence Water,
+  Plant, Wait, Harvest as a successful attempt.
 - `FR-006`: Each accepted input MUST provide immediate visual or audio feedback.
-- `FR-007`: An incorrect input MUST reset the current attempt without damage,
-  elimination, or loss of earned completion progress.
+- `FR-007`: An incorrect input MUST reset only the initiating player's current
+  attempt without damage, elimination, or loss of earned completion progress.
 - `FR-008`: A correct sequence MUST award exactly one Circuit Badge per player
   for the current round.
 - `FR-009`: Completion MUST show the term `algorithm` with a brief explanation
@@ -83,10 +82,13 @@ puzzle so that I understand what I learned and know what to do next.
   characters per message where the device allows it.
 - `NFR-002`: Required directions and puzzle states MUST use an icon, shape,
   label, or spatial cue in addition to color.
-- `NFR-003`: The experience MUST remain completable by one player.
-- `NFR-004`: Shared devices MUST not let one player's incorrect attempt remove
-  another player's earned badge.
+- `NFR-003`: The experience MUST support one to four players and remain fully
+  completable solo.
+- `NFR-004`: One player's input or reset MUST NOT change another player's
+  sequence progress or earned badge.
 - `NFR-005`: The project MUST pass UEFN project validation without errors.
+- `NFR-006`: The project MUST complete a UEFN memory calculation without a
+  publishing-blocking result.
 
 ## Acceptance Scenarios
 
@@ -128,22 +130,21 @@ retains the prior round's badge.
 ### AC-007 - Multiplayer isolation
 
 Given two players are in the experience, when one player makes an incorrect
-attempt, then the other player's earned Circuit Badge remains unchanged.
+attempt, then the other player's sequence progress and earned Circuit Badge
+remain unchanged.
 
 ## Success Measures
 
 - A new playtester identifies the first destination within 10 seconds.
 - A solo player completes the full loop without developer intervention.
+- Two-player testing shows no cross-player state interference.
 - All acceptance scenarios pass in a launched UEFN session.
 - Project validation reports zero errors.
+- UEFN memory calculation reports no publishing blocker.
 
-## Open Decisions
+## Decisions
 
-These choices do not block grayboxing but must be resolved before the spec is
-marked Approved:
-
-- `OD-001`: Primary age band: 8-10 or 11-14.
-- `OD-002`: Initial language: English only or English and Ukrainian.
-- `OD-003`: Release context: private classroom island or public Discover map.
-- `OD-004`: Multiplayer interaction model: per-player puzzle state or a shared
-  cooperative puzzle with per-player rewards.
+- `OD-001`: The primary age band is 8–10.
+- `OD-002`: MVP player-facing text is English; Ukrainian is deferred.
+- `OD-003`: The release target is public Discover after private playtesting.
+- `OD-004`: Puzzle progress and rewards are tracked independently per player.

@@ -1,20 +1,21 @@
 # Byte Island MVP Implementation Plan
 
-- Status: Proposed
+- Status: Approved
 - Specification: `spec.md`
 
 ## Approach
 
-Build the MVP with Creative devices in the existing
-`Content/fn_shoreline_island.umap`. Keep the first pass as a graybox and prove
-the complete player loop before adding decorative assets. Use Verse only if
-device-only testing cannot satisfy state isolation or exactly-once rewards.
+Build the MVP in the existing `Content/fn_shoreline_island.umap`. Creative
+devices provide interaction and feedback; a small Verse device owns per-player
+sequence state and exactly-once rewards. Keep the first pass as a graybox and
+prove the complete player loop before adding decorative assets.
 
 ## Island Areas
 
 ### Hub
 
 - Player Spawner for the safe arrival point (`FR-001`).
+- Island Settings configured for one to four players.
 - HUD Message or Pop-up Dialog for the first objective (`FR-002`).
 - Billboard, icon, and landmarked path toward Path Garden (`FR-003`,
   `NFR-002`).
@@ -40,9 +41,12 @@ ready -> water_done -> plant_done -> wait_done -> complete
   +---------------- round reset ----------------------------+
 ```
 
-Completion reward state must be tracked per player. Puzzle input state may be
-per player or intentionally cooperative; `OD-004` must be resolved before the
-final device configuration is approved.
+Both input progress and completion reward state are tracked per player. A wrong
+input resets only that player's state. Round start clears all transient state.
+
+Implement this in `Content/byte_island_game_manager.verse`. Expose the four
+inputs, tracker, feedback devices, and return route as `@editable` references so
+presentation remains configurable in UEFN.
 
 ## Device Naming
 
@@ -58,17 +62,18 @@ Use names that expose responsibility in the Outliner, for example:
 ## Validation Strategy
 
 - Run each acceptance scenario in `spec.md` during Launch Session.
-- Test once with one player and once with at least two players.
+- Test once with one player and once with at least two players; verify the
+  configured four-player limit.
 - End and restart a round to verify complete state reset.
 - Run **Project > Validate Project** and record errors and warnings.
 - Capture one screenshot of the hub direction cue and one of Path Garden.
 
 ## Risks
 
-- Shared trigger state may allow one player to disrupt another player's
-  attempt. Resolve `OD-004` before final wiring.
-- A Score Manager may award repeat completions unless guarded by per-player
-  tracker state.
+- Incorrect device routing could bypass the Verse state owner and create
+  cross-player interference; route every sequence input through the manager.
+- A Tracker may award repeat completions unless guarded by the per-player Verse
+  completion flag.
 - Color-only pads would fail accessibility requirements; every pad needs a
   readable label or distinct symbol.
 - Editor-owned map and external actor files must be saved and committed as one

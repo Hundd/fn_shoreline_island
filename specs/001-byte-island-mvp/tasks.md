@@ -1,17 +1,18 @@
 # Byte Island MVP Tasks
 
-- Status: Not started
+- Status: Approved
 - Specification: `spec.md`
 - Implementation plan: `plan.md`
 
 ## 1. Approve the Specification
 
-- [ ] `T-001` Resolve `OD-001` through `OD-004` and update `spec.md`.
-- [ ] `T-002` Review every requirement for observable, testable behavior.
-- [ ] `T-003` Mark `spec.md` as Approved.
+- [x] `T-001` Resolve `OD-001` through `OD-004` and update `spec.md`.
+- [x] `T-002` Review every requirement for observable, testable behavior.
+- [x] `T-003` Mark `spec.md` as Approved.
 
 ## 2. Graybox the Hub
 
+- [ ] `T-009` Configure Island Settings for one to four players (`NFR-003`).
 - [ ] `T-010` Configure and verify the safe hub spawn (`FR-001`).
 - [ ] `T-011` Add the initial Path Garden objective (`FR-002`, `NFR-001`).
 - [ ] `T-012` Build accessible route cues to Path Garden (`FR-003`,
@@ -20,7 +21,8 @@
 ## 3. Build Path Garden
 
 - [ ] `T-020` Place and label the four sequence inputs (`FR-004`, `NFR-002`).
-- [ ] `T-021` Wire ordered sequence progression (`FR-005`).
+- [ ] `T-021` Create `Content/byte_island_game_manager.verse` and wire
+  per-player ordered sequence progression (`FR-005`, `NFR-004`).
 - [ ] `T-022` Add immediate accepted-input feedback (`FR-006`).
 - [ ] `T-023` Add safe incorrect-input reset behavior (`FR-007`).
 - [ ] `T-024` Add exactly-once per-player Circuit Badge reward (`FR-008`,
@@ -34,7 +36,8 @@
 - [ ] `T-030` Pass `AC-001` through `AC-006` in a solo Launch Session.
 - [ ] `T-031` Pass `AC-007` and repeat completion testing with at least two
   players.
-- [ ] `T-032` Run project validation and record zero errors (`NFR-005`).
+- [ ] `T-032` Run project validation and a memory calculation with no blocking
+  result (`NFR-005`, `NFR-006`).
 - [ ] `T-033` Record warnings, screenshots, playtest date, and tester count
   below.
 - [ ] `T-034` Mark all three feature documents as Validated.
