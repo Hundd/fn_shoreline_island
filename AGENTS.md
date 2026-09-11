@@ -23,6 +23,10 @@ Treat binary `.uasset` and `.umap` files as editor-owned. Make asset changes thr
 
 There is no automated test framework or coverage threshold. For every gameplay change, launch a session and verify spawn flow, objective progression, reset behavior, and solo play. Test multiplayer behavior when devices share state. Run project validation and resolve errors before requesting review; note any warnings intentionally left in place.
 
+## Spec-Driven Workflow
+
+Use `specs/` as the source of truth for planned player-visible changes. Before implementation, create or update a numbered feature directory containing `spec.md`, `plan.md`, and `tasks.md`. Define testable requirements and Given/When/Then acceptance scenarios before editing the island. Record implementation choices in the feature plan, link tasks to requirement IDs, and check off tasks only after the corresponding UEFN validation or playtest evidence has been recorded. If editor work changes the intended behavior, update the spec in the same change.
+
 ## Commit & Pull Request Guidelines
 
 Git history is unavailable in this checkout, so use short imperative commit subjects such as `Add sequence puzzle triggers`. Keep map, asset, and Verse changes focused. Pull requests should describe player-visible behavior, list validation and playtest steps, identify the changed map or zones, and include screenshots or a short capture for visual changes. Link the relevant issue or roadmap item when one exists.
