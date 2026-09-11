@@ -1,0 +1,49 @@
+{
+    "folders": [
+        {
+            "name": "/invaliddomain/fn_shoreline_island (fn_shoreline_island)",
+            "path": "C:/labs/fn_shoreline_island/Content"
+        },
+        {
+            "name": "/invaliddomain/fn_shoreline_island (fn_shoreline_island/Assets)",
+            "path": "C:/Users/Andrii_Polchaninov/AppData/Local/UnrealEditorFortnite/Saved/VerseProject/fn_shoreline_island/Digests/fn_shoreline_island-Assets"
+        },
+        {
+            "name": "vproject (read-only)",
+            "path": "C:/Users/Andrii_Polchaninov/AppData/Local/UnrealEditorFortnite/Saved/VerseProject/fn_shoreline_island/vproject"
+        },
+        {
+            "name": "Built-in Digests",
+            "path": "C:/Users/Andrii_Polchaninov/AppData/Local/UnrealEditorFortnite/Saved/VerseProject/fn_shoreline_island/Digests/BuiltIn"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/*.uasset": true,
+            "**/*.umap": true,
+            "**/*.png": true,
+            "**/*.jpg": true,
+            "**/*.tga": true,
+            "_INT": true,
+            "**/*.vproject": true,
+            "__ExternalActors__": true,
+            "__ExternalObjects__": true,
+            "Collections": true,
+            "Developers": true
+        },
+        "files.autoSave": "onWindowChange",
+        "editor.bracketPairColorization.enabled": false,
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Verse Debug",
+                "type": "verse",
+                "request": "attach",
+                "debugServer": 1961
+            }
+        ]
+    }
+}

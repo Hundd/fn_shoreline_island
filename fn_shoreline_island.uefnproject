@@ -1,0 +1,69 @@
+{
+	"fileVersion": 15,
+	"title": "fn_shoreline_island",
+	"description": "",
+	"keyArt": "Resources/Icon128.png",
+	"docsUrl": "",
+	"apiAccess": "Private",
+	"bindings":
+	{
+		"projectId": "f0954baa-934f-4146-af71-39901509a5c2",
+		"modules":
+		{
+			"fn_shoreline_island": "c4c83033-b84a-4c90-8273-7db7493bb271"
+		},
+		"bSuppressAutomaticVersePathAssignment": false,
+		"projectVersePath": ""
+	},
+	"compatibilityVersion": "42.10",
+	"requiredRedirectorStartingVersion": "42.10.57819926",
+	"editorPermissions": [],
+	"epicApp": "",
+	"sortPriority": 0,
+	"featureSet": "",
+	"plugins": [
+		{
+			"name": "fn_shoreline_island",
+			"bIsRoot": true,
+			"bIsPublic": false
+		}
+	],
+	"dataSets":
+	{
+		"matchmaking":
+		{
+			"maxPlayers": 16,
+			"maxTeamCount": 16,
+			"maxTeamSize": 16,
+			"maxSocialPartySize": 16,
+			"allowJoinInProgress": true,
+			"allowSquadFillOption": false,
+			"islandQueuePrivacy": "Public",
+			"minPlayers": 1,
+			"overtimePlayerTarget": 1,
+			"queueMainDuration": 5,
+			"queueOvertimeDuration": 5,
+			"useSkillBasedMatchmaking": false,
+			"ratingType": "",
+			"splitscreenDisabled": false,
+			"version": 1
+		},
+		"experimental":
+		{
+			"sceneGraph":
+			{
+				"bIsSceneGraphSystemAllowed": true,
+				"bEnableOneFilePerEntity": false
+			},
+			"version": 1,
+			"pythonExperimental":
+			{
+				"bEnablePythonForProject": true
+			},
+			"toolsets":
+			{
+				"bEnableToolsetsForProject": true
+			}
+		}
+	}
+}
