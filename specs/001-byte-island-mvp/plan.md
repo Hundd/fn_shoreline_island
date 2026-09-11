@@ -24,8 +24,10 @@ prove the complete player loop before adding decorative assets.
 ### Path Garden
 
 - Four labeled interaction points: Water, Plant, Wait, Harvest (`FR-004`).
-- Trigger chain that advances only for the expected next step (`FR-005`).
-- VFX, light, prop motion, or sound response for each accepted step (`FR-006`).
+- Four buttons routed through the Verse manager, accepting only the expected
+  next step (`FR-005`).
+- Immediate per-player HUD step feedback (`FR-006`); shared visuals must not
+  imply another player's progress.
 - Reset signal for an incorrect step (`FR-007`).
 - Tracker or Score Manager for a one-per-player Circuit Badge (`FR-008`).
 - Completion message defining algorithm (`FR-009`).
@@ -47,6 +49,15 @@ input resets only that player's state. Round start clears all transient state.
 Implement this in `Content/byte_island_game_manager.verse`. Expose the four
 inputs, tracker, feedback devices, and return route as `@editable` references so
 presentation remains configurable in UEFN.
+
+The tracker uses Individual sharing with persistence off and a target of one.
+Completed players can replay the sequence without earning another badge.
+Respawning preserves the current round's state. Round start clears all states.
+A labeled return button teleports only its activating player to the hub.
+
+HUD messages use agent-targeted Show calls, no priority override, no join-in-
+progress message queue, and Replay when already showing. Rapid reset/retry
+was tested to ensure new feedback replaces an active message.
 
 ## Device Naming
 
