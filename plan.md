@@ -76,6 +76,11 @@ Use descriptive Outliner names such as `hub_player_spawner_01`, `path_water_butt
 
 ## Future Releases
 
+The proposed next-stage roadmap is [Post-MVP Roadmap](specs/post-mvp-roadmap.md).
+The next recommended build is specified as a draft in
+[`002-loop-lagoon`](specs/002-loop-lagoon/spec.md). Later zones below remain
+ideas until they receive their own approved feature specifications.
+
 After the MVP is validated, specify and build one zone at a time:
 
 1. Loop Lagoon — repetition and stop conditions
