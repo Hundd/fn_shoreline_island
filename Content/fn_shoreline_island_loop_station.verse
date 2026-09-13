@@ -54,6 +54,9 @@ fn_shoreline_island_loop_station := class(creative_device):
     var generation:int = 0
     var home:transform = transform{}
     var parcel_home:transform = transform{}
+    var lantern_homes:[]transform = array{}
+    var lit_lanterns:int = 0
+    var robot_tile:int = 0
     var observed_round:int = -1
 
     claim_text<localizes>:message = "Claim robot station"
@@ -62,7 +65,7 @@ fn_shoreline_island_loop_station := class(creative_device):
     help_text<localizes>:message = "Help"
     next_text<localizes>:message = "Next challenge / Replay"
     return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>:message = "LOOP LAGOON\nPress CLAIM to begin."
+    available_text<localizes>(dock_number:int):message = "LOOP LAGOON | Dock {dock_number}\nPress CLAIM to begin."
     occupied_text<localizes>:message = "This robot has a pilot. Choose another station."
     other_station_text<localizes>:message = "You already have a robot. Leave that station before claiming another."
     claim_first_text<localizes>:message = "Claim an available robot station first."
@@ -70,27 +73,30 @@ fn_shoreline_island_loop_station := class(creative_device):
     delivery_text<localizes>:message = "Guide the robot to the parcel. Choose a repeat count, then Run."
     lantern_text<localizes>:message = "Light every dock lantern. Repeat Move, Light. Then Run."
     transfer_text<localizes>:message = "The parcel moved! Change your loop to reach its new tile."
-    hint_text<localizes>:message = "A loop repeats its steps. Count the tiles from the robot to its goal."
+    hint_text<localizes>:message = "A loop repeats its steps. Count the tiles from tile 0 to the goal."
     hint_lantern_text<localizes>:message = "Each repeat moves one tile and lights one lantern. Count the lanterns."
     success_text<localizes>:message = "You reached the goal! Press Next challenge to continue."
     complete_text<localizes>:message = "Loop Badge earned! A loop repeats steps. Return to the hub or Replay."
     replay_text<localizes>:message = "Solved again! Your Loop Badge is already saved for this round."
     pilot_board<localizes>(input_player:agent, challenge_number:int, repeat_count:int, target_tile:int):message = "Pilot: {input_player}\nChallenge {challenge_number} | Repeat {repeat_count}\nStart: 0 | Goal: {target_tile}"
     step_board<localizes>(input_player:agent, repeat_count:int, tile:int, action:string):message = "Pilot: {input_player} | Repeat {repeat_count}\n{action}\nRobot tile: {tile}"
+    lantern_board<localizes>(input_player:agent, repeat_count:int, tile:int, action:string, lamp_one:string, lamp_two:string, lamp_three:string):message = "Pilot: {input_player} | Repeat {repeat_count}\n{action} | Tile {tile}\nLamps: 1 {lamp_one} / 2 {lamp_two} / 3 {lamp_three}"
     result_text<localizes>(tile:int, target_tile:int):message = "Robot stopped at {tile}. Goal: {target_tile}. Change the count and try again."
     answer_text<localizes>(repeat_count:int):message = "Try Repeat {repeat_count}, then Run. Watch one move for each repeat."
     selected_run_text<localizes>(repeat_count:int):message = "Run: Repeat {repeat_count}"
 
     OnBegin<override>()<suspends>:void =
+        Hide()
         set home = robot.GetTransform()
         set parcel_home = parcel.GetTransform()
+        set lantern_homes = array{lantern_1.GetTransform(), lantern_2.GetTransform(), lantern_3.GetTransform()}
         claim_button.SetInteractionText(claim_text)
         count_button.SetInteractionText(count_text)
         run_button.SetInteractionText(run_text)
         help_button.SetInteractionText(help_text)
         next_button.SetInteractionText(next_text)
         return_button.SetInteractionText(return_text)
-        board.SetTextSize(16)
+        board.SetTextSize(12)
         for (input_button : array{claim_button, count_button, run_button, help_button, next_button, return_button}):
             input_button.SetMaxTriggerCount(0)
             input_button.SetInteractionTime(0.0)
@@ -123,15 +129,24 @@ fn_shoreline_island_loop_station := class(creative_device):
 
     reset_board():void =
         if (robot.TeleportTo[home]) {}
-        lantern_1.Hide()
-        lantern_2.Hide()
-        lantern_3.Hide()
+        set lit_lanterns = 0
+        set robot_tile = 0
+        for (index -> lantern : array{lantern_1, lantern_2, lantern_3}):
+            if (authored := lantern_homes[index]):
+                var unlit:transform = authored
+                set unlit.Scale = authored.Scale * 0.5
+                if (lantern.TeleportTo[unlit]) {}
+            if (challenge = 1):
+                lantern.Show()
+            else:
+                lantern.Hide()
         if (challenge = 1):
             parcel.Hide()
         else:
             parcel.Show()
             var target:transform = parcel_home
             set target.Translation = home.Translation + vector3{X := goal() * 180.0, Y := 0.0, Z := 0.0}
+            set target.Translation.Z += 120.0
             if (parcel.TeleportTo[target]) {}
 
     release():void =
@@ -144,13 +159,30 @@ fn_shoreline_island_loop_station := class(creative_device):
         set running = false
         set solved = false
         reset_board()
-        board.SetText(available_text)
+        board.SetText(available_text(station_id + 1))
         board.UpdateDisplay()
 
     show_selection(input_player:player):void =
         run_button.SetInteractionText(selected_run_text(count))
-        board.SetText(pilot_board(input_player, challenge + 1, count, goal()))
+        if (challenge = 1):
+            show_lantern_board(input_player, count, robot_tile, "Move, Light | Goal: 3")
+        else:
+            board.SetText(pilot_board(input_player, challenge + 1, count, goal()))
         board.UpdateDisplay()
+
+    lantern_state(number:int)<transacts>:string =
+        if (lit_lanterns >= number):
+            return "ON"
+        return "OFF"
+
+    show_lantern_board(input_player:player, repeats:int, tile:int, action:string):void =
+        board.SetText(lantern_board(input_player, repeats, tile, action, lantern_state(1), lantern_state(2), lantern_state(3)))
+        board.UpdateDisplay()
+
+    light_lantern(tile:int):void =
+        if (lantern := array{lantern_1, lantern_2, lantern_3}[tile - 1], authored := lantern_homes[tile - 1]):
+            if (lantern.TeleportTo[authored]) {}
+            set lit_lanterns = tile
 
     show_objective(input_player:player):void =
         if (challenge = 0):
@@ -255,20 +287,18 @@ fn_shoreline_island_loop_station := class(creative_device):
             var position:transform = home
             set position.Translation = home.Translation + vector3{X := tile * 180.0}
             if (robot.TeleportTo[position]) {}
-            board.SetText(step_board(input_player, repeats, tile, "Move"))
+            set robot_tile = tile
+            if (challenge_index = 1):
+                show_lantern_board(input_player, repeats, tile, "Move")
+            else:
+                board.SetText(step_board(input_player, repeats, tile, "Move"))
             board.UpdateDisplay()
             Sleep(0.65)
             if (not is_current[input_player, token, round_token]):
                 return
             if (challenge_index = 1):
-                if (tile = 1):
-                    lantern_1.Show()
-                else if (tile = 2):
-                    lantern_2.Show()
-                else if (tile = 3):
-                    lantern_3.Show()
-                board.SetText(step_board(input_player, repeats, tile, "Light"))
-                board.UpdateDisplay()
+                light_lantern(tile)
+                show_lantern_board(input_player, repeats, tile, "Light")
                 Sleep(0.65)
         if (not is_current[input_player, token, round_token]):
             return

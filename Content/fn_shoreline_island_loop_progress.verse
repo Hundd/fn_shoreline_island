@@ -19,6 +19,7 @@ fn_shoreline_island_loop_progress := class(creative_device):
     badge_description<localizes>:message = "Solve the three Loop Lagoon challenges."
 
     OnBegin<override>()<suspends>:void =
+        Hide()
         badge_tracker.SetTitleText(badge_title)
         badge_tracker.SetDescriptionText(badge_description)
         badge_tracker.SetTarget(1)

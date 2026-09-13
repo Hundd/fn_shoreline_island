@@ -76,6 +76,11 @@ Use descriptive Outliner names such as `hub_player_spawner_01`, `path_water_butt
 
 ## Future Releases
 
+The latest proposed extension is [Coastal Restoration Expansion](specs/island-extension-plan.md)
+(2026-09-12). It prioritizes finishing the playable core, connects the existing
+zones into an adventure, and adds a drafted Tidepool Nursery mechanic in feature
+009. Existing feature specifications and validation status remain authoritative.
+
 The proposed next-stage roadmap is [Post-MVP Roadmap](specs/post-mvp-roadmap.md).
 The next recommended build is specified as a draft in
 [`002-loop-lagoon`](specs/002-loop-lagoon/spec.md). Later zones below remain

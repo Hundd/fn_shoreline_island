@@ -1,0 +1,1999 @@
+{
+  "source": [
+    {
+      "name": "progress",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012"
+      },
+      "asset": "/fn_shoreline_island/_Verse.fn_shoreline_island_bot_progress",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -14800,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "station",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013"
+      },
+      "asset": "/fn_shoreline_island/_Verse.fn_shoreline_island_bot_station",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -14000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "feedback",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50D0103_1845888014"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_HUDMessage.PID_Device_HUDMessage",
+      "propertyNames": [
+        "message Recipient",
+        "placement",
+        "layer",
+        "priority",
+        "showOnRoundStart",
+        "displayTime",
+        "showForDuration"
+      ],
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -14900,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      }
+    },
+    {
+      "name": "badge_tracker",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B50D0103_1846505015"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Tracker.PID_Device_Tracker",
+      "propertyNames": [
+        "sharing",
+        "targetValue",
+        "startingValue",
+        "usePersistence",
+        "assignOnGameStart",
+        "statToTrack",
+        "showOnHUD"
+      ],
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -15000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "sharing": "Individual",
+        "targetValue": 1,
+        "startingValue": 0,
+        "usePersistence": false,
+        "assignOnGameStart": false,
+        "statToTrack": "None",
+        "showOnHUD": "Detailed"
+      }
+    },
+    {
+      "name": "claim_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1847141016"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -2330,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_claim",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1847654017"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -2330,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CLAIM",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_0_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1848236018"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -2510,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_slot_0",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1848721019"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -2510,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "COMMAND 1",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_1_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1849321020"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -2690,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_slot_1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1849820021"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -2690,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "COMMAND 2",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_2_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1850386022"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -2870,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_slot_2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1850870023"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -2870,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "COMMAND 3",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "repeat_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1851421024"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3050,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_repeat",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1851984025"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3050,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "REPEAT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "energy_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1852520026"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3230,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_energy",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1853022027"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3230,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "ENERGY",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "connection_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1853587028"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3410,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_connection",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1854070029"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3410,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LAUNCH LINK",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "rule_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1854652030"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3590,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_rule",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1855138031"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3590,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CARGO RULE",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "cargo_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1855686032"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3770,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_cargo",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1856187033"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3770,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "TEST CARGO",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "run_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1856771034"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -3950,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_run",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1857268035"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3950,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "RUN / LAUNCH",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "help_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1857836036"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -4130,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_help",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1858320037"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -4130,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HELP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "next_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1858870038"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -4310,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_next",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1859553039"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -4310,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "NEXT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "replay_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1860097040"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -4490,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_replay",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1860577041"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -4490,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "REPLAY",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "return_button",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1861120042"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "propertyNames": [],
+      "transform": {
+        "location": {
+          "x": -4670,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_return",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1861609043"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -4670,
+          "y": -14150,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HUB",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "mission_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1862177044"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3150,
+          "y": -12050,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "BUILD-A-BOT | Seed / Dock / Parcel",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "program_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1862776045"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -4150,
+          "y": -12050,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "Claim to program your robot.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "execution_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1863330046"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -12050,
+          "z": 2440
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "Home: cell 0 | Goal: cell 3",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "label_home",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1863891047"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3450,
+          "y": -13380,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {
+        "text": "HOME | CELL 0",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "label_cell1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1864441048"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3690,
+          "y": -13380,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {
+        "text": "CELL 1",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "label_cell2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1865028049"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3930,
+          "y": -13380,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {
+        "text": "CELL 2",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "label_cell3",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1865555050"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -4170,
+          "y": -13380,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {
+        "text": "CELL 3 | PLANTER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "label_garden",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1866058051"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3020,
+          "y": -12320,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 1.2,
+          "z": 1.2
+        }
+      },
+      "props": {
+        "text": "GARDEN | LEAF",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "label_storage",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1866616052"
+      },
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "propertyNames": [
+        "text",
+        "showBorder",
+        "backgroundColor",
+        "textColor",
+        "textSize",
+        "textJustification",
+        "enabledDuringPhase",
+        "displayMode"
+      ],
+      "transform": {
+        "location": {
+          "x": -3980,
+          "y": -12320,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 1.2,
+          "z": 1.2
+        }
+      },
+      "props": {
+        "text": "STORAGE | PLAIN",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "floor",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50D0103_1906366053"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50D0103_1906366053.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -13450,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 34,
+          "y": 37,
+          "z": 1.5
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Static"
+      }
+    },
+    {
+      "name": "robot",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1906902054"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1906902054.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -3450,
+          "y": -13300,
+          "z": 2460
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.6,
+          "z": 1.2
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "seed",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1950832055"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1950832055.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -3450,
+          "y": -13200,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "parcel",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1982499056"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1982499056.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -12800,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "lamp_1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1989112057"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1989112057.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -3690,
+          "y": -13120,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "lamp_2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1995064058"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1995064058.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -3930,
+          "y": -13120,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "lamp_3",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_2001078059"
+      },
+      "propertyNames": [],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_2001078059.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -4170,
+          "y": -13120,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    }
+  ]
+}

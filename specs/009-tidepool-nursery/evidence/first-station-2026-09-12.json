@@ -1,0 +1,2101 @@
+{
+  "date": "2026-09-12",
+  "actors": [
+    {
+      "name": "progress",
+      "asset": "/fn_shoreline_island/_Verse.fn_shoreline_island_nursery_progress",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -18500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -18500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "station",
+      "asset": "/fn_shoreline_island/_Verse.fn_shoreline_island_nursery_station",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -17000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -17000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "feedback",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_HUDMessage.PID_Device_HUDMessage",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -18400,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5160103_1360785784"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -18400,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actualProperties": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      }
+    },
+    {
+      "name": "badge_tracker",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Tracker.PID_Device_Tracker",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -18600,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "sharing": "Individual",
+        "targetValue": 1,
+        "startingValue": 0,
+        "usePersistence": false,
+        "assignOnGameStart": false,
+        "statToTrack": "None",
+        "showOnHUD": "Detailed"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5160103_1361400785"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -18600,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actualProperties": {
+        "sharing": "Individual",
+        "targetValue": 1,
+        "startingValue": 0,
+        "usePersistence": false,
+        "assignOnGameStart": false,
+        "statToTrack": "None",
+        "showOnHUD": "Detailed"
+      }
+    },
+    {
+      "name": "claim_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -2780,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1362067786"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -2780,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_0",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -2780,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Claim Tidepool Nursery",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1362702787"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -2780,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Claim Tidepool Nursery",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_0_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -2960,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1363333788"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -2960,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_1",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -2960,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Change Care step 1",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1363834789"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -2960,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Change Care step 1",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_1_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -3140,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1364496790"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3140,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_2",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3140,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Change Care step 2",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1365104791"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3140,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Change Care step 2",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_2_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -3320,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1365668792"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3320,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_3",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3320,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Change Care step 3",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1366200793"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3320,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Change Care step 3",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "slot_3_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1366748794"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_4",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Change Care step 4",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1367233795"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Change Care step 4",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "run_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -3680,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1367938796"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3680,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_5",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3680,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Run: call Care",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1368415797"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3680,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Run: call Care",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "help_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -3860,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1368949798"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3860,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_6",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3860,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Help / Worked answer",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1369417799"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3860,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Help / Worked answer",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "replay_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -4040,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1369950800"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -4040,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_7",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -4040,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Replay this challenge",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1370500801"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -4040,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Replay this challenge",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "return_button",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Button.PID_Device_Button",
+      "transform": {
+        "location": {
+          "x": -4220,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {},
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1371014802"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -4220,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "name": "label_8",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -4220,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "Return to Academy Hub",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1371518803"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -4220,
+          "y": -17750,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "actualProperties": {
+        "text": "Return to Academy Hub",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "mission_board",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3050,
+          "y": -15750,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "TIDEPOOL NURSERY | Claim to grow supplies",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1372083804"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3050,
+          "y": -15750,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actualProperties": {
+        "text": "TIDEPOOL NURSERY | Claim to grow supplies",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "program_board",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -4050,
+          "y": -15750,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "DEFINE Care | Water, Plant, Harvest, Wait",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1372682805"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -4050,
+          "y": -15750,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actualProperties": {
+        "text": "DEFINE Care | Water, Plant, Harvest, Wait",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "execution_board",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -15750,
+          "z": 2440
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "Ready. Run calls Care.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1373231806"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -15750,
+          "z": 2440
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actualProperties": {
+        "text": "Ready. Run calls Care.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "planter_label",
+      "asset": "/CreativeCoreDevices/SetupAssets/PID_Device_Billboard.PID_Device_Billboard",
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -16600,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.8,
+          "z": 0.8
+        }
+      },
+      "props": {
+        "text": "PLANTER 1 | Empty",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1373969807"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -16600,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.8,
+          "z": 0.8
+        }
+      },
+      "actualProperties": {
+        "text": "PLANTER 1 | Empty",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        },
+        "textColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textSize": 24,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    {
+      "name": "floor",
+      "source": "floor",
+      "x": -3500,
+      "y": -17150,
+      "z": 2325,
+      "scale": {
+        "x": 34,
+        "y": 37,
+        "z": 1.5
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Static"
+      },
+      "actorClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -17150,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 34,
+          "y": 37,
+          "z": 1.5
+        }
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5160103_1450557808"
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5160103_1450557808.StaticMeshComponent0"
+        }
+      ],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5160103_1450557808.StaticMeshComponent0"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -17150,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 34,
+          "y": 37,
+          "z": 1.5
+        }
+      },
+      "actualComponentProperties": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Static"
+      }
+    },
+    {
+      "name": "robot",
+      "source": "robot",
+      "x": -3300,
+      "y": -16700,
+      "z": 2460,
+      "scale": {
+        "x": 0.8,
+        "y": 0.6,
+        "z": 1.2
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "Mobility": "Movable"
+      },
+      "actorClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "transform": {
+        "location": {
+          "x": -3300,
+          "y": -16700,
+          "z": 2460
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.6,
+          "z": 1.2
+        }
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809"
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809.StaticMeshComponent0"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3300,
+          "y": -16700,
+          "z": 2460
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.6,
+          "z": 1.2
+        }
+      },
+      "actualComponentProperties": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "plant",
+      "source": "seed",
+      "x": -3500,
+      "y": -16500,
+      "z": 2450,
+      "scale": {
+        "x": 0.7,
+        "y": 0.7,
+        "z": 0.7
+      },
+      "componentProps": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Movable"
+      },
+      "actorClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -16500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.7,
+          "y": 0.7,
+          "z": 0.7
+        }
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1451019810"
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1451019810.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1451019810.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1451019810.StaticMeshComponent0"
+      },
+      "actualTransform": {
+        "location": {
+          "x": -3500,
+          "y": -16500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.7,
+          "y": 0.7,
+          "z": 0.7
+        }
+      },
+      "actualComponentProperties": {
+        "StaticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "OverrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+          }
+        ],
+        "Mobility": "Movable"
+      }
+    }
+  ],
+  "bindings": {
+    "stationWrappers": {
+      "feedback": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x4772A5AD_feedback"
+      },
+      "claim_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x00454591_claim_button"
+      },
+      "label_0": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x3F00407E_label_0"
+      },
+      "slot_0_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x6C366C8B_slot_0_button"
+      },
+      "label_1": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x5A67FCC6_label_1"
+      },
+      "slot_1_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xC633B67A_slot_1_button"
+      },
+      "label_2": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xB4C849D4_label_2"
+      },
+      "slot_2_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x793BA9B3_slot_2_button"
+      },
+      "label_3": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xD1AFF56C_label_3"
+      },
+      "slot_3_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xD33E7342_slot_3_button"
+      },
+      "label_4": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x689722F1_label_4"
+      },
+      "run_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xF14B1D28_run_button"
+      },
+      "label_5": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x0DF09E49_label_5"
+      },
+      "help_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x484F5CBA_help_button"
+      },
+      "label_6": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xE35F2B5B_label_6"
+      },
+      "replay_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xAC48FAD2_replay_button"
+      },
+      "label_7": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x863897E3_label_7"
+      },
+      "return_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xBCDCE77B_return_button"
+      },
+      "label_8": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xD028F4BB_label_8"
+      },
+      "mission_board": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x63244C1E_mission_board"
+      },
+      "program_board": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x38ED8F50_program_board"
+      },
+      "execution_board": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xB7F25F8A_execution_board"
+      },
+      "planter_label": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xEA394372_planter_label"
+      },
+      "robot": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xCF2B8D94_robot"
+      },
+      "plant": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xDF3BBFCC_plant"
+      },
+      "hub_destination": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x6477387A_hub_destination"
+      },
+      "hub_spawner_0": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x63F1B9A2_hub_spawner_0"
+      },
+      "hub_spawner_1": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x0696051A_hub_spawner_1"
+      },
+      "hub_spawner_2": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xE839B008_hub_spawner_2"
+      },
+      "hub_spawner_3": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x8D5E0CB0_hub_spawner_3"
+      }
+    },
+    "progressWrappers": {
+      "badge_tracker": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x88D94674_badge_tracker"
+      },
+      "round_settings": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x3A813FFA_round_settings"
+      }
+    },
+    "bindings": {
+      "feedback": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5160103_1360785784"
+      },
+      "claim_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1362067786"
+      },
+      "label_0": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1362702787"
+      },
+      "slot_0_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1363333788"
+      },
+      "label_1": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1363834789"
+      },
+      "slot_1_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1364496790"
+      },
+      "label_2": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1365104791"
+      },
+      "slot_2_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1365668792"
+      },
+      "label_3": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1366200793"
+      },
+      "slot_3_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1366748794"
+      },
+      "label_4": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1367233795"
+      },
+      "run_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1367938796"
+      },
+      "label_5": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1368415797"
+      },
+      "help_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1368949798"
+      },
+      "label_6": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1369417799"
+      },
+      "replay_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1369950800"
+      },
+      "label_7": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1370500801"
+      },
+      "return_button": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1371014802"
+      },
+      "label_8": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1371518803"
+      },
+      "mission_board": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1372083804"
+      },
+      "program_board": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1372682805"
+      },
+      "execution_board": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1373231806"
+      },
+      "planter_label": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1373969807"
+      },
+      "robot": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809"
+      },
+      "plant": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1451019810"
+      },
+      "hub_destination": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+      },
+      "hub_spawner_0": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+      },
+      "hub_spawner_1": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+      },
+      "hub_spawner_2": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+      },
+      "hub_spawner_3": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+      }
+    },
+    "identity": {
+      "progress": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0"
+      },
+      "station_id": 0
+    },
+    "round": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_RoundSettings_V2_C_UAID_E89C2592D1B5C80003_1839433039"
+    }
+  },
+  "buildDiagnostics": [],
+  "runtime": "Launch in progress; no acceptance yet"
+}

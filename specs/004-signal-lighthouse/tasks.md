@@ -14,6 +14,22 @@
 
 ## Evidence
 
-No implementation or validation evidence yet. Check tasks only after their
+Initial Verse implementation and first-station editor readback are recorded in
+[implementation evidence](evidence/implementation-2026-09-12.md). BuildAll passed;
+focused solo checks passed the widened entrance, claim, LEAF delivery, PLAIN
+wrong-route explanation, corrected challenge-one completion, and no early badge.
+Boat/dock overlap and irrelevant manual rule text were corrected after that test;
+the new revision now passes the focused [solo retest](evidence/solo-2026-09-12.md):
+all three queues, both incorrect final rules, corrected completion and badge
+message, both manual hint levels, Next guard, Replay fixture reset and Hub return.
+All four stations are now saved with [binding/transform evidence](evidence/four-harbors-2026-09-12.md).
+Journal Signal availability passed a fresh-player check. All four sequential solo
+claims and walking joins, Harbor 3 delivery motion, and Harbor 3-to-4 partial
+queue transfer passed in the linked four-harbor record. The current
+[cargo material solo test](evidence/cargo-symbols-2026-09-12.md) passes visible
+LEAF/GEAR motion, unmarked PLAIN, all three queues, and numeric badge retention
+through Replay, Hub return and journal reopening. Other copied motions,
+remaining presentation and lifecycle checks remain open. All full acceptance scenarios
+remain open. Check tasks only after their
 acceptance evidence is recorded. Each record needs date, revision, player count,
 expected/actual result, pass/fail, warnings, and capture/log paths.

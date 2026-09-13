@@ -1,0 +1,940 @@
+{
+  "items": [
+    {
+      "label": "loop_0_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1332443997"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_label_claim",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1536515009"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_label_count",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1536901010"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_label_run",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1536971011"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_label_help",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537048012"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_label_next",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537115013"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_label_hub",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537183014"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_tile_label_0",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537264015"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_tile_label_1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537339016"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_tile_label_2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537413017"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_tile_label_3",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537485018"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_tile_label_4",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537551019"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_0_tile_label_5",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537625020"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042655140"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_label_claim",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042764147"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_label_count",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042781148"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_label_run",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042799149"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_label_help",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042814150"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_label_next",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042829151"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_label_hub",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042849152"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_tile_label_0",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042872153"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_tile_label_1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042887154"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_tile_label_2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042904155"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_tile_label_3",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042919156"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_tile_label_4",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042934157"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_1_tile_label_5",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EA0003_2042952158"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105300349"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_label_claim",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105348356"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_label_count",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105361357"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_label_run",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105373358"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_label_help",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105385359"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_label_next",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105395360"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_label_hub",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105406361"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_tile_label_0",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105416362"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_tile_label_1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105427363"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_tile_label_2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105438364"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_tile_label_3",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105450365"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_tile_label_4",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105460366"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_2_tile_label_5",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1105470367"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122843382"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "LOOP LAGOON\nRobot station available\nPress CLAIM to begin.",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_label_claim",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122885389"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "CLAIM",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_label_count",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122895390"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "COUNT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_label_run",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122905391"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "RUN",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_label_help",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122916392"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HELP",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_label_next",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122927393"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "NEXT",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_label_hub",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122936394"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "HUB",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_tile_label_0",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122947395"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "0",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_tile_label_1",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122964396"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "1",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_tile_label_2",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122975397"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "2",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_tile_label_3",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122986398"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "3",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_tile_label_4",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1122997399"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "4",
+        "showBorder": false
+      }
+    },
+    {
+      "label": "loop_3_tile_label_5",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5EB0003_1123007400"
+      },
+      "before": {
+        "viewDistance": 10000,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      },
+      "after": {
+        "viewDistance": 4,
+        "textSize": 24,
+        "text": "5",
+        "showBorder": false
+      }
+    }
+  ]
+}

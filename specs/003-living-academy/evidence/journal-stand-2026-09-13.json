@@ -1,0 +1,73 @@
+﻿{
+    "date":  "2026-09-13",
+    "mesh":  {
+                 "staticMesh":  {
+                                    "refPath":  "/Engine/BasicShapes/Cube.Cube"
+                                },
+                 "overrideMaterials":  [
+                                           {
+                                               "refPath":  "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+                                           }
+                                       ]
+             },
+    "parts":  [
+                  {
+                      "name":  "academy_journal_stand_base",
+                      "actor":  {
+                                    "refPath":  "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B52C0103_1283053840"
+                                },
+                      "bounds":  {
+                                     "min":  {
+                                                 "x":  -350,
+                                                 "y":  950,
+                                                 "z":  2400
+                                             },
+                                     "max":  {
+                                                 "x":  -250,
+                                                 "y":  1050,
+                                                 "z":  2416
+                                             },
+                                     "isValid":  true
+                                 }
+                  },
+                  {
+                      "name":  "academy_journal_stand_stem",
+                      "actor":  {
+                                    "refPath":  "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B52C0103_1325351841"
+                                },
+                      "bounds":  {
+                                     "min":  {
+                                                 "x":  -321,
+                                                 "y":  979,
+                                                 "z":  2416
+                                             },
+                                     "max":  {
+                                                 "x":  -279,
+                                                 "y":  1021,
+                                                 "z":  2472
+                                             },
+                                     "isValid":  true
+                                 }
+                  },
+                  {
+                      "name":  "academy_journal_stand_shelf",
+                      "actor":  {
+                                    "refPath":  "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B52C0103_1343380842"
+                                },
+                      "bounds":  {
+                                     "min":  {
+                                                 "x":  -340,
+                                                 "y":  960,
+                                                 "z":  2472
+                                             },
+                                     "max":  {
+                                                 "x":  -260,
+                                                 "y":  1040,
+                                                 "z":  2480
+                                             },
+                                     "isValid":  true
+                                 }
+                  }
+              ],
+    "nativeButtonUnchanged":  true
+}

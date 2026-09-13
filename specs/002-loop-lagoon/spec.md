@@ -13,6 +13,15 @@ freeform coding, persistence, and changes to Path Garden's solution.
 
 ## Requirements
 
+- `PR-001`: Loop station instructions and control/tile labels MUST remain
+  visible from their own interaction area while distant docks' text is culled.
+  The Hub's named Loop route remains available independently of station labels.
+  Given a player at Dock 1, when viewing its controls and running a puzzle,
+  then its objective, count, command and destination cues remain readable.
+  Given a player beyond a station's authored viewing range, when looking toward
+  that station, then its text does not fill the horizon. Walking back into range
+  restores the instructions without restarting gameplay or changing progress.
+
 - `FR-001`: Players MUST be able to find Loop Lagoon from the hub using a name
   and a non-color cue. Entry MUST NOT require another player or an existing badge.
 - `FR-002`: The first challenge MUST start a robot at tile 0 with a target at
@@ -48,6 +57,10 @@ freeform coding, persistence, and changes to Path Garden's solution.
   indefinitely. Instructions SHOULD be at most 80 characters per message.
 - `NFR-002`: Essential states MUST have labels, icons, or spatial cues alongside
   color, and MUST remain understandable with audio muted. No timed input is required.
+  In the lantern challenge, all three unlit lanterns MUST be visible before Run
+  so the player can count them. The board MUST label each lantern OFF or ON;
+  lighting also enlarges its marker. The parcel MUST remain visible above the
+  robot when both occupy the target tile.
 - `NFR-003`: Verse build and project validation MUST pass without errors, memory
   calculation MUST have no publishing blocker, and gameplay evidence MUST be recorded.
 

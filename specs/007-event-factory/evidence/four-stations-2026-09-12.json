@@ -1,0 +1,4760 @@
+{
+  "date": "2026-09-12",
+  "map": "/fn_shoreline_island/fn_shoreline_island",
+  "firstStation": {
+    "progress": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -10900,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "station": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -10200,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "feedback": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5080103_1710805003"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -11000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      }
+    },
+    "badge_tracker": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5080103_1711609004"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -11100,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "sharing": "Individual",
+        "targetValue": 1,
+        "startingValue": 0,
+        "usePersistence": false,
+        "assignOnGameStart": false,
+        "statToTrack": "None",
+        "showOnHUD": "Detailed"
+      }
+    },
+    "claim_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1712258005"
+      },
+      "transform": {
+        "location": {
+          "x": -2390,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_claim": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1712791006"
+      },
+      "transform": {
+        "location": {
+          "x": -2390,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CLAIM",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "link_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1713373007"
+      },
+      "transform": {
+        "location": {
+          "x": -2570,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_link_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1713927008"
+      },
+      "transform": {
+        "location": {
+          "x": -2570,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "link_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1714508009"
+      },
+      "transform": {
+        "location": {
+          "x": -2750,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_link_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1715007010"
+      },
+      "transform": {
+        "location": {
+          "x": -2750,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1715542011"
+      },
+      "transform": {
+        "location": {
+          "x": -2930,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1716058012"
+      },
+      "transform": {
+        "location": {
+          "x": -2930,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1716607013"
+      },
+      "transform": {
+        "location": {
+          "x": -3110,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1717124014"
+      },
+      "transform": {
+        "location": {
+          "x": -3110,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "demo_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1717691015"
+      },
+      "transform": {
+        "location": {
+          "x": -3290,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_demo": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1718157016"
+      },
+      "transform": {
+        "location": {
+          "x": -3290,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "SHOW EVENT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "help_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1718673017"
+      },
+      "transform": {
+        "location": {
+          "x": -3470,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_help": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1719160018"
+      },
+      "transform": {
+        "location": {
+          "x": -3470,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HELP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "next_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1719741019"
+      },
+      "transform": {
+        "location": {
+          "x": -3650,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_next": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1720191020"
+      },
+      "transform": {
+        "location": {
+          "x": -3650,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "NEXT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "replay_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1720675021"
+      },
+      "transform": {
+        "location": {
+          "x": -3830,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_replay": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1721157022"
+      },
+      "transform": {
+        "location": {
+          "x": -3830,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "REPLAY",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "return_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1721691023"
+      },
+      "transform": {
+        "location": {
+          "x": -4010,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "label_return": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1722158024"
+      },
+      "transform": {
+        "location": {
+          "x": -4010,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HUB",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1722709025"
+      },
+      "transform": {
+        "location": {
+          "x": -3350,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "EVENT FACTORY\nRelease academy supplies.\nClaim to begin.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "recent_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1723291026"
+      },
+      "transform": {
+        "location": {
+          "x": -2550,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "RECENT EVENT: none\nRESPONSE: none",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "response_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1723860027"
+      },
+      "transform": {
+        "location": {
+          "x": -3250,
+          "y": -9100,
+          "z": 2470
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 1.2,
+          "z": 1.2
+        }
+      },
+      "props": {
+        "text": "CHUTE: CLOSED | PARCEL: waiting\nLAMP: OFF",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "label_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1724391028"
+      },
+      "transform": {
+        "location": {
+          "x": -3800,
+          "y": -9500,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CHUTE",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "label_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1725129029"
+      },
+      "transform": {
+        "location": {
+          "x": -3300,
+          "y": -9600,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "PARCEL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "label_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1725601030"
+      },
+      "transform": {
+        "location": {
+          "x": -2350,
+          "y": -9800,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LAMP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "route": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1726186031"
+      },
+      "transform": {
+        "location": {
+          "x": -2150,
+          "y": -8000,
+          "z": 2600
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 89.99999999999999,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.8,
+          "z": 0.8
+        }
+      },
+      "props": {
+        "text": "EVENT FACTORY\nRelease academy supplies.\nFollow the path south.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "floor": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5080103_1758248032"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -9700,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 28,
+          "y": 38,
+          "z": 1.5
+        }
+      },
+      "props": {}
+    },
+    "chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5080103_1758679033"
+      },
+      "transform": {
+        "location": {
+          "x": -3600,
+          "y": -9400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 0.4,
+          "z": 2
+        }
+      },
+      "props": {}
+    },
+    "parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5080103_1759083034"
+      },
+      "transform": {
+        "location": {
+          "x": -3600,
+          "y": -9500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "props": {}
+    },
+    "lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5080103_1759484035"
+      },
+      "transform": {
+        "location": {
+          "x": -2600,
+          "y": -9800,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {}
+    }
+  },
+  "addedActors": {
+    "1_station": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0103_1109589564"
+      },
+      "transform": {
+        "location": {
+          "x": -6000,
+          "y": -10200,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_feedback": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50B0103_1110745565"
+      },
+      "transform": {
+        "location": {
+          "x": -6000,
+          "y": -11000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      }
+    },
+    "1_claim_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1111346566"
+      },
+      "transform": {
+        "location": {
+          "x": -5190,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_claim": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1111915567"
+      },
+      "transform": {
+        "location": {
+          "x": -5190,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CLAIM",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_link_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1112590568"
+      },
+      "transform": {
+        "location": {
+          "x": -5370,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_link_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1113095569"
+      },
+      "transform": {
+        "location": {
+          "x": -5370,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_link_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1113643570"
+      },
+      "transform": {
+        "location": {
+          "x": -5550,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_link_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1114162571"
+      },
+      "transform": {
+        "location": {
+          "x": -5550,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1114778572"
+      },
+      "transform": {
+        "location": {
+          "x": -5730,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1115262573"
+      },
+      "transform": {
+        "location": {
+          "x": -5730,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1115812574"
+      },
+      "transform": {
+        "location": {
+          "x": -5910,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1116309575"
+      },
+      "transform": {
+        "location": {
+          "x": -5910,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_demo_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1116877576"
+      },
+      "transform": {
+        "location": {
+          "x": -6090,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_demo": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1117361577"
+      },
+      "transform": {
+        "location": {
+          "x": -6090,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "SHOW EVENT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_help_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1117957578"
+      },
+      "transform": {
+        "location": {
+          "x": -6270,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_help": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1118428579"
+      },
+      "transform": {
+        "location": {
+          "x": -6270,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HELP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_next_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1118995580"
+      },
+      "transform": {
+        "location": {
+          "x": -6450,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_next": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1119510581"
+      },
+      "transform": {
+        "location": {
+          "x": -6450,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "NEXT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_replay_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1120060582"
+      },
+      "transform": {
+        "location": {
+          "x": -6630,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_replay": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1120594583"
+      },
+      "transform": {
+        "location": {
+          "x": -6630,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "REPLAY",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_return_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1121166584"
+      },
+      "transform": {
+        "location": {
+          "x": -6810,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "1_label_return": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1121627585"
+      },
+      "transform": {
+        "location": {
+          "x": -6810,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HUB",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1122213586"
+      },
+      "transform": {
+        "location": {
+          "x": -6150,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "EVENT FACTORY\nRelease academy supplies.\nClaim to begin.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_recent_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1122795587"
+      },
+      "transform": {
+        "location": {
+          "x": -5350,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "RECENT EVENT: none\nRESPONSE: none",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_response_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1123327588"
+      },
+      "transform": {
+        "location": {
+          "x": -6050,
+          "y": -9100,
+          "z": 2470
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 1.2,
+          "z": 1.2
+        }
+      },
+      "props": {
+        "text": "CHUTE: CLOSED | PARCEL: waiting\nLAMP: OFF",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_label_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1124079589"
+      },
+      "transform": {
+        "location": {
+          "x": -6600,
+          "y": -9500,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CHUTE",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_label_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1124633590"
+      },
+      "transform": {
+        "location": {
+          "x": -6100,
+          "y": -9600,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "PARCEL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_label_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1125189591"
+      },
+      "transform": {
+        "location": {
+          "x": -5150,
+          "y": -9800,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LAMP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_station": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0103_1125784592"
+      },
+      "transform": {
+        "location": {
+          "x": -8800,
+          "y": -10200,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_feedback": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50B0103_1126289593"
+      },
+      "transform": {
+        "location": {
+          "x": -8800,
+          "y": -11000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      }
+    },
+    "2_claim_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1126808594"
+      },
+      "transform": {
+        "location": {
+          "x": -7990,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_claim": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1127302595"
+      },
+      "transform": {
+        "location": {
+          "x": -7990,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CLAIM",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_link_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1127872596"
+      },
+      "transform": {
+        "location": {
+          "x": -8170,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_link_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1128355597"
+      },
+      "transform": {
+        "location": {
+          "x": -8170,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_link_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1128887598"
+      },
+      "transform": {
+        "location": {
+          "x": -8350,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_link_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1129347599"
+      },
+      "transform": {
+        "location": {
+          "x": -8350,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1129841600"
+      },
+      "transform": {
+        "location": {
+          "x": -8530,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1130330601"
+      },
+      "transform": {
+        "location": {
+          "x": -8530,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1130912602"
+      },
+      "transform": {
+        "location": {
+          "x": -8710,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1131402603"
+      },
+      "transform": {
+        "location": {
+          "x": -8710,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_demo_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1132008604"
+      },
+      "transform": {
+        "location": {
+          "x": -8890,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_demo": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1132476605"
+      },
+      "transform": {
+        "location": {
+          "x": -8890,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "SHOW EVENT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_help_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1132996606"
+      },
+      "transform": {
+        "location": {
+          "x": -9070,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_help": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1133438607"
+      },
+      "transform": {
+        "location": {
+          "x": -9070,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HELP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_next_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1133951608"
+      },
+      "transform": {
+        "location": {
+          "x": -9250,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_next": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1134430609"
+      },
+      "transform": {
+        "location": {
+          "x": -9250,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "NEXT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_replay_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1134996610"
+      },
+      "transform": {
+        "location": {
+          "x": -9430,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_replay": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1135469611"
+      },
+      "transform": {
+        "location": {
+          "x": -9430,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "REPLAY",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_return_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1136039612"
+      },
+      "transform": {
+        "location": {
+          "x": -9610,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "2_label_return": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1136544613"
+      },
+      "transform": {
+        "location": {
+          "x": -9610,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HUB",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1137098614"
+      },
+      "transform": {
+        "location": {
+          "x": -8950,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "EVENT FACTORY\nRelease academy supplies.\nClaim to begin.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_recent_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1137713615"
+      },
+      "transform": {
+        "location": {
+          "x": -8150,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "RECENT EVENT: none\nRESPONSE: none",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_response_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1138314616"
+      },
+      "transform": {
+        "location": {
+          "x": -8850,
+          "y": -9100,
+          "z": 2470
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 1.2,
+          "z": 1.2
+        }
+      },
+      "props": {
+        "text": "CHUTE: CLOSED | PARCEL: waiting\nLAMP: OFF",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_label_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1138884617"
+      },
+      "transform": {
+        "location": {
+          "x": -9400,
+          "y": -9500,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CHUTE",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_label_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1139434618"
+      },
+      "transform": {
+        "location": {
+          "x": -8900,
+          "y": -9600,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "PARCEL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "2_label_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1139954619"
+      },
+      "transform": {
+        "location": {
+          "x": -7950,
+          "y": -9800,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LAMP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_station": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0103_1140472620"
+      },
+      "transform": {
+        "location": {
+          "x": -11600,
+          "y": -10200,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_feedback": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50B0103_1140927621"
+      },
+      "transform": {
+        "location": {
+          "x": -11600,
+          "y": -11000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {
+        "message Recipient": {
+          "teamType": "TriggeringPlayer",
+          "teamIndex": 0
+        },
+        "placement": "Bottom Center",
+        "layer": 5,
+        "priority": 0,
+        "showOnRoundStart": false,
+        "displayTime": 5,
+        "showForDuration": true
+      }
+    },
+    "3_claim_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1141464622"
+      },
+      "transform": {
+        "location": {
+          "x": -10790,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_claim": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1141946623"
+      },
+      "transform": {
+        "location": {
+          "x": -10790,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CLAIM",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_link_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1142558624"
+      },
+      "transform": {
+        "location": {
+          "x": -10970,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_link_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1143041625"
+      },
+      "transform": {
+        "location": {
+          "x": -10970,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_link_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1143579626"
+      },
+      "transform": {
+        "location": {
+          "x": -11150,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_link_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1144031627"
+      },
+      "transform": {
+        "location": {
+          "x": -11150,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LINK LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_bell_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1144571628"
+      },
+      "transform": {
+        "location": {
+          "x": -11330,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_bell": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1145041629"
+      },
+      "transform": {
+        "location": {
+          "x": -11330,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "BELL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_lever_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1145551630"
+      },
+      "transform": {
+        "location": {
+          "x": -11510,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_lever": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1146038631"
+      },
+      "transform": {
+        "location": {
+          "x": -11510,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LEVER",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_demo_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1146565632"
+      },
+      "transform": {
+        "location": {
+          "x": -11690,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_demo": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1147006633"
+      },
+      "transform": {
+        "location": {
+          "x": -11690,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "SHOW EVENT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_help_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1147544634"
+      },
+      "transform": {
+        "location": {
+          "x": -11870,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_help": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1147968635"
+      },
+      "transform": {
+        "location": {
+          "x": -11870,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HELP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_next_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1148481636"
+      },
+      "transform": {
+        "location": {
+          "x": -12050,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_next": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1148991637"
+      },
+      "transform": {
+        "location": {
+          "x": -12050,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "NEXT",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_replay_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1149548638"
+      },
+      "transform": {
+        "location": {
+          "x": -12230,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_replay": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1149996639"
+      },
+      "transform": {
+        "location": {
+          "x": -12230,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "REPLAY",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_return_button": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1150557640"
+      },
+      "transform": {
+        "location": {
+          "x": -12410,
+          "y": -10400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "props": {}
+    },
+    "3_label_return": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1151062641"
+      },
+      "transform": {
+        "location": {
+          "x": -12410,
+          "y": -10450,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "HUB",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 12,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1151614642"
+      },
+      "transform": {
+        "location": {
+          "x": -11750,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "EVENT FACTORY\nRelease academy supplies.\nClaim to begin.",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_recent_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1152181643"
+      },
+      "transform": {
+        "location": {
+          "x": -10950,
+          "y": -8900,
+          "z": 2620
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "props": {
+        "text": "RECENT EVENT: none\nRESPONSE: none",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_response_board": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1152708644"
+      },
+      "transform": {
+        "location": {
+          "x": -11650,
+          "y": -9100,
+          "z": 2470
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 1.2,
+          "z": 1.2
+        }
+      },
+      "props": {
+        "text": "CHUTE: CLOSED | PARCEL: waiting\nLAMP: OFF",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_label_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1153297645"
+      },
+      "transform": {
+        "location": {
+          "x": -12200,
+          "y": -9500,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "CHUTE",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_label_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1153847646"
+      },
+      "transform": {
+        "location": {
+          "x": -11700,
+          "y": -9600,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "PARCEL",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "3_label_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1154349647"
+      },
+      "transform": {
+        "location": {
+          "x": -10750,
+          "y": -9800,
+          "z": 2420
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.38,
+          "y": 0.38,
+          "z": 0.38
+        }
+      },
+      "props": {
+        "text": "LAMP",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.009999999776482582,
+          "g": 0.029999999329447746,
+          "b": 0.04500000178813934,
+          "a": 1
+        },
+        "textColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "textSize": 10,
+        "textJustification": "Left",
+        "enabledDuringPhase": "Always",
+        "displayMode": "One Sided"
+      }
+    },
+    "1_floor": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50B0103_1216649648"
+      },
+      "transform": {
+        "location": {
+          "x": -6000,
+          "y": -9700,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 28,
+          "y": 38,
+          "z": 1.5
+        }
+      },
+      "props": {}
+    },
+    "1_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1217194649"
+      },
+      "transform": {
+        "location": {
+          "x": -6400,
+          "y": -9400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 0.4,
+          "z": 2
+        }
+      },
+      "props": {}
+    },
+    "1_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1217689650"
+      },
+      "transform": {
+        "location": {
+          "x": -6400,
+          "y": -9500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "props": {}
+    },
+    "1_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1218157651"
+      },
+      "transform": {
+        "location": {
+          "x": -5400,
+          "y": -9800,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {}
+    },
+    "2_floor": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50B0103_1218634652"
+      },
+      "transform": {
+        "location": {
+          "x": -8800,
+          "y": -9700,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 28,
+          "y": 38,
+          "z": 1.5
+        }
+      },
+      "props": {}
+    },
+    "2_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1219043653"
+      },
+      "transform": {
+        "location": {
+          "x": -9200,
+          "y": -9400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 0.4,
+          "z": 2
+        }
+      },
+      "props": {}
+    },
+    "2_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1219512654"
+      },
+      "transform": {
+        "location": {
+          "x": -9200,
+          "y": -9500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "props": {}
+    },
+    "2_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1219979655"
+      },
+      "transform": {
+        "location": {
+          "x": -8200,
+          "y": -9800,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {}
+    },
+    "3_floor": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50B0103_1220432656"
+      },
+      "transform": {
+        "location": {
+          "x": -11600,
+          "y": -9700,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 28,
+          "y": 38,
+          "z": 1.5
+        }
+      },
+      "props": {}
+    },
+    "3_chute": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1220849657"
+      },
+      "transform": {
+        "location": {
+          "x": -12000,
+          "y": -9400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 0.4,
+          "z": 2
+        }
+      },
+      "props": {}
+    },
+    "3_parcel": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1221405658"
+      },
+      "transform": {
+        "location": {
+          "x": -12000,
+          "y": -9500,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "props": {}
+    },
+    "3_lamp": {
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1221820659"
+      },
+      "transform": {
+        "location": {
+          "x": -11000,
+          "y": -9800,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.6,
+          "z": 0.6
+        }
+      },
+      "props": {}
+    }
+  },
+  "bindings": {
+    "1": {
+      "bindings": {
+        "claim_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1111346566"
+        },
+        "link_bell_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1112590568"
+        },
+        "link_lever_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1113643570"
+        },
+        "bell_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1114778572"
+        },
+        "lever_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1115812574"
+        },
+        "demo_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1116877576"
+        },
+        "help_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1117957578"
+        },
+        "next_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1118995580"
+        },
+        "replay_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1120060582"
+        },
+        "return_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1121166584"
+        },
+        "feedback": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50B0103_1110745565"
+        },
+        "board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1122213586"
+        },
+        "recent_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1122795587"
+        },
+        "response_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1123327588"
+        },
+        "chute": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1217194649"
+        },
+        "parcel": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1217689650"
+        },
+        "lamp": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1218157651"
+        },
+        "hub_destination": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        },
+        "hub_spawner_0": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        },
+        "hub_spawner_1": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        },
+        "hub_spawner_2": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        },
+        "hub_spawner_3": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      },
+      "identity": {
+        "station_id": 1,
+        "progress": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001.fn_shoreline_island_event_progress_0"
+        }
+      }
+    },
+    "2": {
+      "bindings": {
+        "claim_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1126808594"
+        },
+        "link_bell_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1127872596"
+        },
+        "link_lever_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1128887598"
+        },
+        "bell_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1129841600"
+        },
+        "lever_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1130912602"
+        },
+        "demo_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1132008604"
+        },
+        "help_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1132996606"
+        },
+        "next_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1133951608"
+        },
+        "replay_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1134996610"
+        },
+        "return_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1136039612"
+        },
+        "feedback": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50B0103_1126289593"
+        },
+        "board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1137098614"
+        },
+        "recent_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1137713615"
+        },
+        "response_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1138314616"
+        },
+        "chute": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1219043653"
+        },
+        "parcel": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1219512654"
+        },
+        "lamp": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1219979655"
+        },
+        "hub_destination": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        },
+        "hub_spawner_0": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        },
+        "hub_spawner_1": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        },
+        "hub_spawner_2": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        },
+        "hub_spawner_3": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      },
+      "identity": {
+        "station_id": 2,
+        "progress": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001.fn_shoreline_island_event_progress_0"
+        }
+      }
+    },
+    "3": {
+      "bindings": {
+        "claim_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1141464622"
+        },
+        "link_bell_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1142558624"
+        },
+        "link_lever_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1143579626"
+        },
+        "bell_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1144571628"
+        },
+        "lever_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1145551630"
+        },
+        "demo_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1146565632"
+        },
+        "help_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1147544634"
+        },
+        "next_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1148481636"
+        },
+        "replay_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1149548638"
+        },
+        "return_button": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50B0103_1150557640"
+        },
+        "feedback": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50B0103_1140927621"
+        },
+        "board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1151614642"
+        },
+        "recent_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1152181643"
+        },
+        "response_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50B0103_1152708644"
+        },
+        "chute": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1220849657"
+        },
+        "parcel": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1221405658"
+        },
+        "lamp": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0103_1221820659"
+        },
+        "hub_destination": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        },
+        "hub_spawner_0": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        },
+        "hub_spawner_1": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        },
+        "hub_spawner_2": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        },
+        "hub_spawner_3": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      },
+      "identity": {
+        "station_id": 3,
+        "progress": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001.fn_shoreline_island_event_progress_0"
+        }
+      }
+    }
+  },
+  "geometry": {
+    "1_floor": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+        }
+      ],
+      "mobility": "Static"
+    },
+    "1_chute": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "1_parcel": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "1_lamp": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "2_floor": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+        }
+      ],
+      "mobility": "Static"
+    },
+    "2_chute": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "2_parcel": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "2_lamp": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "3_floor": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+        }
+      ],
+      "mobility": "Static"
+    },
+    "3_chute": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "3_parcel": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+        }
+      ],
+      "mobility": "Movable"
+    },
+    "3_lamp": {
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "mobility": "Movable"
+    }
+  },
+  "presentation": {
+    "board": {
+      "location": {
+        "x": -3350,
+        "y": -8900,
+        "z": 2620
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1.7,
+        "y": 1.7,
+        "z": 1.7
+      }
+    },
+    "chute": {
+      "location": {
+        "x": -3600,
+        "y": -9400,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1.5,
+        "y": 0.4,
+        "z": 2
+      }
+    },
+    "parcel": {
+      "location": {
+        "x": -3600,
+        "y": -9500,
+        "z": 2450
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    "label_chute": {
+      "location": {
+        "x": -3800,
+        "y": -9500,
+        "z": 2420
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.38,
+        "y": 0.38,
+        "z": 0.38
+      }
+    },
+    "label_parcel": {
+      "location": {
+        "x": -3300,
+        "y": -9600,
+        "z": 2420
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.38,
+        "y": 0.38,
+        "z": 0.38
+      }
+    }
+  },
+  "buildDiagnostics": []
+}
