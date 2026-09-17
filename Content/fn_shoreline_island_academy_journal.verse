@@ -32,10 +32,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
     overview_text<localizes>:message = "Back"
     open_text<localizes>:message = "Open my restoration journal"
     earned_text<localizes>:message = "Earned"
-    earned_badge_text<localizes>(count:int):message =
-        if (count > 1):
-            return "Earned (1/1)"
-        return "Earned (1/1)"
+    earned_badge_text<localizes>:message = "Earned (1/1)"
     ready_text<localizes>:message = "Ready to try"
     unavailable_text<localizes>:message = "Not yet available"
     garden_next<localizes>:message = "Path Garden: grow supplies for the academy."
@@ -100,7 +97,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
         if (badge := later_badge_trackers[index]):
             count := badge.GetValue(input_player)
             if (count >= 1):
-                return earned_badge_text(count)
+                return earned_badge_text
             return ready_text
         return unavailable_text
 
