@@ -182,9 +182,9 @@ fn_shoreline_island_nursery_station := class(creative_device):
     remix_text<localizes>:message = "Optional remix / Return to normal challenges"
     remix_label_text<localizes>:message = "REMIX / NORMAL"
     remix_locked<localizes>:message = "Finish all three Nursery challenges first. The remix is optional."
-    remix_mission<localizes>(badge:int):message = "OPTIONAL NURSERY REMIX\nRestore two beds. Reuse one Care definition.\nGoal: 3 caller commands = 9 expanded steps.\nNormal badge: {badge}/1. Remix / Normal exits."
+    remix_mission<localizes>(badge:int):message = "OPTIONAL NURSERY REMIX\nUse one Care definition to restore two beds.\nGoal: 3 caller commands.\nBadge: {badge}/1. Remix / Normal exits."
     remix_ready<localizes>:message = "Optional remix. Repair Care and the three-slot caller.\nReplay resets this remix. Remix / Normal or Hub leaves."
-    remix_success<localizes>:message = "Remix restored! Goal met: 3 caller instructions replace 9 expanded steps.\nYour normal Nursery progress and badge stay unchanged."
+    remix_success<localizes>:message = "Remix restored. 3 caller instructions replace 9 expanded steps.\nNormal Nursery progress and badge stay unchanged."
     remix_next<localizes>:message = "Use Remix / Normal to return to normal challenges, or Replay this remix."
 
     buttons()<transacts>:[]button_device = array{claim_button, slot_0_button, slot_1_button,
