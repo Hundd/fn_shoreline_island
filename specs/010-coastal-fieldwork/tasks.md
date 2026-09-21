@@ -5,8 +5,11 @@
   Fresh eight rows, Garden earned, Work/Back and Close/reopen pass solo; Bot earned
   contribution and repeated exact 1/1 reads also pass in
   [Bot journal evidence](evidence/bot-journal-2026-09-13.md). Other six
-  earned rows and complete numeric neutrality remain pending. See
-  [2026-09-12 evidence](evidence/journal-work-2026-09-12.md).
+  earned rows and complete numeric neutrality remain pending. A compatibility
+  42.20 regression retest reconfirmed all eight fresh rows, unchanged visible
+  `0/1`, and Close/reopen behavior with a clean Verse build; see
+  [2026-09-21 evidence](evidence/fresh-journal-retest-2026-09-21.md) and the
+  original [2026-09-12 evidence](evidence/journal-work-2026-09-12.md).
 - [x] T-002 (FR-001, FR-002, AC-001): Place three observation spots; test both
   predictions, explanations, retry/exit and badge neutrality at each.
   Focused solo passes all three flows and walking access; fresh eight-badge
