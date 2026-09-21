@@ -45,6 +45,9 @@ tested.
   using supported device appearance settings or safe cosmetic treatment,
   without replacing devices, changing interaction semantics, or losing state
   feedback.
+- FR-012: All four optional Garden Repair stations use grounded, garden-themed
+  supports under their existing button rows, stage props, labels, and boards.
+  The original devices and puzzle coordinates remain fixed and usable.
 
 ## Non-functional requirements
 
@@ -114,6 +117,14 @@ Given buttons from two minigames are visible, when a player compares them,
 then their visual treatment is distinguishable beyond nearby architecture,
 while both buttons still display their intended prompt/state and trigger their
 original action.
+
+### AC-010: Garden Repair fixture grounding
+
+Given a player approaches any Garden Repair station from its south aisle,
+when they look at the nine controls, four stage displays, and program board,
+then each fixture visibly connects to the playable floor through a support,
+the labels and prompts remain readable, and Claim, slot, Run, Help, Replay,
+and Hub actions still work without jumping or camera collision.
 
 ## Out of scope
 

@@ -167,3 +167,13 @@
   is saved, readable in a normal-pitch editor view, clear of three
   chest-height route traces, and cooked in a fresh session. The player check
   remains pending.
+- [ ] T-023 (FR-002, FR-003, FR-009, FR-010, FR-012, AC-001, AC-008,
+  AC-010): Ground and visually integrate all four Garden Repair stations.
+  Leave every gameplay actor fixed; support nine buttons, four stage
+  displays/labels, and each board per station with a matching garden kit.
+  Inspect from front and side, save, cook, and test Claim, slot, Run, Help,
+  Replay, Hub, and stage changes in the client. The four repeated support
+  kits are saved and visually inspected from the south aisle. A fresh session
+  upload/cook completed. A follow-up aligned all 36 button pedestals directly
+  beneath their devices and completed another fresh cook; in-client control
+  and progression checks remain.

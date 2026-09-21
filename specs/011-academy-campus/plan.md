@@ -612,3 +612,45 @@ problem. Inspect the hub turn into Garden and Signal in the client before
 editing any geometry or gameplay device. A normal-pitch editor view looking
 south from world (-400, 700, 2650) shows the console standing beside the
 teal route, with the center lane visually clear.
+
+## Garden Repair station grounding
+
+The user reported that Garden Repair still looks like a floating prototype.
+An editor view from the south aisle confirms unsupported button rows, stage
+displays, and boards. All four station floors top at Z 2400 and span X
+2900..11700 in four 2200 cm bays centered at X 4000, 6200, 8400, and
+10600. The nine button centers in each bay run from center X -640 to +640 at
+160 cm spacing, Y 700, Z 2500. Four stage pieces and labels sit around
+center X -480, -160, +160, +480 and Y 1250..1400, with bottoms near Z 2450.
+Each board begins near Z 2800 at Y 1550. These are gameplay actors and keep
+their exact transforms and bindings.
+
+Build one separate `campus_garden_repair_supports` actor with a repeating
+primitive kit in all four bays: a low sage console wall behind each button
+row, four grounded sage trays beneath the stages and their labels, and a
+cream two-post frame with a slim cap behind each board. Keep the clear south
+approach in front of the buttons, the 275 cm corridor between console and
+stage trays, and the board text visible. Measure bounds and inspect station
+1 from front and side before extending to the other three. Save the actor,
+run a fresh cook, then verify all controls and stage changes in the client.
+
+Implemented as one saved OFPA actor with 68 primitive components, 17 per bay:
+one 1800 x 50 x 50 cm sage console rail, four 260 x 300 x 50 cm sage stage
+trays, nine narrow cream button mounts, and a cream two-post board frame with
+cap. The rail was reduced from the initial tall prototype so the stage pieces
+remain visible. The button mounts were narrowed for the same reason. Normal
+pitch editor views from the south aisle show all four stations with grounded
+stage displays and framed, readable boards. No gameplay device or Verse
+binding was moved. A fresh Launch Session upload/cook completed and reached
+Connected / CanStart. The session was then stopped and verified Disconnected /
+Unconnected. Physical player interaction and stage progression still require
+an in-client playtest.
+
+Follow-up visual audit found that the cream button mounts sat behind the
+devices, leaving a visible gap from the south approach. Repositioned all 36
+mounts beneath their respective buttons and extended them from floor Z 2400
+to the device centers at Z 2500. The device transforms are unchanged. A
+normal-pitch front view now shows each button on a narrow floor-standing
+pedestal across the four repeated stations.
+The follow-up Launch Session upload/cook completed; the session reported
+Connected / Running, then was stopped and verified Disconnected / Unconnected.
