@@ -31,6 +31,9 @@ tested.
   alone.
 - FR-007: Added structures do not change player progress, rewards, or puzzle
   state.
+- FR-008: No two game rooms reuse the same overall shell, roofline, entrance,
+  or landmark treatment; each room communicates its game theme through a
+  visibly different architectural composition.
 
 ## Non-functional requirements
 
@@ -74,6 +77,12 @@ does not obscure the route.
 Given all rooms and landscaping are complete, when Verse build, project
 validation, memory calculation, solo traversal, and available multiplayer tests
 run, then no blocking error or gameplay regression is introduced.
+
+### AC-006: Distinct rooms
+
+Given any two game rooms are visible from the campus paths, when a player
+compares their silhouettes and entrances, then the rooms are distinguishable
+without relying on their text labels or color alone.
 
 ## Out of scope
 

@@ -5,9 +5,10 @@
 
 ## Design language
 
-Build a small coastal academy rather than eight disconnected boxes. Use one
-shared modular shell language—light walls, broad openings, high ceilings, blue
-structural accents, warm path lighting—then give each room a landmark:
+Build a small coastal academy rather than eight disconnected boxes. Reuse only
+minor construction details such as trim thickness and safe doorway clearance;
+do not copy the Variable Vault pavilion shell. Give every game a different
+silhouette, roofline, entrance composition, and landmark:
 
 - Path Garden: greenhouse and planters.
 - Loop Lagoon: dock workshop and repeating lantern rhythm.
@@ -17,6 +18,12 @@ structural accents, warm path lighting—then give each room a landmark:
 - Event Factory: compact production hall with bell/chute motifs.
 - Build-a-Bot: robotics hangar.
 - Tidepool Nursery: glassy coastal conservatory.
+
+The intended structural families are greenhouse frames for Garden, an open dock
+shed for Loop, a tall beacon hall for Signal, the existing enclosed power-lab
+pavilion for Vault, an asymmetric repair garage for Debug, a stepped production
+hall for Event, a broad robotics hangar for Bot, and a low conservatory with
+planter wings for Nursery.
 
 ## Delivery sequence
 
@@ -46,3 +53,27 @@ Vault stations without moving them. An editor viewport inspection shows the
 station line beneath the roof with an unobstructed open front. Runtime traversal
 is still pending because the first Play From Here launch returned the player to
 the normal hub spawn.
+
+## Distinct graybox checkpoint
+
+Seven additional shells are saved without moving gameplay actors:
+
+- `campus_path_greenhouse`: compact pergola frames, ridge, and side planters.
+- `campus_loop_dock_sheds`: four offset dock roofs with alternating pitch and
+  round markers.
+- `campus_signal_beacon_hall`: four open signal portals around a tall beacon.
+- `campus_debug_repair_garage`: asymmetric split roofs and exhaust stacks.
+- `campus_event_stepped_factory`: four different-height production towers,
+  chimneys, and an overhead conveyor.
+- `campus_bot_aframe_hangar`: paired sloped roofs, ridge spine, and open bays.
+- `campus_nursery_canopy_garden`: four separate round canopies with planter
+  wings.
+
+An aerial editor inspection confirms different silhouettes. These remain
+graybox structures: material identity, windows, signs, native Fortnite props,
+landscaping, paths, and runtime clearance evidence are still pending.
+
+The first full content launch after this checkpoint timed out after 300 seconds
+and the Session toolset subsequently reported `Disconnected` / `Unconnected`.
+No runtime result is claimed. Diagnose the launch/cook before any shell receives
+acceptance credit or before further environment density is added.

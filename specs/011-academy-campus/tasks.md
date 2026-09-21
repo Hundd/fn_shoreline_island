@@ -10,8 +10,11 @@
   `campus_variable_vault_shell`; runtime AC-001 remains assigned to T-003.
 - [ ] T-003 (FR-002, FR-003, FR-007, AC-001, AC-002): Solo-test all four Vault
   stations, entry/exit, board readability, retry, Replay, and Hub behavior.
-- [ ] T-004 (FR-001-FR-003): Apply the tested room kit to the other seven games,
-  verifying one zone before starting the next.
+- [ ] T-004 (FR-001-FR-003, FR-008, AC-006): Build seven structurally distinct
+  rooms rather than copying the Vault shell, verifying one zone before starting
+  the next. Seven distinct graybox structures are saved and visibly different
+  in the editor; runtime access and gameplay verification remain open, so this
+  task is not complete.
 - [ ] T-005 (FR-004-FR-006, AC-003, AC-004): Add campus paths, trees, planters,
   lights, benches, fences, signs, and room landmarks.
 - [ ] T-006 (NFR-001-NFR-004, AC-005): Run Verse build, fresh-session checks,
