@@ -34,6 +34,17 @@ tested.
 - FR-008: No two game rooms reuse the same overall shell, roofline, entrance,
   or landmark treatment; each room communicates its game theme through a
   visibly different architectural composition.
+- FR-009: Each game uses a distinct decorative interaction vocabulary around
+  its existing controls: console silhouette, button surround, nearby props,
+  and visual rhythm must differ while gameplay devices and bindings remain
+  unchanged.
+- FR-010: Station decoration must visibly meet the playable floor or connect
+  to a grounded support; no decorative beam or console element should read as
+  accidentally suspended in air.
+- FR-011: Minigame button devices should have room-specific visual identities
+  using supported device appearance settings or safe cosmetic treatment,
+  without replacing devices, changing interaction semantics, or losing state
+  feedback.
 
 ## Non-functional requirements
 
@@ -83,6 +94,26 @@ run, then no blocking error or gameplay regression is introduced.
 Given any two game rooms are visible from the campus paths, when a player
 compares their silhouettes and entrances, then the rooms are distinguishable
 without relying on their text labels or color alone.
+
+### AC-007: Distinct station identity
+
+Given the controls for any two games are visible, when a player compares their
+stations, then the decorative console forms and prop arrangements identify
+different games without relying on color alone, while every original control
+remains reachable and functional.
+
+### AC-008: Grounded station dressing
+
+Given a player views a decorated station from the normal approach, when they
+inspect its props, then bases meet the room floor and raised pieces connect to
+visible supports without obstructing the original controls.
+
+### AC-009: Distinct button appearance
+
+Given buttons from two minigames are visible, when a player compares them,
+then their visual treatment is distinguishable beyond nearby architecture,
+while both buttons still display their intended prompt/state and trigger their
+original action.
 
 ## Out of scope
 
