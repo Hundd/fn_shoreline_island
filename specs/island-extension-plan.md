@@ -115,3 +115,11 @@ The current Loop presentation pass reduces distant station text; nearby
 readability, repeated range transitions and progress retention must be verified
 before its task is closed. Later-zone lifecycle, optional-activity and release
 checks remain required as recorded in their feature directories.
+
+## Academy campus presentation pass
+
+Feature [011: Academy Campus](011-academy-campus/spec.md) replaces the open
+prototype field with one themed room per game plus connected landscaping. It is
+a presentation layer around the existing stations: gameplay actors and Verse
+bindings remain in place until a separately specified migration is justified.
+Build and playtest one representative room before expanding the kit island-wide.
