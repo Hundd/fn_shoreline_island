@@ -77,3 +77,15 @@ The first full content launch after this checkpoint timed out after 300 seconds
 and the Session toolset subsequently reported `Disconnected` / `Unconnected`.
 No runtime result is claimed. Diagnose the launch/cook before any shell receives
 acceptance credit or before further environment density is added.
+
+## First campus connection pass
+
+The saved `campus_main_promenade` adds a teal north-south spine with branches to
+Garden, Loop, Signal, Energy, Debug, Event, Bot, and Nursery. Eleven scaled
+native Fortnite `CP_Apollo_Tree_RedAlder` actors form loose east/west boundary
+rhythms outside the station rows. An aerial editor inspection confirms that the
+paths read continuously and the trees remain outside the room entrances.
+
+This pass deliberately reuses one tree asset at varied scales and rotations to
+limit memory growth. Per-room materials, windows, entrance signs, lighting, and
+themed props remain pending.
