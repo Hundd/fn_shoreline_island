@@ -104,3 +104,13 @@ rapid presses, hints, repeat completion, departure during execution, respawn,
 join-in-progress, and round restart. Recheck hub spawn and the existing garden.
 Record actual multiplayer evidence separately from code inspection. Run project
 validation and memory calculation; capture the visible zone and completion.
+
+## Harbor 3 start cue: 2026-09-22
+
+Place two persistent billboard devices beside Harbor 3's existing Claim control
+at X=-7990, Y=700, Z=2500. One sign must name **SIGNAL LIGHTHOUSE** and direct
+the player to **START HERE: PRESS CLAIM**. The companion sign must give the
+brief, audio-independent sequence: `1. Claim  2. Read cargo  3. Pick its dock`.
+Keep the signs close enough to the claim button to be read on approach, above
+the controls to avoid obstruction, and do not alter station logic or bindings.
+Verify visibility in a fresh solo session.

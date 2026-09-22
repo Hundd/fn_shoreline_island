@@ -56,9 +56,9 @@ fn_shoreline_island_signal_station := class(creative_device):
     hub_spawner_3:player_spawner_device = player_spawner_device{}
 
     fixtures:fn_shoreline_island_signal_fixtures = fn_shoreline_island_signal_fixtures{}
-    leaf_material:Academy.Cargo.m_signal_leaf = Academy.Cargo.m_signal_leaf{}
-    gear_material:Academy.Cargo.m_signal_gear = Academy.Cargo.m_signal_gear{}
-    plain_material:Academy.mi_academy_teal = Academy.mi_academy_teal{}
+    apple_material:Academy.Cargo.mi_ai_classifier_apple = Academy.Cargo.mi_ai_classifier_apple{}
+    puppy_material:Academy.Cargo.mi_ai_classifier_puppy = Academy.Cargo.mi_ai_classifier_puppy{}
+    car_material:Academy.Cargo.mi_ai_classifier_car = Academy.Cargo.mi_ai_classifier_car{}
     var owner:?player = false
     var running:logic = false
     var generation:int = 0
@@ -66,44 +66,44 @@ fn_shoreline_island_signal_station := class(creative_device):
     var boat_home:transform = transform{}
     var cargo_home:transform = transform{}
 
-    claim_text<localizes>:message = "Claim harbor station"
-    garden_text<localizes>:message = "Send boat to Garden"
-    workshop_text<localizes>:message = "Send boat to Workshop"
-    storage_text<localizes>:message = "Send boat to Storage"
+    claim_text<localizes>:message = "Claim classifier station"
+    garden_text<localizes>:message = "Classify as Food"
+    workshop_text<localizes>:message = "Classify as Animal"
+    storage_text<localizes>:message = "Classify as Vehicle"
     rule_text<localizes>:message = "Change rule A / B / C"
     run_text<localizes>:message = "Run selected rule"
     help_text<localizes>:message = "Help"
     next_text<localizes>:message = "Next challenge / Replay all"
     replay_text<localizes>:message = "Replay current queue"
     return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "SIGNAL LIGHTHOUSE | Harbor {number}\nPress CLAIM to guide supplies."
-    occupied_text<localizes>:message = "This harbor has a pilot. Choose another station."
-    other_text<localizes>:message = "Leave your current harbor before claiming another."
-    manual_text<localizes>:message = "Help restore the academy. Read the cargo label, then choose its destination."
-    final_text<localizes>:message = "Read the whole queue. Choose a rule, then Run. Watch where each boat goes."
-    workshop_later_text<localizes>:message = "Workshop opens in challenge 2. Here, LEAF goes to Garden and PLAIN to Storage."
-    manual_only_text<localizes>:message = "Choose a destination for this boat. Rules begin in challenge 3."
-    rule_only_text<localizes>:message = "For this queue, choose a rule and press Run."
-    finish_text<localizes>:message = "Route this queue first. Help is always available."
-    ready_text<localizes>:message = "Choose a destination."
+    available_text<localizes>(number:int):message = "AI CLASSIFIER | Station {number}\nPress CLAIM to sort incoming items."
+    occupied_text<localizes>:message = "This classifier is in use. Choose another station."
+    other_text<localizes>:message = "Leave your current classifier before claiming another."
+    manual_text<localizes>:message = "Read the incoming item, then choose its category."
+    final_text<localizes>:message = "Read the whole item queue. Choose a classification rule, then Run. Watch each item reach its category."
+    workshop_later_text<localizes>:message = "Animal opens in challenge 2. Here, APPLE is Food and CAR is Vehicle."
+    manual_only_text<localizes>:message = "Choose a category for this item. Rules begin in challenge 3."
+    rule_only_text<localizes>:message = "For this queue, choose a classification rule and press Run."
+    finish_text<localizes>:message = "Classify this queue first. Help is always available."
+    ready_text<localizes>:message = "Choose a category."
     ready_rule_text<localizes>:message = "Choose a rule, then Run."
-    solved_text<localizes>:message = "Queue delivered! Press Next."
-    complete_text<localizes>:message = "Signal Badge earned! A condition is a check that chooses what happens. Replay or return to the hub."
-    retained_text<localizes>:message = "Queue delivered again! Your Signal Badge stays earned for this round."
-    complete_board_text<localizes>:message = "Signal Badge earned! Replay is optional."
-    first_rule_text<localizes>:message = "If LEAF: Garden. Otherwise: Storage."
-    second_rule_text<localizes>:message = "If LEAF: Garden. If GEAR: Workshop.\nOtherwise: Storage."
-    all_rules_text<localizes>:message = "Rule | LEAF / GEAR / PLAIN\nA | Garden / Workshop / Storage\nB | Storage / Workshop / Garden\nC | Garden / Garden / Storage"
-    concept_text<localizes>:message = "A condition checks a cargo label to choose a destination. Does your choice match every boat?"
-    worked_rule_text<localizes>:message = "Try Rule A: LEAF to Garden, GEAR to Workshop, otherwise Storage. It matches the whole queue."
-    worked_manual_text<localizes>(cargo:string, destination:string):message = "This boat is {cargo}. Send it to {destination}. Then check the next label."
-    cargo_text<localizes>(cargo:string):message = "CARGO: {cargo}"
-    empty_cargo_text<localizes>:message = "CARGO QUEUE"
-    board_text<localizes>(input_player:agent, challenge:int, queue:string, position:int, total:int, rule:string, status:message):message = "Pilot: {input_player} | Challenge {challenge}\nQueue: {queue}\nBoat {position}/{total} | Rule {rule}\n{status}"
-    manual_board_text<localizes>(input_player:agent, challenge:int, queue:string, position:int, total:int, status:message):message = "Pilot: {input_player} | Challenge {challenge}\nQueue: {queue}\nBoat {position}/{total}\n{status}"
-    moving_text<localizes>(cargo:string, destination:string):message = "{cargo} sailing to {destination}"
-    wrong_text<localizes>(cargo:string, actual:string, expected:string):message = "{cargo} reached {actual}; it needs {expected}. Try again."
-    delivered_text<localizes>(cargo:string, destination:string):message = "{cargo} delivered to {destination}."
+    solved_text<localizes>:message = "Queue classified! Press Next."
+    complete_text<localizes>:message = "Classifier Badge earned! Classification means putting things into categories. Replay or return to the hub."
+    retained_text<localizes>:message = "Queue classified again! Your Classifier Badge stays earned for this round."
+    complete_board_text<localizes>:message = "Classifier Badge earned! Replay is optional."
+    first_rule_text<localizes>:message = "If APPLE: Food. Otherwise: Vehicle."
+    second_rule_text<localizes>:message = "If APPLE: Food. If PUPPY: Animal.\nOtherwise: Vehicle."
+    all_rules_text<localizes>:message = "Rule | APPLE / PUPPY / CAR\nA | Food / Animal / Vehicle\nB | Vehicle / Animal / Food\nC | Food / Food / Vehicle"
+    concept_text<localizes>:message = "Classification means checking an item and choosing its category. Does every choice match the item?"
+    worked_rule_text<localizes>:message = "Try Rule A: APPLE is Food, PUPPY is Animal, and CAR is Vehicle. It matches the whole queue."
+    worked_manual_text<localizes>(cargo:string, destination:string):message = "This item is {cargo}. Classify it as {destination}. Then check the next label."
+    cargo_text<localizes>(cargo:string):message = "INCOMING ITEM: {cargo}"
+    empty_cargo_text<localizes>:message = "INCOMING ITEM QUEUE"
+    board_text<localizes>(input_player:agent, challenge:int, queue:string, position:int, total:int, rule:string, status:message):message = "Classifier: {input_player} | Challenge {challenge}\nItems: {queue}\nItem {position}/{total} | Rule {rule}\n{status}"
+    manual_board_text<localizes>(input_player:agent, challenge:int, queue:string, position:int, total:int, status:message):message = "Classifier: {input_player} | Challenge {challenge}\nItems: {queue}\nItem {position}/{total}\n{status}"
+    moving_text<localizes>(cargo:string, destination:string):message = "{cargo} classified as {destination}"
+    wrong_text<localizes>(cargo:string, actual:string, expected:string):message = "{cargo} was classified as {actual}; it belongs in {expected}. Try again."
+    delivered_text<localizes>(cargo:string, destination:string):message = "{cargo} classified as {destination}."
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -157,11 +157,11 @@ fn_shoreline_island_signal_station := class(creative_device):
 
     show_cargo(cargo:int):void =
         if (cargo = 0):
-            boat.SetMaterial(leaf_material)
+            boat.SetMaterial(apple_material)
         else if (cargo = 1):
-            boat.SetMaterial(gear_material)
+            boat.SetMaterial(puppy_material)
         else:
-            boat.SetMaterial(plain_material)
+            boat.SetMaterial(car_material)
         cargo_board.SetText(cargo_text(fixtures.cargo_name(cargo)))
         cargo_board.UpdateDisplay()
 
@@ -174,7 +174,7 @@ fn_shoreline_island_signal_station := class(creative_device):
         set running = false
         set owner = false
         reset_boat()
-        boat.SetMaterial(plain_material)
+        boat.SetMaterial(car_material)
         board.SetText(available_text(station_id + 1))
         board.UpdateDisplay()
         rule_board.SetText(first_rule_text)

@@ -18,8 +18,8 @@ fn_shoreline_island_debug_progress := class(creative_device):
     var states:[player]debug_player_progress = map{}
     var round_generation:int = 0
 
-    badge_title<localizes>:message = "Debug Badge"
-    badge_description<localizes>:message = "Solve all three Debug Workshop challenges."
+    badge_title<localizes>:message = "AI Detective Badge"
+    badge_description<localizes>:message = "Solve all three AI Error Lab challenges."
 
     OnBegin<override>()<suspends>:void =
         Hide()

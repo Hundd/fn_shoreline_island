@@ -54,19 +54,19 @@ fn_shoreline_island_energy_station := class(creative_device):
     var observed_round:int = -1
     var door_home:transform = transform{}
 
-    claim_text<localizes>:message = "Claim vault station"
-    add_text<localizes>:message = "Add 1 energy"
-    subtract_text<localizes>:message = "Subtract 1 energy"
+    claim_text<localizes>:message = "Claim Confidence Core station"
+    add_text<localizes>:message = "New clue: confidence +10%"
+    subtract_text<localizes>:message = "Remove clue: confidence -10%"
     count_text<localizes>:message = "Change repeats: 1 to 5"
     start_text<localizes>:message = "Start / Run Add 2"
     help_text<localizes>:message = "Help"
     next_text<localizes>:message = "Next challenge / Replay all"
     replay_text<localizes>:message = "Replay current challenge"
     return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "VARIABLE VAULT | Station {number}\nPress CLAIM to power the academy."
-    occupied_text<localizes>:message = "This vault has an engineer. Choose another station."
-    other_text<localizes>:message = "Leave your current vault before claiming another."
-    manual_text<localizes>:message = "Power the academy's preview door. Change energy with +1 or -1, then press Start."
+    available_text<localizes>(number:int):message = "CONFIDENCE CORE | Station {number}\nPress CLAIM to help Pix use new clues."
+    occupied_text<localizes>:message = "This Confidence Core station is in use. Choose another station."
+    other_text<localizes>:message = "Leave your current Confidence Core station before claiming another."
+    manual_text<localizes>:message = "Give Pix useful clues. Change confidence with +10% or -10%, then press Start."
     repeat_text<localizes>:message = "Choose how many times to Add 2. Run starts energy at 0. Can it finish at 6?"
     manual_controls_text<localizes>:message = "Use +1 or -1 here. Repeats begin in challenge 3."
     repeat_controls_text<localizes>:message = "This challenge uses Repeat Add 2. Choose a count, then Run."
@@ -75,22 +75,22 @@ fn_shoreline_island_energy_station := class(creative_device):
     ready_text<localizes>:message = "Edit energy, then Start."
     ready_repeat_text<localizes>:message = "Choose repeats, then Run."
     solved_text<localizes>:message = "Door open! Press Next or Replay."
-    complete_text<localizes>:message = "Energy Badge earned! A variable stores a value that can change. Replay or return to the hub."
-    retained_text<localizes>:message = "Door opened again! Your Energy Badge stays earned for this round."
-    complete_board_text<localizes>:message = "Energy Badge earned! Replay is optional."
-    concept_text<localizes>:message = "A variable stores a value that can change. Compare energy with the target. Each addition changes the stored value."
+    complete_text<localizes>:message = "Confidence Badge earned! More useful information can sometimes help an AI make a better prediction. Replay or return to the hub."
+    retained_text<localizes>:message = "Confidence reached again! Your Confidence Badge stays earned for this round."
+    complete_board_text<localizes>:message = "Confidence Badge earned! Replay is optional."
+    concept_text<localizes>:message = "AI answers can have different confidence. High confidence does not automatically mean an answer is correct."
     worked_manual_text<localizes>(target:int):message = "Use +1 or -1 until energy reads {target}. Then press Start. Replay restores the starting value."
     worked_repeat_text<localizes>:message = "Try 3 repeats of Add 2: energy changes 0, 2, 4, 6. Then the door opens."
-    energy_text<localizes>(energy:int, target:int):message = "ENERGY: {energy}\nTARGET: {target}"
-    empty_energy_text<localizes>:message = "ENERGY\nClaim to begin"
+    energy_text<localizes>(energy:int, target:int, current_percent:int, target_percent:int):message = "AI CONFIDENCE: {current_percent}%\nTARGET: {target_percent}%\nClue score: {energy} / {target}"
+    empty_energy_text<localizes>:message = "AI CONFIDENCE\nClaim to begin"
     closed_text<localizes>:message = "PREVIEW DOOR: CLOSED"
     opening_text<localizes>:message = "PREVIEW DOOR: OPENING"
     open_text<localizes>:message = "PREVIEW DOOR: OPEN"
-    board_text<localizes>(input_player:agent, challenge:int, start:int, status:message):message = "Engineer: {input_player} | Challenge {challenge}\nStarting energy: {start} | Controls: +1 / -1\n{status}"
-    repeat_board_text<localizes>(input_player:agent, count:int, status:message):message = "Engineer: {input_player} | Challenge 3\nStarting energy: 0 | Repeat {count}: Add 2\n{status}"
-    addition_text<localizes>(step:int, count:int):message = "Add 2 | Step {step} of {count}"
-    initial_text<localizes>:message = "Run begins: energy = 0"
-    wrong_text<localizes>(energy:int, target:int):message = "Energy finished at {energy}; the door needs {target}. Edit and try again."
+    board_text<localizes>(input_player:agent, challenge:int, start:int, status:message):message = "Researcher: {input_player} | Challenge {challenge}\nStarting clue score: {start} | Controls: +10% / -10%\n{status}"
+    repeat_board_text<localizes>(input_player:agent, count:int, status:message):message = "Researcher: {input_player} | Challenge 3\nStarting confidence: 0% | Repeat {count}: New clue +20%\n{status}"
+    addition_text<localizes>(step:int, count:int):message = "New clue +20% | Step {step} of {count}"
+    initial_text<localizes>:message = "Run begins: confidence = 0%"
+    wrong_text<localizes>(energy:int, target:int):message = "Confidence finished at clue score {energy}; the target is {target}. Edit and try again."
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -156,9 +156,13 @@ fn_shoreline_island_energy_station := class(creative_device):
         energy_board.SetText(empty_energy_text)
         energy_board.UpdateDisplay()
 
+    confidence_percent(value:int):int =
+        return value * 10
+
     show_board(input_player:player, status:message):void =
         state := progress.ensure_player(input_player)
-        energy_board.SetText(energy_text(state.energy, fixtures.target(state.challenge)))
+        target := fixtures.target(state.challenge)
+        energy_board.SetText(energy_text(state.energy, target, confidence_percent(state.energy), confidence_percent(target)))
         energy_board.UpdateDisplay()
         if (state.challenge = 2):
             board.SetText(repeat_board_text(input_player, state.repeat_count, status))

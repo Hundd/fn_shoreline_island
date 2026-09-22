@@ -35,20 +35,20 @@ byte_island_game_manager := class(creative_device):
 
     var player_states:[player]byte_island_player_state = map{}
 
-    objective_text<localizes>:message = "Pix: Help our garden grow! Follow the PATH GARDEN signs."
-    water_text<localizes>:message = "Water"
-    plant_text<localizes>:message = "Plant"
-    wait_text<localizes>:message = "Wait"
-    harvest_text<localizes>:message = "Harvest"
+    objective_text<localizes>:message = "Pix: My Instructions module is offline. Follow the PROMPT LAB signs."
+    water_text<localizes>:message = "Find Seed"
+    plant_text<localizes>:message = "Dig Hole"
+    wait_text<localizes>:message = "Plant Seed"
+    harvest_text<localizes>:message = "Water"
     return_text<localizes>:message = "Return to Academy Hub"
-    badge_title<localizes>:message = "Circuit Badge"
-    badge_description<localizes>:message = "Grow the garden: Water, Plant, Wait, Harvest."
-    water_feedback<localizes>:message = "1 of 4: Water added! Next, Plant a seed."
-    plant_feedback<localizes>:message = "2 of 4: Seed planted! Next, Wait for it to grow."
-    wait_feedback<localizes>:message = "3 of 4: It grew! Next, Harvest your garden."
-    reset_feedback<localizes>:message = "Pix: Let's try again! Start with Water, then Plant, Wait, Harvest."
-    complete_feedback<localizes>:message = "Circuit Badge earned! An algorithm is an ordered set of steps."
-    repeat_feedback<localizes>:message = "Garden grown again! You still have your Circuit Badge. Return to the hub."
+    badge_title<localizes>:message = "Prompt Badge"
+    badge_description<localizes>:message = "Give Pix clear instructions: Find Seed, Dig Hole, Plant Seed, Water."
+    water_feedback<localizes>:message = "1 of 4: Seed found. Next, dig the hole."
+    plant_feedback<localizes>:message = "2 of 4: Hole ready. Next, plant the seed."
+    wait_feedback<localizes>:message = "3 of 4: Seed planted. Next, water it."
+    reset_feedback<localizes>:message = "That instruction did not work. Try changing the order: Find Seed, Dig Hole, Plant Seed, Water."
+    complete_feedback<localizes>:message = "Prompt Badge earned! Clear instructions help AI understand a task."
+    repeat_feedback<localizes>:message = "Great instructions again! Your Prompt Badge is already earned. Return to the hub."
 
     OnBegin<override>()<suspends>:void =
         water_button.SetInteractionText(water_text)

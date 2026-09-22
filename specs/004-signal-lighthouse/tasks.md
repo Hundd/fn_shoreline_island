@@ -8,9 +8,10 @@
 - [ ] `T-002`: Implement and verify FR-002 through AC-002.
 - [ ] `T-003`: Implement and verify FR-003 through AC-003.
 - [ ] `T-004`: Implement and verify FR-004 through AC-004.
-- [ ] `T-005`: Implement and verify NFR-001 through AC-005.
-- [ ] `T-006`: Implement and verify NFR-002 through AC-006.
-- [ ] `T-007`: Implement and verify NFR-003 through AC-007.
+- [ ] `T-005`: Implement and verify NFR-001 through AC-006.
+- [ ] `T-006`: Implement and verify NFR-002 through AC-007.
+- [ ] `T-007`: Implement and verify NFR-003 through AC-008.
+- [ ] `T-008` (FR-005, AC-005): Place and save Harbor 3's persistent Claim-start cue and three-step instruction; build Verse and verify visibility in a fresh solo session.
 
 ## Evidence
 
@@ -33,3 +34,8 @@ remaining presentation and lifecycle checks remain open. All full acceptance sce
 remain open. Check tasks only after their
 acceptance evidence is recorded. Each record needs date, revision, player count,
 expected/actual result, pass/fail, warnings, and capture/log paths.
+
+Harbor 3's persistent start cue is placed, saved, and builds cleanly; the
+fresh-session route-visibility check remains pending because Play From Here
+spawned at the island default location. See the
+[implementation readback](evidence/harbor-3-start-cue-2026-09-22.md).

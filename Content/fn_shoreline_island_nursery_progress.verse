@@ -15,7 +15,7 @@ fn_shoreline_island_nursery_progress := class(creative_device):
     var states:[player]nursery_player_progress = map{}
     var round_generation:int = 0
 
-    badge_title<localizes>:message = "Nursery Badge"
+    badge_title<localizes>:message = "AI Skills Badge"
     badge_description<localizes>:message = "Restore three planter challenges with Care."
 
     OnBegin<override>()<suspends>:void =

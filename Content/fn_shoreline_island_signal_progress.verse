@@ -19,8 +19,8 @@ fn_shoreline_island_signal_progress := class(creative_device):
     var states:[player]signal_player_progress = map{}
     var round_generation:int = 0
 
-    badge_title<localizes>:message = "Signal Badge"
-    badge_description<localizes>:message = "Route all three harbor challenges."
+    badge_title<localizes>:message = "Classifier Badge"
+    badge_description<localizes>:message = "Classify all three AI challenges."
 
     OnBegin<override>()<suspends>:void =
         Hide()

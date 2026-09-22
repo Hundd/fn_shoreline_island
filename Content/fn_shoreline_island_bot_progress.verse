@@ -29,7 +29,7 @@ fn_shoreline_island_bot_progress := class(creative_device):
     var round_generation:int = 0
     fixtures:fn_shoreline_island_bot_fixtures = fn_shoreline_island_bot_fixtures{}
 
-    badge_title<localizes>:message = "Bot Badge"
+    badge_title<localizes>:message = "AI Agent Badge"
     badge_description<localizes>:message = "Complete the academy restoration mission."
 
     OnBegin<override>()<suspends>:void =

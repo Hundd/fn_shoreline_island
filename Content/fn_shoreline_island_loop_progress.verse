@@ -15,8 +15,8 @@ fn_shoreline_island_loop_progress := class(creative_device):
     var states:[player]loop_player_progress = map{}
     var round_generation:int = 0
 
-    badge_title<localizes>:message = "Loop Badge"
-    badge_description<localizes>:message = "Solve the three Loop Lagoon challenges."
+    badge_title<localizes>:message = "Pattern Badge"
+    badge_description<localizes>:message = "Solve the three Pattern Scanner challenges."
 
     OnBegin<override>()<suspends>:void =
         Hide()

@@ -8,6 +8,9 @@ fn_shoreline_island_bot_station := class(creative_device):
     station_id:int = 0
     @editable
     progress:fn_shoreline_island_bot_progress = fn_shoreline_island_bot_progress{}
+    # Read-only status source shared by all Agent Mission stations.
+    @editable
+    academy_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
     @editable
     claim_button:button_device = button_device{}
     @editable
@@ -118,32 +121,34 @@ fn_shoreline_island_bot_station := class(creative_device):
     var parcel_home:transform = transform{}
     var lamp_homes:[]transform = array{}
 
-    claim_text<localizes>:message = "Claim Build-a-Bot"
-    slot_text<localizes>(number:int):message = "Change command {number}"
+    claim_text<localizes>:message = "Claim AI Agent Mission"
+    slot_text<localizes>(number:int):message = "Edit agent plan command {number}"
     repeat_text<localizes>:message = "Change repeat count (1-4)"
     energy_text<localizes>:message = "Change starting energy (0-6)"
-    connection_text<localizes>:message = "Connect Launch event"
-    rule_text<localizes>:message = "Change cargo rule"
-    cargo_text<localizes>:message = "Change test cargo"
-    run_text<localizes>:message = "Run program / Fire Launch event"
+    connection_text<localizes>:message = "Choose Launch tool connection"
+    rule_text<localizes>:message = "Choose classification rule"
+    cargo_text<localizes>:message = "Change test item"
+    run_text<localizes>:message = "Run agent plan / Try Launch"
     help_text<localizes>:message = "Help / Worked answer"
     next_text<localizes>:message = "Next stage / Replay mission"
     replay_text<localizes>:message = "Replay this stage"
     return_text<localizes>:message = "Return to Academy Hub"
     occupied_text<localizes>:message = "This robot is in use. Choose another station."
     other_text<localizes>:message = "Leave your current robot station before claiming another."
+    locked_text<localizes>:message = "Agent Mode is LOCKED. Restore Pix's first seven AI Core modules, then return here."
     unused_text<localizes>:message = "This control belongs to another mission stage."
     wait_text<localizes>:message = "Finish this stage first. Help shows a worked answer."
-    available_text<localizes>(number:int):message = "BUILD-A-BOT | Station {number}\nHelp Pix restore the academy. Claim to begin.\n1 Deliver a seed | 2 Light the dock | 3 Route a parcel"
-    seed_goal<localizes>:message = "SEED: Pickup at Home, move to cell 3, then Drop."
-    dock_goal<localizes>:message = "DOCK: Light cells 1, 2, 3. Finish with energy 0."
-    route_goal<localizes>:message = "PARCEL: Launch leaf to Garden and plain to Storage."
-    mission_text<localizes>(goal:message, seed_done:message, dock_done:message, route_done:message):message = "PIX'S RESTORATION MISSION\nSeed: {seed_done} | Dock: {dock_done} | Parcel: {route_done}\n{goal}"
+    available_text<localizes>(number:int):message = "AI AGENT MISSION | Station {number}\nHelp Pix combine restored abilities. Claim to begin.\n1 Follow instructions | 2 Use a repeat pattern | 3 Classify an item"
+    seed_goal<localizes>:message = "INSTRUCTIONS: Pick up at Home, move to cell 3, then Drop."
+    dock_goal<localizes>:message = "PATTERN: Light cells 1, 2, 3. Finish with energy 0."
+    route_goal<localizes>:message = "CLASSIFY: Launch Apple to Food and Car to Vehicle."
+    mission_text<localizes>(goal:message, seed_done:message, dock_done:message, route_done:message):message = "PIX'S AI AGENT MISSION\nInstructions: {seed_done} | Pattern: {dock_done} | Classify: {route_done}\n{goal}"
     done_text<localizes>:message = "done"
     pending_text<localizes>:message = "to do"
     solved_text<localizes>:message = "Stage complete! Next or Replay."
-    final_text<localizes>:message = "Academy restored! Seed delivered, dock lit, supplies routed. Bot Badge earned. Replay or return to the hub."
-    retained_text<localizes>:message = "Mission completed again! Your Bot Badge and earlier badges stay earned."
+    agent_mode_text<localizes>:message = "We did it! Pix's Agent Mode is online.\nYou taught Pix to follow instructions, spot patterns, classify items, use tools, and combine skills.\nCheck your AI Core Journal to see every restored module. AI can help with a task, and people should check important decisions.\nAI Agent Badge earned."
+    final_text<localizes>:message = "PIX AI CORE FULLY RESTORED!\nInstructions, Patterns, Classification, Confidence, Error Checking, Tools, Skills, and Agent Mode are ONLINE.\nWe did it! AI can help with a task, and people should check important decisions.\nAI Agent Badge earned."
+    retained_text<localizes>:message = "Mission completed again! Your AI Agent Badge and earlier badges stay earned."
     ready_text<localizes>:message = "Ready. Run to see each command."
     pickup_name<localizes>:message = "Pickup"
     move_name<localizes>:message = "Move"
@@ -153,19 +158,19 @@ fn_shoreline_island_bot_station := class(creative_device):
     home_name<localizes>:message = "Start at Home"
     empty_name<localizes>:message = "empty"
     seed_name<localizes>:message = "seed"
-    leaf_name<localizes>:message = "leaf"
-    plain_name<localizes>:message = "plain"
-    garden_name<localizes>:message = "Garden"
-    storage_name<localizes>:message = "Storage"
+    leaf_name<localizes>:message = "Apple"
+    plain_name<localizes>:message = "Car"
+    garden_name<localizes>:message = "Food"
+    storage_name<localizes>:message = "Vehicle"
     disconnected_name<localizes>:message = "Disconnected"
     dispatch_name<localizes>:message = "Dispatch"
-    all_garden_name<localizes>:message = "All cargo > Garden"
-    all_storage_name<localizes>:message = "All cargo > Storage"
-    condition_name<localizes>:message = "If leaf > Garden; else > Storage"
-    reversed_name<localizes>:message = "If leaf > Storage; else > Garden"
-    seed_program_text<localizes>(a:message, b:message, c:message, count:int):message = "SEED PROGRAM\n1 {a} | 2 {b} | 3 {c}\nRepeat Move count: {count}\nChoices: Pickup, Repeat Move, Drop"
-    dock_program_text<localizes>(a:message, b:message, count:int, energy:int):message = "DOCK PROGRAM\nRepeat {count} [1 {a}, 2 {b}]\nStarting energy: {energy} | Light costs 1\nChoices: Move, Light"
-    route_program_text<localizes>(connection:message, rule:message, cargo:message, leaf:message, plain:message):message = "PARCEL PROGRAM\nLaunch > {connection}\n{rule}\nTest: {cargo} | Leaf: {leaf} | Plain: {plain}"
+    all_garden_name<localizes>:message = "All items > Food"
+    all_storage_name<localizes>:message = "All items > Vehicle"
+    condition_name<localizes>:message = "If Apple > Food; else > Vehicle"
+    reversed_name<localizes>:message = "If Apple > Vehicle; else > Food"
+    seed_program_text<localizes>(a:message, b:message, c:message, count:int):message = "AGENT PLAN: INSTRUCTIONS\n1 {a} | 2 {b} | 3 {c}\nRepeat Move count: {count}\nChoices: Pickup, Repeat Move, Drop"
+    dock_program_text<localizes>(a:message, b:message, count:int, energy:int):message = "AGENT PLAN: PATTERN\nRepeat {count} [1 {a}, 2 {b}]\nStarting energy: {energy} | Light costs 1\nChoices: Move, Light"
+    route_program_text<localizes>(connection:message, rule:message, cargo:message, leaf:message, plain:message):message = "AGENT PLAN: CLASSIFY\nLaunch > {connection}\n{rule}\nTest: {cargo} | Apple: {leaf} | Car: {plain}"
     execution_text<localizes>(command:message, iteration:int, position:int, energy:int, inventory:message, lights:int):message = "NOW: {command} | Repeat step: {iteration}\nCell: {position} | Energy: {energy}\nHand: {inventory} | Dock lamps ON: {lights}/3"
     route_result_text<localizes>(cargo:message, destination_label:message, outcome:message):message = "EVENT: Launch > Dispatch\nCargo: {cargo} > {destination_label}\n{outcome}"
     route_pass_text<localizes>:message = "PASS. Test the other cargo too."
@@ -173,7 +178,7 @@ fn_shoreline_island_bot_station := class(creative_device):
     cell_label<localizes>(cell:int):message = "CELL {cell}"
     home_label<localizes>:message = "HOME\nCELL 0"
     planter_label<localizes>:message = "CELL 3\nPLANTER"
-    route_fail_text<localizes>:message = "Wrong destination. Leaf needs Garden; plain needs Storage. Change the rule and test both again."
+    route_fail_text<localizes>:message = "Wrong category. Apple needs Food; Car needs Vehicle. Change the rule and test both again."
     disconnected_text<localizes>:message = "Launch fired, but it has no connection. Connect Launch to Dispatch."
     error_text<localizes>(reason:message):message = "STOPPED SAFELY: {reason}\nChange the program and Run again."
     pickup_position_error<localizes>:message = "The seed is at Home. Pickup must happen before moving."
@@ -193,8 +198,8 @@ fn_shoreline_island_bot_station := class(creative_device):
     seed_worked<localizes>:message = "Set Pickup / Repeat Move / Drop, repeat count 3. Press Run."
     dock_hint<localizes>:message = "Move to a lamp, then Light it. Each Light spends one energy."
     dock_worked<localizes>:message = "Set Repeat 3 [Move, Light], starting energy 3. Press Run."
-    route_hint<localizes>:message = "Launch needs a connection. The cargo condition must choose a destination for both kinds."
-    route_worked<localizes>:message = "Connect Launch > Dispatch. Choose If leaf > Garden; else > Storage. Run leaf, change cargo, then Run plain."
+    route_hint<localizes>:message = "Launch needs a tool connection. The category rule must choose a destination for both items."
+    route_worked<localizes>:message = "Choose Launch > Dispatch. Choose If Apple > Food; else > Vehicle. Run Apple, change item, then run Car."
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -371,10 +376,22 @@ fn_shoreline_island_bot_station := class(creative_device):
             12 => final_position_error
             _ => invalid_error
 
-    objective(state:bot_player_progress):message =
+    core_is_restored(input_player:player)<transacts>:logic =
+        if (academy_journal.completed_modules(input_player) >= 8):
+            return true
+        return false
+
+    agent_mission_ready(input_player:player)<transacts>:logic =
+        if (academy_journal.completed_modules(input_player) >= 7):
+            return true
+        return false
+
+    objective(input_player:player, state:bot_player_progress):message =
         if (state.solved?):
             if (state.badge_earned?):
-                return final_text
+                if (core_is_restored(input_player)?):
+                    return final_text
+                return agent_mode_text
             return solved_text
         case (state.stage):
             0 => seed_goal
@@ -385,7 +402,7 @@ fn_shoreline_island_bot_station := class(creative_device):
         state := progress.ensure_player(input_player)
         show_stage_props(state.stage)
         if (a := state.completed[0], b := state.completed[1], c := state.completed[2]):
-            display(mission_board, mission_text(objective(state), done_name(a), done_name(b), done_name(c)))
+            display(mission_board, mission_text(objective(input_player, state), done_name(a), done_name(b), done_name(c)))
         if (state.stage = 0, a := state.seed_program[0], b := state.seed_program[1], c := state.seed_program[2]):
             display(program_board, seed_program_text(seed_command_name(a), seed_command_name(b), seed_command_name(c), state.repeats))
         else if (state.stage = 1, a := state.dock_program[0], b := state.dock_program[1]):
@@ -473,6 +490,9 @@ fn_shoreline_island_bot_station := class(creative_device):
                     feedback.Show(input_player, occupied_text, ?DisplayTime := 5.0)
                 return
             state := progress.ensure_player(input_player)
+            if (not state.badge_earned?, not agent_mission_ready(input_player)?):
+                feedback.Show(input_player, locked_text, ?DisplayTime := 8.0)
+                return
             if (state.station_id >= 0):
                 feedback.Show(input_player, other_text, ?DisplayTime := 5.0)
                 return
@@ -488,7 +508,7 @@ fn_shoreline_island_bot_station := class(creative_device):
                 show_route_result(state)
             if (state.last_error > 0):
                 display(execution_board, error_text(failure_name(state.last_error)))
-            feedback.Show(input_player, objective(state), ?DisplayTime := 10.0)
+            feedback.Show(input_player, objective(input_player, state), ?DisplayTime := 10.0)
 
     changed(input_player:player):void =
         state := progress.ensure_player(input_player)
@@ -649,10 +669,14 @@ fn_shoreline_island_bot_station := class(creative_device):
         show_board(input_player)
         var text:message = solved_text
         if (state.badge_earned?):
-            set text = final_text
+            set text = agent_mode_text
+            if (core_is_restored(input_player)?):
+                set text = final_text
             if (was_earned?):
                 set text = retained_text
         feedback.Show(input_player, text, ?DisplayTime := 12.0)
+        if (not was_earned?, core_is_restored(input_player)?):
+            spawn{academy_journal.show_core_restored(input_player)}
         if (state.stage = 2):
             parked := parcel_robot_pose()
             var raised:transform = parked

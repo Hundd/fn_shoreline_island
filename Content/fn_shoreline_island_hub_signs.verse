@@ -29,19 +29,19 @@ fn_shoreline_island_hub_signs := class(creative_device):
     signal_hub_route:billboard_device = billboard_device{}
     @editable
     energy_0_route:billboard_device = billboard_device{}
-    academy_title_text<localizes>:message = "BYTE ISLAND ACADEMY"
-    path_garden_sign_text<localizes>:message = "PATH GARDEN\nWater > Plant > Wait > Harvest"
-    path_water_label_text<localizes>:message = "1  WATER"
-    path_plant_label_text<localizes>:message = "2  PLANT"
-    path_wait_label_text<localizes>:message = "3  WAIT"
-    path_harvest_label_text<localizes>:message = "4  HARVEST"
+    academy_title_text<localizes>:message = "AI ISLAND ACADEMY\nPIX AI CORE: 8 MODULES TO RESTORE\nCheck your AI Core Journal"
+    path_garden_sign_text<localizes>:message = "PROMPT LAB\nFind Seed > Dig Hole > Plant Seed > Water"
+    path_water_label_text<localizes>:message = "1  FIND SEED"
+    path_plant_label_text<localizes>:message = "2  DIG HOLE"
+    path_wait_label_text<localizes>:message = "3  PLANT SEED"
+    path_harvest_label_text<localizes>:message = "4  WATER"
     path_return_sign_text<localizes>:message = "RETURN TO HUB\nUse the button"
-    hub_route_sign_text<localizes>:message = "PATH GARDEN\nAhead to the buttons"
-    hub_loop_route_text<localizes>:message = "LOOP LAGOON >"
-    garden_repair_route_text<localizes>:message = "GARDEN REPAIR\nOptional: fix a program\nFollow the teal path"
-    academy_journal_sign_text<localizes>:message = "MY RESTORATION JOURNAL\nUse the button below"
-    signal_hub_route_text<localizes>:message = "SIGNAL LIGHTHOUSE >\nGuide cargo to help the academy."
-    energy_0_route_text<localizes>:message = "VARIABLE VAULT\nPower the academy.\nFollow the wide path southwest."
+    hub_route_sign_text<localizes>:message = "PROMPT LAB\nAhead: teach Pix clear instructions"
+    hub_loop_route_text<localizes>:message = "PATTERN SCANNER >"
+    garden_repair_route_text<localizes>:message = "FIX THE PROMPT\nOptional: improve an instruction\nFollow the teal path"
+    academy_journal_sign_text<localizes>:message = "MY AI CORE JOURNAL\nSee your personal module status\nUse the button below"
+    signal_hub_route_text<localizes>:message = "AI CLASSIFIER >\nSort incoming items into categories."
+    energy_0_route_text<localizes>:message = "CONFIDENCE CORE\nHelp Pix use new clues.\nFollow the wide path southwest."
     refreshed_text<localizes>(text:message):message = "{text} "
 
     OnBegin<override>()<suspends>:void =
@@ -62,4 +62,3 @@ fn_shoreline_island_hub_signs := class(creative_device):
             else:
                 set alternate = true
             Sleep(3.0)
-

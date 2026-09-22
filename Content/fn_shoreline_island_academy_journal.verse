@@ -30,41 +30,46 @@ fn_shoreline_island_academy_journal := class(creative_device):
     close_text<localizes>:message = "Close"
     work_text<localizes>:message = "Work"
     overview_text<localizes>:message = "Back"
-    open_text<localizes>:message = "Open my restoration journal"
-    earned_text<localizes>:message = "Earned"
-    earned_badge_text<localizes>:message = "Earned (1/1)"
-    ready_text<localizes>:message = "Ready to try"
+    open_text<localizes>:message = "Open my AI Core journal"
+    earned_text<localizes>:message = "ONLINE"
+    earned_badge_text<localizes>:message = "ONLINE"
+    ready_text<localizes>:message = "OFFLINE"
+    locked_text<localizes>:message = "LOCKED"
+    agent_ready_text<localizes>:message = "READY"
     unavailable_text<localizes>:message = "Not yet available"
-    garden_next<localizes>:message = "Path Garden: grow supplies for the academy."
-    loop_next<localizes>:message = "Loop Lagoon: help the delivery robot and dock lights."
-    signal_next<localizes>:message = "Signal Lighthouse: guide cargo to its destination."
-    energy_next<localizes>:message = "Variable Vault: prepare energy for the academy."
-    debug_next<localizes>:message = "Debug Workshop: repair a robot's instructions."
-    event_next<localizes>:message = "Event Factory: connect signals to useful actions."
-    nursery_next<localizes>:message = "Tidepool Nursery: reuse Care to restore planter beds."
-    bot_next<localizes>:message = "Build-a-Bot: finish the restoration mission."
+    garden_next<localizes>:message = "Prompt Lab: help Pix understand clear instructions."
+    loop_next<localizes>:message = "Pattern Scanner: find patterns and predict the next step."
+    signal_next<localizes>:message = "AI Classifier: sort incoming items into categories."
+    energy_next<localizes>:message = "Confidence Core: use clues to improve Pix's confidence."
+    debug_next<localizes>:message = "AI Error Lab: check and correct an AI mistake."
+    event_next<localizes>:message = "AI Tool Lab: choose a useful tool response."
+    nursery_next<localizes>:message = "AI Skills Lab: reuse Pix's Care skill."
+    bot_next<localizes>:message = "AI Agent Mission: combine Pix's restored abilities."
     replay_next<localizes>:message = "Try a replay or explore another open path."
-    journal_text<localizes>(garden_status:message, loop_status:message, signal_status:message, energy_status:message, debug_status:message, event_status:message, nursery_status:message, bot_status:message, destination:message):message = "MY RESTORATION JOURNAL\nHelp Pix restore our coastal academy.\nGarden: {garden_status} | Loop: {loop_status}\nSignal: {signal_status} | Energy: {energy_status}\nDebug: {debug_status} | Event: {event_status}\nNursery: {nursery_status} | Bot: {bot_status}\nNext: {destination}\nAll open paths are yours to explore."
-    garden_name<localizes>:message = "Garden"
-    loop_name<localizes>:message = "Loop"
-    signal_name<localizes>:message = "Signal"
-    energy_name<localizes>:message = "Energy"
-    debug_name<localizes>:message = "Debug"
-    event_name<localizes>:message = "Event"
-    bot_name<localizes>:message = "Bot"
-    nursery_name<localizes>:message = "Nursery"
-    garden_work<localizes>:message = "Supplies grown with ordered steps."
-    loop_work<localizes>:message = "Dock lights restored with repeats."
-    signal_work<localizes>:message = "Deliveries sorted by a rule."
-    energy_work<localizes>:message = "Power prepared by changing a value."
-    debug_work<localizes>:message = "Instructions repaired at the faulty step."
-    event_work<localizes>:message = "Actions connected to signals."
-    bot_work<localizes>:message = "Academy mission completed with your robot."
-    nursery_work<localizes>:message = "Planters restored with a reused Care action."
+    core_progress<localizes>(online_modules:int):message = "PIX AI CORE: {online_modules}/8 MODULES ONLINE"
+    core_restored_title<localizes>:message = "PIX AI CORE FULLY RESTORED"
+    core_restored_body<localizes>:message = "All eight modules are ONLINE.\nYou helped Pix follow instructions, spot patterns, classify, check confidence, fix mistakes, use tools, build skills, and complete an agent mission."
+    journal_text<localizes>(core_state:message, garden_status:message, loop_status:message, signal_status:message, energy_status:message, debug_status:message, event_status:message, nursery_status:message, bot_status:message, destination:message):message = "{core_state}\nRestore Pix's offline AI modules.\nPrompt Lab: {garden_status} | Pattern Scanner: {loop_status}\nAI Classifier: {signal_status} | Confidence Core: {energy_status}\nAI Error Lab: {debug_status} | AI Tool Lab: {event_status}\nAI Skills Lab: {nursery_status} | AI Agent Mission: {bot_status}\nNext: {destination}\nEvery open module is yours to explore."
+    garden_name<localizes>:message = "Prompt Lab"
+    loop_name<localizes>:message = "Pattern Scanner"
+    signal_name<localizes>:message = "AI Classifier"
+    energy_name<localizes>:message = "Confidence Core"
+    debug_name<localizes>:message = "AI Error Lab"
+    event_name<localizes>:message = "AI Tool Lab"
+    bot_name<localizes>:message = "AI Agent Mission"
+    nursery_name<localizes>:message = "AI Skills Lab"
+    garden_work<localizes>:message = "Clear instructions help AI understand what you want."
+    loop_work<localizes>:message = "AI can use patterns in examples to help make predictions."
+    signal_work<localizes>:message = "Classification means sorting things into categories."
+    energy_work<localizes>:message = "AI can be more or less confident about an answer."
+    debug_work<localizes>:message = "AI can make mistakes, so important answers should be checked."
+    event_work<localizes>:message = "AI systems can use tools to get information or perform actions."
+    bot_work<localizes>:message = "AI agents combine instructions, decisions, tools, and actions to complete a goal."
+    nursery_work<localizes>:message = "A reusable skill combines several steps into one useful ability."
     work_done<localizes>(zone:message, contribution:message):message = "{zone}: {contribution}"
-    work_pending<localizes>(zone:message):message = "{zone}: Not yet restored."
+    work_pending<localizes>(zone:message):message = "{zone}: OFFLINE — restore this module."
     work_unavailable<localizes>(zone:message):message = "{zone}: Not yet available."
-    work_page<localizes>(garden_row:message, loop_row:message, signal_row:message, energy_row:message, debug_row:message, event_row:message, nursery_row:message, bot_row:message):message = "MY RESTORED WORK\nYour contributions this round:\n{garden_row}\n{loop_row}\n{signal_row}\n{energy_row}\n{debug_row}\n{event_row}\n{nursery_row}\n{bot_row}"
+    work_page<localizes>(garden_row:message, loop_row:message, signal_row:message, energy_row:message, debug_row:message, event_row:message, nursery_row:message, bot_row:message):message = "PIX AI CORE STATUS\nYour restored modules this round:\n{garden_row}\n{loop_row}\n{signal_row}\n{energy_row}\n{debug_row}\n{event_row}\n{nursery_row}\n{bot_row}"
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -100,6 +105,28 @@ fn_shoreline_island_academy_journal := class(creative_device):
                 return earned_badge_text
             return ready_text
         return unavailable_text
+
+    agent_status(input_player:player):message =
+        if (badge := later_badge_trackers[4], badge.GetValue(input_player) >= 1):
+            return earned_badge_text
+        if (not has_garden[input_player] or not has_loop[input_player]):
+            return locked_text
+        required_tracker_indices := array{0, 1, 2, 3, 5}
+        for (index : required_tracker_indices):
+            if (badge := later_badge_trackers[index], badge.GetValue(input_player) < 1):
+                return locked_text
+        return agent_ready_text
+
+    completed_modules(input_player:player)<transacts>:int =
+        var completed:int = 0
+        if (has_garden[input_player]):
+            set completed += 1
+        if (has_loop[input_player]):
+            set completed += 1
+        for (index := 0..5):
+            if (badge := later_badge_trackers[index], badge.GetValue(input_player) >= 1):
+                set completed += 1
+        return completed
 
     recommendation(input_player:player):message =
         if (not has_garden[input_player]):
@@ -152,10 +179,11 @@ fn_shoreline_island_academy_journal := class(creative_device):
             generation := next_generation
             if (set panel_generations[input_player] = generation) {}
             var page_text:message = journal_text(
+                core_progress(completed_modules(input_player)),
                 get_garden_status(input_player), get_loop_status(input_player),
                 later_status(input_player, 0), later_status(input_player, 1),
                 later_status(input_player, 2), later_status(input_player, 3),
-                later_status(input_player, 5), later_status(input_player, 4), recommendation(input_player))
+                later_status(input_player, 5), agent_status(input_player), recommendation(input_player))
             var panel_top:float = -210.0
             var panel_height:float = 420.0
             var body_top:float = -180.0
@@ -205,6 +233,34 @@ fn_shoreline_island_academy_journal := class(creative_device):
                         Widget := close_button
             if (set panels[input_player] = option{panel}):
                 personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})
+
+    show_core_restored(input_player:player)<suspends>:void =
+        if (personal_ui := GetPlayerUI[input_player]):
+            title := text_block{DefaultText := core_restored_title,
+                DefaultTextColor := color{R := 0.05, G := 0.72, B := 1.0}, DefaultTextSize := 34.0}
+            body := text_block{DefaultText := core_restored_body,
+                DefaultTextColor := NamedColors.White, DefaultTextSize := 20.0}
+            center := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}
+            celebration := canvas:
+                Slots := array:
+                    canvas_slot:
+                        Anchors := center
+                        SizeToContent := false
+                        Offsets := margin{Left := -430.0, Top := -150.0, Right := 860.0, Bottom := 300.0}
+                        Widget := color_block{DefaultColor := color{R := 0.01, G := 0.08, B := 0.16}, DefaultOpacity := 0.96}
+                    canvas_slot:
+                        Anchors := center
+                        SizeToContent := false
+                        Offsets := margin{Left := -380.0, Top := -105.0, Right := 760.0, Bottom := 65.0}
+                        Widget := title
+                    canvas_slot:
+                        Anchors := center
+                        SizeToContent := false
+                        Offsets := margin{Left := -380.0, Top := -25.0, Right := 760.0, Bottom := 155.0}
+                        Widget := body
+            personal_ui.AddWidget(celebration, player_ui_slot{ZOrder := 10, InputMode := ui_input_mode.None})
+            Sleep(8.0)
+            personal_ui.RemoveWidget(celebration)
 
     close_panel(input_player:player):void =
         if (panel := panels[input_player]?, personal_ui := GetPlayerUI[input_player]):

@@ -19,8 +19,8 @@ fn_shoreline_island_energy_progress := class(creative_device):
     var states:[player]energy_player_progress = map{}
     var round_generation:int = 0
 
-    badge_title<localizes>:message = "Energy Badge"
-    badge_description<localizes>:message = "Solve all three Variable Vault challenges."
+    badge_title<localizes>:message = "Confidence Badge"
+    badge_description<localizes>:message = "Solve all three Confidence Core challenges."
 
     OnBegin<override>()<suspends>:void =
         Hide()

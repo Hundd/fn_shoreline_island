@@ -9,17 +9,17 @@ fn_shoreline_island_signal_fixtures := class:
 
     cargo_name(cargo:int)<transacts>:string =
         if (cargo = 0):
-            return "LEAF"
+            return "APPLE"
         if (cargo = 1):
-            return "GEAR"
-        return "PLAIN"
+            return "PUPPY"
+        return "CAR"
 
     destination_name(destination:int)<transacts>:string =
         if (destination = 0):
-            return "Garden"
+            return "Food"
         if (destination = 1):
-            return "Workshop"
-        return "Storage"
+            return "Animal"
+        return "Vehicle"
 
     route(rule:int, cargo:int)<transacts>:int =
         if (rule = 1):

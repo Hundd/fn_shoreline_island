@@ -24,8 +24,8 @@ fn_shoreline_island_event_progress := class(creative_device):
     var states:[player]event_player_progress = map{}
     var round_generation:int = 0
 
-    badge_title<localizes>:message = "Event Badge"
-    badge_description<localizes>:message = "Solve all three Event Factory challenges."
+    badge_title<localizes>:message = "Tool Master Badge"
+    badge_description<localizes>:message = "Solve all three AI Tool Lab challenges."
 
     OnBegin<override>()<suspends>:void =
         Hide()
