@@ -12,6 +12,12 @@ academy_journal_action := class:
     on_click(click_message:widget_message):void =
         journal.on_choice(click_message.Player, generation, choice)
 
+academy_core_route_action := class:
+    journal:fn_shoreline_island_academy_journal
+    source_index:int
+    on_complete(input_agent:agent):void =
+        journal.on_badge_complete(input_agent, source_index)
+
 # Displays authoritative round progress without changing or awarding it.
 fn_shoreline_island_academy_journal := class(creative_device):
     @editable
@@ -26,6 +32,13 @@ fn_shoreline_island_academy_journal := class(creative_device):
     var panels:[player]?canvas = map{}
     var panel_generations:[player]int = map{}
     var next_generation:int = 0
+    var core_routes:[player]?canvas = map{}
+    var core_route_generations:[player]int = map{}
+    var next_core_route_generation:int = 0
+    var core_celebrations:[player]?canvas = map{}
+    var core_celebration_generations:[player]int = map{}
+    var next_core_celebration_generation:int = 0
+    var round_generation:int = 0
 
     close_text<localizes>:message = "Close"
     work_text<localizes>:message = "Work"
@@ -43,13 +56,13 @@ fn_shoreline_island_academy_journal := class(creative_device):
     energy_next<localizes>:message = "Confidence Core: use clues to improve Pix's confidence."
     debug_next<localizes>:message = "AI Error Lab: check and correct an AI mistake."
     event_next<localizes>:message = "AI Tool Lab: choose a useful tool response."
-    nursery_next<localizes>:message = "AI Skills Lab: reuse Pix's Care skill."
+    nursery_next<localizes>:message = "AI Skills Lab: reuse Pix's GrowPlant skill."
     bot_next<localizes>:message = "AI Agent Mission: combine Pix's restored abilities."
     replay_next<localizes>:message = "Try a replay or explore another open path."
     core_progress<localizes>(online_modules:int):message = "PIX AI CORE: {online_modules}/8 MODULES ONLINE"
     core_restored_title<localizes>:message = "PIX AI CORE FULLY RESTORED"
     core_restored_body<localizes>:message = "All eight modules are ONLINE.\nYou helped Pix follow instructions, spot patterns, classify, check confidence, fix mistakes, use tools, build skills, and complete an agent mission."
-    journal_text<localizes>(core_state:message, garden_status:message, loop_status:message, signal_status:message, energy_status:message, debug_status:message, event_status:message, nursery_status:message, bot_status:message, destination:message):message = "{core_state}\nRestore Pix's offline AI modules.\nPrompt Lab: {garden_status} | Pattern Scanner: {loop_status}\nAI Classifier: {signal_status} | Confidence Core: {energy_status}\nAI Error Lab: {debug_status} | AI Tool Lab: {event_status}\nAI Skills Lab: {nursery_status} | AI Agent Mission: {bot_status}\nNext: {destination}\nEvery open module is yours to explore."
+    journal_text<localizes>(core_state:message, guidance:message, garden_status:message, loop_status:message, signal_status:message, energy_status:message, debug_status:message, event_status:message, nursery_status:message, bot_status:message, destination:message):message = "{core_state}\n{guidance}\nPrompt Lab: {garden_status} | Pattern Scanner: {loop_status}\nAI Classifier: {signal_status} | Confidence Core: {energy_status}\nAI Error Lab: {debug_status} | AI Tool Lab: {event_status}\nAI Skills Lab: {nursery_status} | AI Agent Mission: {bot_status}\nNext: {destination}\nEvery open module is yours to explore."
     garden_name<localizes>:message = "Prompt Lab"
     loop_name<localizes>:message = "Pattern Scanner"
     signal_name<localizes>:message = "AI Classifier"
@@ -70,6 +83,10 @@ fn_shoreline_island_academy_journal := class(creative_device):
     work_pending<localizes>(zone:message):message = "{zone}: OFFLINE — restore this module."
     work_unavailable<localizes>(zone:message):message = "{zone}: Not yet available."
     work_page<localizes>(garden_row:message, loop_row:message, signal_row:message, energy_row:message, debug_row:message, event_row:message, nursery_row:message, bot_row:message):message = "PIX AI CORE STATUS\nYour restored modules this round:\n{garden_row}\n{loop_row}\n{signal_row}\n{energy_row}\n{debug_row}\n{event_row}\n{nursery_row}\n{bot_row}"
+    core_work_left<localizes>:message = "Restore Pix's offline AI modules."
+    core_work_done<localizes>:message = "All eight AI Core modules are ONLINE!"
+    data_transfer_title<localizes>(online_modules:int):message = "PIX AI CORE | {online_modules}/8 MODULES ONLINE"
+    data_transfer_text<localizes>(source:message, path:string):message = "{source}  {path}  PIX AI CORE"
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -78,6 +95,10 @@ fn_shoreline_island_academy_journal := class(creative_device):
         open_button.SetInteractionTime(0.0)
         open_button.InteractedWithEvent.Subscribe(on_open)
         garden.round_settings.RoundBeginEvent.Subscribe(on_round)
+        garden.badge_tracker.CompleteEvent.Subscribe(academy_core_route_action{journal := Self, source_index := 0}.on_complete)
+        lagoon.badge_tracker.CompleteEvent.Subscribe(academy_core_route_action{journal := Self, source_index := 1}.on_complete)
+        for (index -> badge : later_badge_trackers):
+            badge.CompleteEvent.Subscribe(academy_core_route_action{journal := Self, source_index := index + 2}.on_complete)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
         for (spawner : array{garden.hub_spawner_0, garden.hub_spawner_1, garden.hub_spawner_2, garden.hub_spawner_3}):
             spawner.SpawnedEvent.Subscribe(on_spawn)
@@ -109,13 +130,21 @@ fn_shoreline_island_academy_journal := class(creative_device):
     agent_status(input_player:player):message =
         if (badge := later_badge_trackers[4], badge.GetValue(input_player) >= 1):
             return earned_badge_text
+        if (first_seven_online(input_player)?):
+            return agent_ready_text
+        return locked_text
+
+    first_seven_online(input_player:player)<transacts>:logic =
         if (not has_garden[input_player] or not has_loop[input_player]):
-            return locked_text
+            return false
         required_tracker_indices := array{0, 1, 2, 3, 5}
         for (index : required_tracker_indices):
-            if (badge := later_badge_trackers[index], badge.GetValue(input_player) < 1):
-                return locked_text
-        return agent_ready_text
+            if (badge := later_badge_trackers[index]):
+                if (badge.GetValue(input_player) < 1):
+                    return false
+            else:
+                return false
+        return true
 
     completed_modules(input_player:player)<transacts>:int =
         var completed:int = 0
@@ -127,6 +156,11 @@ fn_shoreline_island_academy_journal := class(creative_device):
             if (badge := later_badge_trackers[index], badge.GetValue(input_player) >= 1):
                 set completed += 1
         return completed
+
+    core_guidance(input_player:player)<transacts>:message =
+        if (completed_modules(input_player) >= 8):
+            return core_work_done
+        return core_work_left
 
     recommendation(input_player:player):message =
         if (not has_garden[input_player]):
@@ -143,6 +177,60 @@ fn_shoreline_island_academy_journal := class(creative_device):
     on_open(input_agent:agent):void =
         if (input_player := player[input_agent]):
             show_panel(input_player, false)
+
+    on_badge_complete(input_agent:agent, source_index:int):void =
+        if (input_player := player[input_agent]):
+            spawn{show_data_transfer(input_player, source_index, round_generation)}
+
+    close_data_transfer(input_player:player):void =
+        if (route := core_routes[input_player]?, personal_ui := GetPlayerUI[input_player]):
+            personal_ui.RemoveWidget(route)
+        if (set core_routes[input_player] = false) {}
+        set next_core_route_generation += 1
+        if (set core_route_generations[input_player] = next_core_route_generation) {}
+
+    show_data_transfer(input_player:player, source_index:int, expected_round:int)<suspends>:void =
+        if (round_generation <> expected_round):
+            return
+        if (personal_ui := GetPlayerUI[input_player]):
+            sources := array{garden_name, loop_name, signal_name, energy_name, debug_name, event_name, bot_name, nursery_name}
+            if (source := sources[source_index]):
+                close_data_transfer(input_player)
+                generation := next_core_route_generation
+                online_modules := completed_modules(input_player)
+                title := text_block{DefaultText := data_transfer_title(online_modules),
+                    DefaultTextColor := color{R := 0.05, G := 0.72, B := 1.0}, DefaultTextSize := 22.0}
+                path := text_block{DefaultText := data_transfer_text(source, "[o----->]"),
+                    DefaultTextColor := NamedColors.White, DefaultTextSize := 22.0}
+                center := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}
+                route := canvas:
+                    Slots := array:
+                        canvas_slot:
+                            Anchors := center
+                            SizeToContent := false
+                            Offsets := margin{Left := -390.0, Top := -285.0, Right := 780.0, Bottom := 100.0}
+                            Widget := color_block{DefaultColor := color{R := 0.015, G := 0.04, B := 0.08}, DefaultOpacity := 0.93}
+                        canvas_slot:
+                            Anchors := center
+                            SizeToContent := false
+                            Offsets := margin{Left := -365.0, Top := -270.0, Right := 730.0, Bottom := 35.0}
+                            Widget := title
+                        canvas_slot:
+                            Anchors := center
+                            SizeToContent := false
+                            Offsets := margin{Left := -365.0, Top := -230.0, Right := 730.0, Bottom := 45.0}
+                            Widget := path
+                if (set core_routes[input_player] = option{route}):
+                    personal_ui.AddWidget(route, player_ui_slot{ZOrder := 11, InputMode := ui_input_mode.None})
+                    frames := array{"[-o---->]", "[--o--->]", "[---o-->]", "[----o->]", "[-----o>]"}
+                    for (frame : frames):
+                        Sleep(0.22)
+                        if (core_route_generations[input_player] <> generation):
+                            return
+                        path.SetText(data_transfer_text(source, frame))
+                    Sleep(0.45)
+                    if (core_route_generations[input_player] = generation):
+                        close_data_transfer(input_player)
 
     work_row(input_player:player, index:int):message =
         names := array{garden_name, loop_name, signal_name, energy_name, debug_name, event_name, bot_name, nursery_name}
@@ -180,6 +268,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
             if (set panel_generations[input_player] = generation) {}
             var page_text:message = journal_text(
                 core_progress(completed_modules(input_player)),
+                core_guidance(input_player),
                 get_garden_status(input_player), get_loop_status(input_player),
                 later_status(input_player, 0), later_status(input_player, 1),
                 later_status(input_player, 2), later_status(input_player, 3),
@@ -234,8 +323,19 @@ fn_shoreline_island_academy_journal := class(creative_device):
             if (set panels[input_player] = option{panel}):
                 personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})
 
-    show_core_restored(input_player:player)<suspends>:void =
+    close_core_restored(input_player:player):void =
+        if (celebration := core_celebrations[input_player]?, personal_ui := GetPlayerUI[input_player]):
+            personal_ui.RemoveWidget(celebration)
+        if (set core_celebrations[input_player] = false) {}
+        set next_core_celebration_generation += 1
+        if (set core_celebration_generations[input_player] = next_core_celebration_generation) {}
+
+    show_core_restored(input_player:player, expected_round:int)<suspends>:void =
+        if (round_generation <> expected_round):
+            return
         if (personal_ui := GetPlayerUI[input_player]):
+            close_core_restored(input_player)
+            generation := next_core_celebration_generation
             title := text_block{DefaultText := core_restored_title,
                 DefaultTextColor := color{R := 0.05, G := 0.72, B := 1.0}, DefaultTextSize := 34.0}
             body := text_block{DefaultText := core_restored_body,
@@ -258,9 +358,11 @@ fn_shoreline_island_academy_journal := class(creative_device):
                         SizeToContent := false
                         Offsets := margin{Left := -380.0, Top := -25.0, Right := 760.0, Bottom := 155.0}
                         Widget := body
-            personal_ui.AddWidget(celebration, player_ui_slot{ZOrder := 10, InputMode := ui_input_mode.None})
-            Sleep(8.0)
-            personal_ui.RemoveWidget(celebration)
+            if (set core_celebrations[input_player] = option{celebration}):
+                personal_ui.AddWidget(celebration, player_ui_slot{ZOrder := 10, InputMode := ui_input_mode.None})
+                Sleep(8.0)
+                if (core_celebration_generations[input_player] = generation):
+                    close_core_restored(input_player)
 
     close_panel(input_player:player):void =
         if (panel := panels[input_player]?, personal_ui := GetPlayerUI[input_player]):
@@ -270,20 +372,49 @@ fn_shoreline_island_academy_journal := class(creative_device):
     on_spawn(input_agent:agent):void =
         if (input_player := player[input_agent]):
             close_panel(input_player)
+            close_data_transfer(input_player)
+            close_core_restored(input_player)
 
     on_departure(input_player:player):void =
         close_panel(input_player)
+        close_data_transfer(input_player)
+        close_core_restored(input_player)
         var remaining_panels:[player]?canvas = map{}
         var remaining_generations:[player]int = map{}
+        var remaining_routes:[player]?canvas = map{}
+        var remaining_route_generations:[player]int = map{}
+        var remaining_celebrations:[player]?canvas = map{}
+        var remaining_celebration_generations:[player]int = map{}
         for (other -> panel : panels, other <> input_player):
             if (set remaining_panels[other] = panel) {}
         for (other -> generation : panel_generations, other <> input_player):
             if (set remaining_generations[other] = generation) {}
+        for (other -> route : core_routes, other <> input_player):
+            if (set remaining_routes[other] = route) {}
+        for (other -> generation : core_route_generations, other <> input_player):
+            if (set remaining_route_generations[other] = generation) {}
+        for (other -> celebration : core_celebrations, other <> input_player):
+            if (set remaining_celebrations[other] = celebration) {}
+        for (other -> generation : core_celebration_generations, other <> input_player):
+            if (set remaining_celebration_generations[other] = generation) {}
         set panels = remaining_panels
         set panel_generations = remaining_generations
+        set core_routes = remaining_routes
+        set core_route_generations = remaining_route_generations
+        set core_celebrations = remaining_celebrations
+        set core_celebration_generations = remaining_celebration_generations
 
     on_round():void =
+        set round_generation += 1
         for (input_player -> panel : panels):
             close_panel(input_player)
+        for (input_player -> route : core_routes):
+            close_data_transfer(input_player)
+        for (input_player -> celebration : core_celebrations):
+            close_core_restored(input_player)
         set panels = map{}
         set panel_generations = map{}
+        set core_routes = map{}
+        set core_route_generations = map{}
+        set core_celebrations = map{}
+        set core_celebration_generations = map{}

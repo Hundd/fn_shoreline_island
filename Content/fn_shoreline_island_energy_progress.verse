@@ -3,7 +3,7 @@ using { /Verse.org/Simulation }
 
 energy_player_progress := class:
     var challenge:int = 0
-    var energy:int = 0
+    var energy:int = 4
     var repeat_count:int = 1
     var hint_level:int = 0
     var solved:logic = false

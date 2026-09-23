@@ -35,7 +35,7 @@ byte_island_game_manager := class(creative_device):
 
     var player_states:[player]byte_island_player_state = map{}
 
-    objective_text<localizes>:message = "Pix: My AI Core glitched—7 modules are offline and Agent Mode is locked. Start with Instructions: follow the PROMPT LAB signs."
+    objective_text<localizes>:message = "Pix: My AI Core glitched! Restore 7 modules to unlock Agent Mode. New here? Start at PROMPT LAB. Check your journal for what comes next."
     water_text<localizes>:message = "Find Seed"
     plant_text<localizes>:message = "Dig Hole"
     wait_text<localizes>:message = "Plant Seed"
@@ -46,7 +46,7 @@ byte_island_game_manager := class(creative_device):
     water_feedback<localizes>:message = "1 of 4: Seed found. Next, dig the hole."
     plant_feedback<localizes>:message = "2 of 4: Hole ready. Next, plant the seed."
     wait_feedback<localizes>:message = "3 of 4: Seed planted. Next, water it."
-    reset_feedback<localizes>:message = "That instruction did not work. Try changing the order: Find Seed, Dig Hole, Plant Seed, Water."
+    reset_feedback<localizes>(number:int, chosen:message, needed:message):message = "Step {number}: Pix tried {chosen}, but needed {needed}. Each action prepares the next. Start again with Find Seed."
     complete_feedback<localizes>:message = "PIX MODULE RESTORED: INSTRUCTIONS ONLINE\nPrompt Badge earned! Clear instructions help AI understand a task."
     repeat_feedback<localizes>:message = "Great instructions again! Your Prompt Badge is already earned. Return to the hub."
 
@@ -108,14 +108,22 @@ byte_island_game_manager := class(creative_device):
     on_harvest(input_agent:agent):void =
         accept_input(input_agent, 3)
 
+    instruction_name(step:int):message =
+        case (step):
+            0 => water_text
+            1 => plant_text
+            2 => wait_text
+            _ => harvest_text
+
     # No suspension between checking and awarding; every reward targets Agent.
     accept_input(input_agent:agent, input_step:int):void =
         if (input_player := player[input_agent]):
             ensure_player(input_player)
             if (state := player_states[input_player]):
                 if (input_step <> state.next_step):
+                    explanation := reset_feedback(state.next_step + 1, instruction_name(input_step), instruction_name(state.next_step))
                     set state.next_step = 0
-                    pix_feedback.Show(input_agent, reset_feedback, ?DisplayTime := 5.0)
+                    pix_feedback.Show(input_agent, explanation, ?DisplayTime := 7.0)
                     return
                 set state.next_step += 1
                 if (input_step = 0):

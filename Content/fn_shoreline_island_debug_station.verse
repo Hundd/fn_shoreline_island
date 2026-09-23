@@ -27,6 +27,8 @@ fn_shoreline_island_debug_station := class(creative_device):
     @editable
     feedback:hud_message_device = hud_message_device{}
     @editable
+    error_audio:audio_player_device = audio_player_device{}
+    @editable
     board:billboard_device = billboard_device{}
     @editable
     result_board:billboard_device = billboard_device{}
@@ -57,12 +59,15 @@ fn_shoreline_island_debug_station := class(creative_device):
     next_text<localizes>:message = "Next challenge / Replay all"
     replay_text<localizes>:message = "Restore AI mistake"
     return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "AI ERROR LAB | Station {number}\nClaim to check an AI mistake."
+    available_text<localizes>(number:int):message = "AI ERROR LAB | Station {number}\nCheck Pix's result for a mistake.\nPress CLAIM to begin."
     occupied_text<localizes>:message = "This AI Error Lab station is in use. Choose another station."
     other_text<localizes>:message = "Leave your current AI Error Lab station before claiming another."
     welcome_text<localizes>:message = "Run Pix's AI plan. Compare the actual result with the expected result, then correct the bracketed mistake."
     ready_text<localizes>:message = "Ready: Run from tile 0."
     cargo_ready_text<localizes>:message = "Ready: Classify APPLE, then CAR."
+    cargo_running_status<localizes>(item:message, destination:message):message = "RUNNING: {item} > {destination}"
+    cargo_match_status<localizes>:message = "MATCH! Next or Replay."
+    cargo_mismatch_status<localizes>:message = "MISMATCH. Fix the rule; Run again."
     finish_text<localizes>:message = "Match the expected result first. Help is always available."
     solved_text<localizes>:message = "Results match! Next or Replay."
     wrong_text<localizes>:message = "Results differ. Compare EXPECTED with ACTUAL, edit the bracketed instruction, then run again."
@@ -78,18 +83,18 @@ fn_shoreline_island_debug_station := class(creative_device):
     storage_text<localizes>:message = "Vehicle"
     pending_text<localizes>:message = "not run"
     empty_text<localizes>:message = "EXPECTED / ACTUAL\nClaim to begin"
-    move_program_text<localizes>(move:message):message = "AI PLAN: East; [West]; East\nYOUR FIX: East; [{move}]; East\nCorrect only instruction 2."
-    repeat_program_text<localizes>(count:int):message = "AI PLAN: Repeat [2]: East\nYOUR FIX: Repeat [{count}]: East\nCorrect only the repeat count."
+    move_program_text<localizes>(move:message):message = "TASK: Reach the scanner at tile 3.\nAI PLAN: East; [West]; East\nYOUR FIX: East; [{move}]; East\nCorrect only instruction 2."
+    repeat_program_text<localizes>(count:int):message = "TASK: Reach Station 3.\nAI PLAN: Repeat [4]: East\nYOUR FIX: Repeat [{count}]: East\nCorrect only the repeat count."
     rule_program_text<localizes>(leaf:message, plain:message):message = "AI PLAN: [APPLE > Vehicle; else > Food]\nYOUR FIX: [APPLE > {leaf}; else > {plain}]\nCorrect only the classification rule."
     board_text<localizes>(input_player:agent, challenge:int, program:message):message = "AI Detective: {input_player} | Challenge {challenge}\n{program}"
-    tile_result_text<localizes>(tile:int, status:message):message = "EXPECTED: tile 3\nACTUAL: tile {tile}\n{status}"
-    cargo_result_text<localizes>(leaf:message, plain:message, status:message):message = "Items: APPLE | CAR\nEXPECTED: Food | Vehicle\nACTUAL: {leaf} | {plain}"
+    tile_result_text<localizes>(tile:int, status:message):message = "EXPECTED: scanner / Station 3\nACTUAL: tile {tile}\n{status}"
+    cargo_result_text<localizes>(leaf:message, plain:message, status:message):message = "Items: APPLE | CAR\nEXPECTED: Food | Vehicle\nACTUAL: {leaf} | {plain}\n{status}"
     step_text<localizes>(step:int, total:int, command:message):message = "AI PLAN RUNNING: {step} of {total}\nAction: {command}"
     delivery_text<localizes>(item:message, destination:message):message = "AI PLAN RUNNING: {item}\nClassification: {destination}"
-    concept_move_text<localizes>:message = "Compare the expected tile 3 with Pix's actual final tile. One action points the wrong way."
-    worked_move_text<localizes>:message = "Change instruction 2 to East. East, East, East reaches tile 3."
-    concept_repeat_text<localizes>:message = "Compare Pix's repeat count with the distance from tile 0 to tile 3."
-    worked_repeat_text<localizes>:message = "Set Repeat to 3, then Run. The marker visits tiles 1, 2, 3."
+    concept_move_text<localizes>:message = "Compare the scanner at tile 3 with Pix's actual final tile. One action points the wrong way."
+    worked_move_text<localizes>:message = "Change instruction 2 to East. East, East, East reaches the scanner at tile 3."
+    concept_repeat_text<localizes>:message = "Pix reaches Station 4, but the task says Station 3. Compare the repeat count with the distance."
+    worked_repeat_text<localizes>:message = "Set Repeat to 3, then Run. The marker stops at Station 3, not Station 4."
     concept_rule_text<localizes>:message = "APPLE belongs in Food and CAR belongs in Vehicle. Compare both results with Pix's classification rule."
     worked_rule_text<localizes>:message = "Use If APPLE: Food; otherwise: Vehicle. Run both items to check the repair."
 
@@ -182,7 +187,7 @@ fn_shoreline_island_debug_station := class(creative_device):
             var final_pose:transform = marker_home
             if (state.challenge = 2):
                 set final_pose.Translation.Y += 360.0
-                display(result_board, cargo_result_text(garden_text, storage_text, solved_text))
+                display(result_board, cargo_result_text(garden_text, storage_text, cargo_match_status))
             else:
                 set final_pose.Translation.X += 540.0
                 display(result_board, tile_result_text(3, solved_text))
@@ -255,6 +260,8 @@ fn_shoreline_island_debug_station := class(creative_device):
         set running = false
         state := progress.ensure_player(input_player)
         set state.edit_choice = 0
+        if (state.challenge = 1):
+            set state.edit_choice = 2
         set state.hint_level = 0
         set state.solved = false
         show_ready(input_player)
@@ -353,19 +360,20 @@ fn_shoreline_island_debug_station := class(creative_device):
                     set leaf_actual = destination
                 else:
                     set plain_actual = destination
-                display(result_board, cargo_result_text(leaf_actual, plain_actual, delivery_text(cargo, destination)))
+                display(result_board, cargo_result_text(leaf_actual, plain_actual, cargo_running_status(cargo, destination)))
                 Sleep(0.7)
             if (choice = 1):
                 set matches = true
             if (valid_run[input_player, token, round_token]):
                 if (matches?):
-                    display(result_board, cargo_result_text(leaf_actual, plain_actual, solved_text))
+                    display(result_board, cargo_result_text(leaf_actual, plain_actual, cargo_match_status))
                 else:
-                    display(result_board, cargo_result_text(leaf_actual, plain_actual, wrong_text))
+                    display(result_board, cargo_result_text(leaf_actual, plain_actual, cargo_mismatch_status))
         if (not valid_run[input_player, token, round_token]):
             return
         set running = false
         if (not matches?):
+            error_audio.Play(input_player)
             display(instruction_board, wrong_text)
             feedback.Show(input_player, wrong_text, ?DisplayTime := 10.0)
             return

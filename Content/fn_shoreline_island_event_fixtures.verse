@@ -1,5 +1,6 @@
 fn_shoreline_island_event_fixtures := class:
-    # Events: 0 Bell, 1 Lever. Responses: 0 Open chute, 1 Light lamp.
+    # Requests: 0 Scan Object, 1 Announce Result.
+    # Tools: 0 Scanner, 1 Speaker, 2 Light distractor.
     demonstration_event(index:int):int =
         if (index = 1):
             1
@@ -7,7 +8,7 @@ fn_shoreline_island_event_fixtures := class:
             0
 
     demonstration_response(index:int):int =
-        if (index = 0):
+        if (index = 1):
             1
         else:
             0
@@ -15,5 +16,7 @@ fn_shoreline_island_event_fixtures := class:
     toggle_response(current:int):int =
         if (current = 0):
             1
+        else if (current = 1):
+            2
         else:
             0

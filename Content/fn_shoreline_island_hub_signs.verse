@@ -29,7 +29,7 @@ fn_shoreline_island_hub_signs := class(creative_device):
     signal_hub_route:billboard_device = billboard_device{}
     @editable
     energy_0_route:billboard_device = billboard_device{}
-    academy_title_text<localizes>:message = "AI ISLAND ACADEMY\nPIX AI CORE: 7 MODULES OFFLINE\nAGENT MODE: LOCKED\nSTART: PROMPT LAB\nCheck your AI Core Journal"
+    academy_title_text<localizes>:message = "AI ISLAND ACADEMY\nRESTORE PIX'S AI CORE\nAGENT MODE UNLOCKS AFTER 7 MODULES\nSTART: PROMPT LAB\nYOUR STATUS: AI CORE JOURNAL"
     path_garden_sign_text<localizes>:message = "PROMPT LAB\nFind Seed > Dig Hole > Plant Seed > Water"
     path_water_label_text<localizes>:message = "1  FIND SEED"
     path_plant_label_text<localizes>:message = "2  DIG HOLE"

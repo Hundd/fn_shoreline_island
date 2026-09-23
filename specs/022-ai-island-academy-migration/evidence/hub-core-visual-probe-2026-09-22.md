@@ -32,6 +32,43 @@
 - Client logs were not exposed by this session, so the centerpiece’s in-client
   readability and placement still require a visual playtest.
 
+## In-world title — 2026-09-23
+
+- Added the saved `pix_core_title_text` TextRender component to the existing
+  decorative core actor. It reads `PIX<br>AI CORE`, is cyan, and faces the hub
+  approach above the orb.
+- A live viewport capture confirms the title is visible with the core from the
+  player-spawn approach. Component read-back confirms its text, placement,
+  rotation, size, and color.
+- The title deliberately does not claim a shared module count. The journal
+  remains the per-player authority for module status, so this visual addition
+  does not affect player progress, rewards, or multiplayer state.
+
+## Static module legend probe — 2026-09-23
+
+- Two temporary TextRender components listed the eight module names beside
+  the core. Editor viewport captures showed that the words crossed pillars
+  and busy scenery and were not reliably readable from the hub approach.
+- Both temporary components were removed and the Core actor saved. That
+  unbacked layout was not retained; the personal journal continued to carry
+  the authoritative eight-name status display.
+
+## Backed Core module legend — 2026-09-23
+
+- Added the separate saved actor `pix_ai_core_module_legend` at X=-300,
+  Y=1850, Z=2700, facing the hub spawners. Its classic Billboard frame has
+  a TextRender component carrying the eight static module names and a
+  `Personal status: Journal` instruction. The device's own text is blank, so
+  it cannot duplicate the component text when its display initializes.
+- Editor viewport captures from the central hub approach showed the backed
+  text legible beside the Pix Core, with the main promenade left clear. The
+  actor, TextRender content, border setting, and placement were read back
+  after the actor was saved. The label inventory records the new visible text.
+- This is decorative only: no Verse binding, per-player progress, reward,
+  device reference, or shared status indicator was added. In-client
+  readability, collision clearance, and cook remain untested under the
+  user's request to skip validation and playtesting.
+
 ## Session shutdown
 
 - The failed validation attempt left a Fortnite playtest client active while

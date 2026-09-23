@@ -40,3 +40,39 @@
 - Test each challenge’s correct path, wrong path, help, replay, and retained
   reward in-client.
 - Test station ownership and reward behavior with two players.
+
+## Tool request framing — 2026-09-23
+
+- Reframed the two retained input IDs as **Supply request** and **Beacon
+  request**. Their existing actions remain **Open chute** and **Light lamp**,
+  matching the physical parcel and lamp props. The source now uses those
+  requests in instructions, boards, hints, results, and Button prompts.
+- Updated 16 static control signs, four `SHOW INPUT` signs, four recent-input
+  board defaults, and 16 saved Button interaction texts across the four Tool
+  Lab stations in UEFN. Every changed property was read back and
+  its actor saved; the label inventory records the new values. Device
+  references, input IDs, connection checks, player state, and badge guard were
+  unchanged.
+- Verse `BuildAll` returned zero diagnostics. In-client sign readability and
+  challenge-flow checks remain open under the user's request to skip
+  validation and playtesting.
+
+## Skills Lab plan wording — 2026-09-23
+
+- Eight player-facing error, answer, and optional remix messages now say
+  **plan slot** or **skill plan** instead of exposing the internal `caller`
+  term. Their underlying Care definition, caller array, repeat logic, and
+  badge state were not changed. Verse `BuildAll` returned zero diagnostics.
+- Updated the four saved Run signs and twelve saved plan-slot signs through
+  UEFN, read back each text, and saved all sixteen actors. The inventory now
+  reflects those saved values and the revised Verse declarations.
+- The AI Skills Lab interaction and readability paths remain untested under
+  the user's request to skip validation and playtesting.
+
+## Tool Lab fixed-demo copy — 2026-09-23
+
+- The fixed-demonstration message now asks players to identify the request
+  behind its fixed tool choices. This replaces the leftover event/connection
+  wording without changing the demonstration or its wiring.
+- Verse `BuildAll` returned zero diagnostics. The source declaration and label
+  inventory agree; in-client checks remain skipped at the user's request.

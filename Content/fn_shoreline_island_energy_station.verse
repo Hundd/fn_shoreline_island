@@ -31,6 +31,8 @@ fn_shoreline_island_energy_station := class(creative_device):
     @editable
     feedback:hud_message_device = hud_message_device{}
     @editable
+    confidence_audio:audio_player_device = audio_player_device{}
+    @editable
     board:billboard_device = billboard_device{}
     @editable
     energy_board:billboard_device = billboard_device{}
@@ -38,6 +40,8 @@ fn_shoreline_island_energy_station := class(creative_device):
     door_board:billboard_device = billboard_device{}
     @editable
     preview_door:creative_prop = creative_prop{}
+    @editable
+    mystery_cat:creative_prop = creative_prop{}
     @editable
     hub_spawner_0:player_spawner_device = player_spawner_device{}
     @editable
@@ -57,8 +61,8 @@ fn_shoreline_island_energy_station := class(creative_device):
     claim_text<localizes>:message = "Claim Confidence Core station"
     add_text<localizes>:message = "New clue: confidence +10%"
     subtract_text<localizes>:message = "Remove clue: confidence -10%"
-    count_text<localizes>:message = "Change repeats: 1 to 5"
-    start_text<localizes>:message = "Start / Run Add 2"
+    count_text<localizes>:message = "Choose clue updates (1-5)"
+    start_text<localizes>:message = "Start / Run"
     help_text<localizes>:message = "Help"
     next_text<localizes>:message = "Next challenge / Replay all"
     replay_text<localizes>:message = "Replay current challenge"
@@ -67,21 +71,27 @@ fn_shoreline_island_energy_station := class(creative_device):
     occupied_text<localizes>:message = "This Confidence Core station is in use. Choose another station."
     other_text<localizes>:message = "Leave your current Confidence Core station before claiming another."
     manual_text<localizes>:message = "Give Pix useful clues. Change confidence with +10% or -10%, then press Start."
-    repeat_text<localizes>:message = "Choose how many times to Add 2. Run starts confidence at 0%. Can it reach 60%?"
-    manual_controls_text<localizes>:message = "Use +1 or -1 here. Repeats begin in challenge 3."
-    repeat_controls_text<localizes>:message = "This challenge uses Repeat Add 2. Choose a count, then Run."
+    cat_intro_text<localizes>:message = "Pix thinks CAT at 40% confidence. Find useful clues: pointed ears, whiskers, tail. Raise confidence to at least 70%, then Start."
+    repeat_text<localizes>:message = "Choose how many new clues Pix gets. Each raises confidence by 20%. Can Pix reach 60% from 0%?"
+    manual_controls_text<localizes>:message = "Use +10% or -10% here. Repeats begin in challenge 3."
+    repeat_controls_text<localizes>:message = "Choose how many times a new clue arrives, then Run."
     boundary_text<localizes>:message = "Confidence stays between 0% and 100%. Try the other adjustment."
     finish_text<localizes>:message = "Open this preview door first. Help is always available."
     ready_text<localizes>:message = "Edit confidence, then Start."
-    ready_repeat_text<localizes>:message = "Choose repeats, then Run."
+    ready_repeat_text<localizes>:message = "Choose clue updates, then Run."
     solved_text<localizes>:message = "Door open! Press Next or Replay."
-    complete_text<localizes>:message = "PIX MODULE RESTORED: CONFIDENCE ONLINE\nConfidence Badge earned! More useful information can sometimes help an AI make a better prediction. Replay or return to the hub."
+    complete_text<localizes>:message = "PIX MODULE RESTORED: CONFIDENCE ONLINE\nConfidence Badge earned! Useful clues can improve a prediction, but important answers still need checking. Replay or return to the hub."
     retained_text<localizes>:message = "Confidence reached again! Your Confidence Badge stays earned for this round."
     complete_board_text<localizes>:message = "Confidence Badge earned! Replay is optional."
     concept_text<localizes>:message = "AI answers can have different confidence. High confidence does not automatically mean an answer is correct."
-    worked_manual_text<localizes>:message = "Use +1 or -1 until confidence matches the target. Each useful clue changes confidence by 10%. Then press Start."
-    worked_repeat_text<localizes>:message = "Try 3 repeats of Add 2: confidence changes 0%, 20%, 40%, 60%. Then the door opens."
+    worked_manual_text<localizes>:message = "Use +10% or -10% until confidence matches the target. Each useful clue changes confidence by 10%. Then press Start."
+    worked_cat_text<localizes>:message = "Start at 40%. Pointed ears, whiskers, and a tail add three +10% clues. Reach 70%, then Start."
+    worked_repeat_text<localizes>:message = "Try 3 clues: confidence goes 0%, 20%, 40%, 60%. Then the door opens."
     energy_text<localizes>(energy:int, target:int, current_percent:int, target_percent:int):message = "AI CONFIDENCE: {current_percent}%\nTARGET: {target_percent}%"
+    cat_energy_text<localizes>(current_percent:int, target_percent:int):message = "PIX THINKS: CAT\nCONFIDENCE: {current_percent}% | GOAL: {target_percent}%+"
+    ears_clue_text<localizes>:message = "New clue: pointed ears. Confidence +10%."
+    whiskers_clue_text<localizes>:message = "New clue: whiskers. Confidence +10%."
+    tail_clue_text<localizes>:message = "New clue: tail. Confidence +10%."
     empty_energy_text<localizes>:message = "AI CONFIDENCE\nClaim to begin"
     closed_text<localizes>:message = "PREVIEW DOOR: CLOSED"
     opening_text<localizes>:message = "PREVIEW DOOR: OPENING"
@@ -90,7 +100,8 @@ fn_shoreline_island_energy_station := class(creative_device):
     repeat_board_text<localizes>(input_player:agent, count:int, status:message):message = "Researcher: {input_player} | Challenge 3\nStarting confidence: 0% | Repeat {count}: New clue +20%\n{status}"
     addition_text<localizes>(step:int, count:int):message = "New clue +20% | Step {step} of {count}"
     initial_text<localizes>:message = "Run begins: confidence = 0%"
-    wrong_text<localizes>(current_percent:int, target_percent:int):message = "Confidence finished at {current_percent}%; the target is {target_percent}%. Edit and try again."
+    wrong_manual_text<localizes>(current_percent:int, target_percent:int):message = "Confidence reached {current_percent}%; target: {target_percent}%. Each adjustment changes 10%. Revise and try again."
+    wrong_repeat_text<localizes>(current_percent:int, target_percent:int):message = "Confidence reached {current_percent}%; target: {target_percent}%. Each clue adds 20%. Change the repeat count and try again."
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -150,6 +161,7 @@ fn_shoreline_island_energy_station := class(creative_device):
         set generation += 1
         set running = false
         set owner = false
+        mystery_cat.Hide()
         reset_door()
         board.SetText(available_text(station_id + 1))
         board.UpdateDisplay()
@@ -162,7 +174,10 @@ fn_shoreline_island_energy_station := class(creative_device):
     show_board(input_player:player, status:message):void =
         state := progress.ensure_player(input_player)
         target := fixtures.target(state.challenge)
-        energy_board.SetText(energy_text(state.energy, target, confidence_percent(state.energy), confidence_percent(target)))
+        if (state.challenge = 0):
+            energy_board.SetText(cat_energy_text(confidence_percent(state.energy), confidence_percent(target)))
+        else:
+            energy_board.SetText(energy_text(state.energy, target, confidence_percent(state.energy), confidence_percent(target)))
         energy_board.UpdateDisplay()
         if (state.challenge = 2):
             board.SetText(repeat_board_text(input_player, state.repeat_count, status))
@@ -172,13 +187,19 @@ fn_shoreline_island_energy_station := class(creative_device):
 
     show_ready(input_player:player):void =
         state := progress.ensure_player(input_player)
+        mystery_cat.Hide()
         reset_door()
         if (state.solved?):
             var opened:transform = door_home
             set opened.Translation.Z += 350.0
             if (preview_door.TeleportTo[opened]) {}
             set_door_label(open_text)
+            if (state.challenge = 0):
+                mystery_cat.Show()
             show_board(input_player, solved_text)
+        else if (state.challenge = 0):
+            mystery_cat.Show()
+            show_board(input_player, ready_text)
         else if (state.challenge = 2):
             show_board(input_player, ready_repeat_text)
         else:
@@ -200,6 +221,8 @@ fn_shoreline_island_energy_station := class(creative_device):
             show_ready(input_player)
             if (state.challenge = 2):
                 feedback.Show(input_player, repeat_text, ?DisplayTime := 10.0)
+            else if (state.challenge = 0):
+                feedback.Show(input_player, cat_intro_text, ?DisplayTime := 10.0)
             else:
                 feedback.Show(input_player, manual_text, ?DisplayTime := 10.0)
 
@@ -222,7 +245,19 @@ fn_shoreline_island_energy_station := class(creative_device):
                 feedback.Show(input_player, boundary_text, ?DisplayTime := 7.0)
                 return
             set state.energy = updated
-            show_ready(input_player)
+            if (delta > 0):
+                confidence_audio.Play(input_player)
+            if (state.challenge = 0, delta > 0):
+                if (updated = 5):
+                    show_board(input_player, ears_clue_text)
+                else if (updated = 6):
+                    show_board(input_player, whiskers_clue_text)
+                else if (updated = 7):
+                    show_board(input_player, tail_clue_text)
+                else:
+                    show_ready(input_player)
+            else:
+                show_ready(input_player)
 
     on_count(input_agent:agent):void =
         if (input_player := owner?, input_player = input_agent, not running?):
@@ -247,6 +282,8 @@ fn_shoreline_island_energy_station := class(creative_device):
                 return
             set running = true
             set generation += 1
+            if (state.challenge <> 0):
+                mystery_cat.Hide()
             reset_door()
             spawn{execute(input_player, state.repeat_count, generation, progress.round_generation)}
 
@@ -258,6 +295,8 @@ fn_shoreline_island_energy_station := class(creative_device):
                 feedback.Show(input_player, concept_text, ?DisplayTime := 10.0)
             else if (state.challenge = 2):
                 feedback.Show(input_player, worked_repeat_text, ?DisplayTime := 10.0)
+            else if (state.challenge = 0):
+                feedback.Show(input_player, worked_cat_text, ?DisplayTime := 10.0)
             else:
                 feedback.Show(input_player, worked_manual_text, ?DisplayTime := 10.0)
 
@@ -288,6 +327,8 @@ fn_shoreline_island_energy_station := class(creative_device):
             restart(input_player)
             if (state.challenge = 2):
                 feedback.Show(input_player, repeat_text, ?DisplayTime := 10.0)
+            else if (state.challenge = 0):
+                feedback.Show(input_player, cat_intro_text, ?DisplayTime := 10.0)
             else:
                 feedback.Show(input_player, manual_text, ?DisplayTime := 10.0)
 
@@ -309,13 +350,21 @@ fn_shoreline_island_energy_station := class(creative_device):
                 if (not valid_run[input_player, token, round_token]):
                     return
                 set state.energy += 2
+                confidence_audio.Play(input_player)
                 show_board(input_player, addition_text(step, count))
                 Sleep(0.7)
         if (not valid_run[input_player, token, round_token]):
             return
-        if (state.energy <> fixtures.target(state.challenge)):
+        var reached:logic = false
+        if (state.energy = fixtures.target(state.challenge)):
+            set reached = true
+        if (state.challenge = 0, state.energy >= fixtures.target(state.challenge)):
+            set reached = true
+        if (not reached?):
             set running = false
-            explanation := wrong_text(confidence_percent(state.energy), confidence_percent(fixtures.target(state.challenge)))
+            var explanation:message = wrong_manual_text(confidence_percent(state.energy), confidence_percent(fixtures.target(state.challenge)))
+            if (state.challenge = 2):
+                set explanation = wrong_repeat_text(confidence_percent(state.energy), confidence_percent(fixtures.target(state.challenge)))
             show_board(input_player, explanation)
             feedback.Show(input_player, explanation, ?DisplayTime := 10.0)
             return
@@ -330,6 +379,8 @@ fn_shoreline_island_energy_station := class(creative_device):
         if (not valid_run[input_player, token, round_token]):
             return
         set_door_label(open_text)
+        if (state.challenge = 0):
+            mystery_cat.Show()
         already_earned := state.badge_earned
         progress.complete(input_player)
         set running = false

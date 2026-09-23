@@ -77,8 +77,45 @@ Hole, Plant Seed, Water.
 ## Still required
 
 World-only signs, Props/VFX/audio, in-client readability, input interaction,
-full game flows, multiplayer behavior, project validation, and memory are not
-proven by this evidence. They remain open in this feature's task list.
+full game flows and multiplayer behavior are not proven by this evidence.
+They remain open in this feature's task list.
+
+## User-confirmed UEFN validation (2026-09-23)
+
+The project owner confirmed that UEFN project validation completed successfully,
+memory calculation completed successfully, and the project push completed with
+no errors. These are manual UEFN outcomes; the current MCP tool registry does
+not expose equivalent commands. This evidence does not substitute for the
+separate interactive solo or two-player progression checks.
+
+## World-sign migration (2026-09-23)
+
+- Live UEFN inspection found seven stale player-facing classic Billboard
+  strings: four `LOOP LAGOON` station boards, a `LOOP LAGOON >` hub route,
+  and two `PATH GARDEN` route/entry signs.
+- Their existing `text` properties were updated and each actor was saved:
+  `PATTERN SCANNER` now labels the four boards and hub route; `PROMPT LAB`
+  now labels the route and entry sign. Only billboard text changed; existing
+  transforms, bindings, and gameplay configuration were retained.
+- A read-back across every loaded Billboard found zero remaining player-facing
+  `Path Garden`, `Garden Path`, or `Loop Lagoon` strings.
+- A fresh UEFN session cook completed, reached `Running`, and was stopped to
+  `Disconnected` / `Unconnected`.
+
+## Classifier, Error Lab, and Tool Lab signs (2026-09-23)
+
+- All 24 static AI Classifier destinations now map the existing routes to
+  `FOOD`, `ANIMAL`, and `VEHICLE` rather than `GARDEN`, `WORKSHOP`, and
+  `STORAGE`. The four Classifier boards, four rule boards, start sign, and hub
+  route now also use the AI Classifier framing.
+- Four Debug Workshop boards plus its route now present `AI ERROR LAB`.
+  Four Event Factory boards plus its route now present `AI TOOL LAB`.
+- The live-editor read-back found zero Billboard strings containing `DEBUG
+  WORKSHOP`, `EVENT FACTORY`, or `SIGNAL LIGHTHOUSE`, and zero remaining
+  legacy destination labels on any `signal_*` AI Classifier sign.
+- All 44 saved Billboard changes cooked in a fresh session that reached
+  `Running`; the match and session were stopped to `Disconnected` /
+  `Unconnected` afterward.
 
 ## Pix AI Core editor probe
 
@@ -92,6 +129,14 @@ proven by this evidence. They remain open in this feature's task list.
 - This proves the migrated Verse sign text has live device targets. It does
   not prove in-client line wrapping or player readability, which remain open.
 
+On 2026-09-23, the bound academy-title Billboard's saved `BYTE ISLAND
+ACADEMY` default was corrected to the AI Island Academy restoration goal. The
+fixed Verse title now gives the seven-module Agent Mode unlock rule and sends
+players to the personal journal for changing status instead of permanently
+claiming all seven modules are offline. UEFN read-back and actor save
+completed; Verse `BuildAll` returned zero diagnostics. In-client readability
+remains open under the user's request to skip validation and playtesting.
+
 The live-editor inspection located the hub foundation (X -1700..2800, Y
 0..3000, Z 2250..2400) and its existing static-sign Verse device. A temporary
 Billboard device was placed at the clear east hub edge, saved, and labelled
@@ -102,3 +147,32 @@ reverted, so no unbound/default-text artifact remains. The Pix AI Core world
 centerpiece requires binding through UEFN's native Details picker (or an MCP
 build that supports this reference type); the personal AI Core Journal already
 shows the corresponding eight per-player module statuses.
+
+## Pix spawn message follow-up — 2026-09-23
+
+- Source review found that the Prompt Lab manager shows its introduction on
+  player join and on every hub respawn. The earlier fixed `7 modules are
+  offline` sentence could therefore contradict retained player progress.
+- The introduction now tells players to restore seven modules to unlock Agent
+  Mode, starts them at Prompt Lab, and points to their personal journal for
+  current status. No progress reads or writes, device references, or rewards
+  changed. Verse `BuildAll` returned zero diagnostics.
+- The inventory records the current source declaration. In-client HUD timing
+  and readability remain untested under the user's instruction to skip
+  validation and playtesting.
+- A follow-up wording pass scoped the Prompt Lab direction to new players
+  (`New here?`) and made the journal the next-step guide for returning
+  players. This avoids repeatedly directing progressed players to restart
+  the first zone. Verse `BuildAll` again returned zero diagnostics.
+
+## Completed-Core journal guidance — 2026-09-23
+
+- The journal's fixed `Restore Pix's offline AI modules` line contradicted its
+  own `8/8 MODULES ONLINE` state after the Agent Mission. The line now comes
+  from the existing read-only, per-player `completed_modules` count:
+  incomplete players see the restoration goal; 8/8 players see `All eight AI
+  Core modules are ONLINE!`.
+- No tracker assignment, completion state, reward guard, or device reference
+  changed. Verse `BuildAll` returned zero diagnostics, and the label inventory
+  records the current declarations. The 8/8 branch still needs in-client
+  confirmation when playtesting is resumed.

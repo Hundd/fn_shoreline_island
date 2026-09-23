@@ -26,11 +26,15 @@ fn_shoreline_island_field_observations := class(creative_device):
     @editable
     cargo_button:button_device = button_device{}
     @editable
+    human_button:button_device = button_device{}
+    @editable
     growth_board:billboard_device = billboard_device{}
     @editable
     lantern_board:billboard_device = billboard_device{}
     @editable
     cargo_board:billboard_device = billboard_device{}
+    @editable
+    human_board:billboard_device = billboard_device{}
     @editable
     hub_spawner_0:player_spawner_device = player_spawner_device{}
     @editable
@@ -47,37 +51,41 @@ fn_shoreline_island_field_observations := class(creative_device):
     growth_open<localizes>:message = "AI Discovery: Check Pix's crate count"
     lantern_open<localizes>:message = "AI Discovery: Observe a pattern"
     cargo_open<localizes>:message = "AI Discovery: Observe categories"
-    growth_sign<localizes>:message = "AI DISCOVERY TRAIL: CHECK PIX\n4 data crates | Pix predicts 5\nOptional: use the button"
-    lantern_sign<localizes>:message = "AI DISCOVERY TRAIL: PATTERN\n1 > 2 > 1 > 2 > ?\nOptional: use the button"
-    cargo_sign<localizes>:message = "AI DISCOVERY TRAIL: CATEGORIES\nApple > Food | Car > Vehicle\nOptional: use the button"
-    growth_question<localizes>:message = "AI DISCOVERY TRAIL: CHECK PIX\nThere are 4 data crates on the dock. Pix predicts 5.\nIs Pix correct? Choose an answer, or Close to keep exploring."
-    lantern_question<localizes>:message = "AI DISCOVERY TRAIL: PATTERN\nLanterns flash in order: 1 > 2 > 1 > 2 > ?\nWhich lantern flashes next?\nChoose a prediction, or Close to keep exploring."
-    cargo_question<localizes>:message = "AI DISCOVERY TRAIL: CATEGORIES\nThe signs say Apple > Food and Car > Vehicle.\nAn Apple arrives. Which category matches?\nChoose a prediction, or Close to keep exploring."
-    harvest_text<localizes>:message = "No — there are 4 crates"
-    plant_text<localizes>:message = "Yes — there are 5 crates"
+    human_open<localizes>:message = "AI Discovery: Make a human decision"
+    growth_sign<localizes>:message = "AI DISCOVERY TRAIL: CHECK PIX\nCount the data crates | Pix predicts 5\nOptional: use the button"
+    lantern_sign<localizes>:message = "AI DISCOVERY TRAIL: PATTERN\n1 > 2 > 1 > 2 > 1 > ?\nOptional: use the button"
+    cargo_sign<localizes>:message = "AI DISCOVERY TRAIL: CLASSIFY\nBanana > ?\nFood | Animal | Machine"
+    human_sign<localizes>:message = "AI DISCOVERY TRAIL: HUMAN DECISION\nPix says Route A | Route A closed\nChoose with new information"
+    growth_question<localizes>:message = "AI DISCOVERY TRAIL: CHECK PIX\nCount the data crates near this station. Pix predicts 5.\nIs Pix correct? Choose an answer, or Close to keep exploring."
+    lantern_question<localizes>:message = "AI DISCOVERY TRAIL: PATTERN\nLanterns flash in order: 1 > 2 > 1 > 2 > 1 > ?\nWhich number comes next?\nChoose a prediction, or Close to keep exploring."
+    cargo_question<localizes>:message = "AI DISCOVERY TRAIL: CLASSIFY\nA Banana arrives. Which category matches?\nFood, Animal, or Machine?\nChoose a category, or Close to keep exploring."
+    harvest_text<localizes>:message = "No"
+    plant_text<localizes>:message = "Yes"
     one_text<localizes>:message = "1"
     two_text<localizes>:message = "2"
     garden_text<localizes>:message = "Food"
-    storage_text<localizes>:message = "Vehicle"
+    storage_text<localizes>:message = "Animal"
+    machine_text<localizes>:message = "Machine"
     again_text<localizes>:message = "Again"
+    next_note_text<localizes>:message = "Next field note"
     close_text<localizes>:message = "Close"
     correct_text<localizes>:message = "Good check — your answer matches the evidence."
-    retry_text<localizes>:message = "Let's look at the pattern."
+    retry_text<localizes>:message = "Check the evidence and try again."
     growth_explanation<localizes>:message = "Pix predicted 5, but there are 4 crates.\nAI can make mistakes, so check important answers.\nPeople use evidence to make the final decision."
-    human_decision_question<localizes>:message = "NEXT FIELD NOTE: HUMAN DECISION\nPix suggests Route A. New information says Route A is temporarily closed.\nWhich route should you take?"
+    human_decision_question<localizes>:message = "AI DISCOVERY TRAIL: HUMAN DECISION\nPix suggests Route A. New information says Route A is temporarily closed.\nWhich route should you take?"
     route_a_result<localizes>:message = "Route A is closed. Use the newest information and try again."
     route_b_result<localizes>:message = "Route B is the safe choice. AI can offer a suggestion, but people should use new information to make a decision."
     route_a_text<localizes>:message = "Route A"
     route_b_text<localizes>:message = "Route B"
-    lantern_explanation<localizes>:message = "Pattern prediction: 1 comes next.\nThe pair 1 > 2 repeats.\nAfter each 2, the next pair starts with 1.\nAI can recognize patterns from examples."
-    cargo_explanation<localizes>:message = "Classification puts things into categories.\nRead the item, then choose its matching category.\nAlways check an AI result: it can make mistakes."
+    lantern_explanation<localizes>:message = "Pattern prediction: 2 comes next.\nThe pair 1 > 2 repeats.\nAfter each 1, the next number is 2.\nPatterns can help predict what may come next."
+    cargo_explanation<localizes>:message = "Banana is a fruit, so it belongs in Food.\nClassification means sorting items into categories.\nCheck important AI results: AI can make mistakes."
     answer_page<localizes>(selected:message, feedback:message, explanation:message):message = "YOUR FIELD NOTE\nYou chose: {selected}\n{feedback}\n{explanation}\nTry Again or keep exploring. No badge is needed."
     refreshed_sign<localizes>(text:message):message = "{text} "
 
     OnBegin<override>()<suspends>:void =
         Hide()
-        buttons := array{growth_button, lantern_button, cargo_button}
-        prompts := array{growth_open, lantern_open, cargo_open}
+        buttons := array{growth_button, lantern_button, cargo_button, human_button}
+        prompts := array{growth_open, lantern_open, cargo_open, human_open}
         for (index -> input_button : buttons, prompt := prompts[index]):
             input_button.SetInteractionText(prompt)
             input_button.SetMaxTriggerCount(0)
@@ -85,14 +93,15 @@ fn_shoreline_island_field_observations := class(creative_device):
         growth_button.InteractedWithEvent.Subscribe(on_growth)
         lantern_button.InteractedWithEvent.Subscribe(on_lantern)
         cargo_button.InteractedWithEvent.Subscribe(on_cargo)
+        human_button.InteractedWithEvent.Subscribe(on_human)
         round_settings.RoundBeginEvent.Subscribe(on_round)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
         for (spawner : array{hub_spawner_0, hub_spawner_1, hub_spawner_2, hub_spawner_3}):
             spawner.SpawnedEvent.Subscribe(on_spawn)
         var alternate:logic = false
         loop:
-            texts := array{growth_sign, lantern_sign, cargo_sign}
-            for (index -> sign : array{growth_board, lantern_board, cargo_board}, text := texts[index]):
+            texts := array{growth_sign, lantern_sign, cargo_sign, human_sign}
+            for (index -> sign : array{growth_board, lantern_board, cargo_board, human_board}, text := texts[index]):
                 if (alternate?):
                     sign.SetText(refreshed_sign(text))
                 else:
@@ -114,6 +123,10 @@ fn_shoreline_island_field_observations := class(creative_device):
     on_cargo(input_agent:agent):void =
         open_observation(input_agent, 2)
 
+    on_human(input_agent:agent):void =
+        if (input_player := player[input_agent]):
+            show_human_decision(input_player, -1)
+
     open_observation(input_agent:agent, observation:int):void =
         if (input_player := player[input_agent]):
             show_panel(input_player, observation, -1)
@@ -128,15 +141,15 @@ fn_shoreline_island_field_observations := class(creative_device):
                 show_human_decision(input_player, 1)
             else if (choice = 5):
                 show_human_decision(input_player, -1)
-            else if (state.observation = 0, choice = 0):
+            else if (choice = 6, state.observation = 0):
                 show_human_decision(input_player, -1)
             else:
                 show_panel(input_player, state.observation, choice)
 
     show_panel(input_player:player, observation:int, answer:int):void =
         questions := array{growth_question, lantern_question, cargo_question}
-        first_answers := array{harvest_text, one_text, garden_text}
-        second_answers := array{plant_text, two_text, storage_text}
+        first_answers := array{harvest_text, two_text, garden_text}
+        second_answers := array{plant_text, one_text, storage_text}
         explanations := array{growth_explanation, lantern_explanation, cargo_explanation}
         if:
             personal_ui := GetPlayerUI[input_player]
@@ -155,12 +168,19 @@ fn_shoreline_island_field_observations := class(creative_device):
                     set text = answer_page(first_answer, correct_text, explanation)
                 else if (answer = 1):
                     set text = answer_page(second_answer, retry_text, explanation)
+                else if (answer = 2, observation = 2):
+                    set text = answer_page(machine_text, retry_text, explanation)
                 center := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}
+                var panel_height:float = 440.0
+                var close_top:float = 130.0
+                if (observation = 2, answer < 0):
+                    set panel_height = 540.0
+                    set close_top = 205.0
                 var slots:[]canvas_slot = array:
                     canvas_slot:
                         SizeToContent := false
                         Anchors := center
-                        Offsets := margin{Left := -450.0, Top := -220.0, Right := 900.0, Bottom := 440.0}
+                        Offsets := margin{Left := -450.0, Top := -220.0, Right := 900.0, Bottom := panel_height}
                         Widget := color_block{DefaultColor := color{R := 0.015, G := 0.04, B := 0.08}, DefaultOpacity := 0.98}
                     canvas_slot:
                         SizeToContent := false
@@ -168,22 +188,30 @@ fn_shoreline_island_field_observations := class(creative_device):
                         Offsets := margin{Left := -420.0, Top := -190.0, Right := 840.0, Bottom := 290.0}
                         Widget := text_block{DefaultText := text, DefaultTextColor := NamedColors.White, DefaultTextSize := 22.0}
                 close_button := make_button(close_text, state.generation, -2)
-                set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := 140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := close_button}}
+                set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := 140.0, Top := close_top, Right := 260.0, Bottom := 55.0}, Widget := close_button}}
                 if (answer >= 0):
                     again_button := make_button(again_text, state.generation, -1)
                     set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := again_button}}
+                    if (observation = 0, answer = 0):
+                        next_note_button := make_button(next_note_text, state.generation, 6)
+                        set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := next_note_button}}
                 else:
                     first_button := make_button(first_answer, state.generation, 0)
                     second_button := make_button(second_answer, state.generation, 1)
                     set slots += array{
                         canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := first_button},
                         canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := second_button}}
+                    if (observation = 2):
+                        machine_button := make_button(machine_text, state.generation, 2)
+                        set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := 140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := machine_button}}
                 panel := canvas{Slots := slots}
                 set state.panel = option{panel}
                 personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})
 
     show_human_decision(input_player:player, answer:int):void =
         if (personal_ui := GetPlayerUI[input_player]):
+            if (not states[input_player]):
+                if (set states[input_player] = field_observation_panel{}) {}
             close_panel(input_player)
             if (state := states[input_player]):
                 var text:message = human_decision_question

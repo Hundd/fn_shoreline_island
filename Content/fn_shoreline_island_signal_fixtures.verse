@@ -2,7 +2,7 @@
 fn_shoreline_island_signal_fixtures := class:
     queue(challenge:int)<transacts>:[]int =
         if (challenge = 0):
-            return array{0, 2}
+            return array{0}
         if (challenge = 1):
             return array{1, 2, 0}
         return array{2, 0, 1, 0}
@@ -40,7 +40,7 @@ fn_shoreline_island_signal_fixtures := class:
 
     queue_text(challenge:int)<transacts>:string =
         if (challenge = 0):
-            return "{cargo_name(0)} > {cargo_name(2)}"
+            return "{cargo_name(0)}"
         if (challenge = 1):
             return "{cargo_name(1)} > {cargo_name(2)} > {cargo_name(0)}"
         return "{cargo_name(2)} > {cargo_name(0)} > {cargo_name(1)} > {cargo_name(0)}"

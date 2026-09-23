@@ -33,6 +33,8 @@ fn_shoreline_island_event_station := class(creative_device):
     @editable
     feedback:hud_message_device = hud_message_device{}
     @editable
+    tool_audio:audio_player_device = audio_player_device{}
+    @editable
     board:billboard_device = billboard_device{}
     @editable
     recent_board:billboard_device = billboard_device{}
@@ -63,52 +65,54 @@ fn_shoreline_island_event_station := class(creative_device):
     var lamp_home:transform = transform{}
 
     claim_text<localizes>:message = "Claim AI Tool Lab"
-    link_bell_text<localizes>:message = "Choose Bell tool action"
-    link_lever_text<localizes>:message = "Choose Lever tool action"
-    bell_text<localizes>:message = "Try Bell input / Identify Bell"
-    lever_text<localizes>:message = "Try Lever input / Identify Lever"
-    demo_text<localizes>:message = "Show the recent input again"
+    link_bell_text<localizes>:message = "Choose Scan Object tool"
+    link_lever_text<localizes>:message = "Choose Announce Result tool"
+    bell_text<localizes>:message = "Test Scan Object / Identify Scan"
+    lever_text<localizes>:message = "Test Announce Result / Identify Announce"
+    demo_text<localizes>:message = "Show the recent request again"
     help_text<localizes>:message = "Help"
     next_text<localizes>:message = "Next challenge / Replay all"
     replay_text<localizes>:message = "Replay this challenge"
     return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "AI TOOL LAB | Station {number}\nClaim to choose useful tool responses."
+    available_text<localizes>(number:int):message = "AI TOOL LAB | Station {number}\nChoose a tool for each request.\nPress CLAIM to begin."
     occupied_text<localizes>:message = "This AI Tool Lab station is in use. Choose another station."
     other_text<localizes>:message = "Leave your current AI Tool Lab station before claiming another."
-    first_text<localizes>:message = "An AI tool can perform an action. Choose Open chute for the Bell input, then try the input."
-    identify_text<localizes>:message = "Read the recent input. Which input asked for the action: Bell or Lever?"
-    final_text<localizes>:message = "Choose Open chute for Bell and Light lamp for Lever. Try both inputs."
+    first_text<localizes>:message = "Mystery crate: what's inside? Choose Scanner, Speaker, or Light. Connect Scan Object to Scanner, then test."
+    identify_text<localizes>:message = "Watch the tool demonstration. Which request made it run: Scan Object or Announce Result?"
+    final_text<localizes>:message = "Connect Scan Object to Scanner and Announce Result to Speaker. Test both."
     solved_text<localizes>:message = "Challenge complete! Next or Replay."
     finish_text<localizes>:message = "Complete this challenge first. Help is always available."
     complete_text<localizes>:message = "PIX MODULE RESTORED: TOOLS ONLINE\nTool Master Badge earned! Some AI systems can choose tools to help complete tasks. Replay or return to the hub."
     retained_text<localizes>:message = "Tool action completed again! Your Tool Master Badge stays earned for this round."
     complete_board_text<localizes>:message = "Tool Master Badge earned. Replay is optional."
     wrong_text<localizes>(input:message, expected:message):message = "That tool action does not match {input}. This input needs {expected}. Choose again and try again."
-    wrong_answer_text<localizes>:message = "Watch the same input again. Read its name on the recent-input board."
+    wrong_answer_text<localizes>:message = "Watch the same request again. Read its name on the recent-request board."
     later_text<localizes>:message = "This control is used in a later challenge."
-    fixed_text<localizes>:message = "This demonstration has fixed connections. Identify its event."
-    bell_name<localizes>:message = "Bell"
-    lever_name<localizes>:message = "Lever"
-    chute_name<localizes>:message = "Open chute"
-    lamp_name<localizes>:message = "Light lamp"
+    fixed_text<localizes>:message = "This demonstration has fixed tool choices. Identify the request."
+    bell_name<localizes>:message = "Scan Object"
+    lever_name<localizes>:message = "Announce Result"
+    chute_name<localizes>:message = "Scanner"
+    lamp_name<localizes>:message = "Speaker"
+    light_name<localizes>:message = "Light"
     yes_text<localizes>:message = "PASS"
     no_text<localizes>:message = "not tested"
-    recent_empty<localizes>:message = "RECENT INPUT: none\nTOOL ACTION: none"
-    recent_text<localizes>(event_id:message, response:message):message = "RECENT INPUT: {event_id}\nCHOSEN TOOL ACTION: {response}"
-    idle_text<localizes>:message = "CHUTE: CLOSED | PARCEL: waiting\nLAMP: OFF"
-    chute_status<localizes>:message = "CHUTE: OPEN | PARCEL: released\nLAMP: OFF"
-    lamp_status<localizes>:message = "CHUTE: CLOSED | PARCEL: waiting\nLAMP: ON"
-    board_text<localizes>(number:int, goal:message, bell:message, lever:message):message = "AI TOOL LAB | Challenge {number}\n{goal}\nBell input > {bell}\nLever input > {lever}"
-    first_goal<localizes>:message = "GOAL: Bell chooses Open chute."
-    final_goal<localizes>:message = "GOAL: Bell chooses Open chute; Lever chooses Light lamp."
-    demo_board_text<localizes>(number:int):message = "TRACE THE INPUT | Example {number} of 3\nRead RECENT INPUT, then identify Bell or Lever.\nShow input repeats the demonstration."
-    tests_text<localizes>(recent:message, bell:message, lever:message):message = "{recent}\nBell > Open chute: {bell}\nLever > Light lamp: {lever}"
+    recent_empty<localizes>:message = "RECENT REQUEST: none\nTOOL: none"
+    recent_text<localizes>(event_id:message, response:message):message = "RECENT REQUEST: {event_id}\nTOOL USED: {response}"
+    idle_text<localizes>:message = "SCANNER: IDLE | CRATE: CLOSED\nSPEAKER: QUIET | LIGHT: OFF"
+    chute_status<localizes>:message = "SCANNER: COMPLETE | CRATE: OPEN\nCONTENTS: MEDICAL SUPPLIES"
+    lamp_status<localizes>:message = "SPEAKER: ANNOUNCEMENT SENT\nSCANNER: IDLE | CRATE: CLOSED"
+    light_status<localizes>:message = "LIGHT: ON | CRATE: CLOSED\nThe light cannot scan the contents."
+    board_text<localizes>(number:int, goal:message, bell:message, lever:message):message = "AI TOOL LAB | Challenge {number}\n{goal}\nScan Object > {bell}\nAnnounce Result > {lever}"
+    first_goal<localizes>:message = "GOAL: Scan the mystery crate to reveal its contents."
+    final_goal<localizes>:message = "GOAL: Scan Object > Scanner; Announce Result > Speaker."
+    demo_board_text<localizes>(number:int):message = "TRACE THE REQUEST | Example {number} of 3\nRead RECENT REQUEST: Scan Object or Announce Result?\nShow request repeats the demonstration."
+    tests_text<localizes>(recent:message, bell:message, lever:message):message = "{recent}\nScan > Scanner: {bell}\nAnnounce > Speaker: {lever}"
     first_hint<localizes>:message = "A tool choice decides which action follows an input. Try the current action."
-    first_worked<localizes>:message = "Use Choose Bell tool action until Bell input > Open chute. Then try Bell."
-    identify_hint<localizes>:message = "The recent-input board names the input that started the tool action."
-    identify_worked<localizes>:message = "Read RECENT INPUT. Select Bell when it says Bell, or Lever when it says Lever."
-    final_hint<localizes>:message = "Each input has its own tool choice. Trying Bell should leave the lamp OFF."
-    final_worked<localizes>:message = "Set Bell input > Open chute and Lever input > Light lamp. Try Bell, then Lever."
+    first_worked<localizes>:message = "Set Scan Object to Scanner. Then test Scan Object."
+    identify_hint<localizes>:message = "The recent-request board names what caused the demonstrated tool action."
+    identify_worked<localizes>:message = "Read RECENT REQUEST. Select Scan Object or Announce Result to match it."
+    final_hint<localizes>:message = "Each request has its own tool. Testing Scan Object should leave Speaker quiet."
+    final_worked<localizes>:message = "Set Scan Object > Scanner and Announce Result > Speaker. Test each request."
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -169,8 +173,10 @@ fn_shoreline_island_event_station := class(creative_device):
     response_name(response:int):message =
         if (response = 0):
             chute_name
-        else:
+        else if (response = 1):
             lamp_name
+        else:
+            light_name
 
     expected_response(event_id:int):message =
         if (event_id = 0):
@@ -214,10 +220,12 @@ fn_shoreline_island_event_station := class(creative_device):
             if (parcel.TeleportTo[delivered]) {}
             display(response_board, chute_status)
         else if (response = 1):
+            display(response_board, lamp_status)
+        else if (response = 2):
             var lit:transform = lamp_home
             set lit.Translation.Z += 120.0
             if (lamp.TeleportTo[lit]) {}
-            display(response_board, lamp_status)
+            display(response_board, light_status)
 
     show_board(input_player:player):void =
         state := progress.ensure_player(input_player)
@@ -283,6 +291,7 @@ fn_shoreline_island_event_station := class(creative_device):
                 set state.bell_response = fixtures.toggle_response(state.bell_response)
             else:
                 set state.lever_response = fixtures.toggle_response(state.lever_response)
+            tool_audio.Play(input_player)
             set state.bell_tested = false
             set state.lever_tested = false
             set state.solved = false
@@ -378,6 +387,8 @@ fn_shoreline_island_event_station := class(creative_device):
             var delivered:transform = parcel_home
             set delivered.Translation.X += 480.0
             animate(input_player, parcel, delivered, token, round_token)
+        else if (response = 1):
+            tool_audio.Play(input_player)
         else:
             var lit:transform = lamp_home
             set lit.Translation.Z += 120.0

@@ -91,3 +91,39 @@
 - Exercise Check Pix's crate-count retry and Route A/Route B retry paths
   in-client, including two-player panel isolation.
 - Test station ownership and reward behavior with two players.
+
+## Research Station mission framing — 2026-09-23
+
+- The three preserved mission stages now share a Research Station restoration
+  goal: deliver a seed to its planter, light its dock, and sort arriving items.
+  This gives the existing instructions, repeat, tool connection, and
+  classification actions one visible purpose without changing their logic.
+- Updated the claim and stage-goal Verse messages; `BuildAll` returned zero
+  diagnostics. The four mission-board saved defaults were changed through
+  UEFN to match the new introduction, read back, and saved. The label inventory
+  records their new text.
+- In-client board readability and mission flow remain untested under the
+  user's instruction to skip validation and playtesting.
+
+## Discovery Trail saved defaults — 2026-09-23
+
+- Replaced the three old saved field-note boards with the exact AI Discovery
+  Trail Check Pix, Pattern, and Categories sign text already displayed by
+  Verse. The three saved Button prompts now also match the Verse prompts.
+  All six properties were read back and their actors saved in UEFN.
+- The shared wrong-answer hint now asks players to check evidence, which fits
+  all three notes. The category explanation specifically recommends checking
+  important AI results. Verse `BuildAll` returned zero diagnostics. No
+  observation, reward, or main-route state changed.
+- In-client readability and optional retry paths remain open under the user's
+  instruction to skip validation and playtesting.
+
+## Agent route feedback copy — 2026-09-23
+
+- Route feedback now names the Launch-to-Dispatch tool action and calls its
+  test objects items, matching the Research Station mission. The safe-stop
+  message asks players to change the agent plan. Route logic, item IDs,
+  destinations, and reward state were unchanged.
+- Verse `BuildAll` returned zero diagnostics, and the updated source text is
+  recorded in the label inventory. Runtime route checks remain skipped at the
+  user's request.

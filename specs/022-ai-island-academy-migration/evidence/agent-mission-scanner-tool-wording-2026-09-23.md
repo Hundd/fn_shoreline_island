@@ -1,0 +1,9 @@
+# Agent Mission scanner-tool wording — source/editor evidence
+
+Requirement: AC-029 / T-026 and AC-032 / T-029. This is implementation evidence, not in-client acceptance.
+
+- The plan's gather-information step names `Scanner` as the correct tool. The final-stage connection, scanner-ready, scan-first, disconnected, hint, and plan-board text now say Scanner and destination marker rather than the retained internal `launch_connection`/Launch-to-Dispatch names. The optional Apple/Car feedback now identifies itself as an optional classifier test, not a Launch tool result. Stage-one pattern practice labels the connection control as unavailable in that stage.
+- The shared initial Run prompt is now `Run agent plan`, with no misleading `Try Launch`. Four bound Run billboards previously saved `Run agent plan / Try Launch`, and four Run Buttons had empty saved interaction prompts. Each of those eight actors was found by exact label in live UEFN, its text property read before edit, changed only to `Run agent plan`, saved individually through `SceneTools.save_actor`, and read back as `Run agent plan`. Their actor names and final values are in `label-inventory-2026-09-23.csv`.
+- No Verse device reference, event binding, route state, reward field, transform, or prop was changed. The existing connection control still gates the destination scan; only its stage-two player-facing meaning changed. `ValkyrieToolset.VerseToolset.BuildAll` returned `{"returnValue":[]}` after the source edit.
+
+The owner asked to skip verification, so no Project Validate, memory calculation, Launch Session, full label audit, or solo/multiplayer acceptance is claimed. In-client checks still need to confirm the Scanner/marker instruction is clear at all four stations, the pattern-stage unused prompt is sensible, and the corrected saved defaults persist through cook. No playtest was running when these editor changes were made; leave UEFN open.
