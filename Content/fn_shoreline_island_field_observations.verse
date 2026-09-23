@@ -44,26 +44,31 @@ fn_shoreline_island_field_observations := class(creative_device):
     var states:[player]field_observation_panel = map{}
     var next_generation:int = 0
 
-    growth_open<localizes>:message = "Observe the prediction pattern"
-    lantern_open<localizes>:message = "Observe the lantern pattern"
-    cargo_open<localizes>:message = "Observe the item categories"
-    growth_sign<localizes>:message = "FIELD NOTE: GROWTH\nWater > Plant > Wait > ?\nOptional: use the button"
-    lantern_sign<localizes>:message = "FIELD NOTE: LANTERNS\n1 > 2 > 1 > 2 > ?\nOptional: use the button"
-    cargo_sign<localizes>:message = "FIELD NOTE: CATEGORIES\nApple > Food | Car > Vehicle\nOptional: use the button"
-    growth_question<localizes>:message = "FIELD NOTE: GROWTH\nWater > Plant > Wait > ?\nThe plant has grown. What comes next?\nChoose a prediction, or Close to keep exploring."
-    lantern_question<localizes>:message = "FIELD NOTE: LANTERNS\nLanterns flash in order: 1 > 2 > 1 > 2 > ?\nWhich lantern flashes next?\nChoose a prediction, or Close to keep exploring."
-    cargo_question<localizes>:message = "FIELD NOTE: CATEGORIES\nThe signs say Apple > Food and Car > Vehicle.\nAn Apple arrives. Which category matches?\nChoose a prediction, or Close to keep exploring."
-    harvest_text<localizes>:message = "Harvest"
-    plant_text<localizes>:message = "Plant"
+    growth_open<localizes>:message = "AI Discovery: Check Pix's crate count"
+    lantern_open<localizes>:message = "AI Discovery: Observe a pattern"
+    cargo_open<localizes>:message = "AI Discovery: Observe categories"
+    growth_sign<localizes>:message = "AI DISCOVERY TRAIL: CHECK PIX\n4 data crates | Pix predicts 5\nOptional: use the button"
+    lantern_sign<localizes>:message = "AI DISCOVERY TRAIL: PATTERN\n1 > 2 > 1 > 2 > ?\nOptional: use the button"
+    cargo_sign<localizes>:message = "AI DISCOVERY TRAIL: CATEGORIES\nApple > Food | Car > Vehicle\nOptional: use the button"
+    growth_question<localizes>:message = "AI DISCOVERY TRAIL: CHECK PIX\nThere are 4 data crates on the dock. Pix predicts 5.\nIs Pix correct? Choose an answer, or Close to keep exploring."
+    lantern_question<localizes>:message = "AI DISCOVERY TRAIL: PATTERN\nLanterns flash in order: 1 > 2 > 1 > 2 > ?\nWhich lantern flashes next?\nChoose a prediction, or Close to keep exploring."
+    cargo_question<localizes>:message = "AI DISCOVERY TRAIL: CATEGORIES\nThe signs say Apple > Food and Car > Vehicle.\nAn Apple arrives. Which category matches?\nChoose a prediction, or Close to keep exploring."
+    harvest_text<localizes>:message = "No — there are 4 crates"
+    plant_text<localizes>:message = "Yes — there are 5 crates"
     one_text<localizes>:message = "1"
     two_text<localizes>:message = "2"
     garden_text<localizes>:message = "Food"
     storage_text<localizes>:message = "Vehicle"
     again_text<localizes>:message = "Again"
     close_text<localizes>:message = "Close"
-    correct_text<localizes>:message = "Your prediction matches."
+    correct_text<localizes>:message = "Good check — your answer matches the evidence."
     retry_text<localizes>:message = "Let's look at the pattern."
-    growth_explanation<localizes>:message = "Clear instructions need the right order.\nFind Seed, Dig Hole, Plant Seed, Water.\nPix can retry a changed instruction safely."
+    growth_explanation<localizes>:message = "Pix predicted 5, but there are 4 crates.\nAI can make mistakes, so check important answers.\nPeople use evidence to make the final decision."
+    human_decision_question<localizes>:message = "NEXT FIELD NOTE: HUMAN DECISION\nPix suggests Route A. New information says Route A is temporarily closed.\nWhich route should you take?"
+    route_a_result<localizes>:message = "Route A is closed. Use the newest information and try again."
+    route_b_result<localizes>:message = "Route B is the safe choice. AI can offer a suggestion, but people should use new information to make a decision."
+    route_a_text<localizes>:message = "Route A"
+    route_b_text<localizes>:message = "Route B"
     lantern_explanation<localizes>:message = "Pattern prediction: 1 comes next.\nThe pair 1 > 2 repeats.\nAfter each 2, the next pair starts with 1.\nAI can recognize patterns from examples."
     cargo_explanation<localizes>:message = "Classification puts things into categories.\nRead the item, then choose its matching category.\nAlways check an AI result: it can make mistakes."
     answer_page<localizes>(selected:message, feedback:message, explanation:message):message = "YOUR FIELD NOTE\nYou chose: {selected}\n{feedback}\n{explanation}\nTry Again or keep exploring. No badge is needed."
@@ -117,6 +122,14 @@ fn_shoreline_island_field_observations := class(creative_device):
         if (state := states[input_player], state.panel?, state.generation = generation):
             if (choice = -2):
                 close_panel(input_player)
+            else if (choice = 3):
+                show_human_decision(input_player, 0)
+            else if (choice = 4):
+                show_human_decision(input_player, 1)
+            else if (choice = 5):
+                show_human_decision(input_player, -1)
+            else if (state.observation = 0, choice = 0):
+                show_human_decision(input_player, -1)
             else:
                 show_panel(input_player, state.observation, choice)
 
@@ -165,6 +178,42 @@ fn_shoreline_island_field_observations := class(creative_device):
                     set slots += array{
                         canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := first_button},
                         canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := second_button}}
+                panel := canvas{Slots := slots}
+                set state.panel = option{panel}
+                personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})
+
+    show_human_decision(input_player:player, answer:int):void =
+        if (personal_ui := GetPlayerUI[input_player]):
+            close_panel(input_player)
+            if (state := states[input_player]):
+                var text:message = human_decision_question
+                if (answer = 0):
+                    set text = route_a_result
+                else if (answer = 1):
+                    set text = route_b_result
+                center := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}
+                var slots:[]canvas_slot = array:
+                    canvas_slot:
+                        SizeToContent := false
+                        Anchors := center
+                        Offsets := margin{Left := -450.0, Top := -220.0, Right := 900.0, Bottom := 440.0}
+                        Widget := color_block{DefaultColor := color{R := 0.015, G := 0.04, B := 0.08}, DefaultOpacity := 0.98}
+                    canvas_slot:
+                        SizeToContent := false
+                        Anchors := center
+                        Offsets := margin{Left := -420.0, Top := -190.0, Right := 840.0, Bottom := 290.0}
+                        Widget := text_block{DefaultText := text, DefaultTextColor := NamedColors.White, DefaultTextSize := 22.0}
+                close_button := make_button(close_text, state.generation, -2)
+                set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := 140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := close_button}}
+                if (answer = -1):
+                    route_a_button := make_button(route_a_text, state.generation, 3)
+                    route_b_button := make_button(route_b_text, state.generation, 4)
+                    set slots += array{
+                        canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := route_a_button},
+                        canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := route_b_button}}
+                else:
+                    again_button := make_button(again_text, state.generation, 5)
+                    set slots += array{canvas_slot{Anchors := center, SizeToContent := false, Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := again_button}}
                 panel := canvas{Slots := slots}
                 set state.panel = option{panel}
                 personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})

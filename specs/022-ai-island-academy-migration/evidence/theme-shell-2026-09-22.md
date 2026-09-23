@@ -40,6 +40,18 @@ Hole, Plant Seed, Water.
 
 ## Latest verification
 
+- The main hub billboard now gives a concise player journey: `AI ISLAND
+  ACADEMY`, `PIX AI CORE: 7 MODULES OFFLINE`, `AGENT MODE: LOCKED`, `START:
+  PROMPT LAB`, and the personal-journal prompt. This matches the core story:
+  seven abilities are restored before the final Agent Mode mission. Verse
+  `BuildAll` returned zero diagnostics; a fresh session reached `Running` and
+  was stopped to `Disconnected` / `Unconnected`.
+- The first Prompt Lab HUD message establishes the same full story before its
+  existing objective: `My AI Core glitched—7 modules are offline and Agent
+  Mode is locked. Start with Instructions...`. It changes only localized
+  presentation text. Verse `BuildAll` returned zero diagnostics; a fresh
+  session reached `Running` and was stopped to `Disconnected` /
+  `Unconnected`.
 - A fresh UEFN session cook reached `Connected` / `Running` after the personal
   Core-state presentation change, then the game and session were stopped and
   verified `Disconnected` / `Unconnected`.
@@ -69,6 +81,16 @@ full game flows, multiplayer behavior, project validation, and memory are not
 proven by this evidence. They remain open in this feature's task list.
 
 ## Pix AI Core editor probe
+
+## Hub-sign binding inspection
+
+- The placed `hub_static_sign_refresh` Verse device was inspected through the
+  live UEFN device toolset. All 13 of its existing billboard fields resolve
+  to placed billboard subobjects: academy title, Prompt Lab sign and four
+  sequence labels, return sign, hub routes, Fix the Prompt route, journal
+  sign, AI Classifier route, and Confidence Core route.
+- This proves the migrated Verse sign text has live device targets. It does
+  not prove in-client line wrapping or player readability, which remain open.
 
 The live-editor inspection located the hub foundation (X -1700..2800, Y
 0..3000, Z 2250..2400) and its existing static-sign Verse device. A temporary

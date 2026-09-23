@@ -55,3 +55,7 @@ to individual players. Presentation changes must not alter those links.
   overlay from the existing journal device. It is spawned only from the
   existing first-time Agent Badge completion path and carries no input or
   progress-writing behavior.
+- The main static hub billboard gives the first-route instruction rather than
+  attempting to mirror personal module completion globally: each player sees
+  their actual eight-module state in the journal, preserving the existing
+  independent-progress model.

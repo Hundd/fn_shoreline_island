@@ -67,30 +67,30 @@ fn_shoreline_island_energy_station := class(creative_device):
     occupied_text<localizes>:message = "This Confidence Core station is in use. Choose another station."
     other_text<localizes>:message = "Leave your current Confidence Core station before claiming another."
     manual_text<localizes>:message = "Give Pix useful clues. Change confidence with +10% or -10%, then press Start."
-    repeat_text<localizes>:message = "Choose how many times to Add 2. Run starts energy at 0. Can it finish at 6?"
+    repeat_text<localizes>:message = "Choose how many times to Add 2. Run starts confidence at 0%. Can it reach 60%?"
     manual_controls_text<localizes>:message = "Use +1 or -1 here. Repeats begin in challenge 3."
     repeat_controls_text<localizes>:message = "This challenge uses Repeat Add 2. Choose a count, then Run."
-    boundary_text<localizes>:message = "Energy stays between 0 and 10. Try the other adjustment."
+    boundary_text<localizes>:message = "Confidence stays between 0% and 100%. Try the other adjustment."
     finish_text<localizes>:message = "Open this preview door first. Help is always available."
-    ready_text<localizes>:message = "Edit energy, then Start."
+    ready_text<localizes>:message = "Edit confidence, then Start."
     ready_repeat_text<localizes>:message = "Choose repeats, then Run."
     solved_text<localizes>:message = "Door open! Press Next or Replay."
-    complete_text<localizes>:message = "Confidence Badge earned! More useful information can sometimes help an AI make a better prediction. Replay or return to the hub."
+    complete_text<localizes>:message = "PIX MODULE RESTORED: CONFIDENCE ONLINE\nConfidence Badge earned! More useful information can sometimes help an AI make a better prediction. Replay or return to the hub."
     retained_text<localizes>:message = "Confidence reached again! Your Confidence Badge stays earned for this round."
     complete_board_text<localizes>:message = "Confidence Badge earned! Replay is optional."
     concept_text<localizes>:message = "AI answers can have different confidence. High confidence does not automatically mean an answer is correct."
-    worked_manual_text<localizes>(target:int):message = "Use +1 or -1 until energy reads {target}. Then press Start. Replay restores the starting value."
-    worked_repeat_text<localizes>:message = "Try 3 repeats of Add 2: energy changes 0, 2, 4, 6. Then the door opens."
-    energy_text<localizes>(energy:int, target:int, current_percent:int, target_percent:int):message = "AI CONFIDENCE: {current_percent}%\nTARGET: {target_percent}%\nClue score: {energy} / {target}"
+    worked_manual_text<localizes>:message = "Use +1 or -1 until confidence matches the target. Each useful clue changes confidence by 10%. Then press Start."
+    worked_repeat_text<localizes>:message = "Try 3 repeats of Add 2: confidence changes 0%, 20%, 40%, 60%. Then the door opens."
+    energy_text<localizes>(energy:int, target:int, current_percent:int, target_percent:int):message = "AI CONFIDENCE: {current_percent}%\nTARGET: {target_percent}%"
     empty_energy_text<localizes>:message = "AI CONFIDENCE\nClaim to begin"
     closed_text<localizes>:message = "PREVIEW DOOR: CLOSED"
     opening_text<localizes>:message = "PREVIEW DOOR: OPENING"
     open_text<localizes>:message = "PREVIEW DOOR: OPEN"
-    board_text<localizes>(input_player:agent, challenge:int, start:int, status:message):message = "Researcher: {input_player} | Challenge {challenge}\nStarting clue score: {start} | Controls: +10% / -10%\n{status}"
+    board_text<localizes>(input_player:agent, challenge:int, start_percent:int, status:message):message = "Researcher: {input_player} | Challenge {challenge}\nStarting confidence: {start_percent}% | Controls: +10% / -10%\n{status}"
     repeat_board_text<localizes>(input_player:agent, count:int, status:message):message = "Researcher: {input_player} | Challenge 3\nStarting confidence: 0% | Repeat {count}: New clue +20%\n{status}"
     addition_text<localizes>(step:int, count:int):message = "New clue +20% | Step {step} of {count}"
     initial_text<localizes>:message = "Run begins: confidence = 0%"
-    wrong_text<localizes>(energy:int, target:int):message = "Confidence finished at clue score {energy}; the target is {target}. Edit and try again."
+    wrong_text<localizes>(current_percent:int, target_percent:int):message = "Confidence finished at {current_percent}%; the target is {target_percent}%. Edit and try again."
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -167,7 +167,7 @@ fn_shoreline_island_energy_station := class(creative_device):
         if (state.challenge = 2):
             board.SetText(repeat_board_text(input_player, state.repeat_count, status))
         else:
-            board.SetText(board_text(input_player, state.challenge + 1, fixtures.start(state.challenge), status))
+            board.SetText(board_text(input_player, state.challenge + 1, confidence_percent(fixtures.start(state.challenge)), status))
         board.UpdateDisplay()
 
     show_ready(input_player:player):void =
@@ -259,7 +259,7 @@ fn_shoreline_island_energy_station := class(creative_device):
             else if (state.challenge = 2):
                 feedback.Show(input_player, worked_repeat_text, ?DisplayTime := 10.0)
             else:
-                feedback.Show(input_player, worked_manual_text(fixtures.target(state.challenge)), ?DisplayTime := 10.0)
+                feedback.Show(input_player, worked_manual_text, ?DisplayTime := 10.0)
 
     restart(input_player:player):void =
         set generation += 1
@@ -315,7 +315,7 @@ fn_shoreline_island_energy_station := class(creative_device):
             return
         if (state.energy <> fixtures.target(state.challenge)):
             set running = false
-            explanation := wrong_text(state.energy, fixtures.target(state.challenge))
+            explanation := wrong_text(confidence_percent(state.energy), confidence_percent(fixtures.target(state.challenge)))
             show_board(input_player, explanation)
             feedback.Show(input_player, explanation, ?DisplayTime := 10.0)
             return

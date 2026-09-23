@@ -10,6 +10,10 @@
   safe retry feedback. They use the concrete actions **Open chute** and
   **Light lamp** without making claims beyond the lesson: some AI systems can
   choose tools to help complete tasks.
+- Its first challenge now explicitly introduces a tool as an action an AI can
+  use. Safe wrong-answer feedback also names the input and its expected
+  action (Bell -> Open chute; Lever -> Light lamp), so it explains why the
+  retry is needed rather than only reporting a mismatch.
 
 ## AI Skills Lab
 
@@ -27,6 +31,9 @@
 - A fresh UEFN session cook reached `Connected` / `Running`.
 - The game and session were stopped afterward; final state was `Disconnected`
   / `Unconnected`.
+- Verse `BuildAll` also returned zero diagnostics after the Tool Lab feedback
+  clarification. A fresh session reached `Running` and was stopped to
+  `Disconnected` / `Unconnected`.
 
 ## Remaining checks
 

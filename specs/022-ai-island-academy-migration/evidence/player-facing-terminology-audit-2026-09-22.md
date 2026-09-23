@@ -21,6 +21,27 @@
 
 ## Verification
 
+- Pattern Scanner's safe wrong-count feedback now explains both the outcome
+  and reason: the robot stopped short or long because each repeat moves one
+  tile. Its existing immediate retry, count, progress, and badge behavior are
+  untouched. Verse `BuildAll` returned zero diagnostics; a fresh UEFN session
+  reached `Running` and was stopped to `Disconnected` / `Unconnected`.
+
+- Journal source audit confirms the stable tracker order remains `Signal,
+  Energy, Debug, Event, Bot, Nursery`: AI Skills reads tracker 5, Agent Mode
+  reads tracker 4, and Agent readiness requires the first seven restored
+  modules. No journal method writes a tracker, player state, or reward.
+- A narrow Verse-string audit finds no stale claim that eight modules are
+  offline. The hub and initial Pix HUD now consistently present **seven
+  modules offline** with **Agent Mode locked**.
+
+- Confidence Core's remaining player-facing `energy` language was converted
+  to percentage confidence: its repeat, boundary, ready, help, board, and
+  retry messages now use 0%–100% values. The underlying `energy` variable,
+  fixture values, player map, and device bindings remain unchanged. Verse
+  `BuildAll` returned zero diagnostics; a fresh UEFN session reached
+  `Running` and was stopped to `Disconnected` / `Unconnected`.
+
 - Verse `BuildAll` returned zero diagnostics.
 - A fresh UEFN session reached `Running` after the changes, then `StopGame` and
   `StopSession` completed. Final session status was `Disconnected` /

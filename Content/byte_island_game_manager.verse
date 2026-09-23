@@ -35,7 +35,7 @@ byte_island_game_manager := class(creative_device):
 
     var player_states:[player]byte_island_player_state = map{}
 
-    objective_text<localizes>:message = "Pix: My Instructions module is offline. Follow the PROMPT LAB signs."
+    objective_text<localizes>:message = "Pix: My AI Core glitched—7 modules are offline and Agent Mode is locked. Start with Instructions: follow the PROMPT LAB signs."
     water_text<localizes>:message = "Find Seed"
     plant_text<localizes>:message = "Dig Hole"
     wait_text<localizes>:message = "Plant Seed"
@@ -47,7 +47,7 @@ byte_island_game_manager := class(creative_device):
     plant_feedback<localizes>:message = "2 of 4: Hole ready. Next, plant the seed."
     wait_feedback<localizes>:message = "3 of 4: Seed planted. Next, water it."
     reset_feedback<localizes>:message = "That instruction did not work. Try changing the order: Find Seed, Dig Hole, Plant Seed, Water."
-    complete_feedback<localizes>:message = "Prompt Badge earned! Clear instructions help AI understand a task."
+    complete_feedback<localizes>:message = "PIX MODULE RESTORED: INSTRUCTIONS ONLINE\nPrompt Badge earned! Clear instructions help AI understand a task."
     repeat_feedback<localizes>:message = "Great instructions again! Your Prompt Badge is already earned. Return to the hub."
 
     OnBegin<override>()<suspends>:void =

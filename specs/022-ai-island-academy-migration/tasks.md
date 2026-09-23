@@ -47,3 +47,7 @@
   session-cooked in `evidence/agent-mission-trail-presentation-2026-09-22.md`.
 - [ ] T-007 (FR-001-FR-007): Validate project, memory, solo end-to-end and
   multiplayer progression; record any unsupported editor checks explicitly.
+  Current MCP inspection exposes no Project Validate or memory-calculation
+  command. The editor's `LogValkyrieValidation` currently returns no error or
+  warning entries, but that is only a log check—not a substitute for either
+  required UEFN action.

@@ -18,8 +18,23 @@
 ## AI Discovery Trail
 
 - Kept the optional Fieldwork observation interactions and no-badge design.
+- Its three existing signs, interaction prompts, and personal panels now name
+  the area **AI Discovery Trail**, with concise Check Pix, Pattern, and
+  Categories station labels.
 - Updated the category field note and prediction to use Apple/Food and
   Car/Vehicle, matching the core classifier lesson.
+- Repurposed the redundant optional growth-order note into **Check Pix**:
+  players compare Pix's prediction of five data crates with the visible count
+  of four. The existing personal two-choice panel, immediate retry, and
+  no-badge/no-reward behavior are unchanged. Its explanation now explicitly
+  says that AI can make mistakes and people use evidence for the final
+  decision.
+- A correct Check Pix answer now opens a second, optional personal prompt:
+  Pix suggests Route A, but new information says it is closed. The player can
+  select Route A or Route B; Route A explains the safe retry, while Route B
+  explains that people should use new information when making decisions. This
+  reuses the existing panel, generation guard, close/retry controls, and no
+  reward state.
 
 ## Verification
 
@@ -51,6 +66,15 @@
   by the existing journal device, so it adds no device bindings or state.
   Verse `BuildAll` returned zero diagnostics and a fresh session reached
   `Running`, then `Disconnected` / `Unconnected` after teardown.
+- Verse `BuildAll` returned zero diagnostics after the Discovery Trail's
+  Check Pix text migration. A fresh UEFN session reached `Running` and was
+  stopped to `Disconnected` / `Unconnected`.
+- Verse `BuildAll` returned zero diagnostics after the human-decision branch.
+  A fresh UEFN session reached `Running` and was then stopped to
+  `Disconnected` / `Unconnected`.
+- Verse `BuildAll` returned zero diagnostics after the AI Discovery Trail
+  naming update. A fresh session reached `Running` and was stopped to
+  `Disconnected` / `Unconnected`.
 
 ## Remaining checks
 
@@ -64,4 +88,6 @@
 - Test every agent stage’s correct path, wrong path, help, replay, and
   retained reward in-client.
 - Verify the Discovery Trail stays optional and grants no progression reward.
+- Exercise Check Pix's crate-count retry and Route A/Route B retry paths
+  in-client, including two-player panel isolation.
 - Test station ownership and reward behavior with two players.

@@ -75,15 +75,15 @@ fn_shoreline_island_event_station := class(creative_device):
     available_text<localizes>(number:int):message = "AI TOOL LAB | Station {number}\nClaim to choose useful tool responses."
     occupied_text<localizes>:message = "This AI Tool Lab station is in use. Choose another station."
     other_text<localizes>:message = "Leave your current AI Tool Lab station before claiming another."
-    first_text<localizes>:message = "Choose Open chute for the Bell input, then try the input."
+    first_text<localizes>:message = "An AI tool can perform an action. Choose Open chute for the Bell input, then try the input."
     identify_text<localizes>:message = "Read the recent input. Which input asked for the action: Bell or Lever?"
     final_text<localizes>:message = "Choose Open chute for Bell and Light lamp for Lever. Try both inputs."
     solved_text<localizes>:message = "Challenge complete! Next or Replay."
     finish_text<localizes>:message = "Complete this challenge first. Help is always available."
-    complete_text<localizes>:message = "Tool Master Badge earned! Some AI systems can choose tools to help complete tasks. Replay or return to the hub."
+    complete_text<localizes>:message = "PIX MODULE RESTORED: TOOLS ONLINE\nTool Master Badge earned! Some AI systems can choose tools to help complete tasks. Replay or return to the hub."
     retained_text<localizes>:message = "Tool action completed again! Your Tool Master Badge stays earned for this round."
     complete_board_text<localizes>:message = "Tool Master Badge earned. Replay is optional."
-    wrong_text<localizes>:message = "That tool action does not match the goal. Choose again and try again."
+    wrong_text<localizes>(input:message, expected:message):message = "That tool action does not match {input}. This input needs {expected}. Choose again and try again."
     wrong_answer_text<localizes>:message = "Watch the same input again. Read its name on the recent-input board."
     later_text<localizes>:message = "This control is used in a later challenge."
     fixed_text<localizes>:message = "This demonstration has fixed connections. Identify its event."
@@ -168,6 +168,12 @@ fn_shoreline_island_event_station := class(creative_device):
 
     response_name(response:int):message =
         if (response = 0):
+            chute_name
+        else:
+            lamp_name
+
+    expected_response(event_id:int):message =
+        if (event_id = 0):
             chute_name
         else:
             lamp_name
@@ -388,14 +394,14 @@ fn_shoreline_island_event_station := class(creative_device):
             if (event_id = 0, response = 0):
                 finish(input_player)
             else:
-                feedback.Show(input_player, wrong_text, ?DisplayTime := 8.0)
+                feedback.Show(input_player, wrong_text(event_name(event_id), expected_response(event_id)), ?DisplayTime := 8.0)
         else if (state.challenge = 2):
             if (event_id = 0, response = 0):
                 set state.bell_tested = true
             else if (event_id = 1, response = 1):
                 set state.lever_tested = true
             else:
-                feedback.Show(input_player, wrong_text, ?DisplayTime := 8.0)
+                feedback.Show(input_player, wrong_text(event_name(event_id), expected_response(event_id)), ?DisplayTime := 8.0)
             if (state.bell_tested?, state.lever_tested?):
                 finish(input_player)
             show_board(input_player)

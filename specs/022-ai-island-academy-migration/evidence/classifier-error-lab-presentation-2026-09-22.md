@@ -18,6 +18,9 @@
   **AI plan**, its visible result, and a player correction.
 - Converted the classification error example to Apple -> Food and Car ->
   Vehicle, retaining the original binary routing behavior.
+- Its safe retry feedback now tells players to compare the visible EXPECTED
+  and ACTUAL results before editing the bracketed part of Pix's AI plan and
+  running it again.
 
 ## Verification
 
@@ -27,6 +30,9 @@
   saving the three classifier textures.
 - The match and session were stopped; final state was `Disconnected` /
   `Unconnected`.
+- Verse `BuildAll` returned zero diagnostics after the Error Lab retry-text
+  clarification. A fresh session reached `Running` and was stopped to
+  `Disconnected` / `Unconnected`.
 
 ## Limits
 
