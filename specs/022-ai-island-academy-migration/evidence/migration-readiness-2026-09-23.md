@@ -1,5 +1,13 @@
 # Migration readiness against implementation-plan sections 94–95
 
+Update after the owner's autofix: UEFN's fresh Verse build, local project
+validation, content activation, and session cook passed after replacing the
+four autofix-cleared mystery-cat meshes with a project-owned mesh. See
+`confidence-cat-validation-fix-2026-09-23.md`. The session was stopped and
+the editor left open. This closes the *fresh build/validation* gap below,
+but not memory calculation, full gameplay, visual sightline, or multiplayer
+acceptance. The table retains the original pre-fix review for traceability.
+
 This is a source/editor evidence review, not UEFN Project Validate, memory
 calculation, or an in-client playtest. The owner has asked to skip those
 checks for now. No task is marked accepted by this review.

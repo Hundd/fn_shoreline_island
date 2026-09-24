@@ -429,6 +429,10 @@
   cat mystery object behind each Confidence Core preview door, bind it to
   its station, and show it only during the solved first challenge. Save and
   read back all four props and bindings, build Verse, and record evidence.
+  The original CatStatue mesh failed UEFN validation; the owner's autofix
+  removed the mesh. A project-owned low-poly cat mesh now replaces it on all
+  four saved actors and passes a fresh validation/session cook; see
+  `evidence/confidence-cat-validation-fix-2026-09-23.md`.
   Leave actual sightlines, door reveal, and multiplayer behavior for the
   deferred human playtest.
 - [ ] T-044 (FR-002, FR-003, FR-004, FR-005, FR-006; AC-047): Place four

@@ -35,3 +35,11 @@ Project validation, memory calculation, and Play-in-Client remain deferred
 at the owner's request. In-client door occlusion, revealed sightline, replay,
 later-challenge hiding, and multiplayer behavior still require human
 playtesting before T-043 can be checked off.
+
+## Superseded asset choice
+
+The `SM_ClayTile_CatStatue_A` reference in this original placement evidence
+was later rejected by UEFN validation. The owner's autofix cleared it,
+leaving the four actors without a mesh. A project-owned low-poly cat mesh
+was then imported, assigned, saved, and validated; see
+`confidence-cat-validation-fix-2026-09-23.md` for the current asset state.
