@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 755" role="img" aria-label="Prompt Lab - Aim, Refine, Deliver blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="755" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Prompt Lab - Aim, Refine, Deliver — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="245" y="365" width="350" height="320" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="252" y="384">Aim / Refine / Deliver</text>
+<text font-size="11" x="252" y="400">35 × 32m</text>
+<rect x="595" y="65" width="110" height="620" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="602" y="84">Finale</text>
+<text font-size="11" x="602" y="100">11 × 62m</text>
+<rect x="45" y="365" width="200" height="320" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="384">Approach / walk back</text>
+<text font-size="11" x="52" y="400">20 × 32m</text>
+<rect x="245" y="405" width="140" height="140" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="252" y="424">Pix hints</text>
+<text font-size="11" x="252" y="440">14 × 14m</text>
+<polyline points="195,395 245,465 285,525" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → knowledge / always</title></polyline>
+<polyline points="285,525 285,535" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>knowledge → arena / always</title></polyline>
+<polyline points="285,535 285,655 595,655" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arena → reward / always</title></polyline>
+<g><title>Arrival from hub (no new spawn pad); XYZ [15, 33, 1.9]; MEASURED entry-volume center in evidence/read-only-inspection.json; denotes hub arrival, not a spawn pad</title><circle cx="195" cy="395" r="8" fill="#42a86b" stroke="white"/>
+<text x="195" y="398" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Data Blaster retained from hub; XYZ [12, 37, 0]; Conceptual inventory cue; fn_shoreline_island_data_blaster.verse; not a placed weapon</title><circle cx="165" cy="435" r="8" fill="#b377dc" stroke="white"/>
+<text x="165" y="438" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Pix hints: existing board + HUD; XYZ [30, 34, 4]; PROPOSED board anchor; measured baseline [35,46,11.9]; preserve yaw 180 and scale 3 pending readability test</title><circle cx="345" cy="405" r="8" fill="#329bd0" stroke="white"/>
+<text x="345" y="408" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>BLUE; XYZ [30, 52, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_0; translate complete assembly with preserved offsets; see plan.md</title><circle cx="345" cy="585" r="8" fill="#e25757" stroke="white"/>
+<text x="345" y="588" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>RED; XYZ [30, 40, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_1; translate complete assembly with preserved offsets; see plan.md</title><circle cx="345" cy="465" r="8" fill="#e25757" stroke="white"/>
+<text x="345" y="468" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>GREEN; XYZ [30, 46, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_2; translate complete assembly with preserved offsets; see plan.md</title><circle cx="345" cy="525" r="8" fill="#e25757" stroke="white"/>
+<text x="345" y="528" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>LARGE detail; XYZ [36, 38, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_3; translate complete assembly with preserved offsets; see plan.md</title><circle cx="405" cy="445" r="8" fill="#e25757" stroke="white"/>
+<text x="405" y="448" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>SMALL BLUE; XYZ [38, 43, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_4; translate complete assembly with preserved offsets; see plan.md</title><circle cx="425" cy="495" r="8" fill="#e25757" stroke="white"/>
+<text x="425" y="498" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>LARGE BLUE / moving acquisition; XYZ [38, 51, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_5; translate complete assembly with preserved offsets; see plan.md</title><circle cx="425" cy="575" r="8" fill="#e25757" stroke="white"/>
+<text x="425" y="578" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>REACTOR; XYZ [46, 54, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_6; translate complete assembly with preserved offsets; see plan.md</title><circle cx="505" cy="605" r="8" fill="#e25757" stroke="white"/>
+<text x="505" y="608" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>SCANNER; XYZ [46, 48, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_7; translate complete assembly with preserved offsets; see plan.md</title><circle cx="505" cy="545" r="8" fill="#e25757" stroke="white"/>
+<text x="505" y="548" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>STORAGE; XYZ [46, 42, 2.2]; PROPOSED hit-surface anchor, not measured geometry; baseline evidence/read-only-inspection.json target_8; translate complete assembly with preserved offsets; see plan.md</title><circle cx="505" cy="485" r="8" fill="#e25757" stroke="white"/>
+<text x="505" y="488" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<g><title>Prompt Module / badge finale; XYZ [64, 23, 2.7]; MEASURED unchanged module anchor in evidence/read-only-inspection.json; automatic reward, not required walk</title><circle cx="685" cy="295" r="8" fill="#c79c17" stroke="white"/>
+<text x="685" y="298" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
+<g><title>Optional rail / boarding unverified; XYZ [63, 20, 3.4]; MEASURED rail actor anchor in evidence/read-only-inspection.json; spline and hub endpoint not surveyed</title><circle cx="675" cy="265" r="8" fill="#526476" stroke="white"/>
+<text x="675" y="268" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
+<g><title>Walk back west / always open; XYZ [0, 40, 0]; PROPOSED route annotation at existing platform edge; west ramp verified inbound in feature 024; outbound retest needed</title><circle cx="45" cy="465" r="8" fill="#526476" stroke="white"/>
+<text x="45" y="468" text-anchor="middle" font-size="9" style="fill:white">15</text></g>
+<path d="M45,720 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="725" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+</svg>
