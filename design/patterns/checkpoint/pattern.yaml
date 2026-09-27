@@ -1,0 +1,21 @@
+version: 1
+id: checkpoint
+purpose: "Preserve a declared recovery position without changing badge ownership."
+parameters:
+  - name: recovery_zone
+    type: string
+    required: true
+  - name: retain_progress
+    type: boolean
+    required: true
+expected_devices: ["player_checkpoint_device"]
+verse_behavior: "Contract only; verify supported checkpoint device and mission lifecycle before use."
+geometry: "Safe recovery surface outside target fire/animation paths."
+interaction: "Cross the checkpoint and recover there if needed."
+completion: "Checkpoint registration is confirmed for the player."
+reset: "Round clears checkpoint; replay policy must be specified."
+debug:
+  - "Respawn ownership"
+  - "Inventory persistence"
+  - "Round reset"
+implementation_status: contract_only

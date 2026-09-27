@@ -8,10 +8,10 @@ defines what is approved for implementation.
 
 1. Create `specs/NNN-short-name/` using the next available number.
 2. Write `spec.md` with scope, requirements, and acceptance scenarios.
-3. Resolve any blocking open questions and mark the spec `Approved`.
-4. Write `plan.md` with the UEFN implementation design and validation strategy.
-5. Break the plan into ordered, requirement-linked tasks in `tasks.md`.
-6. Implement one coherent task group at a time.
+3. For map design, write `map.yaml` using `design/patterns/` and run `python tools/map_workflow.py check <map.yaml>`.
+4. Review the generated blockout and implementation plan, resolve blocking assumptions, and obtain explicit human approval. Record the current review digest in `approval.yaml`; only then mark the spec `Approved`.
+5. Write `plan.md` and requirement-linked `tasks.md`; run `python tools/map_workflow.py plan <map.yaml> --ready` before map mutations.
+6. Implement one coherent task group at a time with MCP readback and recorded deviations.
 7. Record validation and playtest evidence in `tasks.md`.
 8. Update the spec whenever the intended player-visible behavior changes.
 
@@ -33,3 +33,9 @@ defines what is approved for implementation.
 
 The first feature, `001-byte-island-mvp`, captures the initial playable slice
 from the existing roadmap.
+
+See [AI map workflow](../docs/AI_MAP_WORKFLOW.md) and the unapproved
+[Prompt Lab migration example](025-map-planning-workflow/map.yaml). Existing
+feature approvals are historical records, not approval of a new machine-readable
+layout. Tooling-only tasks can use offline test evidence; gameplay still requires
+UEFN validation and playtesting.

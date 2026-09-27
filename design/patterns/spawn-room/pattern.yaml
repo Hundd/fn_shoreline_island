@@ -1,0 +1,21 @@
+version: 1
+id: spawn_room
+purpose: "Orient players and establish a safe arrival."
+parameters:
+  - name: player_count
+    type: integer
+    required: true
+  - name: grant_loadout
+    type: boolean
+    required: false
+expected_devices: ["player_spawner_device"]
+verse_behavior: "Reuse the shared blaster spawn-pad array and existing progress initialization; do not award a badge on spawn."
+geometry: "Clear spawn pads, safe headroom and one legible outgoing route."
+interaction: "Spawn then follow the introduction."
+completion: "Player possesses a character and can reach the next zone."
+reset: "Round/respawn uses existing spawn hooks; no duplicate item grant."
+debug:
+  - "Spawn collision and facing"
+  - "Solo and late join"
+  - "Respawn loadout"
+implementation_status: existing_adapter

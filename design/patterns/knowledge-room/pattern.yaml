@@ -1,0 +1,24 @@
+version: 1
+id: knowledge_room
+purpose: "Teach one short concept before interaction."
+parameters:
+  - name: lesson
+    type: string
+    required: true
+  - name: duration_seconds
+    type: number
+    required: true
+  - name: hud_copy
+    type: boolean
+    required: false
+expected_devices: ["billboard_device","hud_message_device"]
+verse_behavior: "Reuse a controller's existing knowledge phase and feedback HUD; not a standalone generic timer."
+geometry: "Board faces the interaction area; no reading detour; overlap with arena must be explicit."
+interaction: "Brief visual explanation followed by trying the same idea."
+completion: "Knowledge interval completes, then choices activate."
+reset: "Replay restarts knowledge; delayed callbacks must be generation-cancelled."
+debug:
+  - "Read from normal approach"
+  - "Timing and readable HUD"
+  - "Learning objective matches challenge"
+implementation_status: existing_adapter

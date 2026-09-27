@@ -1,0 +1,21 @@
+version: 1
+id: wave_arena
+purpose: "Process successive non-combat batches of learning objects."
+parameters:
+  - name: wave_count
+    type: integer
+    required: true
+  - name: items_per_wave
+    type: integer
+    required: true
+expected_devices: ["trigger_device","hud_message_device"]
+verse_behavior: "Contract only; no enemy combat or generated wave controller implied."
+geometry: "Keep incoming lanes and exits separate; avoid crowding."
+interaction: "Observe a batch, complete its learning task, then advance."
+completion: "All requested batches complete."
+reset: "Cancel outstanding spawns and timers; restore first batch."
+debug:
+  - "Batch cancellation"
+  - "Object limits"
+  - "No punitive timers"
+implementation_status: contract_only

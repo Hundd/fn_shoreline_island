@@ -1,0 +1,21 @@
+version: 1
+id: shooting_gallery
+purpose: "Select large non-combat data targets."
+parameters:
+  - name: target_count
+    type: integer
+    required: true
+  - name: friendly_fire
+    type: boolean
+    required: false
+expected_devices: ["fn_shoreline_island_data_target","fn_shoreline_island_data_blaster"]
+verse_behavior: "Reuse damage-only triggers carrying the actual shooting agent; controller decides correctness."
+geometry: "Targets have unobstructed sightlines and generous matching hit surfaces."
+interaction: "Shoot selectable cyan-ring answers; orange cones identify objectives."
+completion: "Controller-defined correct target condition."
+reset: "Deactivate surfaces and cancel feedback before resetting targets."
+debug:
+  - "Surface/visual alignment"
+  - "Wrong/inactive hits"
+  - "Agent attribution"
+implementation_status: existing_adapter

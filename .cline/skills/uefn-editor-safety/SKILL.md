@@ -5,6 +5,11 @@ description: Safe editor-operation rules for UEFN work through Unreal MCP. Use w
 
 # UEFN Editor Safety
 
+Before map-design mutations, consume the approved planning bundle following
+`docs/AI_MAP_WORKFLOW.md` and the uefn-implementer skill. Read-only inspection
+can precede approval. MCP implements resolved design; if scale, geometry,
+mechanics or target logic are missing, return to planning rather than improvise.
+
 - Treat binary `.uasset` and `.umap` files as editor-owned. Make asset and map
   changes through UEFN / Unreal MCP and save all affected actors. Do not rename
   or move `Content/__ExternalActors__` or `Content/__ExternalObjects__` (World

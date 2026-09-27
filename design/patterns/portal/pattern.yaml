@@ -1,0 +1,21 @@
+version: 1
+id: portal
+purpose: "Provide explicit transport between distant zones."
+parameters:
+  - name: destination
+    type: string
+    required: true
+  - name: bidirectional
+    type: boolean
+    required: false
+expected_devices: ["teleporter_device"]
+verse_behavior: "Reuse a configured teleporter and existing unlock condition; no novel transport logic."
+geometry: "Visible arrival clearance and unmistakable destination label."
+interaction: "Enter or interact with an unlocked portal."
+completion: "Player arrives at the specified destination."
+reset: "Restore lock state and clear transient transfer state."
+debug:
+  - "Destination identity"
+  - "Arrival collision"
+  - "Return and late join"
+implementation_status: existing_adapter

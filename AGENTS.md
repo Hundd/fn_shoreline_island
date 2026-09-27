@@ -31,6 +31,28 @@ At the end of every task, stop any active UEFN/Fortnite playtest game before sen
 
 Use `specs/` as the source of truth for planned player-visible changes. Before implementation, create or update a numbered feature directory containing `spec.md`, `plan.md`, and `tasks.md`. Define testable requirements and Given/When/Then acceptance scenarios before editing the island. Record implementation choices in the feature plan, link tasks to requirement IDs, and check off tasks only after the corresponding UEFN validation or playtest evidence has been recorded. If editor work changes the intended behavior, update the spec in the same change.
 
+## Map Planning Before MCP
+
+Follow [docs/AI_MAP_WORKFLOW.md](docs/AI_MAP_WORKFLOW.md) for requests to build a room, create a mission, add a challenge, change a map, or redesign Prompt Lab:
+
+1. Inspect the current mission, source, assets and evidence before designing.
+2. Create/update `specs/NNN-feature/map.yaml` using `design/patterns/`; reuse a pattern before adding one. Keep its intent consistent with `spec.md`.
+3. Run `python tools/map_workflow.py check <map.yaml>` to validate and generate the offline preview and implementation plan. Resolve errors and review scale, walking, learning purpose, interaction density, entry/exit gates and unsupported assumptions.
+4. Present the concrete preview and plan for explicit human approval before map-design mutations. Record the actual approval in `approval.yaml` with the current `generated/review-manifest.json` digest. Never approve on the user's behalf. Existing authorization applies only to its approved scope/revision; material design changes require renewed review.
+5. Run `python tools/map_workflow.py plan <map.yaml> --ready`. Do not execute a draft, stale approval, or plan with unresolved blockers. Read-only MCP inspection is allowed during planning. Small code fixes that clearly do not affect layout, mission behavior or map design may bypass the design gate; record why.
+6. Prefer existing Verse classes, creative devices, `@editable` values, arrays/maps/structs and known prefabs over mission-specific new code. Pattern parameters document intent; do not pretend a hardcoded controller supports arbitrary configuration.
+7. Use MCP to implement resolved placements, configurations, bindings and approved assets incrementally. Discover live schemas, checkpoint, serialize calls, read back counts/transforms/properties after meaningful groups, then save. MCP must not invent missing scale, mechanics, flow or target logic.
+8. Keep spec and implementation synchronized, record expected/actual deviations, and return blocked design decisions to planning. Successful MCP calls do not prove gameplay quality. Optimize for playability and clarity and verify in a cooked game before accepting gameplay tasks.
+
+Project-local roles use the existing skill mechanism. All agents should read the relevant file directly if their client does not auto-discover `.cline/skills/`:
+
+- Planner: `.cline/skills/map-planner/SKILL.md`
+- Reviewer: `.cline/skills/blockout-reviewer/SKILL.md`
+- Implementer: `.cline/skills/uefn-implementer/SKILL.md`
+- Verifier: `.cline/skills/uefn-verifier/SKILL.md`
+
+These are workflow roles, not a request to spawn parallel agents. Keep all editor calls serialized. For tooling/documentation-only tasks, task completion may use recorded offline command/test evidence; UEFN validation/playtest requirements still apply to gameplay changes. Existing MCP endpoints and client approval policies remain in force.
+
 ## Commit & Pull Request Guidelines
 
 Git history is unavailable in this checkout, so use short imperative commit subjects such as `Add sequence puzzle triggers`. Keep map, asset, and Verse changes focused. Pull requests should describe player-visible behavior, list validation and playtest steps, identify the changed map or zones, and include screenshots or a short capture for visual changes. Link the relevant issue or roadmap item when one exists.

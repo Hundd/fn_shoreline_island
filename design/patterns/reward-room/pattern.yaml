@@ -1,0 +1,21 @@
+version: 1
+id: reward_room
+purpose: "Show completion, award once and offer replay/return."
+parameters:
+  - name: badge
+    type: string
+    required: true
+  - name: return_mode
+    type: string
+    required: true
+expected_devices: ["byte_island_game_manager","button_device"]
+verse_behavior: "Reuse progress manager's one-time badge guard and existing room finale; journal remains the progress reader."
+geometry: "Reward/module and outgoing route must be legible; clear boarding/access area."
+interaction: "Observe success, optionally replay, then return."
+completion: "Badge awarded to eligible participants and return enabled."
+reset: "Replay preserves badge; round reset follows progress manager."
+debug:
+  - "Duplicate badge prevention"
+  - "Replay during effects"
+  - "Return route actually works"
+implementation_status: existing_adapter

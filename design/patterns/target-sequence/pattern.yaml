@@ -1,0 +1,25 @@
+version: 1
+id: target_sequence
+purpose: "Advance through ordered target selections with immediate retry."
+parameters:
+  - name: target_count
+    type: integer
+    required: true
+  - name: sequence
+    type: integers
+    required: true
+  - name: shared_state
+    type: boolean
+    required: true
+expected_devices: ["fn_shoreline_island_data_target","fn_shoreline_island_prompt_blaster","fn_shoreline_island_data_energy"]
+verse_behavior: "Existing adapter is Prompt Lab's fixed five-hit controller only. Sequence [0,3,5,5,6] is descriptive configuration; arbitrary sequences require a future reusable adapter."
+geometry: "Same physical arena may host successive phases; inactive targets must not obstruct active surfaces."
+interaction: "Choose among currently active targets; wrong hits retain progress."
+completion: "All successful stages complete and the finale finishes."
+reset: "Replay resets shared stage and cancels movement/finale; preserve badges/Data Energy; round reset clears round state."
+debug:
+  - "Stable target IDs and ordered array"
+  - "Repeated target reactivation"
+  - "Replay during finale"
+  - "Two real players and last participant departure"
+implementation_status: existing_adapter

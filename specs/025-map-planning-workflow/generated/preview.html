@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prompt Lab — current Data Blaster mission blockout</title>
+<style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 20px;color:#172e43;background:#fff}svg{width:100%;max-height:900px}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #ccd8df;padding:8px}td:last-child{font-size:12px;overflow-wrap:anywhere}li{margin:8px 0}.notice{background:#fff3cf;padding:14px}</style>
+<h1>Prompt Lab — current Data Blaster mission review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
+<p>Useful details tell AI WHAT to choose and WHERE to take it.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 755" role="img" aria-label="Prompt Lab — current Data Blaster mission blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="755" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Prompt Lab — current Data Blaster mission — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="245" y="365" width="350" height="320" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="252" y="384">Target arena</text>
+<text font-size="11" x="252" y="400">35 × 32m</text>
+<rect x="595" y="65" width="110" height="620" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="602" y="84">Module / return</text>
+<text font-size="11" x="602" y="100">11 × 62m</text>
+<rect x="45" y="365" width="200" height="320" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="384">Arrival</text>
+<text font-size="11" x="52" y="400">20 × 32m</text>
+<rect x="345" y="465" width="100" height="100" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="352" y="484">Lesson overlay</text>
+<text font-size="11" x="352" y="500">10 × 10m</text>
+<polyline points="195,485 395,525" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → knowledge / always</title></polyline>
+<polyline points="395,525 285,465" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>knowledge → arena / intro</title></polyline>
+<polyline points="285,465 595,445 685,295" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arena → reward / destination</title></polyline>
+<g><title>Arrival from hub (no new spawn pad); XYZ [15, 33, 1.9]; editor-transforms.json entry_zone; marker denotes arrival only</title><circle cx="195" cy="395" r="8" fill="#42a86b" stroke="white"/>
+<text x="195" y="398" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Data Blaster retained from hub; XYZ [12, 37, 0]; Conceptual inventory cue; fn_shoreline_island_data_blaster.verse; not a placed weapon</title><circle cx="165" cy="435" r="8" fill="#b377dc" stroke="white"/>
+<text x="165" y="438" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>AI Knowledge board / HUD; XYZ [35, 46, 11.9]; editor-transforms.json board</title><circle cx="395" cy="525" r="8" fill="#329bd0" stroke="white"/>
+<text x="395" y="528" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>BLUE; XYZ [26.5, 55, 3.65]; editor-transforms.json target_0</title><circle cx="310.0" cy="615" r="8" fill="#e25757" stroke="white"/>
+<text x="310.0" y="618" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>RED; XYZ [26.5, 47, 3.65]; editor-transforms.json target_1</title><circle cx="310.0" cy="535" r="8" fill="#e25757" stroke="white"/>
+<text x="310.0" y="538" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>GREEN; XYZ [26.5, 39, 3.65]; editor-transforms.json target_2</title><circle cx="310.0" cy="455" r="8" fill="#e25757" stroke="white"/>
+<text x="310.0" y="458" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>LARGE detail; XYZ [38.5, 35, 3.65]; editor-transforms.json target_3</title><circle cx="430.0" cy="415" r="8" fill="#e25757" stroke="white"/>
+<text x="430.0" y="418" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>SMALL BLUE; XYZ [40, 46, 3.65]; editor-transforms.json target_4</title><circle cx="445" cy="525" r="8" fill="#e25757" stroke="white"/>
+<text x="445" y="528" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>LARGE BLUE / moving acquisition; XYZ [39.5, 55, 3.65]; editor-transforms.json target_5; motion envelope not yet mapped</title><circle cx="440.0" cy="615" r="8" fill="#e25757" stroke="white"/>
+<text x="440.0" y="618" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>REACTOR; XYZ [49.5, 55, 3.65]; editor-transforms.json target_6</title><circle cx="540.0" cy="615" r="8" fill="#e25757" stroke="white"/>
+<text x="540.0" y="618" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>SCANNER; XYZ [49.5, 43, 3.65]; editor-transforms.json target_7</title><circle cx="540.0" cy="495" r="8" fill="#e25757" stroke="white"/>
+<text x="540.0" y="498" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>STORAGE; XYZ [49.5, 34, 3.65]; editor-transforms.json target_8</title><circle cx="540.0" cy="405" r="8" fill="#e25757" stroke="white"/>
+<text x="540.0" y="408" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<g><title>Prompt Module / badge finale; XYZ [64, 23, 2.7]; editor-transforms.json prompt_module</title><circle cx="685" cy="295" r="8" fill="#c79c17" stroke="white"/>
+<text x="685" y="298" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
+<g><title>Return rail start — boarding unresolved; XYZ [63, 20, 3.4]; editor-transforms.json return_ride; endpoint not surveyed</title><circle cx="675" cy="265" r="8" fill="#526476" stroke="white"/>
+<text x="675" y="268" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
+<path d="M45,720 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="725" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+</svg>
+<p><span style="color:#42a86b">● spawn</span> · <span style="color:#e25757">● target</span> · <span style="color:#b377dc">● weapon</span> · <span style="color:#329bd0">● knowledge</span> · <span style="color:#526476">● exit</span> · <span style="color:#db8b29">● checkpoint</span> · <span style="color:#c79c17">● reward</span></p>
+<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Arrival from hub (no new spawn pad)</td><td>[15, 33, 1.9]</td><td>editor-transforms.json entry_zone; marker denotes arrival only</td></tr><tr><td>2</td><td>weapon</td><td>Data Blaster retained from hub</td><td>[12, 37, 0]</td><td>Conceptual inventory cue; fn_shoreline_island_data_blaster.verse; not a placed weapon</td></tr><tr><td>3</td><td>knowledge</td><td>AI Knowledge board / HUD</td><td>[35, 46, 11.9]</td><td>editor-transforms.json board</td></tr><tr><td>4</td><td>target</td><td>BLUE</td><td>[26.5, 55, 3.65]</td><td>editor-transforms.json target_0</td></tr><tr><td>5</td><td>target</td><td>RED</td><td>[26.5, 47, 3.65]</td><td>editor-transforms.json target_1</td></tr><tr><td>6</td><td>target</td><td>GREEN</td><td>[26.5, 39, 3.65]</td><td>editor-transforms.json target_2</td></tr><tr><td>7</td><td>target</td><td>LARGE detail</td><td>[38.5, 35, 3.65]</td><td>editor-transforms.json target_3</td></tr><tr><td>8</td><td>target</td><td>SMALL BLUE</td><td>[40, 46, 3.65]</td><td>editor-transforms.json target_4</td></tr><tr><td>9</td><td>target</td><td>LARGE BLUE / moving acquisition</td><td>[39.5, 55, 3.65]</td><td>editor-transforms.json target_5; motion envelope not yet mapped</td></tr><tr><td>10</td><td>target</td><td>REACTOR</td><td>[49.5, 55, 3.65]</td><td>editor-transforms.json target_6</td></tr><tr><td>11</td><td>target</td><td>SCANNER</td><td>[49.5, 43, 3.65]</td><td>editor-transforms.json target_7</td></tr><tr><td>12</td><td>target</td><td>STORAGE</td><td>[49.5, 34, 3.65]</td><td>editor-transforms.json target_8</td></tr><tr><td>13</td><td>reward</td><td>Prompt Module / badge finale</td><td>[64, 23, 2.7]</td><td>editor-transforms.json prompt_module</td></tr><tr><td>14</td><td>exit</td><td>Return rail start — boarding unresolved</td><td>[63, 20, 3.4]</td><td>editor-transforms.json return_ride; endpoint not surveyed</td></tr></table>
+<h2>Mission sequence</h2><ol><li><b>enter</b>: Enroll player with existing loadout — Player enters existing volume</li><li><b>intro</b>: Explain useful prompt details — Existing seven-second Knowledge phase finishes</li><li><b>color</b>: Choose WHAT using color — BLUE hit advances; wrong hits retry</li><li><b>detail</b>: Resolve ambiguity by adding LARGE — LARGE objective hit advances</li><li><b>select_large</b>: Apply the useful detail — LARGE BLUE hit then two-second instruction handoff</li><li><b>acquire</b>: Acquire the slowly moving core — Hit freezes both core and hit surface</li><li><b>destination</b>: Choose WHERE the core belongs — REACTOR hit starts existing delivery</li><li><b>finale</b>: Watch result and earn Prompt Badge — Existing Pix delivery powers module; badge awarded once; return rail enabled</li></ol><h2>Assumptions and review gaps</h2><ul><li>open — Zone boundaries and path lines are interpretive review envelopes, not surveyed walls or movement instructions. Approve their use before any layout change.</li><li>open — Return rail boarding/hub arrival remains unproven; external ramps and complete rail spline are not represented in this 2D envelope.</li><li>open — Prompt controller hardcodes stages and target ordering. Arbitrary target_sequence parameters are not implemented; preserve the existing five-hit sequence.</li><li>open — Device table covers gameplay anchors, not all VFX, audio, props, cables, moving bounds or savedActor bindings. Resolve a full scene delta before implementation.</li><li>open — Cooperative lifecycle, return ride and readability/enjoyment acceptance remain open; successful solo hits do not close the prototype gate.</li></ul></html>

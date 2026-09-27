@@ -1,0 +1,21 @@
+version: 1
+id: corridor
+purpose: "Connect spaces with a clear, accessible route."
+parameters:
+  - name: width_m
+    type: number
+    required: true
+  - name: access
+    type: string
+    required: true
+expected_devices: []
+verse_behavior: "Use geometry and existing entry detection; no Verse required unless an existing gate applies."
+geometry: "Continuous floor; explicitly model ramps/steps; width at least map minimum."
+interaction: "Walk from entry to exit without guessing or mandatory jumping."
+completion: "Player reaches the destination entry."
+reset: "Restore any gate to its declared initial state."
+debug:
+  - "Walk full route"
+  - "Floor/step trace"
+  - "Unnecessary walking"
+implementation_status: existing_adapter

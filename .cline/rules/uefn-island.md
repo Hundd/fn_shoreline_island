@@ -29,3 +29,11 @@ Always-on rules for Cline in this UEFN island workspace. Detailed source:
 ## Spec workflow
 - Use `specs/` as the source of truth. Create or update a numbered feature
   directory (`spec.md`, `plan.md`, `tasks.md`) before implementation.
+- Map changes follow `docs/AI_MAP_WORKFLOW.md`: inspect → map.yaml → offline
+  preview/validation → explicit human review → approved implementation plan →
+  incremental MCP execution/readback → gameplay verification.
+- Use the map-planner, blockout-reviewer, uefn-implementer and uefn-verifier
+  skills for those roles. Run `python tools/map_workflow.py check <map.yaml>`;
+  `plan <map.yaml> --ready` must pass before map-design mutations.
+- Prefer reusable devices/Verse configuration. Record deviations; do not
+  reinterpret a draft or successful MCP response as design/gameplay approval.

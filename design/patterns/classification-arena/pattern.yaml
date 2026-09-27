@@ -1,0 +1,24 @@
+version: 1
+id: classification_arena
+purpose: "Classify examples using named categories."
+parameters:
+  - name: categories
+    type: strings
+    required: true
+  - name: item_count
+    type: integer
+    required: true
+  - name: shared_state
+    type: boolean
+    required: false
+expected_devices: ["fn_shoreline_island_data_target"]
+verse_behavior: "Contract only: inspect variable-vault/repair systems before adapting; no generic classifier promised."
+geometry: "Category choices equally visible with room for incoming examples."
+interaction: "Choose a category, receive explanation, retry immediately."
+completion: "Required examples classified correctly."
+reset: "Restore example queue and clear transient choices, preserve awarded badge."
+debug:
+  - "Category ambiguity"
+  - "Wrong-choice explanation"
+  - "Shared-state ownership"
+implementation_status: contract_only
