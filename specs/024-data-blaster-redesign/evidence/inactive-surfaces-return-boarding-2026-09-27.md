@@ -1,0 +1,15 @@
+# Inactive surfaces and return boarding — 2026-09-27
+
+Status: partial solo comparison, remaining acceptance open.
+
+Implemented original-pose caching in data_target, parking inactive/consumed hit surfaces 100 m below their authored pose and restoring them on activation. Controller initializes the moving target cache before reading its home, no longer restores an inactive moving surface during reset, and captures reward position before acceptance parks the surface. BuildAll returned zero diagnostics and full content push completed.
+
+Cooked comparison at (6980.247643,-3459.072198,2487.15): BLUE awarded1 DATA; LARGE awarded2; LARGE BLUE accepted without moving the player and advanced to3 DATA, where centered shots previously remained at2 from a nearby position. Moving acquisition then awarded4 and enabled destinations. REACTOR accepted after a small aim adjustment and awarded5. Finale completed with8 DATA, open module and visible return rail. Screenshots solo-large-blue-parking-fixed, solo-moving-parking-fixed, solo-reactor-parking-fixed and solo-finale-parking-fixed record these bounded observations. Reward orbs remained at the accepted hit positions. No cooperative, complete outer-third, replay-after-finale or duplicate-badge acceptance claimed.
+
+Return approach: reached (12411.35,-6587.79,2487.15), near native rail start (12300,-6500,2750). Jump and interaction did not mount the rail; screenshot solo-return-rail-unmounted records the failure. Added prompt_blaster_return_boarding_ramp, FortStaticMeshActor1421556630, full transform center(12000,-6500,2490.597), pitch14.036243, scale(8.246211,3,0.4), Cube/navy/BlockAll. Vertical editor traces report top2410 atx11590,2436.21 at11700,2511.21 at12000,2586.21 at12300 (y=-6500). This is geometry evidence; cooked boarding/ride/endpoint acceptance remains required.
+
+Native LARGE BLUE visual inspection found bNoCollision=false, bNoWeaponCollision=false and QueryAndPhysics/FortBuildingMeshPhysics with weapon/projectile blocking. Changed five decorative core actor bNoCollision=true/bCanBeDamaged=false, then applied each component NoCollision/NoCollision last. Actor flag updates reset the component to QueryOnly/Custom; applying the component afterward is essential. bNoWeaponCollision rejected writes, so no successful edit to that property is claimed. Readback confirmed all five components NoCollision/NoCollision. Save succeeded.
+
+Temporary BLASTER_POSITION logging and Characters import were removed. Cleanup BuildAll returned zero diagnostics. Full push of visual collision/ramp/cleanup is in progress. All feature task boxes remain open; Prompt gate and all seven other conversions remain incomplete.
+
+Full push of boarding ramp, core visual collision correction and diagnostic cleanup completed. StopGame completed; GetGameState returned CanStart. LARGE BLUE component after save/push still reads NoCollision/NoCollision. Editor remains open. Cooked ramp boarding and complete reliability/reset/cooperative acceptance remain open.

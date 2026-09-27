@@ -57,9 +57,10 @@
   see `evidence/label-recheck-2026-09-23.md`.
 - [ ] T-003 (FR-004, FR-005, FR-006): Migrate Prompt Lab / Fix the Prompt;
   verify correct, wrong, retry, reward, replay, and two-player behavior.
-  The Prompt Lab wrong-step explanation is tracked in
-  `evidence/prompt-lab-wrong-step-feedback-2026-09-23.md`; runtime retry and
-  multiplayer checks remain open.
+  Required Prompt Lab behavior is now specified by feature 023's Data Core
+  Rescue. The former ordered-sequence wrong-step explanation in
+  `evidence/prompt-lab-wrong-step-feedback-2026-09-23.md` is historical;
+  feature 023's runtime retry and multiplayer checks remain open.
   Fix the Prompt's four-slot planting variation is documented in the feature
   plan, and its remaining player-facing `repair station` wording was updated
   to the zone name. Verse `BuildAll` returned zero diagnostics; interactive

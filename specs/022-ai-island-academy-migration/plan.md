@@ -4,7 +4,7 @@
 
 | Concern | Existing owner | Dependency chain |
 | --- | --- | --- |
-| Prompt sequence and Prompt Badge | `byte_island_game_manager` | button input -> `player_states` -> HUD -> tracker |
+| Prompt Badge and journal source | `byte_island_game_manager` | Data Core Rescue controller -> one-time award -> `player_states` -> tracker |
 | Pattern Scanner | `fn_shoreline_island_loop_station/progress` | Claim/input -> per-player state -> station display -> tracker |
 | AI Classifier | `fn_shoreline_island_signal_station/progress` | Claim/routing -> per-player state -> HUD/board -> tracker |
 | Confidence Core | `fn_shoreline_island_energy_station/progress` | Claim/value buttons -> per-player state -> board -> tracker |
@@ -38,10 +38,9 @@ to individual players. Presentation changes must not alter those links.
 - Convert UI text first. World props, signs outside Verse, VFX, audio, and
   island metadata require separate UEFN inspection and are not inferred from
   source searches.
-- Keep Prompt Lab's four-step input and reset semantics, but replace its
-  generic full-answer failure HUD with step-specific attempted/needed action
-  feedback. The explanation teaches why order matters without changing the
-  per-player sequence state or one-time tracker guard (AC-002).
+- Feature 023 supersedes the earlier four-step Prompt Lab input plan with
+  Data Core Rescue. Keep `byte_island_game_manager` as the journal's one-time
+  badge source while the new physical mission owns player-local attempt state.
 - Fix the Prompt keeps its optional four-slot swap mechanic but now uses the
   plan's blue data-cube scanner scenario. A preparatory Find Cube slot leaves
   Pick Up Cube, Walk to Scanner, and Scan Cube as the ordered task; swapping

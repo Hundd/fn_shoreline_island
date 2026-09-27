@@ -17,7 +17,8 @@ guards unless a change is explicitly required by the migration plan.
 - FR-003: Pix's damaged AI Core is the narrative anchor, with eight named
   modules and Agent Mode initially locked.
 - FR-004: Each migrated zone keeps its original short gameplay mechanic while
-  explaining its mapped, age-appropriate AI concept.
+  explaining its mapped, age-appropriate AI concept, except Prompt Lab, whose
+  ordered sequence is replaced by the physical Data Core Rescue in feature 023.
 - FR-005: Wrong answers reset only the active attempt and allow immediate
   retry; no combat, eliminations, punitive timers, or mandatory timers are
   introduced.
@@ -63,12 +64,10 @@ AI-themed zone/badge names without changing current progress ownership.
 
 ### AC-002: Prompt Lab
 
-Given a player enters the former Path Garden, when they complete or fail its
-ordered sequence, then it is presented as Prompt Lab instructions, retains the
-existing safe retry, and awards Prompt Badge no more than once per player.
-For a wrong command, Pix names the attempted action and the action needed at
-that step, explains that order matters, and resets only that player's attempt
-without revealing the full four-command solution in the failure message.
+Given a player enters Prompt Lab, when they gather clues, build instructions
+with physical controls, watch Pix act, and enter the rescued module, then the
+mission follows feature 023's acceptance scenarios and awards Prompt Badge no
+more than once per player. Wrong choices permit safe, player-local retry.
 
 ### AC-003: Remaining zone presentation
 

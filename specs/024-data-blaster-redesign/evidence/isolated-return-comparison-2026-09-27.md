@@ -1,0 +1,18 @@
+# Isolated return rail comparison — 2026-09-27
+
+Status: partial attachment evidence; normal boarding and hub arrival remain open.
+
+Temporary controller fixture enabled the return rail and teleported the player to its start without awarding Data or a badge. The first low spawn was against the closed door and did not establish boarding. A subsequent delayed fixture at (12300,-6500,2850), yaw150, recorded BOARDING_STARTED. The screenshot isolated-return-grinding-2026-09-27.png shows the actual grinding pose and rail sparks. Samples show travel toward (9226,-4725,2919), reversal and ejection toward (13277,-7064,2381). No hub arrival was observed. This does not certify walking up the ramp or mounting after the normal finale.
+
+Reauthored the rail with unit actor scale and native spline length14800/tangents4440, preserving its start and yaw. The spline property setter emitted InteractionRailMeshComp Accessed None errors; saved native readback confirmed the intended points and transform. Cooked fixture still reversed. Scaling alone is not established as the cause; setter warnings remain to investigate in project validation.
+
+Original +1.2 pitch raises the hub end. Changed pitch to -1.2 to descend from2750 to approximately2440 at(-514,898). Native vertical trace beneath the endpoint from2900 returns488 cm, supporting floor2412 beneath it. This trace does not establish player arrival.
+
+The downhill fixture initially stopped against the closed door around(12038,-6354,2844). Native door center(11800,-6200,2900), cube scale(2,12,10), gives lower edge2400. The former450 cm finale lift leaves lower edge2850, too low for a player riding this rail. Increased the production finale lift to700 cm, leaving lower edge3100; reset home is unchanged. Fixture mirrored that lift. Latest screenshot isolated-opened-return-unmounted-2026-09-27.png shows the opened door and the player standing/jumping beside the rail near(12040,-6350,2844). The retained native log subsequently records BOARDING_STARTED at04:31:08 after the jump, continuous descending travel through the opened door to(910,76,2570), BOARDING_ENDED at04:31:25 near(-708,1010,2643), then a stable landing at(-3017,2206,2452). This establishes isolated attachment and traversal to the hub end. Momentum carries the player approximately25 metres beyond the authored end; controlled hub arrival, health after landing and normal finale boarding remain unaccepted. The separate isolated-return-downhill log preserves this run. Subsequent forward/sprint inputs were rejected because Fortnite was not foreground; no controls were sent.
+
+The raw-session log contains the earlier scaled-rail position samples. It is not attributed to the later authored-spline comparison. Grinding-events log separately preserves the recorded native Verse events.
+
+Cleanup: restored the pre-fixture controller backup with only the intentional450-to700 finale lift change. No fixture spawn, Characters import, test callbacks or BOARDING logging remains. BuildAll returned zero diagnostics; full content cleanup push pending. All existing feature acceptance tasks remain unchecked.
+
+
+Cleanup: initial PowerShell read introduced mojibake in the knowledge arrow. UTF-8-aware restoration corrected it; exact .NET source comparison now matches pre-fixture backup plus only the700 cm finale lift. Corrected BuildAll returned zero diagnostics and full content push Completed. Native saved readback confirms unit scale/pitch-1.2/yaw150, spline length14800/tangents4440. StopGame Completed; GetGameState CanStart. Editor open. Normal boarding, controlled arrival/landing health and validation remain open; all feature tasks unchecked.

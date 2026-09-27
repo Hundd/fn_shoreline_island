@@ -1,0 +1,80 @@
+# Implementation plan
+
+1. Checkpoint saved editor state and inventory existing Prompt Lab/progression. Discover device APIs before choosing hit routing.
+2. Implement shared target/feedback/reward framework and automatic blaster protection/grant.
+3. Replace Prompt Lab state machine with the three source rounds; preserve its existing editable scene references and badge manager where practical.
+4. Build and bind large targets and shared effects through UEFN. Save every affected actor.
+5. Compile, validate, cook, and exercise Prompt Lab acceptance, including wrong answers and cooperative/reset behavior. Record the source's enjoyment/readability gate honestly; do not convert other missions before this gate.
+6. Convert all seven remaining missions using the same target abstraction, knowledge template, and reward pipeline; validate each physical lesson.
+
+## Prompt implementation choices
+
+The new `fn_shoreline_island_prompt_blaster` owns one cooperative room stage and records entering players as participants. Hits reward their actual shooting player; completion uses the existing manager's one-time badge guard for active participants. A sole departing participant resets the room. Replay is a shared room restart retaining earned badges/Data Energy; round reset clears session Data Energy. Reset signals cancel the entire finale, and stage changes cancel the moving visual/hit-surface animation together.
+
+The new placed controller stays `configured=false` until its physical cues, Data Orbs, lights/cables, return rail, and legacy-button handoff are finished. The old controller's `use_blaster_mode` is false while staging; set true only when enabling the new controller. Nine new target devices and their damage-only trigger surfaces are already bound, and all references must be read back before activation.
+
+## API discovery
+
+Live solo correction: use the allowed rare Pulse Rifle as the shared energy Data Blaster; both Stark rifle variants failed UEFN reference validation. Load the item definition before assigning and prove the grant in a cooked game. Always pass complete transforms to ActorTools.set_actor_transform: partial calls reset omitted location/scale in this editor build. Five cores and all hit surfaces/labels were restored after this was observed. See evidence/solo-recovery-2026-09-27.md.
+
+Solo route/playtest corrections: keep retired clue rails hidden and disabled, hide the return rail until the finale, and use visibleDuringGame=false on retired primary buttons. Increase the Prompt board to size24 with a border and white text; target labels use size20 white text. Show the destination instruction before a two-second handoff pause to separate the two large-blue selections. Extend the entry volume across the arena approach (center7500,-5200,2600;6x12x3 tiles) after the normal hub route missed the original narrow zone. Verify these changes before passing the prototype gate. Temporary spawn-pad fixtures have been restored to the hub.
+
+Keep the instruction board in the same view as the targets: move it above the back of the target row (9500,-3900,3600), facing the engagement area, scale3. Also show the seven-second Knowledge card and initial shooting instruction in participant HUDs so the lesson remains readable when a player approaches from the side. These retain FR-005 timing and content.
+
+2026-09-27 handoff: latest Verse builds succeeded, both new configured flags and the legacy use_blaster_mode flag now read true, the 16 legacy primary buttons are hidden, and assets were saved. Actual native bindings were audited in evidence/handoff-binding-readback-2026-09-27.json. Entry initialization includes occupants already in the zone; Data Energy shows zero at reset and the current total on join. Launch Session is unavailable after Epic logout, so the runtime gate is still pending. See evidence/handoff-2026-09-27.md.
+
+UEFN's shooting_range_target_device.HitEvent carries tuple(), not the shooting agent. Do not attribute a multiplayer hit by guessing the nearest player. Evaluate damage-enabled trigger targets (TriggeredEvent carries ?agent) or another supported damage API before final routing. Ordinary hits, generous hitboxes, and accurate badge ownership are required.
+
+## Checkpoint
+
+Walkable Prompt entry: native ground traces at west/north approaches hit z2303.746, while navy-floor top is z2410, a106.254cm step. Add two navy cube ramps, roughly5.06 degrees over12m, overlapping the floor by1m. West center(5500,-4500), width42m; north center(7600,-1800), width18m. Top surface runs from ground height to floor height, with40cm thickness. Keep existing floor/props at their current transforms. Verify native collision/height and cooked walking entry without Space before recording acceptance scenario9. Subsequent solo approach testing encountered an edge outside the usable ramp path; unrestricted approach coverage remains open (evidence/small-blue-retry-2026-09-27.md).
+
+Prompt entrance correction (FR-007/010): the four disabled front tutorial buttons still have visibleDuringGame=true, and hub_signs refreshes the retired four-step labels every three seconds. Hide those four buttons in native properties. Remove their labels from the refreshed sign arrays and HideText them on start. Update the two Prompt entrance signs to direct players LEFT toward the glowing-core arena. Keep the permitted hub-return button and optional practice stations. Verify fresh cooked hub appearance and absence of stale labels after the refresh interval.
+
+Green-core correction: native readback shows the new controller's creative_prop green wrapper points to FortStaticMeshActor, unlike the working BuildingProp BLUE/RED cores. The cooked green visual survives green.Hide(). Preserve the old actor as a hidden rollback copy, place a BuildingProp sphere at the same full transform/material, rebind only the new controller green wrapper, save and cook. Verify GREEN is present initially, disappears after BLUE, and returns on replay before claiming the correction passed.
+
+Replay usability correction: the permitted replay button works in the cooked game but its interaction text was empty, displaying INTERACT. Set its native interaction Text to REPLAY PROMPT LAB without changing the shared reset behavior. Cooked label, GREEN hide/restore, and actual solo manual-respawn inventory/DATA retention are now verified in evidence/green-core-respawn-2026-09-27.md. Earlier disabled-Respawn interpretation was caused by incorrect helper click arguments and is superseded by the actual respawn test.
+
+Focused solo readability correction: the size24 board clips longer instructions even at scale3. Keep the full Knowledge lesson in the seven-second HUD, use a concise board copy, shorten action instructions to two lines, and reduce native board textSize to16. Verify the rendered board after cooking; do not treat editor property readback as readability acceptance.
+
+2026-09-26: Native MCP connected. Existing game was Running; StopGame completed and GetGameState returned CanStart. AssetTools.save_assets([]) returned true before island edits. Existing feature 023 controller and scene were inventoried.
+
+Hit-surface coverage correction: native SM_CreativeTrigger convex geometry spans about92.8cm at the front face and128cm at its back. Actor transverse scale2 therefore yields185.6–256cm coverage, below the280cm ring and296.8cm maximum pulse. Increase trigger local X/Y scale to3.5 (front324.8cm; back448cm), retaining local Z scale2, full poses and all damage settings. Neighbor separation is at least800cm, so the expanded choices remain distinct. Save and read back all nine surfaces; full push and cooked outer-third shot evidence are required before acceptance. Existing visuals and rewards remain unchanged.
+
+Decorative cone collision correction: repeated cooked LARGE shots failed from far, close and side positions while its ring remained active. Native cone actor bNoCollision=true conflicted with StaticMeshComponent0 bodyInstance collisionEnabled=QueryOnly. Explicitly set the decorative cone component to NoCollision/profile NoCollision, preserving its mesh, material and pose. This prevents the cone mesh from intercepting shots intended for its damage trigger. Cook and compare actual LARGE shots before claiming the cause is resolved.
+
+Temporary LARGE event diagnostic: log activation, raw trigger receipt, attributed hit and controller stage/index with BLASTER_TRACE and zero screen duration. Use client/editor logs to distinguish physical interception from trigger or controller faults; remove temporary logging after diagnosis. No gameplay requirements or reward behavior change.
+
+Instrumented run confirms BLUE raw/attributed/controller events and LARGE activation but no LARGE raw event after a failed shot. Next temporary diagnostic logs live surface/player positions and exposes only LARGE's native trigger plate during gameplay to inspect alignment. Restore hidden plate and remove diagnostic logging after inspection.
+
+Collision correction: the retired hidden GREEN FortStaticMeshActor still uses QueryOnly/FortStaticMesh with blocking weapon and projectile responses. Keep its rollback transform and hidden state, but set its component to NoCollision so retired scenery cannot intercept active target shots (FR-002/FR-003). Restore LARGE's temporary visible diagnostic plate before cooked comparison. Event instrumentation remains only for that comparison.
+
+Diagnostic cleanup: LARGE visible in Game restored false and saved; temporary BLASTER_TRACE statements and diagnostic-only imports removed. Zero compile diagnostics after cleanup. Native hidden GREEN NoCollision correction was fully pushed, but the controlled cooked hit comparison remains open. Verse-only refresh was unavailable in the stopped session; include cleanup in next full content push.
+
+Temporary bounded BLASTER_POSITION logging (5-second samples, at most 121 samples) supports reproducing the earlier firing location. Remove after comparison; it adds no player-facing HUD text.
+
+Inactive collision correction (FR-002/003/009): disabling a damage trigger suppresses its event but can leave its hidden damage surface in front of later targets. Cache each original full surface transform exactly once, including when the controller initializes before the target OnBegin. Park inactive/consumed surfaces 100 m below their original pose; activation restores the cached full transform. Reset leaves surfaces parked. Capture accepted-shot position before consumption so Data Orbs and feedback stay at the actual hit. Moving target home must use the cached authored transform, never a parked runtime pose.
+
+Return ride approach: cooked player reached (12411.35,-6587.79,2487.15) and could not mount the rail by jumping/interaction. Native start is (12300,-6500,2750), about 340 cm above the floor. Add a 3 m wide, 8 m run boarding ramp rising 200 cm near the start, preserving the existing rail endpoint height. Walk-up/jump attachment and endpoint safety require cooked evidence. Native LARGE BLUE still has bNoCollision=false/bNoWeaponCollision=false and a QueryAndPhysics/FortBuildingMeshPhysics component blocking weapon/projectile channels; set the five decorative colored core components and actor flags explicitly to NoCollision to prevent completed visuals from intercepting later destinations.
+
+Native setting detail: bNoWeaponCollision reads but rejects edits. Actor bNoCollision updates reset component body to QueryOnly/Custom, so apply actor flags first and explicit component NoCollision last. Readback then confirms all five cores have NoCollision/NoCollision. Boarding ramp trace heights are 2410 at x11590, 2436.21 at x11700, 2511.21 at x12000 and 2586.21 at x12300. Temporary BLASTER_POSITION logging removed after cooked comparison.
+
+Cooked boarding ramp comparison: normal spawn/entry completed BLUE, LARGE, LARGE BLUE, moving acquisition, REACTOR and8-DATA finale. Player reached the boarding ramp and stood on it, but repeated jump/interaction tests did not attach. Current ramp top at rail start is2586.21 versus rail2750 (163.79 cm gap). Revise ramp rise from200 to350 cm over the same800 cm horizontal run, keeping its low edge at arena floor and upper rail-start surface near2717 cm. Preserve full rail transform and endpoint. This correction remains unaccepted until cooked attachment/ride evidence exists.
+
+Revised boarding ramp saved/full push Completed. Below-rail trace confirms top2719.75 at rail start; attachment and endpoint remain unaccepted. Game stopped/CanStart.
+
+Isolated temporary return boarding fixture: preserve controller source in ignored Saved/AgentRuns, enable/show rail and teleport the live player to(11550,-6500,2500), yaw0 after2 seconds. This isolates geometry/attachment/endpoint and awards no badge/Data. It cannot certify normal finale activation, which has separate cooked evidence. Restore exact source backup, compile and push cleanup before handoff.
+
+Isolated delayed fixture recorded StartedGrinding and visible motion, followed by reversal near(9226,-4725,2919) and ejection toward the arena start, rather than hub arrival. Replace actor X-scale14.8 with native spline point/tangent X coordinates multiplied by14.8 and actor scale(1,1,1), preserving start, rotation and intended visual endpoint. Verify saved spline readback, cooked ride and safe arrival. This is a comparison, not accepted endpoint evidence. Fixture remains temporary and must be restored/pushed out.
+
+Spline setter emitted InteractionRailMeshComp Accessed None errors, although native readback confirms both authored14800-point/tangent values and unit actor scale after save. No additional speculative property fixes applied. Cooked comparison must establish whether runtime regeneration succeeds; revert to saved original spline/transform if rail is broken.
+
+Authored-length cook still reverses, so scaling is not established as the cause. Position samples show the original+1.2 pitch rises toward hub, contrary to the intended2440 cm endpoint. Revise pitch to-1.2, retaining14800 authored length and unit scale. Endpoint is approximately(-514,898,2440); native vertical trace at(-514,900) from2900 returns488 cm, confirming floor2412 beneath it. Isolated downhill ride comparison required.
+
+Downhill fixture stopped against the closed door at(12038,-6354,2844), exposing that fixture must open the door. Native door center(11800,-6200,2900), scale(2,12,10) places its lower edge2400; original finale450 lift leaves lower edge2850, intersecting the grinding player's upper body. Increase finale lift to700 (lower edge3100), preserving door home/reset. Mirror this opened clearance in the temporary fixture, then verify. Cleanup restores backup plus only this intentional450-to700 production change.
+
+Fixture cleanup restored backup plus the700 cm production door lift. Removed all fixture methods/spawn/Characters import/BOARDING logging; zero BuildAll diagnostics. Full cleanup push pending. Evidence: evidence/isolated-return-comparison-2026-09-27.md. Current authored downhill rail and raised door still require normal cooked boarding/arrival and project validation; no acceptance tasks checked.
+
+Retained native log resolves last jump: StartedGrinding04:31:08, continuous descending traversal through opened door, EndedGrinding04:31:25 at hub end, stable landing(-3017,2206,2452). Isolated route works, but momentum overshoots authored endpoint by about25 m. Controlled hub arrival/landing health and normal finale boarding remain open. See evidence/isolated-return-downhill-2026-09-27.log; do not mark T-004/T-005 complete.
+
+Corrected UTF-8 cleanup source verified exactly against backup plus700 cm lift; zero BuildAll diagnostics; full push Completed. StopGame Completed/GetGameState CanStart, editor open. Isolated descending ride traverses to hub end with25 m momentum overshoot; next check normal finale walk-up/jump, landing health/arrival, project validation, then remaining Prompt readability/reset/cooperative/player-feedback gate. Other seven conversions remain pending the source gate.

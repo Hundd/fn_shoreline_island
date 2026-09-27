@@ -32,6 +32,8 @@ byte_island_game_manager := class(creative_device):
     return_button:button_device = button_device{}
     @editable
     hub_destination:teleporter_device = teleporter_device{}
+    @editable
+    use_data_core_rescue:logic = false
 
     var player_states:[player]byte_island_player_state = map{}
 
@@ -42,7 +44,7 @@ byte_island_game_manager := class(creative_device):
     harvest_text<localizes>:message = "Water"
     return_text<localizes>:message = "Return to Academy Hub"
     badge_title<localizes>:message = "Prompt Badge"
-    badge_description<localizes>:message = "Give Pix clear instructions: Find Seed, Dig Hole, Plant Seed, Water."
+    badge_description<localizes>:message = "Rescue the Prompt Module with clear instructions for Pix."
     water_feedback<localizes>:message = "1 of 4: Seed found. Next, dig the hole."
     plant_feedback<localizes>:message = "2 of 4: Hole ready. Next, plant the seed."
     wait_feedback<localizes>:message = "3 of 4: Seed planted. Next, water it."
@@ -62,10 +64,14 @@ byte_island_game_manager := class(creative_device):
         badge_tracker.SetTitleText(badge_title)
         badge_tracker.SetDescriptionText(badge_description)
         badge_tracker.SetTarget(1)
-        water_button.InteractedWithEvent.Subscribe(on_water)
-        plant_button.InteractedWithEvent.Subscribe(on_plant)
-        wait_button.InteractedWithEvent.Subscribe(on_wait)
-        harvest_button.InteractedWithEvent.Subscribe(on_harvest)
+        if (not use_data_core_rescue?):
+            water_button.InteractedWithEvent.Subscribe(on_water)
+            plant_button.InteractedWithEvent.Subscribe(on_plant)
+            wait_button.InteractedWithEvent.Subscribe(on_wait)
+            harvest_button.InteractedWithEvent.Subscribe(on_harvest)
+        else:
+            for (legacy_button : array{water_button, plant_button, wait_button, harvest_button}):
+                legacy_button.Disable()
         return_button.InteractedWithEvent.Subscribe(on_return)
         round_settings.RoundBeginEvent.Subscribe(on_round_begin)
         GetPlayspace().PlayerAddedEvent().Subscribe(on_player_added)
@@ -137,9 +143,16 @@ byte_island_game_manager := class(creative_device):
                     if (state.badge_earned?):
                         pix_feedback.Show(input_agent, repeat_feedback, ?DisplayTime := 8.0)
                     else:
-                        set state.badge_earned = true
-                        badge_tracker.SetValue(input_agent, 1)
+                        award_prompt_badge(input_player)
                         pix_feedback.Show(input_agent, complete_feedback, ?DisplayTime := 10.0)
+
+    # The new physical mission calls this only after the player enters the
+    # rescued module. The journal keeps reading this existing reward source.
+    award_prompt_badge(input_player:player):void =
+        ensure_player(input_player)
+        if (state := player_states[input_player], not state.badge_earned?):
+            set state.badge_earned = true
+            badge_tracker.SetValue(input_player, 1)
 
     on_return(input_agent:agent):void =
         hub_destination.Teleport(input_agent)

@@ -12,8 +12,8 @@ The shoreline terrain and existing puzzles remain the foundation. Adapt their pr
 - **Release:** public Discover island after private playtesting and the required publishing checks.
 - **Language:** English for this release; Ukrainian localization is a later feature.
 - **Players:** solo or up to four players; puzzle progress and rewards belong to each player.
-- **Interaction:** Creative devices and Verse run short, non-combat activities.
-- **Safety:** no weapons, elimination, punitive timers, or mandatory timers. A wrong answer resets only the active attempt; the player can retry immediately.
+- **Interaction:** Creative devices and Verse use the Data Blaster to select large holograms, symbols and data targets. Objective beacons use orange cones; answer choices use equal cyan rings. Feature 024 converts Prompt Lab first, then the remaining missions after its playtest gate.
+- **Safety:** the blaster sends data and instructions rather than fighting enemies. Players are invincible, ammunition is unlimited, and PvP, environmental destruction, elimination and punitive timers are disabled. Wrong shots preserve the puzzle and earned Data Energy for an immediate retry.
 - **Rewards:** each main module grants its badge once per player per round. Replays do not duplicate rewards.
 - **Accuracy:** Pix can be uncertain and make mistakes. Important AI answers should be checked by people.
 
@@ -21,7 +21,7 @@ The shoreline terrain and existing puzzles remain the foundation. Adapt their pr
 
 The hub introduces Pix's damaged AI Core and points to the Prompt Lab. The personal AI Core Journal reads the existing player progress and recommends an unfinished zone. Agent Mode starts locked until the first seven modules are restored.
 
-1. **Prompt Lab** — give clear instructions: Find Seed, Dig Hole, Plant Seed, Water. **Prompt Badge**.
+1. **Prompt Lab** — shoot the requested blue core, add LARGE to clarify an ambiguous prompt, acquire a slowly moving core, and select its reactor destination. Pix's delivery powers the reactor, lights and Prompt Module, then enables a return ride. **Prompt Badge**. See feature 024 for implementation and validation status.
 2. **Pattern Scanner** — spot repetition and predict what comes next. **Pattern Badge**.
 3. **AI Classifier** — sort incoming items into Food, Animal, and Vehicle. **Classifier Badge**.
 4. **Confidence Core** — use clues to revise Pix's confidence. **Confidence Badge**.

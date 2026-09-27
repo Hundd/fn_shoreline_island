@@ -1,0 +1,14 @@
+# Framework implementation checkpoint
+
+This is implementation evidence, not gameplay acceptance. No tasks are checked complete.
+
+- Created feature 024 spec/plan/tasks covering the full source redesign and its Prompt-first gate.
+- Added shared `fn_shoreline_island_data_target.verse`: active validation, agent-carrying events, correct/wrong hooks, 0.4 s hit state, generation guards for reset cancellation, objective/selectable effects. UEFN BuildAll returned an empty diagnostic array.
+- Added `fn_shoreline_island_data_blaster.verse`: possession-aware late join grant, spawn-event grant, invulnerability, and duplicate protection through the granter's Only if Not Owned setting. BuildAll again returned an empty diagnostic array.
+- Saved `data_blaster_blue_hit_surface` damage-only trigger at (8800,-3000,2775), scale 2. Disabled player/item/creature/vehicle/physics/pulse/water triggering, zero transmit delay, 0.1 s retrigger delay, unlimited triggers, invisible damage reception. Starts disabled and is not yet bound to a target controller. Its runtime size and damage attribution still need verification.
+- Placed `data_blaster_automatic_granter` with one updated rare Stark energy rifle in PickupItemList.itemListData; equipped on grant, Keep All, Only if Not Owned, game-start grant, no item removal or drop. itemList is a read-only/transient list and remained empty after the setter rejected it; itemListData read back the correct definition and quantity. Runtime grant/cook is still unverified.
+- Placed the Data Blaster Verse controller and read back its granter wrapper's savedActor. An attempted instanced spawn-pad array read back four nulls, so it was cleared. Respawn grant instead uses native On Player Spawned → GrantItem bindings from all four hub spawn pads, verified by ListEventBindings. Island invincibility covers respawn; the Verse controller handles possession-aware join grants.
+- Island settings readback proves infinite reserve and magazine ammo, both invincibility settings, friendly fire off, item drop off, environment damage Off, current fall damage setting false, self damage zero, and item retention ForceKeep. A batch setter rejected the legacy bFallDamage property; all intended current settings were then individually read back. Target damage with environment damage Off still requires a real shot test.
+- Saved all dirty assets through native AssetTools (returned true). Existing match was stopped before edits; game state returned CanStart. No solo or multiplayer acceptance has been observed.
+
+Next: verify automatic grant in a cooked session; bind shared targets/effects and implement the three Prompt Lab shooting rounds, visible reactor finale and return ride. Then pass the source's Prompt Lab gate before converting the remaining seven missions. Full redesign remains incomplete.
