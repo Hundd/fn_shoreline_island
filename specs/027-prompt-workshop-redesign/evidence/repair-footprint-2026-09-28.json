@@ -1,0 +1,4104 @@
+{
+  "date": "2026-09-28",
+  "method": "Read-only native Unreal MCP SceneTools.find_actors and ActorTools.get_actor_transform/get_actor_bounds",
+  "floors": [
+    {
+      "label": "repair_0_floor",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F00003_2034311302"
+      },
+      "transform": {
+        "location": {
+          "x": 4000,
+          "y": 800,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 22,
+          "y": 28,
+          "z": 1.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 2900,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 5100,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "repair_1_floor",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F30003_1412040863"
+      },
+      "transform": {
+        "location": {
+          "x": 6200,
+          "y": 800,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 22,
+          "y": 28,
+          "z": 1.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 5100,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 7300,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "repair_2_floor",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F30003_1547600893"
+      },
+      "transform": {
+        "location": {
+          "x": 8400,
+          "y": 800,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 22,
+          "y": 28,
+          "z": 1.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 7300,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 9500,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "repair_3_floor",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F30003_1624704923"
+      },
+      "transform": {
+        "location": {
+          "x": 10600,
+          "y": 800,
+          "z": 2325
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 22,
+          "y": 28,
+          "z": 1.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 9500,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 11700,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      }
+    }
+  ],
+  "repair_inventory": [
+    {
+      "guid": "28F10712-4D59-96D7-35F6-2886EE8F35E4",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412201874",
+      "label": "repair_1_control_label_6",
+      "bounds": {
+        "min": {
+          "x": 6457.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 6582.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412201874",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "61D16BF7-44C1-A4EF-338D-D681D0DB4351",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412149871",
+      "label": "repair_1_control_label_3",
+      "bounds": {
+        "min": {
+          "x": 5977.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 6102.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412149871",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "53003007-4FA0-69B6-CDCC-228813760558",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547589892",
+      "label": "repair_2_return_button",
+      "bounds": {
+        "min": {
+          "x": 8912,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 9168,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547589892",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "564FE7AC-4A80-C21A-E2E1-349A6EBFA625",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1313263497",
+      "label": "garden_repair_route",
+      "bounds": {
+        "min": {
+          "x": 2622.4195251464844,
+          "y": 121.1944351196289,
+          "z": 2699.9882202148438
+        },
+        "max": {
+          "x": 2650.546322183771,
+          "y": 478.8056411743164,
+          "z": 2861.506561279297
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1313263497",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "39E68784-4185-3FE8-F8CC-FBBB8ED50C99",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624744928",
+      "label": "repair_3_control_label_0",
+      "bounds": {
+        "min": {
+          "x": 9897.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10022.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624744928",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DB5548A9-4C60-9F3C-D034-818CD0AFD3CD",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624754929",
+      "label": "repair_3_control_label_1",
+      "bounds": {
+        "min": {
+          "x": 10057.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10182.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624754929",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "B0BD25BA-44F6-A5DB-6DEE-9092E3B61122",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1263652486",
+      "label": "repair_0_control_label_3",
+      "bounds": {
+        "min": {
+          "x": 3777.418025588989,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 3902.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1263652486",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "676D9C21-4D5E-7DD6-0625-FF8BD6FC51CE",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624664919",
+      "label": "repair_3_run_button",
+      "bounds": {
+        "min": {
+          "x": 10632,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 10888,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624664919",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "2F25D234-4CD5-5F30-551F-488A10DBD673",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412169872",
+      "label": "repair_1_control_label_4",
+      "bounds": {
+        "min": {
+          "x": 6137.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 6262.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412169872",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "65101FAF-4D9D-E054-F78B-979AFDF1B522",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1624709924",
+      "label": "repair_3_watered_stage",
+      "bounds": {
+        "min": {
+          "x": 10045,
+          "y": 1175,
+          "z": 2465
+        },
+        "max": {
+          "x": 10195,
+          "y": 1325,
+          "z": 2495
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1624709924",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DD988957-45A2-88A7-8810-92926C5EF8E3",
+      "nativeClass": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "class": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "name": "VerseDevice_C_UAID_E89C2592D1B5F00003_1931834289",
+      "label": "repair_progress",
+      "bounds": {
+        "min": {
+          "x": 3941.7195053100586,
+          "y": 1673.2796440124512,
+          "z": 2450
+        },
+        "max": {
+          "x": 4058.6424407958984,
+          "y": 1926.668529510498,
+          "z": 2608.1131439208984
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F00003_1931834289",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "32CA08A0-45F8-5AEA-22DE-BCBAE97630F0",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547481882",
+      "label": "repair_2_board",
+      "bounds": {
+        "min": {
+          "x": 8042.388717651367,
+          "y": 1544.8390502929688,
+          "z": 2799.9764404296875
+        },
+        "max": {
+          "x": 8757.611129760742,
+          "y": 1601.0926443675426,
+          "z": 3123.0131225585938
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547481882",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "FAD86403-4E98-1AE7-E9F1-9EBB938FF601",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412254877",
+      "label": "repair_1_stage_label_0",
+      "bounds": {
+        "min": {
+          "x": 5603.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 5836.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412254877",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "94CF9368-41C3-E04B-98CF-90A588E93DC3",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1935865297",
+      "label": "repair_0_slot_4",
+      "bounds": {
+        "min": {
+          "x": 3872,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 4128,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1935865297",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9FAE9488-465A-D754-5C33-A9B83EA5640F",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1937530301",
+      "label": "repair_0_return_button",
+      "bounds": {
+        "min": {
+          "x": 4512,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 4768,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1937530301",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "24FC0443-4C4D-1A37-4DBC-13A0E40917F6",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412113869",
+      "label": "repair_1_control_label_1",
+      "bounds": {
+        "min": {
+          "x": 5657.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 5782.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412113869",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E601BBF9-434B-CE82-CF46-CDB621034D20",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547774909",
+      "label": "repair_2_stage_label_2",
+      "bounds": {
+        "min": {
+          "x": 8443.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 8676.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547774909",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "7B6CE930-4935-A77C-D812-248ACFF2EE0C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624825936",
+      "label": "repair_3_control_label_8",
+      "bounds": {
+        "min": {
+          "x": 11177.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 11302.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624825936",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9A442857-4B77-884D-E784-5BB993E292D9",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624629916",
+      "label": "repair_3_slot_2",
+      "bounds": {
+        "min": {
+          "x": 10152,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 10408,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624629916",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "7ABD2335-477E-C2A9-BB55-E89B6293ED9C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1266713493",
+      "label": "repair_0_stage_label_1",
+      "bounds": {
+        "min": {
+          "x": 3723.7763332366944,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 3956.223617172241,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1266713493",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "8C907C4A-4D22-5B2C-1500-EBA34F39FD8E",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1411772852",
+      "label": "repair_1_board",
+      "bounds": {
+        "min": {
+          "x": 5842.388717651367,
+          "y": 1544.8390502929688,
+          "z": 2799.9764404296875
+        },
+        "max": {
+          "x": 6557.611129760742,
+          "y": 1601.0926443675426,
+          "z": 3123.0131225585938
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1411772852",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "956D5021-4452-75F2-ACE1-5D81DFF7F6DA",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412131870",
+      "label": "repair_1_control_label_2",
+      "bounds": {
+        "min": {
+          "x": 5817.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 5942.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412131870",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "0709A8A2-4C4D-3068-84A7-64BC1DE7FA1B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547580891",
+      "label": "repair_2_replay_button",
+      "bounds": {
+        "min": {
+          "x": 8752,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 9008,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547580891",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "0592AE78-4382-8F00-F85D-8D86D76FED6B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411858854",
+      "label": "repair_1_claim_button",
+      "bounds": {
+        "min": {
+          "x": 5432,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 5688,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411858854",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "018F8CF3-4A45-5D4F-DDA5-90939919A6A7",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624837937",
+      "label": "repair_3_stage_label_0",
+      "bounds": {
+        "min": {
+          "x": 10003.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 10236.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624837937",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "5E63A2F9-447E-8D53-BA5D-BE858F023D0D",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624683921",
+      "label": "repair_3_replay_button",
+      "bounds": {
+        "min": {
+          "x": 10952,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 11208,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624683921",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "1FBDE8FE-4022-EC02-56CD-4BBC68E45AC4",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1264965489",
+      "label": "repair_0_control_label_6",
+      "bounds": {
+        "min": {
+          "x": 4257.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 4382.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1264965489",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "83F570C6-4311-0428-F0A6-F68E71B1D175",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1624729926",
+      "label": "repair_3_grown_stage",
+      "bounds": {
+        "min": {
+          "x": 10700,
+          "y": 1190,
+          "z": 2450
+        },
+        "max": {
+          "x": 10820,
+          "y": 1310,
+          "z": 2610
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1624729926",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "B4633A18-4A52-323A-A58C-D08B848E091F",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547633898",
+      "label": "repair_2_control_label_0",
+      "bounds": {
+        "min": {
+          "x": 7697.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 7822.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547633898",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "805CEFA1-4FA7-580C-2FAF-92B1E2CADA3B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624654918",
+      "label": "repair_3_slot_4",
+      "bounds": {
+        "min": {
+          "x": 10472,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 10728,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624654918",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "C6B023E3-47C0-5194-2C84-D7A998658625",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624771931",
+      "label": "repair_3_control_label_3",
+      "bounds": {
+        "min": {
+          "x": 10377.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10502.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624771931",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "35E1211E-41C0-1253-B451-C6BE1718DD23",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547710904",
+      "label": "repair_2_control_label_6",
+      "bounds": {
+        "min": {
+          "x": 8657.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 8782.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547710904",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "4396074A-486B-44DE-62EC-218BD839EDB9",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411967859",
+      "label": "repair_1_run_button",
+      "bounds": {
+        "min": {
+          "x": 6232,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6488,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411967859",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E3B2C67A-441D-7D3A-85E6-6C9469A1BABD",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "name": "FortStaticMeshActor_UAID_E89C2592D1B5F00003_2034311302",
+      "label": "repair_0_floor",
+      "bounds": {
+        "min": {
+          "x": 2900,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 5100,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F00003_2034311302",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E530FDDD-4AE8-EEC9-3D55-BF9D18352584",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1934730294",
+      "label": "repair_0_slot_1",
+      "bounds": {
+        "min": {
+          "x": 3392,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 3648,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1934730294",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "37AD05E9-482F-663F-F21F-1FB98CD4E384",
+      "nativeClass": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "class": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "name": "VerseDevice_C_UAID_E89C2592D1B5F30003_1411663851",
+      "label": "repair_station_1",
+      "bounds": {
+        "min": {
+          "x": 6341.719505310059,
+          "y": 1673.2796440124512,
+          "z": 2450
+        },
+        "max": {
+          "x": 6458.642440795898,
+          "y": 1926.668529510498,
+          "z": 2608.1131439208984
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F30003_1411663851",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "2F21C05C-4CC1-E5D3-3CEF-DEB9306363C8",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411896855",
+      "label": "repair_1_slot_1",
+      "bounds": {
+        "min": {
+          "x": 5592,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 5848,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411896855",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "244933CA-422C-EF73-1BE7-FEAD42382211",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411916856",
+      "label": "repair_1_slot_2",
+      "bounds": {
+        "min": {
+          "x": 5752,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6008,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411916856",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9F226353-4169-FD70-DEC8-DEBE6957E75F",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411932857",
+      "label": "repair_1_slot_3",
+      "bounds": {
+        "min": {
+          "x": 5912,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6168,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411932857",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "C8EB5DA6-4639-BAB3-1902-C98F2C1E09D8",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411948858",
+      "label": "repair_1_slot_4",
+      "bounds": {
+        "min": {
+          "x": 6072,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6328,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411948858",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DFF88A6D-4E5F-1617-0407-7CA2FE072078",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411986860",
+      "label": "repair_1_help_button",
+      "bounds": {
+        "min": {
+          "x": 6392,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6648,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1411986860",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "390C8587-420A-C943-9736-87A07CA4A98D",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1412003861",
+      "label": "repair_1_replay_button",
+      "bounds": {
+        "min": {
+          "x": 6552,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6808,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1412003861",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DA0B1B58-4DE6-99E9-8E48-6D883D6944B5",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1412022862",
+      "label": "repair_1_return_button",
+      "bounds": {
+        "min": {
+          "x": 6712,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 6968,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1412022862",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "EE4CA694-46DB-306D-2890-9ABC34DCE798",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "name": "Device_HUDMessage_V2_C_UAID_E89C2592D1B5F30003_1411831853",
+      "label": "repair_1_feedback",
+      "bounds": {
+        "min": {
+          "x": 6573.564147949219,
+          "y": 1759.601203918457,
+          "z": 2449.952516555786
+        },
+        "max": {
+          "x": 6621.96590423584,
+          "y": 1839.616340637207,
+          "z": 2497.0471477508545
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5F30003_1411831853",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "1DB9601E-4475-7E89-90D8-7690F0B6F9AC",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1412052864",
+      "label": "repair_1_watered_stage",
+      "bounds": {
+        "min": {
+          "x": 5645,
+          "y": 1175,
+          "z": 2465
+        },
+        "max": {
+          "x": 5795,
+          "y": 1325,
+          "z": 2495
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1412052864",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "0598406F-4EEE-1139-E585-929E296502D9",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1412065865",
+      "label": "repair_1_planted_stage",
+      "bounds": {
+        "min": {
+          "x": 6000,
+          "y": 1210,
+          "z": 2450
+        },
+        "max": {
+          "x": 6080,
+          "y": 1290,
+          "z": 2530
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1412065865",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DC3FD00F-4822-B60B-DB27-8FAEE2277053",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1412074866",
+      "label": "repair_1_grown_stage",
+      "bounds": {
+        "min": {
+          "x": 6300,
+          "y": 1190,
+          "z": 2450
+        },
+        "max": {
+          "x": 6420,
+          "y": 1310,
+          "z": 2610
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1412074866",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "1FFA8B48-4DBB-FAC9-A60D-5CA7E3AB5510",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1412085867",
+      "label": "repair_1_harvested_stage",
+      "bounds": {
+        "min": {
+          "x": 6605,
+          "y": 1175,
+          "z": 2450
+        },
+        "max": {
+          "x": 6755,
+          "y": 1325,
+          "z": 2550
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1412085867",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "ADD1CFAF-4DDB-6461-28EF-ABA9E88B05CC",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624815935",
+      "label": "repair_3_control_label_7",
+      "bounds": {
+        "min": {
+          "x": 11017.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 11142.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624815935",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "61050A2B-4CCB-A55B-3A78-28BD3825CF4E",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624693922",
+      "label": "repair_3_return_button",
+      "bounds": {
+        "min": {
+          "x": 11112,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 11368,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624693922",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "04EFB194-45F7-7F7B-C368-C2B12A6A90AA",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1264533488",
+      "label": "repair_0_control_label_5",
+      "bounds": {
+        "min": {
+          "x": 4097.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 4222.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1264533488",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E19455B7-4ABA-E1C7-44C6-5C8938668A47",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547550888",
+      "label": "repair_2_slot_4",
+      "bounds": {
+        "min": {
+          "x": 8272,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 8528,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547550888",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "3979C504-413E-E494-6479-BAAC72A1354C",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1547607894",
+      "label": "repair_2_watered_stage",
+      "bounds": {
+        "min": {
+          "x": 7845,
+          "y": 1175,
+          "z": 2465
+        },
+        "max": {
+          "x": 7995,
+          "y": 1325,
+          "z": 2495
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1547607894",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "676F52FA-48AB-0142-F74A-B88E6430B3ED",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547659900",
+      "label": "repair_2_control_label_2",
+      "bounds": {
+        "min": {
+          "x": 8017.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 8142.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547659900",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "71B79EDF-47C6-7028-4585-EBBFC5BD842E",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1936324298",
+      "label": "repair_0_run_button",
+      "bounds": {
+        "min": {
+          "x": 4032,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 4288,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1936324298",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DAB1E9A6-46BF-99D9-5092-E78FE221E5E4",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547723905",
+      "label": "repair_2_control_label_7",
+      "bounds": {
+        "min": {
+          "x": 8817.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 8942.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547723905",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "0CE938AA-4592-EFC6-DED6-63A2F2E08E2A",
+      "nativeClass": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "class": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "name": "VerseDevice_C_UAID_E89C2592D1B5F30003_1624563911",
+      "label": "repair_station_3",
+      "bounds": {
+        "min": {
+          "x": 10741.719505310059,
+          "y": 1673.2796440124512,
+          "z": 2450
+        },
+        "max": {
+          "x": 10858.642440795898,
+          "y": 1926.668529510498,
+          "z": 2608.1131439208984
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F30003_1624563911",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "4234F8E9-4CA8-9681-01FD-6899AF4B72EB",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624609914",
+      "label": "repair_3_claim_button",
+      "bounds": {
+        "min": {
+          "x": 9832,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 10088,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624609914",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "5CBA47F3-4A11-72BE-92F0-DCAA33141911",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624621915",
+      "label": "repair_3_slot_1",
+      "bounds": {
+        "min": {
+          "x": 9992,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 10248,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624621915",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "BE07324B-4DD7-6349-4DB9-55B7559C6929",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624643917",
+      "label": "repair_3_slot_3",
+      "bounds": {
+        "min": {
+          "x": 10312,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 10568,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624643917",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "1F9EFC5E-4B39-5378-813A-AB946752AE80",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624673920",
+      "label": "repair_3_help_button",
+      "bounds": {
+        "min": {
+          "x": 10792,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 11048,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1624673920",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "32DF2223-4B47-7769-29DD-34AD90694DF0",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "name": "Device_HUDMessage_V2_C_UAID_E89C2592D1B5F30003_1624601913",
+      "label": "repair_3_feedback",
+      "bounds": {
+        "min": {
+          "x": 10973.564147949219,
+          "y": 1759.601203918457,
+          "z": 2449.952516555786
+        },
+        "max": {
+          "x": 11021.96590423584,
+          "y": 1839.616340637207,
+          "z": 2497.0471477508545
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5F30003_1624601913",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "35B82BDC-4494-5431-36AC-17B843714D36",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624587912",
+      "label": "repair_3_board",
+      "bounds": {
+        "min": {
+          "x": 10242.388717651367,
+          "y": 1544.8390502929688,
+          "z": 2799.9764404296875
+        },
+        "max": {
+          "x": 10957.611129760742,
+          "y": 1601.0926443675426,
+          "z": 3123.0131225585938
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624587912",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "ACD557A1-4FC0-9B19-BB8F-04A8B7075C37",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1624713925",
+      "label": "repair_3_planted_stage",
+      "bounds": {
+        "min": {
+          "x": 10400,
+          "y": 1210,
+          "z": 2450
+        },
+        "max": {
+          "x": 10480,
+          "y": 1290,
+          "z": 2530
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1624713925",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "EC97601D-46E3-9AD2-023F-A8ABAF23A21E",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1624736927",
+      "label": "repair_3_harvested_stage",
+      "bounds": {
+        "min": {
+          "x": 11005,
+          "y": 1175,
+          "z": 2450
+        },
+        "max": {
+          "x": 11155,
+          "y": 1325,
+          "z": 2550
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1624736927",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "11C499AF-40A1-476A-9D1C-918D341D547E",
+      "nativeClass": {
+        "refPath": "/Script/Engine.Actor"
+      },
+      "class": {
+        "refPath": "/Script/Engine.Actor"
+      },
+      "name": "Actor_UAID_E89C2592D1B5C20303_1306682149",
+      "label": "campus_debug_repair_garage",
+      "bounds": {
+        "min": {
+          "x": -13890,
+          "y": -7790,
+          "z": 2272
+        },
+        "max": {
+          "x": -966.1836181259623,
+          "y": -5060,
+          "z": 6050
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1306682149",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "FB74B69D-47DA-A729-83BE-C6A28C7E620C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "name": "Device_HUDMessage_V2_C_UAID_E89C2592D1B5F00003_1933948292",
+      "label": "repair_0_feedback",
+      "bounds": {
+        "min": {
+          "x": 4373.564147949219,
+          "y": 1759.601203918457,
+          "z": 2449.952516555786
+        },
+        "max": {
+          "x": 4421.96590423584,
+          "y": 1839.616340637207,
+          "z": 2497.0471477508545
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5F00003_1933948292",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "B5C2DB16-482F-6640-DF46-72B33591778D",
+      "nativeClass": {
+        "refPath": "/Script/Engine.Actor"
+      },
+      "class": {
+        "refPath": "/Script/Engine.Actor"
+      },
+      "name": "Actor_UAID_E89C2592D1B5E10303_1368748604",
+      "label": "campus_garden_repair_supports",
+      "bounds": {
+        "min": {
+          "x": 3100,
+          "y": 680,
+          "z": 2272
+        },
+        "max": {
+          "x": 11500,
+          "y": 1640,
+          "z": 3135
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5E10303_1368748604",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "BB3BCB0F-4116-CBCF-5447-3DB15B91DE36",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624847938",
+      "label": "repair_3_stage_label_1",
+      "bounds": {
+        "min": {
+          "x": 10323.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 10556.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624847938",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "EA3C30DF-4579-56B9-7903-4EB20D8C3FB0",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547751907",
+      "label": "repair_2_stage_label_0",
+      "bounds": {
+        "min": {
+          "x": 7803.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 8036.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547751907",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "6FCDAFDF-47BE-65DC-E2F5-24A664A19083",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547520885",
+      "label": "repair_2_slot_1",
+      "bounds": {
+        "min": {
+          "x": 7792,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 8048,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547520885",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9F7B9BD9-4A96-1671-B2BD-86AA2611C961",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412303880",
+      "label": "repair_1_stage_label_3",
+      "bounds": {
+        "min": {
+          "x": 6563.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 6796.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412303880",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "B2E211E8-4410-56E9-9D23-E3BBB8FA9800",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F10003_1138394481",
+      "label": "repair_0_grown_stage",
+      "bounds": {
+        "min": {
+          "x": 4100,
+          "y": 1190,
+          "z": 2450
+        },
+        "max": {
+          "x": 4220,
+          "y": 1310,
+          "z": 2610
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F10003_1138394481",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "5DAF4FFC-48B4-8986-9FC9-DBA3DD95DC9F",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1937118300",
+      "label": "repair_0_replay_button",
+      "bounds": {
+        "min": {
+          "x": 4352,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 4608,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1937118300",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "EFE2BE89-480E-9C1F-2C01-A7ADB4C70B93",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624763930",
+      "label": "repair_3_control_label_2",
+      "bounds": {
+        "min": {
+          "x": 10217.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10342.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624763930",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "648EF87A-435D-FC44-D57A-B498EA4E5BCD",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "name": "FortStaticMeshActor_UAID_E89C2592D1B5F30003_1624704923",
+      "label": "repair_3_floor",
+      "bounds": {
+        "min": {
+          "x": 9500,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 11700,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F30003_1624704923",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "7211EE44-4065-971B-D2B4-4EB441845BA8",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1935114295",
+      "label": "repair_0_slot_2",
+      "bounds": {
+        "min": {
+          "x": 3552,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 3808,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1935114295",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "4C4F5D4D-4BC8-569A-291A-49BE7C14C151",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547571890",
+      "label": "repair_2_help_button",
+      "bounds": {
+        "min": {
+          "x": 8592,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 8848,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547571890",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "C01B6E10-4CAF-B06B-0820-BB9F8A23418B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547561889",
+      "label": "repair_2_run_button",
+      "bounds": {
+        "min": {
+          "x": 8432,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 8688,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547561889",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "12282241-42FE-CE73-A137-7E96C0591230",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "name": "FortStaticMeshActor_UAID_E89C2592D1B5F30003_1547600893",
+      "label": "repair_2_floor",
+      "bounds": {
+        "min": {
+          "x": 7300,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 9500,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F30003_1547600893",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "42866187-43F5-8A4A-87C9-138C1D586838",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "name": "FortStaticMeshActor_UAID_E89C2592D1B5F10003_1312879496",
+      "label": "garden_repair_walkway",
+      "bounds": {
+        "min": {
+          "x": 2300,
+          "y": -600,
+          "z": 2302
+        },
+        "max": {
+          "x": 2900,
+          "y": 1200,
+          "z": 2402
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F10003_1312879496",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "06A3B6FA-47F2-8E8D-D529-DE81AD071B0E",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547762908",
+      "label": "repair_2_stage_label_1",
+      "bounds": {
+        "min": {
+          "x": 8123.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 8356.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547762908",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "021EAE97-4C8B-BA6C-2325-A09ACCC3A8E5",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412234876",
+      "label": "repair_1_control_label_8",
+      "bounds": {
+        "min": {
+          "x": 6777.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 6902.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412234876",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "A956DD13-40D9-DEFC-76FB-D488AD03A22C",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1547629897",
+      "label": "repair_2_harvested_stage",
+      "bounds": {
+        "min": {
+          "x": 8805,
+          "y": 1175,
+          "z": 2450
+        },
+        "max": {
+          "x": 8955,
+          "y": 1325,
+          "z": 2550
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1547629897",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "A1AFA442-415D-6839-4D02-A3A4CCB3911C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547541887",
+      "label": "repair_2_slot_3",
+      "bounds": {
+        "min": {
+          "x": 8112,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 8368,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547541887",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "476D80F3-4333-2E85-72CC-3DB99519D395",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1266278492",
+      "label": "repair_0_stage_label_0",
+      "bounds": {
+        "min": {
+          "x": 3403.7763332366944,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 3636.223617172241,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1266278492",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "6EB2FE9C-4206-EE1A-CDC9-AA9308016067",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1935482296",
+      "label": "repair_0_slot_3",
+      "bounds": {
+        "min": {
+          "x": 3712,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 3968,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1935482296",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "931E732D-4973-F89C-7453-56B8F3DC5CE8",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624806934",
+      "label": "repair_3_control_label_6",
+      "bounds": {
+        "min": {
+          "x": 10857.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10982.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624806934",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9D19096E-4549-D0C6-B448-B697624735F8",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1547616895",
+      "label": "repair_2_planted_stage",
+      "bounds": {
+        "min": {
+          "x": 8200,
+          "y": 1210,
+          "z": 2450
+        },
+        "max": {
+          "x": 8280,
+          "y": 1290,
+          "z": 2530
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1547616895",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "8DB52E97-4232-E61F-2F01-A382C8A96C0C",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F10003_1084335480",
+      "label": "repair_0_planted_stage",
+      "bounds": {
+        "min": {
+          "x": 3800,
+          "y": 1210,
+          "z": 2450
+        },
+        "max": {
+          "x": 3880,
+          "y": 1290,
+          "z": 2530
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F10003_1084335480",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "BB953D80-4F9A-52CF-0D33-E0B0623F8D53",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624856939",
+      "label": "repair_3_stage_label_2",
+      "bounds": {
+        "min": {
+          "x": 10643.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 10876.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624856939",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9620B442-46C6-4A2A-CFB0-5FAA049AFB60",
+      "nativeClass": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "class": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "name": "VerseDevice_C_UAID_E89C2592D1B5F30003_1547455881",
+      "label": "repair_station_2",
+      "bounds": {
+        "min": {
+          "x": 8541.719505310059,
+          "y": 1673.2796440124512,
+          "z": 2450
+        },
+        "max": {
+          "x": 8658.642440795898,
+          "y": 1926.668529510498,
+          "z": 2608.1131439208984
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F30003_1547455881",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9A9180AE-4731-5A6B-E4BC-7ABF5815609C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547508884",
+      "label": "repair_2_claim_button",
+      "bounds": {
+        "min": {
+          "x": 7632,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 7888,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547508884",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "6C2F2605-4421-CFA1-F3FF-0195FC7AB390",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547530886",
+      "label": "repair_2_slot_2",
+      "bounds": {
+        "min": {
+          "x": 7952,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 8208,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F30003_1547530886",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "8BF0A8F2-4C33-0BEE-E09B-B0962C4A8C5D",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+      },
+      "name": "Device_HUDMessage_V2_C_UAID_E89C2592D1B5F30003_1547496883",
+      "label": "repair_2_feedback",
+      "bounds": {
+        "min": {
+          "x": 8773.564147949219,
+          "y": 1759.601203918457,
+          "z": 2449.952516555786
+        },
+        "max": {
+          "x": 8821.96590423584,
+          "y": 1839.616340637207,
+          "z": 2497.0471477508545
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5F30003_1547496883",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "7F7A0031-45F4-71CF-3605-B5A7BC1CCB3C",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F30003_1547623896",
+      "label": "repair_2_grown_stage",
+      "bounds": {
+        "min": {
+          "x": 8500,
+          "y": 1190,
+          "z": 2450
+        },
+        "max": {
+          "x": 8620,
+          "y": 1310,
+          "z": 2610
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F30003_1547623896",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "5C742800-42DA-8661-CCE4-E2A8952F67FB",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1262251483",
+      "label": "repair_0_control_label_0",
+      "bounds": {
+        "min": {
+          "x": 3297.418025588989,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 3422.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1262251483",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "8F23CE3D-4BDE-2121-C170-FBA87E8D23C8",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F10003_1142690482",
+      "label": "repair_0_harvested_stage",
+      "bounds": {
+        "min": {
+          "x": 4405,
+          "y": 1175,
+          "z": 2450
+        },
+        "max": {
+          "x": 4555,
+          "y": 1325,
+          "z": 2550
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F10003_1142690482",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "FEECD995-43C7-325A-259F-2299FD91830F",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547787910",
+      "label": "repair_2_stage_label_3",
+      "bounds": {
+        "min": {
+          "x": 8763.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 8996.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547787910",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9D5448E1-4408-237D-2D7B-1590A6A4B5F2",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1263213485",
+      "label": "repair_0_control_label_2",
+      "bounds": {
+        "min": {
+          "x": 3617.418025588989,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 3742.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1263213485",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "3DA0CF25-485B-476F-6BB7-919D5D88330A",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.BuildingProp"
+      },
+      "name": "BuildingProp_UAID_E89C2592D1B5F00003_2034796303",
+      "label": "repair_0_watered_stage",
+      "bounds": {
+        "min": {
+          "x": 3445,
+          "y": 1175,
+          "z": 2465
+        },
+        "max": {
+          "x": 3595,
+          "y": 1325,
+          "z": 2495
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5F00003_2034796303",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "417A5BA0-4FE8-91E2-4EDE-B58D04A2E879",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1936698299",
+      "label": "repair_0_help_button",
+      "bounds": {
+        "min": {
+          "x": 4192,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 4448,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1936698299",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "EF38E29D-4FD5-769B-DD80-669D91794B5C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412217875",
+      "label": "repair_1_control_label_7",
+      "bounds": {
+        "min": {
+          "x": 6617.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 6742.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412217875",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "031ABCA9-4153-BE3B-2B84-528455920B5F",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547647899",
+      "label": "repair_2_control_label_1",
+      "bounds": {
+        "min": {
+          "x": 7857.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 7982.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547647899",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "A86A9D3D-4BFE-16E2-5DAD-3CA15990BD65",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "name": "FortStaticMeshActor_UAID_E89C2592D1B5F30003_1412040863",
+      "label": "repair_1_floor",
+      "bounds": {
+        "min": {
+          "x": 5100,
+          "y": -600,
+          "z": 2250
+        },
+        "max": {
+          "x": 7300,
+          "y": 2200,
+          "z": 2400
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F30003_1412040863",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "5F3B2423-4688-397A-7642-FD88CCCDC0CD",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1264103487",
+      "label": "repair_0_control_label_4",
+      "bounds": {
+        "min": {
+          "x": 3937.418025588989,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 4062.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1264103487",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "6A25BD04-4071-D51D-90BC-DD93001C448A",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412286879",
+      "label": "repair_1_stage_label_2",
+      "bounds": {
+        "min": {
+          "x": 6243.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 6476.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412286879",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "1814474D-43C5-4734-E21C-FBBEAFE39F30",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1265393490",
+      "label": "repair_0_control_label_7",
+      "bounds": {
+        "min": {
+          "x": 4417.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 4542.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1265393490",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "05625979-41CF-8A48-C7CC-FCADD6AE6FFF",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624867940",
+      "label": "repair_3_stage_label_3",
+      "bounds": {
+        "min": {
+          "x": 10963.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 11196.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624867940",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E6E763B9-4916-4E04-0B6A-72B0C8CE7AD2",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412186873",
+      "label": "repair_1_control_label_5",
+      "bounds": {
+        "min": {
+          "x": 6297.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 6422.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412186873",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "ADA1FB6A-45B9-E036-A184-DD9D2A6AF07B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547687902",
+      "label": "repair_2_control_label_4",
+      "bounds": {
+        "min": {
+          "x": 8337.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 8462.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547687902",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E40AE059-4BB2-C15C-C058-008DC3379760",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1262768484",
+      "label": "repair_0_control_label_1",
+      "bounds": {
+        "min": {
+          "x": 3457.418025588989,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 3582.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1262768484",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "60769F4B-41D0-1CFD-A89E-C68B65CF1DBE",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547738906",
+      "label": "repair_2_control_label_8",
+      "bounds": {
+        "min": {
+          "x": 8977.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 9102.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547738906",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "5A5291FD-4ABC-E8E7-A84E-CEAE8E08D2AF",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F00003_1933179291",
+      "label": "repair_0_board",
+      "bounds": {
+        "min": {
+          "x": 3642.388717651367,
+          "y": 1544.8390502929688,
+          "z": 2799.9764404296875
+        },
+        "max": {
+          "x": 4357.611129760742,
+          "y": 1601.0926443675426,
+          "z": 3123.0131225585938
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F00003_1933179291",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "E4BA0E40-4CA0-40EB-934B-59905FD56AB3",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1265846491",
+      "label": "repair_0_control_label_8",
+      "bounds": {
+        "min": {
+          "x": 4577.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 4702.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1265846491",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "33991EC5-4882-5712-1B3E-0C9FFFAD6329",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1267592495",
+      "label": "repair_0_stage_label_3",
+      "bounds": {
+        "min": {
+          "x": 4363.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 4596.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1267592495",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "39AE45AA-4368-5DBA-CB7D-48A8576B1577",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1267132494",
+      "label": "repair_0_stage_label_2",
+      "bounds": {
+        "min": {
+          "x": 4043.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 4276.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1267132494",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "3B400F47-41BF-590A-99C1-2C9545518E56",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547698903",
+      "label": "repair_2_control_label_5",
+      "bounds": {
+        "min": {
+          "x": 8497.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 8622.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547698903",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "9A0290A6-4DA3-7E93-C9BA-6F86DFA9C68C",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412272878",
+      "label": "repair_1_stage_label_1",
+      "bounds": {
+        "min": {
+          "x": 5923.776333236694,
+          "y": 1382.072691345215,
+          "z": 2449.9923431396487
+        },
+        "max": {
+          "x": 6156.223617172242,
+          "y": 1400.3551094194513,
+          "z": 2554.979264831543
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412272878",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "7F5CCA58-43FD-335D-E2F9-06B5BF002439",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624793933",
+      "label": "repair_3_control_label_5",
+      "bounds": {
+        "min": {
+          "x": 10697.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10822.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624793933",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "BD121AB6-40D3-7DF5-B7CB-C5BA769D310B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5F00003_1934314293",
+      "label": "repair_0_claim_button",
+      "bounds": {
+        "min": {
+          "x": 3232,
+          "y": 552,
+          "z": 2348
+        },
+        "max": {
+          "x": 3488,
+          "y": 808,
+          "z": 2604
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F00003_1934314293",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DCA7E173-437D-B591-3399-41954637C850",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547673901",
+      "label": "repair_2_control_label_3",
+      "bounds": {
+        "min": {
+          "x": 8177.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 8302.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1547673901",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "75521B4E-44D2-2E09-31CB-A388B5B6E9E7",
+      "nativeClass": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "class": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "name": "VerseDevice_C_UAID_E89C2592D1B5F00003_1932601290",
+      "label": "repair_station_0",
+      "bounds": {
+        "min": {
+          "x": 4141.719505310059,
+          "y": 1673.2796440124512,
+          "z": 2450
+        },
+        "max": {
+          "x": 4258.642440795898,
+          "y": 1926.668529510498,
+          "z": 2608.1131439208984
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F00003_1932601290",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "2DBBE12A-44DC-D375-063E-78970FA7DB59",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624781932",
+      "label": "repair_3_control_label_4",
+      "bounds": {
+        "min": {
+          "x": 10537.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 10662.58194770813,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1624781932",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "AFFA810B-450D-56DB-CC42-FCA772DF29D2",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412095868",
+      "label": "repair_1_control_label_0",
+      "bounds": {
+        "min": {
+          "x": 5497.41802558899,
+          "y": 640.3468338012694,
+          "z": 2419.995877075195
+        },
+        "max": {
+          "x": 5622.5819477081295,
+          "y": 650.19121276432,
+          "z": 2476.527296447754
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1412095868",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    }
+  ],
+  "approach": [
+    {
+      "guid": "564FE7AC-4A80-C21A-E2E1-349A6EBFA625",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+      },
+      "name": "Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1313263497",
+      "label": "garden_repair_route",
+      "bounds": {
+        "min": {
+          "x": 2622.4195251464844,
+          "y": 121.1944351196289,
+          "z": 2699.9882202148438
+        },
+        "max": {
+          "x": 2650.546322183771,
+          "y": 478.8056411743164,
+          "z": 2861.506561279297
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1313263497",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "42866187-43F5-8A4A-87C9-138C1D586838",
+      "nativeClass": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "class": {
+        "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+      },
+      "name": "FortStaticMeshActor_UAID_E89C2592D1B5F10003_1312879496",
+      "label": "garden_repair_walkway",
+      "bounds": {
+        "min": {
+          "x": 2300,
+          "y": -600,
+          "z": 2302
+        },
+        "max": {
+          "x": 2900,
+          "y": 1200,
+          "z": 2402
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F10003_1312879496",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    }
+  ],
+  "derived": {
+    "origin_cm": [
+      2900,
+      -600,
+      2400
+    ],
+    "size_m": [
+      88,
+      28
+    ],
+    "tile_width_m": 22,
+    "floor_top_cm": 2400
+  }
+}

@@ -1,123 +1,537 @@
 version: 1
 map:
   id: prompt_workshop
-  title: Prompt Workshop - inspect, compose, test, connect
+  title: Prompt Workshop - repair_0_floor through repair_3_floor
   theme: ai_training
   units: meters
-  origin_cm: [6000, -8500, 2410]
-  size: [66, 62, 15]
-  learning_objective: A useful request names WHAT, WHICH ONE and WHERE; revise the missing detail after seeing Pix act.
+  origin_cm:
+  - 2900
+  - -600
+  - 2400
+  size:
+  - 88
+  - 28
+  - 15
+  learning_objective: A useful request names WHAT, WHICH ONE and WHERE; revise the missing detail after seeing Pix
+    act.
   source_feature: specs/027-prompt-workshop-redesign/spec.md
   intent: propose_change
   min_path_width: 3
   position_tolerance: 0.25
-player_flow: [arrival, inspect, compose, connect]
+player_flow:
+- arrival
+- inspect
+- compose
+- connect
 zones:
-  - id: arrival
-    label: West arrival and return
-    pattern: corridor
-    position: [0, 28, 0]
-    size: [20, 30, 15]
-    purpose: Walk from hub into the workshop and return by the same west ramp.
-    parameters: {width_m: 3, access: existing west ramp}
-    devices: [entry]
-    overlap_with: []
-    completion: Player enters the workshop entry zone.
-    reset: Entry stays open throughout mission and replay.
-  - id: inspect
-    label: 1 Inspect the scene
-    pattern: knowledge_room
-    position: [20, 28, 0]
-    size: [14, 28, 15]
-    purpose: Inspect the two sizes and destination clue at a short, readable board.
-    parameters: {lesson: "Find the large blue core. Take it to the power reactor.", duration_seconds: 4, hud_copy: true}
-    devices: [clue_button, clue_board, feedback, controller]
-    overlap_with: []
-    completion: Inspect records the clue for this player.
-    reset: Clue is available again after replay or round reset.
-  - id: compose
-    label: 2 Compose / 3 Test
-    pattern: prompt_workbench
-    position: [34, 28, 0]
-    size: [18, 28, 15]
-    purpose: Choose three labelled details, send to Pix, watch a result and revise only the wrong slot.
-    parameters: {choice_count: 6, shared_state: false}
-    devices: [controller, choices, send, prompt_board, feedback, pix, cores, progress, energy]
-    overlap_with: []
-    completion: A correct assembled request completes one visible Pix delivery.
-    reset: Cancel animation, clear only temporary choices, return props home; preserve earned badge and DATA on replay.
-  - id: connect
-    label: 4 Connect module
-    pattern: reward_room
-    position: [52, 18, 0]
-    size: [14, 38, 15]
-    purpose: Confirm the powered module, claim the guarded badge and return on foot.
-    parameters: {badge: Prompt Badge, return_mode: west walking route}
-    devices: [controller, module, reactor_prop, scanner_prop, connect_button, progress, replay]
-    overlap_with: []
-    completion: Eligible player presses Connect once after correct delivery.
-    reset: Replay restores module visuals and keeps previously earned badge and DATA.
+- id: arrival
+  label: In
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 6
+  - 28
+  - 15
+  purpose: Enter the replacement workshop from garden_repair_walkway; old repair button-game behavior is retired.
+  parameters:
+    width_m: 3
+    access: existing garden_repair_walkway at west edge
+  devices:
+  - entry
+  overlap_with: []
+  completion: Player enters the workshop entry zone.
+  reset: Entry stays open throughout mission and replay.
+- id: inspect
+  label: 'Tile 0: Inspect'
+  pattern: knowledge_room
+  position:
+  - 6
+  - 0
+  - 0
+  size:
+  - 16
+  - 28
+  - 15
+  purpose: Inspect the two sizes and destination clue at a short, readable board.
+  parameters:
+    lesson: Find the large blue core. Take it to the power reactor.
+    duration_seconds: 4
+    hud_copy: true
+  devices:
+  - clue_button
+  - clue_board
+  - feedback
+  - controller
+  overlap_with: []
+  completion: Inspect records the clue for this player.
+  reset: Clue is available again after replay or round reset.
+- id: compose
+  label: 'Tile 1: Compose / Tile 2: Test'
+  pattern: prompt_workbench
+  position:
+  - 22
+  - 0
+  - 0
+  size:
+  - 44
+  - 28
+  - 15
+  purpose: Choose three labelled details, send to Pix, watch a result and revise only the wrong slot.
+  parameters:
+    choice_count: 6
+    shared_state: false
+  devices:
+  - controller
+  - choices
+  - send
+  - prompt_board
+  - feedback
+  - pix
+  - cores
+  - progress
+  - energy
+  - reactor_prop
+  - scanner_prop
+  overlap_with: []
+  completion: A correct assembled request completes one visible Pix delivery.
+  reset: Cancel animation, clear only temporary choices, return props home; preserve earned badge and DATA on replay.
+- id: connect
+  label: 'Tile 3: Connect'
+  pattern: reward_room
+  position:
+  - 66
+  - 0
+  - 0
+  size:
+  - 22
+  - 28
+  - 15
+  purpose: Confirm the powered module, claim the guarded badge and return on foot.
+  parameters:
+    badge: Prompt Badge
+    return_mode: walking west to garden_repair_walkway
+  devices:
+  - controller
+  - module
+  - connect_button
+  - progress
+  - replay
+  overlap_with: []
+  completion: Eligible player presses Connect once after correct delivery.
+  reset: Replay restores module visuals and keeps previously earned badge and DATA.
 connections:
-  - from: arrival
-    to: inspect
-    mode: walk
-    width: 3
-    points: [[15, 40, 0], [20, 40, 0], [27, 40, 0]]
-    gate: always
-  - from: inspect
-    to: compose
-    mode: walk
-    width: 3
-    points: [[27, 40, 0], [34, 40, 0], [43, 40, 0]]
-    gate: always
-  - from: compose
-    to: connect
-    mode: walk
-    width: 3
-    points: [[43, 40, 0], [52, 40, 0], [59, 40, 0]]
-    gate: always
+- from: arrival
+  to: inspect
+  mode: walk
+  width: 3
+  points:
+  - - 2
+    - 8
+    - 0
+  - - 6
+    - 8
+    - 0
+  - - 18
+    - 8
+    - 0
+  gate: always
+- from: inspect
+  to: compose
+  mode: walk
+  width: 3
+  points:
+  - - 18
+    - 8
+    - 0
+  - - 22
+    - 8
+    - 0
+  - - 38
+    - 8
+    - 0
+  gate: always
+- from: compose
+  to: connect
+  mode: walk
+  width: 3
+  points:
+  - - 38
+    - 8
+    - 0
+  - - 46
+    - 8
+    - 0
+  - - 66
+    - 8
+    - 0
+  - - 70
+    - 8
+    - 0
+  gate: always
 markers:
-  - {id: arrival_point, kind: spawn, zone: arrival, label: 'Hub arrival, no new spawn pad', position: [15, 33, 1.9], source: 'MEASURED feature-026 entry-volume center; proposed walking route from here'}
-  - {id: west_exit, kind: exit, zone: arrival, label: 'Always open west ramp', position: [0, 40, 0], source: 'Existing ramp; inbound and outbound walking evidence in feature-026, exact clearance to recheck'}
-  - {id: inspect_control, kind: knowledge, zone: inspect, label: 'Inspect clue', position: [25, 37, 1.2], source: 'PROPOSED control anchor; reuse legacy scanner button after native transform/binding survey'}
-  - {id: clue_board_marker, kind: knowledge, zone: inspect, label: 'Large blue to reactor clue', position: [29, 33, 3], source: 'PROPOSED readable board anchor; reused board and copy need scoped source update'}
-  - {id: small_core_marker, kind: target, zone: inspect, label: 'SMALL BLUE visual', target_id: 0, position: [23, 48, 2], source: 'PROPOSED visual prop, no gun hit surface; reconcile existing small blue prop'}
-  - {id: large_core_marker, kind: target, zone: inspect, label: 'LARGE BLUE visual', target_id: 1, position: [30, 48, 2], source: 'PROPOSED visual prop, no gun hit surface; reconcile existing large blue prop'}
-  - {id: what_controls, kind: knowledge, zone: compose, label: 'WHAT Blue / Red', position: [38, 33, 1], source: 'PROPOSED paired button bay; reuse legacy selectors if sound'}
-  - {id: which_controls, kind: knowledge, zone: compose, label: 'WHICH Large / Small', position: [43, 33, 1], source: 'PROPOSED paired button bay; reuse legacy selectors if sound'}
-  - {id: where_controls, kind: knowledge, zone: compose, label: 'WHERE Reactor / Scanner', position: [48, 33, 1], source: 'PROPOSED paired button bay; reuse legacy selectors if sound'}
-  - {id: send_control, kind: knowledge, zone: compose, label: 'SEND / see Pix act', position: [43, 48, 1], source: 'PROPOSED button anchor; existing send binding to reconcile'}
-  - {id: request_board_marker, kind: knowledge, zone: compose, label: 'Persistent WHAT / WHICH / WHERE request', position: [43, 38, 3], source: 'PROPOSED board anchor; existing prompt_hologram source is editable'}
-  - {id: reactor_marker, kind: target, zone: connect, label: 'POWER REACTOR destination', target_id: 2, position: [57, 48, 1.5], source: 'PROPOSED destination prop; preserve floor clearance; no gun hit surface'}
-  - {id: scanner_marker, kind: target, zone: connect, label: 'SCANNER wrong destination', target_id: 3, position: [63, 48, 1.5], source: 'PROPOSED destination prop; no gun hit surface'}
-  - {id: module_marker, kind: reward, zone: connect, label: 'Prompt Module and Connect', position: [64, 23, 2.7], source: 'MEASURED feature-026 module anchor; Connect location proposed near existing module'}
-  - {id: replay_marker, kind: checkpoint, zone: connect, label: 'Replay', position: [55, 30, 1], source: 'PROPOSED accessible control position; exact existing replay transform to reconcile'}
+- id: arrival_point
+  kind: spawn
+  zone: arrival
+  label: Arrival from garden walkway; no spawn pad
+  position:
+  - 2
+  - 8
+  - 0.1
+  source: PROPOSED arrival on measured repair_0_floor; existing garden_repair_walkway abuts x=2900 cm. See evidence/repair-footprint-2026-09-28.json.
+- id: west_exit
+  kind: exit
+  zone: arrival
+  label: Return via garden_repair_walkway
+  position:
+  - 0
+  - 8
+  - 0
+  source: MEASURED walkway meets repair_0_floor west edge; marker is a proposed crossing at y=200 cm, not the old
+    Prompt Lab ramp.
+- id: inspect_control
+  kind: knowledge
+  zone: inspect
+  label: Inspect clue
+  position:
+  - 18
+  - 10
+  - 1.2
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: clue_board_marker
+  kind: knowledge
+  zone: inspect
+  label: Large blue to reactor clue
+  position:
+  - 19
+  - 17
+  - 3
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: small_core_marker
+  kind: target
+  zone: inspect
+  label: SMALL BLUE visual
+  target_id: 0
+  position:
+  - 16
+  - 20
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: large_core_marker
+  kind: target
+  zone: inspect
+  label: LARGE BLUE visual
+  target_id: 1
+  position:
+  - 20
+  - 20
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: what_controls
+  kind: knowledge
+  zone: compose
+  label: WHAT Blue / Red
+  position:
+  - 26
+  - 12
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: which_controls
+  kind: knowledge
+  zone: compose
+  label: WHICH Large / Small
+  position:
+  - 31
+  - 12
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: where_controls
+  kind: knowledge
+  zone: compose
+  label: WHERE Reactor / Scanner
+  position:
+  - 36
+  - 12
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: send_control
+  kind: knowledge
+  zone: compose
+  label: SEND / see Pix act
+  position:
+  - 45
+  - 12
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: request_board_marker
+  kind: knowledge
+  zone: compose
+  label: Persistent WHAT / WHICH / WHERE request
+  position:
+  - 38
+  - 17
+  - 3
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: reactor_marker
+  kind: target
+  zone: compose
+  label: POWER REACTOR destination
+  target_id: 2
+  position:
+  - 53
+  - 20
+  - 1.5
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: scanner_marker
+  kind: target
+  zone: compose
+  label: SCANNER wrong destination
+  target_id: 3
+  position:
+  - 60
+  - 20
+  - 1.5
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
+- id: module_marker
+  kind: reward
+  zone: connect
+  label: Workshop module + Connect on repair_3_floor
+  position:
+  - 70
+  - 12
+  - 2.7
+  source: PROPOSED local workshop module anchor; old feature-026 module remains outside this footprint and is not
+    a measured placement here.
+- id: replay_marker
+  kind: checkpoint
+  zone: connect
+  label: Replay
+  position:
+  - 74
+  - 12
+  - 1
+  source: PROPOSED anchor above the measured repair floor strip; reconcile reusable repair devices and asset templates
+    before implementation.
 devices:
-  - {id: entry, class: mutator_zone_device, count: 1, source: 'Feature-026 measured entry zone', settings: {action: reuse}}
-  - {id: controller, class: fn_shoreline_island_prompt_lab_controller, count: 1, source: 'Content/fn_shoreline_island_prompt_lab_controller.verse; feature-023 bound legacy controller', settings: {action: 'reuse and refactor; only one Prompt controller active', use_blaster_mode: false, personal_choices: true, execution: serialized}}
-  - {id: clue_button, class: button_device, count: 1, source: 'Feature-023 target_scanner binding; current state must be surveyed', settings: {action: reuse, label: Inspect}}
-  - {id: choices, class: button_device, count: 6, source: 'Feature-023 Blue/Red, Small/Large, Reactor/Research selectors; live bindings to reconcile', settings: {action: reuse, labels: ['BLUE','RED','LARGE','SMALL','REACTOR','SCANNER']}}
-  - {id: send, class: button_device, count: 1, source: 'Feature-023 send_button binding', settings: {action: reuse, label: Send to Pix}}
-  - {id: connect_button, class: button_device, count: 1, source: 'Feature-023 module_connection binding', settings: {action: reuse, label: Connect}}
-  - {id: replay, class: button_device, count: 1, source: 'Feature-023 replay_button binding; feature-026 replay', settings: {action: reuse, label: Replay}}
-  - {id: clue_board, class: billboard_device, count: 1, source: 'Feature-023 target_hologram or feature-026 board; exact actor to reconcile', settings: {action: reuse, readable_height_m: 3}}
-  - {id: prompt_board, class: billboard_device, count: 1, source: 'Feature-023 prompt_hologram binding', settings: {action: reuse, shows: 'WHAT / WHICH / WHERE'}}
-  - {id: feedback, class: hud_message_device, count: 1, source: 'Feature-023 controller feedback binding', settings: {action: reuse, scope: personal}}
-  - {id: pix, class: creative_prop, count: 1, source: 'Feature-023 Pix prop and controller binding; scene readback needed', settings: {action: reuse, wrong_result: visible, correct_result: visible}}
-  - {id: cores, class: creative_prop, count: 3, source: 'Feature-023 blue/red/small/large core inventory; exact reuse set to reconcile', settings: {action: reuse, reset_home: true}}
-  - {id: reactor_prop, class: creative_prop, count: 1, source: 'Feature-026 reactor assembly; source binding survey needed', settings: {action: reuse}}
-  - {id: scanner_prop, class: creative_prop, count: 1, source: 'Feature-023 research scanner; source binding survey needed', settings: {action: reuse}}
-  - {id: module, class: creative_prop, count: 1, source: 'Feature-026 Prompt Module', settings: {action: reuse, anchor_local: [64,23,2.7]}}
-  - {id: progress, class: byte_island_game_manager, count: 1, source: 'Content/byte_island_game_manager.verse', settings: {action: reuse, badge: existing_prompt_badge_guard}}
-  - {id: energy, class: fn_shoreline_island_data_energy, count: 1, source: 'Content/fn_shoreline_island_data_energy.verse', settings: {action: reuse, accepted_send_data: 5, connect_data: 3}}
+- id: entry
+  class: mutator_zone_device
+  count: 1
+  source: Workshop-local entry on repair_0_floor; existing feature-026 entry zone is outside the intended area
+  settings:
+    action: configure dedicated workshop entry; do not inherit old entry transform
+- id: controller
+  class: fn_shoreline_island_prompt_lab_controller
+  count: 1
+  source: Content/fn_shoreline_island_prompt_lab_controller.verse; feature-023 bound legacy controller
+  settings:
+    action: reuse source in workshop-local controller; fully replace old repair-game subscriptions and behavior
+    use_blaster_mode: false
+    personal_choices: true
+    execution: serialized
+- id: clue_button
+  class: button_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    label: Inspect
+- id: choices
+  class: button_device
+  count: 6
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    labels:
+    - BLUE
+    - RED
+    - LARGE
+    - SMALL
+    - REACTOR
+    - SCANNER
+- id: send
+  class: button_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    label: Send to Pix
+- id: connect_button
+  class: button_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    label: Connect
+- id: replay
+  class: button_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    label: Replay
+- id: clue_board
+  class: billboard_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    readable_height_m: 3
+- id: prompt_board
+  class: billboard_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    shows: WHAT / WHICH / WHERE
+- id: feedback
+  class: hud_message_device
+  count: 1
+  source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices after exact ownership/binding
+    reconciliation
+  settings:
+    action: reuse repair-area device after retiring old station subscription
+    scope: personal
+- id: pix
+  class: creative_prop
+  count: 1
+  source: Reuse existing asset templates for workshop-local props; existing Prompt Lab actors are outside the requested
+    footprint
+  settings:
+    action: reconcile workshop-local instance; do not implicitly move old Prompt Lab actor
+    wrong_result: visible
+    correct_result: visible
+- id: cores
+  class: creative_prop
+  count: 3
+  source: Reuse existing asset templates for workshop-local props; existing Prompt Lab actors are outside the requested
+    footprint
+  settings:
+    action: reconcile workshop-local instance; do not implicitly move old Prompt Lab actor
+    reset_home: true
+- id: reactor_prop
+  class: creative_prop
+  count: 1
+  source: Reuse existing asset templates for workshop-local props; existing Prompt Lab actors are outside the requested
+    footprint
+  settings:
+    action: reconcile workshop-local instance; do not implicitly move old Prompt Lab actor
+- id: scanner_prop
+  class: creative_prop
+  count: 1
+  source: Reuse existing asset templates for workshop-local props; existing Prompt Lab actors are outside the requested
+    footprint
+  settings:
+    action: reconcile workshop-local instance; do not implicitly move old Prompt Lab actor
+- id: module
+  class: creative_prop
+  count: 1
+  source: Reuse existing asset templates for workshop-local props; existing Prompt Lab actors are outside the requested
+    footprint
+  settings:
+    action: reconcile workshop-local instance; do not implicitly move old Prompt Lab actor
+    anchor_local:
+    - 70
+    - 12
+    - 2.7
+- id: progress
+  class: byte_island_game_manager
+  count: 1
+  source: Content/byte_island_game_manager.verse
+  settings:
+    action: reuse
+    badge: existing_prompt_badge_guard
+- id: energy
+  class: fn_shoreline_island_data_energy
+  count: 1
+  source: Content/fn_shoreline_island_data_energy.verse
+  settings:
+    action: reuse
+    accepted_send_data: 5
+    connect_data: 3
 stages:
-  - {id: enter, zone: arrival, purpose: Arrive from hub, requires: [], active_targets: [], completion: Entry records player and shows brief invitation.}
-  - {id: inspect_scene, zone: inspect, purpose: Discover the specific request, requires: [enter], active_targets: [], completion: Inspect reveals large blue and power reactor.}
-  - {id: assemble, zone: compose, purpose: Set three editable slots, requires: [inspect_scene], active_targets: [], completion: WHAT WHICH WHERE all selected; replacements remain possible.}
-  - {id: test, zone: compose, purpose: Send and observe a concrete result, requires: [assemble], active_targets: [], completion: Wrong request returns to editing with correct slots retained; correct request powers module.}
-  - {id: delivered, zone: connect, purpose: Connect powered module, requires: [test], active_targets: [], completion: Badge guarded and finale DATA awarded once for this run.}
+- id: enter
+  zone: arrival
+  purpose: Arrive from hub
+  requires: []
+  active_targets: []
+  completion: Entry records player and shows brief invitation.
+- id: inspect_scene
+  zone: inspect
+  purpose: Discover the specific request
+  requires:
+  - enter
+  active_targets: []
+  completion: Inspect reveals large blue and power reactor.
+- id: assemble
+  zone: compose
+  purpose: Set three editable slots
+  requires:
+  - inspect_scene
+  active_targets: []
+  completion: WHAT WHICH WHERE all selected; replacements remain possible.
+- id: test
+  zone: compose
+  purpose: Send and observe a concrete result
+  requires:
+  - assemble
+  active_targets: []
+  completion: Wrong request returns to editing with correct slots retained; correct request powers module.
+- id: delivered
+  zone: connect
+  purpose: Connect powered module
+  requires:
+  - test
+  active_targets: []
+  completion: Badge guarded and finale DATA awarded once for this run.
 assumptions:
-  - {id: legacy_basis, status: resolved, detail: 'Feature-023 source contains editable buttons, per-player choices, prompt board, Send, wrong-result Pix motion, replay and one-time badge hook. The proposed one-request flow and DATA grants require scoped implementation; no claim of current support.', evidence: 'Content/fn_shoreline_island_prompt_lab_controller.verse lines 30-139 and 298-648; specs/023-prompt-lab-data-core-rescue/evidence/controller-and-route-2026-09-24.md'}
-  - {id: proposed_positions, status: resolved, detail: 'All new control and prop anchors are design proposals inside the measured 66 x 62 m platform; they are not actor measurements. Exact transforms, floor clearance, pivots and bindings are implementation preflight.', evidence: 'specs/026-prompt-lab-aim-refine-deliver/evidence/read-only-inspection.json and feature-026 plan.md; this map.yaml identifies each PROPOSED marker'}
-  - {id: existing_asset_reuse, status: resolved, detail: 'Retain shared systems and reconcile exact Prompt Lab actor identities before moving or retiring any actor. User explicitly allows old-game asset removal, but this plan does not name a blind delete set.', evidence: 'User redesign request and feature-023/026 device inventories; FR-07 and plan.md recovery/reconciliation gates'}
-  - {id: schematic_limits, status: resolved, detail: 'V1 blockout depicts successive activity zones, not three parallel choice slots, per-player state, animation paths or collision. These must be verified in implementation and cooked playtest.', evidence: 'design/MAP_SPEC.md v1 limitations; spec.md AC-02 through AC-09'}
+- id: legacy_basis
+  status: resolved
+  detail: Feature-023 source contains editable buttons, per-player choices, prompt board, Send, wrong-result Pix
+    motion, replay and one-time badge hook. The proposed one-request flow and DATA grants require scoped implementation;
+    no claim of current support.
+  evidence: Content/fn_shoreline_island_prompt_lab_controller.verse lines 30-139 and 298-648; specs/023-prompt-lab-data-core-rescue/evidence/controller-and-route-2026-09-24.md
+- id: proposed_positions
+  status: resolved
+  detail: The four live floor tiles form an 88 x 28 m strip. Origin is the west/min-Y corner at floor top (2900,-600,2400)
+    cm. New anchors are proposals above these tiles, not the old 66 x 62 m Prompt Lab platform.
+  evidence: evidence/repair-footprint-2026-09-28.json; live bounds and transforms for repair_0_floor through repair_3_floor
+- id: existing_asset_reuse
+  status: resolved
+  detail: The replacement area is the four repair stations. Preserve all four floors and garden_repair_walkway.
+    Reconcile repair controls/boards/stage props and station subscriptions; shared hub, Garden, progress and return
+    devices require dependency checks. Old Prompt Lab shooting actors are outside the area and are not an implicit
+    removal set.
+  evidence: User area correction; live repair inventory; Content/fn_shoreline_island_repair_station.verse and fn_shoreline_island_repair_progress.verse
+- id: schematic_limits
+  status: resolved
+  detail: V1 blockout depicts successive activity zones, not three parallel choice slots, per-player state, animation
+    paths or collision. These must be verified in implementation and cooked playtest.
+  evidence: design/MAP_SPEC.md v1 limitations; spec.md AC-02 through AC-09
+- id: repair_game_replacement
+  status: resolved
+  detail: Replace the old button-based repair game on repair_0_floor through repair_3_floor. Adapt suitable devices
+    and remove obsolete activity actors/subscriptions; no old-game mode or parallel repair sequence remains. Keep
+    the proposed workshop rewards and shared badge guard. The separate feature-026 shooting area is outside this
+    replacement scope.
+  evidence: 'User clarification 2026-09-28: the old game with buttons should be removed or adapted with a new one,
+    no need to hold the old. See spec.md AC-11 and plan.md replacement decision.'

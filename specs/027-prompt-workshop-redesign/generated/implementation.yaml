@@ -1,6 +1,6 @@
 version: 1
 map_id: prompt_workshop
-spec_digest: 9469832505e1fc73e5d15886ed6056d21118570095bda71a2c90ae0ef8e8dddc
+spec_digest: 883a7a6e1ed83bce92ca6ea36d2566ba7e993639aa33f261632a8231c8d03dde
 patterns_digest: afe799579afa01f7e9526087150d2592f95408ace8d6e97e2778bc2cfeb613a5
 status: draft_requires_explicit_human_approval
 executable: false
@@ -16,48 +16,48 @@ implementation:
   pattern: corridor
   policy: reuse_first; create or move only after an approved resolved delta
   position_cm:
-  - 6000
-  - -5700
-  - 2410
+  - 2900
+  - -600
+  - 2400
   size_cm:
-  - 2000
-  - 3000
+  - 600
+  - 2800
   - 1500
   parameters:
     width_m: 3
-    access: existing west ramp
+    access: existing garden_repair_walkway at west edge
   markers:
   - id: arrival_point
     kind: spawn
     zone: arrival
-    label: Hub arrival, no new spawn pad
+    label: Arrival from garden walkway; no spawn pad
     position:
-    - 15
-    - 33
-    - 1.9
-    source: MEASURED feature-026 entry-volume center; proposed walking route from
-      here
+    - 2
+    - 8
+    - 0.1
+    source: PROPOSED arrival on measured repair_0_floor; existing garden_repair_walkway
+      abuts x=2900 cm. See evidence/repair-footprint-2026-09-28.json.
   - id: west_exit
     kind: exit
     zone: arrival
-    label: Always open west ramp
+    label: Return via garden_repair_walkway
     position:
     - 0
-    - 40
+    - 8
     - 0
-    source: Existing ramp; inbound and outbound walking evidence in feature-026, exact
-      clearance to recheck
+    source: MEASURED walkway meets repair_0_floor west edge; marker is a proposed
+      crossing at y=200 cm, not the old Prompt Lab ramp.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_zone
   zone: inspect
   pattern: knowledge_room
   policy: reuse_first; create or move only after an approved resolved delta
   position_cm:
-  - 8000
-  - -5700
-  - 2410
+  - 3500
+  - -600
+  - 2400
   size_cm:
-  - 1400
+  - 1600
   - 2800
   - 1500
   parameters:
@@ -70,54 +70,54 @@ implementation:
     zone: inspect
     label: Inspect clue
     position:
-    - 25
-    - 37
+    - 18
+    - 10
     - 1.2
-    source: PROPOSED control anchor; reuse legacy scanner button after native transform/binding
-      survey
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: clue_board_marker
     kind: knowledge
     zone: inspect
     label: Large blue to reactor clue
     position:
-    - 29
-    - 33
+    - 19
+    - 17
     - 3
-    source: PROPOSED readable board anchor; reused board and copy need scoped source
-      update
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: small_core_marker
     kind: target
     zone: inspect
     label: SMALL BLUE visual
     target_id: 0
     position:
-    - 23
-    - 48
-    - 2
-    source: PROPOSED visual prop, no gun hit surface; reconcile existing small blue
-      prop
+    - 16
+    - 20
+    - 1
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: large_core_marker
     kind: target
     zone: inspect
     label: LARGE BLUE visual
     target_id: 1
     position:
-    - 30
-    - 48
-    - 2
-    source: PROPOSED visual prop, no gun hit surface; reconcile existing large blue
-      prop
+    - 20
+    - 20
+    - 1
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_zone
   zone: compose
   pattern: prompt_workbench
   policy: reuse_first; create or move only after an approved resolved delta
   position_cm:
-  - 9400
-  - -5700
-  - 2410
+  - 5100
+  - -600
+  - 2400
   size_cm:
-  - 1800
+  - 4400
   - 2800
   - 1500
   parameters:
@@ -129,112 +129,120 @@ implementation:
     zone: compose
     label: WHAT Blue / Red
     position:
-    - 38
-    - 33
+    - 26
+    - 12
     - 1
-    source: PROPOSED paired button bay; reuse legacy selectors if sound
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: which_controls
     kind: knowledge
     zone: compose
     label: WHICH Large / Small
     position:
-    - 43
-    - 33
+    - 31
+    - 12
     - 1
-    source: PROPOSED paired button bay; reuse legacy selectors if sound
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: where_controls
     kind: knowledge
     zone: compose
     label: WHERE Reactor / Scanner
     position:
-    - 48
-    - 33
+    - 36
+    - 12
     - 1
-    source: PROPOSED paired button bay; reuse legacy selectors if sound
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: send_control
     kind: knowledge
     zone: compose
     label: SEND / see Pix act
     position:
-    - 43
-    - 48
+    - 45
+    - 12
     - 1
-    source: PROPOSED button anchor; existing send binding to reconcile
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   - id: request_board_marker
     kind: knowledge
     zone: compose
     label: Persistent WHAT / WHICH / WHERE request
     position:
-    - 43
     - 38
+    - 17
     - 3
-    source: PROPOSED board anchor; existing prompt_hologram source is editable
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
+  - id: reactor_marker
+    kind: target
+    zone: compose
+    label: POWER REACTOR destination
+    target_id: 2
+    position:
+    - 53
+    - 20
+    - 1.5
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
+  - id: scanner_marker
+    kind: target
+    zone: compose
+    label: SCANNER wrong destination
+    target_id: 3
+    position:
+    - 60
+    - 20
+    - 1.5
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_zone
   zone: connect
   pattern: reward_room
   policy: reuse_first; create or move only after an approved resolved delta
   position_cm:
-  - 11200
-  - -6700
-  - 2410
+  - 9500
+  - -600
+  - 2400
   size_cm:
-  - 1400
-  - 3800
+  - 2200
+  - 2800
   - 1500
   parameters:
     badge: Prompt Badge
-    return_mode: west walking route
+    return_mode: walking west to garden_repair_walkway
   markers:
-  - id: reactor_marker
-    kind: target
-    zone: connect
-    label: POWER REACTOR destination
-    target_id: 2
-    position:
-    - 57
-    - 48
-    - 1.5
-    source: PROPOSED destination prop; preserve floor clearance; no gun hit surface
-  - id: scanner_marker
-    kind: target
-    zone: connect
-    label: SCANNER wrong destination
-    target_id: 3
-    position:
-    - 63
-    - 48
-    - 1.5
-    source: PROPOSED destination prop; no gun hit surface
   - id: module_marker
     kind: reward
     zone: connect
-    label: Prompt Module and Connect
+    label: Workshop module + Connect on repair_3_floor
     position:
-    - 64
-    - 23
+    - 70
+    - 12
     - 2.7
-    source: MEASURED feature-026 module anchor; Connect location proposed near existing
-      module
+    source: PROPOSED local workshop module anchor; old feature-026 module remains
+      outside this footprint and is not a measured placement here.
   - id: replay_marker
     kind: checkpoint
     zone: connect
     label: Replay
     position:
-    - 55
-    - 30
+    - 74
+    - 12
     - 1
-    source: PROPOSED accessible control position; exact existing replay transform
-      to reconcile
+    source: PROPOSED anchor above the measured repair floor strip; reconcile reusable
+      repair devices and asset templates before implementation.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_device
   device:
     id: entry
     class: mutator_zone_device
     count: 1
-    source: Feature-026 measured entry zone
+    source: Workshop-local entry on repair_0_floor; existing feature-026 entry zone
+      is outside the intended area
     settings:
-      action: reuse
+      action: configure dedicated workshop entry; do not inherit old entry transform
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -245,7 +253,8 @@ implementation:
     source: Content/fn_shoreline_island_prompt_lab_controller.verse; feature-023 bound
       legacy controller
     settings:
-      action: reuse and refactor; only one Prompt controller active
+      action: reuse source in workshop-local controller; fully replace old repair-game
+        subscriptions and behavior
       use_blaster_mode: false
       personal_choices: true
       execution: serialized
@@ -256,9 +265,10 @@ implementation:
     id: clue_button
     class: button_device
     count: 1
-    source: Feature-023 target_scanner binding; current state must be surveyed
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       label: Inspect
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -267,10 +277,10 @@ implementation:
     id: choices
     class: button_device
     count: 6
-    source: Feature-023 Blue/Red, Small/Large, Reactor/Research selectors; live bindings
-      to reconcile
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       labels:
       - BLUE
       - RED
@@ -285,9 +295,10 @@ implementation:
     id: send
     class: button_device
     count: 1
-    source: Feature-023 send_button binding
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       label: Send to Pix
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -296,9 +307,10 @@ implementation:
     id: connect_button
     class: button_device
     count: 1
-    source: Feature-023 module_connection binding
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       label: Connect
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -307,9 +319,10 @@ implementation:
     id: replay
     class: button_device
     count: 1
-    source: Feature-023 replay_button binding; feature-026 replay
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       label: Replay
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -318,9 +331,10 @@ implementation:
     id: clue_board
     class: billboard_device
     count: 1
-    source: Feature-023 target_hologram or feature-026 board; exact actor to reconcile
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       readable_height_m: 3
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -329,9 +343,10 @@ implementation:
     id: prompt_board
     class: billboard_device
     count: 1
-    source: Feature-023 prompt_hologram binding
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       shows: WHAT / WHICH / WHERE
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -340,9 +355,10 @@ implementation:
     id: feedback
     class: hud_message_device
     count: 1
-    source: Feature-023 controller feedback binding
+    source: Reuse suitable repair_0 through repair_3 controls, boards and HUD devices
+      after exact ownership/binding reconciliation
     settings:
-      action: reuse
+      action: reuse repair-area device after retiring old station subscription
       scope: personal
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -351,9 +367,11 @@ implementation:
     id: pix
     class: creative_prop
     count: 1
-    source: Feature-023 Pix prop and controller binding; scene readback needed
+    source: Reuse existing asset templates for workshop-local props; existing Prompt
+      Lab actors are outside the requested footprint
     settings:
-      action: reuse
+      action: reconcile workshop-local instance; do not implicitly move old Prompt
+        Lab actor
       wrong_result: visible
       correct_result: visible
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
@@ -363,9 +381,11 @@ implementation:
     id: cores
     class: creative_prop
     count: 3
-    source: Feature-023 blue/red/small/large core inventory; exact reuse set to reconcile
+    source: Reuse existing asset templates for workshop-local props; existing Prompt
+      Lab actors are outside the requested footprint
     settings:
-      action: reuse
+      action: reconcile workshop-local instance; do not implicitly move old Prompt
+        Lab actor
       reset_home: true
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -374,9 +394,11 @@ implementation:
     id: reactor_prop
     class: creative_prop
     count: 1
-    source: Feature-026 reactor assembly; source binding survey needed
+    source: Reuse existing asset templates for workshop-local props; existing Prompt
+      Lab actors are outside the requested footprint
     settings:
-      action: reuse
+      action: reconcile workshop-local instance; do not implicitly move old Prompt
+        Lab actor
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -384,9 +406,11 @@ implementation:
     id: scanner_prop
     class: creative_prop
     count: 1
-    source: Feature-023 research scanner; source binding survey needed
+    source: Reuse existing asset templates for workshop-local props; existing Prompt
+      Lab actors are outside the requested footprint
     settings:
-      action: reuse
+      action: reconcile workshop-local instance; do not implicitly move old Prompt
+        Lab actor
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -394,12 +418,14 @@ implementation:
     id: module
     class: creative_prop
     count: 1
-    source: Feature-026 Prompt Module
+    source: Reuse existing asset templates for workshop-local props; existing Prompt
+      Lab actors are outside the requested footprint
     settings:
-      action: reuse
+      action: reconcile workshop-local instance; do not implicitly move old Prompt
+        Lab actor
       anchor_local:
-      - 64
-      - 23
+      - 70
+      - 12
       - 2.7
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -469,14 +495,14 @@ implementation:
     mode: walk
     width: 3
     points:
-    - - 15
-      - 40
+    - - 2
+      - 8
       - 0
-    - - 20
-      - 40
+    - - 6
+      - 8
       - 0
-    - - 27
-      - 40
+    - - 18
+      - 8
       - 0
     gate: always
   - from: inspect
@@ -484,14 +510,14 @@ implementation:
     mode: walk
     width: 3
     points:
-    - - 27
-      - 40
+    - - 18
+      - 8
       - 0
-    - - 34
-      - 40
+    - - 22
+      - 8
       - 0
-    - - 43
-      - 40
+    - - 38
+      - 8
       - 0
     gate: always
   - from: compose
@@ -499,14 +525,17 @@ implementation:
     mode: walk
     width: 3
     points:
-    - - 43
-      - 40
+    - - 38
+      - 8
       - 0
-    - - 52
-      - 40
+    - - 46
+      - 8
       - 0
-    - - 59
-      - 40
+    - - 66
+      - 8
+      - 0
+    - - 70
+      - 8
       - 0
     gate: always
   verify: Read back ordered target arrays, shared systems and required entry/exit
