@@ -1,0 +1,171 @@
+{
+  "date": "2026-09-28",
+  "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5190603_1484881576",
+  "transform": {
+    "location": {
+      "x": 3200,
+      "y": 200,
+      "z": 2400
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 0,
+      "roll": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "component_count": 7,
+  "components": [
+    {
+      "name": "EntryPostSouth",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": -430,
+        "z": 215
+      },
+      "relativeScale3D": {
+        "x": 0.7,
+        "y": 0.7,
+        "z": 4.3
+      }
+    },
+    {
+      "name": "EntryPostNorth",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": 430,
+        "z": 215
+      },
+      "relativeScale3D": {
+        "x": 0.7,
+        "y": 0.7,
+        "z": 4.3
+      }
+    },
+    {
+      "name": "EntryBeam",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": 0,
+        "z": 460
+      },
+      "relativeScale3D": {
+        "x": 0.9,
+        "y": 9.3,
+        "z": 0.65
+      }
+    },
+    {
+      "name": "EntryCrown",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": 0,
+        "z": 505
+      },
+      "relativeScale3D": {
+        "x": 1,
+        "y": 9.3,
+        "z": 0.24
+      }
+    },
+    {
+      "name": "EntryInset",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": 0,
+        "z": 460
+      },
+      "relativeScale3D": {
+        "x": 1.05,
+        "y": 6,
+        "z": 0.34
+      }
+    },
+    {
+      "name": "EntryFootSouth",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": -430,
+        "z": 9
+      },
+      "relativeScale3D": {
+        "x": 1.8,
+        "y": 1.6,
+        "z": 0.18
+      }
+    },
+    {
+      "name": "EntryFootNorth",
+      "staticMesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "overrideMaterials": [
+        {
+          "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+        }
+      ],
+      "relativeLocation": {
+        "x": 0,
+        "y": 430,
+        "z": 9
+      },
+      "relativeScale3D": {
+        "x": 1.8,
+        "y": 1.6,
+        "z": 0.18
+      }
+    }
+  ]
+}

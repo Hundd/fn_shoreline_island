@@ -1,0 +1,391 @@
+using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/SpatialMath }
+
+prompt_workshop_state := class:
+    var inspected:logic = false
+    var what:int = -1
+    var which:int = -1
+    var destination_choice:int = -1
+    var delivered:logic = false
+    var connected:logic = false
+    var send_data_awarded:logic = false
+    var connect_data_awarded:logic = false
+
+prompt_workshop_action := class:
+    controller:fn_shoreline_island_prompt_workshop
+    choice:int
+    on_press(input_agent:agent):void =
+        controller.on_button(input_agent, choice)
+
+# One workshop on the four repair floors. Each player's request is private;
+# the physical scene is shared and Pix serves one submitted request at a time.
+fn_shoreline_island_prompt_workshop := class(creative_device):
+    @editable
+    configured:logic = false
+    @editable
+    progress:byte_island_game_manager = byte_island_game_manager{}
+    @editable
+    energy:fn_shoreline_island_data_energy = fn_shoreline_island_data_energy{}
+    @editable
+    entry_zone:mutator_zone_device = mutator_zone_device{}
+    @editable
+    inspect_button:button_device = button_device{}
+    @editable
+    blue_button:button_device = button_device{}
+    @editable
+    red_button:button_device = button_device{}
+    @editable
+    large_button:button_device = button_device{}
+    @editable
+    small_button:button_device = button_device{}
+    @editable
+    reactor_button:button_device = button_device{}
+    @editable
+    scanner_button:button_device = button_device{}
+    @editable
+    send_button:button_device = button_device{}
+    @editable
+    connect_button:button_device = button_device{}
+    @editable
+    replay_button:button_device = button_device{}
+    @editable
+    feedback:hud_message_device = hud_message_device{}
+    @editable
+    request_hud:hud_message_device = hud_message_device{}
+    @editable
+    clue_board:billboard_device = billboard_device{}
+    @editable
+    prompt_board:billboard_device = billboard_device{}
+    @editable
+    pix:creative_prop = creative_prop{}
+    @editable
+    large_blue_core:creative_prop = creative_prop{}
+    @editable
+    small_blue_core:creative_prop = creative_prop{}
+    @editable
+    red_core:creative_prop = creative_prop{}
+    @editable
+    reactor:creative_prop = creative_prop{}
+    @editable
+    scanner:creative_prop = creative_prop{}
+    @editable
+    workshop_module:creative_prop = creative_prop{}
+
+    var states:[player]prompt_workshop_state = map{}
+    var execution_owner:?player = false
+    var generation:int = 0
+    var pix_home:transform = transform{}
+    var large_home:transform = transform{}
+    var small_home:transform = transform{}
+    var red_home:transform = transform{}
+
+    inspect_text<localizes>:message = "1 INSPECT CLUE"
+    blue_text<localizes>:message = "2 WHAT: BLUE"
+    red_text<localizes>:message = "2 WHAT: RED"
+    large_text<localizes>:message = "2 WHICH: LARGE"
+    small_text<localizes>:message = "2 WHICH: SMALL"
+    reactor_text<localizes>:message = "2 WHERE: REACTOR"
+    scanner_text<localizes>:message = "2 WHERE: SCANNER"
+    send_text<localizes>:message = "3 SEND TO PIX"
+    connect_text<localizes>:message = "4 CONNECT MODULE"
+    replay_text<localizes>:message = "Replay"
+    clue_text<localizes>:message = "Find the LARGE BLUE core.\nTake it to the POWER REACTOR."
+    board_text<localizes>:message = "PROMPT WORKSHOP\n1 INSPECT THE CLUE\n2 PICK WHAT + WHICH + WHERE\n3 WALK EAST TO SEND TO PIX"
+    intro_text<localizes>:message = "Start at INSPECT. Pick WHAT, WHICH and WHERE. Then walk east to SEND TO PIX."
+    inspect_result<localizes>:message = "Pix needs the LARGE BLUE core at the POWER REACTOR."
+    need_inspect<localizes>:message = "Inspect the request first."
+    incomplete<localizes>:message = "Choose WHAT, WHICH ONE and WHERE before Send."
+    busy<localizes>:message = "Pix is carrying a core. Wait for the result."
+    what_unknown<localizes>:message = "?"
+    what_blue<localizes>:message = "BLUE"
+    what_red<localizes>:message = "RED"
+    which_large<localizes>:message = "LARGE"
+    which_small<localizes>:message = "SMALL"
+    where_reactor<localizes>:message = "REACTOR"
+    where_scanner<localizes>:message = "SCANNER"
+    request_text<localizes>(what_label:message, which_label:message, where_label:message, next_label:message):message =
+        "YOUR REQUEST\nWHAT {what_label} | WHICH {which_label} | WHERE {where_label}\nNEXT: {next_label}"
+    next_inspect<localizes>:message = "INSPECT the clue"
+    next_what<localizes>:message = "choose WHAT: BLUE or RED"
+    next_which<localizes>:message = "choose WHICH: LARGE or SMALL"
+    next_where<localizes>:message = "choose WHERE: REACTOR or SCANNER"
+    next_send<localizes>:message = "walk east to SEND TO PIX"
+    next_watch<localizes>:message = "watch Pix carry the core"
+    next_connect<localizes>:message = "walk east to CONNECT"
+    next_replay<localizes>:message = "REPLAY or walk back west"
+    sending_text<localizes>:message = "Pix is fetching your core. Watch the display and destination."
+    wrong_what<localizes>:message = "Pix moved a RED core. Change WHAT to BLUE; keep the other choices."
+    wrong_which<localizes>:message = "Pix moved the SMALL core. Change WHICH ONE to LARGE; keep the other choices."
+    wrong_where<localizes>:message = "Pix went to the SCANNER. Change WHERE to REACTOR; keep the other choices."
+    delivered_text<localizes>:message = "The LARGE BLUE core powered the module. Press CONNECT."
+    connected_text<localizes>:message = "Prompt Badge connected! A useful request says what, which one and where."
+    repeat_text<localizes>:message = "Already connected. Replay if you want another turn."
+    early_text<localizes>:message = "Send the correct request before Connect."
+    replay_text_notice<localizes>:message = "Ready to try again. Your badge and DATA stay with you."
+
+    buttons()<transacts>:[]button_device =
+        array{inspect_button, blue_button, red_button, large_button, small_button,
+            reactor_button, scanner_button, send_button, connect_button, replay_button}
+
+    labels()<transacts>:[]message =
+        array{inspect_text, blue_text, red_text, large_text, small_text,
+            reactor_text, scanner_text, send_text, connect_text, replay_text}
+
+    OnBegin<override>()<suspends>:void =
+        Hide()
+        if (not configured?):
+            return
+        set pix_home = pix.GetTransform()
+        set large_home = large_blue_core.GetTransform()
+        set small_home = small_blue_core.GetTransform()
+        set red_home = red_core.GetTransform()
+        workshop_module.Hide()
+        clue_board.SetText(clue_text)
+        clue_board.UpdateDisplay()
+        prompt_board.SetText(board_text)
+        prompt_board.UpdateDisplay()
+        for (index -> input_button : buttons(), label := labels()[index]):
+            input_button.SetInteractionText(label)
+            input_button.SetInteractionTime(0.0)
+            input_button.SetMaxTriggerCount(0)
+            input_button.InteractedWithEvent.Subscribe(
+                prompt_workshop_action{controller := Self, choice := index}.on_press)
+        entry_zone.AgentEntersEvent.Subscribe(on_enter)
+        progress.round_settings.RoundBeginEvent.Subscribe(on_round)
+        GetPlayspace().PlayerAddedEvent().Subscribe(on_join)
+        GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
+        for (input_player : GetPlayspace().GetPlayers()):
+            on_join(input_player)
+
+    get_state(input_player:player):prompt_workshop_state =
+        if (existing := states[input_player]):
+            return existing
+        state := prompt_workshop_state{}
+        if (set states[input_player] = state) {}
+        return state
+
+    what_name(choice:int):message =
+        if (choice = 0):
+            return what_blue
+        if (choice = 1):
+            return what_red
+        return what_unknown
+
+    which_name(choice:int):message =
+        if (choice = 0):
+            return which_large
+        if (choice = 1):
+            return which_small
+        return what_unknown
+
+    where_name(choice:int):message =
+        if (choice = 0):
+            return where_reactor
+        if (choice = 1):
+            return where_scanner
+        return what_unknown
+
+    next_step(state:prompt_workshop_state):message =
+        if (not state.inspected?):
+            return next_inspect
+        if (state.what < 0):
+            return next_what
+        if (state.which < 0):
+            return next_which
+        if (state.destination_choice < 0):
+            return next_where
+        if (state.connected?):
+            return next_replay
+        if (state.delivered?):
+            return next_connect
+        if (execution_owner?):
+            return next_watch
+        return next_send
+
+    show_request(input_player:player, state:prompt_workshop_state):void =
+        request_hud.Show(input_player,
+            request_text(what_name(state.what), which_name(state.which), where_name(state.destination_choice), next_step(state)),
+            ?DisplayTime := 0.0)
+
+    on_join(input_player:player):void =
+        state := get_state(input_player)
+        show_request(input_player, state)
+        feedback.Show(input_player, intro_text, ?DisplayTime := 6.0)
+
+    on_enter(input_agent:agent):void =
+        if (input_player := player[input_agent]):
+            state := get_state(input_player)
+            show_request(input_player, state)
+            feedback.Show(input_player, intro_text, ?DisplayTime := 6.0)
+
+    on_departure(input_player:player):void =
+        if (owner := execution_owner?, owner = input_player):
+            set generation += 1
+            set execution_owner = false
+            reset_props()
+        var remaining:[player]prompt_workshop_state = map{}
+        for (other -> state : states, other <> input_player):
+            if (set remaining[other] = state) {}
+        set states = remaining
+
+    on_round():void =
+        set generation += 1
+        set execution_owner = false
+        set states = map{}
+        reset_props()
+        workshop_module.Hide()
+        for (input_player : GetPlayspace().GetPlayers()):
+            on_join(input_player)
+
+    reset_props():void =
+        if (pix.TeleportTo[pix_home]) {}
+        if (large_blue_core.TeleportTo[large_home]) {}
+        if (small_blue_core.TeleportTo[small_home]) {}
+        if (red_core.TeleportTo[red_home]) {}
+
+    any_delivered()<transacts>:logic =
+        for (input_player -> state : states):
+            if (state.delivered?):
+                return true
+        return false
+
+    on_button(input_agent:agent, choice:int):void =
+        if (input_player := player[input_agent]):
+            state := get_state(input_player)
+            if (choice = 0):
+                set state.inspected = true
+                feedback.Show(input_player, inspect_result, ?DisplayTime := 6.0)
+                show_request(input_player, state)
+                return
+            if (choice = 9):
+                if (owner := execution_owner?, owner = input_player):
+                    set generation += 1
+                    set execution_owner = false
+                    reset_props()
+                if (set states[input_player] = prompt_workshop_state{}):
+                    show_request(input_player, get_state(input_player))
+                if (not any_delivered()?):
+                    workshop_module.Hide()
+                feedback.Show(input_player, replay_text_notice, ?DisplayTime := 5.0)
+                return
+            if (choice = 8):
+                if (state.delivered?, not state.connected?):
+                    set state.connected = true
+                    progress.award_prompt_badge(input_player)
+                    if (not state.connect_data_awarded?):
+                        set state.connect_data_awarded = true
+                        energy.award(input_player, 3, workshop_module.GetTransform().Translation)
+                    feedback.Show(input_player, connected_text, ?DisplayTime := 8.0)
+                    show_request(input_player, state)
+                else if (state.connected?):
+                    feedback.Show(input_player, repeat_text, ?DisplayTime := 5.0)
+                else:
+                    feedback.Show(input_player, early_text, ?DisplayTime := 5.0)
+                return
+            if (not state.inspected?):
+                feedback.Show(input_player, need_inspect, ?DisplayTime := 4.0)
+                return
+            if (choice = 7):
+                send_request(input_player, state)
+                return
+            if (choice = 1):
+                set state.what = 0
+            else if (choice = 2):
+                set state.what = 1
+            else if (choice = 3):
+                set state.which = 0
+            else if (choice = 4):
+                set state.which = 1
+            else if (choice = 5):
+                set state.destination_choice = 0
+            else if (choice = 6):
+                set state.destination_choice = 1
+            show_request(input_player, state)
+            feedback.Show(input_player, next_step(state), ?DisplayTime := 5.0)
+
+    send_request(input_player:player, state:prompt_workshop_state):void =
+        if (execution_owner?):
+            feedback.Show(input_player, busy, ?DisplayTime := 3.0)
+            return
+        if (state.what < 0 or state.which < 0 or state.destination_choice < 0):
+            feedback.Show(input_player, incomplete, ?DisplayTime := 4.0)
+            return
+        if (state.delivered?):
+            feedback.Show(input_player, delivered_text, ?DisplayTime := 4.0)
+            return
+        set generation += 1
+        set execution_owner = option{input_player}
+        show_request(input_player, state)
+        feedback.Show(input_player, sending_text, ?DisplayTime := 6.0)
+        spawn { run_request(input_player, state.what, state.which, state.destination_choice, generation) }
+
+    still_running(input_player:player, token:int)<transacts><decides>:void =
+        owner := execution_owner?
+        owner = input_player
+        token = generation
+
+    move_together(input_player:player, token:int, core:creative_prop, core_home:transform, core_destination:transform, pix_start:transform, pix_destination:transform)<suspends>:void =
+        for (frame := 1..24):
+            if (not still_running[input_player, token]):
+                return
+            fraction := frame * 1.0 / 24.0
+            var core_frame:transform = core_home
+            var pix_frame:transform = pix_start
+            set core_frame.Translation = core_home.Translation +
+                (core_destination.Translation - core_home.Translation) * fraction
+            set pix_frame.Translation = pix_start.Translation +
+                (pix_destination.Translation - pix_start.Translation) * fraction
+            if (core.TeleportTo[core_frame]) {}
+            if (pix.TeleportTo[pix_frame]) {}
+            Sleep(0.15)
+
+    run_request(input_player:player, what:int, which:int, destination_choice:int, token:int)<suspends>:void =
+        var core:creative_prop = large_blue_core
+        var core_home:transform = large_home
+        if (what = 1):
+            set core = red_core
+            set core_home = red_home
+        else if (which = 1):
+            set core = small_blue_core
+            set core_home = small_home
+        var destination:transform = reactor.GetTransform()
+        var lift:float = 270.0
+        if (destination_choice = 1):
+            set destination = scanner.GetTransform()
+            set lift = 190.0
+        var pickup:transform = core_home
+        set pickup.Translation = core_home.Translation + vector3{Y := -180.0, Z := 90.0}
+        var core_destination:transform = destination
+        set core_destination.Translation = destination.Translation + vector3{Z := lift}
+        var pix_destination:transform = core_destination
+        set pix_destination.Translation = core_destination.Translation + vector3{Y := -180.0, Z := 90.0}
+        pix.MoveTo(pickup, 2.5)
+        if (not still_running[input_player, token]):
+            return
+        move_together(input_player, token, core, core_home, core_destination, pickup, pix_destination)
+        if (not still_running[input_player, token]):
+            return
+        if (what = 0, which = 0, destination_choice = 0):
+            workshop_module.Show()
+            if (state := states[input_player], not state.delivered?):
+                set state.delivered = true
+                if (not state.send_data_awarded?):
+                    set state.send_data_awarded = true
+                    energy.award(input_player, 5, reactor.GetTransform().Translation)
+                feedback.Show(input_player, delivered_text, ?DisplayTime := 8.0)
+        else if (what = 1):
+            feedback.Show(input_player, wrong_what, ?DisplayTime := 7.0)
+        else if (which = 1):
+            feedback.Show(input_player, wrong_which, ?DisplayTime := 7.0)
+        else:
+            feedback.Show(input_player, wrong_where, ?DisplayTime := 7.0)
+        Sleep(2.0)
+        if (not still_running[input_player, token]):
+            return
+        core.MoveTo(core_home, 1.2)
+        pix.MoveTo(pix_home, 1.2)
+        if (still_running[input_player, token]):
+            set execution_owner = false
+            if (state := states[input_player]):
+                show_request(input_player, state)

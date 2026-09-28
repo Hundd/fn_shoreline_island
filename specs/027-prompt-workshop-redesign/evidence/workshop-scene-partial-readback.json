@@ -1,0 +1,686 @@
+{
+  "date": "2026-09-28",
+  "source": "Serialized Unreal MCP create/move/property/readback/save operations",
+  "props": {
+    "prompt_workshop_small_blue_core": {
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1445030347",
+      "got": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+          }
+        ],
+        "mobility": "Movable"
+      },
+      "xform": {
+        "location": {
+          "x": 4500,
+          "y": 1400,
+          "z": 2475
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      }
+    },
+    "prompt_workshop_large_blue_core": {
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1446873348",
+      "got": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+          }
+        ],
+        "mobility": "Movable"
+      },
+      "xform": {
+        "location": {
+          "x": 4900,
+          "y": 1400,
+          "z": 2525
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      }
+    },
+    "prompt_workshop_red_core": {
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1448534349",
+      "got": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_red.mi_prompt_red"
+          }
+        ],
+        "mobility": "Movable"
+      },
+      "xform": {
+        "location": {
+          "x": 4700,
+          "y": 1800,
+          "z": 2525
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      }
+    },
+    "prompt_workshop_reactor": {
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1450208350",
+      "got": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+        },
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+          }
+        ],
+        "mobility": "Static"
+      },
+      "xform": {
+        "location": {
+          "x": 8200,
+          "y": 1400,
+          "z": 2550
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        }
+      }
+    },
+    "prompt_workshop_scanner": {
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1451881351",
+      "got": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+        },
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+          }
+        ],
+        "mobility": "Static"
+      },
+      "xform": {
+        "location": {
+          "x": 8900,
+          "y": 1400,
+          "z": 2460
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.2,
+          "y": 3.2,
+          "z": 1.2
+        }
+      }
+    },
+    "prompt_workshop_module": {
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1453540352",
+      "got": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+          }
+        ],
+        "mobility": "Static"
+      },
+      "xform": {
+        "location": {
+          "x": 9900,
+          "y": 600,
+          "z": 2670
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.2,
+          "y": 2.2,
+          "z": 2.2
+        }
+      }
+    }
+  },
+  "buttons": {
+    "repair_1_slot_1": {
+      "location": {
+        "x": 5375,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    "repair_1_slot_2": {
+      "location": {
+        "x": 5625,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    "repair_1_slot_3": {
+      "location": {
+        "x": 5875,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    "repair_1_slot_4": {
+      "location": {
+        "x": 6125,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    "repair_1_run_button": {
+      "location": {
+        "x": 6375,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    "repair_1_help_button": {
+      "location": {
+        "x": 6625,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    "repair_2_run_button": {
+      "location": {
+        "x": 7400,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "repair_3_claim_button": {
+      "location": {
+        "x": 9900,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "repair_3_replay_button": {
+      "location": {
+        "x": 10300,
+        "y": 600,
+        "z": 2500
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    }
+  },
+  "labels": {
+    "repair_0_control_label_0": {
+      "pose": {
+        "location": {
+          "x": 4700,
+          "y": 370,
+          "z": 2464
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "INSPECT"
+    },
+    "repair_1_control_label_1": {
+      "pose": {
+        "location": {
+          "x": 5375,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "BLUE"
+    },
+    "repair_1_control_label_2": {
+      "pose": {
+        "location": {
+          "x": 5625,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "RED"
+    },
+    "repair_1_control_label_3": {
+      "pose": {
+        "location": {
+          "x": 5875,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "LARGE"
+    },
+    "repair_1_control_label_4": {
+      "pose": {
+        "location": {
+          "x": 6125,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "SMALL"
+    },
+    "repair_1_control_label_5": {
+      "pose": {
+        "location": {
+          "x": 6375,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "REACTOR"
+    },
+    "repair_1_control_label_6": {
+      "pose": {
+        "location": {
+          "x": 6625,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "SCANNER"
+    },
+    "repair_2_control_label_5": {
+      "pose": {
+        "location": {
+          "x": 7400,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "SEND"
+    },
+    "repair_3_control_label_0": {
+      "pose": {
+        "location": {
+          "x": 9900,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "CONNECT"
+    },
+    "repair_3_control_label_7": {
+      "pose": {
+        "location": {
+          "x": 10300,
+          "y": 570,
+          "z": 2444
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      "text": "REPLAY"
+    }
+  },
+  "boards": {
+    "repair_0_board": {
+      "pose": {
+        "location": {
+          "x": 4800,
+          "y": 1100,
+          "z": 2700
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      },
+      "text": "Find the LARGE BLUE core.\nTake it to the POWER REACTOR."
+    },
+    "repair_1_board": {
+      "pose": {
+        "location": {
+          "x": 6700,
+          "y": 1100,
+          "z": 2700
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      },
+      "text": "PROMPT WORKSHOP\nWHAT + WHICH ONE + WHERE\nInspect, choose, Send, then revise."
+    },
+    "repair_0_stage_label_0": {
+      "pose": {
+        "location": {
+          "x": 4500,
+          "y": 1700,
+          "z": 2550
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "text": "SMALL BLUE"
+    },
+    "repair_0_stage_label_1": {
+      "pose": {
+        "location": {
+          "x": 4900,
+          "y": 1700,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "text": "LARGE BLUE"
+    },
+    "repair_2_stage_label_0": {
+      "pose": {
+        "location": {
+          "x": 8200,
+          "y": 1800,
+          "z": 2600
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "text": "POWER REACTOR"
+    },
+    "repair_2_stage_label_1": {
+      "pose": {
+        "location": {
+          "x": 8900,
+          "y": 1800,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "text": "SCANNER"
+    }
+  },
+  "controller": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113",
+    "location": {
+      "x": 6500,
+      "y": 1800,
+      "z": 2450
+    },
+    "configured": false
+  },
+  "entry_zone": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5120603_1689731353",
+    "zoneWidth": 1,
+    "zoneDepth": 1,
+    "zoneHeight": 1
+  }
+}

@@ -1,0 +1,1418 @@
+{
+  "date": "2026-09-28",
+  "groups": {
+    "inspect": {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_1487458395",
+      "transform": {
+        "location": {
+          "x": 4700,
+          "y": 1600,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "component_count": 11,
+      "components": [
+        {
+          "name": "CoreDisplayDeck",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          },
+          "relativeScale3D": {
+            "x": 11,
+            "y": 7,
+            "z": 0.24
+          }
+        },
+        {
+          "name": "CoreDeckFront",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": -350,
+            "z": 34
+          },
+          "relativeScale3D": {
+            "x": 11,
+            "y": 0.2,
+            "z": 0.2
+          }
+        },
+        {
+          "name": "CoreDeckBack",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 350,
+            "z": 34
+          },
+          "relativeScale3D": {
+            "x": 11,
+            "y": 0.2,
+            "z": 0.2
+          }
+        },
+        {
+          "name": "CoreDeckWest",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -550,
+            "y": 0,
+            "z": 34
+          },
+          "relativeScale3D": {
+            "x": 0.2,
+            "y": 7,
+            "z": 0.2
+          }
+        },
+        {
+          "name": "CoreDeckEast",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 550,
+            "y": 0,
+            "z": 34
+          },
+          "relativeScale3D": {
+            "x": 0.2,
+            "y": 7,
+            "z": 0.2
+          }
+        },
+        {
+          "name": "SmallCoreSocket",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": -200,
+            "y": -200,
+            "z": 35
+          },
+          "relativeScale3D": {
+            "x": 2.1,
+            "y": 2.1,
+            "z": 0.14
+          }
+        },
+        {
+          "name": "LargeCoreSocket",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": 200,
+            "y": -200,
+            "z": 35
+          },
+          "relativeScale3D": {
+            "x": 3.1,
+            "y": 3.1,
+            "z": 0.14
+          }
+        },
+        {
+          "name": "RedCoreSocket",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_red.mi_prompt_red"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 200,
+            "z": 35
+          },
+          "relativeScale3D": {
+            "x": 3.1,
+            "y": 3.1,
+            "z": 0.14
+          }
+        },
+        {
+          "name": "DisplayPostWest",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -500,
+            "y": 370,
+            "z": 150
+          },
+          "relativeScale3D": {
+            "x": 0.34,
+            "y": 0.34,
+            "z": 3
+          }
+        },
+        {
+          "name": "DisplayPostEast",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 500,
+            "y": 370,
+            "z": 150
+          },
+          "relativeScale3D": {
+            "x": 0.34,
+            "y": 0.34,
+            "z": 3
+          }
+        },
+        {
+          "name": "DisplayHeader",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 370,
+            "z": 295
+          },
+          "relativeScale3D": {
+            "x": 10.3,
+            "y": 0.34,
+            "z": 0.34
+          }
+        }
+      ]
+    },
+    "compose": {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_1708106396",
+      "transform": {
+        "location": {
+          "x": 6000,
+          "y": 900,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "component_count": 13,
+      "components": [
+        {
+          "name": "ComposeDeck",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 6
+          },
+          "relativeScale3D": {
+            "x": 17,
+            "y": 8.5,
+            "z": 0.12
+          }
+        },
+        {
+          "name": "WhatPad",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": -500,
+            "y": -180,
+            "z": 17
+          },
+          "relativeScale3D": {
+            "x": 4.7,
+            "y": 3.7,
+            "z": 0.09
+          }
+        },
+        {
+          "name": "WhichPad",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": -180,
+            "z": 17
+          },
+          "relativeScale3D": {
+            "x": 4.7,
+            "y": 3.7,
+            "z": 0.09
+          }
+        },
+        {
+          "name": "WherePad",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 500,
+            "y": -180,
+            "z": 17
+          },
+          "relativeScale3D": {
+            "x": 4.7,
+            "y": 3.7,
+            "z": 0.09
+          }
+        },
+        {
+          "name": "BackWall",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 400,
+            "z": 195
+          },
+          "relativeScale3D": {
+            "x": 16.5,
+            "y": 0.35,
+            "z": 2.7
+          }
+        },
+        {
+          "name": "BackTop",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 400,
+            "z": 342
+          },
+          "relativeScale3D": {
+            "x": 16.5,
+            "y": 0.5,
+            "z": 0.24
+          }
+        },
+        {
+          "name": "BackLeft",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -825,
+            "y": 400,
+            "z": 195
+          },
+          "relativeScale3D": {
+            "x": 0.34,
+            "y": 0.5,
+            "z": 2.7
+          }
+        },
+        {
+          "name": "BackRight",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 825,
+            "y": 400,
+            "z": 195
+          },
+          "relativeScale3D": {
+            "x": 0.34,
+            "y": 0.5,
+            "z": 2.7
+          }
+        },
+        {
+          "name": "GroupSplitA",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -250,
+            "y": 400,
+            "z": 195
+          },
+          "relativeScale3D": {
+            "x": 0.24,
+            "y": 0.55,
+            "z": 2.7
+          }
+        },
+        {
+          "name": "GroupSplitB",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 250,
+            "y": 400,
+            "z": 195
+          },
+          "relativeScale3D": {
+            "x": 0.24,
+            "y": 0.55,
+            "z": 2.7
+          }
+        },
+        {
+          "name": "WhatHeader",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": -500,
+            "y": 375,
+            "z": 295
+          },
+          "relativeScale3D": {
+            "x": 4.55,
+            "y": 0.15,
+            "z": 0.3
+          }
+        },
+        {
+          "name": "WhichHeader",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 375,
+            "z": 295
+          },
+          "relativeScale3D": {
+            "x": 4.55,
+            "y": 0.15,
+            "z": 0.3
+          }
+        },
+        {
+          "name": "WhereHeader",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 500,
+            "y": 375,
+            "z": 295
+          },
+          "relativeScale3D": {
+            "x": 4.55,
+            "y": 0.15,
+            "z": 0.3
+          }
+        }
+      ]
+    },
+    "test": {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_1961967397",
+      "transform": {
+        "location": {
+          "x": 8350,
+          "y": 1450,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "component_count": 13,
+      "components": [
+        {
+          "name": "TestDeck",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 8
+          },
+          "relativeScale3D": {
+            "x": 18.5,
+            "y": 9,
+            "z": 0.16
+          }
+        },
+        {
+          "name": "TestFront",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": -450,
+            "z": 24
+          },
+          "relativeScale3D": {
+            "x": 18.5,
+            "y": 0.22,
+            "z": 0.22
+          }
+        },
+        {
+          "name": "TestBack",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 450,
+            "z": 24
+          },
+          "relativeScale3D": {
+            "x": 18.5,
+            "y": 0.22,
+            "z": 0.22
+          }
+        },
+        {
+          "name": "PixDock",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -750,
+            "y": -50,
+            "z": 45
+          },
+          "relativeScale3D": {
+            "x": 2.6,
+            "y": 2.6,
+            "z": 0.5
+          }
+        },
+        {
+          "name": "ReactorDock",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": -150,
+            "y": -50,
+            "z": 29
+          },
+          "relativeScale3D": {
+            "x": 4.1,
+            "y": 4.1,
+            "z": 0.18
+          }
+        },
+        {
+          "name": "ScannerDock",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": 550,
+            "y": -50,
+            "z": 29
+          },
+          "relativeScale3D": {
+            "x": 4.1,
+            "y": 4.1,
+            "z": 0.18
+          }
+        },
+        {
+          "name": "PixPath",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -100,
+            "y": -50,
+            "z": 23
+          },
+          "relativeScale3D": {
+            "x": 12,
+            "y": 0.32,
+            "z": 0.05
+          }
+        },
+        {
+          "name": "ReactorBackPostL",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": -340,
+            "y": 420,
+            "z": 160
+          },
+          "relativeScale3D": {
+            "x": 0.3,
+            "y": 0.3,
+            "z": 3.2
+          }
+        },
+        {
+          "name": "ReactorBackPostR",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 40,
+            "y": 420,
+            "z": 160
+          },
+          "relativeScale3D": {
+            "x": 0.3,
+            "y": 0.3,
+            "z": 3.2
+          }
+        },
+        {
+          "name": "ReactorBackHeader",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": -150,
+            "y": 420,
+            "z": 320
+          },
+          "relativeScale3D": {
+            "x": 4,
+            "y": 0.3,
+            "z": 0.3
+          }
+        },
+        {
+          "name": "ScannerBackPostL",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": 340,
+            "y": 420,
+            "z": 110
+          },
+          "relativeScale3D": {
+            "x": 0.3,
+            "y": 0.3,
+            "z": 2.2
+          }
+        },
+        {
+          "name": "ScannerBackPostR",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": 760,
+            "y": 420,
+            "z": 110
+          },
+          "relativeScale3D": {
+            "x": 0.3,
+            "y": 0.3,
+            "z": 2.2
+          }
+        },
+        {
+          "name": "ScannerBackHeader",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": 550,
+            "y": 420,
+            "z": 220
+          },
+          "relativeScale3D": {
+            "x": 4.5,
+            "y": 0.3,
+            "z": 0.3
+          }
+        }
+      ]
+    },
+    "connect": {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_2023356398",
+      "transform": {
+        "location": {
+          "x": 10100,
+          "y": 850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "component_count": 10,
+      "components": [
+        {
+          "name": "ConnectDeck",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 8
+          },
+          "relativeScale3D": {
+            "x": 12.5,
+            "y": 8.5,
+            "z": 0.16
+          }
+        },
+        {
+          "name": "ConnectFront",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": -425,
+            "z": 24
+          },
+          "relativeScale3D": {
+            "x": 12.5,
+            "y": 0.22,
+            "z": 0.22
+          }
+        },
+        {
+          "name": "ConnectRear",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 425,
+            "z": 24
+          },
+          "relativeScale3D": {
+            "x": 12.5,
+            "y": 0.22,
+            "z": 0.22
+          }
+        },
+        {
+          "name": "ModuleRing",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": -200,
+            "y": -250,
+            "z": 29
+          },
+          "relativeScale3D": {
+            "x": 4.4,
+            "y": 4.4,
+            "z": 0.14
+          }
+        },
+        {
+          "name": "ReplayRing",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": 200,
+            "y": -250,
+            "z": 29
+          },
+          "relativeScale3D": {
+            "x": 3.8,
+            "y": 3.8,
+            "z": 0.14
+          }
+        },
+        {
+          "name": "FinishWall",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 410,
+            "z": 220
+          },
+          "relativeScale3D": {
+            "x": 11.6,
+            "y": 0.35,
+            "z": 3.4
+          }
+        },
+        {
+          "name": "FinishTop",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 410,
+            "z": 390
+          },
+          "relativeScale3D": {
+            "x": 11.6,
+            "y": 0.55,
+            "z": 0.3
+          }
+        },
+        {
+          "name": "FinishLeft",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -580,
+            "y": 410,
+            "z": 205
+          },
+          "relativeScale3D": {
+            "x": 0.4,
+            "y": 0.55,
+            "z": 3.7
+          }
+        },
+        {
+          "name": "FinishRight",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 580,
+            "y": 410,
+            "z": 205
+          },
+          "relativeScale3D": {
+            "x": 0.4,
+            "y": 0.55,
+            "z": 3.7
+          }
+        },
+        {
+          "name": "FinishCoreInset",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cylinder.Cylinder"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": -200,
+            "y": 375,
+            "z": 250
+          },
+          "relativeScale3D": {
+            "x": 2.9,
+            "y": 2.9,
+            "z": 0.2
+          }
+        }
+      ]
+    },
+    "route": {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_2068378399",
+      "transform": {
+        "location": {
+          "x": 7300,
+          "y": 150,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "component_count": 5,
+      "components": [
+        {
+          "name": "AisleNorth",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 230,
+            "z": 1
+          },
+          "relativeScale3D": {
+            "x": 82,
+            "y": 0.18,
+            "z": 0.02
+          }
+        },
+        {
+          "name": "AisleSouth",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": -230,
+            "z": 1
+          },
+          "relativeScale3D": {
+            "x": 82,
+            "y": 0.18,
+            "z": 0.02
+          }
+        },
+        {
+          "name": "InspectThreshold",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": -2200,
+            "y": 0,
+            "z": 1
+          },
+          "relativeScale3D": {
+            "x": 0.22,
+            "y": 4.3,
+            "z": 0.02
+          }
+        },
+        {
+          "name": "ComposeThreshold",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/PromptLab/mi_prompt_blue.mi_prompt_blue"
+            }
+          ],
+          "relativeLocation": {
+            "x": -100,
+            "y": 0,
+            "z": 1
+          },
+          "relativeScale3D": {
+            "x": 0.22,
+            "y": 4.3,
+            "z": 0.02
+          }
+        },
+        {
+          "name": "TestThreshold",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 2100,
+            "y": 0,
+            "z": 1
+          },
+          "relativeScale3D": {
+            "x": 0.22,
+            "y": 4.3,
+            "z": 0.02
+          }
+        }
+      ]
+    },
+    "pix": {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0603_1985166114",
+      "transform": {
+        "location": {
+          "x": 7600,
+          "y": 1400,
+          "z": 2600
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.4,
+          "y": 1.4,
+          "z": 1.4
+        }
+      },
+      "component_count": 9,
+      "components": [
+        {
+          "name": "StaticMeshComponent0",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_teal.mi_academy_teal"
+            }
+          ],
+          "relativeLocation": {
+            "x": 7600,
+            "y": 1400,
+            "z": 2600
+          },
+          "relativeScale3D": {
+            "x": 1.4,
+            "y": 1.4,
+            "z": 1.4
+          }
+        },
+        {
+          "name": "EditorOnlyStaticMeshComponent",
+          "staticMesh": null,
+          "overrideMaterials": [],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "relativeScale3D": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "name": "PixEyeLeft",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": -17.999999999999872,
+            "y": -46.000000000000064,
+            "z": 10
+          },
+          "relativeScale3D": {
+            "x": 0.18,
+            "y": 0.18,
+            "z": 0.18
+          }
+        },
+        {
+          "name": "PixEyeRight",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 17.999999999999872,
+            "y": -46.000000000000064,
+            "z": 10
+          },
+          "relativeScale3D": {
+            "x": 0.18,
+            "y": 0.18,
+            "z": 0.18
+          }
+        },
+        {
+          "name": "PixEyeGlintLeft",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+            }
+          ],
+          "relativeLocation": {
+            "x": -20.99999999999974,
+            "y": -53.000000000000036,
+            "z": 12.99999999999987
+          },
+          "relativeScale3D": {
+            "x": 0.06,
+            "y": 0.06,
+            "z": 0.06
+          }
+        },
+        {
+          "name": "PixEyeGlintRight",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_sand.mi_academy_sand"
+            }
+          ],
+          "relativeLocation": {
+            "x": 15,
+            "y": -53.000000000000036,
+            "z": 12.99999999999987
+          },
+          "relativeScale3D": {
+            "x": 0.06,
+            "y": 0.06,
+            "z": 0.06
+          }
+        },
+        {
+          "name": "PixSmile",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": -51.000000000000064,
+            "z": -17.00000000000013
+          },
+          "relativeScale3D": {
+            "x": 0.32,
+            "y": 0.05,
+            "z": 0.05
+          }
+        },
+        {
+          "name": "PixAntenna",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Cube.Cube"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_navy.mi_academy_navy"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 62.00000000000013
+          },
+          "relativeScale3D": {
+            "x": 0.05,
+            "y": 0.05,
+            "z": 0.28
+          }
+        },
+        {
+          "name": "PixAntennaTip",
+          "staticMesh": {
+            "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+          },
+          "overrideMaterials": [
+            {
+              "refPath": "/fn_shoreline_island/Academy/mi_academy_gold.mi_academy_gold"
+            }
+          ],
+          "relativeLocation": {
+            "x": 0,
+            "y": 0,
+            "z": 80
+          },
+          "relativeScale3D": {
+            "x": 0.18,
+            "y": 0.18,
+            "z": 0.18
+          }
+        }
+      ]
+    }
+  }
+}

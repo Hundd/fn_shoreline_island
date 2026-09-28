@@ -1,0 +1,11 @@
+# Implementation interruption — 2026-09-28
+
+- User approval was recorded in `approval.yaml`; `python tools/map_workflow.py plan specs/027-prompt-workshop-redesign/map.yaml --ready` passed.
+- Exact legacy controller editable bindings were exported to `repair-bindings-preflight.json`. Four repair station actors and the repair progress actor were saved as a recovery checkpoint. Git HEAD before the editor changes was `ca4579fb09c47b5bcc896dfb60d90cd697fed7b5`.
+- Added `fn_shoreline_island_prompt_workshop.verse`, updated hub route and journal copy. UEFN Verse `BuildAll` returned no diagnostics before the final `configured = false` guard was added. That final guard still requires a new build.
+- Placed one workshop VerseDevice at world (6500, 1800, 2450) cm, actor `VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113`; transform and editable property schema read back correctly. It is not configured or bound.
+- Added one workshop Pix `BuildingProp` at world (7600, 1400, 2600) cm, actor `BuildingProp_UAID_E89C2592D1B50B0603_1985166114`; its class, components and transform read back. A call to set its `StaticMeshComponent0` mesh/material/mobility never returned. This mutation's outcome is unknown.
+- After that call, a read-only `get_properties` and even `list_toolsets` stalled. The local MCP TCP port remained open. The editor process existed and Windows reported it responding. The Unreal log's last relevant line is the dispatch of `ObjectTools.set_properties` at 2026-09-28 11:17:14 UTC; no completion/error followed by 11:23 UTC. The computer-use helper failed to connect to its native pipe.
+- No legacy station was removed. No workshop controls, boards, props or reward references were bound. Project validation, cook, solo or multiplayer acceptance tests were not run. The last successful `GetGameState` was `Unconnected` before editing; no session/game was launched during this task. A final live state readback was unavailable because MCP stopped returning.
+- Resume only after the editor/MCP dispatch is restored. First inspect the Pix component's mesh, materials and mobility and verify the new controller's `configured` value and Verse build. Do not retry the ambiguous property write blindly. Then continue the planned scene reconciliation, validation and cooked playtests.
+
