@@ -1,0 +1,9 @@
+# Live editor validation and performance inspection
+
+The scoped live foreground capture confirmed the Project menu in this editor version. It contains New/Open Project, Project Settings, Close Project, Show Project in Explorer, Project Size, Spatial Profiler, Launch Memory Calculation and publishing/team actions. No Validate Project item is present. See validation-project-menu-live.png. This establishes that the requested menu path is unavailable here; it does not establish the absence of every possible validation command elsewhere. Earlier local launch-validation completion remains separate evidence.
+
+The first foreground helper attempt rejected input because UEFN was not foreground. PrintWindow capture subsequently omitted the separate Session Inspector window and could not establish menu state. validation-project-menu.png therefore is not menu evidence. Live foreground capture revealed that inspector; closing it allowed a verified menu inspection. No project-content mutation occurred.
+
+The Game Performance popup says a performance issue occurred during playtest. Take a Look opened Spatial Profiler after a short delay. performance-frame-time.png records the diagnostic: Frame Time, this location averaged higher than the threshold allows, with a suggestion to start a Timing Insights capture. The current source also reports Energy Saving Mode and asks to keep the client focused or disable that mode. There are disconnected historical source tabs.
+
+This identifies the reported metric, not its root cause or a causal connection to the spec 026 layout. No Timing Insights trace was taken, no performance setting was changed, and the warning is not accepted as harmless or resolved. The profiler and Session Inspector were closed; the editor remains open. No playtest game was started during this inspection.

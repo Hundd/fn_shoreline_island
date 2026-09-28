@@ -1,6 +1,8 @@
 # 026: Prompt Lab - Aim, Refine, Deliver
 
-Status: planning and offline blockout only, 2026-09-27. No scene or gameplay-code changes authorized. No approval record.
+Status: original layout and surveyed floor-height correction explicitly approved by the user, 2026-09-27. Implementation in progress; gameplay acceptance remains open.
+
+Validation scope update, 2026-09-28: after a solo check, the user explicitly said “i checked solo, lets skip multiplayer”. AC-08 is waived as a test gate for this implementation, not passed or observed. No multiplayer behavior or shared-state policy was changed. All other acceptance requirements remain open until supported by evidence.
 
 ## Intent and baseline
 
@@ -18,6 +20,10 @@ Make Prompt Lab feel like helping Pix operate a machine: aim at WHAT, add WHICH 
 - FR-008 Keep the west walking exit available throughout. Completion does not require walking to the module or using the rail. Preserve the existing rail/door/module geometry and enable timing; rail boarding and hub endpoint remain an inherited feature-024 test gap, not a verified return route. Reverse walking-route acceptance is required.
 - FR-009 This phase produces an offline preview, generated plan, requirement-linked review and evidence only. Implementation requires resolved blockers, real human approval of the concrete revision, readiness check, serialized MCP, full readback, validation/cook and gameplay evidence. Finish with no running playtest and UEFN open.
 
+## Approved survey correction
+
+Keep all nine hit anchors and the board at their approved positions. Translate target-owned cues, labels, hit surfaces and the five core visuals by the full anchor delta. For the floor-mounted reactor, scanner and storage props, preserve their measured world Z of 2550, 2520 and 2570cm respectively while applying their target's XY delta. Preserve reactor VFX Z2850 and floor cable VFX Z2450 while translating their XY with the reactor. This changes assembly Z offsets, not target height, sequence, source, controller or return geometry. See evidence/offset-correction.md and evidence/resolved-delta.json.
+
 ## Given / When / Then acceptance
 
 1. **AC-01 (FR-001/002/003):** Given a fresh player with the hub blaster, when they walk up the west ramp through the current entry zone, then the existing intro starts and BLUE/RED/GREEN activate; no button sequence, jump or reading detour is required.
@@ -27,14 +33,14 @@ Make Prompt Lab feel like helping Pix operate a machine: aim at WHAT, add WHICH 
 5. **AC-05 (FR-005/006):** Given acquired core, when SCANNER and STORAGE are tried before REACTOR, then progress stays intact; REACTOR starts delivery and the entire finale completes, grants eligible badge ownership once and totals 8 DATA on a fresh solo run.
 6. **AC-06 (FR-002/003/008):** Given a player completing from the firing area, when Pix delivers, then the core-to-reactor action is visible and module completion is communicated by board/HUD without a forced 40m walk. The player can walk back west without jumping. Rail boarding is tested separately and never inferred from enablement.
 7. **AC-07 (FR-005/006/007):** Given intro, rejection, moving-core or finale state, when Replay is used, then stale work cannot advance or reward the new run; initial props return, DATA/badge remain and the intro restarts. Round reset clears DATA. Walking out/re-entry preserves the current stage; last enrolled player leaving the playspace resets it.
-8. **AC-08 (FR-001/006/007):** Given two real players sharing the room, when they alternate/simultaneously shoot, join mid-stage, respawn or replay, then each stage advances once and per-hit DATA goes to the actual shooter. Existing enrolled-participant finale policy is retained; a player who never enrolled earns no room reward. Record the walked-out enrolled-player case explicitly.
+8. **AC-08 (FR-001/006/007; user-waived test gate 2026-09-28):** Given two real players sharing the room, when they alternate/simultaneously shoot, join mid-stage, respawn or replay, then each stage advances once and per-hit DATA goes to the actual shooter. Existing enrolled-participant finale policy is retained; a player who never enrolled earns no room reward. Record the walked-out enrolled-player case explicitly if this test is run later. The user directed us to skip multiplayer testing for this implementation; this scenario is not claimed as verified.
 9. **AC-09 (FR-003/004):** Given a first-time player, when they finish, then they can explain why LARGE resolves two blue cores and WHERE determines delivery; obtain feedback on readable hints, target visibility, forgiving aim and enjoyment. Recognize that fixed prompts test matching rather than free-form prompt writing.
-10. **AC-10 (FR-009):** Given this planning revision, when offline check and preview review finish, then artifacts record assumptions and no approval/gameplay completion is fabricated; game state is CanStart or Unconnected. After future implementation, build/validate/cook and AC-01 through AC-09 are required before acceptance.
+10. **AC-10 (FR-009):** Given this planning revision, when offline check and preview review finish, then artifacts record assumptions and no approval/gameplay completion is fabricated; game state is CanStart or Unconnected. After implementation, build/validate/cook and AC-01 through AC-09 are required before acceptance, except AC-08's multiplayer test gate, which the user explicitly waived on 2026-09-28. Record unavailable validation controls without claiming they ran.
 
-## Human decisions still needed
+## Approved scope decisions
 
-1. Does the compact Aim / Refine / Deliver layout with **scripted Pix hints** meet the request? Recommendation: yes; live/generated or adaptive hints need a separate reusable adapter design.
-2. Keep the rail optional and the west ramp as the dependable design for return, or include a separately surveyed rail repair in the scope? Recommendation: optional rail; no rail mutations in this revision.
-3. Keep the existing shared participation/reset policy? Recommendation: preserve it for this layout change. Room-exit reset or per-player progress would be new gameplay-code scope.
+1. The approved compact layout retains **scripted Pix hints**. Live/generated or adaptive hints would need a separate reusable adapter design.
+2. The rail stays optional; the west ramp is the required walking return. No rail mutation is included.
+3. The existing shared participation/reset policy is preserved. Room-exit reset or per-player progress would be new gameplay-code scope.
 
-Answering these questions is not automatically approval to implement. Approval must identify the concrete generated revision, with blockers resolved first.
+Actual approval evidence is in approval.yaml and evidence/approval-record.md. Any further material design change requires review of its concrete revision. Required gameplay acceptance remains open.

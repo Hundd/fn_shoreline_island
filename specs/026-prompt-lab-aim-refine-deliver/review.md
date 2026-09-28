@@ -33,3 +33,6 @@ These are not removed by successful YAML validation. Survey results that materia
 - 32 baseline files (top-level Verse plus playable map) hash-identical. No Unreal mutation calls issued.
 - Final session readback: Disconnected; game Unconnected. No running playtest to stop; UEFN left open.
 - No `approval.yaml`; no `--ready` attempted because this is an explicitly unapproved planning phase.
+# Implementation preflight follow-up - 2026-09-27
+
+Original revision approved by the user: "implement spec 026, it is approved". Native preflight reconciled all wrappers and prepared complete transforms. FR-004 has one definite conflict: the full destination assembly Z translation buries floor machines. Proposed correction retains their measured Z and translates XY, including reactor floor effects, while retaining every approved marker and gameplay rule. See evidence/offset-correction.md and evidence/resolved-delta.json. The corrected revision requires approval; the existing approval.yaml remains evidence of approval of the original digest. Cooked visibility, outer-third shots, walking, lifecycle, multiplayer and first-time learning acceptance remain open. No editor mutation has run.

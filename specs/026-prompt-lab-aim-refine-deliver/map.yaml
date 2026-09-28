@@ -374,6 +374,10 @@ devices:
     proposed_anchor_height_m: 2.2
     required_hit_coverage: preserve current generous surface; verify maximum pulsed ring coverage and
       no overlap
+    resolved_delta: evidence/resolved-delta.json
+    machinery_height_policy: proposed XY-only relocation for destination machines and reactor floor effects;
+      preserve measured Z to prevent burial; corrected revision requires human approval
+    shared_audio_policy: preserve shared hit/retry pair at current transforms
     moving_target_id: 5
     moving_offset_y_m: 2.5
     moving_leg_seconds: 4
@@ -524,23 +528,25 @@ assumptions:
   evidence: Content/fn_shoreline_island_prompt_blaster.verse; live configured=true and nine ordered targets
     in evidence/read-only-inspection.json
 - id: design_review
-  status: open
-  detail: Human must review proposed target layout, lowered board, scripted hints and optional rail. No
-    approval record exists.
-  evidence: User planning-only request; spec.md and generated/preview.html
+  status: resolved
+  detail: User approved the original layout and the surveyed floor-height correction. Target and board
+    anchors remain unchanged; preserve floor-machine and reactor floor-effect Z while translating XY.
+  evidence: User replies "implement spec 026, it is approved" and "Approve the floor-height correction";
+    approval.yaml and evidence/approval-record.md
 - id: assembly_survey
-  status: open
-  detail: Resolve all target mesh pivots, actual pulsed footprints, collisions, cone/VFX/audio anchors
-    and savedActor references into complete transforms; test sightlines from the firing area before execution
-    readiness.
-  evidence: 13 anchor transforms measured; Verse device readback contains wrapper refs for native actors.
-    plan.md scene delta is not a complete native payload.
+  status: resolved
+  detail: Native wrappers, complete transforms, mesh hull and pulsed ring coverage surveyed; 87 exact
+    full-transform operations prepared. Destination machine Z exception awaits design_review. Cooked
+    visibility and outer-third hit acceptance remain post-implementation gates.
+  evidence: evidence/implementation-preflight.json; evidence/clearance-survey.json;
+    evidence/scenery-survey.json; evidence/resolved-delta.json; evidence/offset-correction.md
 - id: approach_and_replay
-  status: open
-  detail: Survey existing replay control and entry volume extents; prove proposed walking lane, board
-    clearance and reverse west-ramp return. Full rail spline remains outside this compact preview.
-  evidence: Feature 024 west inbound walk succeeded; return-boarding-comparison-2026-09-27.md leaves rail
-    boarding open.
+  status: resolved
+  detail: Entry native 6x12x3 Box settings, replay transform, raised scenery and floor/ramp join surveyed.
+    Use west crossing near local Y40. Low pads retain ordinary walking steps. Reverse walking, actual
+    volume enrollment, board readability and replay access remain cooked acceptance checks.
+  evidence: evidence/offset-correction.md and native evidence/clearance-survey.json;
+    evidence/implementation-preflight.json; evidence/scenery-survey.json
 - id: lifecycle_scope
   status: resolved
   detail: Preserve shared replay and playspace-departure behavior. Walking out does not unsubscribe participants

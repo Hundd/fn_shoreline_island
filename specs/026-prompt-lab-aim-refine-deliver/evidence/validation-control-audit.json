@@ -1,0 +1,38 @@
+{
+  "local_validation_completions": [
+    "[2026.09.27-03.37.49:560][658]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-03.50.17:435][878]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.05.31:851][750]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.09.14:999][477]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.15.08:456][863]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.18.51:824][641]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.22.05:857][ 15]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.25.35:326][256]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.28.46:209][785]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-04.32.38:184][ 74]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-05.26.30:766][284]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-11.03.15:772][321]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-11.19.22:133][552]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-11.50.30:727][320]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-15.44.57:067][ 45]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-16.15.04:346][ 25]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-16.36.24:086][242]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-16.47.19:481][497]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-16.53.54:235][980]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-17.03.01:739][472]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+    "[2026.09.27-17.24.56:647][371]LogValkyrie: FlowStep_RunLocalValidation(): Complete"
+  ],
+  "validation_category_warning_error_entries": [
+    "[2026.09.27-00.16.55:064][  6]LogValkyrieValidation: Error: Disallowed reference to /HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Updated_Stark_Athena_R_Ore_T03.WID_Assault_Updated_Stark_Athena_R_Ore_T03, Referenced by: Content/__ExternalActors__/fn_shoreline_island/7/C1/UT8AIE2057M0SJPHZSGBUK.uasset (Device_ItemGranter_V2_C), Plugin: fn_shoreline_island.",
+    "[2026.09.27-00.16.55:064][  6]LogValkyrieValidation: Error: \tActor (data_blaster_automatic_granter) of Class (Device_ItemGranter_V2_C) referenced Disallowed Object (/HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Updated_Stark_Athena_R_Ore_T03.WID_Assault_Updated_Stark_Athena_R_Ore_T03)",
+    "[2026.09.27-00.29.04:752][693]LogValkyrieValidation: Error: Package Actor 'data_blaster_automatic_granter' in World /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island references disallowed object /HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Updated_Stark_Athena_R_Ore_T03.WID_Assault_Updated_Stark_Athena_R_Ore_T03.",
+    "[2026.09.27-00.29.09:419][837]LogValkyrieValidation: Error: Disallowed reference to /HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Updated_Stark_Athena_R_Ore_T03.WID_Assault_Updated_Stark_Athena_R_Ore_T03, Referenced by: Content/__ExternalActors__/fn_shoreline_island/7/C1/UT8AIE2057M0SJPHZSGBUK.uasset (Device_ItemGranter_V2_C), Plugin: fn_shoreline_island.",
+    "[2026.09.27-00.29.09:420][837]LogValkyrieValidation: Error: \tActor (data_blaster_automatic_granter) of Class (Device_ItemGranter_V2_C) referenced Disallowed Object (/HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Updated_Stark_Athena_R_Ore_T03.WID_Assault_Updated_Stark_Athena_R_Ore_T03)",
+    "[2026.09.27-00.31.51:922][  9]LogValkyrieValidation: Error: Package Actor 'data_blaster_automatic_granter' in World /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island references disallowed object /HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Stark_Athena_R_Ore_T03.WID_Assault_Stark_Athena_R_Ore_T03.",
+    "[2026.09.27-00.31.57:530][145]LogValkyrieValidation: Error: Disallowed reference to /HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Stark_Athena_R_Ore_T03.WID_Assault_Stark_Athena_R_Ore_T03, Referenced by: Content/__ExternalActors__/fn_shoreline_island/7/C1/UT8AIE2057M0SJPHZSGBUK.uasset (Device_ItemGranter_V2_C), Plugin: fn_shoreline_island.",
+    "[2026.09.27-00.31.57:530][145]LogValkyrieValidation: Error: \tActor (data_blaster_automatic_granter) of Class (Device_ItemGranter_V2_C) referenced Disallowed Object (/HighTower/Items/Tomato/Tomato_Rifle/WID_Assault_Stark_Athena_R_Ore_T03.WID_Assault_Stark_Athena_R_Ore_T03)"
+  ],
+  "interpretation": "Returned errors predate spec 026 implementation. No returned LogValkyrieValidation warning/error is timestamped after the first implementation launch validation at 15:44:57.067. This bounded query is not proof of warning-free project validation or of the cause of the visible performance warning.",
+  "computer_use_error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)",
+  "game_state": "CanStart"
+}

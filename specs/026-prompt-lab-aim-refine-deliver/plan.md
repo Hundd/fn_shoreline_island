@@ -1,4 +1,4 @@
-# Implementation proposal - awaiting review
+# Approved implementation plan with surveyed floor-height correction
 
 ## Reuse and evidence
 
@@ -28,6 +28,8 @@ Coordinates are local XYZ meters, origin world `(6000,-8500,2410)`cm. Platform 6
 
 For each target, translate its existing surface, visual prop, label/ring/cone, VFX and sound assembly by the same anchor delta, preserving known relative offsets. Discover complete ownership first; do not move unrelated legacy machinery just because it is nearby. Move the bound reactor and reactor effects with target 6 only after surveying offsets and cable endpoints; door/module/rail remain fixed. Ring, label and particles follow hit surfaces at runtime; cone/objective effects and decorative props may not, so their home transforms must be reconciled too. Target Verse device origins are not necessarily the visual anchors.
 
+The user approved the surveyed correction: shared hit/retry audio is one common pair and stays fixed. Destination machinery and reactor/cable effects receive XY translation only, retaining measured floor height. Full Z translation would put reactor bottom at2255cm, scanner bottom at2315cm and storage bottom at2265cm, below floor top2410cm. Exact 87 full-transform operations, including device origins, are preserved in the pre-implementation evidence/resolved-delta.json. They have now been applied, read back and saved; move-*.json records actual outcomes. All original marker positions, rotation/scale, nine IDs and bindings remain unchanged. Details are in evidence/offset-correction.md and implementation-results.md.
+
 Preserve trigger pitch90/yaw0/roll0 and scale3.5/3.5/2 from live readback until footprint survey proves otherwise. Preserve board yaw180/scale3. Do not treat these scale numbers as physical meters. Lowered targets retain current generous surfaces; actual pivots/bounds must prove floor clearance. Any need to shrink surfaces, alter target positions materially, or move machinery beyond these assemblies returns to design review.
 
 No additional spawners, buttons, walls, physical gates, floor expansion or props are specified. Entry, shared managers, replay, HUD, module, door, rail, west/north ramps and legacy handoff are preserved. Move only the nine reconciled target assemblies and existing board. The generated `reconcile` entries describe intent, not executable payloads or instructions to duplicate devices.
@@ -53,11 +55,11 @@ Core5 moves along y48.5-53.5 at x38, then freezes. Preserve four seconds per leg
 
 The main board persists after timed HUD messages. Existing text is hardcoded; editor text changes would be overwritten. No new hint wording, localization system or adaptive response is implied by `map.yaml`. If the user wants them, approve a separate reusable configuration adapter before implementation.
 
-## Blockers before execution
+## Execution gates and current status
 
-1. Human review of this exact layout/hint/return scope. No `approval.yaml` exists.
-2. Complete assembly and native-binding survey, target bounds/collision, floor clearance, stage-specific shot paths and reactor/cable offsets. Resolve concrete full transforms without inventing pivots through MCP.
-3. Survey entry-volume bounds and replay access; clear the3m lane and reverse west return. Record any scenery conflict. Rail repair is excluded; its historical failure stays visible.
+1. Actual original and correction approvals are recorded in approval.yaml and evidence/approval-record.md. Readiness passed with the current digest.
+2. Assembly/native-binding/bounds/clearance/reactor-offset preflight and recovery checkpoint are recorded. Serialized implementation and readback completed. Cooked shot-path and readability acceptance remain open.
+3. Entry-volume and lane surveys are recorded. Cooked walking entry, reverse exit to grass and re-entry have been observed without jump input; decorative stairs complicate finding the route. Solo replay during intro, rejection, moving-core and finale states, respawn, and repeated badge ownership have recorded evidence. Two-player attribution, late join, last-participant departure and first-time-player feedback remain open. See evidence/acceptance-status.md for the consolidated status. Rail repair is excluded; its historical failure stays visible.
 
 Cooked tests are post-implementation acceptance gates, not prerequisites requiring an impossible pre-implementation playtest of the new design. Unresolved survey/design assumptions still block readiness.
 

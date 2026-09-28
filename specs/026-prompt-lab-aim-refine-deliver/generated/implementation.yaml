@@ -1,18 +1,10 @@
 version: 1
 map_id: prompt_lab_aim_refine_deliver
-spec_digest: 209acb1b29aa8a383e4bf7e0e62147d0193bdb6cf1053cb3974fb5ab68e3d34c
+spec_digest: 570bea3a9be804a7d3ec7889c127410d9fc5ab16a02a6577138c2312bf74b908
 patterns_digest: 18ddda2fcef5edbb7f1d19fbe85cbb29a1821b863bf5a8cdf1a23218d5d8d981
 status: draft_requires_explicit_human_approval
 executable: false
-blockers:
-- 'design_review: Human must review proposed target layout, lowered board, scripted
-  hints and optional rail. No approval record exists.'
-- 'assembly_survey: Resolve all target mesh pivots, actual pulsed footprints, collisions,
-  cone/VFX/audio anchors and savedActor references into complete transforms; test
-  sightlines from the firing area before execution readiness.'
-- 'approach_and_replay: Survey existing replay control and entry volume extents; prove
-  proposed walking lane, board clearance and reverse west-ramp return. Full rail spline
-  remains outside this compact preview.'
+blockers: []
 position_tolerance_m: 0.25
 implementation:
 - step: inspect_existing
@@ -309,6 +301,11 @@ implementation:
       proposed_anchor_height_m: 2.2
       required_hit_coverage: preserve current generous surface; verify maximum pulsed
         ring coverage and no overlap
+      resolved_delta: evidence/resolved-delta.json
+      machinery_height_policy: proposed XY-only relocation for destination machines
+        and reactor floor effects; preserve measured Z to prevent burial; corrected
+        revision requires human approval
+      shared_audio_policy: preserve shared hit/retry pair at current transforms
       moving_target_id: 5
       moving_offset_y_m: 2.5
       moving_leg_seconds: 4
