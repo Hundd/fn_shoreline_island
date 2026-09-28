@@ -1,0 +1,526 @@
+version: 1
+map_id: prompt_workshop
+spec_digest: 9469832505e1fc73e5d15886ed6056d21118570095bda71a2c90ae0ef8e8dddc
+patterns_digest: afe799579afa01f7e9526087150d2592f95408ace8d6e97e2778bc2cfeb613a5
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: prompt_workshop
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 6000
+  - -5700
+  - 2410
+  size_cm:
+  - 2000
+  - 3000
+  - 1500
+  parameters:
+    width_m: 3
+    access: existing west ramp
+  markers:
+  - id: arrival_point
+    kind: spawn
+    zone: arrival
+    label: Hub arrival, no new spawn pad
+    position:
+    - 15
+    - 33
+    - 1.9
+    source: MEASURED feature-026 entry-volume center; proposed walking route from
+      here
+  - id: west_exit
+    kind: exit
+    zone: arrival
+    label: Always open west ramp
+    position:
+    - 0
+    - 40
+    - 0
+    source: Existing ramp; inbound and outbound walking evidence in feature-026, exact
+      clearance to recheck
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: inspect
+  pattern: knowledge_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 8000
+  - -5700
+  - 2410
+  size_cm:
+  - 1400
+  - 2800
+  - 1500
+  parameters:
+    lesson: Find the large blue core. Take it to the power reactor.
+    duration_seconds: 4
+    hud_copy: true
+  markers:
+  - id: inspect_control
+    kind: knowledge
+    zone: inspect
+    label: Inspect clue
+    position:
+    - 25
+    - 37
+    - 1.2
+    source: PROPOSED control anchor; reuse legacy scanner button after native transform/binding
+      survey
+  - id: clue_board_marker
+    kind: knowledge
+    zone: inspect
+    label: Large blue to reactor clue
+    position:
+    - 29
+    - 33
+    - 3
+    source: PROPOSED readable board anchor; reused board and copy need scoped source
+      update
+  - id: small_core_marker
+    kind: target
+    zone: inspect
+    label: SMALL BLUE visual
+    target_id: 0
+    position:
+    - 23
+    - 48
+    - 2
+    source: PROPOSED visual prop, no gun hit surface; reconcile existing small blue
+      prop
+  - id: large_core_marker
+    kind: target
+    zone: inspect
+    label: LARGE BLUE visual
+    target_id: 1
+    position:
+    - 30
+    - 48
+    - 2
+    source: PROPOSED visual prop, no gun hit surface; reconcile existing large blue
+      prop
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: compose
+  pattern: prompt_workbench
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 9400
+  - -5700
+  - 2410
+  size_cm:
+  - 1800
+  - 2800
+  - 1500
+  parameters:
+    choice_count: 6
+    shared_state: false
+  markers:
+  - id: what_controls
+    kind: knowledge
+    zone: compose
+    label: WHAT Blue / Red
+    position:
+    - 38
+    - 33
+    - 1
+    source: PROPOSED paired button bay; reuse legacy selectors if sound
+  - id: which_controls
+    kind: knowledge
+    zone: compose
+    label: WHICH Large / Small
+    position:
+    - 43
+    - 33
+    - 1
+    source: PROPOSED paired button bay; reuse legacy selectors if sound
+  - id: where_controls
+    kind: knowledge
+    zone: compose
+    label: WHERE Reactor / Scanner
+    position:
+    - 48
+    - 33
+    - 1
+    source: PROPOSED paired button bay; reuse legacy selectors if sound
+  - id: send_control
+    kind: knowledge
+    zone: compose
+    label: SEND / see Pix act
+    position:
+    - 43
+    - 48
+    - 1
+    source: PROPOSED button anchor; existing send binding to reconcile
+  - id: request_board_marker
+    kind: knowledge
+    zone: compose
+    label: Persistent WHAT / WHICH / WHERE request
+    position:
+    - 43
+    - 38
+    - 3
+    source: PROPOSED board anchor; existing prompt_hologram source is editable
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: connect
+  pattern: reward_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 11200
+  - -6700
+  - 2410
+  size_cm:
+  - 1400
+  - 3800
+  - 1500
+  parameters:
+    badge: Prompt Badge
+    return_mode: west walking route
+  markers:
+  - id: reactor_marker
+    kind: target
+    zone: connect
+    label: POWER REACTOR destination
+    target_id: 2
+    position:
+    - 57
+    - 48
+    - 1.5
+    source: PROPOSED destination prop; preserve floor clearance; no gun hit surface
+  - id: scanner_marker
+    kind: target
+    zone: connect
+    label: SCANNER wrong destination
+    target_id: 3
+    position:
+    - 63
+    - 48
+    - 1.5
+    source: PROPOSED destination prop; no gun hit surface
+  - id: module_marker
+    kind: reward
+    zone: connect
+    label: Prompt Module and Connect
+    position:
+    - 64
+    - 23
+    - 2.7
+    source: MEASURED feature-026 module anchor; Connect location proposed near existing
+      module
+  - id: replay_marker
+    kind: checkpoint
+    zone: connect
+    label: Replay
+    position:
+    - 55
+    - 30
+    - 1
+    source: PROPOSED accessible control position; exact existing replay transform
+      to reconcile
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: entry
+    class: mutator_zone_device
+    count: 1
+    source: Feature-026 measured entry zone
+    settings:
+      action: reuse
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controller
+    class: fn_shoreline_island_prompt_lab_controller
+    count: 1
+    source: Content/fn_shoreline_island_prompt_lab_controller.verse; feature-023 bound
+      legacy controller
+    settings:
+      action: reuse and refactor; only one Prompt controller active
+      use_blaster_mode: false
+      personal_choices: true
+      execution: serialized
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: clue_button
+    class: button_device
+    count: 1
+    source: Feature-023 target_scanner binding; current state must be surveyed
+    settings:
+      action: reuse
+      label: Inspect
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: choices
+    class: button_device
+    count: 6
+    source: Feature-023 Blue/Red, Small/Large, Reactor/Research selectors; live bindings
+      to reconcile
+    settings:
+      action: reuse
+      labels:
+      - BLUE
+      - RED
+      - LARGE
+      - SMALL
+      - REACTOR
+      - SCANNER
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: send
+    class: button_device
+    count: 1
+    source: Feature-023 send_button binding
+    settings:
+      action: reuse
+      label: Send to Pix
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: connect_button
+    class: button_device
+    count: 1
+    source: Feature-023 module_connection binding
+    settings:
+      action: reuse
+      label: Connect
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: replay
+    class: button_device
+    count: 1
+    source: Feature-023 replay_button binding; feature-026 replay
+    settings:
+      action: reuse
+      label: Replay
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: clue_board
+    class: billboard_device
+    count: 1
+    source: Feature-023 target_hologram or feature-026 board; exact actor to reconcile
+    settings:
+      action: reuse
+      readable_height_m: 3
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: prompt_board
+    class: billboard_device
+    count: 1
+    source: Feature-023 prompt_hologram binding
+    settings:
+      action: reuse
+      shows: WHAT / WHICH / WHERE
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: feedback
+    class: hud_message_device
+    count: 1
+    source: Feature-023 controller feedback binding
+    settings:
+      action: reuse
+      scope: personal
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: pix
+    class: creative_prop
+    count: 1
+    source: Feature-023 Pix prop and controller binding; scene readback needed
+    settings:
+      action: reuse
+      wrong_result: visible
+      correct_result: visible
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: cores
+    class: creative_prop
+    count: 3
+    source: Feature-023 blue/red/small/large core inventory; exact reuse set to reconcile
+    settings:
+      action: reuse
+      reset_home: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: reactor_prop
+    class: creative_prop
+    count: 1
+    source: Feature-026 reactor assembly; source binding survey needed
+    settings:
+      action: reuse
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: scanner_prop
+    class: creative_prop
+    count: 1
+    source: Feature-023 research scanner; source binding survey needed
+    settings:
+      action: reuse
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: module
+    class: creative_prop
+    count: 1
+    source: Feature-026 Prompt Module
+    settings:
+      action: reuse
+      anchor_local:
+      - 64
+      - 23
+      - 2.7
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: byte_island_game_manager
+    count: 1
+    source: Content/byte_island_game_manager.verse
+    settings:
+      action: reuse
+      badge: existing_prompt_badge_guard
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: energy
+    class: fn_shoreline_island_data_energy
+    count: 1
+    source: Content/fn_shoreline_island_data_energy.verse
+    settings:
+      action: reuse
+      accepted_send_data: 5
+      connect_data: 3
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: enter
+    zone: arrival
+    purpose: Arrive from hub
+    requires: []
+    active_targets: []
+    completion: Entry records player and shows brief invitation.
+  - id: inspect_scene
+    zone: inspect
+    purpose: Discover the specific request
+    requires:
+    - enter
+    active_targets: []
+    completion: Inspect reveals large blue and power reactor.
+  - id: assemble
+    zone: compose
+    purpose: Set three editable slots
+    requires:
+    - inspect_scene
+    active_targets: []
+    completion: WHAT WHICH WHERE all selected; replacements remain possible.
+  - id: test
+    zone: compose
+    purpose: Send and observe a concrete result
+    requires:
+    - assemble
+    active_targets: []
+    completion: Wrong request returns to editing with correct slots retained; correct
+      request powers module.
+  - id: delivered
+    zone: connect
+    purpose: Connect powered module
+    requires:
+    - test
+    active_targets: []
+    completion: Badge guarded and finale DATA awarded once for this run.
+  connections:
+  - from: arrival
+    to: inspect
+    mode: walk
+    width: 3
+    points:
+    - - 15
+      - 40
+      - 0
+    - - 20
+      - 40
+      - 0
+    - - 27
+      - 40
+      - 0
+    gate: always
+  - from: inspect
+    to: compose
+    mode: walk
+    width: 3
+    points:
+    - - 27
+      - 40
+      - 0
+    - - 34
+      - 40
+      - 0
+    - - 43
+      - 40
+      - 0
+    gate: always
+  - from: compose
+    to: connect
+    mode: walk
+    width: 3
+    points:
+    - - 43
+      - 40
+      - 0
+    - - 52
+      - 40
+      - 0
+    - - 59
+      - 40
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

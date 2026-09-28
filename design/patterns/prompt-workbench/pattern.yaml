@@ -1,0 +1,23 @@
+version: 1
+id: prompt_workbench
+purpose: "Build, send, observe, and revise a request using physical controls."
+parameters:
+  - name: choice_count
+    type: integer
+    required: true
+  - name: shared_state
+    type: boolean
+    required: true
+expected_devices: ["button_device", "billboard_device", "hud_message_device"]
+verse_behavior: "Reuse the feature-023 prompt_lab_controller's per-player selection, Send, visible wrong-result, board, replay, and badge hooks. This proposal requires a scoped flow refactor and a clean build; parameters do not configure arbitrary lessons."
+geometry: "Inspect clues and choose labelled controls from one compact, walkable work area; Send remains in sight."
+interaction: "Player observes a clue, chooses WHAT and WHERE, sends, sees Pix act, then changes only a mistaken detail."
+completion: "Correct request is visibly delivered; final module interaction awards the guarded badge."
+reset: "Replay cancels outstanding actions and restores choices and props; round reset clears temporary state; earned badge remains guarded."
+debug:
+  - "All button references and active mode"
+  - "Wrong result preserves the correct detail"
+  - "No duplicate controller or badge award"
+  - "Replay during Pix movement"
+  - "Two-player state isolation"
+implementation_status: existing_adapter

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 755" role="img" aria-label="Prompt Workshop - inspect, compose, test, connect blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="755" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Prompt Workshop - inspect, compose, test, connect — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="45" y="345" width="200" height="300" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="364">West arrival and return</text>
+<text font-size="11" x="52" y="380">20 × 30m</text>
+<rect x="565" y="245" width="140" height="380" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="572" y="264">4 Connect module</text>
+<text font-size="11" x="572" y="280">14 × 38m</text>
+<rect x="385" y="345" width="180" height="280" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="392" y="364">2 Compose / 3 Test</text>
+<text font-size="11" x="392" y="380">18 × 28m</text>
+<rect x="245" y="345" width="140" height="280" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="252" y="364">1 Inspect the scene</text>
+<text font-size="11" x="252" y="380">14 × 28m</text>
+<polyline points="195,465 245,465 315,465" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → inspect / always</title></polyline>
+<polyline points="315,465 385,465 475,465" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>inspect → compose / always</title></polyline>
+<polyline points="475,465 565,465 635,465" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>compose → connect / always</title></polyline>
+<g><title>Hub arrival, no new spawn pad; XYZ [15, 33, 1.9]; MEASURED feature-026 entry-volume center; proposed walking route from here</title><circle cx="195" cy="395" r="8" fill="#42a86b" stroke="white"/>
+<text x="195" y="398" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Always open west ramp; XYZ [0, 40, 0]; Existing ramp; inbound and outbound walking evidence in feature-026, exact clearance to recheck</title><circle cx="45" cy="465" r="8" fill="#526476" stroke="white"/>
+<text x="45" y="468" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Inspect clue; XYZ [25, 37, 1.2]; PROPOSED control anchor; reuse legacy scanner button after native transform/binding survey</title><circle cx="295" cy="435" r="8" fill="#329bd0" stroke="white"/>
+<text x="295" y="438" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>Large blue to reactor clue; XYZ [29, 33, 3]; PROPOSED readable board anchor; reused board and copy need scoped source update</title><circle cx="335" cy="395" r="8" fill="#329bd0" stroke="white"/>
+<text x="335" y="398" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>SMALL BLUE visual; XYZ [23, 48, 2]; PROPOSED visual prop, no gun hit surface; reconcile existing small blue prop</title><circle cx="275" cy="545" r="8" fill="#e25757" stroke="white"/>
+<text x="275" y="548" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>LARGE BLUE visual; XYZ [30, 48, 2]; PROPOSED visual prop, no gun hit surface; reconcile existing large blue prop</title><circle cx="345" cy="545" r="8" fill="#e25757" stroke="white"/>
+<text x="345" y="548" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>WHAT Blue / Red; XYZ [38, 33, 1]; PROPOSED paired button bay; reuse legacy selectors if sound</title><circle cx="425" cy="395" r="8" fill="#329bd0" stroke="white"/>
+<text x="425" y="398" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>WHICH Large / Small; XYZ [43, 33, 1]; PROPOSED paired button bay; reuse legacy selectors if sound</title><circle cx="475" cy="395" r="8" fill="#329bd0" stroke="white"/>
+<text x="475" y="398" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>WHERE Reactor / Scanner; XYZ [48, 33, 1]; PROPOSED paired button bay; reuse legacy selectors if sound</title><circle cx="525" cy="395" r="8" fill="#329bd0" stroke="white"/>
+<text x="525" y="398" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>SEND / see Pix act; XYZ [43, 48, 1]; PROPOSED button anchor; existing send binding to reconcile</title><circle cx="475" cy="545" r="8" fill="#329bd0" stroke="white"/>
+<text x="475" y="548" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>Persistent WHAT / WHICH / WHERE request; XYZ [43, 38, 3]; PROPOSED board anchor; existing prompt_hologram source is editable</title><circle cx="475" cy="445" r="8" fill="#329bd0" stroke="white"/>
+<text x="475" y="448" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>POWER REACTOR destination; XYZ [57, 48, 1.5]; PROPOSED destination prop; preserve floor clearance; no gun hit surface</title><circle cx="615" cy="545" r="8" fill="#e25757" stroke="white"/>
+<text x="615" y="548" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<g><title>SCANNER wrong destination; XYZ [63, 48, 1.5]; PROPOSED destination prop; no gun hit surface</title><circle cx="675" cy="545" r="8" fill="#e25757" stroke="white"/>
+<text x="675" y="548" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
+<g><title>Prompt Module and Connect; XYZ [64, 23, 2.7]; MEASURED feature-026 module anchor; Connect location proposed near existing module</title><circle cx="685" cy="295" r="8" fill="#c79c17" stroke="white"/>
+<text x="685" y="298" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
+<g><title>Replay; XYZ [55, 30, 1]; PROPOSED accessible control position; exact existing replay transform to reconcile</title><circle cx="595" cy="365" r="8" fill="#db8b29" stroke="white"/>
+<text x="595" y="368" text-anchor="middle" font-size="9" style="fill:white">15</text></g>
+<path d="M45,720 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="725" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+</svg>
