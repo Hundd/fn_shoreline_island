@@ -9,6 +9,7 @@ import math
 from pathlib import Path
 import re
 import sys
+import textwrap
 
 try:
     import yaml
@@ -316,7 +317,13 @@ def render(data):
     esc = lambda text: html.escape(str(text), quote=True)
     scale, pad, top = 10, 45, 65
     width = max(820, data["map"]["size"][0]*scale+pad*2)
-    height = data["map"]["size"][1]*scale+top+70
+    map_height = data["map"]["size"][1]*scale+top+70
+    column_width = (width - 2*pad) / 2
+    legend_entries = [textwrap.wrap(m["label"], max(20, int((column_width-38)/7)))
+                      for m in data["markers"]]
+    legend_rows = [max(len(lines) for lines in legend_entries[i:i+2])*16+18
+                   for i in range(0, len(legend_entries), 2)]
+    height = map_height + 90 + sum(legend_rows)
     xy = lambda p: (pad+p[0]*scale, top+p[1]*scale)
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(data["map"]["title"])} blockout">',
              '<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>',
@@ -337,7 +344,19 @@ def render(data):
         x,y=xy(m["position"])
         parts += [f'<g><title>{esc(m["label"])}; XYZ {esc(m["position"])}; {esc(m["source"])}</title><circle cx="{x}" cy="{y}" r="8" fill="{KINDS[m["kind"]]}" stroke="white"/>',
                   f'<text x="{x}" y="{y+3}" text-anchor="middle" font-size="9" style="fill:white">{index}</text></g>']
-    parts += [f'<path d="M{pad},{height-35} h100" stroke="#172e43" stroke-width="3"/><text x="{pad+110}" y="{height-30}" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>', '</svg>']
+    parts += [f'<path d="M{pad},{map_height-35} h100" stroke="#172e43" stroke-width="3"/><text x="{pad+110}" y="{map_height-30}" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>',
+              f'<text x="{pad}" y="{map_height+8}" font-size="16" font-weight="bold">Map legend</text>',
+              f'<text x="{pad}" y="{map_height+30}" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>']
+    legend_y = map_height + 58
+    for i, (marker, lines) in enumerate(zip(data["markers"], legend_entries)):
+        x = pad + (i % 2)*column_width
+        parts += [f'<circle cx="{x+9}" cy="{legend_y-4}" r="9" fill="{KINDS[marker["kind"]]}"/>',
+                  f'<text x="{x+9}" y="{legend_y-1}" text-anchor="middle" font-size="9" style="fill:white">{i+1}</text>']
+        for line_index, line in enumerate(lines):
+            parts.append(f'<text x="{x+28}" y="{legend_y+line_index*16}" font-size="12">{esc(line)}</text>')
+        if i % 2 == 1:
+            legend_y += legend_rows[i//2]
+    parts.append('</svg>')
     svg="\n".join(parts)+"\n"
     rows="".join(f'<tr><td>{i}</td><td>{esc(m["kind"])}</td><td>{esc(m["label"])}</td><td>{esc(m["position"])}</td><td>{esc(m["source"])}</td></tr>' for i,m in enumerate(data["markers"],1))
     stages="".join(f'<li><b>{esc(s["id"])}</b>: {esc(s["purpose"])} — {esc(s["completion"])}</li>' for s in data["stages"])

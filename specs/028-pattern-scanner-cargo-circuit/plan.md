@@ -1,0 +1,41 @@
+# Implementation plan and review scope
+
+Status: planning only; no scene or gameplay code changed.
+
+## Measured site and sources
+
+`evidence/editor-inventory.json` records serialized native MCP inspection on 2026-09-28: 138 loop-labelled actors, 149 bounds-overlap results, asset catalog candidates, and game state Unconnected. Four floors cover world X=-1100..7700, Y=3000..5500 cm; top Z=2400 cm. Each is 22 × 25 m. Origin is (-1100,3000,2400) cm. The retained loop_hub_walkway reaches X=-950..-350, Y=2400..3400, top Z=2402 cm. Test its 2 cm seam.
+
+Inspect source basis: loop_station supplies old ownership, hints, generation cancellation and fixed three-stage progression; loop_progress.complete supplies the ordered badge guard; academy_journal reads the same progress device. data_blaster grants the shared weapon; data_target provides attributed Hit events and moving ring/label tracking. prompt_blaster.move_core uses synchronized prop/trigger MoveTo with race cancellation. These are reusable building blocks, not an already-configurable Cargo Circuit controller. Latest weapon recovery evidence is feature 024 evidence/solo-recovery-2026-09-27.md: the successfully cooked/granted rare Pulse Rifle replaced restricted Stark variants. Feature 022's migration-readiness record still leaves comprehensive Loop multiplayer acceptance open.
+
+## Layout and travel
+
+The generated blockout is an annotated top-down plan, not a render of finished Fortnite assets. Zone envelopes never imply walls. Local meters:
+
+| Element | Position / extent | Use |
+|---|---|---|
+| Arrival | X=0..8, Y=0..25 | Hub enters near (4.5,3). Start at (6,8), short lesson sign at (7,10). |
+| Predict | X=8..28 | Firing position (15,9); three carriers centered (12,16),(17,16),(22,16), each sweeps ±1.5 m in X. |
+| Repair | X=28..50 | Firing position (38,9); six inspection slots (32,17)..(42,17) at 2 m spacing; replacement choices (34,13),(39,13),(44,13). Replacement targets are hidden/parked until diagnosis. |
+| Motion test | X=50..76 | Firing position (62,9); shuttle stops X=56,60,64,68 at Y=18. Shootable beacons 1/3/4 at Y=15, at those X values. |
+| Dispatch | X=76..88 | Cargo exits at (80,18); recap/replay/return at (80,9). Shutter raises from Z=0 to Z=4; stop under a 7 m canopy. |
+
+A 3 m clear aisle follows Y=8, from X=4.5 to 82; players can always walk back. Normal useful travel is about 76 m across the whole activity with meaningful stops every 20–24 m. No required backtrack: Return at entry and finish uses the existing hub destination. Observation and answer are visible from each firing position at roughly 4–10 m; stages are not read from the opposite end of the dock. Aisle and return stay physically open; later targets remain inactive until progression unlocks them. Prop motion occupies the machinery strip Y=13..21, separated from player paths by native low railings with clear sightlines. No decoration enters the aisle or 1.5 m safety margin around motion.
+
+## Implementation delta
+
+1. After approved readiness, checkpoint and export full transforms/settings/references for all touched actors. Resolve exact removal/adaptation set from the inventory. Preserve floors, walkway, loop_progress, loop_badge_tracker, shared spawners/round settings/hub teleporter and journal references. Retire all four loop_station actors/subscriptions before reusing buttons. Remove obsolete station boards, tile labels, robot/parcel/lantern props and controls. `campus_loop_dock_sheds` extends outside the floor bounds: inspect its components and remove only dock-owned dressing, preserving shared portions. Keep field_note_lantern_button/board and campus_main_promenade functional and unobstructed.
+2. Reuse shooting_gallery for all three decision areas, knowledge_room for arrival and corridor for dispatch/return. The corridor finish owns the existing loop progress adapter; do not introduce a second byte_island_game_manager just to satisfy the unrelated reward_room contract.
+3. Add one small reusable configured pattern-line controller with editable stage data/target arrays, clue strings, success target, prop homes/endpoints, animation durations, entry zone and existing progress reference. It handles this linear observe/select/animate flow using existing data_target and motion routines. Do not clone prompt_blaster's fixed answer sequence or pretend loop_station already supports shooting. Diagnostic/replacement phases are two stages within learning round 2. Enrollment and reset belong to this controller; badge persistence belongs to loop_progress. Call complete(player,0/1/2) only at each learning round's verified completion, with saved-stage checks, and never for spectators. Build and test this adaptation during approved implementation before removing working gameplay actors.
+4. Place 15 local data_target instances: 3 prediction carriers, 6 diagnosis slots, 3 replacement choices, 3 stop beacons. Reuse exactly one existing global blaster. Each target uses its existing damage-only trigger, neutral ring/label and feedback components. Only the current phase's 3 or 6 targets can be hit. Predicted-answer carriers move their prop and trigger together; stop them and snapshot pose before accepting a hit. Decorative cargo motion is independent of weapon hit areas after acceptance. Retain deterministic home transforms, cancel current MoveTo before reset, and park disabled surfaces as data_target already does.
+5. Provide one entry/enrollment zone, one controller, four stage boards, HUD, Start/Help/Watch-again/Replay/Return controls, stage audio and three power lights plus dispatch effect. Reuse suitable local native devices where possible. Enumerate target subdevice counts and read back bindings during preflight; count 15 refers to target assemblies, not total engine actors. No duplicate granter, player spawn or global progress device.
+6. Qualify Fortnite asset candidates in asset-palette.md before placement; measure actual bounds/pivots and choose complete transforms to fit the authored envelopes. Decoration substitution is allowed only for the same role, dimensions and visual palette. A restricted asset is replaced by an eligible Fortnite equivalent; material layout changes return to review. Continuous physical belt simulation is not assumed: static Fortnite conveyor bodies support scripted moving cargo props.
+7. Update localized hub/journal/badge text where needed while retaining progress identity. Save/read back each serialized group. Build Verse, validate project, full cook, then AC-01..10 including two and four players. Record expected/actual and screenshot evidence. Leave UEFN open and stop active playtest games.
+
+## Motion and feedback contract
+
+Predict demo shows five examples at 0.8 s each, followed by its persistent strip; answers stay available indefinitely. Carriers move 3 m in 6 s with a 0.5 s pause at each endpoint. Slow assistance uses 12 s; Freeze stops at current pose and retains hit alignment. Repair crates move into slots over 3 s; diagnosis starts only when all stop. The wrong crate lifts 1 m over 1 s; replacement feedback takes 2 s before the corrected strip runs. Shuttle demonstrates six stops at 0.8 s travel + 0.4 s dwell each, then waits at stop 2; correct verification to stop 1 takes 1.2 s. Finale delivery and shutter take 3 s. Help gives a rule hint first and a worked answer second, without penalty. Wrong choice gives 1 s input debounce and does not replay long demonstrations. Accepted shots lock the phase immediately; a held trigger cannot complete the next phase because it stays disabled through animation and a 1 s reading gap.
+
+## Approval handoff
+
+Present generated/preview.html, generated/implementation.yaml and this scope for explicit approval. The uefn-map-planning skill requires human approval of this exact review bundle before map changes. Do not fabricate approval.yaml. After actual approval record its evidence and current manifest digest, run `python tools/map_workflow.py plan specs/028-pattern-scanner-cargo-circuit/map.yaml --ready`, then use $uefn-map-implementation for implementation and verification. Authoring the proposed controller is approved work only after that handoff; source capability is not asserted by the planning YAML.
