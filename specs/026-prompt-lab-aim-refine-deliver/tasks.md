@@ -16,4 +16,6 @@ Planning-only completion may use offline evidence. Gameplay boxes require corres
 - [ ] V03 (FR-003/004) First-time-player learning/readability/enjoyment evidence AC-09. Do not infer it from MCP calls.
 - [ ] V04 (FR-009) Record actual deviations and acceptance results; stop game/session and verify state before final implementation handoff.
 
+User direction on 2026-09-28 supersedes earlier V02 prose requiring multiplayer: AC-08 is skipped, not verified. The user tested solo and had played before, so AC-09 still needs a first-time player. Active-target-ray-clearance.md adds post-move geometric evidence for V01; it does not replace cooked scenery/readability review.
+
 Implementation is saved. Gameplay acceptance remains incomplete; see evidence/implementation-results.md for proven observations and remaining checks. Rail boarding remains feature024's inherited acceptance gap; this scope makes no repair.
