@@ -19,24 +19,93 @@ fn_shoreline_island_pattern_line := class(creative_device):
     progress:fn_shoreline_island_loop_progress = fn_shoreline_island_loop_progress{}
     @editable
     entry_zone:mutator_zone_device = mutator_zone_device{}
+    # The native volume remains a cue, while these measured floor bounds keep
+    # enrollment and reward checks stable across cooked volume implementations.
+    @editable
+    course_min_x:float = -1100.0
+    @editable
+    course_max_x:float = 7700.0
+    @editable
+    course_min_y:float = 3000.0
+    @editable
+    course_max_y:float = 5500.0
+    @editable
+    course_min_z:float = 2350.0
+    @editable
+    course_max_z:float = 3300.0
     @editable
     hub_destination:teleporter_device = teleporter_device{}
     @editable
     targets:[]fn_shoreline_island_data_target = array{}
-    # 0..2 answer carriers, 3..8 inspection crates, 9 delivery cargo,
-    # 10 shuttle, 11 dispatch shutter. All homes are captured before use.
+    # Scalar editable references create native-device wrappers that MCP can bind.
+    # Runtime arrays preserve the approved order: three carriers, six inspection
+    # crates, delivery, shuttle, and shutter.
     @editable
-    cargo:[]creative_prop = array{}
+    carrier_a:creative_prop = creative_prop{}
     @editable
-    boards:[]billboard_device = array{}
+    carrier_b:creative_prop = creative_prop{}
+    @editable
+    carrier_c:creative_prop = creative_prop{}
+    @editable
+    inspection_1:creative_prop = creative_prop{}
+    @editable
+    inspection_2:creative_prop = creative_prop{}
+    @editable
+    inspection_3:creative_prop = creative_prop{}
+    @editable
+    inspection_4:creative_prop = creative_prop{}
+    @editable
+    inspection_5:creative_prop = creative_prop{}
+    @editable
+    inspection_6:creative_prop = creative_prop{}
+    @editable
+    delivery_cargo:creative_prop = creative_prop{}
+    @editable
+    shuttle_prop:creative_prop = creative_prop{}
+    @editable
+    dispatch_shutter:creative_prop = creative_prop{}
+    var cargo:[]creative_prop = array{}
+    @editable
+    arrival_board:billboard_device = billboard_device{}
+    @editable
+    predict_board:billboard_device = billboard_device{}
+    @editable
+    repair_board:billboard_device = billboard_device{}
+    @editable
+    motion_board:billboard_device = billboard_device{}
+    var boards:[]billboard_device = array{}
     @editable
     feedback:hud_message_device = hud_message_device{}
-    # Start, Help/Watch at Predict, Help/Watch at Repair, Help/Watch at
-    # Motion, Freeze, Replay, Return at entry, Return at finish.
     @editable
-    buttons:[]button_device = array{}
+    start_button:button_device = button_device{}
     @editable
-    lights:[]customizable_light_device = array{}
+    predict_help_button:button_device = button_device{}
+    @editable
+    predict_watch_button:button_device = button_device{}
+    @editable
+    repair_help_button:button_device = button_device{}
+    @editable
+    repair_watch_button:button_device = button_device{}
+    @editable
+    motion_help_button:button_device = button_device{}
+    @editable
+    motion_watch_button:button_device = button_device{}
+    @editable
+    freeze_button:button_device = button_device{}
+    @editable
+    replay_button:button_device = button_device{}
+    @editable
+    entry_return_button:button_device = button_device{}
+    @editable
+    finish_return_button:button_device = button_device{}
+    var buttons:[]button_device = array{}
+    @editable
+    predict_light:customizable_light_device = customizable_light_device{}
+    @editable
+    repair_light:customizable_light_device = customizable_light_device{}
+    @editable
+    motion_light:customizable_light_device = customizable_light_device{}
+    var lights:[]customizable_light_device = array{}
     @editable
     finale_effect:vfx_creator_device = vfx_creator_device{}
     @editable
@@ -97,8 +166,8 @@ fn_shoreline_island_pattern_line := class(creative_device):
     freeze_event:event() = event(){}
 
     text<localizes>(value:string):message = "{value}"
-    welcome<localizes>:message = "PATTERN SCANNER: CARGO CIRCUIT\nWatch the cargo. Shoot your prediction. Repair the scanner.\nSTART a solo or team run."
-    joining<localizes>:message = "TEAM RUN | Join now!\nEveryone on the dock joins when Start opens the five-second window."
+    welcome<localizes>:message = "PATTERN SCANNER: CARGO CIRCUIT\nPress START TEAM RUN beside the hub walkway.\nWatch the cargo. Shoot your prediction. Repair the scanner."
+    joining<localizes>:message = "RUN STARTING | 5 seconds for friends to join.\nStay on the dock. The first pattern appears next."
     spectator<localizes>:message = "A team run is in progress. Watch the cargo, then join the next run."
     running_notice<localizes>:message = "Finish this team run first. Return is always available."
     finished<localizes>:message = "CARGO DISPATCHED!\nSpot the rule. Check the exception. Test your prediction.\nPattern Badge earned. Replay or Return."
@@ -109,6 +178,15 @@ fn_shoreline_island_pattern_line := class(creative_device):
         Hide()
         if (not configured?):
             return
+        set cargo = array{carrier_a, carrier_b, carrier_c, inspection_1,
+            inspection_2, inspection_3, inspection_4, inspection_5,
+            inspection_6, delivery_cargo, shuttle_prop, dispatch_shutter}
+        set boards = array{arrival_board, predict_board, repair_board, motion_board}
+        set buttons = array{start_button, predict_help_button, predict_watch_button,
+            repair_help_button, repair_watch_button, motion_help_button,
+            motion_watch_button, freeze_button, replay_button,
+            entry_return_button, finish_return_button}
+        set lights = array{predict_light, repair_light, motion_light}
         # Reject incomplete editor configuration instead of starting a partial game.
         if (targets.Length <> 15 or cargo.Length <> 12 or boards.Length <> 4 or buttons.Length <> 11):
             Print("PATTERN LINE: incomplete device arrays; controller disabled")
@@ -185,8 +263,20 @@ fn_shoreline_island_pattern_line := class(creative_device):
     on_round():void =
         reset_line()
 
+    in_course(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        position := character.GetTransform().Translation
+        position.X >= course_min_x
+        position.X <= course_max_x
+        position.Y >= course_min_y
+        position.Y <= course_max_y
+        position.Z >= course_min_z
+        position.Z <= course_max_z
+
     enroll(input_agent:agent):void =
-        if (input_player := player[input_agent], character := input_player.GetFortCharacter[], character.IsActive[], entry_zone.IsInVolume[input_player]):
+        if (input_player := player[input_agent], participants[input_player]):
+            return
+        if (input_player := player[input_agent], character := input_player.GetFortCharacter[], character.IsActive[], in_course[input_player]):
             if (set participants[input_player] = character) {}
             progress.ensure_player(input_player)
             feedback.Show(input_player, joining, ?DisplayTime := enrollment_seconds)
@@ -200,7 +290,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
             feedback.Show(input_agent, welcome, ?DisplayTime := 6.0)
 
     on_exit(input_agent:agent):void =
-        if (input_player := player[input_agent]):
+        if (input_player := player[input_agent], not in_course[input_player]):
             on_departure(input_player)
 
     on_departure(input_player:player):void =
@@ -216,7 +306,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
             Sleep(0.1)
             for (input_player -> enrolled_character : participants):
                 if (current := input_player.GetFortCharacter[], current = enrolled_character,
-                    current.IsActive[], entry_zone.IsInVolume[input_player]):
+                    current.IsActive[], in_course[input_player]):
                 else:
                     on_departure(input_player)
 
@@ -229,14 +319,15 @@ fn_shoreline_island_pattern_line := class(creative_device):
             if (phase <> -1, phase <> 4):
                 feedback.Show(input_agent, running_notice, ?DisplayTime := 4.0)
                 return
-            if (not entry_zone.IsInVolume[input_agent]):
+            if (not in_course[input_agent]):
                 return
             reset_line()
             set phase = -2
             set busy = true
-            for (occupant : entry_zone.GetAgentsInVolume()):
+            for (occupant : GetPlayspace().GetPlayers()):
                 enroll(occupant)
             board(0, joining)
+            spawn { track_enrollment(generation) }
             spawn { start_run(generation) }
             return
         if (input_player := player[input_agent], participants[input_player], phase >= 0, phase < 4):
@@ -268,6 +359,14 @@ fn_shoreline_island_pattern_line := class(creative_device):
         set phase = 0
         show_demonstration(token, 0)
 
+    track_enrollment(token:int)<suspends>:void =
+        loop:
+            if (generation <> token or phase <> -2):
+                return
+            for (occupant : GetPlayspace().GetPlayers()):
+                enroll(occupant)
+            Sleep(0.1)
+
     listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
         loop:
             input_agent := target.Hit.Await()
@@ -284,7 +383,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
             return
         if (not is_choice[index]):
             return
-        if (input_player := player[input_agent], enrolled := participants[input_player], current := input_player.GetFortCharacter[], current = enrolled, current.IsActive[], entry_zone.IsInVolume[input_player], correct := phase_success[phase]):
+        if (input_player := player[input_agent], enrolled := participants[input_player], current := input_player.GetFortCharacter[], current = enrolled, current.IsActive[], in_course[input_player], correct := phase_success[phase]):
             set ready_after = GetSimulationElapsedTime() + 1.0
             if (index <> correct):
                 target.reject(input_agent)
@@ -398,7 +497,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
     credit(round_index:int):void =
         for (input_player -> enrolled : participants):
             if (current := input_player.GetFortCharacter[], current = enrolled,
-                current.IsActive[], entry_zone.IsInVolume[input_player]):
+                current.IsActive[], in_course[input_player]):
                 state := progress.ensure_player(input_player)
                 if (state.challenge = round_index, not state.badge_earned?):
                     progress.complete(input_player, round_index)

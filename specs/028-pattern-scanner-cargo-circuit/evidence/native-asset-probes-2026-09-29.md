@@ -1,0 +1,26 @@
+# Native asset qualification probes — 2026-09-29
+
+The approved review bundle passed `plan --ready` before these editor calls. The existing Pattern Line controller remains disabled and unbound; all four legacy Loop stations remain intact.
+
+Two rejected `/WildEstate` blueprint samples had already been removed. I saved a recovery checkpoint, then placed and read back two `/Game` Fortnite prop candidates inside the approved dock footprint:
+
+| Probe | Asset | World transform | Bounds (cm) |
+| --- | --- | --- | --- |
+| `cargo_circuit_qualified_conveyor_probe` | `/Game/Building/ActorBlueprints/Prop/IND_ConveyorBelt_01.IND_ConveyorBelt_01_C` | (1000, 4850, 2400), rotation (0, 0, 0), scale (1, 1, 1) | X 742.85..1076.60, Y 4516.13..4850.07, Z 2400..2515.53 |
+| `cargo_circuit_qualified_crate_probe` | `/Game/Environments/Asteria/Props/Industrial/Industrial_CratePallet_A/Blueprints/BP_Industrial_Crate_A.BP_Industrial_Crate_A_C` | (1400, 5000, 2400), rotation (0, 0, 0), scale (1, 1, 1) | X 1295.44..1504.56, Y 4935.08..5065.23, Z 2400..2462.98 |
+
+The conveyor mesh is about 3.34 × 3.34 × 1.16 m. The crate mesh is about 2.09 × 1.30 × 0.63 m. Both samples were saved through native AssetTools.
+
+Two `SessionToolset.StartSession` attempts passed local project validation and server cooking with no disallowed-reference report for these probes. Both then waited on client cooking until the MCP call's 300-second timeout. The editor log showed `LoadingNewContent - Cooking for server platforms finished, waiting on client platforms...`; the first connection later closed with `TransportError`. The Fortnite client log for the second attempt reported `Failed to launch experience playlist_vk_edit ... led to invalid island`, without a matching local disallowed-reference error. Neither attempt proves completed client cook or gameplay eligibility. `StopSession` returned `No session is active` after each timeout, and the final `GetGameState` readback was `Unconnected`. UEFN remained open.
+
+The probes establish measured fit and local asset-reference acceptance only. Do not mark AC-08 or AC-10 passed. Because the client reported an invalid island, I removed both probe actors through native SceneTools, read back zero matching actors and saved the level. Further asset selection starts from the Creative catalog. The course zone must cover the full 88 × 25 m dock: current Pattern Line enrollment checks `entry_zone.IsInVolume` during every stage, so an arrival-only zone would remove players as they walk to Repair and Motion. This is an implementation configuration requirement within the approved continuous-run design.
+
+## Creative catalog follow-up
+
+Placed `/Game/Creative/Sets/MilitaryBase/MilitaryBase_Metal_Crate_01.MilitaryBase_Metal_Crate_01_C` at (1400, 5000, 2400), identity rotation and scale, as `cargo_circuit_creative_crate_probe`. Readback bounds: X=1346.95..1446.18, Y=4954.13..5044.57, Z=2399.87..2466.24 cm. Local validation and server cook passed, but the existing Fortnite client again logged `playlist_vk_edit ... invalid island` and the MCP launch timed out. I stopped the session; `GetGameState` returned `Unconnected`.
+
+The stale Fortnite playtest client process could not be closed with ordinary PowerShell access. An escalated `Stop-Process` closed that client, leaving UEFN open. Retrying `StartSession` with the same saved Creative crate returned `Completed`; `GetSessionStatus` was `Connected`, and `GetGameState` was `CanStart`. This is successful full cook qualification for the Creative metal crate actor, though its collision, motion behavior and visual use still need a cooked gameplay check. I then called `StopSession` and read back `Unconnected`. The crate probe remains saved in the approved dock area for conversion into a planned cargo prop.
+
+I then placed the original `/Game/Building/ActorBlueprints/Prop/IND_ConveyorBelt_01.IND_ConveyorBelt_01_C` candidate again at the measured (1000, 4850, 2400) transform as `cargo_circuit_conveyor_recheck`, saved, and launched another session. `StartSession` returned `Completed`; status was `Connected`. This confirms full cook eligibility for that exact conveyor asset as placed alongside the Creative crate. The game had entered `Running`, so `StopGame` returned `Completed`, the next game-state readback was `CanStart`, and `StopSession` left `Unconnected`. Both qualified actors remain in the approved dock footprint. The earlier invalid-island results were consistent with the stale client state; they did not by themselves establish asset rejection. Collision, movement support, visual quality and the finished activity remain untested.
+
+Placed `/Game/Creative/BuildingActors/Props/Asteria/CP_Prop_Asteria_WareHouse_Door_A.CP_Prop_Asteria_WareHouse_Door_A_C` as the dispatch shutter candidate. Final readback transform: location (6900, 4670, 2400), yaw 90°, scale (2, 1, 1.75). Bounds: X=6882.55..6916.69, Y=4666.95..4929.00, Z=2400..2797.42 cm, giving a roughly 2.62 m wide, 3.97 m tall door across the cargo line. Saved content and launched again; `StartSession` returned `Completed`, including the new door and course zone. Stopped the automatically running game, stopped the session, and read back `Unconnected`. The door's runtime `MoveTo` behavior and collision while raised are still unverified.

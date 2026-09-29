@@ -1,0 +1,911 @@
+{
+  "date": "2026-09-29",
+  "method": "Serialized SceneTools.find_actors(name=cargo_circuit_, collision_channels=[]), after save",
+  "actorCount": 166,
+  "groups": {
+    "carrier": 3,
+    "conveyor": 21,
+    "course": 1,
+    "shutter": 1,
+    "slot": 6,
+    "delivery": 1,
+    "shuttle": 1,
+    "target": 15,
+    "hit": 15,
+    "ring": 15,
+    "label": 15,
+    "active": 15,
+    "shared": 3,
+    "arrival": 1,
+    "predict": 4,
+    "repair": 4,
+    "motion": 4,
+    "start": 1,
+    "freeze": 1,
+    "replay": 1,
+    "entry": 1,
+    "finish": 1,
+    "feedback": 1,
+    "finale": 1,
+    "rail": 13,
+    "lamp": 6,
+    "stack": 8,
+    "planter": 2,
+    "stop": 4,
+    "return": 1
+  },
+  "aisleCm": {
+    "minY": 3650,
+    "maxY": 3950
+  },
+  "dressingAisleIntrusions": [],
+  "dressing": [
+    {
+      "label": "cargo_circuit_conveyor_02",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5450603_2080430321",
+      "bounds": {
+        "min": {
+          "x": 602.8452453613281,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 936.6045227050781,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_shutter_probe",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Prop_Asteria_WareHouse_Door_A_C_UAID_E89C2592D1B5460603_1455854499",
+      "bounds": {
+        "min": {
+          "x": 6882.545848846436,
+          "y": 4666.946451425552,
+          "z": 2400
+        },
+        "max": {
+          "x": 6916.688133239746,
+          "y": 4929.004058837891,
+          "z": 2797.4208183288574
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_00",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1551573960",
+      "bounds": {
+        "min": {
+          "x": -67.15475463867188,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 266.6045227050781,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_01",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1551968961",
+      "bounds": {
+        "min": {
+          "x": 267.8452453613281,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 601.6045227050781,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_03",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1552258962",
+      "bounds": {
+        "min": {
+          "x": 937.8452453613281,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 1271.6045227050781,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_04",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1552593963",
+      "bounds": {
+        "min": {
+          "x": 1272.8452453613281,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 1606.6045227050781,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_05",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1552933964",
+      "bounds": {
+        "min": {
+          "x": 1607.8452453613281,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 1941.6045227050781,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_06",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1553258965",
+      "bounds": {
+        "min": {
+          "x": 1942.8452453613281,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 2276.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_07",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1553591966",
+      "bounds": {
+        "min": {
+          "x": 2277.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 2611.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_08",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1553921967",
+      "bounds": {
+        "min": {
+          "x": 2612.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 2946.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_09",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1554255968",
+      "bounds": {
+        "min": {
+          "x": 2947.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 3281.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_10",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1554592969",
+      "bounds": {
+        "min": {
+          "x": 3282.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 3616.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_11",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1554928970",
+      "bounds": {
+        "min": {
+          "x": 3617.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 3951.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_12",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1555257971",
+      "bounds": {
+        "min": {
+          "x": 3952.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 4286.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_13",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1555592972",
+      "bounds": {
+        "min": {
+          "x": 4287.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 4621.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_14",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1555922973",
+      "bounds": {
+        "min": {
+          "x": 4622.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 4956.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_15",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1556260974",
+      "bounds": {
+        "min": {
+          "x": 4957.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 5291.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_16",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1556593975",
+      "bounds": {
+        "min": {
+          "x": 5292.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 5626.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_17",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1556930976",
+      "bounds": {
+        "min": {
+          "x": 5627.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 5961.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_18",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1557466977",
+      "bounds": {
+        "min": {
+          "x": 5962.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 6296.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_19",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1558085978",
+      "bounds": {
+        "min": {
+          "x": 6297.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 6631.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_20",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1558449979",
+      "bounds": {
+        "min": {
+          "x": 6632.845245361328,
+          "y": 4516.127197265625,
+          "z": 2399.999984741211
+        },
+        "max": {
+          "x": 6966.604522705078,
+          "y": 4850.07177734375,
+          "z": 2515.5339965820312
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_08",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1584424980",
+      "bounds": {
+        "min": {
+          "x": 3945.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 4454.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_00",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1608472981",
+      "bounds": {
+        "min": {
+          "x": -454.9188232421875,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 54.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_01",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1608863982",
+      "bounds": {
+        "min": {
+          "x": 95.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 604.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_02",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1609177983",
+      "bounds": {
+        "min": {
+          "x": 645.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 1154.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_03",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1609507984",
+      "bounds": {
+        "min": {
+          "x": 1195.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 1704.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_04",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1609842985",
+      "bounds": {
+        "min": {
+          "x": 1745.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 2254.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_05",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1610177986",
+      "bounds": {
+        "min": {
+          "x": 2295.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 2804.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_06",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1610511987",
+      "bounds": {
+        "min": {
+          "x": 2845.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 3354.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_07",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1610839988",
+      "bounds": {
+        "min": {
+          "x": 3395.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 3904.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_09",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1611177989",
+      "bounds": {
+        "min": {
+          "x": 4495.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 5004.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_10",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1611514990",
+      "bounds": {
+        "min": {
+          "x": 5045.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 5554.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_11",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1611847991",
+      "bounds": {
+        "min": {
+          "x": 5595.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 6104.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_12",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1612174992",
+      "bounds": {
+        "min": {
+          "x": 6145.0811767578125,
+          "y": 4200,
+          "z": 2399.8837356567383
+        },
+        "max": {
+          "x": 6654.9188232421875,
+          "y": 4216.989959716797,
+          "z": 2503.3210525512695
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_00",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1669512993",
+      "bounds": {
+        "min": {
+          "x": -561.8343887329102,
+          "y": 5002.498204146046,
+          "z": 2400
+        },
+        "max": {
+          "x": -305.83438873291016,
+          "y": 5497.498208914418,
+          "z": 2797.9661865234375
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_01",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1686028994",
+      "bounds": {
+        "min": {
+          "x": 838.1656112670898,
+          "y": 5002.498204146046,
+          "z": 2400
+        },
+        "max": {
+          "x": 1094.1656112670898,
+          "y": 5497.498208914418,
+          "z": 2797.9661865234375
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_02",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1686409995",
+      "bounds": {
+        "min": {
+          "x": 2238.16561126709,
+          "y": 5002.498204146046,
+          "z": 2400
+        },
+        "max": {
+          "x": 2494.16561126709,
+          "y": 5497.498208914418,
+          "z": 2797.9661865234375
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_03",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1686734996",
+      "bounds": {
+        "min": {
+          "x": 3638.16561126709,
+          "y": 5002.498204146046,
+          "z": 2400
+        },
+        "max": {
+          "x": 3894.16561126709,
+          "y": 5497.498208914418,
+          "z": 2797.9661865234375
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_04",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1687063997",
+      "bounds": {
+        "min": {
+          "x": 5038.16561126709,
+          "y": 5002.498204146046,
+          "z": 2400
+        },
+        "max": {
+          "x": 5294.16561126709,
+          "y": 5497.498208914418,
+          "z": 2797.9661865234375
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_05",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1687394998",
+      "bounds": {
+        "min": {
+          "x": 6438.16561126709,
+          "y": 5002.498204146046,
+          "z": 2400
+        },
+        "max": {
+          "x": 6694.16561126709,
+          "y": 5497.498208914418,
+          "z": 2797.9661865234375
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_0_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1710031999",
+      "bounds": {
+        "min": {
+          "x": -203.0455379486084,
+          "y": 5004.125556945801,
+          "z": 2399.874801635742
+        },
+        "max": {
+          "x": -103.82405662536621,
+          "y": 5094.573715209961,
+          "z": 2466.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_0_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1711233000",
+      "bounds": {
+        "min": {
+          "x": -167.7745814812715,
+          "y": 5006.9594952085135,
+          "z": 2465.874801635742
+        },
+        "max": {
+          "x": -48.52428419528181,
+          "y": 5120.006116265886,
+          "z": 2532.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_1_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1711606001",
+      "bounds": {
+        "min": {
+          "x": 1646.9544620513916,
+          "y": 5004.125556945801,
+          "z": 2399.874801635742
+        },
+        "max": {
+          "x": 1746.1759433746338,
+          "y": 5094.573715209961,
+          "z": 2466.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_1_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1711953002",
+      "bounds": {
+        "min": {
+          "x": 1682.2254185187285,
+          "y": 5006.9594952085135,
+          "z": 2465.874801635742
+        },
+        "max": {
+          "x": 1801.4757158047182,
+          "y": 5120.006116265886,
+          "z": 2532.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_2_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1712261003",
+      "bounds": {
+        "min": {
+          "x": 3846.9544620513916,
+          "y": 5004.125556945801,
+          "z": 2399.874801635742
+        },
+        "max": {
+          "x": 3946.175943374634,
+          "y": 5094.573715209961,
+          "z": 2466.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_2_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1712590004",
+      "bounds": {
+        "min": {
+          "x": 3882.2254185187285,
+          "y": 5006.9594952085135,
+          "z": 2465.874801635742
+        },
+        "max": {
+          "x": 4001.4757158047178,
+          "y": 5120.006116265886,
+          "z": 2532.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_3_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1712926005",
+      "bounds": {
+        "min": {
+          "x": 6696.954462051392,
+          "y": 5004.125556945801,
+          "z": 2399.874801635742
+        },
+        "max": {
+          "x": 6796.175943374634,
+          "y": 5094.573715209961,
+          "z": 2466.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_3_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1713261006",
+      "bounds": {
+        "min": {
+          "x": 6732.2254185187285,
+          "y": 5006.9594952085135,
+          "z": 2465.874801635742
+        },
+        "max": {
+          "x": 6851.475715804718,
+          "y": 5120.006116265886,
+          "z": 2532.243034362793
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_planter_arrival",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Artemis_Planter_01_C_UAID_E89C2592D1B5480603_1726157007",
+      "bounds": {
+        "min": {
+          "x": -850,
+          "y": 4900,
+          "z": 2250
+        },
+        "max": {
+          "x": -550,
+          "y": 5200,
+          "z": 2595.548828125
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "cargo_circuit_planter_dispatch",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Artemis_Planter_01_C_UAID_E89C2592D1B5480603_1738234008",
+      "bounds": {
+        "min": {
+          "x": 7150,
+          "y": 4900,
+          "z": 2250
+        },
+        "max": {
+          "x": 7450,
+          "y": 5200,
+          "z": 2595.548828125
+        },
+        "isValid": true
+      }
+    }
+  ]
+}

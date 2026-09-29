@@ -1,0 +1,9 @@
+# Pattern Line scene preflight — 2026-09-29
+
+`plan --ready` passed for approved digest `27403d71c2af08a71ab4cef3c596abc95479850f3de6617ad4dc9b0701f7ecdb`. Saved a native AssetTools checkpoint before placement. The existing four `loop_station` actors remain untouched; the new `fn_shoreline_island_pattern_line` actor remains `configured=false` with empty target, cargo, board, button and light arrays.
+
+Serialized readback of every legacy station's editable references and native `savedActor` was recorded in `legacy-station-bindings-2026-09-29.json`. All four stations reference the same `loop_progress`, hub teleporter and four hub spawners; those actors must remain. Each station's old controls, board, robot, parcel and lanterns have local instances. The shared `loop_progress` uses the existing `loop_badge_tracker` and round-settings actors.
+
+Placed `cargo_circuit_course_zone` at world (3300, 4250, 2600), identity rotation and scale, using the native Mutator device. Set and read back `zoneWidth=18`, `zoneDepth=5`, `zoneHeight=2` tiles, Box, `bAllowWeaponFire=true`, and `zoneVisibleDuringGame=false`. The overlap component's relative scale readback is (18, 5, 2); its query shape was set to BoxVolume to match the authored shape. Actor bounds include a larger editor visualization (X=-3618.91..10218.91, Y=-2668.91..11168.91 cm), so runtime containment and the intended 88 × 25 m course footprint still require cooked verification. The one zone must include all three firing areas and dispatch because the controller checks `IsInVolume` throughout enrollment and progression.
+
+Bound the disabled Pattern Line controller to the exact existing `loop_progress` Verse script object, the new course-zone actor, and the shared hub teleporter. Read back all three references and saved the affected editor assets. No legacy actor was retired. The two asset qualification props and zone are the only new placed objects from this pass.

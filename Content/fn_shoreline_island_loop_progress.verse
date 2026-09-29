@@ -6,7 +6,7 @@ loop_player_progress := class:
     var badge_earned:logic = false
     var station_id:int = -1
 
-# Shared by four stations; completion is tracked per player for the current round.
+# Shared by the cooperative Pattern Scanner course; completion remains per player.
 fn_shoreline_island_loop_progress := class(creative_device):
     @editable
     badge_tracker:tracker_device = tracker_device{}
@@ -43,8 +43,15 @@ fn_shoreline_island_loop_progress := class(creative_device):
 
     complete(input_player:player, challenge_index:int):void =
         state := ensure_player(input_player)
-        if (challenge_index = state.challenge, state.challenge < 2):
-            set state.challenge += 1
-        else if (challenge_index = 2, not state.badge_earned?):
-            set state.badge_earned = true
-            badge_tracker.SetValue(input_player, 1)
+        if (challenge_index < 2):
+            if (state.challenge = challenge_index):
+                set state.challenge += 1
+            return
+        if (challenge_index <> 2):
+            return
+        if (state.challenge <> 2):
+            return
+        if (state.badge_earned?):
+            return
+        set state.badge_earned = true
+        badge_tracker.SetValue(input_player, 1)

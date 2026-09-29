@@ -1,6 +1,6 @@
 # Implementation plan and review scope
 
-Status: planning only; no scene or gameplay code changed.
+Status: approved implementation placed and saved; cooked solo/multiplayer acceptance remains open.
 
 ## Measured site and sources
 
@@ -39,3 +39,15 @@ Predict demo shows five examples at 0.8 s each, followed by its persistent strip
 ## Approval handoff
 
 Present generated/preview.html, generated/implementation.yaml and this scope for explicit approval. The uefn-map-planning skill requires human approval of this exact review bundle before map changes. Do not fabricate approval.yaml. After actual approval record its evidence and current manifest digest, run `python tools/map_workflow.py plan specs/028-pattern-scanner-cargo-circuit/map.yaml --ready`, then use $uefn-map-implementation for implementation and verification. Authoring the proposed controller is approved work only after that handoff; source capability is not asserted by the planning YAML.
+
+## Live implementation notes (2026-09-29)
+
+The approved review digest is recorded in `approval.yaml`, and `map_workflow.py plan --ready` passed before edits. The new `fn_shoreline_island_pattern_line` uses 15 ordered `data_target` assemblies, 12 native cargo props, four stage boards, 11 ordinary buttons, three stage lights, feedback/effects, and the existing progress and hub destination. The four legacy stations and their 124 local controls/props were removed by exact actor identity after the disabled assembly compiled and cooked. The four support floors, walkway, shared badge tracker, progress, spawners, teleporter and audio remain. The dock-owned `campus_loop_station_identity` assembly was then removed because its tall posts obscured the new firing line; the retained canopy supports were moved to tile edges. No shared promenade or field-note actor was removed.
+
+Qualified native substitutions are the Creative Military Base metal crate, `/Game/Building` industrial conveyor body, Creative warehouse shutter, Creative rusty catwalk railing, Military Base warm light stand and Artemis planter. Their roles, bounds and muted industrial palette stay within the approved envelopes. The editor-owned World Partition assets record the actual placements. Static stop signs and a return-direction arrow supplement the dynamic motion board so the entire shuttle trail can be seen without audio. Billboard text size/color was increased for the 15 target labels and stage boards.
+
+The native mutator-zone instance returned false for a cooked player teleported to its center at floor and elevated heights, even after `Enable()`. The approved 88 × 25 m footprint remains unchanged. Enrollment, departure and reward eligibility therefore use editable world bounds matching that measured dock, while the native zone remains placed for visual/event compatibility. During the five-second join window, the controller scans players inside those bounds so late entrants do not depend on native zone events. This is an implementation adaptation, not a change to the intended cooperative cohort. The temporary runtime probe was removed after recording its findings. Full progression and multiplayer checks remain pending because later Fortnite clients stalled or disconnected before completing a validation join.
+
+The retained global Data Blaster device had its granter bound but its editable spawn-pad array was empty. Its source subscribes to that array for respawn grants; join grants alone do not establish the FR-02/08 respawn path. Bind the four existing hub spawners to this retained device, preserving the granter's “Only if Not Owned” and equip settings. This repairs the already-approved reuse path without adding a granter or changing the map layout. Read back bindings and recook before considering the fix validated.
+
+Player feedback identified finding or starting the run as counterintuitive. The route sign currently only names Pattern Scanner, while the dynamic arrival board is several meters beyond the small Start control. Keep the approved entry layout and controls; update the existing hub route sign to say Start is at the dock entrance, make the arrival board name the hub-side Start control, and state that the five-second wait after pressing it is a join window before the first pattern. This is a copy/wayfinding correction within FR-02, without moving actors or changing the puzzle flow. Build and full cook the revised copy, then verify its actual readability from the hub in Fortnite when client control is available.
