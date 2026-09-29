@@ -1,6 +1,6 @@
 # Pattern Scanner: Fill the Gap
 
-Revision 2, 2026-09-29. Proposed solo redesign; awaiting human approval. The editor still contains Cargo Circuit v1. The previous spec, plan, tasks, palette, approval and generated bundle are preserved in `history/cargo-circuit-v1/`. Existing root `approval.yaml` applies only to v1 and is intentionally stale for this revision.
+Revision 2, 2026-09-29. Approved by the user message "looks good"; the solo redesign is implemented, enabled and saved. Verse compilation, local validation and client/server cooking succeeded. The user played it and reported that it works and is fun; detailed unmeasured acceptance coverage remains tracked in tasks.md and evidence/solo-user-playtest-2026-09-29.md. The previous spec, plan, tasks, palette, approval and generated bundle are preserved in `history/cargo-circuit-v1/`. Root `approval.yaml` now records actual revision-2 approval; the v1 record remains in history.
 
 ## Player experience
 

@@ -1,34 +1,22 @@
 using { /Fortnite.com/Devices }
 using { /Fortnite.com/Characters }
 using { /Verse.org/Simulation }
-using { /Verse.org/Verse }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
-pattern_line_button_action := class:
-    controller:fn_shoreline_island_pattern_line
-    index:int
-    on_press(input_agent:agent):void =
-        controller.on_button(input_agent, index)
-
-# Configured linear observe/select/animate controller. Phase arrays describe
-# choices and lessons; the four animation roles are predict, lift, repair, test.
+# Solo pattern completion: the same three stationary answers serve every round.
 fn_shoreline_island_pattern_line := class(creative_device):
     @editable
     configured:logic = false
     @editable
     progress:fn_shoreline_island_loop_progress = fn_shoreline_island_loop_progress{}
     @editable
-    entry_zone:mutator_zone_device = mutator_zone_device{}
-    # The native volume remains a cue, while these measured floor bounds keep
-    # enrollment and reward checks stable across cooked volume implementations.
-    @editable
     course_min_x:float = -1100.0
     @editable
-    course_max_x:float = 7700.0
+    course_max_x:float = 1100.0
     @editable
-    course_min_y:float = 3000.0
+    course_min_y:float = 3600.0
     @editable
-    course_max_y:float = 5500.0
+    course_max_y:float = 5200.0
     @editable
     course_min_z:float = 2350.0
     @editable
@@ -37,540 +25,268 @@ fn_shoreline_island_pattern_line := class(creative_device):
     hub_destination:teleporter_device = teleporter_device{}
     @editable
     targets:[]fn_shoreline_island_data_target = array{}
-    # Scalar editable references create native-device wrappers that MCP can bind.
-    # Runtime arrays preserve the approved order: three carriers, six inspection
-    # crates, delivery, shuttle, and shutter.
-    @editable
-    carrier_a:creative_prop = creative_prop{}
-    @editable
-    carrier_b:creative_prop = creative_prop{}
-    @editable
-    carrier_c:creative_prop = creative_prop{}
-    @editable
-    inspection_1:creative_prop = creative_prop{}
-    @editable
-    inspection_2:creative_prop = creative_prop{}
-    @editable
-    inspection_3:creative_prop = creative_prop{}
-    @editable
-    inspection_4:creative_prop = creative_prop{}
-    @editable
-    inspection_5:creative_prop = creative_prop{}
-    @editable
-    inspection_6:creative_prop = creative_prop{}
-    @editable
-    delivery_cargo:creative_prop = creative_prop{}
-    @editable
-    shuttle_prop:creative_prop = creative_prop{}
-    @editable
-    dispatch_shutter:creative_prop = creative_prop{}
-    var cargo:[]creative_prop = array{}
-    @editable
-    arrival_board:billboard_device = billboard_device{}
+    # Keep native editable names to retain saved device bindings.
     @editable
     predict_board:billboard_device = billboard_device{}
     @editable
-    repair_board:billboard_device = billboard_device{}
-    @editable
-    motion_board:billboard_device = billboard_device{}
-    var boards:[]billboard_device = array{}
-    @editable
     feedback:hud_message_device = hud_message_device{}
-    @editable
-    start_button:button_device = button_device{}
-    @editable
-    predict_help_button:button_device = button_device{}
-    @editable
-    predict_watch_button:button_device = button_device{}
-    @editable
-    repair_help_button:button_device = button_device{}
-    @editable
-    repair_watch_button:button_device = button_device{}
-    @editable
-    motion_help_button:button_device = button_device{}
-    @editable
-    motion_watch_button:button_device = button_device{}
-    @editable
-    freeze_button:button_device = button_device{}
     @editable
     replay_button:button_device = button_device{}
     @editable
     entry_return_button:button_device = button_device{}
-    @editable
-    finish_return_button:button_device = button_device{}
-    var buttons:[]button_device = array{}
     @editable
     predict_light:customizable_light_device = customizable_light_device{}
     @editable
     repair_light:customizable_light_device = customizable_light_device{}
     @editable
     motion_light:customizable_light_device = customizable_light_device{}
-    var lights:[]customizable_light_device = array{}
     @editable
     finale_effect:vfx_creator_device = vfx_creator_device{}
     @editable
     scan_audio:audio_player_device = audio_player_device{}
     @editable
-    phase_first:[]int = array{0, 3, 9, 12}
+    success_ids:[]int = array{1, 0, 2}
     @editable
-    phase_count:[]int = array{3, 6, 3, 3}
+    round_patterns:[]string = array{
+        "A●  B▲  A●  B▲  A●  ?",
+        "A●  B▲  ?  B▲  A●  B▲",
+        "A●  B▲  C■  A●  B▲  ?"}
     @editable
-    phase_success:[]int = array{1, 6, 10, 12}
+    round_hints:[]string = array{
+        "Circle, triangle. The pair repeats.",
+        "Each pair starts with circle.",
+        "Circle, triangle, square. Three repeat."}
     @editable
-    phase_round:[]int = array{0, -1, 1, 2}
+    round_answers:[]string = array{
+        "After circle comes triangle. Shoot B ▲.",
+        "The gap starts a pair. Shoot A ●.",
+        "Finish the group with square. Shoot C ■."}
     @editable
-    phase_board:[]int = array{1, 2, 2, 3}
+    round_groups:[]string = array{"A● B▲", "A● B▲", "A● B▲ C■"}
     @editable
-    prompts:[]string = array{
-        "TEAM RUN 1/3 | PREDICT\nA CIRCLE > B TRIANGLE > A > B > A > ?\nShoot the next symbol.",
-        "TEAM RUN 2/3 | FIND THE EXCEPTION\n1:A  2:B  3:A  4:A  5:A  6:B\nShoot the crate that breaks A/B.",
-        "TEAM RUN 2/3 | REPAIR\nThe fourth crate is lifted.\nShoot its replacement: A, B or C.",
-        "TEAM RUN 3/3 | TEST YOUR PREDICTION\n1 > 2 > 3 > 4 > 3 > 2 > ?\nMoving toward 1. Shoot the next stop."}
-    @editable
-    hints:[]string = array{
-        "A circle and B triangle repeat as a pair. Follow the last A.",
-        "Odd slots are A. Even slots should be B. Compare the six crates.",
-        "The missing member of the A/B pair belongs in slot 4.",
-        "The shuttle reverses at the ends. After 4, it visits 3, then 2."}
-    @editable
-    answers:[]string = array{
-        "Shoot B TRIANGLE. A is followed by B.",
-        "Shoot SLOT 4. It is A, but the repeating pair needs B.",
-        "Shoot replacement B TRIANGLE to restore A/B/A/B/A/B.",
-        "Shoot STOP 1. The shuttle is returning from 4 toward 1."}
-    @editable
-    enrollment_seconds:float = 5.0
-    @editable
-    carrier_half_span:float = 150.0
-    @editable
-    carrier_leg_seconds:float = 6.0
-    @editable
-    inspection_seconds:float = 3.0
-    @editable
-    shuttle_step_cm:float = 400.0
-    @editable
-    shuttle_demo:[]int = array{0, 1, 2, 3, 2, 1}
+    solved_patterns:[]string = array{
+        "A● B▲ / A● B▲ / A● B▲",
+        "A● B▲ / A● B▲ / A● B▲",
+        "A● B▲ C■ / A● B▲ C■"}
 
     var phase:int = -1
     var generation:int = 0
-    var motion_generation:int = 0
+    var hint_generation:int = 0
     var busy:logic = false
-    var frozen:logic = false
-    var slow:logic = false
     var mistakes:int = 0
-    var participants:[player]fort_character = map{}
-    var hint_counts:[player]int = map{}
-    var homes:[]transform = array{}
-    var ready_after:float = 0.0
-    reset_event:event() = event(){}
-    freeze_event:event() = event(){}
+    var last_hit:float = 0.0
+    var wrong_ready:float = 0.0
+    var active_player:?player = false
+    var active_character:?fort_character = false
+    var lights:[]customizable_light_device = array{}
 
     text<localizes>(value:string):message = "{value}"
-    welcome<localizes>:message = "PATTERN SCANNER: CARGO CIRCUIT\nPress START TEAM RUN beside the hub walkway.\nWatch the cargo. Shoot your prediction. Repair the scanner."
-    joining<localizes>:message = "RUN STARTING | 5 seconds for friends to join.\nStay on the dock. The first pattern appears next."
-    spectator<localizes>:message = "A team run is in progress. Watch the cargo, then join the next run."
-    running_notice<localizes>:message = "Finish this team run first. Return is always available."
-    finished<localizes>:message = "CARGO DISPATCHED!\nSpot the rule. Check the exception. Test your prediction.\nPattern Badge earned. Replay or Return."
-    frozen_notice<localizes>:message = "Targets frozen. Take your time; your reward stays the same."
-    assist_notice<localizes>:message = "Need more time? Use FREEZE or HELP to stop the moving answers."
+    welcome<localizes>:message = "PATTERN SCANNER\nSHOOT THE MISSING SYMBOL\nA●  B▲  A●  B▲  A●  ?"
+    finished<localizes>:message = "3/3 - PATTERN BADGE EARNED\nSpot the group. Fill the gap. Check the pattern.\nReplay or Return to Hub"
 
     OnBegin<override>()<suspends>:void =
         Hide()
         if (not configured?):
             return
-        set cargo = array{carrier_a, carrier_b, carrier_c, inspection_1,
-            inspection_2, inspection_3, inspection_4, inspection_5,
-            inspection_6, delivery_cargo, shuttle_prop, dispatch_shutter}
-        set boards = array{arrival_board, predict_board, repair_board, motion_board}
-        set buttons = array{start_button, predict_help_button, predict_watch_button,
-            repair_help_button, repair_watch_button, motion_help_button,
-            motion_watch_button, freeze_button, replay_button,
-            entry_return_button, finish_return_button}
-        set lights = array{predict_light, repair_light, motion_light}
-        # Reject incomplete editor configuration instead of starting a partial game.
-        if (targets.Length <> 15 or cargo.Length <> 12 or boards.Length <> 4 or buttons.Length <> 11):
-            Print("PATTERN LINE: incomplete device arrays; controller disabled")
+        if (not valid_configuration[]):
+            Print("PATTERN SCANNER: incomplete solo configuration")
             return
-        for (item : cargo):
-            set homes += array{item.GetTransform()}
+        set lights = array{predict_light, repair_light, motion_light}
+        # Let target OnBegin capture final scene homes before activating.
+        Sleep(0.1)
         for (target : targets):
             target.initialize_surface_home()
         reset_line()
-        labels := array{"START TEAM RUN", "HELP", "WATCH AGAIN", "HELP", "WATCH AGAIN",
-            "HELP", "WATCH AGAIN", "FREEZE TARGETS", "REPLAY", "RETURN TO HUB", "RETURN TO HUB"}
-        for (index -> input_button : buttons, label := labels[index]):
-            input_button.SetInteractionText(text(label))
-            input_button.SetInteractionTime(0.0)
-            input_button.SetMaxTriggerCount(0)
-            input_button.InteractedWithEvent.Subscribe(pattern_line_button_action{controller := Self, index := index}.on_press)
-        entry_zone.AgentEntersEvent.Subscribe(on_enter)
-        entry_zone.AgentExitsEvent.Subscribe(on_exit)
+        replay_button.SetInteractionText(text("REPLAY"))
+        entry_return_button.SetInteractionText(text("RETURN TO HUB"))
+        for (control : array{replay_button, entry_return_button}):
+            control.SetInteractionTime(0.0)
+            control.SetMaxTriggerCount(0)
+        entry_return_button.Enable()
+        replay_button.InteractedWithEvent.Subscribe(on_replay)
+        entry_return_button.InteractedWithEvent.Subscribe(on_return)
         progress.round_settings.RoundBeginEvent.Subscribe(on_round)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
         for (index -> target : targets):
             spawn { listen_hits(target, index) }
-        spawn { monitor_participants() }
+        monitor_player()
 
-    board(index:int, content:message):void =
-        if (display := boards[index]):
-            display.SetText(content)
-            display.ShowText()
-            display.UpdateDisplay()
+    valid_configuration()<transacts><decides>:void =
+        targets.Length = 3
+        success_ids.Length = 3
+        round_patterns.Length = 3
+        round_hints.Length = 3
+        round_answers.Length = 3
+        round_groups.Length = 3
+        solved_patterns.Length = 3
+        first_answer := success_ids[0]
+        second_answer := success_ids[1]
+        third_answer := success_ids[2]
+        first_answer >= 0
+        first_answer < 3
+        second_answer >= 0
+        second_answer < 3
+        third_answer >= 0
+        third_answer < 3
 
-    announce(content:message):void =
-        for (input_player -> character : participants):
-            feedback.Show(input_player, content, ?DisplayTime := 8.0)
+    board(content:message):void =
+        predict_board.SetText(content)
+        predict_board.ShowText()
+        predict_board.UpdateDisplay()
 
-    deactivate_targets():void =
-        for (target : targets):
-            target.deactivate()
+    in_course(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        location.X >= course_min_x
+        location.X <= course_max_x
+        location.Y >= course_min_y
+        location.Y <= course_max_y
+        location.Z >= course_min_z
+        location.Z <= course_max_z
 
-    freeze_carriers():void =
-        set frozen = true
-        set motion_generation += 1
-        freeze_event.Signal()
-        for (index := 0..2, item := cargo[index], target := targets[index]):
-            if (item.TeleportTo[item.GetTransform()]) {}
-            if (target.hit_surface.TeleportTo[target.hit_surface.GetTransform()]) {}
+    is_active_player(input_agent:agent)<transacts><decides>:void =
+        current := active_player?
+        input_agent = current
+        saved_character := active_character?
+        character := current.GetFortCharacter[]
+        character = saved_character
+        character.IsActive[]
+        in_course[current]
 
     reset_line():void =
         set generation += 1
-        set motion_generation += 1
-        reset_event.Signal()
-        freeze_event.Signal()
+        set hint_generation += 1
+        if (current := active_player?):
+            feedback.Hide(current)
         set phase = -1
+        set active_player = false
+        set active_character = false
         set busy = false
-        set frozen = false
-        set slow = false
         set mistakes = 0
-        set participants = map{}
-        set hint_counts = map{}
-        set ready_after = 0.0
-        deactivate_targets()
-        for (index -> item : cargo, home := homes[index]):
-            if (item.TeleportTo[home]) {}
-            item.Show()
-        if (delivery := cargo[9]):
-            delivery.Hide()
+        set wrong_ready = 0.0
+        for (target : targets):
+            target.deactivate()
         for (light : lights):
             light.TurnOff()
+        replay_button.Disable()
         finale_effect.End()
-        board(0, welcome)
-        board(1, text("1 PREDICT\nA CIRCLE / B TRIANGLE / C SQUARE"))
-        board(2, text("2 REPAIR\nFind the crate that breaks the repeating pair."))
-        board(3, text("3 TEST MOTION\nWatch the shuttle. Predict its next stop."))
+        board(welcome)
 
     on_round():void =
         reset_line()
 
-    in_course(input_agent:agent)<transacts><decides>:void =
-        character := input_agent.GetFortCharacter[]
-        position := character.GetTransform().Translation
-        position.X >= course_min_x
-        position.X <= course_max_x
-        position.Y >= course_min_y
-        position.Y <= course_max_y
-        position.Z >= course_min_z
-        position.Z <= course_max_z
-
-    enroll(input_agent:agent):void =
-        if (input_player := player[input_agent], participants[input_player]):
-            return
-        if (input_player := player[input_agent], character := input_player.GetFortCharacter[], character.IsActive[], in_course[input_player]):
-            if (set participants[input_player] = character) {}
-            progress.ensure_player(input_player)
-            feedback.Show(input_player, joining, ?DisplayTime := enrollment_seconds)
-
-    on_enter(input_agent:agent):void =
-        if (phase = -2):
-            enroll(input_agent)
-        else if (phase >= 0, phase < 4):
-            feedback.Show(input_agent, spectator, ?DisplayTime := 6.0)
-        else:
-            feedback.Show(input_agent, welcome, ?DisplayTime := 6.0)
-
-    on_exit(input_agent:agent):void =
-        if (input_player := player[input_agent], not in_course[input_player]):
-            on_departure(input_player)
-
     on_departure(input_player:player):void =
-        var remaining:[player]fort_character = map{}
-        for (other -> character : participants, other <> input_player):
-            if (set remaining[other] = character) {}
-        set participants = remaining
-        if (participants.Length = 0, phase <> -1):
+        if (current := active_player?, current = input_player):
             reset_line()
 
-    monitor_participants()<suspends>:void =
-        loop:
-            Sleep(0.1)
-            for (input_player -> enrolled_character : participants):
-                if (current := input_player.GetFortCharacter[], current = enrolled_character,
-                    current.IsActive[], in_course[input_player]):
-                else:
-                    on_departure(input_player)
-
-    on_button(input_agent:agent, index:int):void =
-        if (index >= 9):
-            on_exit(input_agent)
-            hub_destination.Teleport(input_agent)
-            return
-        if (index = 0 or index = 8):
-            if (phase <> -1, phase <> 4):
-                feedback.Show(input_agent, running_notice, ?DisplayTime := 4.0)
-                return
-            if (not in_course[input_agent]):
-                return
+    begin_solo(input_player:player):void =
+        if (character := input_player.GetFortCharacter[], character.IsActive[], in_course[input_player]):
             reset_line()
-            set phase = -2
-            set busy = true
-            for (occupant : GetPlayspace().GetPlayers()):
-                enroll(occupant)
-            board(0, joining)
-            spawn { track_enrollment(generation) }
-            spawn { start_run(generation) }
-            return
-        if (input_player := player[input_agent], participants[input_player], phase >= 0, phase < 4):
-            if (index = 7):
-                if (phase = 0, not busy?):
-                    freeze_carriers()
-                    feedback.Show(input_player, frozen_notice, ?DisplayTime := 5.0)
-            else if (index = 1 or index = 3 or index = 5):
-                var count:int = 1
-                if (old := hint_counts[input_player]):
-                    set count = old + 1
-                if (set hint_counts[input_player] = count) {}
-                if (phase = 0, not busy?):
-                    freeze_carriers()
-                if (count > 1, answer := answers[phase]):
-                    feedback.Show(input_player, text(answer), ?DisplayTime := 9.0)
-                else if (hint := hints[phase]):
-                    feedback.Show(input_player, text(hint), ?DisplayTime := 9.0)
-            else if (not busy?):
-                set busy = true
-                freeze_carriers()
-                deactivate_targets()
-                spawn { show_demonstration(generation, phase) }
+            set active_player = option{input_player}
+            set active_character = option{character}
+            progress.ensure_player(input_player)
+            set phase = 0
+            show_prompt()
+            for (target : targets):
+                target.activate()
 
-    start_run(token:int)<suspends>:void =
-        Sleep(enrollment_seconds)
-        if (generation <> token or participants.Length = 0):
-            return
-        set phase = 0
-        show_demonstration(token, 0)
-
-    track_enrollment(token:int)<suspends>:void =
+    monitor_player()<suspends>:void =
         loop:
-            if (generation <> token or phase <> -2):
-                return
-            for (occupant : GetPlayspace().GetPlayers()):
-                enroll(occupant)
+            if (current := active_player?):
+                if (not is_active_player[current]):
+                    reset_line()
+            else:
+                # Solo only: no cohorts, shared answers or enrollment.
+                for (candidate : GetPlayspace().GetPlayers(), not active_player?):
+                    begin_solo(candidate)
             Sleep(0.1)
+
+    on_replay(input_agent:agent):void =
+        if (phase = 3, is_active_player[input_agent], current := active_player?):
+            begin_solo(current)
+
+    on_return(input_agent:agent):void =
+        if (current := active_player?, current = input_agent):
+            reset_line()
+        hub_destination.Teleport(input_agent)
+
+    show_prompt():void =
+        if (pattern := round_patterns[phase]):
+            board(text("{phase}/3 SOLVED | SHOOT THE MISSING SYMBOL\n{pattern}"))
 
     listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
         loop:
             input_agent := target.Hit.Await()
             on_hit(input_agent, target, index)
 
-    is_choice(index:int)<transacts><decides>:void =
-        first_index := phase_first[phase]
-        count := phase_count[phase]
-        index >= first_index
-        index < first_index + count
-
     on_hit(input_agent:agent, target:fn_shoreline_island_data_target, index:int):void =
-        if (busy? or GetSimulationElapsedTime() < ready_after):
+        if (not is_active_player[input_agent]):
             return
-        if (not is_choice[index]):
+        set last_hit = GetSimulationElapsedTime()
+        if (busy? or phase < 0 or phase >= 3):
             return
-        if (input_player := player[input_agent], enrolled := participants[input_player], current := input_player.GetFortCharacter[], current = enrolled, current.IsActive[], in_course[input_player], correct := phase_success[phase]):
-            set ready_after = GetSimulationElapsedTime() + 1.0
+        if (correct := success_ids[phase]):
             if (index <> correct):
-                target.reject(input_agent)
+                if (GetSimulationElapsedTime() < wrong_ready):
+                    return
+                set wrong_ready = GetSimulationElapsedTime() + 0.4
                 set mistakes += 1
-                if (hint := hints[phase]):
-                    feedback.Show(input_player, text(hint), ?DisplayTime := 7.0)
-                if (phase = 0, mistakes >= 2):
-                    if (not slow?, not frozen?):
-                        freeze_carriers()
-                        set slow = true
-                        set frozen = false
-                        for (carrier_index := 0..2):
-                            spawn { animate_carrier(carrier_index, generation, motion_generation) }
-                    feedback.Show(input_player, assist_notice, ?DisplayTime := 7.0)
+                target.reject(input_agent)
+                set hint_generation += 1
+                if (pattern := round_patterns[phase], hint := round_hints[phase], answer := round_answers[phase], group := round_groups[phase]):
+                    var guidance:string = hint
+                    if (mistakes >= 2):
+                        set guidance = "REPEATING GROUP: [{group}]\n{answer}"
+                    board(text("{phase}/3 SOLVED | SHOOT THE MISSING SYMBOL\n{pattern}\n{guidance}"))
+                    feedback.Show(input_agent, text(guidance), ?DisplayTime := 3.0)
+                    spawn { clear_hint(generation, hint_generation, phase) }
                 return
             set busy = true
-            freeze_carriers()
+            set hint_generation += 1
+            feedback.Hide(input_agent)
             target.accept(input_agent, false)
-            for (other : targets):
-                other.hit_surface.Disable()
-            scan_audio.Play(input_player)
-            spawn { accepted(token := generation, accepted_phase := phase) }
+            for (choice : targets):
+                choice.hit_surface.Disable()
+            if (solved := solved_patterns[phase]):
+                board(text("{phase + 1}/3 SOLVED - PATTERN COMPLETE!\n{solved}"))
+            if (current := active_player?):
+                state := progress.ensure_player(current)
+                if (state.challenge = phase, not state.badge_earned?):
+                    progress.complete(current, phase)
+            if (light := lights[phase]):
+                light.TurnOn()
+            scan_audio.Play(input_agent)
+            spawn { next_round(generation, phase) }
 
-    activate_phase():void =
-        deactivate_targets()
-        if (phase = 0):
-            for (index := 0..2, item := cargo[index], home := homes[index]):
-                if (item.TeleportTo[home]) {}
-        if (first_index := phase_first[phase], count := phase_count[phase]):
-            for (index := first_index..first_index+count-1, target := targets[index]):
-                target.activate()
-        set busy = false
-        set ready_after = GetSimulationElapsedTime() + 1.0
-        if (phase = 0, not frozen?):
-            set motion_generation += 1
-            for (index := 0..2):
-                spawn { animate_carrier(index, generation, motion_generation) }
+    clear_hint(token:int, hint_token:int, expected_phase:int)<suspends>:void =
+        Sleep(3.0)
+        if (generation = token, hint_generation = hint_token, phase = expected_phase, not busy?):
+            show_prompt()
 
-    show_prompt():void =
-        if (content := prompts[phase], index := phase_board[phase]):
-            board(index, text(content))
-            announce(text(content))
-
-    show_demonstration(token:int, expected_phase:int)<suspends>:void =
-        if (generation <> token or phase <> expected_phase):
+    next_round(token:int, solved_phase:int)<suspends>:void =
+        if (solved_phase = 2):
+            finale_effect.Begin()
+        Sleep(1.0)
+        if (generation <> token or phase <> solved_phase):
             return
-        race:
-            block:
-                if (expected_phase = 0):
-                    for (symbol : array{"A CIRCLE", "B TRIANGLE", "A CIRCLE", "B TRIANGLE", "A CIRCLE"}):
-                        board(1, text("WATCH THE PATTERN\n{symbol}\nA > B > A > B > A > ?"))
-                        Sleep(0.8)
-                else if (expected_phase = 1):
-                    for (index := 3..8, item := cargo[index], home := homes[index]):
-                        var start:transform = home
-                        set start.Translation.Y += 200.0
-                        if (item.TeleportTo[start]) {}
-                        spawn { move_home(index, token) }
-                    Sleep(inspection_seconds + 0.1)
-                else if (expected_phase = 3):
-                    for (stop : shuttle_demo):
-                        move_shuttle(stop, 0.8)
-                        board(3, text("WATCH THE SHUTTLE\nSTOP {stop + 1}\n1 > 2 > 3 > 4 > 3 > 2 > ?"))
-                        Sleep(0.4)
-                else:
-                    Sleep(0.5)
-                if (generation = token, phase = expected_phase):
-                    show_prompt()
-                    activate_phase()
-            reset_event.Await()
-
-    move_home(index:int, token:int)<suspends>:void =
-        if (generation = token, item := cargo[index], home := homes[index]):
-            race:
-                item.MoveTo(home, inspection_seconds)
-                reset_event.Await()
-
-    animate_carrier(index:int, token:int, motion_token:int)<suspends>:void =
-        if (generation <> token or motion_generation <> motion_token):
+        finale_effect.End()
+        set phase += 1
+        set mistakes = 0
+        set wrong_ready = 0.0
+        if (phase = 3):
+            set busy = false
+            board(finished)
+            replay_button.Enable()
             return
-        if (item := cargo[index], home := homes[index], target := targets[index]):
-            race:
-                block:
-                    var direction:float = 1.0
-                    loop:
-                        if (generation <> token or phase <> 0 or busy? or frozen? or motion_generation <> motion_token):
-                            return
-                        var pose:transform = home
-                        var hit_pose:transform = target.surface_home
-                        set pose.Translation.X += direction * carrier_half_span
-                        set hit_pose.Translation.X += direction * carrier_half_span
-                        var duration:float = carrier_leg_seconds * Distance(item.GetTransform().Translation, pose.Translation) / (2.0 * carrier_half_span)
-                        if (slow?):
-                            set duration *= 2.0
-                        if (duration < 0.05):
-                            set duration = 0.05
-                        sync:
-                            item.MoveTo(pose, duration)
-                            target.hit_surface.MoveTo(hit_pose, duration)
-                        Sleep(0.5)
-                        set direction = -direction
-                freeze_event.Await()
-                reset_event.Await()
-
-    move_shuttle(stop:int, duration:float)<suspends>:void =
-        if (shuttle := cargo[10], home := homes[10]):
-            var pose:transform = home
-            set pose.Translation.X += stop * shuttle_step_cm
-            shuttle.MoveTo(pose, duration)
-
-    credit(round_index:int):void =
-        for (input_player -> enrolled : participants):
-            if (current := input_player.GetFortCharacter[], current = enrolled,
-                current.IsActive[], in_course[input_player]):
-                state := progress.ensure_player(input_player)
-                if (state.challenge = round_index, not state.badge_earned?):
-                    progress.complete(input_player, round_index)
-        if (light := lights[round_index]):
-            light.TurnOn()
-
-    accepted(token:int, accepted_phase:int)<suspends>:void =
-        if (generation <> token or phase <> accepted_phase):
-            return
-        race:
-            block:
-                Sleep(0.4)
-                deactivate_targets()
-                if (accepted_phase = 0):
-                    if (item := cargo[1], home := homes[1]):
-                        var pose:transform = home
-                        set pose.Translation.Y += 300.0
-                        item.MoveTo(pose, 1.2)
-                    announce(text("B follows A. The first cargo segment is powered!"))
-                else if (accepted_phase = 1):
-                    if (item := cargo[6], home := homes[6]):
-                        var pose:transform = home
-                        set pose.Translation.Z += 100.0
-                        item.MoveTo(pose, 1.0)
-                else if (accepted_phase = 2):
-                    if (item := cargo[6], home := homes[6]):
-                        item.MoveTo(home, 1.0)
-                    board(2, text("REPAIRED!\nA CIRCLE > B TRIANGLE > A > B > A > B"))
-                    for (slot_index := 3..8, slot := targets[slot_index]):
-                        if (slot_index = 3 or slot_index = 5 or slot_index = 7):
-                            slot.label_board.SetText(text("A CIRCLE"))
-                        else:
-                            slot.label_board.SetText(text("B TRIANGLE"))
-                        slot.label_board.ShowText()
-                        slot.label_board.UpdateDisplay()
-                    for (index := 3..8, item := cargo[index], home := homes[index]):
-                        var pose:transform = home
-                        set pose.Translation.Y += 150.0
-                        item.MoveTo(pose, 0.3)
-                    announce(text("Slot 4 needed B. The repeating pair is restored!"))
-                else if (accepted_phase = 3):
-                    move_shuttle(0, 1.2)
-                    if (delivery := cargo[9], shuttle := cargo[10]):
-                        var pickup:transform = shuttle.GetTransform()
-                        set pickup.Translation.Z += 100.0
-                        if (delivery.TeleportTo[pickup]) {}
-                        delivery.Show()
-                        var dispatch:transform = pickup
-                        set dispatch.Translation.X += 2400.0
-                        if (shutter := cargo[11], home := homes[11]):
-                            var opened:transform = home
-                            set opened.Translation.Z += 400.0
-                            sync:
-                                delivery.MoveTo(dispatch, 3.0)
-                                shutter.MoveTo(opened, 3.0)
-                    finale_effect.Begin()
-                if (generation <> token):
-                    return
-                if (round_index := phase_round[accepted_phase], round_index >= 0):
-                    credit(round_index)
-                set phase += 1
-                set mistakes = 0
-                set hint_counts = map{}
-                set frozen = false
-                if (phase = 4):
-                    set busy = false
-                    board(0, finished)
-                    board(3, finished)
-                    announce(finished)
-                    Sleep(3.0)
-                    if (generation = token):
-                        finale_effect.End()
-                else:
-                    Sleep(1.0)
-                    show_demonstration(token, phase)
-            reset_event.Await()
+        show_prompt()
+        # Observe shots under a scoring lock; require a quiet interval to rearm.
+        set last_hit = GetSimulationElapsedTime()
+        for (choice : targets):
+            choice.hit_surface.Enable()
+        loop:
+            Sleep(0.05)
+            if (generation <> token):
+                return
+            if (GetSimulationElapsedTime() - last_hit >= 0.5):
+                set busy = false
+                return

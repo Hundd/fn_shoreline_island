@@ -29,6 +29,9 @@ fn_shoreline_island_data_target := class(creative_device):
     label_board:billboard_device = billboard_device{}
     @editable
     display_label:string = "DATA TARGET"
+    # Opt-in for the solo bay; existing moving mission targets retain their cues.
+    @editable
+    stationary_y_facing:logic = false
     @editable
     selectable_ring:vfx_creator_device = vfx_creator_device{}
     @editable
@@ -204,12 +207,17 @@ fn_shoreline_island_data_target := class(creative_device):
             var pose:transform = ring_home
             set pose.Translation = position + vector3{X := -10.0}
             set pose.Scale = ring_home.Scale * (1.0 + pulse * 0.06)
+            if (stationary_y_facing?):
+                set pose.Translation = position + vector3{Y := -10.0}
+                set pose.Scale = ring_home.Scale
             if (GetSimulationElapsedTime() < wrong_until):
                 set pose.Translation = pose.Translation + vector3{Y := shake_direction * 8.0}
                 set shake_direction = -shake_direction
             if (ring_mesh.TeleportTo[pose]) {}
             var label_pose:transform = label_board.GetTransform()
             set label_pose.Translation = position + vector3{X := -20.0, Z := 200.0}
+            if (stationary_y_facing?):
+                set label_pose.Translation = position + vector3{Y := -20.0, Z := -12.0}
             if (label_board.TeleportTo[label_pose]) {}
             var particle_pose:transform = active_particles.GetTransform()
             set particle_pose.Translation = position

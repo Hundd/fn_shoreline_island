@@ -1,12 +1,12 @@
 # Solo simplification plan ? revision 2
 
-Proposed, not approved or implemented. Read spec.md S-01..09 and review.md. The old approval digest cannot authorize this design. Historical bundle: history/cargo-circuit-v1/.
+Approved by the user message "looks good". Readiness passed before implementation; current work and evidence are in tasks.md. Read spec.md S-01..09 and review.md. Historical bundle: history/cargo-circuit-v1/.
 
 ## Evidence and actual baseline
 
 Live serialized SceneTools.find_actors on 2026-09-29 found 166 cargo_circuit actors, including 21 conveyors, 15 target assemblies, 8 stacked crates, 2 planters, 13 rails and 6 lamps. Full descriptors are in evidence/simplification-live-inventory-2026-09-29.json. Existing controller source requires exactly 15 targets, 12 cargo references, 4 boards and 11 buttons. Its phase-specific demonstrations/accepted handlers and five-second enrollment are hardcoded despite editable phase arrays. Conveyors have no bindings in that controller and are static dressing. Existing cooking and scripted progression evidence does not establish physical rifle usability or fun.
 
-Measured floor origin: (-1100,3000,2400) cm; overall floors 88 x 25 m. Hub walkway enters near local (4.5,3). New anchors below are proposed, not measured placed transforms. map.yaml retains the full site envelope to identify the untouched support floors; only X=0..22 is gameplay.
+Measured floor origin: (-1100,3000,2400) cm; overall floors 88 x 25 m. Hub walkway enters near local (4.5,3). The anchors below define the approved layout; measured placed transforms and later label alignment are recorded in evidence/solo-placement-readback-2026-09-29.json and solo-canopy-and-label-adjustments-2026-09-29.json. map.yaml retains the full site envelope to identify the untouched support floors; only X=0..22 is gameplay.
 
 ## Concrete layout
 

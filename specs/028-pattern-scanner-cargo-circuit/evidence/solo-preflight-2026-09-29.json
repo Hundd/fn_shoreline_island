@@ -1,0 +1,4454 @@
+{
+  "checkpoint": "eb74e18",
+  "controller": {
+    "guid": "1902FC14-4218-30AA-DBA1-9DAB74DCB2C8",
+    "nativeClass": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "class": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "name": "VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563",
+    "label": "fn_shoreline_island_pattern_line",
+    "bounds": {
+      "min": {
+        "x": -626.668529510498,
+        "y": 4041.7195053100586,
+        "z": 2450
+      },
+      "max": {
+        "x": -373.2796440124512,
+        "y": 4158.642440795898,
+        "z": 2608.1131439208984
+      },
+      "isValid": true
+    },
+    "runtimeGrid": "None",
+    "bIsSpatiallyLoaded": false,
+    "bActorIsEditorOnly": false,
+    "actorPackage": "None",
+    "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563",
+    "folderPath": "None",
+    "dataLayerAssets": []
+  },
+  "properties": {
+    "configured": false,
+    "progress": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5CD0003_1277002985.fn_shoreline_island_loop_progress_0"
+    },
+    "entry_zone": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x05240ED7_entry_zone"
+    },
+    "course_min_x": -1100,
+    "course_max_x": 7700,
+    "course_min_y": 3000,
+    "course_max_y": 5500,
+    "course_min_z": 2350,
+    "course_max_z": 3300,
+    "hub_destination": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x6477387A_hub_destination"
+    },
+    "targets": [
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0"
+      }
+    ],
+    "carrier_a": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x14B6ACF4_carrier_a"
+    },
+    "carrier_b": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xFA1919E6_carrier_b"
+    },
+    "carrier_c": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x9F7EA55E_carrier_c"
+    },
+    "inspection_1": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x27175C88_inspection_1"
+    },
+    "inspection_2": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xC9B8E99A_inspection_2"
+    },
+    "inspection_3": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xACDF5522_inspection_3"
+    },
+    "inspection_4": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x15E782BF_inspection_4"
+    },
+    "inspection_5": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x70803E07_inspection_5"
+    },
+    "inspection_6": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x9E2F8B15_inspection_6"
+    },
+    "delivery_cargo": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x60C4FFD2_delivery_cargo"
+    },
+    "shuttle_prop": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x525E2C9B_shuttle_prop"
+    },
+    "dispatch_shutter": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xC9F097B7_dispatch_shutter"
+    },
+    "arrival_board": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x9D1B7EC2_arrival_board"
+    },
+    "predict_board": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x9989D27E_predict_board"
+    },
+    "repair_board": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x57EDBE1D_repair_board"
+    },
+    "motion_board": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xB75780D1_motion_board"
+    },
+    "feedback": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x4772A5AD_feedback"
+    },
+    "start_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x6B3A0F43_start_button"
+    },
+    "predict_help_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x369A0C56_predict_help_button"
+    },
+    "predict_watch_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x592B219B_predict_watch_button"
+    },
+    "repair_help_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xF2A12EE7_repair_help_button"
+    },
+    "repair_watch_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x439DE451_repair_watch_button"
+    },
+    "motion_help_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xB101328C_motion_help_button"
+    },
+    "motion_watch_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x7DD22A3D_motion_watch_button"
+    },
+    "freeze_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xB08842BB_freeze_button"
+    },
+    "replay_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xAC48FAD2_replay_button"
+    },
+    "entry_return_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xF664B3EF_entry_return_button"
+    },
+    "finish_return_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xE110FD6C_finish_return_button"
+    },
+    "predict_light": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x8674E466_predict_light"
+    },
+    "repair_light": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x48108805_repair_light"
+    },
+    "motion_light": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xA8AAB6C9_motion_light"
+    },
+    "finale_effect": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xFD8E9C4A_finale_effect"
+    },
+    "scan_audio": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0xC8F11711_scan_audio"
+    },
+    "phase_first": [
+      0,
+      3,
+      9,
+      12
+    ],
+    "phase_count": [
+      3,
+      6,
+      3,
+      3
+    ],
+    "phase_success": [
+      1,
+      6,
+      10,
+      12
+    ],
+    "phase_round": [
+      0,
+      -1,
+      1,
+      2
+    ],
+    "phase_board": [
+      1,
+      2,
+      2,
+      3
+    ],
+    "prompts": [
+      "TEAM RUN 1/3 | PREDICT\nA CIRCLE > B TRIANGLE > A > B > A > ?\nShoot the next symbol.",
+      "TEAM RUN 2/3 | FIND THE EXCEPTION\n1:A  2:B  3:A  4:A  5:A  6:B\nShoot the crate that breaks A/B.",
+      "TEAM RUN 2/3 | REPAIR\nThe fourth crate is lifted.\nShoot its replacement: A, B or C.",
+      "TEAM RUN 3/3 | TEST YOUR PREDICTION\n1 > 2 > 3 > 4 > 3 > 2 > ?\nMoving toward 1. Shoot the next stop."
+    ],
+    "hints": [
+      "A circle and B triangle repeat as a pair. Follow the last A.",
+      "Odd slots are A. Even slots should be B. Compare the six crates.",
+      "The missing member of the A/B pair belongs in slot 4.",
+      "The shuttle reverses at the ends. After 4, it visits 3, then 2."
+    ],
+    "answers": [
+      "Shoot B TRIANGLE. A is followed by B.",
+      "Shoot SLOT 4. It is A, but the repeating pair needs B.",
+      "Shoot replacement B TRIANGLE to restore A/B/A/B/A/B.",
+      "Shoot STOP 1. The shuttle is returning from 4 toward 1."
+    ],
+    "enrollment_seconds": 5,
+    "carrier_half_span": 150,
+    "carrier_leg_seconds": 6,
+    "inspection_seconds": 3,
+    "shuttle_step_cm": 400,
+    "shuttle_demo": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ]
+  },
+  "targets": [
+    {
+      "label": "cargo_circuit_target_replace_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739",
+      "properties": {
+        "target_id": 10,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "B ▲ TRIANGLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_stop_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749",
+      "properties": {
+        "target_id": 12,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "STOP 1",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_predict_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694",
+      "properties": {
+        "target_id": 1,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "B ▲ TRIANGLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_predict_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699",
+      "properties": {
+        "target_id": 2,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "C ■ SQUARE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_stop_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759",
+      "properties": {
+        "target_id": 14,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "STOP 4",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_predict_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510",
+      "properties": {
+        "target_id": 0,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "A ● CIRCLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704",
+      "properties": {
+        "target_id": 3,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "1 A ● CIRCLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709",
+      "properties": {
+        "target_id": 4,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "2 B ▲ TRIANGLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714",
+      "properties": {
+        "target_id": 5,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "3 A ● CIRCLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719",
+      "properties": {
+        "target_id": 6,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "4 A ● CIRCLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724",
+      "properties": {
+        "target_id": 7,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "5 A ● CIRCLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729",
+      "properties": {
+        "target_id": 8,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "6 B ▲ TRIANGLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_replace_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734",
+      "properties": {
+        "target_id": 9,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "A ● CIRCLE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_replace_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744",
+      "properties": {
+        "target_id": 11,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "C ■ SQUARE",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_stop_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754",
+      "properties": {
+        "target_id": 13,
+        "mission_id": 28,
+        "reward_value": 1,
+        "objective": false,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "display_label": "STOP 3",
+        "selectable_ring": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0xE9FCEDEE_selectable_ring"
+        },
+        "objective_cone": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0xC97A4E76_objective_cone"
+        },
+        "active_particles": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0xEB59BB3B_active_particles"
+        },
+        "hit_flash": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0x02060FCB_hit_flash"
+        },
+        "complete_burst": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0x14EA2D81_complete_burst"
+        },
+        "wrong_sparks": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0xDE187B9B_wrong_sparks"
+        },
+        "hit_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0x0B84FD8B_hit_sound"
+        },
+        "wrong_sound": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754.fn_shoreline_island_data_target_0.__verse_0x7B912D6F_wrong_sound"
+        }
+      }
+    }
+  ],
+  "transforms": [
+    {
+      "label": "cargo_circuit_label_replace_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1623477747",
+      "transform": {
+        "location": {
+          "x": 3280,
+          "y": 4300,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_repair_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1844229766",
+      "transform": {
+        "location": {
+          "x": 2700,
+          "y": 4050,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_replace_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1622812746",
+      "transform": {
+        "location": {
+          "x": 3290,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_stop_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1698347757",
+      "transform": {
+        "location": {
+          "x": 5280,
+          "y": 4500,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_0_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1710031999",
+      "transform": {
+        "location": {
+          "x": -150,
+          "y": 5050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_replace_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1611144739",
+      "transform": {
+        "location": {
+          "x": 2800,
+          "y": 4300,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_replace_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1613145740",
+      "transform": {
+        "location": {
+          "x": 2800,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_replace_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1614147741",
+      "transform": {
+        "location": {
+          "x": 2790,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_replace_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1614815742",
+      "transform": {
+        "location": {
+          "x": 2780,
+          "y": 4300,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_replace_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1615477743",
+      "transform": {
+        "location": {
+          "x": 2800,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_shared_hit_flash",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1143968691",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_shared_complete_burst",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1144971692",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_shared_wrong_sparks",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1145973693",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_motion_power_light",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5470603_1943233781",
+      "transform": {
+        "location": {
+          "x": 6000,
+          "y": 5150,
+          "z": 2800
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_stop_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1686012749",
+      "transform": {
+        "location": {
+          "x": 4500,
+          "y": 4500,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_stop_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1688012750",
+      "transform": {
+        "location": {
+          "x": 4500,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_stop_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1689015751",
+      "transform": {
+        "location": {
+          "x": 4490,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_stop_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1689680752",
+      "transform": {
+        "location": {
+          "x": 4480,
+          "y": 4500,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_stop_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1690346753",
+      "transform": {
+        "location": {
+          "x": 4500,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_14",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1555922973",
+      "transform": {
+        "location": {
+          "x": 4880,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_predict_power_light",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5470603_1910910779",
+      "transform": {
+        "location": {
+          "x": 1000,
+          "y": 5150,
+          "z": 2800
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_predict_watch_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1870229770",
+      "transform": {
+        "location": {
+          "x": 450,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_predict_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694",
+      "transform": {
+        "location": {
+          "x": 600,
+          "y": 4600,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_predict_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1381085695",
+      "transform": {
+        "location": {
+          "x": 600,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_predict_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1382088696",
+      "transform": {
+        "location": {
+          "x": 590,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_predict_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1382783697",
+      "transform": {
+        "location": {
+          "x": 580,
+          "y": 4600,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_predict_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1383416698",
+      "transform": {
+        "location": {
+          "x": 600,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_07",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1553591966",
+      "transform": {
+        "location": {
+          "x": 2535,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_12",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1612174992",
+      "transform": {
+        "location": {
+          "x": 6400,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1514709726",
+      "transform": {
+        "location": {
+          "x": 2890,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_predict_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1103994690",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_repair_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1870897771",
+      "transform": {
+        "location": {
+          "x": 2500,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_stop_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1696680755",
+      "transform": {
+        "location": {
+          "x": 5300,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_shuttle",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1671847509",
+      "transform": {
+        "location": {
+          "x": 4500,
+          "y": 4800,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_0_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1711233000",
+      "transform": {
+        "location": {
+          "x": -105,
+          "y": 5065,
+          "z": 2466
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 14.999999999999998,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_stop_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1705344760",
+      "transform": {
+        "location": {
+          "x": 5700,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_delivery",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1671510508",
+      "transform": {
+        "location": {
+          "x": 6700,
+          "y": 4800,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1488699711",
+      "transform": {
+        "location": {
+          "x": 2290,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_predict_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699",
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 4600,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_predict_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1389750700",
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_predict_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1390753701",
+      "transform": {
+        "location": {
+          "x": 1090,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_predict_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1391420702",
+      "transform": {
+        "location": {
+          "x": 1080,
+          "y": 4600,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_predict_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1392083703",
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1480032706",
+      "transform": {
+        "location": {
+          "x": 2090,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_05",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1687394998",
+      "transform": {
+        "location": {
+          "x": 6500,
+          "y": 5250,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_1_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1711606001",
+      "transform": {
+        "location": {
+          "x": 1700,
+          "y": 5050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1524709733",
+      "transform": {
+        "location": {
+          "x": 3100,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_stop_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1703345759",
+      "transform": {
+        "location": {
+          "x": 5700,
+          "y": 4500,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_stop_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1706347761",
+      "transform": {
+        "location": {
+          "x": 5690,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_stop_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1707014762",
+      "transform": {
+        "location": {
+          "x": 5680,
+          "y": 4500,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_stop_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1707679763",
+      "transform": {
+        "location": {
+          "x": 5700,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_2_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1712590004",
+      "transform": {
+        "location": {
+          "x": 3945,
+          "y": 5065,
+          "z": 2466
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 14.999999999999998,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_course_zone",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5460603_1222630498",
+      "transform": {
+        "location": {
+          "x": 3300,
+          "y": 4250,
+          "z": 2600
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_predict_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_predict_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5460603_2096444511",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_predict_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5460603_2126039512",
+      "transform": {
+        "location": {
+          "x": 90,
+          "y": 4600,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_predict_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5460603_2147393513",
+      "transform": {
+        "location": {
+          "x": 80,
+          "y": 4600,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1477028704",
+      "transform": {
+        "location": {
+          "x": 2100,
+          "y": 4700,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1479030705",
+      "transform": {
+        "location": {
+          "x": 2100,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1480697707",
+      "transform": {
+        "location": {
+          "x": 2080,
+          "y": 4700,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1481364708",
+      "transform": {
+        "location": {
+          "x": 2100,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1485696709",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4700,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1487697710",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1489367712",
+      "transform": {
+        "location": {
+          "x": 2280,
+          "y": 4700,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1490030713",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1494373714",
+      "transform": {
+        "location": {
+          "x": 2500,
+          "y": 4700,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1496372715",
+      "transform": {
+        "location": {
+          "x": 2500,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1497373716",
+      "transform": {
+        "location": {
+          "x": 2490,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1498040717",
+      "transform": {
+        "location": {
+          "x": 2480,
+          "y": 4700,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1498705718",
+      "transform": {
+        "location": {
+          "x": 2500,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1503038719",
+      "transform": {
+        "location": {
+          "x": 2700,
+          "y": 4700,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1505039720",
+      "transform": {
+        "location": {
+          "x": 2700,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1506041721",
+      "transform": {
+        "location": {
+          "x": 2690,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1506705722",
+      "transform": {
+        "location": {
+          "x": 2680,
+          "y": 4700,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1507372723",
+      "transform": {
+        "location": {
+          "x": 2700,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1511704724",
+      "transform": {
+        "location": {
+          "x": 2900,
+          "y": 4700,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1513706725",
+      "transform": {
+        "location": {
+          "x": 2900,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1515373727",
+      "transform": {
+        "location": {
+          "x": 2880,
+          "y": 4700,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1516039728",
+      "transform": {
+        "location": {
+          "x": 2900,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1520371729",
+      "transform": {
+        "location": {
+          "x": 3100,
+          "y": 4700,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1522371730",
+      "transform": {
+        "location": {
+          "x": 3100,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1523378731",
+      "transform": {
+        "location": {
+          "x": 3090,
+          "y": 4700,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1524041732",
+      "transform": {
+        "location": {
+          "x": 3080,
+          "y": 4700,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_replace_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1602476734",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4300,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_replace_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1604475735",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_replace_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1605481736",
+      "transform": {
+        "location": {
+          "x": 2290,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_label_replace_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1606147737",
+      "transform": {
+        "location": {
+          "x": 2280,
+          "y": 4300,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_replace_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1606809738",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_replace_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1619810744",
+      "transform": {
+        "location": {
+          "x": 3300,
+          "y": 4300,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_hit_replace_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5470603_1621809745",
+      "transform": {
+        "location": {
+          "x": 3300,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_replace_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1624142748",
+      "transform": {
+        "location": {
+          "x": 3300,
+          "y": 4300,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_target_stop_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1694679754",
+      "transform": {
+        "location": {
+          "x": 5300,
+          "y": 4500,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_ring_stop_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5470603_1697682756",
+      "transform": {
+        "location": {
+          "x": 5290,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_active_vfx_stop_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1699014758",
+      "transform": {
+        "location": {
+          "x": 5300,
+          "y": 4500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_carrier_a",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5450603_1586134320",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 4600,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_carrier_b",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1668844500",
+      "transform": {
+        "location": {
+          "x": 600,
+          "y": 4600,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_carrier_c",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1669226501",
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 4600,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_slot_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1669532502",
+      "transform": {
+        "location": {
+          "x": 2100,
+          "y": 4700,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_slot_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1669847503",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 4700,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_slot_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1670180504",
+      "transform": {
+        "location": {
+          "x": 2500,
+          "y": 4700,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_slot_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1670514505",
+      "transform": {
+        "location": {
+          "x": 2700,
+          "y": 4700,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_slot_5",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1670847506",
+      "transform": {
+        "location": {
+          "x": 2900,
+          "y": 4700,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_slot_6",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5460603_1671181507",
+      "transform": {
+        "location": {
+          "x": 3100,
+          "y": 4700,
+          "z": 2520
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_shutter_probe",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Prop_Asteria_WareHouse_Door_A_C_UAID_E89C2592D1B5460603_1455854499",
+      "transform": {
+        "location": {
+          "x": 6900,
+          "y": 4670,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 89.99999999999999,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 1,
+          "z": 1.75
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_arrival_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1842527764",
+      "transform": {
+        "location": {
+          "x": -400,
+          "y": 4200,
+          "z": 2800
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_predict_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1843563765",
+      "transform": {
+        "location": {
+          "x": 400,
+          "y": 4100,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_motion_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1844897767",
+      "transform": {
+        "location": {
+          "x": 5100,
+          "y": 4050,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_feedback_hud",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5470603_1959589782",
+      "transform": {
+        "location": {
+          "x": -400,
+          "y": 5000,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_start_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1868936768",
+      "transform": {
+        "location": {
+          "x": -550,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_predict_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1869565769",
+      "transform": {
+        "location": {
+          "x": 100,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_repair_watch_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1871562772",
+      "transform": {
+        "location": {
+          "x": 2850,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_motion_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1872229773",
+      "transform": {
+        "location": {
+          "x": 5000,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_motion_watch_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1872896774",
+      "transform": {
+        "location": {
+          "x": 5350,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_freeze_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1873563775",
+      "transform": {
+        "location": {
+          "x": 800,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_replay_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1874228776",
+      "transform": {
+        "location": {
+          "x": 6900,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_entry_return_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1874895777",
+      "transform": {
+        "location": {
+          "x": -200,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_finish_return_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1875562778",
+      "transform": {
+        "location": {
+          "x": 7250,
+          "y": 3450,
+          "z": 2480
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_repair_power_light",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5470603_1942229780",
+      "transform": {
+        "location": {
+          "x": 3200,
+          "y": 5150,
+          "z": 2800
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_finale_effect",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1990229783",
+      "transform": {
+        "location": {
+          "x": 6900,
+          "y": 4800,
+          "z": 2800
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_17",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1556930976",
+      "transform": {
+        "location": {
+          "x": 5885,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_03",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1552258962",
+      "transform": {
+        "location": {
+          "x": 1195,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_01",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1608863982",
+      "transform": {
+        "location": {
+          "x": 350,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stop_sign_2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B54B0603_1607280544",
+      "transform": {
+        "location": {
+          "x": 4900,
+          "y": 5100,
+          "z": 3100
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_19",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1558085978",
+      "transform": {
+        "location": {
+          "x": 6555,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_08",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1553921967",
+      "transform": {
+        "location": {
+          "x": 2870,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_02",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1609177983",
+      "transform": {
+        "location": {
+          "x": 900,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_1_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1711953002",
+      "transform": {
+        "location": {
+          "x": 1745,
+          "y": 5065,
+          "z": 2466
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 14.999999999999998,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_05",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1610177986",
+      "transform": {
+        "location": {
+          "x": 2550,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_00",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1669512993",
+      "transform": {
+        "location": {
+          "x": -500,
+          "y": 5250,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_03",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1609507984",
+      "transform": {
+        "location": {
+          "x": 1450,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_3_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1713261006",
+      "transform": {
+        "location": {
+          "x": 6795,
+          "y": 5065,
+          "z": 2466
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 14.999999999999998,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_01",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1686028994",
+      "transform": {
+        "location": {
+          "x": 900,
+          "y": 5250,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_00",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1608472981",
+      "transform": {
+        "location": {
+          "x": -200,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_03",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1686734996",
+      "transform": {
+        "location": {
+          "x": 3700,
+          "y": 5250,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_09",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1554255968",
+      "transform": {
+        "location": {
+          "x": 3205,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_02",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5450603_2080430321",
+      "transform": {
+        "location": {
+          "x": 860,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_05",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1552933964",
+      "transform": {
+        "location": {
+          "x": 1865,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_02",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1686409995",
+      "transform": {
+        "location": {
+          "x": 2300,
+          "y": 5250,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_11",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1611847991",
+      "transform": {
+        "location": {
+          "x": 5850,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_return_arrow",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B54B0603_1611256547",
+      "transform": {
+        "location": {
+          "x": 6150,
+          "y": 4100,
+          "z": 3000
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_20",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1558449979",
+      "transform": {
+        "location": {
+          "x": 6890,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_06",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1610511987",
+      "transform": {
+        "location": {
+          "x": 3100,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_lamp_04",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_LightStand_Warm_C_UAID_E89C2592D1B5480603_1687063997",
+      "transform": {
+        "location": {
+          "x": 5100,
+          "y": 5250,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_08",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1584424980",
+      "transform": {
+        "location": {
+          "x": 4200,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_16",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1556593975",
+      "transform": {
+        "location": {
+          "x": 5550,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_12",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1555257971",
+      "transform": {
+        "location": {
+          "x": 4210,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_00",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1551573960",
+      "transform": {
+        "location": {
+          "x": 190,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_13",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1555592972",
+      "transform": {
+        "location": {
+          "x": 4545,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_01",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1551968961",
+      "transform": {
+        "location": {
+          "x": 525,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_04",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1609842985",
+      "transform": {
+        "location": {
+          "x": 2000,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_09",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1611177989",
+      "transform": {
+        "location": {
+          "x": 4750,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stop_sign_4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B54B0603_1610256546",
+      "transform": {
+        "location": {
+          "x": 5700,
+          "y": 5100,
+          "z": 3100
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_planter_arrival",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Artemis_Planter_01_C_UAID_E89C2592D1B5480603_1726157007",
+      "transform": {
+        "location": {
+          "x": -700,
+          "y": 5050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_04",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1552593963",
+      "transform": {
+        "location": {
+          "x": 1530,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stop_sign_3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B54B0603_1609254545",
+      "transform": {
+        "location": {
+          "x": 5300,
+          "y": 5100,
+          "z": 3100
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_3_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1712926005",
+      "transform": {
+        "location": {
+          "x": 6750,
+          "y": 5050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_18",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1557466977",
+      "transform": {
+        "location": {
+          "x": 6220,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_10",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1554592969",
+      "transform": {
+        "location": {
+          "x": 3540,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_07",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1610839988",
+      "transform": {
+        "location": {
+          "x": 3650,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_06",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1553258965",
+      "transform": {
+        "location": {
+          "x": 2200,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stop_sign_1",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B54B0603_1604851543",
+      "transform": {
+        "location": {
+          "x": 4500,
+          "y": 5100,
+          "z": 3100
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_planter_dispatch",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Artemis_Planter_01_C_UAID_E89C2592D1B5480603_1738234008",
+      "transform": {
+        "location": {
+          "x": 7300,
+          "y": 5050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_15",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1556260974",
+      "transform": {
+        "location": {
+          "x": 5215,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_rail_10",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_IND_Rusty_Catwalk_Railing_C_UAID_E89C2592D1B5480603_1611514990",
+      "transform": {
+        "location": {
+          "x": 5300,
+          "y": 4200,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_conveyor_11",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IND_ConveyorBelt_01_C_UAID_E89C2592D1B5480603_1554928970",
+      "transform": {
+        "location": {
+          "x": 3875,
+          "y": 4850,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "cargo_circuit_stack_2_0",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B5480603_1712261003",
+      "transform": {
+        "location": {
+          "x": 3900,
+          "y": 5050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    }
+  ]
+}
