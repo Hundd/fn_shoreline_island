@@ -1,0 +1,775 @@
+version: 1
+map:
+  id: classifier_cargo_rescue
+  title: Classifier Cargo Rescue
+  theme: coastal_sorting_factory
+  units: meters
+  origin_cm:
+  - -13000
+  - -600
+  - 2400
+  size:
+  - 112
+  - 33
+  - 9
+  learning_objective: Label examples, correct a confident mistake, and test new examples
+    before trusting a classifier.
+  source_feature: specs/029-classifier-cargo-rescue/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- entry
+- label
+- check
+- test
+- ship
+zones:
+- id: entry
+  label: START
+  pattern: knowledge_room
+  position:
+  - 104
+  - 0
+  - 0
+  size:
+  - 8
+  - 33
+  - 9
+  purpose: 'Enroll and learn: Shoot the category to route the cargo.'
+  parameters:
+    lesson: 'Enroll and learn: Shoot the category to route the cargo.'
+    duration_seconds: 5
+    hud_copy: true
+  devices:
+  - controller
+  - boards
+  - hud
+  - controls
+  - cargo
+  - progress
+  - entry_zone
+  overlap_with: []
+  completion: Follow exact stage table; open physical aisle stays accessible.
+  reset: Cancel generation and motion; park surfaces; restore homes. Replay preserves
+    badges; round reset clears progress.
+- id: label
+  label: 1 LABEL
+  pattern: shooting_gallery
+  position:
+  - 84
+  - 0
+  - 0
+  size:
+  - 20
+  - 33
+  - 9
+  purpose: Label burger, chair and car with category shots.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - controller
+  - boards
+  - hud
+  - controls
+  - cargo
+  - progress
+  - blaster
+  - label_targets
+  overlap_with: []
+  completion: Follow exact stage table; open physical aisle stays accessible.
+  reset: Cancel generation and motion; park surfaces; restore homes. Replay preserves
+    badges; round reset clears progress.
+- id: check
+  label: 2 CHECK
+  pattern: shooting_gallery
+  position:
+  - 56
+  - 0
+  - 0
+  size:
+  - 28
+  - 33
+  - 9
+  purpose: Find a confident wrong prediction and correct its label.
+  parameters:
+    target_count: 6
+    friendly_fire: false
+  devices:
+  - controller
+  - boards
+  - hud
+  - controls
+  - cargo
+  - progress
+  - blaster
+  - check_targets
+  overlap_with: []
+  completion: Follow exact stage table; open physical aisle stays accessible.
+  reset: Cancel generation and motion; park surfaces; restore homes. Replay preserves
+    badges; round reset clears progress.
+- id: test
+  label: 3 TEST
+  pattern: shooting_gallery
+  position:
+  - 28
+  - 0
+  - 0
+  size:
+  - 28
+  - 33
+  - 9
+  purpose: Classify new banana, sofa and tractor examples.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - controller
+  - boards
+  - hud
+  - controls
+  - cargo
+  - progress
+  - blaster
+  - test_targets
+  overlap_with: []
+  completion: Follow exact stage table; open physical aisle stays accessible.
+  reset: Cancel generation and motion; park surfaces; restore homes. Replay preserves
+    badges; round reset clears progress.
+- id: ship
+  label: 4 SHIP
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 28
+  - 33
+  - 9
+  purpose: Shoot SHIP after tests; watch dispatch and claim existing badge.
+  parameters:
+    target_count: 1
+    friendly_fire: false
+  devices:
+  - controller
+  - boards
+  - hud
+  - controls
+  - cargo
+  - progress
+  - blaster
+  - ship_targets
+  overlap_with: []
+  completion: Follow exact stage table; open physical aisle stays accessible.
+  reset: Cancel generation and motion; park surfaces; restore homes. Replay preserves
+    badges; round reset clears progress.
+connections:
+- from: entry
+  to: label
+  mode: walk
+  width: 3
+  points:
+  - - 109
+    - 8
+    - 0
+  - - 96
+    - 8
+    - 0
+  gate: always
+- from: label
+  to: check
+  mode: walk
+  width: 3
+  points:
+  - - 96
+    - 8
+    - 0
+  - - 70
+    - 8
+    - 0
+  gate: always
+- from: check
+  to: test
+  mode: walk
+  width: 3
+  points:
+  - - 70
+    - 8
+    - 0
+  - - 42
+    - 8
+    - 0
+  gate: always
+- from: test
+  to: ship
+  mode: walk
+  width: 3
+  points:
+  - - 42
+    - 8
+    - 0
+  - - 20
+    - 8
+    - 0
+  gate: always
+markers:
+- id: arrival
+  kind: spawn
+  zone: entry
+  label: Arrival from campus, not a new spawn
+  position:
+  - 109
+  - 8
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: loadout
+  kind: weapon
+  zone: entry
+  label: Existing global Pulse Rifle; no new granter
+  position:
+  - 108
+  - 8
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: lesson
+  kind: knowledge
+  zone: entry
+  label: Shoot the category. Check predictions. Test new objects.
+  position:
+  - 107
+  - 12
+  - 2.5
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: entry_return
+  kind: exit
+  zone: entry
+  label: Always available Return
+  position:
+  - 107
+  - 10.5
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: label_food
+  kind: target
+  zone: label
+  label: FOOD
+  position:
+  - 88
+  - 17
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 0
+- id: label_furniture
+  kind: target
+  zone: label
+  label: FURNITURE
+  position:
+  - 94
+  - 17
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 1
+- id: label_vehicle
+  kind: target
+  zone: label
+  label: VEHICLE
+  position:
+  - 100
+  - 17
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 2
+- id: prediction_food
+  kind: target
+  zone: check
+  label: Burger -> Food
+  position:
+  - 62
+  - 18
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 3
+- id: prediction_chair
+  kind: target
+  zone: check
+  label: Chair -> Vehicle / 95%
+  position:
+  - 70
+  - 18
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 4
+- id: prediction_car
+  kind: target
+  zone: check
+  label: Car -> Vehicle
+  position:
+  - 78
+  - 18
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 5
+- id: repair_food
+  kind: target
+  zone: check
+  label: FOOD
+  position:
+  - 62
+  - 14
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 6
+- id: repair_furniture
+  kind: target
+  zone: check
+  label: FURNITURE
+  position:
+  - 70
+  - 14
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 7
+- id: repair_vehicle
+  kind: target
+  zone: check
+  label: VEHICLE
+  position:
+  - 78
+  - 14
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 8
+- id: test_food
+  kind: target
+  zone: test
+  label: FOOD
+  position:
+  - 34
+  - 17
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 9
+- id: test_furniture
+  kind: target
+  zone: test
+  label: FURNITURE
+  position:
+  - 42
+  - 17
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 10
+- id: test_vehicle
+  kind: target
+  zone: test
+  label: VEHICLE
+  position:
+  - 50
+  - 17
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 11
+- id: ship_target
+  kind: target
+  zone: ship
+  label: SHIP
+  position:
+  - 20
+  - 16
+  - 1.8
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+  target_id: 12
+- id: label_lesson
+  kind: knowledge
+  zone: label
+  label: Labelled examples teach categories
+  position:
+  - 96
+  - 11
+  - 2.5
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: label_return
+  kind: exit
+  zone: label
+  label: Help / Watch / Pause / Return; Replay at finish
+  position:
+  - 96
+  - 10.5
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: check_lesson
+  kind: knowledge
+  zone: check
+  label: A confident prediction can still be wrong
+  position:
+  - 70
+  - 11
+  - 2.5
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: check_return
+  kind: exit
+  zone: check
+  label: Help / Watch / Pause / Return; Replay at finish
+  position:
+  - 70
+  - 10.5
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: test_lesson
+  kind: knowledge
+  zone: test
+  label: New examples test the rule
+  position:
+  - 42
+  - 11
+  - 2.5
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: test_return
+  kind: exit
+  zone: test
+  label: Help / Watch / Pause / Return; Replay at finish
+  position:
+  - 42
+  - 10.5
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: ship_lesson
+  kind: knowledge
+  zone: ship
+  label: Label -> Check -> Test
+  position:
+  - 16
+  - 11
+  - 2.5
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: ship_return
+  kind: exit
+  zone: ship
+  label: Help / Watch / Pause / Return; Replay at finish
+  position:
+  - 16
+  - 10.5
+  - 0
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+- id: badge
+  kind: reward
+  zone: ship
+  label: Cargo dispatch and existing Classifier Badge
+  position:
+  - 6
+  - 23
+  - 1
+  source: Proposed anchor within live measured floor bounds; evidence/editor-inventory.json
+    and plan.md.
+devices:
+- id: controller
+  class: configured_classification_line_controller
+  count: 1
+  source: Proposed scoped adapter; implement after approval using existing data_target
+    and MoveTo lifecycle
+  settings:
+    action: implement_after_approval
+    shared_run: true
+    enrollment_seconds: 5
+    stage_success_ids:
+    - 0
+    - 1
+    - 2
+    - 4
+    - 7
+    - 9
+    - 10
+    - 11
+    - 12
+    fixture_items:
+    - burger
+    - chair
+    - car
+    - chair_prediction
+    - chair_repair
+    - banana
+    - sofa
+    - tractor
+    - dispatch
+    learning_sections:
+    - 0
+    - 1
+    - 2
+- id: boards
+  class: billboard_device
+  count: 5
+  source: Reuse suitable signal boards after retiring old bindings
+  settings:
+    hud_copy: true
+- id: hud
+  class: hud_message_device
+  count: 1
+  source: Reuse signal feedback
+  settings:
+    short_feedback: true
+- id: controls
+  class: button_device
+  count: 19
+  source: Reconcile local controls after station unbinding
+  settings:
+    start: 1
+    replay: 1
+    return_count: 5
+    help_count: 4
+    watch_again_count: 4
+    pause_count: 4
+- id: entry_zone
+  class: mutator_zone_device
+  count: 1
+  source: Native device discovery after approval
+  settings:
+    allow_weapon_fire: true
+    enrollment_seconds: 5
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing global data_blaster and Pulse Rifle granter; feature 024 runtime
+    evidence
+  settings:
+    reuse_only: true
+- id: progress
+  class: fn_shoreline_island_signal_progress
+  count: 1
+  source: Existing signal_progress and signal_badge_tracker; preserve journal references
+  settings:
+    reuse_only: true
+    complete_sections:
+    - 0
+    - 1
+    - 2
+    award_at_ship: true
+- id: cargo
+  class: creative_prop
+  count: 20
+  source: Eligible Fortnite props; asset-palette.md; counts exclude static dressing
+  settings:
+    objects: 6
+    category_shutters: 9
+    repair_lift: 1
+    dispatch_pallet: 1
+    dispatch_shutter: 1
+    scanner_indicator: 2
+    motion_envelope_y:
+    - 20
+    - 29
+    gate_envelope_y:
+    - 15
+    - 19
+    pause_supported: true
+- id: label_targets
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Reuse shared class; new local assemblies; counts are assemblies, not actors
+  settings:
+    damage_only: true
+    static_hit_surfaces: true
+    minimum_face_m: 1.5
+    park_inactive: true
+- id: check_targets
+  class: fn_shoreline_island_data_target
+  count: 6
+  source: Reuse shared class; new local assemblies; counts are assemblies, not actors
+  settings:
+    damage_only: true
+    static_hit_surfaces: true
+    minimum_face_m: 1.5
+    park_inactive: true
+- id: test_targets
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Reuse shared class; new local assemblies; counts are assemblies, not actors
+  settings:
+    damage_only: true
+    static_hit_surfaces: true
+    minimum_face_m: 1.5
+    park_inactive: true
+- id: ship_targets
+  class: fn_shoreline_island_data_target
+  count: 1
+  source: Reuse shared class; new local assemblies; counts are assemblies, not actors
+  settings:
+    damage_only: true
+    static_hit_surfaces: true
+    minimum_face_m: 1.5
+    park_inactive: true
+stages:
+- id: enroll
+  zone: entry
+  purpose: Start five-second enrollment and show short instructions
+  requires: []
+  active_targets: []
+  completion: Close enrollment, begin LABEL.
+- id: label_burger
+  zone: label
+  purpose: Burger is food
+  requires:
+  - enroll
+  active_targets:
+  - label_food
+  - label_furniture
+  - label_vehicle
+  success_target: label_food
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Burger is food
+- id: label_chair
+  zone: label
+  purpose: Chair is furniture
+  requires:
+  - label_burger
+  active_targets:
+  - label_food
+  - label_furniture
+  - label_vehicle
+  success_target: label_furniture
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Chair is furniture
+- id: label_car
+  zone: label
+  purpose: Car is a vehicle; section 0
+  requires:
+  - label_chair
+  active_targets:
+  - label_food
+  - label_furniture
+  - label_vehicle
+  success_target: label_vehicle
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Car is a vehicle; section 0
+- id: find_error
+  zone: check
+  purpose: Identify wrong high-confidence chair prediction
+  requires:
+  - label_car
+  active_targets:
+  - prediction_food
+  - prediction_chair
+  - prediction_car
+  success_target: prediction_chair
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Identify wrong high-confidence chair prediction
+- id: repair_label
+  zone: check
+  purpose: Correct chair and verify repeat pass; section 1
+  requires:
+  - find_error
+  active_targets:
+  - repair_food
+  - repair_furniture
+  - repair_vehicle
+  success_target: repair_furniture
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Correct chair and verify repeat pass; section 1
+- id: test_banana
+  zone: test
+  purpose: Classify unseen banana
+  requires:
+  - repair_label
+  active_targets:
+  - test_food
+  - test_furniture
+  - test_vehicle
+  success_target: test_food
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Classify unseen banana
+- id: test_sofa
+  zone: test
+  purpose: Classify unseen sofa
+  requires:
+  - test_banana
+  active_targets:
+  - test_food
+  - test_furniture
+  - test_vehicle
+  success_target: test_furniture
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Classify unseen sofa
+- id: test_tractor
+  zone: test
+  purpose: Classify unseen tractor
+  requires:
+  - test_sofa
+  active_targets:
+  - test_food
+  - test_furniture
+  - test_vehicle
+  success_target: test_vehicle
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Classify unseen tractor
+- id: dispatch
+  zone: ship
+  purpose: Ship tested cargo; section 2 and badge
+  requires:
+  - test_tractor
+  active_targets:
+  - ship_target
+  success_target: ship_target
+  completion: Lock inputs; animate result; 1.2-second feedback/rearm guard; advance
+    once. Ship tested cargo; section 2 and badge
+assumptions:
+- id: measured_site
+  detail: Floor dimensions measured live; proposed positions are not existing actor
+    transforms.
+  status: resolved
+  evidence: evidence/editor-inventory.json
+- id: adapter_scope
+  detail: New scoped linear adapter and progress integration are explicitly implementation
+    work; current station does not support shooting through configuration alone.
+  status: resolved
+  evidence: plan.md; Content/fn_shoreline_island_data_target.verse; Content/fn_shoreline_island_prompt_blaster.verse
+- id: asset_qualification
+  detail: Discovered meshes are candidates; qualify eligible placeable equivalents
+    within fixed category and size envelopes before placement. No restricted assets
+    assumed cookable.
+  status: resolved
+  evidence: asset-palette.md
+- id: shared_dependencies
+  detail: Preserve shared floors/progress/field notes/promenade; reconcile owned facade
+    components individually.
+  status: resolved
+  evidence: plan.md; evidence/editor-inventory.json
+- id: cooperative_policy
+  detail: One enrolled team replaces four independent stations; late spectators join
+    on replay.
+  status: resolved
+  evidence: spec.md FR-08
+- id: weapon_interpretation
+  detail: Use existing Pulse Rifle/Data Blaster; no new armor mechanic.
+  status: resolved
+  evidence: spec.md FR-02; feature 024 solo-recovery evidence
+- id: schema_boundary
+  detail: V1 anchors static targets and linear phases; continuous motion, rearm guard,
+    collision and native eligibility require implementation verification.
+  status: resolved
+  evidence: plan.md motion contract and AC-01..10

@@ -1,0 +1,257 @@
+[
+  {
+    "target_id": 0,
+    "marker_id": "predict_0",
+    "label": "A circle - moves +/-1.5m in X",
+    "surface_center_cm": {
+      "x": 100,
+      "y": 4600,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "predict_next"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 1,
+    "marker_id": "predict_1",
+    "label": "B triangle - moves +/-1.5m in X",
+    "surface_center_cm": {
+      "x": 600,
+      "y": 4600,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "predict_next"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 2,
+    "marker_id": "predict_2",
+    "label": "C square - moves +/-1.5m in X",
+    "surface_center_cm": {
+      "x": 1100,
+      "y": 4600,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "predict_next"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 3,
+    "marker_id": "slot_1",
+    "label": "Slot 1 - A",
+    "surface_center_cm": {
+      "x": 2100,
+      "y": 4700,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "find_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 4,
+    "marker_id": "slot_2",
+    "label": "Slot 2 - B",
+    "surface_center_cm": {
+      "x": 2300,
+      "y": 4700,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "find_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 5,
+    "marker_id": "slot_3",
+    "label": "Slot 3 - A",
+    "surface_center_cm": {
+      "x": 2500,
+      "y": 4700,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "find_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 6,
+    "marker_id": "slot_4",
+    "label": "Slot 4 - A",
+    "surface_center_cm": {
+      "x": 2700,
+      "y": 4700,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "find_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 7,
+    "marker_id": "slot_5",
+    "label": "Slot 5 - A",
+    "surface_center_cm": {
+      "x": 2900,
+      "y": 4700,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "find_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 8,
+    "marker_id": "slot_6",
+    "label": "Slot 6 - B",
+    "surface_center_cm": {
+      "x": 3100,
+      "y": 4700,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "find_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 9,
+    "marker_id": "replace_0",
+    "label": "Replacement A - active after diagnosis",
+    "surface_center_cm": {
+      "x": 2300,
+      "y": 4300,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "repair_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 10,
+    "marker_id": "replace_1",
+    "label": "Replacement B - active after diagnosis",
+    "surface_center_cm": {
+      "x": 2800,
+      "y": 4300,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "repair_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 11,
+    "marker_id": "replace_2",
+    "label": "Replacement C - active after diagnosis",
+    "surface_center_cm": {
+      "x": 3300,
+      "y": 4300,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "repair_exception"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 12,
+    "marker_id": "stop_1",
+    "label": "Predict shuttle stop 1",
+    "surface_center_cm": {
+      "x": 4500,
+      "y": 4500,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "predict_motion"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 13,
+    "marker_id": "stop_3",
+    "label": "Predict shuttle stop 3",
+    "surface_center_cm": {
+      "x": 5300,
+      "y": 4500,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "predict_motion"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  },
+  {
+    "target_id": 14,
+    "marker_id": "stop_4",
+    "label": "Predict shuttle stop 4",
+    "surface_center_cm": {
+      "x": 5700,
+      "y": 4500,
+      "z": 2580.0
+    },
+    "facing": "toward negative world Y, normal to firing aisle",
+    "minimum_surface_diameter_cm": 120,
+    "prop_collision": "disable weapon/projectile collision on decorative cargo; preserve walkable structural collision",
+    "active_phases": [
+      "predict_motion"
+    ],
+    "native_rotation_scale": "resolve using qualified templates and bounds before placement"
+  }
+]
