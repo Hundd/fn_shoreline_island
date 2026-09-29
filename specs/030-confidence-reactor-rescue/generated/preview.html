@@ -1,145 +1,78 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confidence Core - Reactor Rescue blockout</title>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confidence Core - Check Before You Trust (revision 2) blockout</title>
 <style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 20px;color:#172e43;background:#fff}svg{width:100%;max-height:900px}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #ccd8df;padding:8px}td:last-child{font-size:12px;overflow-wrap:anywhere}li{margin:8px 0}.notice{background:#fff3cf;padding:14px}</style>
-<h1>Confidence Core - Reactor Rescue review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
-<p>Choose useful independent evidence, revise a confident wrong prediction, and verify results before acting.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1210 949" role="img" aria-label="Confidence Core - Reactor Rescue blockout">
+<h1>Confidence Core - Check Before You Trust (revision 2) review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
+<p>Check a confident claim with independent evidence and verify fresh results before acting.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1210 779" role="img" aria-label="Confidence Core - Check Before You Trust (revision 2) blockout">
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
-<rect width="1210" height="949" fill="#f4f7fa"/>
-<text x="45" y="25" font-size="19">Confidence Core - Reactor Rescue — DRAFT / review required</text>
+<rect width="1210" height="779" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Confidence Core - Check Before You Trust (revision 2) — DRAFT / review required</text>
 <text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
-<rect x="605" y="65" width="280" height="350" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="612" y="84">Independent Check</text>
-<text font-size="11" x="612" y="100">28 × 35m</text>
-<rect x="325" y="65" width="280" height="350" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="332" y="84">Cooling Bay</text>
-<text font-size="11" x="332" y="100">28 × 35m</text>
-<rect x="45" y="65" width="280" height="350" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="52" y="84">Release</text>
-<text font-size="11" x="52" y="100">28 × 35m</text>
-<rect x="885" y="65" width="200" height="350" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="892" y="84">Surface Scan</text>
-<text font-size="11" x="892" y="100">20 × 35m</text>
-<rect x="1085" y="65" width="80" height="350" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="1092" y="84">Briefing</text>
-<text font-size="11" x="1092" y="100">8 × 35m</text>
-<polyline points="1125,325 1005,325" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → scan / always</title></polyline>
-<polyline points="1005,325 745,325" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>scan → check / always</title></polyline>
-<polyline points="745,325 465,325" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>check → cool / always</title></polyline>
-<polyline points="465,325 245,325" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>cool → release / always</title></polyline>
-<g><title>Existing hub approach; no new spawn pad; XYZ [109, 29, 0]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="1135" cy="355" r="8" fill="#42a86b" stroke="white"/>
-<text x="1135" y="358" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
-<g><title>Existing Pulse Rifle in inventory; no duplicate spawner; XYZ [107, 25, 1]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="1115" cy="315" r="8" fill="#b377dc" stroke="white"/>
-<text x="1115" y="318" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
-<g><title>Start / Join and short instructions; XYZ [108, 19, 2]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="1125" cy="255" r="8" fill="#329bd0" stroke="white"/>
-<text x="1125" y="258" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
-<g><title>Return to existing hub destination; XYZ [109, 23, 0]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="1135" cy="295" r="8" fill="#526476" stroke="white"/>
-<text x="1135" y="298" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
-<g><title>Surface Scan; XYZ [88, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="925" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="925" y="268" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
-<g><title>Paint Color; XYZ [94, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="985" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="985" y="268" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
-<g><title>Fancy Casing; XYZ [100, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="1045" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="1045" y="268" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
-<g><title>Inside Probe; XYZ [62, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="665" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="665" y="268" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
-<g><title>Copy Report; XYZ [70, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="745" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="745" y="268" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
-<g><title>Count Likes; XYZ [78, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="825" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="825" y="268" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
-<g><title>HOLD; XYZ [66, 17, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="705" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="705" y="238" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
-<g><title>SEND; XYZ [74, 17, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="785" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="785" y="238" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
-<g><title>Coolant Valve; X=36..40 motion; XYZ [38, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="425" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="425" y="268" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
-<g><title>RETEST; XYZ [46, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="505" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="505" y="268" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
-<g><title>CHECKED RELEASE; XYZ [16, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="205" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="205" y="268" text-anchor="middle" font-size="9" style="fill:white">15</text></g>
-<g><title>SKIP CHECKS; XYZ [24, 20, 1.8]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="285" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="285" y="268" text-anchor="middle" font-size="9" style="fill:white">16</text></g>
-<g><title>Outside cool; inside unknown; XYZ [96, 29, 2.4]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="1005" cy="355" r="8" fill="#329bd0" stroke="white"/>
-<text x="1005" y="358" text-anchor="middle" font-size="9" style="fill:white">17</text></g>
-<g><title>Pix: SAFE 90%; then inside HOT contradicts; XYZ [70, 29, 2.4]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="745" cy="355" r="8" fill="#329bd0" stroke="white"/>
-<text x="745" y="358" text-anchor="middle" font-size="9" style="fill:white">18</text></g>
-<g><title>Fresh outside and inside tests; XYZ [42, 29, 2.4]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="465" cy="355" r="8" fill="#329bd0" stroke="white"/>
-<text x="465" y="358" text-anchor="middle" font-size="9" style="fill:white">19</text></g>
-<g><title>Useful tests. Independent evidence. Check first.; XYZ [20, 29, 2.4]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="245" cy="355" r="8" fill="#329bd0" stroke="white"/>
-<text x="245" y="358" text-anchor="middle" font-size="9" style="fill:white">20</text></g>
-<g><title>Core restored; existing Confidence Badge; XYZ [6, 13, 4]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="105" cy="195" r="8" fill="#c79c17" stroke="white"/>
-<text x="105" y="198" text-anchor="middle" font-size="9" style="fill:white">21</text></g>
-<g><title>Replay / Return; XYZ [12, 26, 0]; Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</title><circle cx="165" cy="325" r="8" fill="#526476" stroke="white"/>
-<text x="165" y="328" text-anchor="middle" font-size="9" style="fill:white">22</text></g>
+<rect x="885" y="65" width="240" height="350" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="892" y="84">All decisions here</text>
+<text font-size="11" x="892" y="100">24 × 35m</text>
+<rect x="1125" y="65" width="40" height="350" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="1132" y="84">Walk in</text>
+<text font-size="11" x="1132" y="100">4 × 35m</text>
+<polyline points="1135,325 1045,325" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → play_bay / always</title></polyline>
+<g><title>Existing hub approach; no new spawn; XYZ [109, 26, 0]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1135" cy="325" r="8" fill="#42a86b" stroke="white"/>
+<text x="1135" y="328" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Existing rifle in inventory; no new granter; XYZ [110, 23, 1]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1145" cy="295" r="8" fill="#b377dc" stroke="white"/>
+<text x="1145" y="298" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Stand here for every decision; annotation only; XYZ [100, 26, 0]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1045" cy="325" r="8" fill="#db8b29" stroke="white"/>
+<text x="1045" y="328" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>Claim / readings / freshness / useful action; XYZ [100, 18, 3.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1045" cy="245" r="8" fill="#329bd0" stroke="white"/>
+<text x="1045" y="248" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>A CHECK - fixed; XYZ [97, 20, 1.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1015" cy="265" r="8" fill="#e25757" stroke="white"/>
+<text x="1015" y="268" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>B COOL - fixed; XYZ [100, 20, 1.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1045" cy="265" r="8" fill="#e25757" stroke="white"/>
+<text x="1045" y="268" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>C RELEASE - fixed; XYZ [103, 20, 1.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1075" cy="265" r="8" fill="#e25757" stroke="white"/>
+<text x="1075" y="268" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>Static core; not a target; XYZ [105.5, 19, 1.6]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1100.0" cy="255" r="8" fill="#329bd0" stroke="white"/>
+<text x="1100.0" y="258" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>Replay after finish; ordinary button; XYZ [106, 24, 1]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1105" cy="305" r="8" fill="#db8b29" stroke="white"/>
+<text x="1105" y="308" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>Return any time; existing hub destination; XYZ [106, 28, 1]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1105" cy="345" r="8" fill="#526476" stroke="white"/>
+<text x="1105" y="348" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>Existing Confidence Badge; XYZ [98.5, 18, 5]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1030.0" cy="245" r="8" fill="#c79c17" stroke="white"/>
+<text x="1030.0" y="248" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
 <path d="M45,450 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="455" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
 <text x="45" y="493" font-size="16" font-weight="bold">Map legend</text>
 <text x="45" y="515" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
 <circle cx="54.0" cy="539" r="9" fill="#42a86b"/>
 <text x="54.0" y="542" text-anchor="middle" font-size="9" style="fill:white">1</text>
-<text x="73.0" y="543" font-size="12">Existing hub approach; no new spawn pad</text>
+<text x="73.0" y="543" font-size="12">Existing hub approach; no new spawn</text>
 <circle cx="614.0" cy="539" r="9" fill="#b377dc"/>
 <text x="614.0" y="542" text-anchor="middle" font-size="9" style="fill:white">2</text>
-<text x="633.0" y="543" font-size="12">Existing Pulse Rifle in inventory; no duplicate spawner</text>
-<circle cx="54.0" cy="573" r="9" fill="#329bd0"/>
+<text x="633.0" y="543" font-size="12">Existing rifle in inventory; no new granter</text>
+<circle cx="54.0" cy="573" r="9" fill="#db8b29"/>
 <text x="54.0" y="576" text-anchor="middle" font-size="9" style="fill:white">3</text>
-<text x="73.0" y="577" font-size="12">Start / Join and short instructions</text>
-<circle cx="614.0" cy="573" r="9" fill="#526476"/>
+<text x="73.0" y="577" font-size="12">Stand here for every decision; annotation only</text>
+<circle cx="614.0" cy="573" r="9" fill="#329bd0"/>
 <text x="614.0" y="576" text-anchor="middle" font-size="9" style="fill:white">4</text>
-<text x="633.0" y="577" font-size="12">Return to existing hub destination</text>
+<text x="633.0" y="577" font-size="12">Claim / readings / freshness / useful action</text>
 <circle cx="54.0" cy="607" r="9" fill="#e25757"/>
 <text x="54.0" y="610" text-anchor="middle" font-size="9" style="fill:white">5</text>
-<text x="73.0" y="611" font-size="12">Surface Scan</text>
+<text x="73.0" y="611" font-size="12">A CHECK - fixed</text>
 <circle cx="614.0" cy="607" r="9" fill="#e25757"/>
 <text x="614.0" y="610" text-anchor="middle" font-size="9" style="fill:white">6</text>
-<text x="633.0" y="611" font-size="12">Paint Color</text>
+<text x="633.0" y="611" font-size="12">B COOL - fixed</text>
 <circle cx="54.0" cy="641" r="9" fill="#e25757"/>
 <text x="54.0" y="644" text-anchor="middle" font-size="9" style="fill:white">7</text>
-<text x="73.0" y="645" font-size="12">Fancy Casing</text>
-<circle cx="614.0" cy="641" r="9" fill="#e25757"/>
+<text x="73.0" y="645" font-size="12">C RELEASE - fixed</text>
+<circle cx="614.0" cy="641" r="9" fill="#329bd0"/>
 <text x="614.0" y="644" text-anchor="middle" font-size="9" style="fill:white">8</text>
-<text x="633.0" y="645" font-size="12">Inside Probe</text>
-<circle cx="54.0" cy="675" r="9" fill="#e25757"/>
+<text x="633.0" y="645" font-size="12">Static core; not a target</text>
+<circle cx="54.0" cy="675" r="9" fill="#db8b29"/>
 <text x="54.0" y="678" text-anchor="middle" font-size="9" style="fill:white">9</text>
-<text x="73.0" y="679" font-size="12">Copy Report</text>
-<circle cx="614.0" cy="675" r="9" fill="#e25757"/>
+<text x="73.0" y="679" font-size="12">Replay after finish; ordinary button</text>
+<circle cx="614.0" cy="675" r="9" fill="#526476"/>
 <text x="614.0" y="678" text-anchor="middle" font-size="9" style="fill:white">10</text>
-<text x="633.0" y="679" font-size="12">Count Likes</text>
-<circle cx="54.0" cy="709" r="9" fill="#e25757"/>
+<text x="633.0" y="679" font-size="12">Return any time; existing hub destination</text>
+<circle cx="54.0" cy="709" r="9" fill="#c79c17"/>
 <text x="54.0" y="712" text-anchor="middle" font-size="9" style="fill:white">11</text>
-<text x="73.0" y="713" font-size="12">HOLD</text>
-<circle cx="614.0" cy="709" r="9" fill="#e25757"/>
-<text x="614.0" y="712" text-anchor="middle" font-size="9" style="fill:white">12</text>
-<text x="633.0" y="713" font-size="12">SEND</text>
-<circle cx="54.0" cy="743" r="9" fill="#e25757"/>
-<text x="54.0" y="746" text-anchor="middle" font-size="9" style="fill:white">13</text>
-<text x="73.0" y="747" font-size="12">Coolant Valve; X=36..40 motion</text>
-<circle cx="614.0" cy="743" r="9" fill="#e25757"/>
-<text x="614.0" y="746" text-anchor="middle" font-size="9" style="fill:white">14</text>
-<text x="633.0" y="747" font-size="12">RETEST</text>
-<circle cx="54.0" cy="777" r="9" fill="#e25757"/>
-<text x="54.0" y="780" text-anchor="middle" font-size="9" style="fill:white">15</text>
-<text x="73.0" y="781" font-size="12">CHECKED RELEASE</text>
-<circle cx="614.0" cy="777" r="9" fill="#e25757"/>
-<text x="614.0" y="780" text-anchor="middle" font-size="9" style="fill:white">16</text>
-<text x="633.0" y="781" font-size="12">SKIP CHECKS</text>
-<circle cx="54.0" cy="811" r="9" fill="#329bd0"/>
-<text x="54.0" y="814" text-anchor="middle" font-size="9" style="fill:white">17</text>
-<text x="73.0" y="815" font-size="12">Outside cool; inside unknown</text>
-<circle cx="614.0" cy="811" r="9" fill="#329bd0"/>
-<text x="614.0" y="814" text-anchor="middle" font-size="9" style="fill:white">18</text>
-<text x="633.0" y="815" font-size="12">Pix: SAFE 90%; then inside HOT contradicts</text>
-<circle cx="54.0" cy="845" r="9" fill="#329bd0"/>
-<text x="54.0" y="848" text-anchor="middle" font-size="9" style="fill:white">19</text>
-<text x="73.0" y="849" font-size="12">Fresh outside and inside tests</text>
-<circle cx="614.0" cy="845" r="9" fill="#329bd0"/>
-<text x="614.0" y="848" text-anchor="middle" font-size="9" style="fill:white">20</text>
-<text x="633.0" y="849" font-size="12">Useful tests. Independent evidence. Check first.</text>
-<circle cx="54.0" cy="879" r="9" fill="#c79c17"/>
-<text x="54.0" y="882" text-anchor="middle" font-size="9" style="fill:white">21</text>
-<text x="73.0" y="883" font-size="12">Core restored; existing Confidence Badge</text>
-<circle cx="614.0" cy="879" r="9" fill="#526476"/>
-<text x="614.0" y="882" text-anchor="middle" font-size="9" style="fill:white">22</text>
-<text x="633.0" y="883" font-size="12">Replay / Return</text>
+<text x="73.0" y="713" font-size="12">Existing Confidence Badge</text>
 </svg>
 <p><span style="color:#42a86b">● spawn</span> · <span style="color:#e25757">● target</span> · <span style="color:#b377dc">● weapon</span> · <span style="color:#329bd0">● knowledge</span> · <span style="color:#526476">● exit</span> · <span style="color:#db8b29">● checkpoint</span> · <span style="color:#c79c17">● reward</span></p>
-<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Existing hub approach; no new spawn pad</td><td>[109, 29, 0]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>2</td><td>weapon</td><td>Existing Pulse Rifle in inventory; no duplicate spawner</td><td>[107, 25, 1]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>3</td><td>knowledge</td><td>Start / Join and short instructions</td><td>[108, 19, 2]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>4</td><td>exit</td><td>Return to existing hub destination</td><td>[109, 23, 0]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>5</td><td>target</td><td>Surface Scan</td><td>[88, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>6</td><td>target</td><td>Paint Color</td><td>[94, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>7</td><td>target</td><td>Fancy Casing</td><td>[100, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>8</td><td>target</td><td>Inside Probe</td><td>[62, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>9</td><td>target</td><td>Copy Report</td><td>[70, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>10</td><td>target</td><td>Count Likes</td><td>[78, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>11</td><td>target</td><td>HOLD</td><td>[66, 17, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>12</td><td>target</td><td>SEND</td><td>[74, 17, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>13</td><td>target</td><td>Coolant Valve; X=36..40 motion</td><td>[38, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>14</td><td>target</td><td>RETEST</td><td>[46, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>15</td><td>target</td><td>CHECKED RELEASE</td><td>[16, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>16</td><td>target</td><td>SKIP CHECKS</td><td>[24, 20, 1.8]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>17</td><td>knowledge</td><td>Outside cool; inside unknown</td><td>[96, 29, 2.4]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>18</td><td>knowledge</td><td>Pix: SAFE 90%; then inside HOT contradicts</td><td>[70, 29, 2.4]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>19</td><td>knowledge</td><td>Fresh outside and inside tests</td><td>[42, 29, 2.4]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>20</td><td>knowledge</td><td>Useful tests. Independent evidence. Check first.</td><td>[20, 29, 2.4]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>21</td><td>reward</td><td>Core restored; existing Confidence Badge</td><td>[6, 13, 4]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr><tr><td>22</td><td>exit</td><td>Replay / Return</td><td>[12, 26, 0]</td><td>Proposed design anchor within live-measured site; see plan.md for motion and actor reconciliation.</td></tr></table>
-<h2>Mission sequence</h2><ol><li><b>enroll</b>: Briefing and explicit Start/Join — Close five-second join window; no automatic enrollment.</li><li><b>surface_scan</b>: Select relevant surface heat test — Sweep arm; outside cool, inside unknown; escort to check.</li><li><b>independent_probe</b>: Obtain independent internal measurement — Lower probe; inside HOT; visibly question 90% SAFE prediction.</li><li><b>hold_core</b>: Respond to contradictory evidence — Open routing shutter; escort to cooling; run-local section 0.</li><li><b>coolant</b>: Shoot moving coolant valve to operate safe machinery — Freeze or aim freely; lift/fan cool core; enable retest after completion.</li><li><b>retest</b>: Fresh tests after intervention — Outside and inside both COOL; run-local section 1; escort to release.</li><li><b>checked_release</b>: Choose checked release — Open shutter, dock core, section 2; commit all indices for eligible participants; replay/return.</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — User explicitly confirmed existing Confidence Core footprint and Pulse Rifle; four actual floor actors, five gameplay beats.</li><li>resolved — Preserve overlapping debug-labeled support and bridge only 48 cm seam; do not expand or restore coplanar zero-width floor.</li><li>resolved — Implement scoped controller after approval using existing shooting/motion basis; current energy_station does not support this design via configuration.</li><li>resolved — Catalog candidates require placeability/cook qualification; eligible equivalents allowed only within authored roles and envelopes.</li><li>resolved — One shared explicitly enrolled run with no speed penalty; only continuous participants commit all badge sections at finale.</li><li>resolved — V1 represents linear stages and anchors. Detailed motion, synchronized hits, reset and collision are implementation obligations, not established gameplay.</li></ul></html>
+<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Existing hub approach; no new spawn</td><td>[109, 26, 0]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>2</td><td>weapon</td><td>Existing rifle in inventory; no new granter</td><td>[110, 23, 1]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>3</td><td>checkpoint</td><td>Stand here for every decision; annotation only</td><td>[100, 26, 0]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>4</td><td>knowledge</td><td>Claim / readings / freshness / useful action</td><td>[100, 18, 3.8]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>5</td><td>target</td><td>A CHECK - fixed</td><td>[97, 20, 1.8]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>6</td><td>target</td><td>B COOL - fixed</td><td>[100, 20, 1.8]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>7</td><td>target</td><td>C RELEASE - fixed</td><td>[103, 20, 1.8]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>8</td><td>knowledge</td><td>Static core; not a target</td><td>[105.5, 19, 1.6]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>9</td><td>checkpoint</td><td>Replay after finish; ordinary button</td><td>[106, 24, 1]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>10</td><td>exit</td><td>Return any time; existing hub destination</td><td>[106, 28, 1]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr><tr><td>11</td><td>reward</td><td>Existing Confidence Badge</td><td>[98.5, 18, 5]</td><td>Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</td></tr></table>
+<h2>Mission sequence</h2><ol><li><b>auto_ready</b>: Walk into solo bay with existing rifle; no waiting/claim. — Ready in 0.5 seconds; first decision begins.</li><li><b>check_claim</b>: Inside HOT contradicts SAFE claim; section 0. — Inside HOT contradicts SAFE claim; section 0. Feedback and quiet-hit guard before next decision.</li><li><b>cool_core</b>: Cooling done; readings OLD/NOT RECHECKED, no evidence milestone. — Cooling done; readings OLD/NOT RECHECKED, no evidence milestone. Feedback and quiet-hit guard before next decision.</li><li><b>check_change</b>: Fresh outside/inside COOL; section 1. — Fresh outside/inside COOL; section 1. Feedback and quiet-hit guard before next decision.</li><li><b>release_core</b>: Release only with fresh readings; section 2, guarded badge. — Release only with fresh readings; section 2, guarded badge. Feedback and quiet-hit guard before next decision.</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — Retain historical measured full site; use only valid first floor for gameplay. Proposed local anchors require live preflight.</li><li>resolved — Carry user single-player simplification into these proposed revisions. No global matchmaking edits.</li><li>resolved — Scoped refactor explicitly part of proposed implementation, not configuration-only support. Reuse shooting_gallery and solo lifecycle basis; progress API differs from loop_progress.</li><li>resolved — Qualified eligible equivalent allowed only for same recognizable role/category and 1.5 m envelope. No suitable equivalent means stop and revise, not add a restricted asset.</li><li>resolved — Blockout models target anchors and linear progression only. Perspective, glyphs, collision and enjoyment require cooked tests. No approval inferred.</li><li>resolved — Retain debug-labeled support. Reconfirm and bridge only measured 48 cm seam; keep first-floor gameplay independent of seam.</li></ul></html>

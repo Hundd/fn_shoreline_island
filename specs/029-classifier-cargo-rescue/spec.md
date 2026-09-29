@@ -1,36 +1,45 @@
-# Classifier Cargo Rescue
+# Classifier: Sort and Check
 
-Status: proposed design, revision 1; no scene or Verse changes authorized by this bundle yet.
+Revision 2, 2026-09-29. Documentation/design proposal only; not approved or implemented. Replaces the cooperative cargo-rescue draft in `history/revision-1/`. Applies 028's successful simplification and the user's single-player direction. Folder and Classifier Badge identities remain stable.
 
-Replace the four independent classifier stations on signal_0_floor through signal_3_floor with one cooperative, 4–6 minute cargo-rescue game. Players use the existing infinite-ammunition Pulse Rifle/Data Blaster to operate a playful coastal sorting factory. Moving objects, lifting gates and a final cargo dispatch make each decision visible. This is a scripted teaching simulation, not an actual trained machine-learning model.
+## Player experience and learning
+
+Walk into one bay. See one named object and **SHOOT ITS CATEGORY**. Shoot FOOD, FURNITURE or VEHICLE. Its correct label appears immediately with a short reason; the next object appears in the same place. No transport wait or walking between items. Three short sections earn the existing badge automatically.
+
+| Section | Decisions | Learning |
+|---|---|---|
+| Label examples | Burger, chair, car: Food, Furniture, Vehicle. | Classification assigns categories using what an item is or does. |
+| Check a prediction | Chair with `PIX PREDICTS: VEHICLE`; shoot Furniture. | Check a prediction against the item; AI labels can be wrong. |
+| Try new examples | Banana, sofa, tractor: Food, Furniture, Vehicle. | Different examples test whether the category rule still fits. |
+
+Seven correct shots, always using the same three targets. No separate error-card selection, repair mode, Run or Ship. First-run target: 60-120 seconds; first shot within 10 seconds. These are usability targets, not timers or measured results. This authored exercise does not train a real model, and three new examples do not prove universal accuracy.
 
 ## Requirements
 
-- FR-01: Keep the four contiguous support floors and shared campus access. Replace old station controllers, redundant button banks, boards, boats, docks and lighthouse dressing inside this footprint after a saved checkpoint and dependency audit. Preserve signal_progress, signal_badge_tracker, hub destination, journal, field-note cargo interaction and shared promenade.
-- FR-02: Use exactly the existing global Data Blaster grant/invulnerability setup. No new weapon, armor item, currency, enemy combat or mandatory jumps. “Armor” is interpreted as the already-used weapon/loadout.
-- FR-03: One run and one visible progress strip: LABEL → CHECK → TEST → SHIP. Tile 0 teaches examples; tile 1 corrects a prediction; tile 2 tests unseen examples; tile 3 physically ships the rescued cargo. No four independent games or claim stations.
-- FR-04: Labels are FOOD, FURNITURE and VEHICLE, using words plus distinct pictograms. Replace Animal with Furniture to prioritize recognizable native Fortnite props. Label burger, chair and car by shooting their category gates, one item at a time. Each accepted shot moves the cargo into its bay. Category colors do not encode an object's answer.
-- FR-05: Inspect three displayed predictions: burger→Food, chair→Vehicle (WRONG, displayed confidence 95%), car→Vehicle. Shoot the incorrect prediction card, then shoot Furniture to repair it. A repeat pass visibly routes the chair correctly. Teach: high confidence can still be wrong; compare a prediction with the correct label.
-- FR-06: Test on banana→Food, sofa→Furniture and tractor→Vehicle, in that order. Show each new object before activating three category gates. Do not show its correct category first. Teach: new examples test whether the rule works beyond the examples already seen. Credit a final shot at SHIP only after all three pass.
-- FR-07: Required moving parts: cargo arrival/branch delivery, lifting category shutters, a repair lift and final dispatch pallet/shutter. No time limit or loss of lives. Moving cargo waits at the scanner for a decision. Help offers a hint, then a worked explanation; Watch Again repeats only the current demonstration. Pause Motion affects presentation, not answer correctness.
-- FR-08: One shared run supports solo and 2–4 players. Start opens five seconds of enrollment in the entry area. Only enrolled players can change the run. Later arrivals spectate and join on replay. Accept at most one correct shot per phase, ignore inactive targets and spectator shots, and prevent held fire carrying through a transition. An empty team cancels the run. Each learning section updates the existing classifier progress identity once for eligible participants; replay preserves earned badges.
-- FR-09: Clear 3 m aisle at local Y=8, aim distances 6–12 m, target faces at least 1.5 m square with aligned damage surfaces. No mandatory aim at moving hitboxes: shoot stable gate/card targets while the machinery moves. Instructions fit one short HUD card and a nearby sign. Keep Return available at every section; no return walk required.
-- FR-10: At least 75% of visible non-device prop instances are eligible Fortnite assets. Use real furniture, miniature vehicle displays, conveyor housings, steel shelving, practical lamps, low rails, crates and coastal planters. Cyan machine accents, warm lighting, neutral targets, clear silhouettes; no obstructive particle clouds. New meshes retain recognizable proportions. No new imported artwork is required.
-- FR-11: Reset cancels all motion and delayed callbacks before restoring homes, parks inactive hit surfaces and clears run state. Respawn removes that participant from the current run without losing an earned badge. Round reset follows existing signal_progress behavior. Build, validate, cook and playtest before gameplay acceptance.
+- S-01 **Compact solo bay.** Gameplay stays on the first classifier tile, local X=84..112, Y=0..33 m. Arrival to firing point is 9 m, with a 3 m clear route. No walking between items. Preserve all support floors, field-note access and shared promenade. No island matchmaking change.
+- S-02 **One action.** Three stationary 1.5 m answer faces, 3 m apart and 6 m ahead: A FOOD, B FURNITURE, C VEHICLE. Words and distinct familiar icons identify categories; color does not reveal an answer. Show one recognizable object beside the targets and its name on the board. Objects have no rings/hit surfaces. Reuse the existing Pulse Rifle and grant/respawn path.
+- S-03 **Exact lesson.** Success IDs [0,1,2,1,0,1,2] match the table. The chair prediction uses a neutral frame until corrected. New examples differ from the initial three and never show their answer before selection. Show section progress 0/3..3/3 plus the current section's item count.
+- S-04 **Feedback.** Correct label/reason appears within 0.25 seconds and stays at least 1 second. Next item arms after a minimum 1.5-second transition and a 0.5-second quiet-hit interval. Held fire cannot answer later items. Wrong shots preserve item/progress; first mistake gives a category rule, second names the answer and why. Automatic hints persist until another answer/reset while the current question stays visible. No penalties, lives or forced restart.
+- S-05 **Auto-ready lifecycle.** Sole local player is ready within 0.5 seconds of entry. No Claim, Start, Join, enrollment, team reward or spectator flow. Only current player's in-bay attributed shots advance. Departure, death/respawn, disconnect and round reset cancel callbacks and reset the physical run. Reentry starts the full lesson.
+- S-06 **Finish.** Exactly two ordinary buttons: Replay after completion and Return any time. Three lights/numeric progress confirm sections. Commit through the retained signal_progress/tracker only after all seven decisions. Replay preserves earned badge; round reset uses the existing manager. Preserve journal/finale. Hold recap: `Label examples. Check predictions. Try new examples.`
+- S-07 **Useful objects only.** Six example props with only the current one shown; one simple display support if needed. At most two practical lamps and one useful shelter; rails only for edge safety. Retire obsolete station presentation after dependency checks. No conveyors, shutters, repair lift, dispatch pallet, cargo travel, decorative crate stacks/planters or prop-percentage quota.
+- S-08 **Clarity.** One forward view contains object, prompt and choices; the middle target must not obscure the object. Category icons must render in the cooked font or use qualified artwork. Match hit surfaces to visible faces. No moving aim, mandatory jumping, text-only item identification, audio dependence or modal quiz. Retained unused tiles are safe shared space without false objectives.
+- S-09 **Real acceptance.** Build, validate, cook and playtest normal solo approach, every answer, hints, held fire, reset, replay, Return and badge/journal. Record learning/enjoyment separately from technical checks. Stop and verify the game is not running; leave UEFN open.
 
-## Acceptance scenarios
+## Given / When / Then acceptance
 
-| ID | Given / When / Then |
-|---|---|
-| AC-01 FR-01,02 | Given a normal hub spawn, when entering tile 0, then exactly one existing blaster is usable, field-note and campus access remain usable, and no legacy station can claim or respond. |
-| AC-02 FR-03,04,07 | Given LABEL, when shooting Food/Furniture/Vehicle for burger/chair/car respectively, then each correct gate lifts and delivers that object; a wrong shot explains the category and leaves the same item retryable. |
-| AC-03 FR-05 | Given the three predictions, when shooting the chair→Vehicle card then Furniture, then the chair lifts, reroutes and visibly passes a repeat test; the HUD explains why 95% confidence did not establish correctness. |
-| AC-04 FR-06 | Given TEST, when sorting banana, sofa and tractor, then only their correct categories advance and the lesson mentions new examples; SHIP remains inactive until all pass. |
-| AC-05 FR-06,08 | Given completion, when an enrolled player shoots SHIP, then cargo travels through the final raised shutter and each eligible participant receives at most one Classifier Badge, visible to the existing journal. |
-| AC-06 FR-07,09 | Given repeated wrong choices or Pause Motion, when using Help/Watch Again/Return, then no failure timer, forced jump, obstruction or inaccessible control prevents finishing or leaving. |
-| AC-07 FR-08 | Given 2 and then 4 enrolled players plus a late spectator, when players shoot simultaneously or hold fire across stages, then exactly one transition occurs and spectator shots award nothing. |
-| AC-08 FR-08,11 | Given motion or feedback in progress, when replaying, leaving, respawning or resetting the round, then no stale callback moves restored cargo or grants progress; replay retains badges and round reset clears progress as specified. |
-| AC-09 FR-09,10 | Given normal approach and firing positions, when checking screenshots and walking the aisle, then labels are legible without color, all targets are hittable, motion stays behind rails, native-prop share is ≥75%, and all four tiles read as one factory. |
-| AC-10 FR-11 | Given the completed implementation, when building Verse, validating, cooking and executing AC-01..09, then failures are resolved and evidence is recorded; end the game and verify it stopped while leaving UEFN open. |
+| ID | Requirements | Scenario |
+|---|---|---|
+| AC-01 | S-01/02/05/08 | Given hub arrival, when entering, then rifle/first item are ready without a button, all choices and object are legible from the firing point and field-note/shared access remains usable. |
+| AC-02 | S-02/03/04 | Given the seven items, when shooting A,B,C,B,A,B,C, then each label/reason updates promptly, only one item advances per accepted shot and all decisions work from one spot. |
+| AC-03 | S-03/04 | Given the chair's Vehicle prediction, when shooting Vehicle then Furniture, then the first shot cannot advance, item-based guidance helps correction, and the result explains the prediction was wrong. New-example answers remain hidden before selection. |
+| AC-04 | S-04/08 | Given muted audio, when choosing wrongly twice or holding fire across a correct answer, then hints remain readable, no progress is lost, later items receive no accidental credit and all face-edge shots register. |
+| AC-05 | S-05/06 | Given partial/completed play, when leaving during feedback, dying/respawning, disconnecting, replaying or resetting the round, then no stale callback acts, the physical run resets and badge guards hold. |
+| AC-06 | S-06 | Given the last correct choice, when checking journal/finale and replaying, then one Classifier Badge is recognized; Return works before/after completion with no Ship/claim step. |
+| AC-07 | S-01/07/08 | Given saved content, when reconciling actors and viewing arrival/firing positions, then three answer assemblies, two buttons and one main board serve the activity, obsolete machinery is absent and structural/shared dependencies are intact. |
+| AC-08 | S-03/08/09 | Given a first-time solo tester without coaching, when playing, then record first-shot/run times, confusion/enjoyment and whether they can explain a category, correct the prediction and name a different example. Revise observed friction. Additional testers help but are not a hidden three-person release gate. |
+| AC-09 | S-09 | Given final content, when build, validation, cook and these scenarios finish, then record actual results/unverified checks and confirm shutdown. |
 
-Proposed duration and visual quality are design targets, not measured playtest results. The exact food/vehicle prop variant can be replaced with an eligible equivalent of the same category, teaching role and size envelope; update the item names and fixture table together. A category, answer, route or mechanical change requires renewed review.
+## Scope
+
+Fixed examples favor a clear first lesson; randomized queues, scoring and cooperation are outside revision 2. Eligible prop equivalents must preserve category, recognizable shape, new-example distinction and size; update item names/fixtures/reasons together. Changes to lesson, mechanic or layout require renewed review.

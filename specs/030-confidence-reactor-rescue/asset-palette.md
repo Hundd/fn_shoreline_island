@@ -1,16 +1,17 @@
-# Native Fortnite palette — revision 1
+# Functional palette - revision 2
 
-Use a readable industrial reactor workshop: graphite metal, warm practical lights, cyan active controls, amber uncertainty and white text/icons. No horror dressing or lethal hazards. The core is a 1.5–2 m recognizable energy canister with the same silhouette throughout. A single open-top pipe/gantry kit joins all bays; avoid opaque walls blocking the escort view.
+One core and three meaningful actions are the visual focus. Industrial machinery and dressing from history/revision-1/asset-palette.md are superseded; there is no native-prop percentage requirement.
 
-Read-only catalog matches in evidence/editor-inventory.json include:
+| Role | Selection / constraint |
+|---|---|
+| Core | One eligible native canister/generator, recognizable at <=1.5 m cube. Static pose throughout. Exact asset is qualified in implementation preflight; no dependency on restricted internal reactor meshes. |
+| Core support | One reused low stand if needed for readable height; no machinery housing or carriage. |
+| Actions | Existing project target/ring assets and persistent CHECK, COOL, RELEASE labels; thermometer, cooling and exit/checkmark icons with text. No moving control. |
+| Evidence | One main board with up to five short lines: goal/progress, original claim status, outside result, inside result/freshness, current hint/result. Use HUD duplicate for long feedback; keep evidence visible. Native font/line fitting requires cooked review. |
+| Feedback | One brief non-flashing cooling/success cue, <=1 second; core material change allowed. Text explicitly says NOT RECHECKED after cooling. Color cannot establish safe status. |
+| Practical scene | At most two lamps, one useful shelter, boundary rails where needed. Reuse existing assets with safe sightlines. |
+| Seam repair | Matching existing floor material/geometry for the reconfirmed 48 cm strip only. Shared debug-labeled floor is protected. |
 
-- Reactor pipes: /WildEstate/Environment/Props/GlowDonut/GlowDonut_ReactorTower_Pipes/Meshes/SM_GlowDonut_ReactorTower_Pipes_A_A.SM_GlowDonut_ReactorTower_Pipes_A_A
-- Fan: /WildEstate/Environment/Sets/GlowDonut/Meshes/SM_GlowDonut_ReactorTower_Fan_Blades_A_A.SM_GlowDonut_ReactorTower_Fan_Blades_A_A
-- Processing housing: /Hermes/Props/Industrial/Industrial_ProcessingMachine_A/Meshes/SM_Industrial_ProcessingModule_A.SM_Industrial_ProcessingModule_A
-- Practical lamp: /WildEstate/Environment/Props/PalletJack/PalletJack_IndustrialLight_A/Meshes/SM_PalletJack_IndustrialLightFixture_A.SM_PalletJack_IndustrialLightFixture_A
+No scanner arms, pipes, conveyors, valve, fans, lifts, shutters, carriage, dispatch pallet, crate clusters or planters. No prop should look like an extra interactable control. Do not reuse the previously disallowed cat mesh. Retire obsolete energy-owned scenery only after exact actor/component dependency audit; preserve shared support and routes.
 
-Reuse the candidate conveyor, shelving and crate palette cataloged in feature 028 (asset-palette.md and evidence/editor-inventory.json). Qualify the Creative-placeable variants rather than assuming these raw static meshes cook. Use an eligible native generator/canister for the core, native metal gates for shutters and a native valve/control unit for the moving switch. If a candidate is restricted, substitute within the same role, silhouette and bounds; no new import or marketplace download is required. Record exact qualified asset paths in implementation evidence. Never reuse the disallowed Hermes cat mesh from the old mission.
-
-Proposed dressing budget: 8 warm lamps (two at each action bay), 4 overhead frames with at least 4 m clearance, 8 pipe sections along Y=3..7, 4 console/shelf clusters within Y=3..7, 4 small coastal planters at entry/finish corners, and low machinery rails at Y=18 with clear target rays. Keep all decorative props out of the Y=24.5..27.5 aisle and away from controls by at least 1 m. No dense fog or bright effects behind text. Finale uses one short 3 s burst and four sequentially lit progress indicators.
-
-Motion housing envelopes: scan 10 x 8 x 5 m; probe dock 8 x 8 x 5 m; lift/fan 8 x 8 x 5 m; release cradle 12 x 8 x 6 m. Carriage fits 3 x 3 m, core 2 x 2 x 2 m, valve visual 1.2–1.5 m with matching generous hit area. Native props retain recognizable proportions. Verify at least 75% Fortnite visible non-device instances (excluding retained support floors) in cooked screenshots and a counted scene manifest. Rings, instructional labels and small custom cues may reuse existing project assets.
+Native catalog presence is not Creative-placeability or cooking evidence. Choose an eligible same-role canister under the fixed envelope; if unavailable, return to design review. Retain proportional scale and avoid bright emissions behind text. No new asset import is authorized during this documentation task. Missing font glyphs or readout overlap must be fixed before gameplay acceptance.

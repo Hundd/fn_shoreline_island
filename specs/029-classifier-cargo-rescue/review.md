@@ -1,25 +1,31 @@
-# Blockout review — revision 1
+# Blockout review - revision 2
 
-Result: concrete draft for human review; no human approval recorded. No map, asset or Verse mutation performed. Offline check succeeds with zero execution blockers. This means structural readiness for design review, not gameplay acceptance.
+Disposition: documentation draft ready for human design review, not approved or implemented. Previous revision-1 review is archived. User requested updated docs; no gameplay changes were made.
 
-## Findings
+## Inspection and findings
 
-- FR-01: Four live floor bounds align exactly, giving a 112×33 m surface at world Z=2400 cm. Shared campus roots have aggregate bounds overlapping other missions; removal is component/ownership based, never an AABB or wildcard delete. Field-note cargo access remains at the eastern edge.
-- FR-03,09: First visit runs right-to-left in the preview (tile 0 to tile 3). The 3 m aisle stays physically open. Useful travel is 89 m to the SHIP firing spot and approximately 93 m to recap; decision stops are spaced 22–28 m apart. This is an accepted walking tradeoff for using all four existing tiles. Return controls avoid a mandatory return walk. Verify pace against the proposed 4–6 minute duration in playtest.
-- FR-04..06: Nine explicit stages reuse thirteen target assemblies. Three choices are visible during classification; CHECK has three prediction cards followed by three correction targets, never both hit-active. Stage membership and success IDs match the plan. The confidence lesson is demonstrated by a concrete wrong prediction and repair. Held-out furniture/vehicle/food examples distinguish testing from memorizing original objects. Explanations say this is a scripted model demonstration.
-- FR-07,09: Stable hit faces avoid requiring tracking skill while objects and gates animate. Approximate maximum horizontal aim distance is 12.8 m; minimum required target face 1.5 m. Cue rings alone are not a collision guarantee. Motion remains behind the interaction area; retain rail openings for clear firing rays. Controls moved outside the 3 m aisle during review. No timed penalty, forced jump or moving player platform is required.
-- FR-08,11: Enrollment, spectator policy, synchronous phase lock, quiet-hit rearm, generation cancellation, empty-team reset and badge guards are specified. They require a new scoped controller; none is asserted to exist merely because the YAML validates. Test disconnect, respawn, held automatic fire, simultaneous correct shots and replay during motion.
-- FR-10: Native prop roles and discovered candidates are documented. Candidate availability is weaker evidence than Creative eligibility. Implementation must qualify each selected prop before scene placement; equivalent variants preserve category, size and teaching role. An unavailable eligible equivalent is a stop condition. Held-out banana is the weakest catalog candidate and may require an equivalent food variant with updated fixture wording.
-- FR-11: Existing blaster runtime evidence supports reuse; classifier feature 022 evidence did not accept its gameplay. New work needs fresh build, validation, cook and solo/multiplayer evidence. All gameplay tasks remain unchecked.
+Reviewed previous spec/plan/map/palette, historical editor inventory, current station/progress source and the 028 solo implementation/user playtest report. Historical measurements are not fresh live observations. Reuse corridor/shooting_gallery contracts and the existing shooting/solo primitives; no new pattern or generic configurable engine is claimed.
 
-## Preview inspection and limitations
+| Requirements | Finding | Revision-2 resolution / verification |
+|---|---|---|
+| S-01/07 | Revision 1 used about 93 m of travel and a delivery/repair/dispatch factory. | One 9 m approach; seven decisions at one spot. Keep floors/shared field note; no machinery or dressing quota. |
+| S-02/03 | Old station modes and revision-1 prediction-card/gate switches add rules unrelated to sorting. | Same Food/Furniture/Vehicle faces throughout. Label three examples, correct one label, try three different examples. |
+| S-03/04 | Simple sorting alone could be a vocabulary quiz; answer revealing would erase the lesson. | A visible wrong AI claim must be corrected; new examples are held back until their turn. Short explanations name item function; no claim that this trains or proves a model. |
+| S-02/08 | A centered object behind the middle target would be obscured. | Put one current object beside the row at X=105.5, not behind it; no ring on the object. Maximum angle from firing about 38 degrees; verify eye-level silhouette and native prop eligibility. |
+| S-06 | Manager has complete(player), not indexed completion. | Explicit guarded three-section final commit; preserve tracker/journal/finale; test legacy partial state. |
+| S-04/05 | Delayed feedback and held automatic fire can leak into the next decision. | Synchronous scoring lock, generation cancellation, quiet-hit observation and persistent result until release; cooked edge-case testing remains required. |
+| S-05/06 | Team enrollment and button banks obscure first action. | Single-player auto-ready, automatic hints, nearby Replay/Return. No team, spectator or global matchmaking edits. |
+| S-07/08 | Native prop percentage encourages unnecessary objects and catalog entries may be restricted. | Functional palette only; exact eligible variants/bounds/collision are preflight gates. Bounded equivalent substitution cannot change lesson or category. |
+| S-08/09 | Offline diagrams cannot prove readable icons, collision or fun. | Cooked forward screenshots, real rifle face-edge shots and a first-time solo learner's explanation/enjoyment are required. Keep untested cases visible. |
 
-Read generated HTML/SVG and implementation YAML, checked the 26 marker entries, five zone envelopes, scale, four directional paths, ten stages including enrollment and thirteen target IDs. Preview contains explicit DRAFT wording and provenance. It is a schematic map, not a beauty render; moving prop paths, decorations and detailed mesh collisions are specified in plan.md/asset-palette.md rather than drawn as existing objects.
+## Generated preview review
 
-Browser rendering was attempted through the browser skill, but the runtime reported “No browser is available” and discovery returned an empty list. Therefore no browser screenshot or visual-render QA is claimed. The linked HTML/SVG remains available for human inspection. Small overlapping arrival/weapon annotations describe the same arrival area, not duplicate physical devices.
+Ran `map_workflow.py check` for this revision: valid draft, zero design execution blockers, explicit approval still required. Inspected generated implementation entries: two zones, one always-open 3 m route, three target assemblies, two ordinary controls, correct ordered target IDs and retained progress identity. Full 112 m site envelope remains to protect support space; the sparse left side of the diagram is intentionally unused floor, not a missing gameplay area or deletion instruction.
 
-## Remaining review decisions and acceptance gates
+Rasterized the actual generated SVG using the existing Sharp installation and visually inspected `evidence/preview-review-r2.png`. The diagram shows the 9 m approach, fixed row, adjacent display and controls outside the approach strip. Board and reward annotations initially shared XY; moved the reward annotation to the first progress light so both remain visible. Heights are not drawn; the board/label/readings need eye-level cooked review. PNG is an offline blockout, not an editor or gameplay screenshot. Optional font-cache write warnings did not prevent rendering; no HTML browser rendering is claimed.
 
-Human approval is outstanding for the one-team design, Furniture category substitution, static shooting controls with moving machinery, and removal of the old classifier presentation. No unresolved design choice is delegated to MCP. Exact native prop eligibility, owned facade reconciliation, target collision/readability, motion cancellation, multiplayer fairness and enjoyment are implementation verification gates, with bounded substitution rules in the plan.
+## Approval and limits
 
-Live GetGameState returned Unconnected at planning inspection and final shutdown verification. No active playtest required stopping; UEFN remains open.
+No unresolved design choice is delegated to editor automation. Preflight must reconfirm live ownership, supports, qualified assets, full transforms and binding counts. A missing same-role eligible asset, unsafe layout or changed learning sequence returns to planning. The existing station still needs the scoped refactor in plan.md; zero draft blockers is not evidence that runtime behavior already exists.
+
+No approval.yaml is authored. No Verse build, UEFN validation/cook or gameplay acceptance is claimed for this revision. Review `generated/preview.html`, `generated/implementation.yaml`, spec.md and plan.md together. Implementation is a separate step after explicit approval; this documentation-only request ends at the prepared review bundle.

@@ -1,39 +1,46 @@
-# Confidence Core: Reactor Rescue — revision 1
+# Confidence Core: Check Before You Trust
 
-Replace the old Confidence Core stations with one continuous, cooperative reactor rescue. Escort the same core through a test rig, shoot machinery with the existing Data Blaster, discover that a confident prediction can be wrong, cool the core, and verify it before release. Target duration: 3–5 minutes on a first run, without a failure timer or combat enemies.
+Revision 2, 2026-09-29. Documentation/design proposal only; not approved or implemented. Replaces the cooperative reactor-rescue draft in `history/revision-1/`. Follows 028's successful solo simplification. Retains the confirmed Confidence Core footprint, Pulse Rifle and badge identity.
 
-## Scope and decisions for review
+## Player experience and learning
 
-The request names energy_0_floor through energy_4_floor. Live inspection instead found energy_0_floor and energy_station_2/3/4_floor: four actors, with the last at zero X scale. This proposal uses the existing Confidence Core footprint X=-13000..-1800, Y=-4100..-600, top Z=2400 cm. It divides it into five gameplay beats, not five invented floor actors. See plan.md for the overlapping support floor and 48 cm seam repair. No expansion into neighboring missions is proposed. The user explicitly confirmed: “Use the existing Confidence Core footprint and Pulse Rifle.” This resolves the equipment/site interpretation; it does not constitute approval of this concrete design.
+One core, one bay, three stationary actions: **CHECK**, **COOL**, **RELEASE**. Prompt: **MAKE THE CORE SAFE**. Pix predicts `SAFE - 90% CONFIDENT`, but this is a claim, not a measurement. Check inside, discover heat, cool the core, check again, release. All four actions happen from the same spot.
 
-Old Confidence Core station assets and the obstructing vault shell may be retired after reference reconciliation. Preserve shared progress, tracker identity, journal/finale, global equipment, hub destinations and neighboring missions. One team run replaces four independently owned stations. The current island and Verse remain unchanged during planning.
+| Step | Persistent evidence | Useful action/result |
+|---|---|---|
+| Check the claim | `Pix: SAFE, 90% confident` / `Outside: COOL; Inside: UNKNOWN` | CHECK reveals inside HOT; mark the original prediction `WRONG FOR THIS CORE`. |
+| Fix the problem | `Inside: HOT - cooling needed` | COOL gives a brief cooling pulse; casing changes but board says `Inside: NOT RECHECKED`. |
+| Verify the change | `Cooled; Inside: NOT RECHECKED` | CHECK takes fresh readings: outside COOL, inside COOL, `FRESH CHECK`. |
+| Finish | Both fresh readings stay visible | RELEASE marks the core ready and awards the existing Confidence Badge. |
+
+First-run target: 45-90 seconds; first shot within 10 seconds, without a timer. Discovery and visible feedback supply the payoff. No escort, moving aim or percentage arithmetic. Readings and percentage are authored examples, not a calibrated model or real reactor training. A new measurement is independent evidence; repeating Pix's claim is not.
 
 ## Requirements
 
-| ID | Testable requirement |
-|---|---|
-| FR-01 | Provide one continuous route with five beats: Briefing, Surface Scan, Independent Check, Cooling Bay, Release. The same recognizable core moves between them. Maintain a 3 m clear walking aisle, no mandatory jumps, and accessible return at every beat. |
-| FR-02 | Reuse the existing rare Pulse Rifle, ammunition policy and respawn grant. Only enrolled players' weapon hits on active targets advance the mission. Wrong, inactive, spectator and repeated hits cannot skip stages. |
-| FR-03 | Teach useful evidence versus irrelevant appearance, independent evidence versus a copied report, and confidence versus correctness. A contradictory internal-temperature result must overturn the initial SAFE prediction. The final release requires fresh tests after cooling. |
-| FR-04 | Shooting visibly operates a scanner arm, core carriage, routing shutter, moving coolant control, cooling lift and release shutter. Each accepted action gives an immediate cue, with a visible result within 4 seconds except walking-paced core transport. |
-| FR-05 | Use at least 75% eligible Fortnite props among visible non-device prop instances, excluding retained support floors. Use one industrial palette, restrained cyan/amber cues, warm lamps, readable local labels, and decorated edges. No floating wall of quiz boards. |
-| FR-06 | A solo player can complete every action. One to four enrolled players share a run; late arrivals spectate until replay. Leavers/respawns lose membership; cancel when empty. Shared progress cannot award nonparticipants or duplicate badges. |
-| FR-07 | Offer Pause Motion, Help and Repeat Result at each action bay. No speed-based learning penalty, lethal machinery, flashing strobe, color-only choice or required moving-platform riding. |
-| FR-08 | Replay resets stage, targets, motion, readings and memberships, retaining earned badges for the round. Round reset clears progress via the existing manager. Generation cancellation prevents stale movement and rewards. |
-| FR-09 | Retire old energy station subscriptions before enabling the replacement, preserve global dependencies and repair the local floor seam. Reconcile actual actor identities; never bulk-delete by label or overlapping bounds. |
-| FR-10 | Build Verse, validate, cook and record solo plus two/four-player acceptance, screenshots and shutdown before declaring implementation complete. Offline review is design evidence only. |
+- S-01 **Compact solo bay.** Required play stays on the valid first floor, local X=84..112, Y=0..35 m. Arrival to firing point is 9 m; route width is 3 m, Return always accessible. Preserve support footprint/neighbors. No island matchmaking change.
+- S-02 **Stable actions.** Three stationary 1.5 m faces, 3 m apart and 6 m ahead: A CHECK, B COOL, C RELEASE. Words/icons, meanings and positions never change. CHECK takes fresh outside/inside measurements; COOL applies cooling; RELEASE finishes after verification. Reuse rifle/loadout. Core is a named display object, not a shooting target.
+- S-03 **Evidence matters.** Success IDs [0,1,0,2]. Initial inside HOT contradicts confident SAFE. Cooling invalidates prior readings until a fresh CHECK. RELEASE refuses unknown, hot or stale inside state. Never add confidence percentage per clue or teach that confident answers are always wrong.
+- S-04 **Immediate retries.** Accepted-action cue within 0.25 seconds; authored result within 1 second. Result stays at least 1 second; next choice arms after a minimum 1.5-second transition and 0.5-second quiet-hit interval. Held fire cannot auto-check the next step. Premature actions give a reason with no penalty/restart; first mistake gives the principle, second names the useful action. Repeating CHECK on a still-hot core confirms HOT without credit; do not label that a bad measurement. Hints/readings persist until another action/reset.
+- S-05 **Lifecycle.** Auto-ready within 0.5 seconds of the sole local player's entry. No Start/Join, claim, team or spectator workflow. Only their in-bay hits advance. Leave, death/respawn, disconnect and round reset cancel callbacks and invalidate readings. Reentry/replay starts from the unverified claim; fresh-check flags cannot carry over.
+- S-06 **Finish and progress.** Three milestones: discovered contradiction, verified fresh results, checked release. Three lights plus 0/3..3/3 text; cooling alone is not proof of safety. Commit all three retained energy_progress sections only on valid release, preserving tracker/journal/finale and badge guard. Two ordinary buttons: Replay after completion and Return any time. Recap: `Check the claim. Check the change. Then act.`
+- S-07 **Useful objects only.** One static core with a brief non-flashing cooling effect, one support if necessary, three targets, one evidence board, three lights, at most two practical lamps and one useful shelter. No carriage, conveyors, moving valve, scanner gantry, lift, shutters, dispatch route, pipe maze, dressing quota or prop-percentage requirement. Evidence persists and hints are automatic; no Pause/Repeat/Help buttons.
+- S-08 **Clarity and safety.** Claim/readings/choices/core fit one forward view. Older readings are marked OLD/NOT RECHECKED. Text duplicates color/audio and icons render in cooked content. Hit surfaces have no occluding prop. Preserve valid floors and debug-labeled support; retire exact energy-owned obsolete presentation only after audit. Repair the previously measured 48 cm seam if reconfirmed; never add overlapping coplanar floor under retained support.
+- S-09 **Real acceptance.** Build, validate, cook and test solo approach, premature release, repeated CHECK/COOL, hints, held fire, reset, badge/journal and routes. Record learning and enjoyment. Stop and verify non-running game; leave UEFN open.
 
-## Acceptance scenarios
+## Given / When / Then acceptance
 
-- AC-01 (FR-01,02): Given normal hub arrival or respawn, when entering the briefing, then exactly the existing blaster is available and a clear route leads through every beat without a fall, step trap or forced backtrack.
-- AC-02 (FR-02,03): Given the question “Does this core need cooling?”, when shooting Paint Color or Fancy Casing, then explain why appearance does not measure temperature and keep the core in place. Surface Scan sweeps the scanner and reveals “Outside cool; inside not checked.”
-- AC-03 (FR-03,04): Given Pix's authored “SAFE — 90% confidence” prediction and the outside reading, when choosing Copy Report or Count Likes, then neither adds independent evidence. Shooting Inside Probe lowers the probe and shows “INSIDE HOT — cooling needed.” The prediction changes to “SAFE? Doubtful — conflicting evidence.”
-- AC-04 (FR-02,03): Given the hot inside result, when shooting SEND, then the shutter stays closed and the player can retry. HOLD routes the same core into the cooling bay. High confidence is explicitly explained as a prediction, not proof.
-- AC-05 (FR-04,07): Given HOLD accepted, when shooting the slowly moving Coolant Valve, then the lift lowers, the fan turns and the core cools. Pause Motion freezes the matching visual/hit surface at its current pose with unchanged correctness; a solo player can finish while paused.
-- AC-06 (FR-03,04): Given cooling has finished, when shooting RETEST, then two fresh named readings appear, outside cool and inside cool; neither old readings nor animation alone enables release. At Release, CHECKED RELEASE succeeds and SKIP CHECKS does not.
-- AC-07 (FR-02,06): Given two/four enrolled players plus a late spectator, when simultaneous/held/spectator shots arrive during a transition, then exactly one action commits, no next stage auto-completes, and only continuous participants receive progress.
-- AC-08 (FR-06,08): Given an active scan, transfer, cooling or reward, when all players leave, respawn, replay or a round resets, then old callbacks cannot move props or award. Replay restores home poses and full lesson order without duplicate badges.
-- AC-09 (FR-01,05,07,09): Given a cooked scene, when walking the complete route and viewing from each firing spot, then labels remain readable, target sightlines and 3 m aisle are clear, native-prop proportion meets FR-05, floor seam is safe, and neighboring modules still work.
-- AC-10 (FR-09,10): Given the replacement is wired, when building, validating, cooking and finishing playtests, then record actual outcomes and remaining warnings, preserve journal/finale completion, stop the game and verify non-running state while leaving UEFN open.
+| ID | Requirements | Scenario |
+|---|---|---|
+| AC-01 | S-01/02/05/08 | Given hub arrival, when entering, then rifle/prompt are ready without a button, choices/core/readings are visible and shared access is safe. |
+| AC-02 | S-03/04 | Given confident claim and unknown inside, when shooting RELEASE or COOL, then no credit is given and guidance requests evidence; CHECK reveals HOT and rejects this claim without generalizing about all confidence. |
+| AC-03 | S-03/04/06 | Given HOT, when shooting CHECK again then COOL, then repeat confirms HOT without another milestone, and cooling changes appearance but explicitly requires fresh measurement. |
+| AC-04 | S-03/04 | Given cooling finished, when shooting RELEASE, then stale/unknown evidence prevents success; CHECK supplies fresh COOL readings and RELEASE can now finish. |
+| AC-05 | S-02/04/08 | Given muted audio, when making two mistakes or holding fire through feedback, then hints persist, edge hits register and no later stage gets accidental credit; moving aim/timed action is unnecessary. |
+| AC-06 | S-05/06 | Given partial/completed play, when leaving during feedback, respawning, disconnecting, replaying or resetting round, then readings/generation reset and badges never duplicate. |
+| AC-07 | S-06/08 | Given final release and saved scene, when checking journal/finale, buttons, actor counts and floor seams, then badge is recognized, Return works before/after finish, and obsolete machinery is absent without harming shared support. |
+| AC-08 | S-03/08/09 | Given a first-time solo tester without coaching, when playing, then record time/confusion/enjoyment and ask why 90% was not proof and why another check was needed. Assess learning from their explanation, not completion alone. Extra testers are follow-up, not a hidden three-person gate. |
+| AC-09 | S-09 | Given final production content, when technical checks and solo scenarios finish, then record actual results/unverified checks and confirm shutdown. |
 
-The 90% figure is an authored example, not a measured or calibrated model probability. More clues do not mechanically add confidence. A useful contradiction can lower confidence. This fictional reactor is an AI-literacy demonstration, not real reactor training.
+## Scope
+
+One confident mistake demonstrates verification before/after intervention; this is neither accuracy estimation nor real heat physics. Multiple cores, random outcomes and variable confidence are future work. Changes to evidence sequence, decisions, action meanings or site require renewed review.

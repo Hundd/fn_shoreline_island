@@ -1,0 +1,700 @@
+version: 1
+map_id: confidence_reactor_rescue
+spec_digest: 46b192399cf569616ecf39521f28f3518d8797f183aa47f343eb3584f36e3475
+patterns_digest: 8b5ce638426e3128729662fb8433040a3a33b50a66ec7177b3fe04c82a2c979a
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: confidence_reactor_rescue
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: knowledge_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -2600
+  - -4100
+  - 2400
+  size_cm:
+  - 800
+  - 3500
+  - 900
+  parameters:
+    lesson: Shoot useful tests. Check the result. Rescue the core.
+    duration_seconds: 5
+    hud_copy: true
+  markers:
+  - id: arrival_hub
+    kind: spawn
+    zone: arrival
+    label: Existing hub approach; no new spawn pad
+    position:
+    - 109
+    - 29
+    - 0
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  - id: equipped_blaster
+    kind: weapon
+    zone: arrival
+    label: Existing Pulse Rifle in inventory; no duplicate spawner
+    position:
+    - 107
+    - 25
+    - 1
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  - id: brief
+    kind: knowledge
+    zone: arrival
+    label: Start / Join and short instructions
+    position:
+    - 108
+    - 19
+    - 2
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  - id: return_entry
+    kind: exit
+    zone: arrival
+    label: Return to existing hub destination
+    position:
+    - 109
+    - 23
+    - 0
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: scan
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -4600
+  - -4100
+  - 2400
+  size_cm:
+  - 2000
+  - 3500
+  - 900
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: surface
+    kind: target
+    zone: scan
+    label: Surface Scan
+    position:
+    - 88
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 0
+  - id: paint
+    kind: target
+    zone: scan
+    label: Paint Color
+    position:
+    - 94
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 1
+  - id: casing
+    kind: target
+    zone: scan
+    label: Fancy Casing
+    position:
+    - 100
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 2
+  - id: surface_result
+    kind: knowledge
+    zone: scan
+    label: Outside cool; inside unknown
+    position:
+    - 96
+    - 29
+    - 2.4
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: check
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -7400
+  - -4100
+  - 2400
+  size_cm:
+  - 2800
+  - 3500
+  - 900
+  parameters:
+    target_count: 5
+    friendly_fire: false
+  markers:
+  - id: probe
+    kind: target
+    zone: check
+    label: Inside Probe
+    position:
+    - 62
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 3
+  - id: copy
+    kind: target
+    zone: check
+    label: Copy Report
+    position:
+    - 70
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 4
+  - id: likes
+    kind: target
+    zone: check
+    label: Count Likes
+    position:
+    - 78
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 5
+  - id: hold
+    kind: target
+    zone: check
+    label: HOLD
+    position:
+    - 66
+    - 17
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 6
+  - id: send
+    kind: target
+    zone: check
+    label: SEND
+    position:
+    - 74
+    - 17
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 7
+  - id: prediction
+    kind: knowledge
+    zone: check
+    label: 'Pix: SAFE 90%; then inside HOT contradicts'
+    position:
+    - 70
+    - 29
+    - 2.4
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: cool
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -10200
+  - -4100
+  - 2400
+  size_cm:
+  - 2800
+  - 3500
+  - 900
+  parameters:
+    target_count: 2
+    friendly_fire: false
+  markers:
+  - id: valve
+    kind: target
+    zone: cool
+    label: Coolant Valve; X=36..40 motion
+    position:
+    - 38
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 8
+  - id: retest
+    kind: target
+    zone: cool
+    label: RETEST
+    position:
+    - 46
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 9
+  - id: fresh_results
+    kind: knowledge
+    zone: cool
+    label: Fresh outside and inside tests
+    position:
+    - 42
+    - 29
+    - 2.4
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: release
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -13000
+  - -4100
+  - 2400
+  size_cm:
+  - 2800
+  - 3500
+  - 900
+  parameters:
+    target_count: 2
+    friendly_fire: false
+  markers:
+  - id: checked
+    kind: target
+    zone: release
+    label: CHECKED RELEASE
+    position:
+    - 16
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 10
+  - id: skip
+    kind: target
+    zone: release
+    label: SKIP CHECKS
+    position:
+    - 24
+    - 20
+    - 1.8
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+    target_id: 11
+  - id: recap
+    kind: knowledge
+    zone: release
+    label: Useful tests. Independent evidence. Check first.
+    position:
+    - 20
+    - 29
+    - 2.4
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  - id: core_cradle
+    kind: reward
+    zone: release
+    label: Core restored; existing Confidence Badge
+    position:
+    - 6
+    - 13
+    - 4
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  - id: return_finish
+    kind: exit
+    zone: release
+    label: Replay / Return
+    position:
+    - 12
+    - 26
+    - 0
+    source: Proposed design anchor within live-measured site; see plan.md for motion
+      and actor reconciliation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: controller
+    class: configured_confidence_controller
+    count: 1
+    source: Scoped adapter to implement after approval; existing data_target and prompt_blaster
+      motion APIs, plan.md
+    settings:
+      stage_success_ids:
+      - 0
+      - 3
+      - 6
+      - 8
+      - 9
+      - 10
+      shared_run: true
+      join_window_seconds: 5
+      generation_cancel: true
+      learning_sections: Hold / Retest / Release; commit all progress only at final
+        eligible completion
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: membership
+    class: mutator_zone_device
+    count: 1
+    source: Native mission bounds zone; discover schema
+    settings:
+      allow_weapon_fire: true
+      entry_does_not_auto_enroll: true
+      departure_revokes_membership: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: bay_zones
+    class: mutator_zone_device
+    count: 4
+    source: Native local bay presence; discover schema
+    settings:
+      allow_weapon_fire: true
+      requires_enrolled_agent: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: boards
+    class: billboard_device
+    count: 6
+    source: Reuse suitable unbound energy boards after retiring old controller
+    settings:
+      hud_copy: true
+      local_labels: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hud
+    class: hud_message_device
+    count: 1
+    source: Reconcile energy feedback device
+    settings:
+      audience: participants, per-player spectator notice
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controls
+    class: button_device
+    count: 20
+    source: Reuse old controls after unbinding; plan.md exact roles
+    settings:
+      roles:
+      - Start / Join
+      - Replay
+      - 5 Return
+      - 4 Help
+      - 4 Pause Motion
+      - 4 Repeat Result
+      - Entry loadout recovery
+      no_timer_penalty: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: replay_return
+    class: teleporter_device
+    count: 1
+    source: One local replay destination; existing hub destination remains shared
+    settings:
+      local_arrival_m:
+      - 109
+      - 29
+      - 0
+      explicit_replay_consent: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: scan_targets
+    class: fn_shoreline_island_data_target
+    count: 3
+    source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+      total engine actors
+    settings:
+      damage_only: true
+      minimum_diameter_m: 1.2
+      inactive: disable and park
+      motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: check_targets
+    class: fn_shoreline_island_data_target
+    count: 5
+    source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+      total engine actors
+    settings:
+      damage_only: true
+      minimum_diameter_m: 1.2
+      inactive: disable and park
+      motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: cool_targets
+    class: fn_shoreline_island_data_target
+    count: 2
+    source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+      total engine actors
+    settings:
+      damage_only: true
+      minimum_diameter_m: 1.2
+      inactive: disable and park
+      motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: release_targets
+    class: fn_shoreline_island_data_target
+    count: 2
+    source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+      total engine actors
+    settings:
+      damage_only: true
+      minimum_diameter_m: 1.2
+      inactive: disable and park
+      motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: blaster
+    class: fn_shoreline_island_data_blaster
+    count: 1
+    source: Existing global data_blaster/granter; feature 024 cooked equipped evidence
+    settings:
+      action: reuse_global
+      weapon: rare Pulse Rifle
+      duplicate_granter: false
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: fn_shoreline_island_energy_progress
+    count: 1
+    source: Existing energy_progress_0; Content/fn_shoreline_island_energy_progress.verse
+    settings:
+      action: preserve_identity
+      indices:
+      - 0
+      - 1
+      - 2
+      commit: all sections only on final completion for continuously enrolled participants
+      badge_once_per_round: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: badge
+    class: tracker_device
+    count: 1
+    source: Existing energy_0_badge_tracker; preserve journal/finale bindings
+    settings:
+      action: preserve
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: machinery
+    class: creative_prop
+    count: 8
+    source: Native qualified palette and synchronized MoveTo basis; asset-palette.md
+    settings:
+      roles:
+      - core
+      - carriage
+      - scan arm
+      - probe
+      - routing shutter
+      - lift
+      - fan
+      - release shutter
+      motion_strip_y_m:
+      - 9
+      - 17
+      player_riding: false
+      core_transfer_m_per_second: 4
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: lights
+    class: customizable_light_device
+    count: 4
+    source: Native bay status indicators
+    settings:
+      status_labels: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: completion_fx
+    class: vfx_creator_device
+    count: 1
+    source: Native final burst
+    settings:
+      duration_seconds: 3
+      no_strobe: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: enroll
+    zone: arrival
+    purpose: Briefing and explicit Start/Join
+    requires: []
+    active_targets: []
+    completion: Close five-second join window; no automatic enrollment.
+  - id: surface_scan
+    zone: scan
+    purpose: Select relevant surface heat test
+    requires:
+    - enroll
+    active_targets:
+    - surface
+    - paint
+    - casing
+    completion: Sweep arm; outside cool, inside unknown; escort to check.
+    success_target: surface
+  - id: independent_probe
+    zone: check
+    purpose: Obtain independent internal measurement
+    requires:
+    - surface_scan
+    active_targets:
+    - probe
+    - copy
+    - likes
+    completion: Lower probe; inside HOT; visibly question 90% SAFE prediction.
+    success_target: probe
+  - id: hold_core
+    zone: check
+    purpose: Respond to contradictory evidence
+    requires:
+    - independent_probe
+    active_targets:
+    - hold
+    - send
+    completion: Open routing shutter; escort to cooling; run-local section 0.
+    success_target: hold
+  - id: coolant
+    zone: cool
+    purpose: Shoot moving coolant valve to operate safe machinery
+    requires:
+    - hold_core
+    active_targets:
+    - valve
+    completion: Freeze or aim freely; lift/fan cool core; enable retest after completion.
+    success_target: valve
+  - id: retest
+    zone: cool
+    purpose: Fresh tests after intervention
+    requires:
+    - coolant
+    active_targets:
+    - retest
+    completion: Outside and inside both COOL; run-local section 1; escort to release.
+    success_target: retest
+  - id: checked_release
+    zone: release
+    purpose: Choose checked release
+    requires:
+    - retest
+    active_targets:
+    - checked
+    - skip
+    completion: Open shutter, dock core, section 2; commit all indices for eligible
+      participants; replay/return.
+    success_target: checked
+  connections:
+  - from: arrival
+    to: scan
+    mode: walk
+    width: 3
+    points:
+    - - 108
+      - 26
+      - 0
+    - - 96
+      - 26
+      - 0
+    gate: always
+  - from: scan
+    to: check
+    mode: walk
+    width: 3
+    points:
+    - - 96
+      - 26
+      - 0
+    - - 70
+      - 26
+      - 0
+    gate: always
+  - from: check
+    to: cool
+    mode: walk
+    width: 3
+    points:
+    - - 70
+      - 26
+      - 0
+    - - 42
+      - 26
+      - 0
+    gate: always
+  - from: cool
+    to: release
+    mode: walk
+    width: 3
+    points:
+    - - 42
+      - 26
+      - 0
+    - - 20
+      - 26
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

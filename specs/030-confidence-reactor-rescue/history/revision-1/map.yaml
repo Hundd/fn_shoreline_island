@@ -1,0 +1,729 @@
+version: 1
+map:
+  id: confidence_reactor_rescue
+  title: Confidence Core - Reactor Rescue
+  theme: coastal_reactor_workshop
+  units: meters
+  origin_cm:
+  - -13000
+  - -4100
+  - 2400
+  size:
+  - 112
+  - 35
+  - 9
+  learning_objective: Choose useful independent evidence, revise a confident wrong
+    prediction, and verify results before acting.
+  source_feature: specs/030-confidence-reactor-rescue/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- scan
+- check
+- cool
+- release
+zones:
+- id: arrival
+  label: Briefing
+  pattern: knowledge_room
+  position:
+  - 104
+  - 0
+  - 0
+  size:
+  - 8
+  - 35
+  - 9
+  purpose: Enroll a solo player or team; use existing hub approach.
+  parameters:
+    lesson: Shoot useful tests. Check the result. Rescue the core.
+    duration_seconds: 5
+    hud_copy: true
+  devices:
+  - boards
+  - hud
+  - controller
+  - membership
+  - controls
+  - replay_return
+  - progress
+  - badge
+  - blaster
+  overlap_with: []
+  completion: Start closes five-second explicit Join window.
+  reset: Cancel motion/feedback generations, park targets, restore all home poses/readings
+    and enrollment. Preserve badges on replay; clear via manager on round reset.
+- id: scan
+  label: Surface Scan
+  pattern: shooting_gallery
+  position:
+  - 84
+  - 0
+  - 0
+  size:
+  - 20
+  - 35
+  - 9
+  purpose: Select a useful test rather than appearance.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - scan_targets
+  - blaster
+  - controller
+  - boards
+  - hud
+  - machinery
+  - controls
+  - bay_zones
+  - lights
+  overlap_with: []
+  completion: Outside cool, inside unknown; same core moves to independent check.
+  reset: Cancel motion/feedback generations, park targets, restore all home poses/readings
+    and enrollment. Preserve badges on replay; clear via manager on round reset.
+- id: check
+  label: Independent Check
+  pattern: shooting_gallery
+  position:
+  - 56
+  - 0
+  - 0
+  size:
+  - 28
+  - 35
+  - 9
+  purpose: Test independently and reject a confident wrong prediction.
+  parameters:
+    target_count: 5
+    friendly_fire: false
+  devices:
+  - check_targets
+  - blaster
+  - controller
+  - boards
+  - hud
+  - machinery
+  - controls
+  - bay_zones
+  - lights
+  overlap_with: []
+  completion: Inside hot; HOLD routes core to cooling.
+  reset: Cancel motion/feedback generations, park targets, restore all home poses/readings
+    and enrollment. Preserve badges on replay; clear via manager on round reset.
+- id: cool
+  label: Cooling Bay
+  pattern: shooting_gallery
+  position:
+  - 28
+  - 0
+  - 0
+  size:
+  - 28
+  - 35
+  - 9
+  purpose: Operate cooling machinery, then retest.
+  parameters:
+    target_count: 2
+    friendly_fire: false
+  devices:
+  - cool_targets
+  - blaster
+  - controller
+  - boards
+  - hud
+  - machinery
+  - controls
+  - bay_zones
+  - lights
+  overlap_with: []
+  completion: Both fresh measurements cool; core moves to release.
+  reset: Cancel motion/feedback generations, park targets, restore all home poses/readings
+    and enrollment. Preserve badges on replay; clear via manager on round reset.
+- id: release
+  label: Release
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 28
+  - 35
+  - 9
+  purpose: Release using verified evidence; earn Confidence Badge.
+  parameters:
+    target_count: 2
+    friendly_fire: false
+  devices:
+  - release_targets
+  - blaster
+  - controller
+  - boards
+  - hud
+  - machinery
+  - controls
+  - bay_zones
+  - lights
+  - completion_fx
+  - progress
+  - badge
+  - replay_return
+  overlap_with: []
+  completion: Core enters cradle, guarded completion, replay or return.
+  reset: Cancel motion/feedback generations, park targets, restore all home poses/readings
+    and enrollment. Preserve badges on replay; clear via manager on round reset.
+connections:
+- from: arrival
+  to: scan
+  mode: walk
+  width: 3
+  points:
+  - - 108
+    - 26
+    - 0
+  - - 96
+    - 26
+    - 0
+  gate: always
+- from: scan
+  to: check
+  mode: walk
+  width: 3
+  points:
+  - - 96
+    - 26
+    - 0
+  - - 70
+    - 26
+    - 0
+  gate: always
+- from: check
+  to: cool
+  mode: walk
+  width: 3
+  points:
+  - - 70
+    - 26
+    - 0
+  - - 42
+    - 26
+    - 0
+  gate: always
+- from: cool
+  to: release
+  mode: walk
+  width: 3
+  points:
+  - - 42
+    - 26
+    - 0
+  - - 20
+    - 26
+    - 0
+  gate: always
+markers:
+- id: arrival_hub
+  kind: spawn
+  zone: arrival
+  label: Existing hub approach; no new spawn pad
+  position:
+  - 109
+  - 29
+  - 0
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: equipped_blaster
+  kind: weapon
+  zone: arrival
+  label: Existing Pulse Rifle in inventory; no duplicate spawner
+  position:
+  - 107
+  - 25
+  - 1
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: brief
+  kind: knowledge
+  zone: arrival
+  label: Start / Join and short instructions
+  position:
+  - 108
+  - 19
+  - 2
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: return_entry
+  kind: exit
+  zone: arrival
+  label: Return to existing hub destination
+  position:
+  - 109
+  - 23
+  - 0
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: surface
+  kind: target
+  zone: scan
+  label: Surface Scan
+  position:
+  - 88
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 0
+- id: paint
+  kind: target
+  zone: scan
+  label: Paint Color
+  position:
+  - 94
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 1
+- id: casing
+  kind: target
+  zone: scan
+  label: Fancy Casing
+  position:
+  - 100
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 2
+- id: probe
+  kind: target
+  zone: check
+  label: Inside Probe
+  position:
+  - 62
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 3
+- id: copy
+  kind: target
+  zone: check
+  label: Copy Report
+  position:
+  - 70
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 4
+- id: likes
+  kind: target
+  zone: check
+  label: Count Likes
+  position:
+  - 78
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 5
+- id: hold
+  kind: target
+  zone: check
+  label: HOLD
+  position:
+  - 66
+  - 17
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 6
+- id: send
+  kind: target
+  zone: check
+  label: SEND
+  position:
+  - 74
+  - 17
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 7
+- id: valve
+  kind: target
+  zone: cool
+  label: Coolant Valve; X=36..40 motion
+  position:
+  - 38
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 8
+- id: retest
+  kind: target
+  zone: cool
+  label: RETEST
+  position:
+  - 46
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 9
+- id: checked
+  kind: target
+  zone: release
+  label: CHECKED RELEASE
+  position:
+  - 16
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 10
+- id: skip
+  kind: target
+  zone: release
+  label: SKIP CHECKS
+  position:
+  - 24
+  - 20
+  - 1.8
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+  target_id: 11
+- id: surface_result
+  kind: knowledge
+  zone: scan
+  label: Outside cool; inside unknown
+  position:
+  - 96
+  - 29
+  - 2.4
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: prediction
+  kind: knowledge
+  zone: check
+  label: 'Pix: SAFE 90%; then inside HOT contradicts'
+  position:
+  - 70
+  - 29
+  - 2.4
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: fresh_results
+  kind: knowledge
+  zone: cool
+  label: Fresh outside and inside tests
+  position:
+  - 42
+  - 29
+  - 2.4
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: recap
+  kind: knowledge
+  zone: release
+  label: Useful tests. Independent evidence. Check first.
+  position:
+  - 20
+  - 29
+  - 2.4
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: core_cradle
+  kind: reward
+  zone: release
+  label: Core restored; existing Confidence Badge
+  position:
+  - 6
+  - 13
+  - 4
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+- id: return_finish
+  kind: exit
+  zone: release
+  label: Replay / Return
+  position:
+  - 12
+  - 26
+  - 0
+  source: Proposed design anchor within live-measured site; see plan.md for motion
+    and actor reconciliation.
+devices:
+- id: controller
+  class: configured_confidence_controller
+  count: 1
+  source: Scoped adapter to implement after approval; existing data_target and prompt_blaster
+    motion APIs, plan.md
+  settings:
+    stage_success_ids:
+    - 0
+    - 3
+    - 6
+    - 8
+    - 9
+    - 10
+    shared_run: true
+    join_window_seconds: 5
+    generation_cancel: true
+    learning_sections: Hold / Retest / Release; commit all progress only at final
+      eligible completion
+- id: membership
+  class: mutator_zone_device
+  count: 1
+  source: Native mission bounds zone; discover schema
+  settings:
+    allow_weapon_fire: true
+    entry_does_not_auto_enroll: true
+    departure_revokes_membership: true
+- id: bay_zones
+  class: mutator_zone_device
+  count: 4
+  source: Native local bay presence; discover schema
+  settings:
+    allow_weapon_fire: true
+    requires_enrolled_agent: true
+- id: boards
+  class: billboard_device
+  count: 6
+  source: Reuse suitable unbound energy boards after retiring old controller
+  settings:
+    hud_copy: true
+    local_labels: true
+- id: hud
+  class: hud_message_device
+  count: 1
+  source: Reconcile energy feedback device
+  settings:
+    audience: participants, per-player spectator notice
+- id: controls
+  class: button_device
+  count: 20
+  source: Reuse old controls after unbinding; plan.md exact roles
+  settings:
+    roles:
+    - Start / Join
+    - Replay
+    - 5 Return
+    - 4 Help
+    - 4 Pause Motion
+    - 4 Repeat Result
+    - Entry loadout recovery
+    no_timer_penalty: true
+- id: replay_return
+  class: teleporter_device
+  count: 1
+  source: One local replay destination; existing hub destination remains shared
+  settings:
+    local_arrival_m:
+    - 109
+    - 29
+    - 0
+    explicit_replay_consent: true
+- id: scan_targets
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+    total engine actors
+  settings:
+    damage_only: true
+    minimum_diameter_m: 1.2
+    inactive: disable and park
+    motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+- id: check_targets
+  class: fn_shoreline_island_data_target
+  count: 5
+  source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+    total engine actors
+  settings:
+    damage_only: true
+    minimum_diameter_m: 1.2
+    inactive: disable and park
+    motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+- id: cool_targets
+  class: fn_shoreline_island_data_target
+  count: 2
+  source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+    total engine actors
+  settings:
+    damage_only: true
+    minimum_diameter_m: 1.2
+    inactive: disable and park
+    motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+- id: release_targets
+  class: fn_shoreline_island_data_target
+  count: 2
+  source: Content/fn_shoreline_island_data_target.verse; 12 assemblies total, not
+    total engine actors
+  settings:
+    damage_only: true
+    minimum_diameter_m: 1.2
+    inactive: disable and park
+    motion: Only target 8 moves; synchronized visual/surface and Pause Motion
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing global data_blaster/granter; feature 024 cooked equipped evidence
+  settings:
+    action: reuse_global
+    weapon: rare Pulse Rifle
+    duplicate_granter: false
+- id: progress
+  class: fn_shoreline_island_energy_progress
+  count: 1
+  source: Existing energy_progress_0; Content/fn_shoreline_island_energy_progress.verse
+  settings:
+    action: preserve_identity
+    indices:
+    - 0
+    - 1
+    - 2
+    commit: all sections only on final completion for continuously enrolled participants
+    badge_once_per_round: true
+- id: badge
+  class: tracker_device
+  count: 1
+  source: Existing energy_0_badge_tracker; preserve journal/finale bindings
+  settings:
+    action: preserve
+- id: machinery
+  class: creative_prop
+  count: 8
+  source: Native qualified palette and synchronized MoveTo basis; asset-palette.md
+  settings:
+    roles:
+    - core
+    - carriage
+    - scan arm
+    - probe
+    - routing shutter
+    - lift
+    - fan
+    - release shutter
+    motion_strip_y_m:
+    - 9
+    - 17
+    player_riding: false
+    core_transfer_m_per_second: 4
+- id: lights
+  class: customizable_light_device
+  count: 4
+  source: Native bay status indicators
+  settings:
+    status_labels: true
+- id: completion_fx
+  class: vfx_creator_device
+  count: 1
+  source: Native final burst
+  settings:
+    duration_seconds: 3
+    no_strobe: true
+stages:
+- id: enroll
+  zone: arrival
+  purpose: Briefing and explicit Start/Join
+  requires: []
+  active_targets: []
+  completion: Close five-second join window; no automatic enrollment.
+- id: surface_scan
+  zone: scan
+  purpose: Select relevant surface heat test
+  requires:
+  - enroll
+  active_targets:
+  - surface
+  - paint
+  - casing
+  completion: Sweep arm; outside cool, inside unknown; escort to check.
+  success_target: surface
+- id: independent_probe
+  zone: check
+  purpose: Obtain independent internal measurement
+  requires:
+  - surface_scan
+  active_targets:
+  - probe
+  - copy
+  - likes
+  completion: Lower probe; inside HOT; visibly question 90% SAFE prediction.
+  success_target: probe
+- id: hold_core
+  zone: check
+  purpose: Respond to contradictory evidence
+  requires:
+  - independent_probe
+  active_targets:
+  - hold
+  - send
+  completion: Open routing shutter; escort to cooling; run-local section 0.
+  success_target: hold
+- id: coolant
+  zone: cool
+  purpose: Shoot moving coolant valve to operate safe machinery
+  requires:
+  - hold_core
+  active_targets:
+  - valve
+  completion: Freeze or aim freely; lift/fan cool core; enable retest after completion.
+  success_target: valve
+- id: retest
+  zone: cool
+  purpose: Fresh tests after intervention
+  requires:
+  - coolant
+  active_targets:
+  - retest
+  completion: Outside and inside both COOL; run-local section 1; escort to release.
+  success_target: retest
+- id: checked_release
+  zone: release
+  purpose: Choose checked release
+  requires:
+  - retest
+  active_targets:
+  - checked
+  - skip
+  completion: Open shutter, dock core, section 2; commit all indices for eligible
+    participants; replay/return.
+  success_target: checked
+assumptions:
+- id: site_and_weapon
+  status: resolved
+  detail: User explicitly confirmed existing Confidence Core footprint and Pulse Rifle;
+    four actual floor actors, five gameplay beats.
+  evidence: 'User reply 2026-09-28: Use the existing Confidence Core footprint and
+    Pulse Rifle; evidence/editor-inventory.json'
+- id: floor_repair
+  status: resolved
+  detail: Preserve overlapping debug-labeled support and bridge only 48 cm seam; do
+    not expand or restore coplanar zero-width floor.
+  evidence: Live floor bounds/transforms in evidence/editor-inventory.json; plan.md
+- id: controller_scope
+  status: resolved
+  detail: Implement scoped controller after approval using existing shooting/motion
+    basis; current energy_station does not support this design via configuration.
+  evidence: Content/fn_shoreline_island_energy_station.verse; data_target.verse; prompt_blaster.verse;
+    plan.md
+- id: native_qualification
+  status: resolved
+  detail: Catalog candidates require placeability/cook qualification; eligible equivalents
+    allowed only within authored roles and envelopes.
+  evidence: asset-palette.md; prior disallowed-cat lesson in feature 022; plan.md
+- id: shared_run
+  status: resolved
+  detail: One shared explicitly enrolled run with no speed penalty; only continuous
+    participants commit all badge sections at finale.
+  evidence: spec.md FR-06/08 and plan.md
+- id: motion_schema
+  status: resolved
+  detail: V1 represents linear stages and anchors. Detailed motion, synchronized hits,
+    reset and collision are implementation obligations, not established gameplay.
+  evidence: design/MAP_SPEC.md; plan.md; AC-05..10
