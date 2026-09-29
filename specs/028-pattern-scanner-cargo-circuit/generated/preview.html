@@ -1,140 +1,73 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pattern Scanner - Cargo Circuit blockout</title>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pattern Scanner - Solo Fill the Gap (revision 2) blockout</title>
 <style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 20px;color:#172e43;background:#fff}svg{width:100%;max-height:900px}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #ccd8df;padding:8px}td:last-child{font-size:12px;overflow-wrap:anywhere}li{margin:8px 0}.notice{background:#fff3cf;padding:14px}</style>
-<h1>Pattern Scanner - Cargo Circuit review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
-<p>Observe a repeating rule, repair an exception, then test a movement prediction.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 849" role="img" aria-label="Pattern Scanner - Cargo Circuit blockout">
+<h1>Pattern Scanner - Solo Fill the Gap (revision 2) review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
+<p>Recognize repeating groups, fill a missing member, and verify the completed pattern.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 645" role="img" aria-label="Pattern Scanner - Solo Fill the Gap (revision 2) blockout">
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
-<rect width="970" height="849" fill="#f4f7fa"/>
-<text x="45" y="25" font-size="19">Pattern Scanner - Cargo Circuit — DRAFT / review required</text>
+<rect width="970" height="645" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Pattern Scanner - Solo Fill the Gap (revision 2) — DRAFT / review required</text>
 <text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
-<rect x="545" y="65" width="260" height="250" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="552" y="84">3 Test motion</text>
-<text font-size="11" x="552" y="100">26 × 25m</text>
-<rect x="325" y="65" width="220" height="250" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="332" y="84">2 Repair</text>
-<text font-size="11" x="332" y="100">22 × 25m</text>
-<rect x="125" y="65" width="200" height="250" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="132" y="84">1 Predict</text>
-<text font-size="11" x="132" y="100">20 × 25m</text>
-<rect x="805" y="65" width="120" height="250" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="812" y="84">Dispatch</text>
-<text font-size="11" x="812" y="100">12 × 25m</text>
-<rect x="45" y="65" width="80" height="250" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
-<text class="zone" x="52" y="84">Enter</text>
-<text font-size="11" x="52" y="100">8 × 25m</text>
-<polyline points="90.0,145 195,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → predict / always</title></polyline>
-<polyline points="195,145 425,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>predict → repair / always</title></polyline>
-<polyline points="425,145 665,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>repair → motion / always</title></polyline>
-<polyline points="665,145 845,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>motion → dispatch / always</title></polyline>
-<g><title>Arrival from existing hub walkway; not a new spawner; XYZ [4.5, 5, 0]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="90.0" cy="115" r="8" fill="#42a86b" stroke="white"/>
-<text x="90.0" y="118" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
-<g><title>Existing shared Pulse Rifle inventory; no new granter; XYZ [5, 8, 1]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="95" cy="145" r="8" fill="#b377dc" stroke="white"/>
-<text x="95" y="148" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
-<g><title>Start and five-second team enrollment; XYZ [6, 11, 2]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="105" cy="175" r="8" fill="#329bd0" stroke="white"/>
-<text x="105" y="178" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
-<g><title>A circle - moves +/-1.5m in X; XYZ [12, 16, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="165" cy="225" r="8" fill="#e25757" stroke="white"/>
-<text x="165" y="228" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
-<g><title>B triangle - moves +/-1.5m in X; XYZ [17, 16, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="215" cy="225" r="8" fill="#e25757" stroke="white"/>
-<text x="215" y="228" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
-<g><title>C square - moves +/-1.5m in X; XYZ [22, 16, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="265" cy="225" r="8" fill="#e25757" stroke="white"/>
-<text x="265" y="228" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
-<g><title>Slot 1 - A; XYZ [32, 17, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="365" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="365" y="238" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
-<g><title>Slot 2 - B; XYZ [34, 17, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="385" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="385" y="238" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
-<g><title>Slot 3 - A; XYZ [36, 17, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="405" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="405" y="238" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
-<g><title>Slot 4 - A; XYZ [38, 17, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="425" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="425" y="238" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
-<g><title>Slot 5 - A; XYZ [40, 17, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="445" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="445" y="238" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
-<g><title>Slot 6 - B; XYZ [42, 17, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="465" cy="235" r="8" fill="#e25757" stroke="white"/>
-<text x="465" y="238" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
-<g><title>Replacement A - active after diagnosis; XYZ [34, 13, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="385" cy="195" r="8" fill="#e25757" stroke="white"/>
-<text x="385" y="198" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
-<g><title>Replacement B - active after diagnosis; XYZ [39, 13, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="435" cy="195" r="8" fill="#e25757" stroke="white"/>
-<text x="435" y="198" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
-<g><title>Replacement C - active after diagnosis; XYZ [44, 13, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="485" cy="195" r="8" fill="#e25757" stroke="white"/>
-<text x="485" y="198" text-anchor="middle" font-size="9" style="fill:white">15</text></g>
-<g><title>Predict shuttle stop 1; XYZ [56, 15, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="605" cy="215" r="8" fill="#e25757" stroke="white"/>
-<text x="605" y="218" text-anchor="middle" font-size="9" style="fill:white">16</text></g>
-<g><title>Predict shuttle stop 3; XYZ [64, 15, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="685" cy="215" r="8" fill="#e25757" stroke="white"/>
-<text x="685" y="218" text-anchor="middle" font-size="9" style="fill:white">17</text></g>
-<g><title>Predict shuttle stop 4; XYZ [68, 15, 1.8]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="725" cy="215" r="8" fill="#e25757" stroke="white"/>
-<text x="725" y="218" text-anchor="middle" font-size="9" style="fill:white">18</text></g>
-<g><title>Trail 1 2 3 4 3 2; next stop?; XYZ [62, 20, 3]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="665" cy="265" r="8" fill="#329bd0" stroke="white"/>
-<text x="665" y="268" text-anchor="middle" font-size="9" style="fill:white">19</text></g>
-<g><title>Cargo dispatch and Pattern Badge; XYZ [80, 18, 2]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="845" cy="245" r="8" fill="#c79c17" stroke="white"/>
-<text x="845" y="248" text-anchor="middle" font-size="9" style="fill:white">20</text></g>
-<g><title>Replay / Return to existing hub destination; XYZ [80, 9, 0]; Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</title><circle cx="845" cy="155" r="8" fill="#526476" stroke="white"/>
-<text x="845" y="158" text-anchor="middle" font-size="9" style="fill:white">21</text></g>
+<rect x="45" y="125" width="220" height="160" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="144">All 3 rounds here</text>
+<text font-size="11" x="52" y="160">22 × 16m</text>
+<rect x="45" y="65" width="220" height="60" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">Walk in</text>
+<text font-size="11" x="52" y="100">22 × 6m</text>
+<polyline points="105,105 105,125 145,155" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → play_bay / always</title></polyline>
+<g><title>Existing hub walkway arrival; no new spawn; XYZ [6, 4, 0]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="105" cy="105" r="8" fill="#42a86b" stroke="white"/>
+<text x="105" y="108" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Existing Pulse Rifle grant; no new granter; XYZ [10, 3, 1]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="145" cy="95" r="8" fill="#b377dc" stroke="white"/>
+<text x="145" y="98" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Persistent pattern: shoot the missing symbol; XYZ [10, 17, 3.6]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="145" cy="235" r="8" fill="#329bd0" stroke="white"/>
+<text x="145" y="238" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>A circle - stationary; XYZ [7, 15, 1.8]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="115" cy="215" r="8" fill="#e25757" stroke="white"/>
+<text x="115" y="218" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>B triangle - stationary; XYZ [10, 15, 1.8]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="145" cy="215" r="8" fill="#e25757" stroke="white"/>
+<text x="145" y="218" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>C square - stationary; XYZ [13, 15, 1.8]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="175" cy="215" r="8" fill="#e25757" stroke="white"/>
+<text x="175" y="218" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>Stand here for every round; no physical floor control; XYZ [10, 9, 0]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="145" cy="155" r="8" fill="#329bd0" stroke="white"/>
+<text x="145" y="158" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>Three lights and Pattern Badge at completion; XYZ [16, 19, 1]; Reward annotation offset for diagram legibility; actual reward stays on pattern board and three lights at plan.md positions, no extra actor at this marker.</title><circle cx="205" cy="255" r="8" fill="#c79c17" stroke="white"/>
+<text x="205" y="258" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>Replay button - enabled after completion; XYZ [15, 9, 1]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="195" cy="155" r="8" fill="#329bd0" stroke="white"/>
+<text x="195" y="158" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>Return button - always available; XYZ [4.5, 11, 1]; Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</title><circle cx="90.0" cy="175" r="8" fill="#526476" stroke="white"/>
+<text x="90.0" y="178" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
 <path d="M45,350 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="355" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
 <text x="45" y="393" font-size="16" font-weight="bold">Map legend</text>
 <text x="45" y="415" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
 <circle cx="54.0" cy="439" r="9" fill="#42a86b"/>
 <text x="54.0" y="442" text-anchor="middle" font-size="9" style="fill:white">1</text>
-<text x="73.0" y="443" font-size="12">Arrival from existing hub walkway; not a new spawner</text>
+<text x="73.0" y="443" font-size="12">Existing hub walkway arrival; no new spawn</text>
 <circle cx="494.0" cy="439" r="9" fill="#b377dc"/>
 <text x="494.0" y="442" text-anchor="middle" font-size="9" style="fill:white">2</text>
-<text x="513.0" y="443" font-size="12">Existing shared Pulse Rifle inventory; no new granter</text>
+<text x="513.0" y="443" font-size="12">Existing Pulse Rifle grant; no new granter</text>
 <circle cx="54.0" cy="473" r="9" fill="#329bd0"/>
 <text x="54.0" y="476" text-anchor="middle" font-size="9" style="fill:white">3</text>
-<text x="73.0" y="477" font-size="12">Start and five-second team enrollment</text>
+<text x="73.0" y="477" font-size="12">Persistent pattern: shoot the missing symbol</text>
 <circle cx="494.0" cy="473" r="9" fill="#e25757"/>
 <text x="494.0" y="476" text-anchor="middle" font-size="9" style="fill:white">4</text>
-<text x="513.0" y="477" font-size="12">A circle - moves +/-1.5m in X</text>
+<text x="513.0" y="477" font-size="12">A circle - stationary</text>
 <circle cx="54.0" cy="507" r="9" fill="#e25757"/>
 <text x="54.0" y="510" text-anchor="middle" font-size="9" style="fill:white">5</text>
-<text x="73.0" y="511" font-size="12">B triangle - moves +/-1.5m in X</text>
+<text x="73.0" y="511" font-size="12">B triangle - stationary</text>
 <circle cx="494.0" cy="507" r="9" fill="#e25757"/>
 <text x="494.0" y="510" text-anchor="middle" font-size="9" style="fill:white">6</text>
-<text x="513.0" y="511" font-size="12">C square - moves +/-1.5m in X</text>
-<circle cx="54.0" cy="541" r="9" fill="#e25757"/>
+<text x="513.0" y="511" font-size="12">C square - stationary</text>
+<circle cx="54.0" cy="541" r="9" fill="#329bd0"/>
 <text x="54.0" y="544" text-anchor="middle" font-size="9" style="fill:white">7</text>
-<text x="73.0" y="545" font-size="12">Slot 1 - A</text>
-<circle cx="494.0" cy="541" r="9" fill="#e25757"/>
+<text x="73.0" y="545" font-size="12">Stand here for every round; no physical floor control</text>
+<circle cx="494.0" cy="541" r="9" fill="#c79c17"/>
 <text x="494.0" y="544" text-anchor="middle" font-size="9" style="fill:white">8</text>
-<text x="513.0" y="545" font-size="12">Slot 2 - B</text>
-<circle cx="54.0" cy="575" r="9" fill="#e25757"/>
+<text x="513.0" y="545" font-size="12">Three lights and Pattern Badge at completion</text>
+<circle cx="54.0" cy="575" r="9" fill="#329bd0"/>
 <text x="54.0" y="578" text-anchor="middle" font-size="9" style="fill:white">9</text>
-<text x="73.0" y="579" font-size="12">Slot 3 - A</text>
-<circle cx="494.0" cy="575" r="9" fill="#e25757"/>
+<text x="73.0" y="579" font-size="12">Replay button - enabled after completion</text>
+<circle cx="494.0" cy="575" r="9" fill="#526476"/>
 <text x="494.0" y="578" text-anchor="middle" font-size="9" style="fill:white">10</text>
-<text x="513.0" y="579" font-size="12">Slot 4 - A</text>
-<circle cx="54.0" cy="609" r="9" fill="#e25757"/>
-<text x="54.0" y="612" text-anchor="middle" font-size="9" style="fill:white">11</text>
-<text x="73.0" y="613" font-size="12">Slot 5 - A</text>
-<circle cx="494.0" cy="609" r="9" fill="#e25757"/>
-<text x="494.0" y="612" text-anchor="middle" font-size="9" style="fill:white">12</text>
-<text x="513.0" y="613" font-size="12">Slot 6 - B</text>
-<circle cx="54.0" cy="643" r="9" fill="#e25757"/>
-<text x="54.0" y="646" text-anchor="middle" font-size="9" style="fill:white">13</text>
-<text x="73.0" y="647" font-size="12">Replacement A - active after diagnosis</text>
-<circle cx="494.0" cy="643" r="9" fill="#e25757"/>
-<text x="494.0" y="646" text-anchor="middle" font-size="9" style="fill:white">14</text>
-<text x="513.0" y="647" font-size="12">Replacement B - active after diagnosis</text>
-<circle cx="54.0" cy="677" r="9" fill="#e25757"/>
-<text x="54.0" y="680" text-anchor="middle" font-size="9" style="fill:white">15</text>
-<text x="73.0" y="681" font-size="12">Replacement C - active after diagnosis</text>
-<circle cx="494.0" cy="677" r="9" fill="#e25757"/>
-<text x="494.0" y="680" text-anchor="middle" font-size="9" style="fill:white">16</text>
-<text x="513.0" y="681" font-size="12">Predict shuttle stop 1</text>
-<circle cx="54.0" cy="711" r="9" fill="#e25757"/>
-<text x="54.0" y="714" text-anchor="middle" font-size="9" style="fill:white">17</text>
-<text x="73.0" y="715" font-size="12">Predict shuttle stop 3</text>
-<circle cx="494.0" cy="711" r="9" fill="#e25757"/>
-<text x="494.0" y="714" text-anchor="middle" font-size="9" style="fill:white">18</text>
-<text x="513.0" y="715" font-size="12">Predict shuttle stop 4</text>
-<circle cx="54.0" cy="745" r="9" fill="#329bd0"/>
-<text x="54.0" y="748" text-anchor="middle" font-size="9" style="fill:white">19</text>
-<text x="73.0" y="749" font-size="12">Trail 1 2 3 4 3 2; next stop?</text>
-<circle cx="494.0" cy="745" r="9" fill="#c79c17"/>
-<text x="494.0" y="748" text-anchor="middle" font-size="9" style="fill:white">20</text>
-<text x="513.0" y="749" font-size="12">Cargo dispatch and Pattern Badge</text>
-<circle cx="54.0" cy="779" r="9" fill="#526476"/>
-<text x="54.0" y="782" text-anchor="middle" font-size="9" style="fill:white">21</text>
-<text x="73.0" y="783" font-size="12">Replay / Return to existing hub destination</text>
+<text x="513.0" y="579" font-size="12">Return button - always available</text>
 </svg>
 <p><span style="color:#42a86b">● spawn</span> · <span style="color:#e25757">● target</span> · <span style="color:#b377dc">● weapon</span> · <span style="color:#329bd0">● knowledge</span> · <span style="color:#526476">● exit</span> · <span style="color:#db8b29">● checkpoint</span> · <span style="color:#c79c17">● reward</span></p>
-<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Arrival from existing hub walkway; not a new spawner</td><td>[4.5, 5, 0]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>2</td><td>weapon</td><td>Existing shared Pulse Rifle inventory; no new granter</td><td>[5, 8, 1]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>3</td><td>knowledge</td><td>Start and five-second team enrollment</td><td>[6, 11, 2]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>4</td><td>target</td><td>A circle - moves +/-1.5m in X</td><td>[12, 16, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>5</td><td>target</td><td>B triangle - moves +/-1.5m in X</td><td>[17, 16, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>6</td><td>target</td><td>C square - moves +/-1.5m in X</td><td>[22, 16, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>7</td><td>target</td><td>Slot 1 - A</td><td>[32, 17, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>8</td><td>target</td><td>Slot 2 - B</td><td>[34, 17, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>9</td><td>target</td><td>Slot 3 - A</td><td>[36, 17, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>10</td><td>target</td><td>Slot 4 - A</td><td>[38, 17, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>11</td><td>target</td><td>Slot 5 - A</td><td>[40, 17, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>12</td><td>target</td><td>Slot 6 - B</td><td>[42, 17, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>13</td><td>target</td><td>Replacement A - active after diagnosis</td><td>[34, 13, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>14</td><td>target</td><td>Replacement B - active after diagnosis</td><td>[39, 13, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>15</td><td>target</td><td>Replacement C - active after diagnosis</td><td>[44, 13, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>16</td><td>target</td><td>Predict shuttle stop 1</td><td>[56, 15, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>17</td><td>target</td><td>Predict shuttle stop 3</td><td>[64, 15, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>18</td><td>target</td><td>Predict shuttle stop 4</td><td>[68, 15, 1.8]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>19</td><td>knowledge</td><td>Trail 1 2 3 4 3 2; next stop?</td><td>[62, 20, 3]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>20</td><td>reward</td><td>Cargo dispatch and Pattern Badge</td><td>[80, 18, 2]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr><tr><td>21</td><td>exit</td><td>Replay / Return to existing hub destination</td><td>[80, 9, 0]</td><td>Proposed anchor on measured dock; plan.md defines motion and full transform reconciliation.</td></tr></table>
-<h2>Mission sequence</h2><ol><li><b>enroll</b>: Enroll solo or team, display rule and controls — Start closes five-second join window; late arrivals spectate until next run.</li><li><b>predict_next</b>: Shoot B after ABABA — Lock inputs; B fills gap; complete eligible player learning round 0.</li><li><b>find_exception</b>: Shoot fourth crate in A B A A A B — Lift slot 4 into repair cradle; activate replacement choices after animation.</li><li><b>repair_exception</b>: Shoot B replacement — Lower corrected crate, animate ABABAB verification; complete learning round 1.</li><li><b>predict_motion</b>: Shoot next stop after 1 2 3 4 3 2 — Shuttle moves to 1, loads cargo; complete learning round 2 once.</li><li><b>dispatch_complete</b>: Watch repaired cargo ship; recap and return — Guarded Pattern Badge, optional replay, always-available return; no new currency.</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — Floor bounds measured live; all new markers and motion paths are proposed, not existing transforms.</li><li>resolved — A scoped configured controller must be authored and verified during approved implementation. Existing shooting and synchronized motion APIs are implementation basis; no arbitrary current controller capability is claimed.</li><li>resolved — One shared team run deliberately replaces four independent stations. Start enrollment and spectator policy are explicit design choices for review.</li><li>resolved — Catalog paths are discovered candidates. Implementation must check placeable eligibility, bounds and cook. Equivalent eligible Fortnite props may fill the same fixed envelopes; layout changes require renewed review.</li><li>resolved — Preserve field notes, promenade, four support floors, walkway and shared progress. Reconcile shed components individually before removal.</li><li>resolved — Use already deployed Pulse Rifle as Data Blaster; armor interpreted as weapon, no new wearable mechanic.</li><li>resolved — V1 depicts linear stages and target anchors. Motion, cooperative enrollment, native asset qualification, bullets and collision require implementation verification under the detailed plan.</li></ul></html>
+<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Existing hub walkway arrival; no new spawn</td><td>[6, 4, 0]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>2</td><td>weapon</td><td>Existing Pulse Rifle grant; no new granter</td><td>[10, 3, 1]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>3</td><td>knowledge</td><td>Persistent pattern: shoot the missing symbol</td><td>[10, 17, 3.6]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>4</td><td>target</td><td>A circle - stationary</td><td>[7, 15, 1.8]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>5</td><td>target</td><td>B triangle - stationary</td><td>[10, 15, 1.8]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>6</td><td>target</td><td>C square - stationary</td><td>[13, 15, 1.8]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>7</td><td>knowledge</td><td>Stand here for every round; no physical floor control</td><td>[10, 9, 0]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>8</td><td>reward</td><td>Three lights and Pattern Badge at completion</td><td>[16, 19, 1]</td><td>Reward annotation offset for diagram legibility; actual reward stays on pattern board and three lights at plan.md positions, no extra actor at this marker.</td></tr><tr><td>9</td><td>knowledge</td><td>Replay button - enabled after completion</td><td>[15, 9, 1]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr><tr><td>10</td><td>exit</td><td>Return button - always available</td><td>[4.5, 11, 1]</td><td>Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json. See plan.md for complete placement reconciliation.</td></tr></table>
+<h2>Mission sequence</h2><ol><li><b>approach</b>: Understand one instruction while approaching — Enter play bay; no timer or manual Start.</li><li><b>pair</b>: A B A B A ? -&gt; B — Fill gap immediately, confirm rule and light next progress indicator; credit ordered round. Same place and inputs.</li><li><b>gap</b>: A B ? B A B -&gt; A — Fill gap immediately, confirm rule and light next progress indicator; credit ordered round. Same place and inputs.</li><li><b>triple</b>: A B C A B ? -&gt; C — Fill gap immediately, confirm rule and light next progress indicator; credit ordered round. Same place and inputs.</li><li><b>complete</b>: Hold 3/3 badge result; Replay or Return — Badge once per round through existing progress; no dispatch walk or wait.</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — Measured 88 x 25 m dock retained; proposed 22 x 22 m approach/play footprint uses first tile. Remaining tiles are safe open dock, not additional puzzle stations.</li><li>resolved — User explicitly requested singleplay. Remove team mechanics from this activity; preserve other missions and island matchmaking configuration.</li><li>resolved — Existing controller is hardcoded for v1. Approved implementation must refactor it for three stationary targets and solo auto-ready; existing target/progress APIs are reusable, new behavior is not claimed as shipped.</li><li>resolved — Remove all 21 conveyor bodies and obsolete cargo stations through exact actor/dependency reconciliation; retain shared structural/routes/progress actors.</li><li>resolved — Replace movement prediction and exception hunting with three consistent gap-filling rounds; this is a material design change requiring new approval.</li><li>resolved — Positions are design anchors, not verified collision/FOV. Final rotations, pivots and native bounds are measured during implementation; cooked solo tests gate acceptance.</li><li>resolved — Root approval.yaml remains the historical v1 approval; it cannot authorize the revised digest. No new approval has been created.</li></ul></html>

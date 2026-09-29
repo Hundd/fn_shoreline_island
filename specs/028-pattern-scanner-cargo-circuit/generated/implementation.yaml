@@ -1,432 +1,196 @@
 version: 1
-map_id: pattern_cargo_circuit
-spec_digest: 502da773606e3cffef72b1266b46a5231a22a6cd37b88364949818cff5770928
-patterns_digest: 47fdc3ecfd8467af864c89ddd4ab45d18e3e8513bcb904967dbb6955ae72368f
+map_id: pattern_scanner_solo
+spec_digest: 6314d6e14f27f0804326d612d76dc5622d14e244fabe0f0780b1fee3cb7fb2fb
+patterns_digest: 8a4742b9b975339573390959480b33480edb39fd6f38a5d601066fd1b71e8ea8
 status: draft_requires_explicit_human_approval
 executable: false
 blockers: []
 position_tolerance_m: 0.25
 implementation:
 - step: inspect_existing
-  map: pattern_cargo_circuit
+  map: pattern_scanner_solo
   verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
     before mutations.
 - step: reconcile_zone
   zone: arrival
-  pattern: knowledge_room
+  pattern: corridor
   policy: reuse_first; create or move only after an approved resolved delta
   position_cm:
   - -1100
   - 3000
   - 2400
   size_cm:
-  - 800
-  - 2500
-  - 900
-  parameters:
-    lesson: Watch the cargo. Shoot your prediction. Repair the scanner.
-    duration_seconds: 5
-    hud_copy: true
-  markers:
-  - id: arrival_hub
-    kind: spawn
-    zone: arrival
-    label: Arrival from existing hub walkway; not a new spawner
-    position:
-    - 4.5
-    - 5
-    - 0
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-  - id: rifle
-    kind: weapon
-    zone: arrival
-    label: Existing shared Pulse Rifle inventory; no new granter
-    position:
-    - 5
-    - 8
-    - 1
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-  - id: brief
-    kind: knowledge
-    zone: arrival
-    label: Start and five-second team enrollment
-    position:
-    - 6
-    - 11
-    - 2
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
-- step: reconcile_zone
-  zone: predict
-  pattern: shooting_gallery
-  policy: reuse_first; create or move only after an approved resolved delta
-  position_cm:
-  - -300
-  - 3000
-  - 2400
-  size_cm:
-  - 2000
-  - 2500
-  - 900
-  parameters:
-    target_count: 3
-    friendly_fire: false
-  markers:
-  - id: predict_0
-    kind: target
-    zone: predict
-    label: A circle - moves +/-1.5m in X
-    position:
-    - 12
-    - 16
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 0
-  - id: predict_1
-    kind: target
-    zone: predict
-    label: B triangle - moves +/-1.5m in X
-    position:
-    - 17
-    - 16
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 1
-  - id: predict_2
-    kind: target
-    zone: predict
-    label: C square - moves +/-1.5m in X
-    position:
-    - 22
-    - 16
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 2
-  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
-- step: reconcile_zone
-  zone: repair
-  pattern: shooting_gallery
-  policy: reuse_first; create or move only after an approved resolved delta
-  position_cm:
-  - 1700
-  - 3000
-  - 2400
-  size_cm:
   - 2200
-  - 2500
-  - 900
-  parameters:
-    target_count: 9
-    friendly_fire: false
-  markers:
-  - id: slot_1
-    kind: target
-    zone: repair
-    label: Slot 1 - A
-    position:
-    - 32
-    - 17
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 3
-  - id: slot_2
-    kind: target
-    zone: repair
-    label: Slot 2 - B
-    position:
-    - 34
-    - 17
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 4
-  - id: slot_3
-    kind: target
-    zone: repair
-    label: Slot 3 - A
-    position:
-    - 36
-    - 17
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 5
-  - id: slot_4
-    kind: target
-    zone: repair
-    label: Slot 4 - A
-    position:
-    - 38
-    - 17
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 6
-  - id: slot_5
-    kind: target
-    zone: repair
-    label: Slot 5 - A
-    position:
-    - 40
-    - 17
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 7
-  - id: slot_6
-    kind: target
-    zone: repair
-    label: Slot 6 - B
-    position:
-    - 42
-    - 17
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 8
-  - id: replace_0
-    kind: target
-    zone: repair
-    label: Replacement A - active after diagnosis
-    position:
-    - 34
-    - 13
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 9
-  - id: replace_1
-    kind: target
-    zone: repair
-    label: Replacement B - active after diagnosis
-    position:
-    - 39
-    - 13
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 10
-  - id: replace_2
-    kind: target
-    zone: repair
-    label: Replacement C - active after diagnosis
-    position:
-    - 44
-    - 13
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 11
-  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
-- step: reconcile_zone
-  zone: motion
-  pattern: shooting_gallery
-  policy: reuse_first; create or move only after an approved resolved delta
-  position_cm:
-  - 3900
-  - 3000
-  - 2400
-  size_cm:
-  - 2600
-  - 2500
-  - 900
-  parameters:
-    target_count: 3
-    friendly_fire: false
-  markers:
-  - id: stop_1
-    kind: target
-    zone: motion
-    label: Predict shuttle stop 1
-    position:
-    - 56
-    - 15
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 12
-  - id: stop_3
-    kind: target
-    zone: motion
-    label: Predict shuttle stop 3
-    position:
-    - 64
-    - 15
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 13
-  - id: stop_4
-    kind: target
-    zone: motion
-    label: Predict shuttle stop 4
-    position:
-    - 68
-    - 15
-    - 1.8
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-    target_id: 14
-  - id: motion_rule
-    kind: knowledge
-    zone: motion
-    label: Trail 1 2 3 4 3 2; next stop?
-    position:
-    - 62
-    - 20
-    - 3
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
-- step: reconcile_zone
-  zone: dispatch
-  pattern: corridor
-  policy: reuse_first; create or move only after an approved resolved delta
-  position_cm:
-  - 6500
-  - 3000
-  - 2400
-  size_cm:
-  - 1200
-  - 2500
+  - 600
   - 900
   parameters:
     width_m: 3
-    access: Always-open aisle plus existing hub teleporter via Return
+    access: Always open hub approach with a short direction sign; no lesson timer
   markers:
-  - id: badge_finish
-    kind: reward
-    zone: dispatch
-    label: Cargo dispatch and Pattern Badge
+  - id: hub_arrival
+    kind: spawn
+    zone: arrival
+    label: Existing hub walkway arrival; no new spawn
     position:
-    - 80
-    - 18
-    - 2
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
-  - id: return_hub
-    kind: exit
-    zone: dispatch
-    label: Replay / Return to existing hub destination
+    - 6
+    - 4
+    - 0
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+  - id: inventory
+    kind: weapon
+    zone: arrival
+    label: Existing Pulse Rifle grant; no new granter
     position:
-    - 80
+    - 10
+    - 3
+    - 1
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: play_bay
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -1100
+  - 3600
+  - 2400
+  size_cm:
+  - 2200
+  - 1600
+  - 900
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: rule
+    kind: knowledge
+    zone: play_bay
+    label: 'Persistent pattern: shoot the missing symbol'
+    position:
+    - 10
+    - 17
+    - 3.6
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+  - id: answer_0
+    kind: target
+    zone: play_bay
+    label: A circle - stationary
+    position:
+    - 7
+    - 15
+    - 1.8
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+    target_id: 0
+  - id: answer_1
+    kind: target
+    zone: play_bay
+    label: B triangle - stationary
+    position:
+    - 10
+    - 15
+    - 1.8
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+    target_id: 1
+  - id: answer_2
+    kind: target
+    zone: play_bay
+    label: C square - stationary
+    position:
+    - 13
+    - 15
+    - 1.8
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+    target_id: 2
+  - id: firing_point
+    kind: knowledge
+    zone: play_bay
+    label: Stand here for every round; no physical floor control
+    position:
+    - 10
     - 9
     - 0
-    source: Proposed anchor on measured dock; plan.md defines motion and full transform
-      reconciliation.
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+  - id: badge
+    kind: reward
+    zone: play_bay
+    label: Three lights and Pattern Badge at completion
+    position:
+    - 16
+    - 19
+    - 1
+    source: Reward annotation offset for diagram legibility; actual reward stays on
+      pattern board and three lights at plan.md positions, no extra actor at this
+      marker.
+  - id: replay
+    kind: knowledge
+    zone: play_bay
+    label: Replay button - enabled after completion
+    position:
+    - 15
+    - 9
+    - 1
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
+  - id: return
+    kind: exit
+    zone: play_bay
+    label: Return button - always available
+    position:
+    - 4.5
+    - 11
+    - 1
+    source: Proposed local anchor; original floor bounds measured in evidence/editor-inventory.json.
+      See plan.md for complete placement reconciliation.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_device
   device:
     id: controller
     class: configured_pattern_line_controller
     count: 1
-    source: Proposed scoped adapter using data_target and prompt_blaster synchronized
-      MoveTo; plan.md
+    source: Existing Content/fn_shoreline_island_pattern_line.verse; scoped refactor
+      required by plan.md
     settings:
-      action: implement_after_approval
-      shared_run: true
-      enrollment_seconds: 5
-      stage_success_ids:
+      action: refactor_after_approval
+      single_player_only: true
+      auto_ready: true
+      success_ids:
       - 1
-      - 6
-      - 10
-      - 12
-      learning_rounds:
       - 0
-      - 1
-      - 1
       - 2
-      cancel_on_empty: true
+      remove_team_enrollment: true
+      remove_cargo_motion: true
+      bounds_cm:
+      - -1100
+      - 1100
+      - 3600
+      - 5200
+      - 2350
+      - 3300
+      detailed_delta: spec.md S-01..09 and plan.md; archive approval is stale
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
   device:
-    id: entry
-    class: mutator_zone_device
-    count: 1
-    source: Reuse suitable native zone or place locally after schema discovery
-    settings:
-      allow_weapon_fire: true
-      enrollment: Only during five-second start window
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: boards
-    class: billboard_device
-    count: 4
-    source: Reconcile old loop boards
-    settings:
-      local_viewing_range: true
-      hud_copy: true
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: hud
-    class: hud_message_device
-    count: 1
-    source: Reconcile old loop feedback
-    settings:
-      audience: enrolled players and specific spectator notice
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: controls
-    class: button_device
-    count: 11
-    source: Reconcile old loop buttons; old controllers retired first
-    settings:
-      roles:
-      - Start at entry
-      - Help and Watch again at each of three stages
-      - Freeze at prediction
-      - Replay at finish
-      - Return at entry and finish
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: predict_targets
+    id: answers
     class: fn_shoreline_island_data_target
     count: 3
-    source: Content/fn_shoreline_island_data_target.verse
+    source: Reuse existing cargo_circuit target assemblies 0..2; remove 3..14 and
+      uniquely owned components after reconciliation
     settings:
-      hit_surface: Damage-only attributed trigger
-      minimum_diameter_m: 1.2
-      inactive: Disabled and parked; no stale hits
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: repair_targets
-    class: fn_shoreline_island_data_target
-    count: 9
-    source: Content/fn_shoreline_island_data_target.verse
-    settings:
-      hit_surface: Damage-only attributed trigger
-      minimum_diameter_m: 1.2
-      inactive: Disabled and parked; no stale hits
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: motion_targets
-    class: fn_shoreline_island_data_target
-    count: 3
-    source: Content/fn_shoreline_island_data_target.verse
-    settings:
-      hit_surface: Damage-only attributed trigger
-      minimum_diameter_m: 1.2
-      inactive: Disabled and parked; no stale hits
+      stationary: true
+      surface_size_m: 1.5
+      labels:
+      - A circle
+      - B triangle
+      - C square
+      fixed_order: true
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -434,11 +198,48 @@ implementation:
     id: blaster
     class: fn_shoreline_island_data_blaster
     count: 1
-    source: Existing shared data_blaster and granter; feature 024 solo-recovery-2026-09-27.md
+    source: Existing global Data Blaster and repaired spawner bindings
     settings:
       action: reuse_global
-      weapon: rare Pulse Rifle
       duplicate_granter: false
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: board
+    class: billboard_device
+    count: 1
+    source: Reuse one existing board; remove three old boards
+    settings:
+      persistent_six_slot_strip: true
+      action_text: SHOOT THE MISSING SYMBOL
+      max_size_m:
+      - 10
+      - 2
+      no_shootable_examples: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hud
+    class: hud_message_device
+    count: 1
+    source: Reuse cargo_circuit_feedback
+    settings:
+      audience: sole active player
+      automatic_hints: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controls
+    class: button_device
+    count: 2
+    source: Reuse existing Replay and entry Return; remove other nine buttons
+    settings:
+      roles:
+      - Replay after completion
+      - Return anytime
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -446,10 +247,9 @@ implementation:
     id: progress
     class: fn_shoreline_island_loop_progress
     count: 1
-    source: Existing loop_progress; Content/fn_shoreline_island_loop_progress.verse
+    source: Retain existing loop_progress identity and journal/finale references
     settings:
-      action: preserve_identity
-      completion_indices:
+      ordered_indices:
       - 0
       - 1
       - 2
@@ -461,28 +261,9 @@ implementation:
     id: badge
     class: tracker_device
     count: 1
-    source: Existing loop_badge_tracker referenced by journal and finale
+    source: Retain loop_badge_tracker
     settings:
       action: preserve_bindings
-  verify: Discover class/editable schemas; resolve existing references; assert count/settings
-    after any approved edit.
-- step: reconcile_device
-  device:
-    id: cargo
-    class: creative_prop
-    count: 12
-    source: Qualified Fortnite assets and existing creative_prop motion basis; asset-palette.md
-    settings:
-      assemblies:
-      - 3 answer carriers
-      - 6 inspection crates
-      - 1 replacement cargo
-      - 1 shuttle
-      - 1 dispatch shutter
-      motion_strip_y_m:
-      - 13
-      - 21
-      player_riding: false
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -490,135 +271,88 @@ implementation:
     id: lights
     class: customizable_light_device
     count: 3
-    source: Native stage power cues
+    source: Reuse three round lights
     settings:
-      one_per_learning_round: true
+      one_per_round: true
+      numeric_board_copy: true
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
   device:
-    id: effects
+    id: effect
     class: vfx_creator_device
     count: 1
-    source: Native completion effect
+    source: Reuse finale effect at pattern board
     settings:
-      duration_seconds: 3
+      duration_seconds: 1
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: bind_logic
   stages:
-  - id: enroll
+  - id: approach
     zone: arrival
-    purpose: Enroll solo or team, display rule and controls
+    purpose: Understand one instruction while approaching
     requires: []
     active_targets: []
-    completion: Start closes five-second join window; late arrivals spectate until
-      next run.
-  - id: predict_next
-    zone: predict
-    purpose: Shoot B after ABABA
+    completion: Enter play bay; no timer or manual Start.
+  - id: pair
+    zone: play_bay
+    purpose: A B A B A ? -> B
     requires:
-    - enroll
+    - approach
     active_targets:
-    - predict_0
-    - predict_1
-    - predict_2
-    completion: Lock inputs; B fills gap; complete eligible player learning round
-      0.
-    success_target: predict_1
-  - id: find_exception
-    zone: repair
-    purpose: Shoot fourth crate in A B A A A B
+    - answer_0
+    - answer_1
+    - answer_2
+    success_target: answer_1
+    completion: Fill gap immediately, confirm rule and light next progress indicator;
+      credit ordered round. Same place and inputs.
+  - id: gap
+    zone: play_bay
+    purpose: A B ? B A B -> A
     requires:
-    - predict_next
+    - pair
     active_targets:
-    - slot_1
-    - slot_2
-    - slot_3
-    - slot_4
-    - slot_5
-    - slot_6
-    completion: Lift slot 4 into repair cradle; activate replacement choices after
-      animation.
-    success_target: slot_4
-  - id: repair_exception
-    zone: repair
-    purpose: Shoot B replacement
+    - answer_0
+    - answer_1
+    - answer_2
+    success_target: answer_0
+    completion: Fill gap immediately, confirm rule and light next progress indicator;
+      credit ordered round. Same place and inputs.
+  - id: triple
+    zone: play_bay
+    purpose: A B C A B ? -> C
     requires:
-    - find_exception
+    - gap
     active_targets:
-    - replace_0
-    - replace_1
-    - replace_2
-    completion: Lower corrected crate, animate ABABAB verification; complete learning
-      round 1.
-    success_target: replace_1
-  - id: predict_motion
-    zone: motion
-    purpose: Shoot next stop after 1 2 3 4 3 2
+    - answer_0
+    - answer_1
+    - answer_2
+    success_target: answer_2
+    completion: Fill gap immediately, confirm rule and light next progress indicator;
+      credit ordered round. Same place and inputs.
+  - id: complete
+    zone: play_bay
+    purpose: Hold 3/3 badge result; Replay or Return
     requires:
-    - repair_exception
-    active_targets:
-    - stop_1
-    - stop_3
-    - stop_4
-    completion: Shuttle moves to 1, loads cargo; complete learning round 2 once.
-    success_target: stop_1
-  - id: dispatch_complete
-    zone: dispatch
-    purpose: Watch repaired cargo ship; recap and return
-    requires:
-    - predict_motion
+    - triple
     active_targets: []
-    completion: Guarded Pattern Badge, optional replay, always-available return; no
-      new currency.
+    completion: Badge once per round through existing progress; no dispatch walk or
+      wait.
   connections:
   - from: arrival
-    to: predict
+    to: play_bay
     mode: walk
     width: 3
     points:
-    - - 4.5
-      - 8
+    - - 6
+      - 4
       - 0
-    - - 15
-      - 8
+    - - 6
+      - 6
       - 0
-    gate: always
-  - from: predict
-    to: repair
-    mode: walk
-    width: 3
-    points:
-    - - 15
-      - 8
-      - 0
-    - - 38
-      - 8
-      - 0
-    gate: always
-  - from: repair
-    to: motion
-    mode: walk
-    width: 3
-    points:
-    - - 38
-      - 8
-      - 0
-    - - 62
-      - 8
-      - 0
-    gate: always
-  - from: motion
-    to: dispatch
-    mode: walk
-    width: 3
-    points:
-    - - 62
-      - 8
-      - 0
-    - - 80
-      - 8
+    - - 10
+      - 9
       - 0
     gate: always
   verify: Read back ordered target arrays, shared systems and required entry/exit

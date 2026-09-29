@@ -1,20 +1,17 @@
-# Fortnite asset palette
+# Revision 2 asset roles
 
-These exact static-mesh catalog candidates were discovered live. Registry presence is not proof of placeability or cook eligibility. Before implementation, inspect associated placeable props and actual mesh bounds/pivots; substitute an eligible Fortnite equivalent in the same envelope if necessary. Do not use restricted internal assets merely because their paths exist.
+Proposed solo simplification; v1 catalog and qualification history is preserved in history/cargo-circuit-v1/asset-palette.md. No new marketplace assets or imported art are planned.
 
-- `/WildEstate/Environment/Props/PalletJack/PalletJack_Conveyors_A/Meshes/SM_PalletJack_ConveyorLow_A.SM_PalletJack_ConveyorLow_A`
-- `/WildEstate/Environment/Props/Container/Container_WoodCrates_A/Meshes/SM_Container_WoodCrateMedium_A.SM_Container_WoodCrateMedium_A`
-- `/WildEstate/Environment/Props/PalletJack/PalletJack_IndustrialLight_A/Meshes/SM_PalletJack_IndustrialLightFixture_A.SM_PalletJack_IndustrialLightFixture_A`
-- `/WildEstate/Environment/Props/Industrial/Industrial_MetalShelving_A/Meshes/SM_Industrial_Shelving_B.SM_Industrial_Shelving_B`
-- `/Hermes/Props/Industrial/Industrial_ProcessingMachine_A/Meshes/SM_Industrial_ProcessingModule_A.SM_Industrial_ProcessingModule_A`
-- `/Hermes/Props/Industrial/Industrial_Signs_A/Meshes/SM_Industrial_SignTriangle_A.SM_Industrial_SignTriangle_A`
+| Visible element | Role and budget |
+|---|---|
+| Existing target rings, letters and symbols | Three stationary shootable choices; reuse data_target assemblies 0..2. |
+| Existing billboard | One persistent six-slot pattern/question display; verify shape glyphs or reuse existing symbol materials. |
+| Existing progress lights | Exactly three; duplicate with numeric 0/3..3/3 text. |
+| Existing buttons | Exactly Replay and Return; reuse original Replay and entry Return. |
+| Existing warm lamps | At most two around bay for readability. |
+| Existing native rail segments | Only boundary fall protection, never a divider across shots/walking. |
+| Existing canopy/supports | Keep only bay shelter and essential structural/shared elements. |
 
-Use the low conveyor for line bodies, medium wooden crates for cargo, industrial modules for the scanner housing, native practical lights and shelving for edge dressing. Native railings and coastal planters remain catalog-selection tasks. Fit conveyor runs within Y=13..21 and keep Y=6.5..9.5 clear. Decorations: six lamps, four shelving/crate clusters, two small planters, low machinery railings and entry/dispatch frames. At least 75% of visible non-device prop instances should be eligible Fortnite props, measured in AC-08. Keep cyan markings and warm lamps consistent across all four tiles. Native prop proportions should stay recognizable.
+Remove all 21 cargo_circuit_conveyor bodies. Remove carriers, six inspection crates, delivery cargo, shuttle and dispatch shutter; decorative crate stacks, planters and old stop/arrow signage; redundant boards/controls/target assemblies. All removals require exact actor/dependency reconciliation in UEFN. No manual content-file deletion and no requirement to fill spare floor space with props.
 
-No new imported art or marketplace download is required. Full transforms and exact mesh scale are measured during preflight, before each approved placement.
-
-## Qualified placed palette (2026-09-29)
-
-The original WildEstate candidates failed UEFN content validation and were removed. Exact native substitutes that passed a full Launch Session cook are the Creative Military Base metal crate (12 moving cargo props plus eight stacked props), `/Game/Building/ActorBlueprints/Prop/IND_ConveyorBelt_01` (21 static line bodies), Creative Asteria warehouse door (one dispatch shutter), Creative rusty industrial catwalk railing (13 low segments), Military Base warm light stand (six), and Artemis planter (two). Four pre-existing dock canopy roofs, eight edge supports, entrance treatment and markers were retained and repositioned as recorded in `evidence/final-sign-and-canopy-readback-2026-09-29.json`.
-
-There are 63 placed Fortnite non-device prop instances in those six roles. Counting the retained simple-shape canopy pieces conservatively as 18 additional visible non-device pieces gives 63/81 = 77.8% qualified Fortnite props. This is an instance tally, not a cooked visual acceptance; the final signs, motion readability and collision traces still need in-game review.
+Every remaining prominent object must teach the puzzle, accept an action, show progress, provide lighting, or protect/support the walkable dock. The original 75% native prop quota is retired because it encourages dressing volume without improving gameplay.
