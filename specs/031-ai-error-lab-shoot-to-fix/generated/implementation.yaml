@@ -1,0 +1,468 @@
+version: 1
+map_id: ai_error_lab_solo
+spec_digest: 55104f513b04a93875733984eae806f6c7ba51d50618bf024f30338fdc72b5cd
+patterns_digest: 8a4742b9b975339573390959480b33480edb39fd6f38a5d601066fd1b71e8ea8
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: ai_error_lab_solo
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -2200
+  - -7800
+  - 2400
+  size_cm:
+  - 400
+  - 3700
+  - 800
+  parameters:
+    width_m: 3
+    access: Always open; preserve first-floor walkway and neighboring routes
+  markers:
+  - id: arrival
+    kind: spawn
+    zone: arrival
+    label: Existing walkway arrival; no new spawn
+    position:
+    - 25
+    - 35
+    - 0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: rifle
+    kind: weapon
+    zone: arrival
+    label: Existing Pulse Rifle inventory; no new granter
+    position:
+    - 25
+    - 34
+    - 0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: play_bay
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -4600
+  - -7800
+  - 2400
+  size_cm:
+  - 2400
+  - 3700
+  - 800
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: firing_point
+    kind: checkpoint
+    zone: play_bay
+    label: Comfortable firing point; annotation only, no checkpoint device
+    position:
+    - 14
+    - 27
+    - 0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: left
+    kind: target
+    zone: play_bay
+    label: LEFT - one tile left
+    position:
+    - 11
+    - 21
+    - 1.5
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+    target_id: 0
+  - id: stop
+    kind: target
+    zone: play_bay
+    label: STOP - stay for this step
+    position:
+    - 14
+    - 21
+    - 1.5
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+    target_id: 1
+  - id: right
+    kind: target
+    zone: play_bay
+    label: RIGHT - one tile right
+    position:
+    - 17
+    - 21
+    - 1.5
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+    target_id: 2
+  - id: evidence
+    kind: knowledge
+    zone: play_bay
+    label: Plan + GOAL + BEFORE + AFTER board
+    position:
+    - 14
+    - 16
+    - 5.3
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: track_0
+    kind: knowledge
+    zone: play_bay
+    label: Tile 0; track and Pix example, not shootable
+    position:
+    - 10
+    - 18
+    - 3.0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: track_1
+    kind: knowledge
+    zone: play_bay
+    label: Tile 1
+    position:
+    - 12
+    - 18
+    - 3.0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: track_2
+    kind: knowledge
+    zone: play_bay
+    label: Tile 2
+    position:
+    - 14
+    - 18
+    - 3.0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: track_3
+    kind: knowledge
+    zone: play_bay
+    label: Tile 3; initial round-1 goal
+    position:
+    - 16
+    - 18
+    - 3.0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: track_4
+    kind: knowledge
+    zone: play_bay
+    label: Tile 4
+    position:
+    - 18
+    - 18
+    - 3.0
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: badge_result
+    kind: reward
+    zone: play_bay
+    label: Three repairs; retained AI Detective Badge
+    position:
+    - 20
+    - 16
+    - 6.3
+    source: Offset review annotation for badge/result on the same evidence board;
+      not an extra reward actor.
+  - id: replay
+    kind: checkpoint
+    zone: play_bay
+    label: Replay control after finish; no checkpoint device
+    position:
+    - 11
+    - 28
+    - 0.8
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  - id: return
+    kind: exit
+    zone: play_bay
+    label: Return at any time; retained hub destination
+    position:
+    - 17
+    - 28
+    - 0.8
+    source: Proposed design anchor on measured first-floor bounds; plan.md. Marker
+      is an annotation, not an existing actor transform.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: controller
+    class: fn_shoreline_island_debug_station
+    count: 1
+    source: Refactor existing class into one solo controller; retire four old instances
+    settings:
+      stage_starts:
+      - 0
+      - 2
+      - 1
+      stage_goals:
+      - 3
+      - 1
+      - 2
+      success_ids:
+      - 2
+      - 0
+      - 1
+      editable_slots_zero_based:
+      - 1
+      - 0
+      - 1
+      stage_commands:
+      - RIGHT LEFT RIGHT
+      - RIGHT
+      - RIGHT RIGHT
+      endpoint_verified: true
+      automatic_entry: true
+      solo_only: true
+      quiet_rearm_seconds: 0.5
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: answers
+    class: fn_shoreline_island_data_target
+    count: 3
+    source: Reuse shared damage-only data_target assemblies
+    settings:
+      target_ids:
+      - 0
+      - 1
+      - 2
+      labels:
+      - LEFT
+      - STOP
+      - RIGHT
+      stationary_y_facing: true
+      stationary_positive_y: false
+      hit_face_m: 1.5
+      damage_only: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: blaster
+    class: fn_shoreline_island_data_blaster
+    count: 1
+    source: Retain existing shared Data Blaster loadout; no new grant actor
+    settings:
+      weapon: Existing Pulse Rifle
+      preserve_spawn_bindings: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: entry
+    class: mutator_zone_device
+    count: 1
+    source: Use eligible existing entry-volume device at proposed bay
+    settings:
+      solo_entry: true
+      weapons_allowed: true
+      poll_seconds: 0.25
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: board
+    class: billboard_device
+    count: 1
+    source: Reuse debug_station_1_board or result_board after exact underlying ref
+      resolution
+    settings:
+      max_short_lines: 5
+      persistent_goal_before_after: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hud
+    class: hud_message_device
+    count: 1
+    source: Reuse debug_station_1_feedback
+    settings:
+      automatic_hints: true
+      long_feedback_copy: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controls
+    class: button_device
+    count: 2
+    source: Reuse debug_station_1_replay_button and debug_station_1_return_button
+    settings:
+      labels:
+      - Replay
+      - Return
+      replay_after_finish: true
+      return_always: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: fn_shoreline_island_debug_progress
+    count: 1
+    source: Retain debug_station_1_progress and its round/tracker identity
+    settings:
+      ordered_completion_indices:
+      - 0
+      - 1
+      - 2
+      preserve_badge_on_replay: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: tracker
+    class: tracker_device
+    count: 1
+    source: Retain debug_station_1_badge_tracker
+    settings:
+      preserve_journal_and_agent_bindings: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hub
+    class: teleporter_device
+    count: 1
+    source: Retain existing shared hub_destination; resolve underlying wrapper, never
+      delete
+    settings:
+      return_always: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: lights
+    class: customizable_light_device
+    count: 3
+    source: Reuse eligible progress lights or place three eligible instances
+    settings:
+      one_per_verified_repair: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: pix
+    class: creative_prop
+    count: 1
+    source: Reuse debug_station_1_marker as eligible Pix display; project primitives
+      only
+    settings:
+      max_width_m: 0.9
+      track_step_m: 2
+      step_seconds: 0.5
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: goal
+    class: creative_prop
+    count: 1
+    source: Existing eligible project primitive marker labelled GOAL
+    settings:
+      moves_between_rounds_only: true
+      no_hit_surface: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: approach
+    zone: arrival
+    purpose: See short instruction and walk into bay with existing rifle.
+    requires: []
+    active_targets: []
+    completion: Entry starts first faulty demonstration, no manual Start.
+  - id: wrong_way
+    zone: play_bay
+    purpose: Start 0, goal 3; RIGHT [LEFT] RIGHT ends 1. Replace slot with RIGHT and
+      verify 3.
+    requires:
+    - approach
+    active_targets:
+    - left
+    - stop
+    - right
+    success_target: right
+    completion: Run edited commands from start; actual endpoint 3 matches goal; credit
+      index 0.
+  - id: dock_return
+    zone: play_bay
+    purpose: Start 2, goal 1; [RIGHT] ends 3. Replace with LEFT and verify 1.
+    requires:
+    - wrong_way
+    active_targets:
+    - left
+    - stop
+    - right
+    success_target: left
+    completion: Run edited command from start; actual endpoint 1 matches goal; credit
+      index 1.
+  - id: overshoot
+    zone: play_bay
+    purpose: Start 1, goal 2; RIGHT [RIGHT] ends 3. Replace slot with STOP and verify
+      2.
+    requires:
+    - dock_return
+    active_targets:
+    - left
+    - stop
+    - right
+    success_target: stop
+    completion: STOP executes zero-distance step; endpoint 2 matches goal; credit
+      index 2.
+  - id: finish
+    zone: play_bay
+    purpose: Hold 3/3, AI Detective Badge and debugging recap; Replay or Return.
+    requires:
+    - overshoot
+    active_targets: []
+    completion: Existing progress guard awards once; replay resets physical rounds,
+      Return always available.
+  connections:
+  - from: arrival
+    to: play_bay
+    mode: walk
+    width: 3
+    points:
+    - - 25
+      - 35
+      - 0
+    - - 22
+      - 35
+      - 0
+    - - 14
+      - 27
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

@@ -1,6 +1,8 @@
-# Revision 2 tasks - solo simplification
+# Confidence Core tasks - solo simplification and player-review corrections
 
 Solo design approved and editor implementation underway. Prior revision is preserved under history/revision-1/. Historical editor inventory was rechecked against the live scene before edits. Cook and local validation passed; solo gameplay acceptance remains open.
+
+Revision 3 responds to the player's cooked screenshot of B COOL covering the main board. The user approved its wallward preview with `go ahead`; the saved relocation and full cook are recorded in `evidence/revision-3-implementation-2026-09-30.md`. Cooked player-eye acceptance remains open.
 
 - [x] P-01 (S-01..09): review previous spec/plan/map/palette, inventory and current station/progress APIs; compare against user-playtested 028 simplification. Evidence: plan.md and review.md.
 - [x] P-02 (S-01..09): synchronize revision-2 docs/map, generate and inspect preview/implementation bundle, resolve offline validation findings and record evidence.
@@ -14,6 +16,12 @@ Solo design approved and editor implementation underway. Prior revision is prese
 - [ ] T-07 (S-03/08/09): first-time solo usability/learning check without coaching; record timings, confusion, explanation and enjoyment (AC-08). Do not infer understanding from correct shots alone.
 - [ ] T-08 (S-09): record final scene/playtest evidence and deviations; end active game and verify non-running state, leaving UEFN open (AC-09).
 - [ ] T-09 (S-04/08): verify the screenshot-reported display fixes in cooked solo play from the firing lane and behind the circles; check overlay absence, label contrast/facing, board fit, and stronger hit/finish cues (AC-10).
+- [x] P-04 (S-01/02/08): review the player screenshot and live transforms, synchronize revision-3 spec/plan/map, run offline check, inspect generated top-down preview plus sightline, and present the concrete revision for explicit approval. Evidence: `evidence/player-review-layout-2026-09-30.png`, `review.md`, `generated/` bundle and user `go ahead` response in `approval.yaml`.
+- [x] T-10 (S-01/02/08): after revision-3 approval and `plan --ready`, move the three complete target assemblies, board, core/support/effects, lights and controls wallward; read back transforms/bindings/collision and save. Evidence: `evidence/revision-3-implementation-2026-09-30.md` and the 23 saved transform readbacks. Cooked collision/hit acceptance remains T-11.
+- [ ] T-11 (S-01/02/04/08/09): build, validate and cook the relocated bay, then playtest from the yellow strip and from behind the circles for readable board/labels, unobstructed hits, safe routes and feedback. Record screenshots and AC-10 result; stop the game afterward.
+- [x] P-05 (S-06/08): inspect the player's new cooked screenshot, the rail/switch mesh dimensions and completed-state Verse flow; specify the two mounted switch positions and target-hide timing, review the generated revision-4 preview, and record the user's direct request as approval evidence. Evidence: `evidence/player-review-controls-and-finish-2026-09-30.png`, `plan.md`, `review.md`, `evidence/preview-review-r4.png`.
+- [x] T-12 (S-06/08): after revision-4 `plan --ready`, seat the two existing buttons on the retained rail and add generation-guarded target deactivation after final feedback; build Verse, read back transforms/bindings and save. Evidence: `evidence/revision-4-controls-and-finish-2026-09-30.md`; cooked AC-11 behavior remains T-13.
+- [ ] T-13 (S-05/06/08/09): validate/cook and playtest both rail-mounted switches, completed target disappearance, Replay/new-run reappearance, and Return access in solo play; record actual results and stop the game (AC-11). Partial evidence: `evidence/revision-4-controls-and-finish-2026-09-30.md` records player-confirmed finish/Replay/usable controls and verified shutdown; separate cooked visual seating and leave/reentry remain open.
 
 Only planning checkboxes can close from offline evidence. Keep individual untested gameplay scenarios visible. No extra testers, motion controls or decorative targets should be added merely to satisfy the superseded draft.
 

@@ -339,4 +339,11 @@ fn_shoreline_island_energy_station := class(creative_device):
         cooling_effect.End()
         finish_effect.Begin()
         replay_button.Enable()
+        spawn { hide_finished_targets(generation) }
         set busy = false
+
+    hide_finished_targets(expected_generation:int)<suspends>:void =
+        Sleep(0.85)
+        if (generation = expected_generation and phase = 4):
+            for (choice : targets):
+                choice.deactivate()

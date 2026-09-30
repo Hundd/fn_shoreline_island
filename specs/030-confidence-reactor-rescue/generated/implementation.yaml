@@ -1,6 +1,6 @@
 version: 1
 map_id: confidence_solo
-spec_digest: e1f281891f4fb2e129c0207f55415f1b21fb9aa4e067931b0c4b0f292b3c4d7e
+spec_digest: f803aa79bf44bf801009490168520a34fab1e274814127456ded8a89bfed9356
 patterns_digest: 8a4742b9b975339573390959480b33480edb39fd6f38a5d601066fd1b71e8ea8
 status: draft_requires_explicit_human_approval
 executable: false
@@ -70,30 +70,30 @@ implementation:
     label: Stand here for every decision; annotation only
     position:
     - 100
-    - 26
+    - 20
     - 0
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    source: Proposed revision-3 yellow-strip position based on player screenshot and
+      live first-floor bounds; verify player eye view after cooked placement.
   - id: board
     kind: knowledge
     zone: play_bay
     label: Claim / readings / freshness / useful action
     position:
     - 100
-    - 18
-    - 3.8
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    - 4
+    - 7.2
+    source: Proposed revision-3 board center 4 m from the back-wall plane, enlarged
+      2x; live board was at world (-3000,-2300,2700) before relocation.
   - id: check
     kind: target
     zone: play_bay
     label: A CHECK - fixed
     position:
     - 97
-    - 20
+    - 12
     - 1.8
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    source: Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was
+      at world Y=-2100.
     target_id: 0
   - id: cool
     kind: target
@@ -101,10 +101,10 @@ implementation:
     label: B COOL - fixed
     position:
     - 100
-    - 20
+    - 12
     - 1.8
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    source: Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was
+      at world Y=-2100.
     target_id: 1
   - id: release
     kind: target
@@ -112,10 +112,10 @@ implementation:
     label: C RELEASE - fixed
     position:
     - 103
-    - 20
+    - 12
     - 1.8
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    source: Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was
+      at world Y=-2100.
     target_id: 2
   - id: display
     kind: knowledge
@@ -123,40 +123,40 @@ implementation:
     label: Static core; not a target
     position:
     - 105.5
-    - 19
+    - 11
     - 1.6
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    source: Proposed revision-3 core beside the wallward action row; relocate its
+      support and finish FX together.
   - id: replay
     kind: checkpoint
     zone: play_bay
     label: Replay after finish; ordinary button
     position:
-    - 106
-    - 24
-    - 1
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    - 103.8
+    - 13.5
+    - 1.36
+    source: Revision-4 rail mount at world (-2620,-2750,2536); measured vault1_control_mount
+      top Z2513 and switch mesh lower local extent 22.98 cm. User screenshot/request.
   - id: return
     kind: exit
     zone: play_bay
     label: Return any time; existing hub destination
     position:
-    - 106
-    - 28
-    - 1
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    - 106.6
+    - 13.5
+    - 1.36
+    source: Revision-4 rail mount at world (-2340,-2750,2536); 2.8 m from Replay,
+      accessible beside the firing lane. User screenshot/request.
   - id: badge
     kind: reward
     zone: play_bay
     label: Existing Confidence Badge
     position:
-    - 98.5
-    - 18
-    - 5
-    source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-      Requires live reconciliation; not an existing actor transform.
+    - 105
+    - 4.5
+    - 6
+    source: Proposed revision-3 first progress-light annotation; vertical light stack
+      sits to the right of the enlarged wallward board rather than covering its text.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_device
   device:
@@ -233,8 +233,8 @@ implementation:
       persistent_question: true
       result_and_hint: true
       max_size_m:
-      - 10
-      - 1.6
+      - 7.5
+      - 3.3
       object_name_or_readings: true
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
@@ -270,6 +270,8 @@ implementation:
       roles:
       - Replay after completion
       - Return any time
+      mount: existing vault1_control_mount rail; switch mesh bottom seated at top
+        Z2513 cm
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -419,8 +421,9 @@ implementation:
     - cool
     - release
     success_target: release
-    completion: Release only with fresh readings; section 2, guarded badge. Feedback
-      and quiet-hit guard before next decision.
+    completion: Release only with fresh readings; section 2, guarded badge. Keep final
+      evidence and controls; hide target rings and labels after the 0.85 s hit cue
+      until Replay/new run.
   connections:
   - from: arrival
     to: play_bay
@@ -431,7 +434,7 @@ implementation:
       - 26
       - 0
     - - 100
-      - 26
+      - 20
       - 0
     gate: always
   verify: Read back ordered target arrays, shared systems and required entry/exit

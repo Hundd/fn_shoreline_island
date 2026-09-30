@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1210 779" role="img" aria-label="Confidence Core - Check Before You Trust (revision 2) blockout">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1210 779" role="img" aria-label="Confidence Core - Check Before You Trust (revision 4 rail controls and finish) blockout">
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
 <rect width="1210" height="779" fill="#f4f7fa"/>
-<text x="45" y="25" font-size="19">Confidence Core - Check Before You Trust (revision 2) — DRAFT / review required</text>
+<text x="45" y="25" font-size="19">Confidence Core - Check Before You Trust (revision 4 rail controls and finish) — DRAFT / review required</text>
 <text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
 <rect x="885" y="65" width="240" height="350" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
 <text class="zone" x="892" y="84">All decisions here</text>
@@ -10,29 +10,29 @@
 <rect x="1125" y="65" width="40" height="350" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
 <text class="zone" x="1132" y="84">Walk in</text>
 <text font-size="11" x="1132" y="100">4 × 35m</text>
-<polyline points="1135,325 1045,325" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → play_bay / always</title></polyline>
+<polyline points="1135,325 1045,265" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → play_bay / always</title></polyline>
 <g><title>Existing hub approach; no new spawn; XYZ [109, 26, 0]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1135" cy="325" r="8" fill="#42a86b" stroke="white"/>
 <text x="1135" y="328" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
 <g><title>Existing rifle in inventory; no new granter; XYZ [110, 23, 1]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1145" cy="295" r="8" fill="#b377dc" stroke="white"/>
 <text x="1145" y="298" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
-<g><title>Stand here for every decision; annotation only; XYZ [100, 26, 0]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1045" cy="325" r="8" fill="#db8b29" stroke="white"/>
-<text x="1045" y="328" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
-<g><title>Claim / readings / freshness / useful action; XYZ [100, 18, 3.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1045" cy="245" r="8" fill="#329bd0" stroke="white"/>
-<text x="1045" y="248" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
-<g><title>A CHECK - fixed; XYZ [97, 20, 1.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1015" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="1015" y="268" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
-<g><title>B COOL - fixed; XYZ [100, 20, 1.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1045" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="1045" y="268" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
-<g><title>C RELEASE - fixed; XYZ [103, 20, 1.8]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1075" cy="265" r="8" fill="#e25757" stroke="white"/>
-<text x="1075" y="268" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
-<g><title>Static core; not a target; XYZ [105.5, 19, 1.6]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1100.0" cy="255" r="8" fill="#329bd0" stroke="white"/>
-<text x="1100.0" y="258" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
-<g><title>Replay after finish; ordinary button; XYZ [106, 24, 1]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1105" cy="305" r="8" fill="#db8b29" stroke="white"/>
-<text x="1105" y="308" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
-<g><title>Return any time; existing hub destination; XYZ [106, 28, 1]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1105" cy="345" r="8" fill="#526476" stroke="white"/>
-<text x="1105" y="348" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
-<g><title>Existing Confidence Badge; XYZ [98.5, 18, 5]; Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json. Requires live reconciliation; not an existing actor transform.</title><circle cx="1030.0" cy="245" r="8" fill="#c79c17" stroke="white"/>
-<text x="1030.0" y="248" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>Stand here for every decision; annotation only; XYZ [100, 20, 0]; Proposed revision-3 yellow-strip position based on player screenshot and live first-floor bounds; verify player eye view after cooked placement.</title><circle cx="1045" cy="265" r="8" fill="#db8b29" stroke="white"/>
+<text x="1045" y="268" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>Claim / readings / freshness / useful action; XYZ [100, 4, 7.2]; Proposed revision-3 board center 4 m from the back-wall plane, enlarged 2x; live board was at world (-3000,-2300,2700) before relocation.</title><circle cx="1045" cy="105" r="8" fill="#329bd0" stroke="white"/>
+<text x="1045" y="108" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>A CHECK - fixed; XYZ [97, 12, 1.8]; Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was at world Y=-2100.</title><circle cx="1015" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="1015" y="188" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>B COOL - fixed; XYZ [100, 12, 1.8]; Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was at world Y=-2100.</title><circle cx="1045" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="1045" y="188" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>C RELEASE - fixed; XYZ [103, 12, 1.8]; Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was at world Y=-2100.</title><circle cx="1075" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="1075" y="188" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>Static core; not a target; XYZ [105.5, 11, 1.6]; Proposed revision-3 core beside the wallward action row; relocate its support and finish FX together.</title><circle cx="1100.0" cy="175" r="8" fill="#329bd0" stroke="white"/>
+<text x="1100.0" y="178" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>Replay after finish; ordinary button; XYZ [103.8, 13.5, 1.36]; Revision-4 rail mount at world (-2620,-2750,2536); measured vault1_control_mount top Z2513 and switch mesh lower local extent 22.98 cm. User screenshot/request.</title><circle cx="1083.0" cy="200.0" r="8" fill="#db8b29" stroke="white"/>
+<text x="1083.0" y="203.0" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>Return any time; existing hub destination; XYZ [106.6, 13.5, 1.36]; Revision-4 rail mount at world (-2340,-2750,2536); 2.8 m from Replay, accessible beside the firing lane. User screenshot/request.</title><circle cx="1111.0" cy="200.0" r="8" fill="#526476" stroke="white"/>
+<text x="1111.0" y="203.0" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>Existing Confidence Badge; XYZ [105, 4.5, 6]; Proposed revision-3 first progress-light annotation; vertical light stack sits to the right of the enlarged wallward board rather than covering its text.</title><circle cx="1095" cy="110.0" r="8" fill="#c79c17" stroke="white"/>
+<text x="1095" y="113.0" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
 <path d="M45,450 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="455" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
 <text x="45" y="493" font-size="16" font-weight="bold">Map legend</text>
 <text x="45" y="515" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>

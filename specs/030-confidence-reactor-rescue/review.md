@@ -1,4 +1,36 @@
-# Blockout review - revision 2
+# Blockout review - revision 2 history, revision 3 placement, revision 4 correction
+
+## Revision 4: player-requested rail controls and completed state
+
+The player supplied `evidence/player-review-controls-and-finish-2026-09-30.png` from cooked solo play and said the wallward layout looks much better. The remaining requests were explicit: put the two floating controls on the rail and hide the circles after the game ends until restart. The existing first-bay rail is measured, as are the two existing switch meshes. The revised map moves only Replay/Return to local (103.8,13.5,1.36) and (106.6,13.5,1.36), with their lower mesh edges resting at the rail top; no target, board, route, new device or shared structural component changes. The controller will deactivate targets 0.85 seconds after final release, preserving the hit cue and result board, and its existing reset/activate path will restore them on Replay or a new run.
+
+`python tools/map_workflow.py check specs/030-confidence-reactor-rescue/map.yaml` returned zero design execution blockers and generated review digest `f458b15cd8453e5f23215a4f541f89815c05dde471a5c506b56767e76bba9fa2`. Inspected the rendered `evidence/preview-review-r4.png` and `generated/implementation.yaml`: both controls remain within the first bay beside the target row, outside the firing position and 2.8 m apart. The preview is top-down and cannot show switch seating or completed-state visibility; cooked verification is required. This is a localized adjustment to the user's identified controls and final-state display, directly authorized by their screenshot message, not an unrequested new layout or mechanic.
+
+The user request is recorded as the revision-4 approval evidence with the current digest. Run `plan --ready` before scene or Verse mutation. Verify switch mount height/interaction reach and finished/replayed visibility in a cooked solo session. The player's screenshot is positive evidence for improved wallward layout, but it does not prove those new corrections.
+
+---
+
+## Revision 3: yellow-strip firing layout, approved and placed
+
+The player's new cooked screenshot (`evidence/player-review-layout-2026-09-30.png`) demonstrates that the B COOL label intersects the evidence-board text. Live read-only measurements put the current main board at world (-3000,-2300,2700) and the center label at (-3000,-2080,2610), only 2.2 m in front of it. The screenshot also shows a beige/yellow floor strip behind the player-facing row. Revision 3 moves that row deeper into the first-floor bay so the player can stand on the strip, with the evidence board raised behind the targets and doubled in size. The solo lesson, fixed target order, and badge behavior stay unchanged.
+
+`python tools/map_workflow.py check specs/030-confidence-reactor-rescue/map.yaml` generated the [top-down preview](generated/preview.html) and [implementation plan](generated/implementation.yaml) with zero execution blockers and review digest `0d0f9e3e88768473c08571a9d8b3d7baa3144d09db27a325a8650b12a136fc56`. The actual generated SVG was rasterized to `evidence/preview-review-r3.png` and inspected: it shows the 3 m spaced row behind an 8 m shot line, board behind the row, core to the right, and both controls to the side. The full 112 m site makes the active bay small in the preview; the legend and map markers give exact positions. The preview is an overhead blockout and does not prove text legibility, collision, or the wall's visible material extent. A local browser was unavailable; SVG rasterization succeeded despite optional font-cache warnings.
+
+| Requirements | Review finding and verification |
+|---|---|
+| S-01/02 | New firing point local (100,20,0) is approximately 11 m from the hub annotation and 8 m from the row. The route remains open and 3 m wide. The yellow-strip placement is supported by the user screenshot but needs a cooked player-eye check. |
+| S-02/08 | Three 1.5 m target faces remain fixed at X=97/100/103, local Y=12. Complete target assemblies, not just ring props, must move together. Label-facing logic remains dynamic for either side of the circles. |
+| S-08 | Board content center local (100,4,7.2), with proposed pivot Z=2960 cm and 2x scale, sits 8 m behind the row and roughly 40 cm above the label's projected top from an estimated standing eye. This is geometry-based clearance only; crouched and standing cooked views must confirm all lines. |
+| S-07/08 | Core/support/finish FX, three lights, Replay and Return move toward the wall with their bindings. No extra targets, control, floor or enclosure is proposed. Confirm wall and floor collision before saving. |
+| S-09 | AC-10 and other open solo scenarios remain unpassed until a cooked run records readable evidence, target hits, routes, effects and reset/badge behavior. |
+
+The user approved the revision-3 preview with `go ahead`. `approval.yaml` now references this review digest, `plan --ready` passed, and the existing actors were moved and saved. See `evidence/revision-3-implementation-2026-09-30.md`. The cooked player-eye check remains open; the editor viewport is not gameplay acceptance.
+
+Read-only live editor preflight is recorded in `evidence/revision-3-relocation-preflight.json`: 23 exact actor paths and current full transforms, with separate proposed transforms. It includes all 12 target-assembly actors, the board, core/support, three effects, three lights and both controls. The proposed transforms are review data, not applied editor state. Re-read identities and bindings before any serialized mutation.
+
+Verse runtime placement was also inspected. Each `data_target` captures its ring and hit-surface homes from the placed actors, then positions the ring and label from the hit surface on each active pulse. Confidence's `stationary_positive_y` logic puts the label 20 cm toward the player's side, rotating it when the player walks behind the row. Hit effects teleport to the struck surface. Thus the proposed move must include each placed hit surface and ring; moving only the visible circles or labels would be undone in play. The current controller's bay bounds already include the wallward layout, so this revision does not require a new Verse behavior or bounds edit. The label's runtime Z offset is -12 cm from the hit surface, which gives at least as much planned board clearance as the conservative editor-label geometry above; cooked verification is still required.
+
+---
 
 Disposition: documentation draft ready for human design review, not approved or implemented. Previous revision-1 review is archived. User requested updated docs; no gameplay changes were made.
 

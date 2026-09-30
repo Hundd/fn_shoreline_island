@@ -1,4 +1,22 @@
-# Plan - Confidence Core: Check Before You Trust, revision 2
+# Plan - Confidence Core: Check Before You Trust, revision 4 player correction
+
+## Rail-mounted controls and completed-state cleanup
+
+The player's cooked screenshot `evidence/player-review-controls-and-finish-2026-09-30.png` confirms the wallward row is clearer and shows Replay/Return suspended beside the walkway. The user explicitly requested both controls on the retained rail and the circles hidden after the run until restart. This is a localized presentation correction within the same solo bay; it does not change target locations, evidence order, progress, Return route, or shared rail ownership.
+
+Live readback: `campus_vault_station_identity.vault1_control_mount` is centered world (-3110,-2750,2495) cm and spans X=-4040..-2180, Y about -2772.5..-2727.5, with top Z≈2513. The Creative Military Switch mesh bound to each existing button has local Z bounds -22.98..22.96 cm. Seat the pivot at Z=2536 cm so the switch bottom meets the rail top. Set Replay to world (-2620,-2750,2536), Return to (-2340,-2750,2536), both yaw180 and scale1. This spaces them 2.8 m apart near the rail's right end, keeps their meshes over the mount, and preserves the open yellow-floor firing position. Do not alter or duplicate the rail, switch bindings, hub teleporter, or target assemblies. Inspect the editor readback and cooked appearance; a small height correction is allowed only to seat the mesh on the measured surface, with evidence recorded.
+
+On final RELEASE, retain the target hit burst and core finish effect, then after 0.85 seconds hide all three target rings and labels and park their hit surfaces. Guard the delayed cleanup by the current run generation and completed phase so an immediate Replay cannot hide the new run's targets. Existing `begin_solo` already resets and activates all three targets on Replay/reentry. Keep final board, progress lights, badge, Return and Replay available while the targets are hidden. No new device or gameplay branch is needed.
+
+## Player-reported layout correction approved and placed
+
+The 2026-09-30 cooked screenshot in `evidence/player-review-layout-2026-09-30.png` shows the B COOL label crossing the lower main-board copy. The user wants the entire activity closer to the rear wall and playable while standing on the beige/yellow floor. Revision 3 moves existing scene groups only; the approved solo four-action lesson, device meanings, and progress contract stay as implemented. The user approved the revision-3 preview with `go ahead`; `approval.yaml` records the current digest, and `plan --ready` passed before editor relocation. See `evidence/revision-3-implementation-2026-09-30.md` for saved scene readbacks and cooked validation. Actual player-eye acceptance remains open.
+
+Live read-only measurements: the back wall is centered at world Y=-4200 cm with an approximately -4110 cm front surface; first-floor bounds are X=-4600..-1800, Y=-4100..-600. The current row centers are world Y=-2100; the board is world (-3000,-2300,2700), approximately 3.57 m wide by 1.62 m high; target labels are centered at Y=-2080, Z=2610. These transforms explain the observed overlap. The firing-strip location is inferred from the player's screenshot and floor view; its exact material boundary needs a cooked eye-level check.
+
+Proposed world coordinates are obtained from the established origin (-13000,-4100,2400) cm. Shift target assemblies 8 m toward the wall to Y=-2900 (local Y=12), retaining X spacing, ring/face heights, and the 1.5 m faces. Target labels remain 20 cm forward of their rings and dynamically face the solo player on either side. Move the core, support, cooling and finish effects to approximately Y=-3000. Move the main board behind them to world (-3000,-3700,2960), local (100,4,5.6) for the actor pivot; its content-center marker is local (100,4,7.2). Double the board scale to 7.14 m wide by 3.23 m high, with lower edge near Z=2960 and top near Z=3283. Move three progress lights into a vertical stack beside the board at X=-2500, Y=-3650, Z=3000/3100/3200, so they cannot cover a board line. Move Replay to world (-2400,-2500,2500) and Return to (-2400,-2100,2500). These are proposed transforms, subject to editor readback and collision checks; no new floor, targets, or barrier is proposed.
+
+The new firing point is local (100,20,0), world (-3000,-2100,2400), on the yellow strip and 8 m in front of the fixed row. The board is 16 m away. Enlarging it 2x retains roughly its old angular size. From an estimated player eye Z=2550, a line to the board's lower edge reaches about Z=2755 at the label plane Y=-2880, roughly 40 cm above the current label top. This is only a planning clearance estimate; use cooked views at standing/crouched height and from behind the circles to confirm every line, then adjust within the reviewed wallward arrangement if needed. Any substantive position/scale departure returns to planning.
 
 ## Inspected basis and floor safety
 
@@ -6,7 +24,7 @@ Historical read-only `evidence/editor-inventory.json` records energy_0_floor, en
 
 Use existing confirmed origin (-13000,-4100,2400), site 112 x 35 x 9 m. The old energy_station adds/subtracts percentages and uses claim/start/repeat controls with fixed fixtures. The manager exposes three completion flags and a one-time Confidence Badge. Source APIs were inspected. Neither old controller implements this evidence state machine through settings. Revision 1 proposed twelve assemblies, twenty buttons, a moving valve and about 97 m of walking. Revision 2 needs three fixed targets, two ordinary buttons and 9 m approach. 028's successful user play supports the direction, not a claim that this new lesson has been tested.
 
-## Concrete layout
+## Historical revision-2 layout (already built; superseded by revision-3 proposal above)
 
 Local metres; world_cm = origin_cm + 100 * local_m.
 
@@ -41,7 +59,7 @@ Preserve three valid energy floors, debug-labeled fourth support, shared promena
 
 ## Implementation discipline and reuse
 
-The user approved this solo-only revision on 2026-09-30. `approval.yaml` records the current review digest and `plan --ready` passed before editor mutation. The intended scene and Verse work is implemented; actual solo gameplay acceptance remains open. The approval excludes multiplayer and changes to the reviewed design.
+The user approved the solo-only revision 2 on 2026-09-30. `approval.yaml` records that historical review digest and `plan --ready` passed before revision-2 editor mutation. The intended scene and Verse work was implemented; actual solo gameplay acceptance remains open. That approval excludes multiplayer and does not cover revision-3 relocation.
 
 Reuse `corridor` and `shooting_gallery`, the shared Data Blaster, attributed `data_target` hit surfaces, and the solo bounds/generation/quiet-hit approach now used by `pattern_line`. This is a reusable basis, not an existing drop-in adapter: the old station's button/ownership controller cannot implement these semantics through YAML settings alone. Refactor one existing mission controller for this scoped sequence after approval; disable/remove the other three placed controllers and all old runtime subscriptions. Do not duplicate the complete mission framework or alter other missions' target behavior. Reuse `stationary_y_facing` only after verifying forward offset/sign for this bay; the Confidence bay faces the opposite Y direction from 028.
 

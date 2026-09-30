@@ -1,0 +1,116 @@
+[
+  {
+    "round": 1,
+    "start": 0,
+    "goal": 3,
+    "initial_endpoint": 1,
+    "corrections": [
+      {
+        "correction": "LEFT",
+        "path": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "endpoint": 1,
+        "matches_goal": false
+      },
+      {
+        "correction": "STOP",
+        "path": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "endpoint": 2,
+        "matches_goal": false
+      },
+      {
+        "correction": "RIGHT",
+        "path": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "endpoint": 3,
+        "matches_goal": true
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "start": 2,
+    "goal": 1,
+    "initial_endpoint": 3,
+    "corrections": [
+      {
+        "correction": "LEFT",
+        "path": [
+          2,
+          1
+        ],
+        "endpoint": 1,
+        "matches_goal": true
+      },
+      {
+        "correction": "STOP",
+        "path": [
+          2,
+          2
+        ],
+        "endpoint": 2,
+        "matches_goal": false
+      },
+      {
+        "correction": "RIGHT",
+        "path": [
+          2,
+          3
+        ],
+        "endpoint": 3,
+        "matches_goal": false
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "start": 1,
+    "goal": 2,
+    "initial_endpoint": 3,
+    "corrections": [
+      {
+        "correction": "LEFT",
+        "path": [
+          1,
+          2,
+          1
+        ],
+        "endpoint": 1,
+        "matches_goal": false
+      },
+      {
+        "correction": "STOP",
+        "path": [
+          1,
+          2,
+          2
+        ],
+        "endpoint": 2,
+        "matches_goal": true
+      },
+      {
+        "correction": "RIGHT",
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "endpoint": 3,
+        "matches_goal": false
+      }
+    ]
+  }
+]

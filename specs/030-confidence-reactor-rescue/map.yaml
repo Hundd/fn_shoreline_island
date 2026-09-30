@@ -1,7 +1,7 @@
 version: 1
 map:
   id: confidence_solo
-  title: Confidence Core - Check Before You Trust (revision 2)
+  title: Confidence Core - Check Before You Trust (revision 4 rail controls and finish)
   theme: clear_coastal_learning_bay
   units: meters
   origin_cm:
@@ -74,7 +74,8 @@ zones:
   - audio
   - display
   overlap_with: []
-  completion: Complete all authored decisions and award existing badge once.
+  completion: Complete all authored decisions and award existing badge once; after the final
+    hit cue, hide all three action rings and labels until Replay or a new run.
   reset: Cancel generation and clear physical run/readings on departure, death/respawn, disconnect
     or round reset. Reentry/replay starts first decision; earned badge retained until manager round
     reset.
@@ -88,7 +89,7 @@ connections:
     - 26
     - 0
   - - 100
-    - 26
+    - 20
     - 0
   gate: always
 markers:
@@ -118,30 +119,29 @@ markers:
   label: Stand here for every decision; annotation only
   position:
   - 100
-  - 26
+  - 20
   - 0
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  source: Proposed revision-3 yellow-strip position based on player screenshot and live first-floor bounds;
+    verify player eye view after cooked placement.
 - id: board
   kind: knowledge
   zone: play_bay
   label: Claim / readings / freshness / useful action
   position:
   - 100
-  - 18
-  - 3.8
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  - 4
+  - 7.2
+  source: Proposed revision-3 board center 4 m from the back-wall plane, enlarged 2x;
+    live board was at world (-3000,-2300,2700) before relocation.
 - id: check
   kind: target
   zone: play_bay
   label: A CHECK - fixed
   position:
   - 97
-  - 20
+  - 12
   - 1.8
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  source: Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was at world Y=-2100.
   target_id: 0
 - id: cool
   kind: target
@@ -149,10 +149,9 @@ markers:
   label: B COOL - fixed
   position:
   - 100
-  - 20
+  - 12
   - 1.8
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  source: Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was at world Y=-2100.
   target_id: 1
 - id: release
   kind: target
@@ -160,10 +159,9 @@ markers:
   label: C RELEASE - fixed
   position:
   - 103
-  - 20
+  - 12
   - 1.8
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  source: Proposed revision-3 row, 8 m ahead of yellow firing strip; live row was at world Y=-2100.
   target_id: 2
 - id: display
   kind: knowledge
@@ -171,40 +169,39 @@ markers:
   label: Static core; not a target
   position:
   - 105.5
-  - 19
+  - 11
   - 1.6
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  source: Proposed revision-3 core beside the wallward action row; relocate its support and finish FX together.
 - id: replay
   kind: checkpoint
   zone: play_bay
   label: Replay after finish; ordinary button
   position:
-  - 106
-  - 24
-  - 1
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  - 103.8
+  - 13.5
+  - 1.36
+  source: Revision-4 rail mount at world (-2620,-2750,2536); measured vault1_control_mount top
+    Z2513 and switch mesh lower local extent 22.98 cm. User screenshot/request.
 - id: return
   kind: exit
   zone: play_bay
   label: Return any time; existing hub destination
   position:
-  - 106
-  - 28
-  - 1
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  - 106.6
+  - 13.5
+  - 1.36
+  source: Revision-4 rail mount at world (-2340,-2750,2536); 2.8 m from Replay, accessible
+    beside the firing lane. User screenshot/request.
 - id: badge
   kind: reward
   zone: play_bay
   label: Existing Confidence Badge
   position:
-  - 98.5
-  - 18
-  - 5
-  source: Proposed revision-2 anchor on historically measured first floor; evidence/editor-inventory.json.
-    Requires live reconciliation; not an existing actor transform.
+  - 105
+  - 4.5
+  - 6
+  source: Proposed revision-3 first progress-light annotation; vertical light stack sits to the
+    right of the enlarged wallward board rather than covering its text.
 devices:
 - id: controller
   class: fn_shoreline_island_energy_station
@@ -266,8 +263,8 @@ devices:
     persistent_question: true
     result_and_hint: true
     max_size_m:
-    - 10
-    - 1.6
+    - 7.5
+    - 3.3
     object_name_or_readings: true
 - id: hub_sign
   class: billboard_device
@@ -291,6 +288,7 @@ devices:
     roles:
     - Replay after completion
     - Return any time
+    mount: existing vault1_control_mount rail; switch mesh bottom seated at top Z2513 cm
 - id: progress
   class: fn_shoreline_island_energy_progress
   count: 1
@@ -407,8 +405,8 @@ stages:
   - cool
   - release
   success_target: release
-  completion: Release only with fresh readings; section 2, guarded badge. Feedback and quiet-hit
-    guard before next decision.
+  completion: Release only with fresh readings; section 2, guarded badge. Keep final evidence
+    and controls; hide target rings and labels after the 0.85 s hit cue until Replay/new run.
 assumptions:
 - id: site_basis
   status: resolved
@@ -435,6 +433,12 @@ assumptions:
   detail: Blockout models target anchors and linear progression only. Perspective, glyphs, collision
     and enjoyment require cooked tests. No approval inferred.
   evidence: spec.md AC-01..09; review.md
+- id: wallward_sightline
+  status: resolved
+  detail: Revision-3 layout uses measured wall, floor, board and target locations plus the player's
+    eye-level screenshot. Planned vertical separation clears the center label on paper; cooked
+    eye-level verification remains mandatory before closing AC-10.
+  evidence: evidence/player-review-layout-2026-09-30.png; plan.md revision-3 layout; review.md
 - id: floor_seam
   status: resolved
   detail: Retain debug-labeled support. Reconfirm and bridge only measured 48 cm seam; keep first-floor

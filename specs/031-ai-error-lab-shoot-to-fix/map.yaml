@@ -1,0 +1,476 @@
+version: 1
+map:
+  id: ai_error_lab_solo
+  title: AI Error Lab - Fix Pix's Route
+  theme: compact_coastal_repair_range
+  units: meters
+  origin_cm:
+  - -4600
+  - -7800
+  - 2400
+  size:
+  - 28
+  - 37
+  - 8
+  learning_objective: Compare an AI plan's goal and actual result, correct one instruction,
+    rerun and check the result.
+  source_feature: specs/031-ai-error-lab-shoot-to-fix/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- play_bay
+zones:
+- id: arrival
+  label: Existing walkway / walk in
+  pattern: corridor
+  position:
+  - 24
+  - 0
+  - 0
+  size:
+  - 4
+  - 37
+  - 8
+  purpose: Shared access strip; walk straight into bay without claim/start.
+  parameters:
+    width_m: 3
+    access: Always open; preserve first-floor walkway and neighboring routes
+  devices: []
+  overlap_with: []
+  completion: Sole local player enters bay; demonstration begins within 0.5 s.
+  reset: Cancel generation, disable scoring, restore authored start and clear transient
+    hints on leave, death/respawn, disconnect or round reset; replay/reentry starts
+    round 1 while earned badge persists until manager round reset.
+- id: play_bay
+  label: Solo route repair bay
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 24
+  - 37
+  - 8
+  purpose: One fixed firing point, three stable corrections and a visible rerun on
+    five tiles.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - controller
+  - answers
+  - blaster
+  - entry
+  - board
+  - hud
+  - controls
+  - progress
+  - tracker
+  - hub
+  - lights
+  - pix
+  - goal
+  overlap_with: []
+  completion: Three verified endpoint matches award retained badge once; replay/return
+    nearby.
+  reset: Cancel generation, disable scoring, restore authored start and clear transient
+    hints on leave, death/respawn, disconnect or round reset; replay/reentry starts
+    round 1 while earned badge persists until manager round reset.
+connections:
+- from: arrival
+  to: play_bay
+  mode: walk
+  width: 3
+  points:
+  - - 25
+    - 35
+    - 0
+  - - 22
+    - 35
+    - 0
+  - - 14
+    - 27
+    - 0
+  gate: always
+markers:
+- id: arrival
+  kind: spawn
+  zone: arrival
+  label: Existing walkway arrival; no new spawn
+  position:
+  - 25
+  - 35
+  - 0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: rifle
+  kind: weapon
+  zone: arrival
+  label: Existing Pulse Rifle inventory; no new granter
+  position:
+  - 25
+  - 34
+  - 0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: firing_point
+  kind: checkpoint
+  zone: play_bay
+  label: Comfortable firing point; annotation only, no checkpoint device
+  position:
+  - 14
+  - 27
+  - 0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: left
+  kind: target
+  zone: play_bay
+  label: LEFT - one tile left
+  position:
+  - 11
+  - 21
+  - 1.5
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+  target_id: 0
+- id: stop
+  kind: target
+  zone: play_bay
+  label: STOP - stay for this step
+  position:
+  - 14
+  - 21
+  - 1.5
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+  target_id: 1
+- id: right
+  kind: target
+  zone: play_bay
+  label: RIGHT - one tile right
+  position:
+  - 17
+  - 21
+  - 1.5
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+  target_id: 2
+- id: evidence
+  kind: knowledge
+  zone: play_bay
+  label: Plan + GOAL + BEFORE + AFTER board
+  position:
+  - 14
+  - 16
+  - 5.3
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: track_0
+  kind: knowledge
+  zone: play_bay
+  label: Tile 0; track and Pix example, not shootable
+  position:
+  - 10
+  - 18
+  - 3.0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: track_1
+  kind: knowledge
+  zone: play_bay
+  label: Tile 1
+  position:
+  - 12
+  - 18
+  - 3.0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: track_2
+  kind: knowledge
+  zone: play_bay
+  label: Tile 2
+  position:
+  - 14
+  - 18
+  - 3.0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: track_3
+  kind: knowledge
+  zone: play_bay
+  label: Tile 3; initial round-1 goal
+  position:
+  - 16
+  - 18
+  - 3.0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: track_4
+  kind: knowledge
+  zone: play_bay
+  label: Tile 4
+  position:
+  - 18
+  - 18
+  - 3.0
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: badge_result
+  kind: reward
+  zone: play_bay
+  label: Three repairs; retained AI Detective Badge
+  position:
+  - 20
+  - 16
+  - 6.3
+  source: Offset review annotation for badge/result on the same evidence board; not
+    an extra reward actor.
+- id: replay
+  kind: checkpoint
+  zone: play_bay
+  label: Replay control after finish; no checkpoint device
+  position:
+  - 11
+  - 28
+  - 0.8
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+- id: return
+  kind: exit
+  zone: play_bay
+  label: Return at any time; retained hub destination
+  position:
+  - 17
+  - 28
+  - 0.8
+  source: Proposed design anchor on measured first-floor bounds; plan.md. Marker is
+    an annotation, not an existing actor transform.
+devices:
+- id: controller
+  class: fn_shoreline_island_debug_station
+  count: 1
+  source: Refactor existing class into one solo controller; retire four old instances
+  settings:
+    stage_starts:
+    - 0
+    - 2
+    - 1
+    stage_goals:
+    - 3
+    - 1
+    - 2
+    success_ids:
+    - 2
+    - 0
+    - 1
+    editable_slots_zero_based:
+    - 1
+    - 0
+    - 1
+    stage_commands:
+    - RIGHT LEFT RIGHT
+    - RIGHT
+    - RIGHT RIGHT
+    endpoint_verified: true
+    automatic_entry: true
+    solo_only: true
+    quiet_rearm_seconds: 0.5
+- id: answers
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Reuse shared damage-only data_target assemblies
+  settings:
+    target_ids:
+    - 0
+    - 1
+    - 2
+    labels:
+    - LEFT
+    - STOP
+    - RIGHT
+    stationary_y_facing: true
+    stationary_positive_y: false
+    hit_face_m: 1.5
+    damage_only: true
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Retain existing shared Data Blaster loadout; no new grant actor
+  settings:
+    weapon: Existing Pulse Rifle
+    preserve_spawn_bindings: true
+- id: entry
+  class: mutator_zone_device
+  count: 1
+  source: Use eligible existing entry-volume device at proposed bay
+  settings:
+    solo_entry: true
+    weapons_allowed: true
+    poll_seconds: 0.25
+- id: board
+  class: billboard_device
+  count: 1
+  source: Reuse debug_station_1_board or result_board after exact underlying ref resolution
+  settings:
+    max_short_lines: 5
+    persistent_goal_before_after: true
+- id: hud
+  class: hud_message_device
+  count: 1
+  source: Reuse debug_station_1_feedback
+  settings:
+    automatic_hints: true
+    long_feedback_copy: true
+- id: controls
+  class: button_device
+  count: 2
+  source: Reuse debug_station_1_replay_button and debug_station_1_return_button
+  settings:
+    labels:
+    - Replay
+    - Return
+    replay_after_finish: true
+    return_always: true
+- id: progress
+  class: fn_shoreline_island_debug_progress
+  count: 1
+  source: Retain debug_station_1_progress and its round/tracker identity
+  settings:
+    ordered_completion_indices:
+    - 0
+    - 1
+    - 2
+    preserve_badge_on_replay: true
+- id: tracker
+  class: tracker_device
+  count: 1
+  source: Retain debug_station_1_badge_tracker
+  settings:
+    preserve_journal_and_agent_bindings: true
+- id: hub
+  class: teleporter_device
+  count: 1
+  source: Retain existing shared hub_destination; resolve underlying wrapper, never
+    delete
+  settings:
+    return_always: true
+- id: lights
+  class: customizable_light_device
+  count: 3
+  source: Reuse eligible progress lights or place three eligible instances
+  settings:
+    one_per_verified_repair: true
+- id: pix
+  class: creative_prop
+  count: 1
+  source: Reuse debug_station_1_marker as eligible Pix display; project primitives
+    only
+  settings:
+    max_width_m: 0.9
+    track_step_m: 2
+    step_seconds: 0.5
+- id: goal
+  class: creative_prop
+  count: 1
+  source: Existing eligible project primitive marker labelled GOAL
+  settings:
+    moves_between_rounds_only: true
+    no_hit_surface: true
+stages:
+- id: approach
+  zone: arrival
+  purpose: See short instruction and walk into bay with existing rifle.
+  requires: []
+  active_targets: []
+  completion: Entry starts first faulty demonstration, no manual Start.
+- id: wrong_way
+  zone: play_bay
+  purpose: Start 0, goal 3; RIGHT [LEFT] RIGHT ends 1. Replace slot with RIGHT and
+    verify 3.
+  requires:
+  - approach
+  active_targets:
+  - left
+  - stop
+  - right
+  success_target: right
+  completion: Run edited commands from start; actual endpoint 3 matches goal; credit
+    index 0.
+- id: dock_return
+  zone: play_bay
+  purpose: Start 2, goal 1; [RIGHT] ends 3. Replace with LEFT and verify 1.
+  requires:
+  - wrong_way
+  active_targets:
+  - left
+  - stop
+  - right
+  success_target: left
+  completion: Run edited command from start; actual endpoint 1 matches goal; credit
+    index 1.
+- id: overshoot
+  zone: play_bay
+  purpose: Start 1, goal 2; RIGHT [RIGHT] ends 3. Replace slot with STOP and verify
+    2.
+  requires:
+  - dock_return
+  active_targets:
+  - left
+  - stop
+  - right
+  success_target: stop
+  completion: STOP executes zero-distance step; endpoint 2 matches goal; credit index
+    2.
+- id: finish
+  zone: play_bay
+  purpose: Hold 3/3, AI Detective Badge and debugging recap; Replay or Return.
+  requires:
+  - overshoot
+  active_targets: []
+  completion: Existing progress guard awards once; replay resets physical rounds,
+    Return always available.
+assumptions:
+- id: site
+  detail: Bay anchors are proposals inside measured 28 x 37 m first floor; envelopes
+    are annotations, not walls.
+  status: resolved
+  evidence: evidence/live-debug-inventory-2026-09-30.json; plan.md measured floor/walkway
+    bounds
+- id: solo
+  detail: Single-player only for this activity; multiplayer and global matchmaking
+    changes excluded.
+  status: resolved
+  evidence: User request 2026-09-30; spec.md R-05 and scope
+- id: adapter
+  detail: Current button controller cannot execute this arbitrary YAML. Approved work
+    must refactor existing debug class with stage records and solo shooting lifecycle;
+    shared target/direction/progress APIs reused.
+  status: resolved
+  evidence: plan.md adapter decision; Content/fn_shoreline_island_debug_station.verse
+    and debug_fixtures.verse
+- id: lesson
+  detail: Three consistent LEFT/STOP/RIGHT repairs intentionally replace old move/count/classification
+    modes; actual rerun endpoint gates credit.
+  status: resolved
+  evidence: spec.md R-03 table and scope
+- id: cleanup
+  detail: Retire exact four station controllers and 26 obsolete buttons only after
+    binding/component reconciliation; all structural debug floors and shared infrastructure
+    protected.
+  status: resolved
+  evidence: spec.md R-07; inventory; plan.md preflight and serialized steps
+- id: physical_verification
+  detail: Full transforms/native settings/binding wrappers/readability/collision are
+    implementation measurements; cooked solo checks gate acceptance. Material layout
+    change requires renewed approval.
+  status: resolved
+  evidence: plan.md physical delta and limits; spec.md AC-01..10
+- id: approval
+  detail: Concrete design is unapproved. No approval.yaml exists; check success is
+    not authorization.
+  status: resolved
+  evidence: tasks.md P-03; docs/AI_MAP_WORKFLOW.md approval boundary
