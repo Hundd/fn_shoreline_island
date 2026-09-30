@@ -1,0 +1,12 @@
+# Cooked solo screenshot correction, 2026-09-30
+
+The player supplied `player-review-2026-09-30.png` after completing the first cooked solo run. The image confirms the core reached `3/3 | CORE READY` and exposes five visual problems: `DATA ENERGY / 0 DATA` obscures the board, Prompt Workshop's `YOUR REQUEST` HUD remains on screen outside its zone, A/B/C labels are dim, rings have no readable meaning from behind, and hit/completion effects feel too small. The final board also wraps into the target row. This screenshot demonstrates completion once; it does not prove the wrong-action, reset, replay, badge/journal, or learning scenarios.
+
+Implementation corrections within the approved bay footprint and four-action sequence:
+
+- Data Energy now hides its meter on join/reset and shows a three-second count only when energy is awarded. Prompt Workshop shows request text only while the player is in its entry zone, and hides its request and feedback HUD on exit/departure. The workshop zone's live bounds were read back far from the Confidence bay.
+- The three existing action billboards read back `textSize=20`, white text, thick outline, centered alignment, and a dark 0.92-opacity background. `showBorder=false` retains no billboard collision in front of the shot surface. The opt-in Confidence labels turn to the solo player's side of each ring; no target, action, or ring position changed.
+- The controller uses shorter persistent board lines and keeps the fuller result/reason in its timed HUD message. The finished board now has four compact lines.
+- One shared target hit VFX was placed and bound to all three target assemblies; a separate gold completion burst was placed at the core and bound to the controller. The existing cyan cooling VFX was enlarged. All native particle settings and Verse `savedActor` bindings were read back and saved. Target flash duration is 0.75 seconds; the effects are non-looping.
+
+`VerseToolset.BuildAll` returned no diagnostics. `map_workflow.py plan ... --ready` passed with the existing approval. The full `PushChanges` operation completed after local validation, upload, and client/server cook; the editor log recorded `VerseBuild: SUCCESS` and no project-specific validation errors in that flow. The updated game entered `Running`. A player retest was requested for AC-10, but no response arrived before shutdown, so cooked visual/interaction results remain open. `StopGame` returned `Completed`; `GetGameState` read back `CanStart`, and the UEFN process remained open and responsive.

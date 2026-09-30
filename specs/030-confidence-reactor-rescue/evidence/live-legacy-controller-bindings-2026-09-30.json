@@ -1,0 +1,670 @@
+[
+  {
+    "label": "energy_station_0",
+    "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846",
+    "bindings": {
+      "configured": false,
+      "station_id": 0,
+      "progress": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845.fn_shoreline_island_energy_progress_0",
+        "savedActor": {
+          "error": "SyntaxError: Unexpected token 'G', \"GetObjectP\"... is not valid JSON"
+        }
+      },
+      "bay_min_x": -4600,
+      "bay_max_x": -1800,
+      "bay_min_y": -4100,
+      "bay_max_y": -600,
+      "bay_min_z": 2350,
+      "bay_max_z": 3300,
+      "targets": [],
+      "first_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x5244FDCC_first_light",
+        "savedActor": null
+      },
+      "fresh_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xA2FA03C5_fresh_light",
+        "savedActor": null
+      },
+      "release_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xB457DB10_release_light",
+        "savedActor": null
+      },
+      "cooling_effect": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xB1A39B84_cooling_effect",
+        "savedActor": null
+      },
+      "core_display": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x2AD6784C_core_display",
+        "savedActor": null
+      },
+      "claim_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x00454591_claim_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1828644847"
+        }
+      },
+      "add_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x0F77A659_add_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1829736849"
+        }
+      },
+      "subtract_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x6EC00903_subtract_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1830608851"
+        }
+      },
+      "count_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xF9317C98_count_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1831496853"
+        }
+      },
+      "start_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x6B3A0F43_start_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1832387855"
+        }
+      },
+      "help_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x484F5CBA_help_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1833330857"
+        }
+      },
+      "next_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xE5FE37EE_next_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1834180859"
+        }
+      },
+      "replay_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xAC48FAD2_replay_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1835033861"
+        }
+      },
+      "return_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xBCDCE77B_return_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1835898863"
+        }
+      },
+      "hub_destination": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x6477387A_hub_destination",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        }
+      },
+      "feedback": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x4772A5AD_feedback",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5FD0003_1898725873"
+        }
+      },
+      "confidence_audio": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xE0118FF8_confidence_audio",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_CRD_AudioPlayer_C_UAID_E89C2592D1B5780403_1914408188"
+        }
+      },
+      "board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x7F2172B4_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1836812865"
+        }
+      },
+      "energy_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x9620B69F_energy_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1837249866"
+        }
+      },
+      "door_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xEB120F3E_door_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1837667867"
+        }
+      },
+      "preview_door": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xAF4B0617_preview_door",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5FD0003_1897585870"
+        }
+      },
+      "mystery_cat": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x436E294A_mystery_cat",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1107960888"
+        }
+      },
+      "hub_spawner_0": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x63F1B9A2_hub_spawner_0",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        }
+      },
+      "hub_spawner_1": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x0696051A_hub_spawner_1",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        }
+      },
+      "hub_spawner_2": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0xE839B008_hub_spawner_2",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        }
+      },
+      "hub_spawner_3": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x8D5E0CB0_hub_spawner_3",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      }
+    }
+  },
+  {
+    "label": "energy_station_2_station",
+    "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402",
+    "bindings": {
+      "configured": false,
+      "station_id": 1,
+      "progress": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845.fn_shoreline_island_energy_progress_0",
+        "savedActor": {
+          "error": "SyntaxError: Unexpected token 'G', \"GetObjectP\"... is not valid JSON"
+        }
+      },
+      "bay_min_x": -4600,
+      "bay_max_x": -1800,
+      "bay_min_y": -4100,
+      "bay_max_y": -600,
+      "bay_min_z": 2350,
+      "bay_max_z": 3300,
+      "targets": [],
+      "first_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x5244FDCC_first_light",
+        "savedActor": null
+      },
+      "fresh_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xA2FA03C5_fresh_light",
+        "savedActor": null
+      },
+      "release_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xB457DB10_release_light",
+        "savedActor": null
+      },
+      "cooling_effect": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xB1A39B84_cooling_effect",
+        "savedActor": null
+      },
+      "core_display": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x2AD6784C_core_display",
+        "savedActor": null
+      },
+      "claim_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x00454591_claim_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1641497403"
+        }
+      },
+      "add_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x0F77A659_add_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1642758405"
+        }
+      },
+      "subtract_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x6EC00903_subtract_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1643889407"
+        }
+      },
+      "count_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xF9317C98_count_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1644827409"
+        }
+      },
+      "start_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x6B3A0F43_start_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1645893411"
+        }
+      },
+      "help_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x484F5CBA_help_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1646894413"
+        }
+      },
+      "next_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xE5FE37EE_next_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1647862415"
+        }
+      },
+      "replay_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xAC48FAD2_replay_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1648892417"
+        }
+      },
+      "return_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xBCDCE77B_return_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1649860419"
+        }
+      },
+      "hub_destination": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x6477387A_hub_destination",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        }
+      },
+      "feedback": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x4772A5AD_feedback",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5000103_1652380424"
+        }
+      },
+      "confidence_audio": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xE0118FF8_confidence_audio",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_CRD_AudioPlayer_C_UAID_E89C2592D1B5780403_1914408188"
+        }
+      },
+      "board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x7F2172B4_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1650843421"
+        }
+      },
+      "energy_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x9620B69F_energy_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1651340422"
+        }
+      },
+      "door_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xEB120F3E_door_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1651843423"
+        }
+      },
+      "preview_door": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xAF4B0617_preview_door",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5000103_1702879472"
+        }
+      },
+      "mystery_cat": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x436E294A_mystery_cat",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1580335889"
+        }
+      },
+      "hub_spawner_0": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x63F1B9A2_hub_spawner_0",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        }
+      },
+      "hub_spawner_1": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x0696051A_hub_spawner_1",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        }
+      },
+      "hub_spawner_2": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0xE839B008_hub_spawner_2",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        }
+      },
+      "hub_spawner_3": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402.fn_shoreline_island_energy_station_0.__verse_0x8D5E0CB0_hub_spawner_3",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      }
+    }
+  },
+  {
+    "label": "energy_station_3_station",
+    "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425",
+    "bindings": {
+      "configured": false,
+      "station_id": 2,
+      "progress": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845.fn_shoreline_island_energy_progress_0",
+        "savedActor": {
+          "error": "SyntaxError: Unexpected token 'G', \"GetObjectP\"... is not valid JSON"
+        }
+      },
+      "bay_min_x": -4600,
+      "bay_max_x": -1800,
+      "bay_min_y": -4100,
+      "bay_max_y": -600,
+      "bay_min_z": 2350,
+      "bay_max_z": 3300,
+      "targets": [],
+      "first_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x5244FDCC_first_light",
+        "savedActor": null
+      },
+      "fresh_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xA2FA03C5_fresh_light",
+        "savedActor": null
+      },
+      "release_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xB457DB10_release_light",
+        "savedActor": null
+      },
+      "cooling_effect": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xB1A39B84_cooling_effect",
+        "savedActor": null
+      },
+      "core_display": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x2AD6784C_core_display",
+        "savedActor": null
+      },
+      "claim_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x00454591_claim_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1653426426"
+        }
+      },
+      "add_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x0F77A659_add_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1654393428"
+        }
+      },
+      "subtract_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x6EC00903_subtract_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1655581430"
+        }
+      },
+      "count_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xF9317C98_count_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1656517432"
+        }
+      },
+      "start_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x6B3A0F43_start_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1657454434"
+        }
+      },
+      "help_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x484F5CBA_help_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1658482436"
+        }
+      },
+      "next_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xE5FE37EE_next_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1659432438"
+        }
+      },
+      "replay_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xAC48FAD2_replay_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1660507440"
+        }
+      },
+      "return_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xBCDCE77B_return_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1661455442"
+        }
+      },
+      "hub_destination": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x6477387A_hub_destination",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        }
+      },
+      "feedback": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x4772A5AD_feedback",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5000103_1663930447"
+        }
+      },
+      "confidence_audio": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xE0118FF8_confidence_audio",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_CRD_AudioPlayer_C_UAID_E89C2592D1B5780403_1914408188"
+        }
+      },
+      "board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x7F2172B4_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1662303444"
+        }
+      },
+      "energy_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x9620B69F_energy_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1662795445"
+        }
+      },
+      "door_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xEB120F3E_door_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1663407446"
+        }
+      },
+      "preview_door": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xAF4B0617_preview_door",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5000103_1703787474"
+        }
+      },
+      "mystery_cat": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x436E294A_mystery_cat",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1581548890"
+        }
+      },
+      "hub_spawner_0": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x63F1B9A2_hub_spawner_0",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        }
+      },
+      "hub_spawner_1": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x0696051A_hub_spawner_1",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        }
+      },
+      "hub_spawner_2": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0xE839B008_hub_spawner_2",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        }
+      },
+      "hub_spawner_3": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425.fn_shoreline_island_energy_station_0.__verse_0x8D5E0CB0_hub_spawner_3",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      }
+    }
+  },
+  {
+    "label": "energy_station_4_station",
+    "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448",
+    "bindings": {
+      "configured": false,
+      "station_id": 3,
+      "progress": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845.fn_shoreline_island_energy_progress_0",
+        "savedActor": {
+          "error": "SyntaxError: Unexpected token 'G', \"GetObjectP\"... is not valid JSON"
+        }
+      },
+      "bay_min_x": -4600,
+      "bay_max_x": -1800,
+      "bay_min_y": -4100,
+      "bay_max_y": -600,
+      "bay_min_z": 2350,
+      "bay_max_z": 3300,
+      "targets": [],
+      "first_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x5244FDCC_first_light",
+        "savedActor": null
+      },
+      "fresh_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xA2FA03C5_fresh_light",
+        "savedActor": null
+      },
+      "release_light": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xB457DB10_release_light",
+        "savedActor": null
+      },
+      "cooling_effect": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xB1A39B84_cooling_effect",
+        "savedActor": null
+      },
+      "core_display": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x2AD6784C_core_display",
+        "savedActor": null
+      },
+      "claim_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x00454591_claim_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1664850449"
+        }
+      },
+      "add_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x0F77A659_add_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1665779451"
+        }
+      },
+      "subtract_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x6EC00903_subtract_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1666689453"
+        }
+      },
+      "count_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xF9317C98_count_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1667666455"
+        }
+      },
+      "start_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x6B3A0F43_start_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1668555457"
+        }
+      },
+      "help_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x484F5CBA_help_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1669460459"
+        }
+      },
+      "next_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xE5FE37EE_next_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1670425461"
+        }
+      },
+      "replay_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xAC48FAD2_replay_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1671362463"
+        }
+      },
+      "return_button": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xBCDCE77B_return_button",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1672287465"
+        }
+      },
+      "hub_destination": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x6477387A_hub_destination",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040"
+        }
+      },
+      "feedback": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x4772A5AD_feedback",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5000103_1674761470"
+        }
+      },
+      "confidence_audio": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xE0118FF8_confidence_audio",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_CRD_AudioPlayer_C_UAID_E89C2592D1B5780403_1914408188"
+        }
+      },
+      "board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x7F2172B4_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1673181467"
+        }
+      },
+      "energy_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x9620B69F_energy_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1673678468"
+        }
+      },
+      "door_board": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xEB120F3E_door_board",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1674194469"
+        }
+      },
+      "preview_door": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xAF4B0617_preview_door",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5000103_1704625476"
+        }
+      },
+      "mystery_cat": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x436E294A_mystery_cat",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1582729891"
+        }
+      },
+      "hub_spawner_0": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x63F1B9A2_hub_spawner_0",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041"
+        }
+      },
+      "hub_spawner_1": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x0696051A_hub_spawner_1",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046"
+        }
+      },
+      "hub_spawner_2": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0xE839B008_hub_spawner_2",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051"
+        }
+      },
+      "hub_spawner_3": {
+        "verseRef": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448.fn_shoreline_island_energy_station_0.__verse_0x8D5E0CB0_hub_spawner_3",
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056"
+        }
+      }
+    }
+  }
+]

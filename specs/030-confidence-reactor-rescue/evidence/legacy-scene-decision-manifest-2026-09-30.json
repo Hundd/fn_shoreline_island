@@ -1,0 +1,748 @@
+{
+  "checkpointHead": "29371b4e15eb72f8c10d48318c222b74609a38bd",
+  "notes": "Live preflight captured 106 complete actor transforms and four controller binding sets. Preserve progress manager, shared hub/spawners, debug_station_4_floor5, and all retained entries. Remove one logical station group at a time, read back, and save. The 48 cm seam has been bridged with a separate actor.",
+  "actors": [
+    {
+      "label": "energy_0_add_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1829736849",
+      "guid": "696BFA5E-4DED-3239-74D7-9F98189A4084",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_badge_tracker",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5FD0003_1838518869",
+      "guid": "23C3E6A6-4FAC-DD94-6C7B-B6A06B333DEC",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1836812865",
+      "guid": "8B0E44E6-48E4-E8EF-8220-C9AC89820663",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_claim_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1828644847",
+      "guid": "EA59EBE8-45C1-C123-0CDA-098124C1AF92",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_count_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1831496853",
+      "guid": "D6DE0F43-40A1-FA00-444A-E9B51C4D222E",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_door_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1837667867",
+      "guid": "61785625-4989-8962-3A97-52A8393F02FA",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_energy_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1837249866",
+      "guid": "C74F7581-42D1-4626-0F80-CFA79571E494",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_feedback",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5FD0003_1898725873",
+      "guid": "94B8BA1E-46C5-3FD7-6107-C0B11385478C",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_floor",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5FD0003_1897994871",
+      "guid": "79614FA8-4F85-23A1-1F56-E18721E1414F",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1833330857",
+      "guid": "41E9BBD1-4ADD-55F0-8D37-D5A47C9A697E",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_add",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1830160850",
+      "guid": "548838A3-45AD-3000-98D1-44ACBF421EAE",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_claim",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1829182848",
+      "guid": "5E9300EF-4574-8044-0F4C-A188A6F539AA",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_count",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1831960854",
+      "guid": "34725B7D-4CF7-7243-A6E2-F38C4529CD6D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_help",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1833765858",
+      "guid": "16B9013C-4FED-13C5-3FAF-B9A366C6B69F",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_next",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1834618860",
+      "guid": "AD26B672-46CF-3834-6B29-8FAF5BBD9D97",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_replay",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1835460862",
+      "guid": "5B96E3D7-4DBD-2A99-A5AB-899C7E269A79",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_return",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1836327864",
+      "guid": "A3B8E69B-474E-36E8-5444-EA863E6EE0DF",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_start",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1832871856",
+      "guid": "D41FE63F-4D21-03F0-A229-66981CE7B410",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_label_subtract",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1831093852",
+      "guid": "C6E41D66-4A70-62D7-3E09-E986824CDC4B",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_mystery_cat",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1107960888",
+      "guid": "BB41F9E1-44FE-B1C2-1DC8-30826033B095",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_next_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1834180859",
+      "guid": "0D98E020-47B9-1899-F392-D0BDDA2F4B1A",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_preview_door",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5FD0003_1897585870",
+      "guid": "797D37D4-42FB-7DFA-F7DC-73B9017828AF",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_replay_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1835033861",
+      "guid": "427B817F-4360-5934-A1C7-5B885F1103A7",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_return_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1835898863",
+      "guid": "75139DC2-4551-6579-F9FD-11B74754D85B",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_route",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1838082868",
+      "guid": "419E1366-44F1-305E-ECE0-67BBA49B1592",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_0_start_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1832387855",
+      "guid": "E8FE3E05-4044-C02E-C81C-2899EA7581DE",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_subtract_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1830608851",
+      "guid": "30477B5A-48D5-4056-2ED4-ED86E7BA7459",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_0_walkway",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5FD0003_1898363872",
+      "guid": "76A1E66D-47DA-4C82-57F9-1382339D745B",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_station_2_add_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1642758405",
+      "guid": "7E9EC56B-447C-4ECF-EE9E-D3AEC62E3938",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1650843421",
+      "guid": "6330B12E-4677-E1D4-8647-2F9C4ACFCB28",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_claim_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1641497403",
+      "guid": "419FB70E-4591-62B2-F8AF-5B9F0DD8FD22",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_count_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1644827409",
+      "guid": "B99A4352-47AA-31FF-52CF-A1800D4751AC",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_door_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1651843423",
+      "guid": "6555D918-42DE-EBC1-63CF-BF854A3101A0",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_energy_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1651340422",
+      "guid": "1C35DC22-4D02-D925-3E8C-77AF114E5E75",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_feedback",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5000103_1652380424",
+      "guid": "EFEF2C25-4FFD-1E4C-0BB6-589D2469390E",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_floor",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5000103_1702259471",
+      "guid": "E405C403-4918-97C5-932F-2DA822C250C4",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_station_2_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1646894413",
+      "guid": "2052B418-4407-6031-9BC5-E1A7C7F08208",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_add",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1643293406",
+      "guid": "F5A94E3A-4836-80AC-E714-91A5AD83C695",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_claim",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1642150404",
+      "guid": "F35F1D4B-4193-2A69-5108-039D305B16C0",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_count",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1645342410",
+      "guid": "E913FCB9-4EB4-1930-83F4-1A81467B26DD",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_help",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1647342414",
+      "guid": "B0F434EB-4A27-D1FA-3211-F88C6691E860",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_next",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1648376416",
+      "guid": "466670E5-46B8-63DE-D00E-66A8A4889D33",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_replay",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1649360418",
+      "guid": "82A16CC5-4AA5-40B9-BF7C-74BBD2853793",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_return",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1650359420",
+      "guid": "4ACB45BA-46C2-2801-51B1-0D8866F78891",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_start",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1646392412",
+      "guid": "5C2F0627-4410-4E1B-3F63-9A814FBE3980",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_label_subtract",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1644312408",
+      "guid": "B2C90BC9-4CE1-3DAB-602F-3EA91811008D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_mystery_cat",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1580335889",
+      "guid": "463FFAF9-4B06-D316-810E-AB929CDF1C2C",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_next_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1647862415",
+      "guid": "A4DB4522-41F5-9F26-A49A-17B30F754409",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_preview_door",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5000103_1702879472",
+      "guid": "4BC32086-4FC1-958F-201E-5EBCE39E65D2",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_replay_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1648892417",
+      "guid": "41271A60-4533-6F67-D474-AAB75CD7AA86",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_return_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1649860419",
+      "guid": "E1B2E79D-4898-407C-8245-8681C42FCC1E",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_start_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1645893411",
+      "guid": "5836F3CE-4AEA-22B9-F564-E2B868578F8F",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_station",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1640071402",
+      "guid": "3759A044-46BB-E715-51DA-ECA56CE72C60",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_2_subtract_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1643889407",
+      "guid": "47FB9D09-4BAC-219B-F263-1287DC5A5469",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_add_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1654393428",
+      "guid": "82F1E9DF-42A9-9B1E-07CD-A3A3494CA55A",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1662303444",
+      "guid": "E21AD02D-4512-9FA0-97C8-DDA950F2FD23",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_claim_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1653426426",
+      "guid": "26E427F1-4239-C713-1BEA-D9996A34DA3D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_count_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1656517432",
+      "guid": "5813CDE3-42CB-228C-30C3-F1B25CB858E6",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_door_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1663407446",
+      "guid": "FD145756-40F6-EB66-2F7C-AEA782900D76",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_energy_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1662795445",
+      "guid": "62352CBD-4589-672A-B756-81916F24702D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_feedback",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5000103_1663930447",
+      "guid": "66C52EAE-47C3-A899-A31A-16AF073E87C5",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_floor",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5000103_1703364473",
+      "guid": "313E71A6-49B6-3D6F-FDDF-67B53FBBEF0D",
+      "action": "retain",
+      "reason": "Shared support, route, progress, or reused solo device"
+    },
+    {
+      "label": "energy_station_3_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1658482436",
+      "guid": "D6199C6C-4E4A-3BB4-7393-6797C5EC0104",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_add",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1655045429",
+      "guid": "CF84EDC7-4D9D-75BD-6DBF-9583A04B5CD2",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_claim",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1653892427",
+      "guid": "A7A0F7AF-492D-F52C-4CCE-00B96CD930FD",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_count",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1656968433",
+      "guid": "6F48C4A6-4D45-817A-40E6-5AA5919125AD",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_help",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1658934437",
+      "guid": "AB91DCDB-450D-E562-026A-5BB39A666E4C",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_next",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1660022439",
+      "guid": "AC9D8A61-4F55-4176-2B06-4BB8B452DEEE",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_replay",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1660903441",
+      "guid": "FA397771-4925-91A1-ABE6-098FE3FE5766",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_return",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1661837443",
+      "guid": "4D33EB17-418E-8326-35A1-3EB73CA3E724",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_start",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1657952435",
+      "guid": "F16B3090-4E44-B723-21A4-518542559884",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_label_subtract",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1656023431",
+      "guid": "25035FCC-4B8B-6D3A-681C-2C84793B333D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_mystery_cat",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1581548890",
+      "guid": "BD3F401A-4CF1-BD4C-CF30-C2AE5E8B0942",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_next_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1659432438",
+      "guid": "F9BB13BF-4079-DA05-B9B0-3E9CF31B29A8",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_preview_door",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5000103_1703787474",
+      "guid": "CE55A5EB-4FB0-B201-1764-F0A8406D5652",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_replay_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1660507440",
+      "guid": "E60CAA31-4797-0D45-6FBC-C48B82D77476",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_return_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1661455442",
+      "guid": "485ECD0C-4311-BDE0-CA2A-9DBA400A469D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_start_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1657454434",
+      "guid": "F78A2C66-4FF7-B640-6B6F-7099CECDB119",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_station",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1652924425",
+      "guid": "6A1C6335-4C65-0C3B-0832-BDA78F11BE5C",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_3_subtract_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1655581430",
+      "guid": "78C85CBD-4388-967B-E313-92986B4D7B04",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_add_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1665779451",
+      "guid": "101291C6-40DC-2560-8590-978E4E7F6D1E",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1673181467",
+      "guid": "30A98218-4DB3-F183-14FD-8B9AC0D345A1",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_claim_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1664850449",
+      "guid": "6846A906-407C-6D10-88C1-B4A171D36726",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_count_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1667666455",
+      "guid": "CB1EF6D1-4B5A-D91E-6424-AB891B7C5002",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_door_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1674194469",
+      "guid": "2499CA59-4866-C5C8-7D12-6D86E9149167",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_energy_board",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1673678468",
+      "guid": "693BA0D0-4DFF-4FF6-773E-8EA65D81BFBE",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_feedback",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5000103_1674761470",
+      "guid": "A33622F8-4920-CB1C-7A80-1A9DB44BA436",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_floor",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5000103_1704170475",
+      "guid": "9916B786-4CE7-1522-B52B-5FA8E2DA25EE",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_help_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1669460459",
+      "guid": "055120DD-40C0-6E99-5ED8-3C82D7CB36D6",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_add",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1666232452",
+      "guid": "FEF39BA0-42CA-D40B-2488-91A1AC379672",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_claim",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1665286450",
+      "guid": "5A4B7B39-4339-E7CF-A873-7BB8BEFE53FB",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_count",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1668075456",
+      "guid": "DDE7391D-4E21-0F35-EAAB-45BBC2FBD787",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_help",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1669949460",
+      "guid": "CDE7B7E0-422F-BB80-D250-649B72506D82",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_next",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1670875462",
+      "guid": "AA6491C0-4509-B755-6BC8-74AE188D8376",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_replay",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1671772464",
+      "guid": "B01484DB-488E-88F5-11E1-28B3DA336654",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_return",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1672723466",
+      "guid": "E98958F0-425D-0C15-4600-9BA96FD51083",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_start",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1668990458",
+      "guid": "C7FCB0A7-434A-A3C5-B1C5-A8BA33DD9B22",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_label_subtract",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5000103_1667125454",
+      "guid": "F346DF62-43ED-D853-29F5-BAB843EDD726",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_mystery_cat",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B58D0403_1582729891",
+      "guid": "7A8A9ECE-47EE-BEC4-812D-FD976C665E77",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_next_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1670425461",
+      "guid": "CA35650B-484E-ADD7-FAC5-85A4DE61C0CA",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_preview_door",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5000103_1704625476",
+      "guid": "6DF8EC44-486A-154A-238B-99B7E5933B75",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_replay_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1671362463",
+      "guid": "5B11B08A-4F12-BFEC-68C8-B68343C0F21A",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_return_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1672287465",
+      "guid": "62BE9B1F-4247-309B-8E93-31B82A3FC4BD",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_start_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1668555457",
+      "guid": "446D3E1F-41D2-01B5-5902-D9BA28E84665",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_station",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5000103_1664453448",
+      "guid": "853EBD58-4E55-C9C4-43E5-ADBC083842A3",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    },
+    {
+      "label": "energy_station_4_subtract_button",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5000103_1666689453",
+      "guid": "1717D2F6-46BC-7B2B-9818-D591746B8E6D",
+      "action": "retire",
+      "reason": "Legacy percentage/claim presentation or obsolete station controller; exact bindings audited"
+    }
+  ]
+}

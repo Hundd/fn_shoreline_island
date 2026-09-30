@@ -63,7 +63,7 @@ fn_shoreline_island_data_energy := class(creative_device):
         if (previous := energy[input_player]):
             set amount += previous
         if (set energy[input_player] = amount) {}
-        meter.Show(input_player, energy_text(amount), ?DisplayTime := 0.0)
+        meter.Show(input_player, energy_text(amount), ?DisplayTime := 3.0)
         set deliveries += array{data_orb_delivery{origin := origin, generation := generation}}
 
     reset():void =
@@ -75,13 +75,10 @@ fn_shoreline_island_data_energy := class(creative_device):
             if (orb.TeleportTo[orb.GetTransform()]) {}
             orb.Hide()
         for (input_player : GetPlayspace().GetPlayers()):
-            meter.Show(input_player, energy_text(0), ?DisplayTime := 0.0)
+            meter.Hide(input_player)
 
     on_join(input_player:player):void =
-        var amount:int = 0
-        if (previous := energy[input_player]):
-            set amount = previous
-        meter.Show(input_player, energy_text(amount), ?DisplayTime := 0.0)
+        meter.Hide(input_player)
 
     on_leave(input_player:player):void =
         var remaining:[player]int = map{}

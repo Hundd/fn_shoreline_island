@@ -1,4 +1,5 @@
 using { /Fortnite.com/Devices }
+using { /Fortnite.com/Characters }
 using { /Verse.org/Simulation }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
@@ -32,6 +33,9 @@ fn_shoreline_island_data_target := class(creative_device):
     # Opt-in for the solo bay; existing moving mission targets retain their cues.
     @editable
     stationary_y_facing:logic = false
+    # Confidence Core looks toward +Y; Pattern Scanner keeps its -Y offset.
+    @editable
+    stationary_positive_y:logic = false
     # Label clearance for fixed category icons; preserve existing targets' offset.
     @editable
     stationary_label_offset_z:float = -12.0
@@ -74,6 +78,8 @@ fn_shoreline_island_data_target := class(creative_device):
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (stationary_positive_y?):
+            set answer_feedback_seconds = 0.75
         set ring_home = ring_mesh.GetTransform()
         deactivate()
         hit_surface.TriggeredEvent.Subscribe(on_damage)
@@ -222,6 +228,8 @@ fn_shoreline_island_data_target := class(creative_device):
             if (stationary_y_facing?):
                 set pose.Translation = position + vector3{Y := -10.0}
                 set pose.Scale = ring_home.Scale
+                if (stationary_positive_y?):
+                    set pose.Translation = position + vector3{Y := 10.0}
             if (GetSimulationElapsedTime() < wrong_until):
                 set pose.Translation = pose.Translation + vector3{Y := shake_direction * 8.0}
                 set shake_direction = -shake_direction
@@ -230,6 +238,14 @@ fn_shoreline_island_data_target := class(creative_device):
             set label_pose.Translation = position + vector3{X := -20.0, Z := 200.0}
             if (stationary_y_facing?):
                 set label_pose.Translation = position + vector3{Y := -20.0, Z := stationary_label_offset_z}
+                if (stationary_positive_y?):
+                    set label_pose.Translation = position + vector3{Y := 20.0, Z := stationary_label_offset_z}
+                    if (viewer := GetPlayspace().GetPlayers()[0], character := viewer.GetFortCharacter[]):
+                        if (character.GetTransform().Translation.Y < position.Y):
+                            set label_pose.Translation = position + vector3{Y := -20.0, Z := stationary_label_offset_z}
+                            set label_pose.Rotation = MakeRotationFromYawPitchRollDegrees(0.0, 0.0, 0.0)
+                        else:
+                            set label_pose.Rotation = MakeRotationFromYawPitchRollDegrees(180.0, 0.0, 0.0)
             if (label_board.TeleportTo[label_pose]) {}
             var particle_pose:transform = active_particles.GetTransform()
             set particle_pose.Translation = position

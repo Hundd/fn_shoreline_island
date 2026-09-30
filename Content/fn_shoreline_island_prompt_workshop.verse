@@ -152,6 +152,7 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
             input_button.InteractedWithEvent.Subscribe(
                 prompt_workshop_action{controller := Self, choice := index}.on_press)
         entry_zone.AgentEntersEvent.Subscribe(on_enter)
+        entry_zone.AgentExitsEvent.Subscribe(on_exit)
         progress.round_settings.RoundBeginEvent.Subscribe(on_round)
         GetPlayspace().PlayerAddedEvent().Subscribe(on_join)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
@@ -204,14 +205,18 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
         return next_send
 
     show_request(input_player:player, state:prompt_workshop_state):void =
-        request_hud.Show(input_player,
-            request_text(what_name(state.what), which_name(state.which), where_name(state.destination_choice), next_step(state)),
-            ?DisplayTime := 0.0)
+        if (entry_zone.IsInVolume[input_player]):
+            request_hud.Show(input_player,
+                request_text(what_name(state.what), which_name(state.which), where_name(state.destination_choice), next_step(state)),
+                ?DisplayTime := 0.0)
+        else:
+            request_hud.Hide(input_player)
 
     on_join(input_player:player):void =
         state := get_state(input_player)
         show_request(input_player, state)
-        feedback.Show(input_player, intro_text, ?DisplayTime := 6.0)
+        if (entry_zone.IsInVolume[input_player]):
+            feedback.Show(input_player, intro_text, ?DisplayTime := 6.0)
 
     on_enter(input_agent:agent):void =
         if (input_player := player[input_agent]):
@@ -219,7 +224,14 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
             show_request(input_player, state)
             feedback.Show(input_player, intro_text, ?DisplayTime := 6.0)
 
+    on_exit(input_agent:agent):void =
+        if (input_player := player[input_agent]):
+            request_hud.Hide(input_player)
+            feedback.Hide(input_player)
+
     on_departure(input_player:player):void =
+        request_hud.Hide(input_player)
+        feedback.Hide(input_player)
         if (owner := execution_owner?, owner = input_player):
             set generation += 1
             set execution_owner = false

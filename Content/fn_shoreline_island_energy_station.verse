@@ -3,25 +3,41 @@ using { /Fortnite.com/Characters }
 using { /Verse.org/Simulation }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
+# The saved station actors share this class; only the configured solo bay runs.
 fn_shoreline_island_energy_station := class(creative_device):
+    @editable
+    configured:logic = false
     @editable
     station_id:int = 0
     @editable
     progress:fn_shoreline_island_energy_progress = fn_shoreline_island_energy_progress{}
     @editable
-    claim_button:button_device = button_device{}
+    bay_min_x:float = -4600.0
     @editable
-    add_button:button_device = button_device{}
+    bay_max_x:float = -1800.0
     @editable
-    subtract_button:button_device = button_device{}
+    bay_min_y:float = -4100.0
     @editable
-    count_button:button_device = button_device{}
+    bay_max_y:float = -600.0
     @editable
-    start_button:button_device = button_device{}
+    bay_min_z:float = 2350.0
     @editable
-    help_button:button_device = button_device{}
+    bay_max_z:float = 3300.0
     @editable
-    next_button:button_device = button_device{}
+    targets:[]fn_shoreline_island_data_target = array{}
+    @editable
+    first_light:customizable_light_device = customizable_light_device{}
+    @editable
+    fresh_light:customizable_light_device = customizable_light_device{}
+    @editable
+    release_light:customizable_light_device = customizable_light_device{}
+    @editable
+    cooling_effect:vfx_creator_device = vfx_creator_device{}
+    @editable
+    finish_effect:vfx_creator_device = vfx_creator_device{}
+    @editable
+    core_display:creative_prop = creative_prop{}
+
     @editable
     replay_button:button_device = button_device{}
     @editable
@@ -35,14 +51,6 @@ fn_shoreline_island_energy_station := class(creative_device):
     @editable
     board:billboard_device = billboard_device{}
     @editable
-    energy_board:billboard_device = billboard_device{}
-    @editable
-    door_board:billboard_device = billboard_device{}
-    @editable
-    preview_door:creative_prop = creative_prop{}
-    @editable
-    mystery_cat:creative_prop = creative_prop{}
-    @editable
     hub_spawner_0:player_spawner_device = player_spawner_device{}
     @editable
     hub_spawner_1:player_spawner_device = player_spawner_device{}
@@ -51,358 +59,284 @@ fn_shoreline_island_energy_station := class(creative_device):
     @editable
     hub_spawner_3:player_spawner_device = player_spawner_device{}
 
-    fixtures:fn_shoreline_island_energy_fixtures = fn_shoreline_island_energy_fixtures{}
-    var owner:?player = false
-    var running:logic = false
+    var phase:int = -1
     var generation:int = 0
-    var observed_round:int = -1
-    var door_home:transform = transform{}
+    var busy:logic = false
+    var mistakes:int = 0
+    var last_hit:float = 0.0
+    var wrong_ready:float = 0.0
+    var hold_hint_ready:float = 0.0
+    var active_player:?player = false
+    var active_character:?fort_character = false
+    var lights:[]customizable_light_device = array{}
+    core_hot_material:DataBlaster.mi_target_grey = DataBlaster.mi_target_grey{}
+    core_cooled_material:DataBlaster.m_data_ring = DataBlaster.m_data_ring{}
 
-    claim_text<localizes>:message = "Claim Confidence Core station"
-    add_text<localizes>:message = "New clue: confidence +10%"
-    subtract_text<localizes>:message = "Remove clue: confidence -10%"
-    count_text<localizes>:message = "Choose clue updates (1-5)"
-    start_text<localizes>:message = "Start / Run"
-    help_text<localizes>:message = "Help"
-    next_text<localizes>:message = "Next challenge / Replay all"
-    replay_text<localizes>:message = "Replay current challenge"
-    return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "CONFIDENCE CORE | Station {number}\nPress CLAIM to help Pix use new clues."
-    occupied_text<localizes>:message = "This Confidence Core station is in use. Choose another station."
-    other_text<localizes>:message = "Leave your current Confidence Core station before claiming another."
-    manual_text<localizes>:message = "Give Pix useful clues. Change confidence with +10% or -10%, then press Start."
-    cat_intro_text<localizes>:message = "Pix thinks CAT at 40% confidence. Find useful clues: pointed ears, whiskers, tail. Raise confidence to at least 70%, then Start."
-    repeat_text<localizes>:message = "Choose how many new clues Pix gets. Each raises confidence by 20%. Can Pix reach 60% from 0%?"
-    manual_controls_text<localizes>:message = "Use +10% or -10% here. Repeats begin in challenge 3."
-    repeat_controls_text<localizes>:message = "Choose how many times a new clue arrives, then Run."
-    boundary_text<localizes>:message = "Confidence stays between 0% and 100%. Try the other adjustment."
-    finish_text<localizes>:message = "Open this preview door first. Help is always available."
-    ready_text<localizes>:message = "Edit confidence, then Start."
-    ready_repeat_text<localizes>:message = "Choose clue updates, then Run."
-    solved_text<localizes>:message = "Door open! Press Next or Replay."
-    complete_text<localizes>:message = "PIX MODULE RESTORED: CONFIDENCE ONLINE\nConfidence Badge earned! Useful clues can improve a prediction, but important answers still need checking. Replay or return to the hub."
-    retained_text<localizes>:message = "Confidence reached again! Your Confidence Badge stays earned for this round."
-    complete_board_text<localizes>:message = "Confidence Badge earned! Replay is optional."
-    concept_text<localizes>:message = "AI answers can have different confidence. High confidence does not automatically mean an answer is correct."
-    worked_manual_text<localizes>:message = "Use +10% or -10% until confidence matches the target. Each useful clue changes confidence by 10%. Then press Start."
-    worked_cat_text<localizes>:message = "Start at 40%. Pointed ears, whiskers, and a tail add three +10% clues. Reach 70%, then Start."
-    worked_repeat_text<localizes>:message = "Try 3 clues: confidence goes 0%, 20%, 40%, 60%. Then the door opens."
-    energy_text<localizes>(energy:int, target:int, current_percent:int, target_percent:int):message = "AI CONFIDENCE: {current_percent}%\nTARGET: {target_percent}%"
-    cat_energy_text<localizes>(current_percent:int, target_percent:int):message = "PIX THINKS: CAT\nCONFIDENCE: {current_percent}% | GOAL: {target_percent}%+"
-    ears_clue_text<localizes>:message = "New clue: pointed ears. Confidence +10%."
-    whiskers_clue_text<localizes>:message = "New clue: whiskers. Confidence +10%."
-    tail_clue_text<localizes>:message = "New clue: tail. Confidence +10%."
-    empty_energy_text<localizes>:message = "AI CONFIDENCE\nClaim to begin"
-    closed_text<localizes>:message = "PREVIEW DOOR: CLOSED"
-    opening_text<localizes>:message = "PREVIEW DOOR: OPENING"
-    open_text<localizes>:message = "PREVIEW DOOR: OPEN"
-    board_text<localizes>(input_player:agent, challenge:int, start_percent:int, status:message):message = "Researcher: {input_player} | Challenge {challenge}\nStarting confidence: {start_percent}% | Controls: +10% / -10%\n{status}"
-    repeat_board_text<localizes>(input_player:agent, count:int, status:message):message = "Researcher: {input_player} | Challenge 3\nStarting confidence: 0% | Repeat {count}: New clue +20%\n{status}"
-    addition_text<localizes>(step:int, count:int):message = "New clue +20% | Step {step} of {count}"
-    initial_text<localizes>:message = "Run begins: confidence = 0%"
-    wrong_manual_text<localizes>(current_percent:int, target_percent:int):message = "Confidence reached {current_percent}%; target: {target_percent}%. Each adjustment changes 10%. Revise and try again."
-    wrong_repeat_text<localizes>(current_percent:int, target_percent:int):message = "Confidence reached {current_percent}%; target: {target_percent}%. Each clue adds 20%. Change the repeat count and try again."
+    text<localizes>(value:string):message = "{value}"
+    welcome<localizes>:message = "MAKE THE CORE SAFE\nPix: SAFE - 90% CONFIDENT\nCheck the claim before you act."
 
     OnBegin<override>()<suspends>:void =
         Hide()
-        set door_home = preview_door.GetTransform()
-        claim_button.SetInteractionText(claim_text)
-        add_button.SetInteractionText(add_text)
-        subtract_button.SetInteractionText(subtract_text)
-        count_button.SetInteractionText(count_text)
-        start_button.SetInteractionText(start_text)
-        help_button.SetInteractionText(help_text)
-        next_button.SetInteractionText(next_text)
-        replay_button.SetInteractionText(replay_text)
-        return_button.SetInteractionText(return_text)
-        for (input_button : array{claim_button, add_button, subtract_button, count_button, start_button, help_button, next_button, replay_button, return_button}):
-            input_button.SetInteractionTime(0.0)
-            input_button.SetMaxTriggerCount(0)
-        claim_button.InteractedWithEvent.Subscribe(on_claim)
-        add_button.InteractedWithEvent.Subscribe(on_add)
-        subtract_button.InteractedWithEvent.Subscribe(on_subtract)
-        count_button.InteractedWithEvent.Subscribe(on_count)
-        start_button.InteractedWithEvent.Subscribe(on_start)
-        help_button.InteractedWithEvent.Subscribe(on_help)
-        next_button.InteractedWithEvent.Subscribe(on_next)
+        if (not configured?):
+            return
+        if (targets.Length <> 3):
+            Print("CONFIDENCE CORE: expected exactly three target devices")
+            return
+        set lights = array{first_light, fresh_light, release_light}
+        Sleep(0.1)
+        for (target : targets):
+            target.initialize_surface_home()
+        reset_bay()
+        replay_button.SetInteractionText(text("REPLAY"))
+        return_button.SetInteractionText(text("RETURN TO HUB"))
+        for (control : array{replay_button, return_button}):
+            control.SetInteractionTime(0.0)
+            control.SetMaxTriggerCount(0)
+        return_button.Enable()
         replay_button.InteractedWithEvent.Subscribe(on_replay)
         return_button.InteractedWithEvent.Subscribe(on_return)
-        GetPlayspace().PlayerRemovedEvent().Subscribe(on_removed)
+        progress.round_settings.RoundBeginEvent.Subscribe(on_round)
+        GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
         for (spawner : array{hub_spawner_0, hub_spawner_1, hub_spawner_2, hub_spawner_3}):
             spawner.SpawnedEvent.Subscribe(on_spawn)
-        for (label : array{board, energy_board, door_board}):
-            label.SetTextSize(12)
-        release()
-        loop:
-            Sleep(0.25)
-            if (observed_round <> progress.round_generation):
-                set observed_round = progress.round_generation
-                release()
-            if (input_player := owner?):
-                if (character := input_player.GetFortCharacter[], character.IsActive[]):
-                    if (Distance(character.GetTransform().Translation, GetTransform().Translation) > 1400.0):
-                        release()
-                else:
-                    release()
+        for (index -> target : targets):
+            spawn { listen_hits(target, index) }
+        monitor_player()
 
-    set_door_label(text:message):void =
-        door_board.SetText(text)
-        door_board.UpdateDisplay()
+    in_bay(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        location.X >= bay_min_x
+        location.X <= bay_max_x
+        location.Y >= bay_min_y
+        location.Y <= bay_max_y
+        location.Z >= bay_min_z
+        location.Z <= bay_max_z
 
-    reset_door():void =
-        if (preview_door.TeleportTo[door_home]) {}
-        set_door_label(closed_text)
+    is_owner(input_agent:agent)<transacts><decides>:void =
+        current := active_player?
+        input_agent = current
+        saved_character := active_character?
+        character := current.GetFortCharacter[]
+        character = saved_character
+        character.IsActive[]
+        in_bay[current]
 
-    release():void =
-        if (input_player := owner?, state := progress.states[input_player], state.station_id = station_id):
-            set state.station_id = -1
-            if (state.challenge = 2, not state.solved?):
-                set state.energy = 0
-        set generation += 1
-        set running = false
-        set owner = false
-        mystery_cat.Hide()
-        reset_door()
-        board.SetText(available_text(station_id + 1))
-        board.UpdateDisplay()
-        energy_board.SetText(empty_energy_text)
-        energy_board.UpdateDisplay()
-
-    confidence_percent(value:int):int =
-        return value * 10
-
-    show_board(input_player:player, status:message):void =
-        state := progress.ensure_player(input_player)
-        target := fixtures.target(state.challenge)
-        if (state.challenge = 0):
-            energy_board.SetText(cat_energy_text(confidence_percent(state.energy), confidence_percent(target)))
-        else:
-            energy_board.SetText(energy_text(state.energy, target, confidence_percent(state.energy), confidence_percent(target)))
-        energy_board.UpdateDisplay()
-        if (state.challenge = 2):
-            board.SetText(repeat_board_text(input_player, state.repeat_count, status))
-        else:
-            board.SetText(board_text(input_player, state.challenge + 1, confidence_percent(fixtures.start(state.challenge)), status))
+    show_board(status:string):void =
+        var content:message = welcome
+        if (phase = 0):
+            set content = text("0/3 | MAKE THE CORE SAFE\nPix: SAFE 90% | OUT COOL\nINSIDE UNKNOWN\nA CHECK  B COOL  C RELEASE\n{status}")
+        else if (phase = 1):
+            set content = text("1/3 | PIX WRONG FOR THIS CORE\nOUT COOL | INSIDE HOT\nA CHECK  B COOL  C RELEASE\n{status}")
+        else if (phase = 2):
+            set content = text("1/3 | CORE COOLED\nOUT OLD | IN NOT RECHECKED\nA CHECK  B COOL  C RELEASE\n{status}")
+        else if (phase = 3):
+            set content = text("2/3 | FRESH CHECK\nOUT COOL | INSIDE COOL\nA CHECK  B COOL  C RELEASE\n{status}")
+        else if (phase = 4):
+            set content = text("3/3 | CORE READY\nCONFIDENCE BADGE\nFRESH OUT + IN: COOL\nCheck claim. Check change. Act.")
+        board.SetText(content)
+        board.ShowText()
         board.UpdateDisplay()
 
-    show_ready(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        mystery_cat.Hide()
-        reset_door()
-        if (state.solved?):
-            var opened:transform = door_home
-            set opened.Translation.Z += 350.0
-            if (preview_door.TeleportTo[opened]) {}
-            set_door_label(open_text)
-            if (state.challenge = 0):
-                mystery_cat.Show()
-            show_board(input_player, solved_text)
-        else if (state.challenge = 0):
-            mystery_cat.Show()
-            show_board(input_player, ready_text)
-        else if (state.challenge = 2):
-            show_board(input_player, ready_repeat_text)
-        else:
-            show_board(input_player, ready_text)
-
-    on_claim(input_agent:agent):void =
-        if (input_player := player[input_agent]):
-            if (current := owner?):
-                if (current <> input_player):
-                    feedback.Show(input_player, occupied_text, ?DisplayTime := 5.0)
-                return
-            state := progress.ensure_player(input_player)
-            if (state.station_id >= 0):
-                feedback.Show(input_player, other_text, ?DisplayTime := 5.0)
-                return
-            set state.station_id = station_id
-            set owner = option{input_player}
-            set observed_round = progress.round_generation
-            show_ready(input_player)
-            if (state.challenge = 2):
-                feedback.Show(input_player, repeat_text, ?DisplayTime := 10.0)
-            else if (state.challenge = 0):
-                feedback.Show(input_player, cat_intro_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, manual_text, ?DisplayTime := 10.0)
-
-    on_add(input_agent:agent):void =
-        adjust(input_agent, 1)
-    on_subtract(input_agent:agent):void =
-        adjust(input_agent, -1)
-
-    adjust(input_agent:agent, delta:int):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.solved?):
-                feedback.Show(input_player, solved_text, ?DisplayTime := 5.0)
-                return
-            if (state.challenge = 2):
-                feedback.Show(input_player, repeat_controls_text, ?DisplayTime := 7.0)
-                return
-            updated := state.energy + delta
-            if (updated < 0 or updated > 10):
-                feedback.Show(input_player, boundary_text, ?DisplayTime := 7.0)
-                return
-            set state.energy = updated
-            if (delta > 0):
-                confidence_audio.Play(input_player)
-            if (state.challenge = 0, delta > 0):
-                if (updated = 5):
-                    show_board(input_player, ears_clue_text)
-                else if (updated = 6):
-                    show_board(input_player, whiskers_clue_text)
-                else if (updated = 7):
-                    show_board(input_player, tail_clue_text)
-                else:
-                    show_ready(input_player)
-            else:
-                show_ready(input_player)
-
-    on_count(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.challenge <> 2):
-                feedback.Show(input_player, manual_controls_text, ?DisplayTime := 7.0)
-                return
-            if (state.solved?):
-                feedback.Show(input_player, solved_text, ?DisplayTime := 5.0)
-                return
-            set state.repeat_count += 1
-            if (state.repeat_count > 5):
-                set state.repeat_count = 1
-            set state.energy = 0
-            show_ready(input_player)
-
-    on_start(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.solved?):
-                feedback.Show(input_player, solved_text, ?DisplayTime := 5.0)
-                return
-            set running = true
-            set generation += 1
-            if (state.challenge <> 0):
-                mystery_cat.Hide()
-            reset_door()
-            spawn{execute(input_player, state.repeat_count, generation, progress.round_generation)}
-
-    on_help(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            state := progress.ensure_player(input_player)
-            set state.hint_level += 1
-            if (state.hint_level = 1):
-                feedback.Show(input_player, concept_text, ?DisplayTime := 10.0)
-            else if (state.challenge = 2):
-                feedback.Show(input_player, worked_repeat_text, ?DisplayTime := 10.0)
-            else if (state.challenge = 0):
-                feedback.Show(input_player, worked_cat_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, worked_manual_text, ?DisplayTime := 10.0)
-
-    restart(input_player:player):void =
+    reset_bay():void =
         set generation += 1
-        set running = false
-        state := progress.ensure_player(input_player)
-        set state.energy = fixtures.start(state.challenge)
-        set state.repeat_count = 1
-        set state.hint_level = 0
-        set state.solved = false
-        show_ready(input_player)
+        if (current := active_player?):
+            feedback.Hide(current)
+        set phase = -1
+        set active_player = false
+        set active_character = false
+        set busy = false
+        set mistakes = 0
+        set wrong_ready = 0.0
+        set hold_hint_ready = 0.0
+        for (target : targets):
+            target.deactivate()
+        for (light : lights):
+            light.TurnOff()
+        cooling_effect.End()
+        finish_effect.End()
+        core_display.SetMaterial(core_hot_material)
+        core_display.Show()
+        replay_button.Disable()
+        show_board("")
 
-    on_replay(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            restart(input_player)
+    on_round():void =
+        reset_bay()
 
-    on_next(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (not state.solved?):
-                feedback.Show(input_player, finish_text, ?DisplayTime := 5.0)
-                return
-            if (state.challenge < 2):
-                set state.challenge += 1
-            else:
-                set state.challenge = 0
-            restart(input_player)
-            if (state.challenge = 2):
-                feedback.Show(input_player, repeat_text, ?DisplayTime := 10.0)
-            else if (state.challenge = 0):
-                feedback.Show(input_player, cat_intro_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, manual_text, ?DisplayTime := 10.0)
-
-    valid_run(input_player:player, token:int, round_token:int)<transacts><decides>:void =
-        owner? = input_player
-        generation = token
-        progress.round_generation = round_token
-        running?
-
-    execute(input_player:player, count:int, token:int, round_token:int)<suspends>:void =
-        if (not valid_run[input_player, token, round_token]):
-            return
-        state := progress.ensure_player(input_player)
-        if (state.challenge = 2):
-            set state.energy = 0
-            show_board(input_player, initial_text)
-            Sleep(0.7)
-            for (step := 1..count):
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                set state.energy += 2
-                confidence_audio.Play(input_player)
-                show_board(input_player, addition_text(step, count))
-                Sleep(0.7)
-        if (not valid_run[input_player, token, round_token]):
-            return
-        var reached:logic = false
-        if (state.energy = fixtures.target(state.challenge)):
-            set reached = true
-        if (state.challenge = 0, state.energy >= fixtures.target(state.challenge)):
-            set reached = true
-        if (not reached?):
-            set running = false
-            var explanation:message = wrong_manual_text(confidence_percent(state.energy), confidence_percent(fixtures.target(state.challenge)))
-            if (state.challenge = 2):
-                set explanation = wrong_repeat_text(confidence_percent(state.energy), confidence_percent(fixtures.target(state.challenge)))
-            show_board(input_player, explanation)
-            feedback.Show(input_player, explanation, ?DisplayTime := 10.0)
-            return
-        set_door_label(opening_text)
-        for (step := 1..20):
-            if (not valid_run[input_player, token, round_token]):
-                return
-            var position:transform = door_home
-            set position.Translation.Z += step * 17.5
-            if (preview_door.TeleportTo[position]) {}
-            Sleep(0.05)
-        if (not valid_run[input_player, token, round_token]):
-            return
-        set_door_label(open_text)
-        if (state.challenge = 0):
-            mystery_cat.Show()
-        already_earned := state.badge_earned
-        progress.complete(input_player)
-        set running = false
-        if (state.badge_earned?):
-            show_board(input_player, complete_board_text)
-            if (already_earned?):
-                feedback.Show(input_player, retained_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, complete_text, ?DisplayTime := 12.0)
-        else:
-            show_board(input_player, solved_text)
-            feedback.Show(input_player, solved_text, ?DisplayTime := 8.0)
-
-    on_return(input_agent:agent):void =
-        if (current := owner?, current = input_agent):
-            release()
-        hub_destination.Teleport(input_agent)
+    on_departure(input_player:player):void =
+        if (current := active_player?, current = input_player):
+            reset_bay()
 
     on_spawn(input_agent:agent):void =
-        if (current := owner?, current = input_agent):
-            release()
+        if (current := active_player?, current = input_agent):
+            reset_bay()
 
-    on_removed(input_player:player):void =
-        if (current := owner?, current = input_player):
-            release()
+    begin_solo(input_player:player):void =
+        if (character := input_player.GetFortCharacter[], character.IsActive[], in_bay[input_player]):
+            reset_bay()
+            set active_player = option{input_player}
+            set active_character = option{character}
+            progress.ensure_player(input_player)
+            set phase = 0
+            show_board("Shoot CHECK to measure inside.")
+            for (target : targets):
+                target.activate()
+
+    monitor_player()<suspends>:void =
+        loop:
+            if (current := active_player?):
+                if (not is_owner[current]):
+                    reset_bay()
+            else:
+                for (candidate : GetPlayspace().GetPlayers(), not active_player?):
+                    begin_solo(candidate)
+            Sleep(0.1)
+
+    on_replay(input_agent:agent):void =
+        if (phase = 4, is_owner[input_agent], current := active_player?):
+            begin_solo(current)
+
+    on_return(input_agent:agent):void =
+        if (current := active_player?, current = input_agent):
+            reset_bay()
+        hub_destination.Teleport(input_agent)
+
+    listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
+        loop:
+            input_agent := target.Hit.Await()
+            on_hit(input_agent, target, index)
+
+    on_hit(input_agent:agent, target:fn_shoreline_island_data_target, index:int):void =
+        if (not is_owner[input_agent]):
+            return
+        set last_hit = GetSimulationElapsedTime()
+        if (busy?):
+            if (GetSimulationElapsedTime() >= hold_hint_ready):
+                set hold_hint_ready = GetSimulationElapsedTime() + 0.5
+                feedback.Show(input_agent, text("Release fire to continue."), ?DisplayTime := 0.6)
+            return
+        if (phase < 0 or phase >= 4):
+            return
+        var correct:int = 0
+        if (phase = 1):
+            set correct = 1
+        else if (phase = 3):
+            set correct = 2
+        if (index = correct):
+            accept_action(input_agent, target)
+            return
+        if (index = 0 and phase = 1):
+            show_board("HOT CONFIRMED. COOL NEXT.")
+            feedback.Show(input_agent, text("Inside is still HOT. COOL it, then check again."), ?DisplayTime := 3.0)
+            return
+        if (index = 0 and phase = 3):
+            show_board("COOL CONFIRMED. RELEASE NEXT.")
+            feedback.Show(input_agent, text("Fresh readings remain COOL. RELEASE is ready."), ?DisplayTime := 3.0)
+            return
+        if (index = 1 and phase = 2):
+            show_board("COOLED. CHECK AGAIN.")
+            feedback.Show(input_agent, text("Cooling cannot replace a fresh check."), ?DisplayTime := 3.0)
+            return
+        if (GetSimulationElapsedTime() < wrong_ready):
+            return
+        set wrong_ready = GetSimulationElapsedTime() + 0.4
+        set mistakes += 1
+        target.reject(input_agent)
+        var guidance:string = "Check the evidence before acting."
+        if (phase = 0):
+            set guidance = "Inside is UNKNOWN. Measure it before COOL or RELEASE."
+            if (mistakes >= 2):
+                set guidance = "Shoot A CHECK to learn whether the core is hot."
+        else if (phase = 1):
+            set guidance = "Inside is HOT. Do not release this core."
+            if (mistakes >= 2):
+                set guidance = "Shoot B COOL to fix the measured heat."
+        else if (phase = 2):
+            set guidance = "Old readings cannot prove cooling worked."
+            if (mistakes >= 2):
+                set guidance = "Shoot A CHECK for fresh outside and inside readings."
+        else if (phase = 3):
+            set guidance = "Both fresh readings are COOL. No more cooling is needed."
+            if (mistakes >= 2):
+                set guidance = "Shoot C RELEASE to finish with fresh evidence."
+        var board_hint:string = "CHECK BEFORE ACTING."
+        if (phase = 0):
+            set board_hint = "SHOOT A CHECK FIRST."
+        else if (phase = 1):
+            set board_hint = "HOT INSIDE. SHOOT B COOL."
+        else if (phase = 2):
+            set board_hint = "OLD DATA. SHOOT A CHECK."
+        else if (phase = 3):
+            set board_hint = "FRESH COOL. SHOOT C RELEASE."
+        show_board(board_hint)
+        feedback.Show(input_agent, text(guidance), ?DisplayTime := 3.0)
+
+    accept_action(input_agent:agent, target:fn_shoreline_island_data_target):void =
+        set busy = true
+        set mistakes = 0
+        feedback.Hide(input_agent)
+        target.accept(input_agent, false)
+        for (choice : targets):
+            choice.hit_surface.Disable()
+        var action_result:string = ""
+        if (phase = 0):
+            set action_result = "CHECK found HOT inside. Pix's SAFE claim was wrong here."
+            if (light := lights[0]):
+                light.TurnOn()
+        else if (phase = 1):
+            set action_result = "COOL applied. Old readings are not proof; check again."
+            cooling_effect.Begin()
+            core_display.SetMaterial(core_cooled_material)
+        else if (phase = 2):
+            set action_result = "FRESH CHECK: outside COOL, inside COOL."
+            if (light := lights[1]):
+                light.TurnOn()
+        else if (phase = 3):
+            set action_result = "RELEASE accepted with fresh COOL readings."
+            if (light := lights[2]):
+                light.TurnOn()
+        set phase += 1
+        var board_result:string = ""
+        if (phase = 1):
+            set board_result = "HOT INSIDE. COOL THE CORE."
+        else if (phase = 2):
+            set board_result = "COOLED. CHECK AGAIN."
+        else if (phase = 3):
+            set board_result = "BOTH FRESH READINGS COOL."
+        show_board(board_result)
+        feedback.Show(input_agent, text(action_result), ?DisplayTime := 2.0)
+        confidence_audio.Play(input_agent)
+        if (phase = 4):
+            finish_run(input_agent)
+        else:
+            spawn { rearm_after_feedback(generation, phase) }
+
+    rearm_after_feedback(token:int, expected_phase:int)<suspends>:void =
+        Sleep(1.0)
+        if (generation <> token or phase <> expected_phase):
+            return
+        cooling_effect.End()
+        show_board("")
+        for (choice : targets):
+            choice.hit_surface.Enable()
+        Sleep(0.5)
+        loop:
+            Sleep(0.05)
+            if (generation <> token or phase <> expected_phase):
+                return
+            if (GetSimulationElapsedTime() - last_hit >= 0.5):
+                set busy = false
+                return
+
+    finish_run(input_agent:agent):void =
+        if (current := active_player?, current = input_agent):
+            state := progress.ensure_player(current)
+            if (not state.badge_earned?):
+                for (section := 0..2):
+                    set state.challenge = section
+                    progress.complete(current)
+            set state.challenge = 2
+        cooling_effect.End()
+        finish_effect.Begin()
+        replay_button.Enable()
+        set busy = false

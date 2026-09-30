@@ -41,7 +41,7 @@ fn_shoreline_island_hub_signs := class(creative_device):
     garden_repair_route_text<localizes>:message = "PROMPT WORKSHOP\nTell Pix WHAT, WHICH ONE, WHERE\nFollow the teal path"
     academy_journal_sign_text<localizes>:message = "MY AI CORE JOURNAL\nSee your personal module status\nUse the button below"
     signal_hub_route_text<localizes>:message = "CLASSIFIER: SORT AND CHECK >\nShoot the category"
-    energy_0_route_text<localizes>:message = "CONFIDENCE CORE\nHelp Pix use new clues.\nFollow the wide path southwest."
+    energy_0_route_text<localizes>:message = "CONFIDENCE CORE\nCheck Pix's claim. Cool, then check again.\nFollow the wide path southwest."
     refreshed_text<localizes>(text:message):message = "{text} "
 
     OnBegin<override>()<suspends>:void =
