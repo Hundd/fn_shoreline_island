@@ -1,6 +1,6 @@
 # Classifier: Sort and Check
 
-Revision 2, 2026-09-29. Documentation/design proposal only; not approved or implemented. Replaces the cooperative cargo-rescue draft in `history/revision-1/`. Applies 028's successful simplification and the user's single-player direction. Folder and Classifier Badge identities remain stable.
+Revision 2, 2026-09-29; implementation closed 2026-09-30 on owner playtest acceptance and explicit request to finish the goal. Detailed unperformed regression/learning checks are optional follow-ups in tasks.md, not claimed passes. Replaces the cooperative cargo-rescue draft in `history/revision-1/`. Folder and Classifier Badge identities remain stable.
 
 ## Player experience and learning
 
@@ -10,7 +10,7 @@ Walk into one bay. See one named object and **SHOOT ITS CATEGORY**. Shoot FOOD, 
 |---|---|---|
 | Label examples | Burger, chair, car: Food, Furniture, Vehicle. | Classification assigns categories using what an item is or does. |
 | Check a prediction | Chair with `PIX PREDICTS: VEHICLE`; shoot Furniture. | Check a prediction against the item; AI labels can be wrong. |
-| Try new examples | Banana, sofa, tractor: Food, Furniture, Vehicle. | Different examples test whether the category rule still fits. |
+| Try new examples | Apple, sofa, tractor: Food, Furniture, Vehicle. | Different examples test whether the category rule still fits. |
 
 Seven correct shots, always using the same three targets. No separate error-card selection, repair mode, Run or Ship. First-run target: 60-120 seconds; first shot within 10 seconds. These are usability targets, not timers or measured results. This authored exercise does not train a real model, and three new examples do not prove universal accuracy.
 
@@ -43,3 +43,17 @@ Seven correct shots, always using the same three targets. No separate error-card
 ## Scope
 
 Fixed examples favor a clear first lesson; randomized queues, scoring and cooperation are outside revision 2. Eligible prop equivalents must preserve category, recognizable shape, new-example distinction and size; update item names/fixtures/reasons together. Changes to lesson, mechanic or layout require renewed review.
+
+
+## Approved-scope implementation update (2026-09-29)
+
+The owner authorized revision 2 with "when you finish, run 29 implementation". Approval and readiness are recorded in approval.yaml. Implementation is in progress; gameplay acceptance remains open. The new food example uses a recognizable APPLE under the approved same-category substitution rule: the inspected banana-pile candidate depicted discarded peels. The immutable reviewed map retains new_banana as its original role identifier; implementation fixtures and displayed copy use APPLE and "An apple is food we can eat too." Category order, six-example count, dimensions and lesson are unchanged. Eligibility/visual verification is recorded separately from registry discovery.
+
+## Owner playtest repair: feedback and completion (2026-09-30)
+
+Owner reports the game works, but correct/wrong answers feel unresponsive and the ending is unclear because example/answer assets remain visible. This is a failure of S-04/S-06/S-08, not acceptance of those checks. Repair the existing feedback and two-button finish presentation within revision 2; retain geometry, seven decisions, category rules, rewards and replay/return actions.
+
+- S-04a: Each accepted correct answer immediately displays CORRECT! plus solved count out of seven on the existing HUD and board. The selected answer label also acknowledges correctness for one second. Wrong category choices immediately display TRY AGAIN and the existing functional hint; subsequent mistakes retain the explicit answer/reason. No penalty. A shot hitting no category is not treated as a wrong classification: the existing damage-only inputs do not observe shots into empty space.
+- S-06a: After the last result, hide/park the example and deactivate all answer assemblies. Keep section lights and the main recap. Show persistent LESSON COMPLETE / CLASSIFIER BADGE EARNED and PLAY AGAIN or RETURN TO HUB instructions on the existing HUD/board. Replay restores the initial example and three choices and clears the finish message. Return/departure clears the finish message.
+- AC-10: Given a live item, when choosing correctly or choosing the wrong category twice, then visible HUD/target feedback distinguishes success from retry and the board preserves the appropriate evidence. Verify with muted audio too.
+- AC-11: Given the seventh answer, when the result ends, then no example or active answer assembly remains; the completion prompt persists until Replay/Return/departure. Replay restores playable visuals without duplicating the badge; Return exits normally.

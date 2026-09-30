@@ -40,7 +40,7 @@ fn_shoreline_island_hub_signs := class(creative_device):
     hub_loop_route_text<localizes>:message = "PATTERN SCANNER >\nShoot the missing symbol"
     garden_repair_route_text<localizes>:message = "PROMPT WORKSHOP\nTell Pix WHAT, WHICH ONE, WHERE\nFollow the teal path"
     academy_journal_sign_text<localizes>:message = "MY AI CORE JOURNAL\nSee your personal module status\nUse the button below"
-    signal_hub_route_text<localizes>:message = "AI CLASSIFIER >\nSort incoming items into categories."
+    signal_hub_route_text<localizes>:message = "CLASSIFIER: SORT AND CHECK >\nShoot the category"
     energy_0_route_text<localizes>:message = "CONFIDENCE CORE\nHelp Pix use new clues.\nFollow the wide path southwest."
     refreshed_text<localizes>(text:message):message = "{text} "
 

@@ -1,39 +1,21 @@
 using { /Fortnite.com/Devices }
 using { /Fortnite.com/Characters }
 using { /Verse.org/Simulation }
-using { /Verse.org/Colors }
-using { /Fortnite.com/UI }
-using { /UnrealEngine.com/Temporary/UI }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
-classifier_mistake_action := class:
-    station:fn_shoreline_island_signal_station
-    generation:int
-    choice:int
-    on_click(click_message:widget_message):void =
-        station.on_mistake_choice(click_message.Player, generation, choice)
-
+# One solo lesson; the same three category targets serve all seven decisions.
 fn_shoreline_island_signal_station := class(creative_device):
     @editable
-    station_id:int = 0
+    configured:logic = false
     @editable
     progress:fn_shoreline_island_signal_progress = fn_shoreline_island_signal_progress{}
     @editable
-    claim_button:button_device = button_device{}
+    targets:[]fn_shoreline_island_data_target = array{}
+    # Preserve names of existing native bindings.
     @editable
-    garden_button:button_device = button_device{}
+    board:billboard_device = billboard_device{}
     @editable
-    workshop_button:button_device = button_device{}
-    @editable
-    storage_button:button_device = button_device{}
-    @editable
-    rule_button:button_device = button_device{}
-    @editable
-    run_button:button_device = button_device{}
-    @editable
-    help_button:button_device = button_device{}
-    @editable
-    next_button:button_device = button_device{}
+    feedback:hud_message_device = hud_message_device{}
     @editable
     replay_button:button_device = button_device{}
     @editable
@@ -41,483 +23,306 @@ fn_shoreline_island_signal_station := class(creative_device):
     @editable
     hub_destination:teleporter_device = teleporter_device{}
     @editable
-    feedback:hud_message_device = hud_message_device{}
-    @editable
     classification_audio:audio_player_device = audio_player_device{}
     @editable
-    board:billboard_device = billboard_device{}
+    examples_light:customizable_light_device = customizable_light_device{}
     @editable
-    rule_board:billboard_device = billboard_device{}
+    correction_light:customizable_light_device = customizable_light_device{}
     @editable
-    cargo_board:billboard_device = billboard_device{}
+    new_examples_light:customizable_light_device = customizable_light_device{}
     @editable
-    boat:creative_prop = creative_prop{}
+    finale_effect:vfx_creator_device = vfx_creator_device{}
+    # Native prop homes share one visual center; explicit fields retain wrappers.
     @editable
-    garden_dock:creative_prop = creative_prop{}
+    burger:creative_prop = creative_prop{}
     @editable
-    workshop_dock:creative_prop = creative_prop{}
+    chair:creative_prop = creative_prop{}
     @editable
-    storage_dock:creative_prop = creative_prop{}
+    car:creative_prop = creative_prop{}
     @editable
-    hub_spawner_0:player_spawner_device = player_spawner_device{}
+    apple:creative_prop = creative_prop{}
     @editable
-    hub_spawner_1:player_spawner_device = player_spawner_device{}
+    sofa:creative_prop = creative_prop{}
     @editable
-    hub_spawner_2:player_spawner_device = player_spawner_device{}
-    @editable
-    hub_spawner_3:player_spawner_device = player_spawner_device{}
+    tractor:creative_prop = creative_prop{}
 
-    fixtures:fn_shoreline_island_signal_fixtures = fn_shoreline_island_signal_fixtures{}
-    apple_material:Academy.Cargo.mi_ai_classifier_apple = Academy.Cargo.mi_ai_classifier_apple{}
-    puppy_material:Academy.Cargo.mi_ai_classifier_puppy = Academy.Cargo.mi_ai_classifier_puppy{}
-    car_material:Academy.Cargo.mi_ai_classifier_car = Academy.Cargo.mi_ai_classifier_car{}
-    var owner:?player = false
-    var running:logic = false
+    success_ids:[]int = array{0, 1, 2, 1, 0, 1, 2}
+    example_ids:[]int = array{0, 1, 2, 1, 3, 4, 5}
+    item_names:[]string = array{"BURGER", "CHAIR", "CAR", "CHAIR", "APPLE", "SOFA", "TRACTOR"}
+    category_names:[]string = array{"FOOD", "FURNITURE", "VEHICLE"}
+    reasons:[]string = array{
+        "A burger is food we can eat.",
+        "A chair is furniture for sitting.",
+        "A car is a vehicle that transports people.",
+        "The chair is furniture. Pix's prediction was wrong.",
+        "An apple is food we can eat too.",
+        "A sofa is furniture for sitting too.",
+        "A tractor is a vehicle that carries a driver and pulls loads."}
+    hints:[]string = array{
+        "Think about what we eat.",
+        "What do we use to sit in a room?",
+        "What carries people from place to place?",
+        "Check the chair: what is it used for?",
+        "Think about what we eat.",
+        "What do we use to sit in a room?",
+        "What carries a driver and pulls loads?"}
+
+    var phase:int = -1
+    var sections:int = 0
     var generation:int = 0
     var observed_round:int = -1
-    var boat_home:transform = transform{}
-    var cargo_home:transform = transform{}
-    var mistake_panel:?canvas = false
-    var mistake_generation:int = 0
+    var busy:logic = false
+    var mistakes:int = 0
+    var last_hit:float = 0.0
+    var wrong_ready:float = 0.0
+    var active_player:?player = false
+    var active_character:?fort_character = false
+    var example_homes:[]transform = array{}
+    var examples:[]creative_prop = array{}
+    var section_lights:[]customizable_light_device = array{}
 
-    claim_text<localizes>:message = "Claim classifier station"
-    garden_text<localizes>:message = "Classify as Food"
-    workshop_text<localizes>:message = "Classify as Animal"
-    storage_text<localizes>:message = "Classify as Vehicle"
-    rule_text<localizes>:message = "Change rule A / B / C"
-    run_text<localizes>:message = "Run selected rule"
-    help_text<localizes>:message = "Help"
-    next_text<localizes>:message = "Next challenge / Replay all"
-    replay_text<localizes>:message = "Replay current queue"
-    return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "AI CLASSIFIER | Station {number}\nPress CLAIM to sort incoming items."
-    occupied_text<localizes>:message = "This classifier is in use. Choose another station."
-    other_text<localizes>:message = "Leave your current classifier before claiming another."
-    manual_text<localizes>:message = "Read the incoming item, then choose its category."
-    final_text<localizes>:message = "Read the whole item queue. Choose a classification rule, then Run. Watch each item reach its category."
-    manual_only_text<localizes>:message = "Choose a category for this item. Rules begin in challenge 3."
-    rule_only_text<localizes>:message = "For this queue, choose a classification rule and press Run."
-    finish_text<localizes>:message = "Classify this queue first. Help is always available."
-    ready_text<localizes>:message = "Choose a category."
-    ready_rule_text<localizes>:message = "Choose a rule, then Run."
-    solved_text<localizes>:message = "Queue classified! Press Next."
-    complete_text<localizes>:message = "PIX MODULE RESTORED: CLASSIFICATION ONLINE\nClassifier Badge earned! Classification means putting things into categories. Replay or return to the hub."
-    retained_text<localizes>:message = "Queue classified again! Your Classifier Badge stays earned for this round."
-    complete_board_text<localizes>:message = "Classifier Badge earned! Help: optional Dolphin check. Replay anytime."
-    mistake_question<localizes>:message = "OPTIONAL AI MISTAKE\nPix predicts: Dolphin > FISH.\nIs this correct?"
-    mistake_correct<localizes>:message = "Good check: No. A dolphin is a MAMMAL, not a fish.\nAI can make mistakes; check important results."
-    mistake_wrong<localizes>:message = "Not quite. A dolphin breathes air and nurses its young.\nCheck Pix's prediction and try again."
-    mistake_yes<localizes>:message = "Yes"
-    mistake_no<localizes>:message = "No"
-    mistake_again<localizes>:message = "Try again"
-    mistake_close<localizes>:message = "Close"
-    first_rule_text<localizes>:message = "CLASSIFICATION RULE\nChoose Food, Animal, or Vehicle."
-    second_rule_text<localizes>:message = "If APPLE: Food. If PUPPY: Animal.\nOtherwise: Vehicle."
-    all_rules_text<localizes>:message = "Rule | APPLE / PUPPY / CAR\nA | Food / Animal / Vehicle\nB | Vehicle / Animal / Food\nC | Food / Food / Vehicle"
-    concept_text<localizes>:message = "Classification means checking an item and choosing its category. Does every choice match the item?"
-    worked_rule_text<localizes>:message = "Try Rule A: APPLE is Food, PUPPY is Animal, and CAR is Vehicle. It matches the whole queue."
-    worked_manual_text<localizes>(cargo:string, destination:string):message = "This item is {cargo}. Classify it as {destination}. Then check the next label."
-    cargo_text<localizes>(cargo:string):message = "INCOMING ITEM: {cargo}"
-    empty_cargo_text<localizes>:message = "INCOMING ITEM QUEUE"
-    board_text<localizes>(input_player:agent, challenge:int, queue:string, position:int, total:int, rule:string, status:message):message = "Classifier: {input_player} | Challenge {challenge}\nItems: {queue}\nItem {position}/{total} | Rule {rule}\n{status}"
-    manual_board_text<localizes>(input_player:agent, challenge:int, queue:string, position:int, total:int, status:message):message = "Classifier: {input_player} | Challenge {challenge}\nItems: {queue}\nItem {position}/{total}\n{status}"
-    moving_text<localizes>(cargo:string, destination:string):message = "{cargo} classified as {destination}"
-    apple_reason<localizes>:message = "An apple is food people can eat."
-    puppy_reason<localizes>:message = "A puppy is an animal."
-    car_reason<localizes>:message = "A car is a vehicle people travel in."
-    wrong_text<localizes>(cargo:string, actual:string, expected:string, reason:message):message = "{cargo} went to {actual}; it belongs in {expected}. {reason} Try again."
-    delivered_text<localizes>(cargo:string, destination:string):message = "{cargo} classified as {destination}."
+    text<localizes>(value:string):message = "{value}"
+    welcome<localizes>:message = "CLASSIFIER: SORT AND CHECK\nSHOOT ITS CATEGORY\nA FOOD    B FURNITURE    C VEHICLE"
+    finished<localizes>:message = "LESSON COMPLETE! 7/7\nCLASSIFIER BADGE EARNED\nLabel. Check. Try new examples.\nUse PLAY AGAIN or RETURN TO HUB"
+    finish_hud<localizes>:message = "LESSON COMPLETE!\nClassifier Badge earned - 7/7\nPlay again? Use PLAY AGAIN or RETURN TO HUB."
 
     OnBegin<override>()<suspends>:void =
         Hide()
-        set boat_home = boat.GetTransform()
-        set cargo_home = cargo_board.GetTransform()
-        claim_button.SetInteractionText(claim_text)
-        garden_button.SetInteractionText(garden_text)
-        workshop_button.SetInteractionText(workshop_text)
-        storage_button.SetInteractionText(storage_text)
-        rule_button.SetInteractionText(rule_text)
-        run_button.SetInteractionText(run_text)
-        help_button.SetInteractionText(help_text)
-        next_button.SetInteractionText(next_text)
-        replay_button.SetInteractionText(replay_text)
-        return_button.SetInteractionText(return_text)
-        for (input_button : array{claim_button, garden_button, workshop_button, storage_button, rule_button, run_button, help_button, next_button, replay_button, return_button}):
-            input_button.SetInteractionTime(0.0)
-            input_button.SetMaxTriggerCount(0)
-        claim_button.InteractedWithEvent.Subscribe(on_claim)
-        garden_button.InteractedWithEvent.Subscribe(on_garden)
-        workshop_button.InteractedWithEvent.Subscribe(on_workshop)
-        storage_button.InteractedWithEvent.Subscribe(on_storage)
-        rule_button.InteractedWithEvent.Subscribe(on_rule)
-        run_button.InteractedWithEvent.Subscribe(on_run)
-        help_button.InteractedWithEvent.Subscribe(on_help)
-        next_button.InteractedWithEvent.Subscribe(on_next)
+        if (not configured?):
+            return
+        set examples = array{burger, chair, car, apple, sofa, tractor}
+        set section_lights = array{examples_light, correction_light, new_examples_light}
+        if (targets.Length <> 3 or examples.Length <> 6 or section_lights.Length <> 3):
+            Print("CLASSIFIER: incomplete solo configuration")
+            return
+        Sleep(0.1)
+        for (target : targets):
+            set target.explicit_answer_feedback = true
+            set target.answer_feedback_seconds = 1.0
+            target.initialize_surface_home()
+        for (example : examples):
+            set example_homes += array{example.GetTransform()}
+        set observed_round = progress.round_generation
+        reset_run()
+        replay_button.SetInteractionText(text("PLAY AGAIN"))
+        return_button.SetInteractionText(text("RETURN TO HUB"))
+        for (control : array{replay_button, return_button}):
+            control.SetInteractionTime(0.0)
+            control.SetMaxTriggerCount(0)
+        return_button.Enable()
         replay_button.InteractedWithEvent.Subscribe(on_replay)
         return_button.InteractedWithEvent.Subscribe(on_return)
-        GetPlayspace().PlayerRemovedEvent().Subscribe(on_removed)
-        for (spawner : array{hub_spawner_0, hub_spawner_1, hub_spawner_2, hub_spawner_3}):
-            spawner.SpawnedEvent.Subscribe(on_spawn)
-        board.SetTextSize(12)
-        rule_board.SetTextSize(12)
-        cargo_board.SetTextSize(12)
-        release()
+        GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
+        for (index -> target : targets):
+            spawn { listen_hits(target, index) }
+        monitor_player()
+
+    show_board(content:message):void =
+        board.SetText(content)
+        board.ShowText()
+        board.UpdateDisplay()
+
+    show_feedback(input_agent:agent, content:message, duration:float):void =
+        # Replace the current message instead of queuing an obsolete result.
+        feedback.Hide(input_agent)
+        feedback.Show(input_agent, content, ?DisplayTime := duration)
+
+    in_bay(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        location.X >= -4600.0
+        location.X <= -2200.0
+        location.Y >= -600.0
+        location.Y <= 2700.0
+        location.Z >= 2350.0
+        location.Z <= 3300.0
+
+    is_active_player(input_agent:agent)<transacts><decides>:void =
+        current := active_player?
+        input_agent = current
+        saved_character := active_character?
+        character := current.GetFortCharacter[]
+        character = saved_character
+        character.IsActive[]
+        in_bay[current]
+        observed_round = progress.round_generation
+
+    hide_examples():void =
+        for (index -> example : examples, home := example_homes[index]):
+            example.Hide()
+            var parked:transform = home
+            set parked.Translation = home.Translation + vector3{Z := -10000.0}
+            if (example.TeleportTo[parked]) {}
+
+    show_example():void =
+        hide_examples()
+        if (index := example_ids[phase], example := examples[index], home := example_homes[index]):
+            if (example.TeleportTo[home]) {}
+            example.Show()
+
+    reset_run():void =
+        set generation += 1
+        if (current := active_player?):
+            feedback.Hide(current)
+        set phase = -1
+        set sections = 0
+        set active_player = false
+        set active_character = false
+        set busy = false
+        set mistakes = 0
+        set wrong_ready = 0.0
+        for (target : targets):
+            target.deactivate()
+        hide_examples()
+        for (light : section_lights):
+            light.TurnOff()
+        replay_button.Disable()
+        finale_effect.End()
+        show_board(welcome)
+
+    begin_solo(input_player:player):void =
+        if (character := input_player.GetFortCharacter[], character.IsActive[], in_bay[input_player]):
+            reset_run()
+            set active_player = option{input_player}
+            set active_character = option{character}
+            progress.ensure_player(input_player)
+            set phase = 0
+            show_example()
+            show_prompt("")
+            for (target : targets):
+                target.activate()
+
+    monitor_player()<suspends>:void =
         loop:
-            Sleep(0.25)
             if (observed_round <> progress.round_generation):
                 set observed_round = progress.round_generation
-                release()
-            if (input_player := owner?):
-                if (character := input_player.GetFortCharacter[], character.IsActive[]):
-                    if (Distance(character.GetTransform().Translation, GetTransform().Translation) > 1400.0):
-                        release()
-                else:
-                    release()
-
-    reset_boat():void =
-        if (boat.TeleportTo[boat_home]) {}
-        if (cargo_board.TeleportTo[cargo_home]) {}
-
-    show_cargo(cargo:int):void =
-        if (cargo = 0):
-            boat.SetMaterial(apple_material)
-        else if (cargo = 1):
-            boat.SetMaterial(puppy_material)
-        else:
-            boat.SetMaterial(car_material)
-        cargo_board.SetText(cargo_text(fixtures.cargo_name(cargo)))
-        cargo_board.UpdateDisplay()
-
-    release():void =
-        close_mistake()
-        if (input_player := owner?, state := progress.states[input_player], state.station_id = station_id):
-            set state.station_id = -1
-            if (state.challenge = 2, not state.solved?):
-                set state.cursor = 0
-        set generation += 1
-        set running = false
-        set owner = false
-        reset_boat()
-        boat.SetMaterial(car_material)
-        board.SetText(available_text(station_id + 1))
-        board.UpdateDisplay()
-        rule_board.SetText(first_rule_text)
-        rule_board.UpdateDisplay()
-        cargo_board.SetText(empty_cargo_text)
-        cargo_board.UpdateDisplay()
-
-    show_board(input_player:player, status:message):void =
-        state := progress.ensure_player(input_player)
-        queue := fixtures.queue(state.challenge)
-        var position:int = state.cursor + 1
-        if (position > queue.Length):
-            set position = queue.Length
-        if (state.challenge = 2):
-            board.SetText(board_text(input_player, state.challenge + 1, fixtures.queue_text(state.challenge), position, queue.Length, fixtures.rule_name(state.selected_rule), status))
-        else:
-            board.SetText(manual_board_text(input_player, state.challenge + 1, fixtures.queue_text(state.challenge), position, queue.Length, status))
-        board.UpdateDisplay()
-        if (state.challenge = 0):
-            rule_board.SetText(first_rule_text)
-        else if (state.challenge = 1):
-            rule_board.SetText(second_rule_text)
-        else:
-            rule_board.SetText(all_rules_text)
-        rule_board.UpdateDisplay()
-
-    show_ready(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        reset_boat()
-        if (cargo := fixtures.queue(state.challenge)[state.cursor]):
-            show_cargo(cargo)
-        if (state.solved?):
-            if (state.badge_earned?):
-                show_board(input_player, complete_board_text)
+                reset_run()
+            if (current := active_player?):
+                if (not is_active_player[current]):
+                    reset_run()
             else:
-                show_board(input_player, solved_text)
-        else if (state.challenge = 2):
-            show_board(input_player, ready_rule_text)
-        else:
-            show_board(input_player, ready_text)
+                for (candidate : GetPlayspace().GetPlayers(), not active_player?):
+                    begin_solo(candidate)
+            Sleep(0.1)
 
-    on_claim(input_agent:agent):void =
-        if (input_player := player[input_agent]):
-            if (current := owner?):
-                if (current <> input_player):
-                    feedback.Show(input_player, occupied_text, ?DisplayTime := 5.0)
-                return
-            state := progress.ensure_player(input_player)
-            if (state.station_id >= 0):
-                feedback.Show(input_player, other_text, ?DisplayTime := 5.0)
-                return
-            set state.station_id = station_id
-            set owner = option{input_player}
-            set observed_round = progress.round_generation
-            show_ready(input_player)
-            if (state.challenge = 2):
-                feedback.Show(input_player, final_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, manual_text, ?DisplayTime := 10.0)
-
-    on_garden(input_agent:agent):void =
-        choose_destination(input_agent, 0)
-    on_workshop(input_agent:agent):void =
-        choose_destination(input_agent, 1)
-    on_storage(input_agent:agent):void =
-        choose_destination(input_agent, 2)
-
-    choose_destination(input_agent:agent, destination:int):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.solved?):
-                feedback.Show(input_player, solved_text, ?DisplayTime := 5.0)
-                return
-            if (state.challenge = 2):
-                feedback.Show(input_player, rule_only_text, ?DisplayTime := 5.0)
-                return
-            set running = true
-            set generation += 1
-            spawn{execute_manual(input_player, destination, generation, progress.round_generation)}
-
-    on_rule(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.challenge <> 2):
-                feedback.Show(input_player, manual_only_text, ?DisplayTime := 5.0)
-                return
-            if (state.solved?):
-                return
-            set state.selected_rule += 1
-            if (state.selected_rule > 2):
-                set state.selected_rule = 0
-            set state.cursor = 0
-            show_ready(input_player)
-
-    on_run(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.challenge <> 2):
-                feedback.Show(input_player, manual_only_text, ?DisplayTime := 5.0)
-                return
-            if (state.solved?):
-                feedback.Show(input_player, solved_text, ?DisplayTime := 5.0)
-                return
-            set state.cursor = 0
-            set running = true
-            set generation += 1
-            spawn{execute_rule(input_player, state.selected_rule, generation, progress.round_generation)}
-
-    close_mistake():void =
-        if (panel := mistake_panel?, input_player := owner?, personal_ui := GetPlayerUI[input_player]):
-            personal_ui.RemoveWidget(panel)
-        set mistake_panel = false
-        set mistake_generation += 1
-
-    mistake_button(text:message, token:int, choice:int):button_regular =
-        answer_button := button_regular{DefaultText := text}
-        answer_button.OnClick().Subscribe(classifier_mistake_action{station := Self, generation := token, choice := choice}.on_click)
-        return answer_button
-
-    show_optional_mistake(input_player:player, answer:int):void =
-        close_mistake()
-        if (personal_ui := GetPlayerUI[input_player]):
-            token := mistake_generation
-            var page:message = mistake_question
-            if (answer = 0):
-                set page = mistake_correct
-            else if (answer = 1):
-                set page = mistake_wrong
-            center := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}
-            var slots:[]canvas_slot = array:
-                canvas_slot:
-                    Anchors := center
-                    SizeToContent := false
-                    Offsets := margin{Left := -450.0, Top := -220.0, Right := 900.0, Bottom := 440.0}
-                    Widget := color_block{DefaultColor := color{R := 0.015, G := 0.04, B := 0.08}, DefaultOpacity := 0.98}
-                canvas_slot:
-                    Anchors := center
-                    SizeToContent := false
-                    Offsets := margin{Left := -420.0, Top := -190.0, Right := 840.0, Bottom := 290.0}
-                    Widget := text_block{DefaultText := page, DefaultTextColor := NamedColors.White, DefaultTextSize := 22.0}
-            close_button := mistake_button(mistake_close, token, -2)
-            set slots += array{canvas_slot{Anchors := center, SizeToContent := false,
-                Offsets := margin{Left := 140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := close_button}}
-            if (answer < 0):
-                no_button := mistake_button(mistake_no, token, 0)
-                yes_button := mistake_button(mistake_yes, token, 1)
-                set slots += array{
-                    canvas_slot{Anchors := center, SizeToContent := false,
-                        Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := no_button},
-                    canvas_slot{Anchors := center, SizeToContent := false,
-                        Offsets := margin{Left := -140.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := yes_button}}
-            else:
-                again_button := mistake_button(mistake_again, token, -1)
-                set slots += array{canvas_slot{Anchors := center, SizeToContent := false,
-                    Offsets := margin{Left := -420.0, Top := 130.0, Right := 260.0, Bottom := 55.0}, Widget := again_button}}
-            panel := canvas{Slots := slots}
-            set mistake_panel = option{panel}
-            personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})
-
-    on_mistake_choice(input_player:player, token:int, choice:int):void =
-        if (current := owner?, current = input_player, mistake_generation = token, mistake_panel?):
-            if (choice = -2):
-                close_mistake()
-            else:
-                show_optional_mistake(input_player, choice)
-
-    on_help(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            state := progress.ensure_player(input_player)
-            if (state.challenge = 2, state.solved?, state.badge_earned?):
-                show_optional_mistake(input_player, -1)
-                return
-            set state.hint_level += 1
-            if (state.hint_level = 1):
-                feedback.Show(input_player, concept_text, ?DisplayTime := 10.0)
-            else if (state.challenge = 2):
-                feedback.Show(input_player, worked_rule_text, ?DisplayTime := 10.0)
-            else if (cargo := fixtures.queue(state.challenge)[state.cursor]):
-                feedback.Show(input_player, worked_manual_text(fixtures.cargo_name(cargo), fixtures.destination_name(cargo)), ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, solved_text, ?DisplayTime := 5.0)
-
-    restart_queue(input_player:player):void =
-        close_mistake()
-        set generation += 1
-        set running = false
-        state := progress.ensure_player(input_player)
-        set state.cursor = 0
-        set state.hint_level = 0
-        set state.solved = false
-        set state.selected_rule = 1
-        show_ready(input_player)
+    on_departure(input_player:player):void =
+        if (current := active_player?, current = input_player):
+            reset_run()
 
     on_replay(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            restart_queue(input_player)
-
-    on_next(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (not state.solved?):
-                feedback.Show(input_player, finish_text, ?DisplayTime := 5.0)
-                return
-            if (state.challenge < 2):
-                set state.challenge += 1
-            else:
-                set state.challenge = 0
-            restart_queue(input_player)
-            if (state.challenge = 2):
-                feedback.Show(input_player, final_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, manual_text, ?DisplayTime := 10.0)
-
-    valid_run(input_player:player, token:int, round_token:int)<transacts><decides>:void =
-        owner? = input_player
-        generation = token
-        progress.round_generation = round_token
-        running?
-
-    sail(input_player:player, cargo:int, destination:int, token:int, round_token:int)<suspends>:void =
-        if (not valid_run[input_player, token, round_token]):
-            return
-        reset_boat()
-        show_cargo(cargo)
-        show_board(input_player, moving_text(fixtures.cargo_name(cargo), fixtures.destination_name(destination)))
-        if (dock := array{garden_dock, workshop_dock, storage_dock}[destination]):
-            # Moor in front of the dock so the boat remains visible on arrival.
-            delta := dock.GetTransform().Translation + vector3{Y := -300.0} - boat_home.Translation
-            for (step := 1..20):
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                var position:transform = boat_home
-                set position.Translation = boat_home.Translation + delta * (step * 0.05)
-                var label_position:transform = cargo_home
-                set label_position.Translation = cargo_home.Translation + delta * (step * 0.05)
-                if (boat.TeleportTo[position]) {}
-                if (cargo_board.TeleportTo[label_position]) {}
-                Sleep(0.1)
-        Sleep(0.5)
-
-    finish_queue(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        already_earned := state.badge_earned
-        progress.complete(input_player)
-        set running = false
-        if (state.badge_earned?):
-            show_board(input_player, complete_board_text)
-            if (already_earned?):
-                feedback.Show(input_player, retained_text, ?DisplayTime := 10.0)
-            else:
-                feedback.Show(input_player, complete_text, ?DisplayTime := 12.0)
-        else:
-            show_board(input_player, solved_text)
-            feedback.Show(input_player, solved_text, ?DisplayTime := 8.0)
-
-    reason_for(cargo:int):message =
-        if (cargo = 0):
-            return apple_reason
-        if (cargo = 1):
-            return puppy_reason
-        return car_reason
-
-    show_mismatch(input_player:player, cargo:int, destination:int):void =
-        set running = false
-        explanation := wrong_text(fixtures.cargo_name(cargo), fixtures.destination_name(destination), fixtures.destination_name(cargo), reason_for(cargo))
-        show_board(input_player, explanation)
-        feedback.Show(input_player, explanation, ?DisplayTime := 10.0)
-
-    execute_manual(input_player:player, destination:int, token:int, round_token:int)<suspends>:void =
-        if (not valid_run[input_player, token, round_token]):
-            return
-        state := progress.ensure_player(input_player)
-        queue := fixtures.queue(state.challenge)
-        if (cargo := queue[state.cursor]):
-            sail(input_player, cargo, destination, token, round_token)
-            if (not valid_run[input_player, token, round_token]):
-                return
-            if (destination <> cargo):
-                show_mismatch(input_player, cargo, destination)
-                return
-            classification_audio.Play(input_player)
-            feedback.Show(input_player, delivered_text(fixtures.cargo_name(cargo), fixtures.destination_name(destination)), ?DisplayTime := 6.0)
-            set state.cursor += 1
-            if (state.cursor = queue.Length):
-                finish_queue(input_player)
-            else:
-                set running = false
-                show_ready(input_player)
-
-    execute_rule(input_player:player, rule:int, token:int, round_token:int)<suspends>:void =
-        for (index -> cargo : fixtures.queue(2)):
-            if (not valid_run[input_player, token, round_token]):
-                return
-            state := progress.ensure_player(input_player)
-            set state.cursor = index
-            destination := fixtures.route(rule, cargo)
-            sail(input_player, cargo, destination, token, round_token)
-            if (not valid_run[input_player, token, round_token]):
-                return
-            if (destination <> cargo):
-                show_mismatch(input_player, cargo, destination)
-                return
-            classification_audio.Play(input_player)
-            show_board(input_player, delivered_text(fixtures.cargo_name(cargo), fixtures.destination_name(destination)))
-            Sleep(0.5)
-        if (valid_run[input_player, token, round_token]):
-            state := progress.ensure_player(input_player)
-            set state.cursor = fixtures.queue(2).Length
-            finish_queue(input_player)
+        if (phase = 7, is_active_player[input_agent], current := active_player?):
+            begin_solo(current)
 
     on_return(input_agent:agent):void =
-        if (current := owner?, current = input_agent):
-            release()
+        if (current := active_player?, current = input_agent):
+            reset_run()
         hub_destination.Teleport(input_agent)
 
-    on_spawn(input_agent:agent):void =
-        if (current := owner?, current = input_agent):
-            release()
+    prompt_header():string =
+        if (phase < 3):
+            return "{sections}/3 SECTIONS | LABEL EXAMPLES {phase + 1}/3"
+        if (phase = 3):
+            return "{sections}/3 SECTIONS | CHECK A PREDICTION 1/1"
+        return "{sections}/3 SECTIONS | NEW EXAMPLES {phase - 3}/3"
 
-    on_removed(input_player:player):void =
-        if (current := owner?, current = input_player):
-            release()
+    show_prompt(guidance:string):void =
+        if (item := item_names[phase]):
+            var question:string = "{item} - SHOOT ITS CATEGORY"
+            if (phase = 3):
+                set question = "CHAIR | PIX PREDICTS: VEHICLE\nSHOOT THE CATEGORY YOU THINK FITS"
+            show_board(text("{prompt_header()}\n{question}\n{guidance}"))
+
+    listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
+        loop:
+            input_agent := target.Hit.Await()
+            on_hit(input_agent, target, index)
+
+    on_hit(input_agent:agent, target:fn_shoreline_island_data_target, index:int):void =
+        if (not is_active_player[input_agent]):
+            return
+        set last_hit = GetSimulationElapsedTime()
+        if (busy? or phase < 0 or phase >= 7):
+            return
+        if (correct := success_ids[phase], reason := reasons[phase]):
+            if (index <> correct):
+                if (GetSimulationElapsedTime() < wrong_ready):
+                    return
+                set wrong_ready = GetSimulationElapsedTime() + 0.4
+                set mistakes += 1
+                target.reject(input_agent)
+                if (hint := hints[phase], category := category_names[correct]):
+                    var guidance:string = "TRY AGAIN - {hint}"
+                    if (mistakes >= 2):
+                        set guidance = "TRY AGAIN - Choose {category}. {reason}"
+                    show_prompt(guidance)
+                    show_feedback(input_agent, text(guidance), 0.0)
+                return
+            # Lock before any suspended work or persistent writes.
+            set busy = true
+            feedback.Hide(input_agent)
+            target.accept(input_agent, false)
+            for (choice : targets):
+                choice.hit_surface.Disable()
+            if (phase = 2):
+                set sections = 1
+            else if (phase = 3):
+                set sections = 2
+            else if (phase = 6):
+                set sections = 3
+                if (current := active_player?):
+                    state := progress.ensure_player(current)
+                    if (not state.badge_earned?):
+                        for (section := 0..2):
+                            set state.challenge = section
+                            progress.complete(current)
+            for (index_light -> light : section_lights, index_light < sections):
+                light.TurnOn()
+            if (item := item_names[phase], category := category_names[correct]):
+                show_board(text("CORRECT! {phase + 1}/7 | {sections}/3 SECTIONS\n{item} = {category}\n{reason}\nRelease fire to continue"))
+                show_feedback(input_agent, text("CORRECT! {phase + 1}/7\n{item} = {category}"), 1.5)
+            classification_audio.Play(input_agent)
+            spawn { next_item(generation, phase) }
+
+    next_item(token:int, solved_phase:int)<suspends>:void =
+        if (solved_phase = 6):
+            finale_effect.Begin()
+        Sleep(1.0)
+        if (generation <> token):
+            return
+        finale_effect.End()
+        if (current := active_player?, is_active_player[current]):
+            # The last answer has no next item to guard against held fire.
+            if (solved_phase = 6):
+                Sleep(0.5)
+                if (generation = token, is_active_player[current]):
+                    set phase = 7
+                    set busy = false
+                    hide_examples()
+                    for (choice : targets):
+                        choice.deactivate()
+                    show_board(finished)
+                    show_feedback(current, finish_hud, 0.0)
+                    replay_button.Enable()
+                return
+            # Observe fire under the scoring lock, keeping the old result visible.
+            set last_hit = GetSimulationElapsedTime()
+            for (choice : targets):
+                choice.hit_surface.Enable()
+            loop:
+                Sleep(0.05)
+                if (generation <> token):
+                    return
+                if (not is_active_player[current]):
+                    reset_run()
+                    return
+                if (GetSimulationElapsedTime() - last_hit >= 0.5):
+                    break
+            set phase += 1
+            set mistakes = 0
+            set wrong_ready = 0.0
+            set busy = false
+            feedback.Hide(current)
+            show_example()
+            show_prompt("")
+        else:
+            reset_run()

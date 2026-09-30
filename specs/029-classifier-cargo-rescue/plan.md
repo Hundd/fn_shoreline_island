@@ -1,5 +1,7 @@
 # Plan - Classifier: Sort and Check, revision 2
 
+Status: implemented, built, validated, cooked and owner-accepted; closed at the owner's request on 2026-09-30. See tasks.md and evidence/completion-2026-09-30.md for closure scope and optional unperformed checks. Notes below retain historical design context.
+
 ## Inspected basis
 
 Existing read-only `evidence/editor-inventory.json` records four signal floor AABBs, top Z=2400 cm: X=-4600..-1800, -7400..-4600, -10200..-7400, -13000..-10200; all Y=-600..2700. Keep origin (-13000,-600,2400), site 112 x 33 x 9 m. Targets/controls below are proposed anchors, not measured placements. Evidence is historical; reconcile live scene before implementation.
@@ -31,7 +33,7 @@ One forward view: outer target angle about 27 degrees and display about 38 degre
 | label_chair | CHAIR | 1 Furniture | A chair furnishes a room for sitting. |
 | label_car | CAR | 2 Vehicle | A car transports people. Section 0 complete. |
 | fix_chair | CHAIR / Pix predicts VEHICLE | 1 Furniture | The chair is furniture. Check the item, not just Pix's label. Section 1 complete. |
-| new_banana | NEW EXAMPLE: BANANA | 0 Food | A banana is food too. |
+| new_banana (role ID) | NEW EXAMPLE: APPLE | 0 Food | An apple is food too. Approved equivalent; see update below. |
 | new_sofa | NEW EXAMPLE: SOFA | 1 Furniture | A sofa is furniture for sitting. |
 | new_tractor | NEW EXAMPLE: TRACTOR | 2 Vehicle | A tractor transports people and pulls loads. Section 2; finish. |
 
@@ -45,7 +47,7 @@ Six example props plus at most one display support; only one example visible. Ad
 
 ## Implementation discipline and reuse
 
-This is a documentation-only revision. No scene, Verse, project or matchmaking changes are authorized by this request. After explicit approval of the concrete revision, record its current review digest and pass `plan --ready`; implementation can then use `$uefn-map-implementation`. Do not reuse 028's approval for these features.
+The owner explicitly approved implementation of this revision; approval.yaml records that instruction and the reviewed digest. Readiness passed and implementation is underway. No project/matchmaking change is included. The recovery checkpoint is 9f93e61; see evidence/implementation-status-r2.md.
 
 Reuse `corridor` and `shooting_gallery`, the shared Data Blaster, attributed `data_target` hit surfaces, and the solo bounds/generation/quiet-hit approach now used by `pattern_line`. This is a reusable basis, not an existing drop-in adapter: the old station's button/ownership controller cannot implement these semantics through YAML settings alone. Refactor one existing mission controller for this scoped sequence after approval; disable/remove the other three placed controllers and all old runtime subscriptions. Do not duplicate the complete mission framework or alter other missions' target behavior. Reuse `stationary_y_facing` only after verifying forward offset/sign for this bay; the Confidence bay faces the opposite Y direction from 028.
 
@@ -64,3 +66,12 @@ Run-local sections drive lights. Persistent managers expose `complete(player)`, 
 ## Verification and handoff
 
 Run `check`, inspect preview and generated plan, and record planning evidence. After approval, require exact scene readbacks, Verse build, UEFN validation/cook and normal solo AC-01..09. Test all target edges, muted audio, held fire, wrong actions, departure during feedback, death/respawn, return/replay, round reset, partial legacy state and badge/journal. Capture eye-level views, not just overhead blockout. A first-time tester's explanation/enjoyment supplies educational evidence; no invented pass from compilation. Leave individual untested scenarios visible. Stop the active game and confirm non-running state with editor open.
+
+
+## Approved-scope implementation update (2026-09-29)
+
+The owner authorized revision 2 with "when you finish, run 29 implementation". Approval and readiness are recorded in approval.yaml. Implementation is in progress; gameplay acceptance remains open. The new food example uses a recognizable APPLE under the approved same-category substitution rule: the inspected banana-pile candidate depicted discarded peels. The immutable reviewed map retains new_banana as its original role identifier; implementation fixtures and displayed copy use APPLE and "An apple is food we can eat too." Category order, six-example count, dimensions and lesson are unchanged. Eligibility/visual verification is recorded separately from registry discovery.
+
+## Feedback repair plan (2026-09-30)
+
+Owner explicitly reported missing perceived response and unclear ending and requested feedback/clear replay presentation. Address existing S-04/S-06/S-08 acceptance failures, using the already approved HUD, board, target assemblies, two buttons and deactivate/hide lifecycle. No new popup device, input mode, reward, target order or layout. Existing approval remains applicable to this bounded implementation repair; map.yaml and its reviewed geometry are unchanged. Add opt-in textual target feedback through runtime fields set only by the Classifier controller, preserving other missions' defaults. Use immediate HUD replacement to prevent stale messages, explicit correct/retry text, one-second target acknowledgement, persistent completion, and current lifecycle cleanup. Save native HUD settings, build, push/cook, and verify AC-10/11 with owner input because Computer Use is unavailable.

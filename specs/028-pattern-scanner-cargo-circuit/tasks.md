@@ -1,4 +1,8 @@
-# Revision 2 tasks ? solo Fill the Gap
+# Revision 2 tasks - solo Fill the Gap
+
+## Owner acceptance and closure, 2026-09-29
+
+The owner accepted the working/fun playtest and explicitly answered "Yes—close 028 and track 029" when asked whether the remaining detailed regression checks and three-person study should become optional follow-ups. The implementation goal is closed on that revised acceptance scope. Unchecked R2-T05/07/08 detailed scenarios and R2-T09 remain optional follow-ups, not passed tests. Recorded build, cook, scene readbacks, user playtest and shutdown evidence remain authoritative. This acceptance decision supersedes the mandatory three-tester release gate for this delivery; no gameplay change is implied.
 
 The original implementation checklist and evidence remain in history/cargo-circuit-v1/tasks.md. No original gameplay acceptance is retroactively closed. Revision 2 was approved by the user message "looks good"; readiness passed. Implementation is saved and user-playtested successfully. Remaining detailed regression and first-time tester coverage is listed below.
 

@@ -32,6 +32,9 @@ fn_shoreline_island_data_target := class(creative_device):
     # Opt-in for the solo bay; existing moving mission targets retain their cues.
     @editable
     stationary_y_facing:logic = false
+    # Label clearance for fixed category icons; preserve existing targets' offset.
+    @editable
+    stationary_label_offset_z:float = -12.0
     @editable
     selectable_ring:vfx_creator_device = vfx_creator_device{}
     @editable
@@ -61,6 +64,9 @@ fn_shoreline_island_data_target := class(creative_device):
     var surface_home_saved:logic = false
     var feedback_generation:int = 0
     var wrong_until:float = 0.0
+    # Controllers opt in; other missions keep their existing feedback timing.
+    var explicit_answer_feedback:logic = false
+    var answer_feedback_seconds:float = 0.4
     neutral_ring_material:DataBlaster.m_data_ring = DataBlaster.m_data_ring{}
     wrong_ring_material:DataBlaster.mi_target_grey = DataBlaster.mi_target_grey{}
     label_text<localizes>(content:string):message = "{content}"
@@ -143,6 +149,9 @@ fn_shoreline_island_data_target := class(creative_device):
         hit_flash.Begin()
         set feedback_generation += 1
         hit_sound.Play(input_agent)
+        if (explicit_answer_feedback?):
+            label_board.SetText(label_text("CORRECT!\n{display_label}"))
+            label_board.UpdateDisplay()
         CorrectHit.Signal(input_agent)
         if (consume?):
             set state = data_target_state.hit
@@ -164,14 +173,17 @@ fn_shoreline_island_data_target := class(creative_device):
             ring_mesh.SetMaterial(wrong_ring_material)
             wrong_sparks.Begin()
             set feedback_generation += 1
-            label_board.SetText(wrong_label)
+            if (explicit_answer_feedback?):
+                label_board.SetText(label_text("TRY AGAIN\n{display_label}"))
+            else:
+                label_board.SetText(wrong_label)
             label_board.UpdateDisplay()
             wrong_sound.Play(input_agent)
             WrongHit.Signal(input_agent)
             spawn { clear_flash(generation, feedback_generation) }
 
     clear_flash(expected_generation:int, expected_feedback:int)<suspends>:void =
-        Sleep(0.4)
+        Sleep(answer_feedback_seconds)
         if (generation = expected_generation, feedback_generation = expected_feedback):
             hit_flash.End()
             wrong_sparks.End()
@@ -217,7 +229,7 @@ fn_shoreline_island_data_target := class(creative_device):
             var label_pose:transform = label_board.GetTransform()
             set label_pose.Translation = position + vector3{X := -20.0, Z := 200.0}
             if (stationary_y_facing?):
-                set label_pose.Translation = position + vector3{Y := -20.0, Z := -12.0}
+                set label_pose.Translation = position + vector3{Y := -20.0, Z := stationary_label_offset_z}
             if (label_board.TeleportTo[label_pose]) {}
             var particle_pose:transform = active_particles.GetTransform()
             set particle_pose.Translation = position

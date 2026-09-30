@@ -1,0 +1,230 @@
+[
+  {
+    "name": "burger",
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Creative_Prop_DurrBurger_C_UAID_E89C2592D1B5930603_1735142069"
+    },
+    "xform": {
+      "location": {
+        "x": -2450.6799213162662,
+        "y": 1199.7868828291666,
+        "z": 2502.1477488564624
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 3.5865881927197365,
+        "y": 3.5865881927197365,
+        "z": 3.5865881927197365
+      }
+    },
+    "binding": "{\"savedActor\":{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Creative_Prop_DurrBurger_C_UAID_E89C2592D1B5930603_1735142069\"}}",
+    "mesh": "{\"staticMesh\":{\"refPath\":\"/Game/Creative/Environments/Props/PropHunt/Prop_DurrBurger.Prop_DurrBurger\"},\"mobility\":\"Movable\",\"bodyInstance\":{\"positionSolverIterationCount\":8,\"velocitySolverIterationCount\":2,\"projectionSolverIterationCount\":1,\"objectType\":\"ECC_WorldStatic\",\"collisionEnabled\":\"NoCollision\",\"sleepFamily\":\"Normal\",\"dOFMode\":\"Default\",\"bUseCCD\":false,\"bUseMACD\":false,\"bAllowPartialIslandSleep\":true,\"bIgnoreAnalyticCollisions\":false,\"bNotifyRigidBodyCollision\":false,\"bSmoothEdgeCollisions\":false,\"bLockTranslation\":true,\"bLockRotation\":true,\"bLockXTranslation\":false,\"bLockYTranslation\":false,\"bLockZTranslation\":false,\"bLockXRotation\":false,\"bLockYRotation\":false,\"bLockZRotation\":false,\"bOverrideMaxAngularVelocity\":false,\"bOverrideMaxDepenetrationVelocity\":false,\"bOverrideWalkableSlopeOnInstance\":false,\"bOverrideIterationCounts\":false,\"bInterpolateWhenSubStepping\":true,\"bInertiaConditioning\":true,\"bOneWayInteraction\":false,\"bOverrideSolverAsyncDeltaTime\":false,\"solverAsyncDeltaTime\":0.01666666753590107,\"collisionProfileName\":\"NoCollision\",\"collisionResponses\":{\"responseArray\":[{\"channel\":\"WorldStatic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"WorldDynamic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Pawn\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Visibility\",\"response\":\"ECR_Overlap\"},{\"channel\":\"Camera\",\"response\":\"ECR_Ignore\"},{\"channel\":\"PhysicsBody\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Vehicle\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Destructible\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel2\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel3\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel4\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel5\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel6\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_WeaponWorldMulti\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_NoGhost\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_Water\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel20\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel21\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel22\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel23\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel24\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel25\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel26\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel27\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel28\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel29\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel30\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel31\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel32\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel33\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel34\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel35\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel36\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel37\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel38\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel39\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel40\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel41\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel42\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel43\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel44\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel45\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel46\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel47\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel48\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel49\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel50\",\"response\":\"ECR_Ignore\"}]},\"maxDepenetrationVelocity\":0,\"massInKgOverride\":100,\"linearDamping\":0.0099999997764825821,\"angularDamping\":0,\"customDOFPlaneNormal\":{\"x\":0,\"y\":0,\"z\":0},\"cOMNudge\":{\"x\":0,\"y\":0,\"z\":0},\"massScale\":1,\"gravityGroupIndex\":0,\"inertiaTensorScale\":{\"x\":1,\"y\":1,\"z\":1},\"walkableSlopeOverride\":{\"walkableSlopeBehavior\":\"WalkableSlope_Default\",\"walkableSlopeAngle\":0},\"physMaterialOverride\":null,\"maxAngularVelocity\":3599.999755859375,\"customSleepThresholdMultiplier\":1,\"stabilizationThresholdMultiplier\":1,\"physicsBlendWeight\":0,\"bSimulatePhysics\":false,\"bOverrideMass\":false,\"bEnableGravity\":true,\"bUpdateKinematicFromSimulation\":false,\"bGyroscopicTorqueEnabled\":false,\"bAutoWeld\":false,\"bStartAwake\":true,\"bGenerateWakeEvents\":false,\"bUpdateMassWhenScaleChanges\":true}}",
+    "bounds": {
+      "min": {
+        "x": -2520,
+        "y": 1130.776008233676,
+        "z": 2500.4832376352056
+      },
+      "max": {
+        "x": -2380,
+        "y": 1269.223991766324,
+        "z": 2619.5167623647944
+      },
+      "isValid": true
+    }
+  },
+  {
+    "name": "chair",
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Chair_Kitchen02_C_UAID_E89C2592D1B5930603_1753873070"
+    },
+    "xform": {
+      "location": {
+        "x": -2449.583497331961,
+        "y": 1204.5090732204512,
+        "z": 2490.500422488256
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1.0624494036008252,
+        "y": 1.0624494036008252,
+        "z": 1.0624494036008252
+      }
+    },
+    "binding": "{\"savedActor\":{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.CP_Chair_Kitchen02_C_UAID_E89C2592D1B5930603_1753873070\"}}",
+    "mesh": "{\"staticMesh\":{\"refPath\":\"/Game/Environments/Props/Residential/Meshes/SM_FORT_InteriorDecos_03_TableChair04.SM_FORT_InteriorDecos_03_TableChair04\"},\"mobility\":\"Movable\",\"bodyInstance\":{\"positionSolverIterationCount\":8,\"velocitySolverIterationCount\":2,\"projectionSolverIterationCount\":1,\"objectType\":\"ECC_WorldStatic\",\"collisionEnabled\":\"NoCollision\",\"sleepFamily\":\"Normal\",\"dOFMode\":\"Default\",\"bUseCCD\":false,\"bUseMACD\":false,\"bAllowPartialIslandSleep\":true,\"bIgnoreAnalyticCollisions\":false,\"bNotifyRigidBodyCollision\":false,\"bSmoothEdgeCollisions\":false,\"bLockTranslation\":true,\"bLockRotation\":true,\"bLockXTranslation\":false,\"bLockYTranslation\":false,\"bLockZTranslation\":false,\"bLockXRotation\":false,\"bLockYRotation\":false,\"bLockZRotation\":false,\"bOverrideMaxAngularVelocity\":false,\"bOverrideMaxDepenetrationVelocity\":false,\"bOverrideWalkableSlopeOnInstance\":false,\"bOverrideIterationCounts\":false,\"bInterpolateWhenSubStepping\":true,\"bInertiaConditioning\":true,\"bOneWayInteraction\":false,\"bOverrideSolverAsyncDeltaTime\":false,\"solverAsyncDeltaTime\":0.01666666753590107,\"collisionProfileName\":\"NoCollision\",\"collisionResponses\":{\"responseArray\":[{\"channel\":\"WorldStatic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"WorldDynamic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Pawn\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Visibility\",\"response\":\"ECR_Overlap\"},{\"channel\":\"Camera\",\"response\":\"ECR_Ignore\"},{\"channel\":\"PhysicsBody\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Vehicle\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Destructible\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel2\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel3\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel4\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel5\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel6\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_WeaponWorldMulti\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_NoGhost\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_Water\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel20\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel21\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel22\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel23\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel24\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel25\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel26\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel27\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel28\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel29\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel30\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel31\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel32\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel33\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel34\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel35\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel36\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel37\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel38\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel39\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel40\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel41\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel42\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel43\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel44\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel45\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel46\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel47\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel48\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel49\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel50\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_Interaction\",\"response\":\"ECR_Overlap\"}]},\"maxDepenetrationVelocity\":0,\"massInKgOverride\":100,\"linearDamping\":0.0099999997764825821,\"angularDamping\":0,\"customDOFPlaneNormal\":{\"x\":0,\"y\":0,\"z\":0},\"cOMNudge\":{\"x\":0,\"y\":0,\"z\":0},\"massScale\":1,\"gravityGroupIndex\":0,\"inertiaTensorScale\":{\"x\":1,\"y\":1,\"z\":1},\"walkableSlopeOverride\":{\"walkableSlopeBehavior\":\"WalkableSlope_Default\",\"walkableSlopeAngle\":0},\"physMaterialOverride\":null,\"maxAngularVelocity\":3599.999755859375,\"customSleepThresholdMultiplier\":1,\"stabilizationThresholdMultiplier\":1,\"physicsBlendWeight\":0,\"bSimulatePhysics\":false,\"bOverrideMass\":false,\"bEnableGravity\":true,\"bUpdateKinematicFromSimulation\":false,\"bGyroscopicTorqueEnabled\":false,\"bAutoWeld\":false,\"bStartAwake\":true,\"bGenerateWakeEvents\":false,\"bUpdateMassWhenScaleChanges\":true}}",
+    "bounds": {
+      "min": {
+        "x": -2488.85842306794,
+        "y": 1165.6173290474253,
+        "z": 2490
+      },
+      "max": {
+        "x": -2411.14157693206,
+        "y": 1234.3826709525747,
+        "z": 2630
+      },
+      "isValid": true
+    }
+  },
+  {
+    "name": "car",
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Car_KCar_C_UAID_E89C2592D1B5930603_1754417071"
+    },
+    "xform": {
+      "location": {
+        "x": -2444.5038581445965,
+        "y": 1194.2727206482068,
+        "z": 2529.9826605175153
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.2876861580008762,
+        "y": 0.2876861580008762,
+        "z": 0.2876861580008762
+      }
+    },
+    "binding": "{\"savedActor\":{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Car_KCar_C_UAID_E89C2592D1B5930603_1754417071\"}}",
+    "mesh": "{\"staticMesh\":{\"refPath\":\"/Game/Vehicles/FORT_Vehicles_01/Meshes/KCar_01.KCar_01\"},\"mobility\":\"Movable\",\"bodyInstance\":{\"positionSolverIterationCount\":8,\"velocitySolverIterationCount\":2,\"projectionSolverIterationCount\":1,\"objectType\":\"ECC_WorldStatic\",\"collisionEnabled\":\"NoCollision\",\"sleepFamily\":\"Normal\",\"dOFMode\":\"Default\",\"bUseCCD\":false,\"bUseMACD\":false,\"bAllowPartialIslandSleep\":true,\"bIgnoreAnalyticCollisions\":false,\"bNotifyRigidBodyCollision\":false,\"bSmoothEdgeCollisions\":false,\"bLockTranslation\":true,\"bLockRotation\":true,\"bLockXTranslation\":false,\"bLockYTranslation\":false,\"bLockZTranslation\":false,\"bLockXRotation\":false,\"bLockYRotation\":false,\"bLockZRotation\":false,\"bOverrideMaxAngularVelocity\":false,\"bOverrideMaxDepenetrationVelocity\":false,\"bOverrideWalkableSlopeOnInstance\":false,\"bOverrideIterationCounts\":false,\"bInterpolateWhenSubStepping\":true,\"bInertiaConditioning\":true,\"bOneWayInteraction\":false,\"bOverrideSolverAsyncDeltaTime\":false,\"solverAsyncDeltaTime\":0.01666666753590107,\"collisionProfileName\":\"NoCollision\",\"collisionResponses\":{\"responseArray\":[{\"channel\":\"WorldStatic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"WorldDynamic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Pawn\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Visibility\",\"response\":\"ECR_Overlap\"},{\"channel\":\"Camera\",\"response\":\"ECR_Ignore\"},{\"channel\":\"PhysicsBody\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Vehicle\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Destructible\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel2\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel3\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel4\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel5\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel6\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_WeaponWorldMulti\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_NoGhost\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_Water\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel20\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel21\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel22\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel23\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel24\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel25\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel26\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel27\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel28\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel29\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel30\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel31\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel32\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel33\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel34\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel35\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel36\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel37\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel38\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel39\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel40\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel41\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel42\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel43\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel44\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel45\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel46\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel47\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel48\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel49\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel50\",\"response\":\"ECR_Ignore\"}]},\"maxDepenetrationVelocity\":0,\"massInKgOverride\":100,\"linearDamping\":0.0099999997764825821,\"angularDamping\":0,\"customDOFPlaneNormal\":{\"x\":0,\"y\":0,\"z\":0},\"cOMNudge\":{\"x\":0,\"y\":0,\"z\":0},\"massScale\":1,\"gravityGroupIndex\":0,\"inertiaTensorScale\":{\"x\":1,\"y\":1,\"z\":1},\"walkableSlopeOverride\":{\"walkableSlopeBehavior\":\"WalkableSlope_Default\",\"walkableSlopeAngle\":0},\"physMaterialOverride\":null,\"maxAngularVelocity\":3599.999755859375,\"customSleepThresholdMultiplier\":1,\"stabilizationThresholdMultiplier\":1,\"physicsBlendWeight\":0,\"bSimulatePhysics\":false,\"bOverrideMass\":false,\"bEnableGravity\":true,\"bUpdateKinematicFromSimulation\":false,\"bGyroscopicTorqueEnabled\":false,\"bAutoWeld\":false,\"bStartAwake\":true,\"bGenerateWakeEvents\":false,\"bUpdateMassWhenScaleChanges\":true}}",
+    "bounds": {
+      "min": {
+        "x": -2520,
+        "y": 1171.620666556045,
+        "z": 2529.897113217602
+      },
+      "max": {
+        "x": -2380,
+        "y": 1228.379333443955,
+        "z": 2590.102886782398
+      },
+      "isValid": true
+    }
+  },
+  {
+    "name": "apple",
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Creative_Prop_Apple02_C_UAID_E89C2592D1B5930603_1754518072"
+    },
+    "xform": {
+      "location": {
+        "x": -2448.2722589373684,
+        "y": 1198.9580088749874,
+        "z": 2490.000020744261
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 7.250644603202796,
+        "y": 7.250644603202796,
+        "z": 7.250644603202796
+      }
+    },
+    "binding": "{\"savedActor\":{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Creative_Prop_Apple02_C_UAID_E89C2592D1B5930603_1754518072\"}}",
+    "mesh": "{\"staticMesh\":{\"refPath\":\"/Game/Creative/Environments/Props/PropHunt/KitchenProps/SM_TRV_CAS_FoodTable_1_Apple_01.SM_TRV_CAS_FoodTable_1_Apple_01\"},\"mobility\":\"Movable\",\"bodyInstance\":{\"positionSolverIterationCount\":8,\"velocitySolverIterationCount\":2,\"projectionSolverIterationCount\":1,\"objectType\":\"ECC_WorldStatic\",\"collisionEnabled\":\"NoCollision\",\"sleepFamily\":\"Normal\",\"dOFMode\":\"Default\",\"bUseCCD\":false,\"bUseMACD\":false,\"bAllowPartialIslandSleep\":true,\"bIgnoreAnalyticCollisions\":false,\"bNotifyRigidBodyCollision\":false,\"bSmoothEdgeCollisions\":false,\"bLockTranslation\":true,\"bLockRotation\":true,\"bLockXTranslation\":false,\"bLockYTranslation\":false,\"bLockZTranslation\":false,\"bLockXRotation\":false,\"bLockYRotation\":false,\"bLockZRotation\":false,\"bOverrideMaxAngularVelocity\":false,\"bOverrideMaxDepenetrationVelocity\":false,\"bOverrideWalkableSlopeOnInstance\":false,\"bOverrideIterationCounts\":false,\"bInterpolateWhenSubStepping\":true,\"bInertiaConditioning\":true,\"bOneWayInteraction\":false,\"bOverrideSolverAsyncDeltaTime\":false,\"solverAsyncDeltaTime\":0.01666666753590107,\"collisionProfileName\":\"NoCollision\",\"collisionResponses\":{\"responseArray\":[{\"channel\":\"WorldStatic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"WorldDynamic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Pawn\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Visibility\",\"response\":\"ECR_Overlap\"},{\"channel\":\"Camera\",\"response\":\"ECR_Ignore\"},{\"channel\":\"PhysicsBody\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Vehicle\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Destructible\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel2\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel3\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel4\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel5\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel6\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_WeaponWorldMulti\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_NoGhost\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_Water\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel20\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel21\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel22\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel23\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel24\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel25\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel26\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel27\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel28\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel29\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel30\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel31\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel32\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel33\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel34\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel35\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel36\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel37\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel38\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel39\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel40\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel41\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel42\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel43\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel44\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel45\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel46\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel47\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel48\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel49\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel50\",\"response\":\"ECR_Ignore\"}]},\"maxDepenetrationVelocity\":0,\"massInKgOverride\":100,\"linearDamping\":0.0099999997764825821,\"angularDamping\":0,\"customDOFPlaneNormal\":{\"x\":0,\"y\":0,\"z\":0},\"cOMNudge\":{\"x\":0,\"y\":0,\"z\":0},\"massScale\":1,\"gravityGroupIndex\":0,\"inertiaTensorScale\":{\"x\":1,\"y\":1,\"z\":1},\"walkableSlopeOverride\":{\"walkableSlopeBehavior\":\"WalkableSlope_Default\",\"walkableSlopeAngle\":0},\"physMaterialOverride\":null,\"maxAngularVelocity\":3599.999755859375,\"customSleepThresholdMultiplier\":1,\"stabilizationThresholdMultiplier\":1,\"physicsBlendWeight\":0,\"bSimulatePhysics\":false,\"bOverrideMass\":false,\"bEnableGravity\":true,\"bUpdateKinematicFromSimulation\":false,\"bGyroscopicTorqueEnabled\":false,\"bAutoWeld\":false,\"bStartAwake\":true,\"bGenerateWakeEvents\":false,\"bUpdateMassWhenScaleChanges\":true}}",
+    "bounds": {
+      "min": {
+        "x": -2514.769666596268,
+        "y": 1134.303265482479,
+        "z": 2490
+      },
+      "max": {
+        "x": -2385.230333403732,
+        "y": 1265.696734517521,
+        "z": 2630
+      },
+      "isValid": true
+    }
+  },
+  {
+    "name": "sofa",
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Creative_Prop_Couch01_C_UAID_E89C2592D1B5930603_1754899073"
+    },
+    "xform": {
+      "location": {
+        "x": -2450.000008371042,
+        "y": 1201.480286913873,
+        "z": 2531.763693021457
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 180,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.5486046011312148,
+        "y": 0.5486046011312148,
+        "z": 0.5486046011312148
+      }
+    },
+    "binding": "{\"savedActor\":{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Creative_Prop_Couch01_C_UAID_E89C2592D1B5930603_1754899073\"}}",
+    "mesh": "{\"staticMesh\":{\"refPath\":\"/Game/Creative/Environments/Props/PropHunt/LivingRoom/LivingRoom_Couch_01_Couch_01.LivingRoom_Couch_01_Couch_01\"},\"mobility\":\"Movable\",\"bodyInstance\":{\"positionSolverIterationCount\":8,\"velocitySolverIterationCount\":2,\"projectionSolverIterationCount\":1,\"objectType\":\"ECC_WorldStatic\",\"collisionEnabled\":\"NoCollision\",\"sleepFamily\":\"Normal\",\"dOFMode\":\"Default\",\"bUseCCD\":false,\"bUseMACD\":false,\"bAllowPartialIslandSleep\":true,\"bIgnoreAnalyticCollisions\":false,\"bNotifyRigidBodyCollision\":false,\"bSmoothEdgeCollisions\":false,\"bLockTranslation\":true,\"bLockRotation\":true,\"bLockXTranslation\":false,\"bLockYTranslation\":false,\"bLockZTranslation\":false,\"bLockXRotation\":false,\"bLockYRotation\":false,\"bLockZRotation\":false,\"bOverrideMaxAngularVelocity\":false,\"bOverrideMaxDepenetrationVelocity\":false,\"bOverrideWalkableSlopeOnInstance\":false,\"bOverrideIterationCounts\":false,\"bInterpolateWhenSubStepping\":true,\"bInertiaConditioning\":true,\"bOneWayInteraction\":false,\"bOverrideSolverAsyncDeltaTime\":false,\"solverAsyncDeltaTime\":0.01666666753590107,\"collisionProfileName\":\"NoCollision\",\"collisionResponses\":{\"responseArray\":[{\"channel\":\"WorldStatic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"WorldDynamic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Pawn\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Visibility\",\"response\":\"ECR_Overlap\"},{\"channel\":\"Camera\",\"response\":\"ECR_Ignore\"},{\"channel\":\"PhysicsBody\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Vehicle\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Destructible\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel2\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel3\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel4\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel5\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel6\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_WeaponWorldMulti\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_NoGhost\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_Water\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel20\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel21\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel22\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel23\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel24\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel25\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel26\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel27\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel28\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel29\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel30\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel31\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel32\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel33\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel34\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel35\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel36\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel37\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel38\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel39\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel40\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel41\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel42\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel43\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel44\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel45\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel46\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel47\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel48\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel49\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel50\",\"response\":\"ECR_Ignore\"}]},\"maxDepenetrationVelocity\":0,\"massInKgOverride\":100,\"linearDamping\":0.0099999997764825821,\"angularDamping\":0,\"customDOFPlaneNormal\":{\"x\":0,\"y\":0,\"z\":0},\"cOMNudge\":{\"x\":0,\"y\":0,\"z\":0},\"massScale\":1,\"gravityGroupIndex\":0,\"inertiaTensorScale\":{\"x\":1,\"y\":1,\"z\":1},\"walkableSlopeOverride\":{\"walkableSlopeBehavior\":\"WalkableSlope_Default\",\"walkableSlopeAngle\":0},\"physMaterialOverride\":null,\"maxAngularVelocity\":3599.999755859375,\"customSleepThresholdMultiplier\":1,\"stabilizationThresholdMultiplier\":1,\"physicsBlendWeight\":0,\"bSimulatePhysics\":false,\"bOverrideMass\":false,\"bEnableGravity\":true,\"bUpdateKinematicFromSimulation\":false,\"bGyroscopicTorqueEnabled\":false,\"bAutoWeld\":false,\"bStartAwake\":true,\"bGenerateWakeEvents\":false,\"bUpdateMassWhenScaleChanges\":true}}",
+    "bounds": {
+      "min": {
+        "x": -2520,
+        "y": 1164.156512891823,
+        "z": 2531.763693021457
+      },
+      "max": {
+        "x": -2380,
+        "y": 1235.843487108177,
+        "z": 2588.236306978543
+      },
+      "isValid": true
+    }
+  },
+  {
+    "name": "tractor",
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Car_Tractor_C_UAID_E89C2592D1B5930603_1755160074"
+    },
+    "xform": {
+      "location": {
+        "x": -2450,
+        "y": 1200,
+        "z": 2509.190533003092
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": {
+        "x": 0.46222525299606304,
+        "y": 0.46222525299606304,
+        "z": 0.46222525299606304
+      }
+    },
+    "binding": "{\"savedActor\":{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Car_Tractor_C_UAID_E89C2592D1B5930603_1755160074\"}}",
+    "mesh": "{\"staticMesh\":{\"refPath\":\"/Game/Vehicles/FORT_Vehicles_01/Meshes/Car_Tractor_01.Car_Tractor_01\"},\"mobility\":\"Movable\",\"bodyInstance\":{\"positionSolverIterationCount\":8,\"velocitySolverIterationCount\":2,\"projectionSolverIterationCount\":1,\"objectType\":\"ECC_WorldStatic\",\"collisionEnabled\":\"NoCollision\",\"sleepFamily\":\"Normal\",\"dOFMode\":\"Default\",\"bUseCCD\":false,\"bUseMACD\":false,\"bAllowPartialIslandSleep\":true,\"bIgnoreAnalyticCollisions\":false,\"bNotifyRigidBodyCollision\":false,\"bSmoothEdgeCollisions\":false,\"bLockTranslation\":true,\"bLockRotation\":true,\"bLockXTranslation\":false,\"bLockYTranslation\":false,\"bLockZTranslation\":false,\"bLockXRotation\":false,\"bLockYRotation\":false,\"bLockZRotation\":false,\"bOverrideMaxAngularVelocity\":false,\"bOverrideMaxDepenetrationVelocity\":false,\"bOverrideWalkableSlopeOnInstance\":false,\"bOverrideIterationCounts\":false,\"bInterpolateWhenSubStepping\":true,\"bInertiaConditioning\":true,\"bOneWayInteraction\":false,\"bOverrideSolverAsyncDeltaTime\":false,\"solverAsyncDeltaTime\":0.01666666753590107,\"collisionProfileName\":\"NoCollision\",\"collisionResponses\":{\"responseArray\":[{\"channel\":\"WorldStatic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"WorldDynamic\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Pawn\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Visibility\",\"response\":\"ECR_Overlap\"},{\"channel\":\"Camera\",\"response\":\"ECR_Ignore\"},{\"channel\":\"PhysicsBody\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Vehicle\",\"response\":\"ECR_Ignore\"},{\"channel\":\"Destructible\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel2\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel3\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel4\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel5\",\"response\":\"ECR_Ignore\"},{\"channel\":\"EngineTraceChannel6\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Trace_WeaponWorldMulti\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_NoGhost\",\"response\":\"ECR_Ignore\"},{\"channel\":\"FCC_Object_Water\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel20\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel21\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel22\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel23\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel24\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel25\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel26\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel27\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel28\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel29\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel30\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel31\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel32\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel33\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel34\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel35\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel36\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel37\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel38\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel39\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel40\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel41\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel42\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel43\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel44\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel45\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel46\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel47\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel48\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel49\",\"response\":\"ECR_Ignore\"},{\"channel\":\"GameTraceChannel50\",\"response\":\"ECR_Ignore\"}]},\"maxDepenetrationVelocity\":0,\"massInKgOverride\":100,\"linearDamping\":0.0099999997764825821,\"angularDamping\":0,\"customDOFPlaneNormal\":{\"x\":0,\"y\":0,\"z\":0},\"cOMNudge\":{\"x\":0,\"y\":0,\"z\":0},\"massScale\":1,\"gravityGroupIndex\":0,\"inertiaTensorScale\":{\"x\":1,\"y\":1,\"z\":1},\"walkableSlopeOverride\":{\"walkableSlopeBehavior\":\"WalkableSlope_Default\",\"walkableSlopeAngle\":0},\"physMaterialOverride\":null,\"maxAngularVelocity\":3599.999755859375,\"customSleepThresholdMultiplier\":1,\"stabilizationThresholdMultiplier\":1,\"physicsBlendWeight\":0,\"bSimulatePhysics\":false,\"bOverrideMass\":false,\"bEnableGravity\":true,\"bUpdateKinematicFromSimulation\":false,\"bGyroscopicTorqueEnabled\":false,\"bAutoWeld\":false,\"bStartAwake\":true,\"bGenerateWakeEvents\":false,\"bUpdateMassWhenScaleChanges\":true}}",
+    "bounds": {
+      "min": {
+        "x": -2520,
+        "y": 1156.6123354107433,
+        "z": 2509.190533003092
+      },
+      "max": {
+        "x": -2380,
+        "y": 1243.3876645892567,
+        "z": 2610.809466996908
+      },
+      "isValid": true
+    }
+  }
+]

@@ -18,3 +18,14 @@ Six examples share one display anchor; hide/park five so they cannot distract, b
 Registry matches in evidence/editor-inventory.json are candidates only. Qualify Creative-placeable variants, bounds/pivots and cook eligibility before use. A substitute keeps category, same educational role, visibly different held-out example and envelope; update fixtures/copy together. If none qualifies, return to review. No new artwork import is planned. Never add conveyors, lifting gates, repair equipment, cargo dispatch, shelving clusters or planters just to fill the retained footprint.
 
 Use existing board/HUD/buttons and shared feedback. Per-target labels/optional FX are part of the assembly audit. Text must duplicate meaning of icons/color/audio, and icons must render in the actual cooked font; missing glyphs are a defect, not an acceptable placeholder.
+
+
+## Approved-scope implementation update (2026-09-29)
+
+The owner authorized revision 2 with "when you finish, run 29 implementation". Approval and readiness are recorded in approval.yaml. Implementation is in progress; gameplay acceptance remains open. The new food example uses a recognizable APPLE under the approved same-category substitution rule: the inspected banana-pile candidate depicted discarded peels. The immutable reviewed map retains new_banana as its original role identifier; implementation fixtures and displayed copy use APPLE and "An apple is food we can eat too." Category order, six-example count, dimensions and lesson are unchanged. Eligibility/visual verification is recorded separately from registry discovery.
+
+## Native prop replacement (2026-09-30)
+
+Raw mesh references above failed validation and were removed. Current placed native blueprint classes are Creative_Prop_DurrBurger, CP_Chair_Kitchen02, Car_KCar, Creative_Prop_Apple02, Creative_Prop_Couch01 and Car_Tractor. Full actor/component identities and bounds are in evidence/native-props-r2-2026-09-30.json. These passed local launch validation; cook and recognizable cooked silhouettes remain unverified because UEFN crashed with DXGI_ERROR_DEVICE_REMOVED during cooking. Do not restore the rejected raw mesh overrides.
+
+Cook qualification recovered after editor restart: 2026-09-30 04:34:21 UTC logs confirm successful client/server cooking and activation. All six native actor references and bounds survived restart. Cooked visual recognition still requires playtest observations; see evidence/implementation-status-r2.md.
