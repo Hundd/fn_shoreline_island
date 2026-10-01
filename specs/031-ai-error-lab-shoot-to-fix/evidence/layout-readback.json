@@ -1,0 +1,540 @@
+{
+  "goal_mesh": {
+    "overrideMaterials": [
+      {
+        "refPath": "/fn_shoreline_island/Academy/mi_academy_green.mi_academy_green"
+      }
+    ],
+    "mobility": "Movable",
+    "bodyInstance": {
+      "positionSolverIterationCount": 8,
+      "velocitySolverIterationCount": 2,
+      "projectionSolverIterationCount": 1,
+      "objectType": "ECC_WorldStatic",
+      "collisionEnabled": "NoCollision",
+      "sleepFamily": "Normal",
+      "dOFMode": "Default",
+      "bUseCCD": false,
+      "bUseMACD": false,
+      "bAllowPartialIslandSleep": true,
+      "bIgnoreAnalyticCollisions": false,
+      "bNotifyRigidBodyCollision": false,
+      "bSmoothEdgeCollisions": false,
+      "bLockTranslation": true,
+      "bLockRotation": true,
+      "bLockXTranslation": false,
+      "bLockYTranslation": false,
+      "bLockZTranslation": false,
+      "bLockXRotation": false,
+      "bLockYRotation": false,
+      "bLockZRotation": false,
+      "bOverrideMaxAngularVelocity": false,
+      "bOverrideMaxDepenetrationVelocity": false,
+      "bOverrideWalkableSlopeOnInstance": false,
+      "bOverrideIterationCounts": false,
+      "bInterpolateWhenSubStepping": true,
+      "bInertiaConditioning": true,
+      "bOneWayInteraction": false,
+      "bOverrideSolverAsyncDeltaTime": false,
+      "solverAsyncDeltaTime": 0.01666666753590107,
+      "collisionProfileName": "NoCollision",
+      "collisionResponses": {
+        "responseArray": [
+          {
+            "channel": "WorldStatic",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "WorldDynamic",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "Pawn",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "Visibility",
+            "response": "ECR_Overlap"
+          },
+          {
+            "channel": "Camera",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "PhysicsBody",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "Vehicle",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "Destructible",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "EngineTraceChannel2",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "EngineTraceChannel3",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "EngineTraceChannel4",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "EngineTraceChannel5",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "EngineTraceChannel6",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "FCC_Trace_WeaponWorldMulti",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "FCC_Object_NoGhost",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "FCC_Object_Water",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel20",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel21",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel22",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel23",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel24",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel25",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel26",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel27",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel28",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel29",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel30",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel31",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel32",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel33",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel34",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel35",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel36",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel37",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel38",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel39",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel40",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel41",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel42",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel43",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel44",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel45",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel46",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel47",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel48",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel49",
+            "response": "ECR_Ignore"
+          },
+          {
+            "channel": "GameTraceChannel50",
+            "response": "ECR_Ignore"
+          }
+        ]
+      },
+      "maxDepenetrationVelocity": 0,
+      "massInKgOverride": 100,
+      "linearDamping": 0.009999999776482582,
+      "angularDamping": 0,
+      "customDOFPlaneNormal": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "cOMNudge": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "massScale": 1,
+      "gravityGroupIndex": 0,
+      "inertiaTensorScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "walkableSlopeOverride": {
+        "walkableSlopeBehavior": "WalkableSlope_Default",
+        "walkableSlopeAngle": 0
+      },
+      "physMaterialOverride": null,
+      "maxAngularVelocity": 3599.999755859375,
+      "customSleepThresholdMultiplier": 1,
+      "stabilizationThresholdMultiplier": 1,
+      "physicsBlendWeight": 0,
+      "bSimulatePhysics": false,
+      "bOverrideMass": false,
+      "bEnableGravity": true,
+      "bUpdateKinematicFromSimulation": false,
+      "bGyroscopicTorqueEnabled": false,
+      "bAutoWeld": true,
+      "bStartAwake": true,
+      "bGenerateWakeEvents": false,
+      "bUpdateMassWhenScaleChanges": true
+    }
+  },
+  "board": {
+    "location": {
+      "x": -3200,
+      "y": -6200,
+      "z": 2870
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 2.2,
+      "y": 2.2,
+      "z": 1
+    }
+  },
+  "board_text": {
+    "text": "0/3 FIXED | GOAL: 3\nSTART 0: RIGHT [LEFT] RIGHT\nBEFORE: 1 | NOW: 1\nSHOOT A FIX",
+    "textSize": 14,
+    "textJustification": "Center",
+    "showBorder": false,
+    "backgroundColor": {
+      "r": 0.004999999888241291,
+      "g": 0.012000000104308128,
+      "b": 0.02500000037252903,
+      "a": 1
+    },
+    "textColor": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1
+    }
+  },
+  "tile_0": {
+    "location": {
+      "x": -3600,
+      "y": -5990,
+      "z": 2645
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "tile_text_0": {
+    "text": "0",
+    "textSize": 14,
+    "showBorder": false,
+    "textJustification": "Center",
+    "backgroundColor": {
+      "r": 0.009999999776482582,
+      "g": 0.02500000037252903,
+      "b": 0.05000000074505806,
+      "a": 1
+    }
+  },
+  "tile_1": {
+    "location": {
+      "x": -3400,
+      "y": -5990,
+      "z": 2645
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "tile_text_1": {
+    "text": "1",
+    "textSize": 14,
+    "showBorder": false,
+    "textJustification": "Center",
+    "backgroundColor": {
+      "r": 0.009999999776482582,
+      "g": 0.02500000037252903,
+      "b": 0.05000000074505806,
+      "a": 1
+    }
+  },
+  "tile_2": {
+    "location": {
+      "x": -3200,
+      "y": -5990,
+      "z": 2645
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "tile_text_2": {
+    "text": "2",
+    "textSize": 14,
+    "showBorder": false,
+    "textJustification": "Center",
+    "backgroundColor": {
+      "r": 0.009999999776482582,
+      "g": 0.02500000037252903,
+      "b": 0.05000000074505806,
+      "a": 1
+    }
+  },
+  "tile_3": {
+    "location": {
+      "x": -3000,
+      "y": -5990,
+      "z": 2645
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "tile_text_3": {
+    "text": "3",
+    "textSize": 14,
+    "showBorder": false,
+    "textJustification": "Center",
+    "backgroundColor": {
+      "r": 0.009999999776482582,
+      "g": 0.02500000037252903,
+      "b": 0.05000000074505806,
+      "a": 1
+    }
+  },
+  "tile_4": {
+    "location": {
+      "x": -2800,
+      "y": -5990,
+      "z": 2645
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "tile_text_4": {
+    "text": "4",
+    "textSize": 14,
+    "showBorder": false,
+    "textJustification": "Center",
+    "backgroundColor": {
+      "r": 0.009999999776482582,
+      "g": 0.02500000037252903,
+      "b": 0.05000000074505806,
+      "a": 1
+    }
+  },
+  "goal_label": {
+    "location": {
+      "x": -3000,
+      "y": -5990,
+      "z": 2820
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "goal_text": {
+    "text": "GOAL 3",
+    "textSize": 12,
+    "showBorder": false,
+    "textJustification": "Center"
+  },
+  "instruction": {
+    "location": {
+      "x": -2050,
+      "y": -4300,
+      "z": 2550
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 0.8,
+      "y": 0.8,
+      "z": 0.8
+    }
+  },
+  "instruction_text": {
+    "text": "AI ERROR LAB\nFix Pix's route\nShoot LEFT / STOP / RIGHT\nChange only the [boxed] step\nCompare BEFORE and NOW",
+    "textSize": 12,
+    "showBorder": false,
+    "textJustification": "Center"
+  },
+  "replay": {
+    "location": {
+      "x": -3500,
+      "y": -5000,
+      "z": 2480
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "replay_text": {
+    "interaction Text": "Replay"
+  },
+  "return": {
+    "location": {
+      "x": -2900,
+      "y": -5000,
+      "z": 2480
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 180,
+      "roll": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "return_text": {
+    "interaction Text": "Return to Hub"
+  }
+}

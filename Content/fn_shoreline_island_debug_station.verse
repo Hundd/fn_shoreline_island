@@ -3,21 +3,43 @@ using { /Fortnite.com/Characters }
 using { /Verse.org/Simulation }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
+debug_route_stage := class<concrete>:
+    @editable
+    start_tile:int = 0
+    @editable
+    goal_tile:int = 3
+    @editable
+    commands:[]int = array{2, 0, 2}
+    @editable
+    editable_slot:int = 1
+
+# LEFT=0, STOP=1, RIGHT=2. Credit follows actual execution, never answer ID.
 fn_shoreline_island_debug_station := class(creative_device):
     @editable
-    station_id:int = 0
+    configured:logic = false
     @editable
     progress:fn_shoreline_island_debug_progress = fn_shoreline_island_debug_progress{}
     @editable
-    claim_button:button_device = button_device{}
+    targets:[]fn_shoreline_island_data_target = array{}
     @editable
-    edit_button:button_device = button_device{}
+    stages:[]debug_route_stage = array{
+        debug_route_stage{},
+        debug_route_stage{start_tile := 2, goal_tile := 1, commands := array{2}, editable_slot := 0},
+        debug_route_stage{start_tile := 1, goal_tile := 2, commands := array{2, 2}, editable_slot := 1}}
     @editable
-    run_button:button_device = button_device{}
+    entry_zone:mutator_zone_device = mutator_zone_device{}
     @editable
-    help_button:button_device = button_device{}
+    bay_min_x:float = -4600.0
     @editable
-    next_button:button_device = button_device{}
+    bay_max_x:float = -2200.0
+    @editable
+    bay_min_y:float = -7800.0
+    @editable
+    bay_max_y:float = -4100.0
+    @editable
+    bay_min_z:float = 2350.0
+    @editable
+    bay_max_z:float = 3300.0
     @editable
     replay_button:button_device = button_device{}
     @editable
@@ -31,374 +53,351 @@ fn_shoreline_island_debug_station := class(creative_device):
     @editable
     board:billboard_device = billboard_device{}
     @editable
-    result_board:billboard_device = billboard_device{}
-    @editable
     instruction_board:billboard_device = billboard_device{}
     @editable
     marker:creative_prop = creative_prop{}
     @editable
-    hub_spawner_0:player_spawner_device = player_spawner_device{}
+    goal_marker:creative_prop = creative_prop{}
     @editable
-    hub_spawner_1:player_spawner_device = player_spawner_device{}
+    goal_label:billboard_device = billboard_device{}
     @editable
-    hub_spawner_2:player_spawner_device = player_spawner_device{}
+    lights:[]customizable_light_device = array{
+        customizable_light_device{}, customizable_light_device{}, customizable_light_device{}}
     @editable
-    hub_spawner_3:player_spawner_device = player_spawner_device{}
+    track_origin:vector3 = vector3{X := -3600.0, Y := -6000.0, Z := 2700.0}
+    @editable
+    tile_spacing:float = 200.0
 
     fixtures:fn_shoreline_island_debug_fixtures = fn_shoreline_island_debug_fixtures{}
-    var owner:?player = false
-    var running:logic = false
+    var phase:int = -1
     var generation:int = 0
     var observed_round:int = -1
+    var busy:logic = false
+    var mistakes:int = 0
+    var last_hit:float = 0.0
+    var active_player:?player = false
+    var active_character:?fort_character = false
     var marker_home:transform = transform{}
+    var goal_home:transform = transform{}
+    var before_tile:int = 0
+    var actual_tile:int = 0
+    var current_commands:[]int = array{}
 
-    claim_text<localizes>:message = "Claim AI Error Lab"
-    edit_text<localizes>:message = "Correct the AI plan"
-    run_text<localizes>:message = "Run the corrected plan"
-    help_text<localizes>:message = "Help"
-    next_text<localizes>:message = "Next challenge / Replay all"
-    replay_text<localizes>:message = "Restore AI mistake"
-    return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "AI ERROR LAB | Station {number}\nCheck Pix's result for a mistake.\nPress CLAIM to begin."
-    occupied_text<localizes>:message = "This AI Error Lab station is in use. Choose another station."
-    other_text<localizes>:message = "Leave your current AI Error Lab station before claiming another."
-    welcome_text<localizes>:message = "Run Pix's AI plan. Compare the actual result with the expected result, then correct the bracketed mistake."
-    ready_text<localizes>:message = "Ready: Run from tile 0."
-    cargo_ready_text<localizes>:message = "Ready: Classify APPLE, then CAR."
-    cargo_running_status<localizes>(item:message, destination:message):message = "RUNNING: {item} > {destination}"
-    cargo_match_status<localizes>:message = "MATCH! Next or Replay."
-    cargo_mismatch_status<localizes>:message = "MISMATCH. Fix the rule; Run again."
-    finish_text<localizes>:message = "Match the expected result first. Help is always available."
-    solved_text<localizes>:message = "Results match! Next or Replay."
-    wrong_text<localizes>:message = "Results differ. Compare EXPECTED with ACTUAL, edit the bracketed instruction, then run again."
-    complete_text<localizes>:message = "PIX MODULE RESTORED: ERROR CHECKING ONLINE\nAI Detective Badge earned! Check the answer, find the problem, correct it, and try again."
-    retained_text<localizes>:message = "Mistake corrected again! Your AI Detective Badge stays earned for this round."
-    complete_board_text<localizes>:message = "AI Detective Badge earned! Replay is optional."
-    east_text<localizes>:message = "East"
-    west_text<localizes>:message = "West"
-    wait_text<localizes>:message = "Wait"
-    leaf_text<localizes>:message = "APPLE"
-    plain_text<localizes>:message = "CAR"
-    garden_text<localizes>:message = "Food"
-    storage_text<localizes>:message = "Vehicle"
-    pending_text<localizes>:message = "not run"
-    empty_text<localizes>:message = "EXPECTED / ACTUAL\nClaim to begin"
-    move_program_text<localizes>(move:message):message = "TASK: Reach the scanner at tile 3.\nAI PLAN: East; [West]; East\nYOUR FIX: East; [{move}]; East\nCorrect only instruction 2."
-    repeat_program_text<localizes>(count:int):message = "TASK: Reach Station 3.\nAI PLAN: Repeat [4]: East\nYOUR FIX: Repeat [{count}]: East\nCorrect only the repeat count."
-    rule_program_text<localizes>(leaf:message, plain:message):message = "AI PLAN: [APPLE > Vehicle; else > Food]\nYOUR FIX: [APPLE > {leaf}; else > {plain}]\nCorrect only the classification rule."
-    board_text<localizes>(input_player:agent, challenge:int, program:message):message = "AI Detective: {input_player} | Challenge {challenge}\n{program}"
-    tile_result_text<localizes>(tile:int, status:message):message = "EXPECTED: scanner / Station 3\nACTUAL: tile {tile}\n{status}"
-    cargo_result_text<localizes>(leaf:message, plain:message, status:message):message = "Items: APPLE | CAR\nEXPECTED: Food | Vehicle\nACTUAL: {leaf} | {plain}\n{status}"
-    step_text<localizes>(step:int, total:int, command:message):message = "AI PLAN RUNNING: {step} of {total}\nAction: {command}"
-    delivery_text<localizes>(item:message, destination:message):message = "AI PLAN RUNNING: {item}\nClassification: {destination}"
-    concept_move_text<localizes>:message = "Compare the scanner at tile 3 with Pix's actual final tile. One action points the wrong way."
-    worked_move_text<localizes>:message = "Change instruction 2 to East. East, East, East reaches the scanner at tile 3."
-    concept_repeat_text<localizes>:message = "Pix reaches Station 4, but the task says Station 3. Compare the repeat count with the distance."
-    worked_repeat_text<localizes>:message = "Set Repeat to 3, then Run. The marker stops at Station 3, not Station 4."
-    concept_rule_text<localizes>:message = "APPLE belongs in Food and CAR belongs in Vehicle. Compare both results with Pix's classification rule."
-    worked_rule_text<localizes>:message = "Use If APPLE: Food; otherwise: Vehicle. Run both items to check the repair."
+    text<localizes>(value:string):message = "{value}"
+    welcome<localizes>:message = "AI ERROR LAB\nFIX PIX'S ROUTE\nShoot LEFT, STOP or RIGHT to fix the boxed step."
+    recap<localizes>:message = "3/3 - AI DETECTIVE BADGE EARNED\nCheck the goal. Change one mistake.\nRun again and check the result.\nReplay or Return to Hub"
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (not configured?):
+            return
+        Sleep(0.1)
+        if (not valid_configuration[]):
+            for (target : targets):
+                target.deactivate()
+            Print("ERROR LAB: invalid solo configuration; choices disabled")
+            return
         set marker_home = marker.GetTransform()
-        claim_button.SetInteractionText(claim_text)
-        edit_button.SetInteractionText(edit_text)
-        run_button.SetInteractionText(run_text)
-        help_button.SetInteractionText(help_text)
-        next_button.SetInteractionText(next_text)
-        replay_button.SetInteractionText(replay_text)
-        return_button.SetInteractionText(return_text)
-        for (control : array{claim_button, edit_button, run_button, help_button, next_button, replay_button, return_button}):
+        set goal_home = goal_marker.GetTransform()
+        for (index -> stage : stages):
+            Print("ERROR LAB: configured stage={index} start={stage.start_tile} goal={stage.goal_tile} slot={stage.editable_slot} program={program_text(stage.commands, stage.editable_slot)}")
+        set observed_round = progress.round_generation
+        for (target : targets):
+            target.initialize_surface_home()
+        reset_bay()
+        replay_button.SetInteractionText(text("REPLAY"))
+        return_button.SetInteractionText(text("RETURN TO HUB"))
+        for (control : array{replay_button, return_button}):
             control.SetInteractionTime(0.0)
             control.SetMaxTriggerCount(0)
-        claim_button.InteractedWithEvent.Subscribe(on_claim)
-        edit_button.InteractedWithEvent.Subscribe(on_edit)
-        run_button.InteractedWithEvent.Subscribe(on_run)
-        help_button.InteractedWithEvent.Subscribe(on_help)
-        next_button.InteractedWithEvent.Subscribe(on_next)
+        return_button.Enable()
         replay_button.InteractedWithEvent.Subscribe(on_replay)
         return_button.InteractedWithEvent.Subscribe(on_return)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_removed)
-        for (spawner : array{hub_spawner_0, hub_spawner_1, hub_spawner_2, hub_spawner_3}):
-            spawner.SpawnedEvent.Subscribe(on_spawn)
-        for (label : array{board, result_board, instruction_board}):
-            label.SetTextSize(12)
-        board.SetTextSize(10)
-        result_board.SetTextSize(10)
-        release()
-        loop:
-            Sleep(0.25)
-            if (observed_round <> progress.round_generation):
-                set observed_round = progress.round_generation
-                release()
-            if (input_player := owner?):
-                if (character := input_player.GetFortCharacter[], character.IsActive[]):
-                    if (Distance(character.GetTransform().Translation, GetTransform().Translation) > 1400.0):
-                        release()
-                else:
-                    release()
+        for (index -> target : targets):
+            spawn { listen_hits(target, index) }
+        monitor_player()
 
-    display(label:billboard_device, text:message):void =
-        label.SetText(text)
+    valid_configuration()<transacts><decides>:void =
+        targets.Length = 3
+        lights.Length = 3
+        stages.Length = 3
+        marker.IsValid[]
+        goal_marker.IsValid[]
+        tile_spacing > 0.0
+        bay_min_x < bay_max_x
+        bay_min_y < bay_max_y
+        bay_min_z < bay_max_z
+        for (index -> target : targets):
+            target.target_id = index
+        for (stage : stages):
+            stage.start_tile >= 0
+            stage.start_tile <= 4
+            stage.goal_tile >= 0
+            stage.goal_tile <= 4
+            stage.commands.Length > 0
+            stage.commands.Length <= 3
+            stage.editable_slot >= 0
+            stage.editable_slot < stage.commands.Length
+            for (command : stage.commands):
+                command >= 0
+                command <= 2
+            valid_stage[stage]
+
+    # Reject unsafe or ambiguous editable data before arming any hit surface.
+    valid_stage(stage:debug_route_stage)<transacts><decides>:void =
+        var initial_endpoint:int = stage.start_tile
+        for (command : stage.commands):
+            set initial_endpoint += fixtures.move_delta(command)
+        initial_endpoint <> stage.goal_tile
+        var matches:int = 0
+        for (replacement : array{0, 1, 2}):
+            var tile:int = stage.start_tile
+            for (index -> original : stage.commands):
+                var command:int = original
+                if (index = stage.editable_slot):
+                    set command = replacement
+                set tile += fixtures.move_delta(command)
+                tile >= 0
+                tile <= 4
+            if (tile = stage.goal_tile):
+                set matches += 1
+        matches = 1
+
+    display(label:billboard_device, content:message):void =
+        label.SetText(content)
+        label.ShowText()
         label.UpdateDisplay()
 
-    reset_marker():void =
-        if (marker.TeleportTo[marker_home]) {}
+    in_bay(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        location.X >= bay_min_x
+        location.X <= bay_max_x
+        location.Y >= bay_min_y
+        location.Y <= bay_max_y
+        location.Z >= bay_min_z
+        location.Z <= bay_max_z
 
-    release():void =
-        if (input_player := owner?, state := progress.states[input_player], state.station_id = station_id):
-            set state.station_id = -1
-        set generation += 1
-        set running = false
-        set owner = false
-        reset_marker()
-        display(board, available_text(station_id + 1))
-        display(result_board, empty_text)
-        display(instruction_board, welcome_text)
+    is_active_player(input_agent:agent)<transacts><decides>:void =
+        current := active_player?
+        input_agent = current
+        saved_character := active_character?
+        character := current.GetFortCharacter[]
+        character = saved_character
+        character.IsActive[]
+        in_bay[current]
 
-    move_name(choice:int):message =
-        if (choice = 0):
-            west_text
-        else if (choice = 1):
-            wait_text
-        else:
-            east_text
-
-    destination_name(garden:logic):message =
-        if (garden?):
-            garden_text
-        else:
-            storage_text
-
-    show_program(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        var program:message = move_program_text(move_name(state.edit_choice))
-        if (state.challenge = 1):
-            set program = repeat_program_text(fixtures.repeat_count(state.edit_choice))
-        else if (state.challenge = 2):
-            set program = rule_program_text(destination_name(fixtures.goes_to_garden(state.edit_choice, 0)), destination_name(fixtures.goes_to_garden(state.edit_choice, 1)))
-        display(board, board_text(input_player, state.challenge + 1, program))
-
-    show_ready(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        reset_marker()
-        show_program(input_player)
-        if (state.solved?):
-            var final_pose:transform = marker_home
-            if (state.challenge = 2):
-                set final_pose.Translation.Y += 360.0
-                display(result_board, cargo_result_text(garden_text, storage_text, cargo_match_status))
-            else:
-                set final_pose.Translation.X += 540.0
-                display(result_board, tile_result_text(3, solved_text))
-            if (marker.TeleportTo[final_pose]) {}
-            if (state.badge_earned?):
-                display(instruction_board, complete_board_text)
-            else:
-                display(instruction_board, solved_text)
-            return
-        if (state.challenge = 2):
-            display(result_board, cargo_result_text(pending_text, pending_text, cargo_ready_text))
-        else:
-            display(result_board, tile_result_text(0, ready_text))
-        display(instruction_board, welcome_text)
-
-    on_claim(input_agent:agent):void =
-        if (input_player := player[input_agent]):
-            if (current := owner?):
-                if (current <> input_player):
-                    feedback.Show(input_player, occupied_text, ?DisplayTime := 5.0)
-                return
-            state := progress.ensure_player(input_player)
-            if (state.station_id >= 0):
-                feedback.Show(input_player, other_text, ?DisplayTime := 5.0)
-                return
-            set state.station_id = station_id
-            set owner = option{input_player}
-            set observed_round = progress.round_generation
-            show_ready(input_player)
-            feedback.Show(input_player, welcome_text, ?DisplayTime := 10.0)
-
-    on_edit(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            set state.edit_choice += 1
-            if (state.edit_choice >= fixtures.choice_count(state.challenge)):
-                set state.edit_choice = 0
-            set state.solved = false
-            show_ready(input_player)
-
-    on_run(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            set running = true
-            set generation += 1
-            set state.solved = false
-            show_ready(input_player)
-            spawn{execute(input_player, state.challenge, state.edit_choice, generation, progress.round_generation)}
-
-    on_help(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            state := progress.ensure_player(input_player)
-            set state.hint_level += 1
-            var hint:message = concept_move_text
-            if (state.challenge = 1):
-                set hint = concept_repeat_text
-            else if (state.challenge = 2):
-                set hint = concept_rule_text
-            if (state.hint_level > 1):
-                if (state.challenge = 0):
-                    set hint = worked_move_text
-                else if (state.challenge = 1):
-                    set hint = worked_repeat_text
-                else:
-                    set hint = worked_rule_text
-            feedback.Show(input_player, hint, ?DisplayTime := 10.0)
-
-    restart(input_player:player):void =
-        set generation += 1
-        set running = false
-        state := progress.ensure_player(input_player)
-        set state.edit_choice = 0
-        if (state.challenge = 1):
-            set state.edit_choice = 2
-        set state.hint_level = 0
-        set state.solved = false
-        show_ready(input_player)
-
-    on_replay(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            restart(input_player)
-
-    on_next(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (not state.solved?):
-                feedback.Show(input_player, finish_text, ?DisplayTime := 5.0)
-                return
-            if (state.challenge < 2):
-                set state.challenge += 1
-            else:
-                set state.challenge = 0
-            restart(input_player)
-
-    valid_run(input_player:player, token:int, round_token:int)<transacts><decides>:void =
-        owner? = input_player
+    run_valid(token:int, expected_phase:int)<transacts><decides>:void =
         generation = token
-        progress.round_generation = round_token
-        running?
+        phase = expected_phase
+        current := active_player?
+        is_active_player[current]
 
-    animate(input_player:player, target:transform, token:int, round_token:int)<suspends>:void =
-        start := marker.GetTransform()
-        for (frame := 1..12):
-            if (not valid_run[input_player, token, round_token]):
-                return
-            var position:transform = start
-            set position.Translation = start.Translation + (target.Translation - start.Translation) * (frame * 1.0 / 12.0)
-            if (marker.TeleportTo[position]) {}
-            Sleep(0.05)
+    move_pix(tile:int):void =
+        var pose:transform = marker_home
+        set pose.Translation = track_origin + vector3{X := tile * tile_spacing}
+        if (marker.TeleportTo[pose]) {}
 
-    execute(input_player:player, challenge:int, choice:int, token:int, round_token:int)<suspends>:void =
-        Sleep(0.7)
-        if (not valid_run[input_player, token, round_token]):
-            return
-        var matches:logic = false
-        if (challenge < 2):
-            var total:int = 3
-            var tile:int = 0
-            if (challenge = 1):
-                set total = fixtures.repeat_count(choice)
-            for (step := 1..total):
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                var delta:int = 1
-                var command:message = east_text
-                if (challenge = 0, step = 2):
-                    set delta = fixtures.move_delta(choice)
-                    set command = move_name(choice)
-                display(instruction_board, step_text(step, total, command))
-                set tile += delta
-                var target:transform = marker_home
-                set target.Translation.X += tile * 180.0
-                animate(input_player, target, token, round_token)
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                display(result_board, tile_result_text(tile, step_text(step, total, command)))
-                Sleep(0.5)
-            if (tile = 3):
-                set matches = true
-            if (valid_run[input_player, token, round_token]):
-                if (matches?):
-                    display(result_board, tile_result_text(tile, solved_text))
-                else:
-                    display(result_board, tile_result_text(tile, wrong_text))
+    move_goal(tile:int):void =
+        var pose:transform = goal_home
+        set pose.Translation = track_origin + vector3{X := tile * tile_spacing, Z := 100.0}
+        if (goal_marker.TeleportTo[pose]) {}
+        var label_pose:transform = goal_label.GetTransform()
+        set label_pose.Translation = pose.Translation + vector3{Y := 10.0, Z := 20.0}
+        if (goal_label.TeleportTo[label_pose]) {}
+        display(goal_label, text("GOAL {tile}"))
+
+    command_name(command:int):string =
+        if (command = 0):
+            "LEFT"
+        else if (command = 1):
+            "STOP"
         else:
-            var leaf_actual:message = pending_text
-            var plain_actual:message = pending_text
-            for (item := 0..1):
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                reset_marker()
-                garden := fixtures.goes_to_garden(choice, item)
-                destination := destination_name(garden)
-                var cargo:message = leaf_text
-                if (item = 1):
-                    set cargo = plain_text
-                display(instruction_board, delivery_text(cargo, destination))
-                Sleep(0.7)
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                var target:transform = marker_home
-                if (garden?):
-                    set target.Translation.X += 540.0
-                else:
-                    set target.Translation.Y += 360.0
-                animate(input_player, target, token, round_token)
-                if (not valid_run[input_player, token, round_token]):
-                    return
-                if (item = 0):
-                    set leaf_actual = destination
-                else:
-                    set plain_actual = destination
-                display(result_board, cargo_result_text(leaf_actual, plain_actual, cargo_running_status(cargo, destination)))
-                Sleep(0.7)
-            if (choice = 1):
-                set matches = true
-            if (valid_run[input_player, token, round_token]):
-                if (matches?):
-                    display(result_board, cargo_result_text(leaf_actual, plain_actual, cargo_match_status))
-                else:
-                    display(result_board, cargo_result_text(leaf_actual, plain_actual, cargo_mismatch_status))
-        if (not valid_run[input_player, token, round_token]):
-            return
-        set running = false
-        if (not matches?):
-            error_audio.Play(input_player)
-            display(instruction_board, wrong_text)
-            feedback.Show(input_player, wrong_text, ?DisplayTime := 10.0)
-            return
-        state := progress.ensure_player(input_player)
-        already_earned := state.badge_earned
-        progress.complete(input_player)
-        if (state.badge_earned?):
-            display(instruction_board, complete_board_text)
-            if (already_earned?):
-                feedback.Show(input_player, retained_text, ?DisplayTime := 10.0)
+            "RIGHT"
+
+    program_text(commands:[]int, slot:int):string =
+        var plan_string:string = ""
+        for (index -> command : commands):
+            if (index > 0):
+                set plan_string = "{plan_string}  "
+            name := command_name(command)
+            if (index = slot):
+                set plan_string = "{plan_string}[{name}]"
             else:
-                feedback.Show(input_player, complete_text, ?DisplayTime := 12.0)
-        else:
-            display(instruction_board, solved_text)
-            feedback.Show(input_player, solved_text, ?DisplayTime := 8.0)
+                set plan_string = "{plan_string}{name}"
+        plan_string
 
-    on_return(input_agent:agent):void =
-        if (current := owner?, current = input_agent):
-            release()
-        hub_destination.Teleport(input_agent)
+    show_result(status:string):void =
+        if (stage := stages[phase]):
+            program := program_text(current_commands, stage.editable_slot)
+            display(board, text("{phase}/3 FIXED | GOAL {stage.goal_tile}\nStart {stage.start_tile}: {program}\nBEFORE {before_tile} | NOW {actual_tile}\n{status}"))
 
-    on_spawn(input_agent:agent):void =
-        if (current := owner?, current = input_agent):
-            release()
+    reset_bay():void =
+        set generation += 1
+        if (current := active_player?):
+            feedback.Hide(current)
+        set active_player = false
+        set active_character = false
+        set phase = -1
+        set busy = false
+        set mistakes = 0
+        set before_tile = 0
+        set actual_tile = 0
+        set current_commands = array{}
+        for (target : targets):
+            target.deactivate()
+        for (light : lights):
+            light.TurnOff()
+        replay_button.Disable()
+        move_pix(0)
+        move_goal(3)
+        display(board, welcome)
+        display(instruction_board, text("FIX THE BOXED STEP\nLEFT < : one tile left\nSTOP [] : stay for this step\nRIGHT > : one tile right"))
 
     on_removed(input_player:player):void =
-        if (current := owner?, current = input_player):
-            release()
+        if (current := active_player?, current = input_player):
+            reset_bay()
+
+    begin_solo(input_player:player):void =
+        if (character := input_player.GetFortCharacter[], character.IsActive[], in_bay[input_player]):
+            reset_bay()
+            set active_player = option{input_player}
+            set active_character = option{character}
+            progress.ensure_player(input_player)
+            set phase = 0
+            set busy = true
+            for (target : targets):
+                target.activate()
+            spawn { demonstrate(generation, phase) }
+
+    monitor_player()<suspends>:void =
+        loop:
+            if (observed_round <> progress.round_generation):
+                set observed_round = progress.round_generation
+                reset_bay()
+            if (current := active_player?):
+                if (not is_active_player[current]):
+                    reset_bay()
+            else:
+                for (candidate : GetPlayspace().GetPlayers(), not active_player?):
+                    begin_solo(candidate)
+            Sleep(0.1)
+
+    demonstrate(token:int, expected_phase:int)<suspends>:void =
+        if (not run_valid[token, expected_phase]):
+            return
+        if (stage := stages[phase]):
+            set current_commands = stage.commands
+            set before_tile = stage.start_tile
+            for (command : stage.commands):
+                set before_tile += fixtures.move_delta(command)
+            set actual_tile = stage.start_tile
+            move_goal(stage.goal_tile)
+            move_pix(actual_tile)
+            show_result("WATCH PIX'S PLAN")
+            Sleep(0.5)
+            execute_plan(token, expected_phase, true)
+
+    listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
+        loop:
+            input_agent := target.Hit.Await()
+            on_hit(input_agent, target, index)
+
+    on_hit(input_agent:agent, target:fn_shoreline_island_data_target, index:int):void =
+        if (not is_active_player[input_agent]):
+            return
+        set last_hit = GetSimulationElapsedTime()
+        if (busy? or phase < 0 or phase >= stages.Length):
+            return
+        if (stage := stages[phase]):
+            set busy = true
+            set current_commands = stage.commands
+            if (set current_commands[stage.editable_slot] = index):
+                target.accept(input_agent, false)
+                feedback.Hide(input_agent)
+                show_result("TESTING {command_name(index)}")
+                Print("ERROR LAB: shot phase={phase} command={index}")
+                spawn { execute_plan(generation, phase, false) }
+
+    execute_plan(token:int, expected_phase:int, demonstration:logic)<suspends>:void =
+        if (not run_valid[token, expected_phase]):
+            return
+        if (stage := stages[phase]):
+            set actual_tile = stage.start_tile
+            move_pix(actual_tile)
+            for (step -> command : current_commands):
+                if (not run_valid[token, expected_phase]):
+                    return
+                show_result("Step {step + 1}: {command_name(command)}")
+                Sleep(0.5)
+                if (not run_valid[token, expected_phase]):
+                    return
+                set actual_tile += fixtures.move_delta(command)
+                move_pix(actual_tile)
+            if (demonstration?):
+                show_result("MISMATCH - SHOOT A CORRECTION")
+            else if (actual_tile = stage.goal_tile):
+                if (current := active_player?, light := lights[phase]):
+                    state := progress.ensure_player(current)
+                    set state.challenge = phase
+                    progress.complete(current)
+                    light.TurnOn()
+                    show_result("MATCH! {phase + 1}/3 FIXED")
+                    Print("ERROR LAB: verified phase={phase} goal={stage.goal_tile} actual={actual_tile}")
+                Sleep(1.0)
+                if (not run_valid[token, expected_phase]):
+                    return
+                set phase += 1
+                set mistakes = 0
+                if (phase = stages.Length):
+                    for (target : targets):
+                        target.deactivate()
+                    display(board, recap)
+                    replay_button.Enable()
+                    set busy = false
+                    return
+                await_quiet(token, phase)
+                if (run_valid[token, phase]):
+                    set busy = true
+                    demonstrate(token, phase)
+                return
+            else:
+                set mistakes += 1
+                var hint:string = "Reached {actual_tile}; goal is {stage.goal_tile}. Change the boxed step."
+                if (mistakes >= 2):
+                    if (phase = 0):
+                        set hint = "All three steps need to go right. Shoot RIGHT."
+                    else if (phase = 1):
+                        set hint = "From tile 2, move left to tile 1. Shoot LEFT."
+                    else:
+                        set hint = "The extra step overshoots. Shoot STOP."
+                show_result(hint)
+                if (current := active_player?):
+                    error_audio.Play(current)
+                    feedback.Show(current, text(hint), ?DisplayTime := 0.0)
+                Print("ERROR LAB: mismatch phase={phase} goal={stage.goal_tile} actual={actual_tile}")
+            Sleep(1.0)
+            if (run_valid[token, expected_phase]):
+                await_quiet(token, expected_phase)
+
+    await_quiet(token:int, expected_phase:int)<suspends>:void =
+        set last_hit = GetSimulationElapsedTime()
+        for (target : targets):
+            target.activate()
+        loop:
+            Sleep(0.05)
+            if (not run_valid[token, expected_phase]):
+                return
+            if (GetSimulationElapsedTime() - last_hit >= 0.5):
+                set busy = false
+                return
+
+    on_replay(input_agent:agent):void =
+        if (phase = stages.Length, is_active_player[input_agent], current := active_player?):
+            begin_solo(current)
+
+    on_return(input_agent:agent):void =
+        if (current := active_player?, current = input_agent):
+            reset_bay()
+        hub_destination.Teleport(input_agent)

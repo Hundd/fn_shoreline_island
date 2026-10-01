@@ -1,6 +1,6 @@
 # Implementation plan: Fix Pix's Route
 
-Revision 1, planning only. Implement only after explicit approval of the generated digest and a successful readiness check.
+Revision 1 approved by the project owner; implementation is in progress. Approval and readiness evidence are recorded in approval.yaml and evidence/implementation-status.md.
 
 ## Inspected basis
 
@@ -45,6 +45,8 @@ All anchors are proposals on measured floor bounds, not existing actor transform
 
 ## Current limits
 
-Offline planning cannot prove collision, native device bounds, material cook eligibility, normal camera readability, shot coverage or enjoyment. Exact cleanup/binding preflight is required implementation work; the preserved infrastructure and intended target/controller counts are fixed. No unresolved learning, stage or layout choice remains in this revision. Human approval is pending; gameplay acceptance remains entirely pending.
+Implementation choices recorded 2026-09-30: use editable world bounds at 0.1-second polling for automatic entry/departure, with the bound native entry zone allowing weapon fire. Native wrappers are resolved through savedActor; custom targets/progress use script references. Three default light wrappers support the editable array. The native target label bounds required scale 0.45 and -150 cm offset to sit below the 1.5 m rings. Positive-Y facing is true because the player approaches from larger Y; the earlier false adapter hint above is superseded by this measured orientation correction. Pix uses an 80 cm movable cube with three small face components, and goal uses the second legacy marker. The learning stages and anchors remain the approved table/layout. Source emits effective stage records at startup for runtime evidence because DeviceToolset cannot read those nested stage objects as ScriptDevices. Removal/readback manifests are in evidence/removed-controls.json and evidence/removed-displays.json. The final build/cook and solo acceptance remain pending; earlier source revisions compiled without diagnostics.
+
+Offline planning cannot prove collision, native device bounds, material cook eligibility, normal camera readability, shot coverage or enjoyment. Cleanup/binding preflight and editor implementation readbacks are now recorded, but cooked inspection and protected-transform verification remain required. No unresolved learning, stage or layout choice remains in this revision. Human approval is recorded; gameplay acceptance remains pending.
 
 The generated v1 plan includes a generic `multiplayer shared state` verification line. It is explicitly not applicable to this solo feature: execute the requirement-linked AC-01..10 checklist above; do not add multiplayer behavior or tests. No shared generator/tool schema change is needed for this feature.

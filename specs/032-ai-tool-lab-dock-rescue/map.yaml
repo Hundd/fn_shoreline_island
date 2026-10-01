@@ -1,0 +1,494 @@
+version: 1
+map:
+  id: ai_tool_lab_dock_rescue
+  title: AI Tool Lab - Pix's Dock Rescue
+  theme: coastal_tool_rescue
+  units: meters
+  origin_cm:
+  - -4600
+  - -11600
+  - 2400
+  size:
+  - 28
+  - 38
+  - 8
+  learning_objective: Choose a tool for a task, observe its result, and distinguish
+    finding information, sharing information and lighting a place.
+  source_feature: specs/032-ai-tool-lab-dock-rescue/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- tool_bay
+zones:
+- id: arrival
+  label: Retained access strip
+  pattern: corridor
+  position:
+  - 24
+  - 0
+  - 0
+  size:
+  - 4
+  - 38
+  - 8
+  purpose: Walk straight into the solo lab.
+  parameters:
+    width_m: 3
+    access: Always open; preserve campus floor and adjacent routes
+  devices: []
+  overlap_with: []
+  completion: Exactly one player enters bay; first request appears within 0.5 s.
+  reset: Cancel generation and lock inputs; restore unknown crate, quiet speaker,
+    lamp OFF and Pix home. Replay/reentry restarts step 1 retaining badge; manager
+    round reset clears badge.
+- id: tool_bay
+  label: Three tools / one rescue
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 24
+  - 38
+  - 8
+  purpose: Shoot a stable tool choice and see its consequence from one compact play
+    point.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - controller
+  - targets
+  - blaster
+  - entry
+  - boards
+  - feedback
+  - controls
+  - progress
+  - tracker
+  - hub
+  - tool_props
+  - pix
+  - lamp_light
+  - progress_lights
+  - audio
+  - island_settings
+  overlap_with: []
+  completion: Three verified outputs award Tool Master Badge once; hide choices and
+    offer Replay/Return.
+  reset: Cancel generation and lock inputs; restore unknown crate, quiet speaker,
+    lamp OFF and Pix home. Replay/reentry restarts step 1 retaining badge; manager
+    round reset clears badge.
+connections:
+- from: arrival
+  to: tool_bay
+  mode: walk
+  width: 3
+  points:
+  - - 26
+    - 29
+    - 0
+  - - 22
+    - 29
+    - 0
+  - - 14
+    - 29
+    - 0
+  gate: always
+markers:
+- id: arrival
+  kind: spawn
+  zone: arrival
+  label: Walk-in from campus; no new spawn
+  position:
+  - 26
+  - 29
+  - 0
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: rifle
+  kind: weapon
+  zone: arrival
+  label: Existing Data Blaster inventory; no extra granter
+  position:
+  - 26
+  - 28
+  - 0
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: play_point
+  kind: checkpoint
+  zone: tool_bay
+  label: Play point; annotation only
+  position:
+  - 14
+  - 29
+  - 0
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: scanner
+  kind: target
+  zone: tool_bay
+  label: A SCANNER - find information
+  position:
+  - 11
+  - 21
+  - 1.8
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+  target_id: 0
+- id: speaker
+  kind: target
+  zone: tool_bay
+  label: B SPEAKER - share information
+  position:
+  - 14
+  - 21
+  - 1.8
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+  target_id: 1
+- id: light
+  kind: target
+  zone: tool_bay
+  label: C LIGHT - brighten a place
+  position:
+  - 17
+  - 21
+  - 1.8
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+  target_id: 2
+- id: request
+  kind: knowledge
+  zone: tool_bay
+  label: REQUEST / RESULT / NEXT / 1 of 3
+  position:
+  - 14
+  - 15
+  - 4.8
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: crate
+  kind: knowledge
+  zone: tool_bay
+  label: Mystery crate -> MEDICAL SUPPLIES
+  position:
+  - 9
+  - 17
+  - 0.8
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: speaker_display
+  kind: knowledge
+  zone: tool_bay
+  label: Speaker pulse + crew-ready check
+  position:
+  - 14
+  - 17
+  - 0.8
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: pad
+  kind: knowledge
+  zone: tool_bay
+  label: Delivery pad and Pix finish pose
+  position:
+  - 19
+  - 17
+  - 0
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: lamp
+  kind: knowledge
+  zone: tool_bay
+  label: OFF / ON dock lamp
+  position:
+  - 20
+  - 16
+  - 2.2
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: badge
+  kind: reward
+  zone: tool_bay
+  label: Tool Master Badge and recap on main board
+  position:
+  - 20
+  - 15
+  - 6.2
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: replay
+  kind: checkpoint
+  zone: tool_bay
+  label: Mounted Replay switch; no checkpoint device
+  position:
+  - 11
+  - 30
+  - 0.9
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+- id: return
+  kind: exit
+  zone: tool_bay
+  label: Mounted Return switch; shared hub destination
+  position:
+  - 17
+  - 30
+  - 0.9
+  source: Proposed anchor inside live measured first-floor bounds; evidence/live-tool-inventory-2026-09-30.json
+    and plan.md. Annotation is not an existing transform.
+devices:
+- id: controller
+  class: fn_shoreline_island_event_station
+  count: 1
+  source: Retain station-1 controller; refactor opt-in solo flow, retire other three
+    after audit
+  settings:
+    solo_only: true
+    automatic_entry: true
+    success_ids:
+    - 0
+    - 1
+    - 2
+    verified_outputs:
+    - crate_scanned
+    - crew_notified
+    - dock_lit_and_pix_ready
+    quiet_rearm_seconds: 0.5
+    hint_seconds: 8
+    configured_only_after_binding: true
+- id: targets
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Shared existing damage-only target class; place only missing complete assemblies
+  settings:
+    target_ids:
+    - 0
+    - 1
+    - 2
+    mission_id: 7
+    labels:
+    - A SCANNER
+    - B SPEAKER
+    - C LIGHT
+    stationary_y_facing: true
+    stationary_positive_y: true
+    hit_face_m: 1.5
+    hide_after_finish: true
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Retain shared Data Blaster/spawn hooks
+  settings:
+    no_extra_granter: true
+- id: entry
+  class: mutator_zone_device
+  count: 1
+  source: Reuse eligible volume or place one local bay entry
+  settings:
+    weapons_allowed: true
+    solo_only: true
+    hidden: true
+- id: boards
+  class: billboard_device
+  count: 2
+  source: Reuse station-1 main/result boards; repurpose label boards separately within
+    target assemblies
+  settings:
+    short_persistent_request: true
+    unknown_until_scanned: true
+    captions_for_audio: true
+- id: feedback
+  class: hud_message_device
+  count: 1
+  source: Retain event_station_1_feedback
+  settings:
+    recipient: TriggeringPlayer
+    idle_hint_seconds: 8
+- id: controls
+  class: button_device
+  count: 2
+  source: Retain station-1 Replay/Return buttons; remove 38 obsolete controls after
+    audit
+  settings:
+    replay_after_finish: true
+    return_always: true
+    mounted: true
+- id: progress
+  class: fn_shoreline_island_event_progress
+  count: 1
+  source: Retain event_station_1_progress and existing journal identity
+  settings:
+    completion_indices:
+    - 0
+    - 1
+    - 2
+    credit_after_verified_output: true
+    retain_badge_on_replay: true
+- id: tracker
+  class: tracker_device
+  count: 1
+  source: Retain event_station_1_badge_tracker
+  settings:
+    target: 1
+    award_once_per_round: true
+- id: hub
+  class: teleporter_device
+  count: 1
+  source: Retain shared hub_destination through actual native wrapper
+  settings:
+    return_always: true
+- id: tool_props
+  class: creative_prop
+  count: 8
+  source: Retain eligible station-1 chute/parcel/lamp; project BuildingProp primitives
+    for crate body, three supplies, speaker and pad; reconcile eight display props
+    total
+  settings:
+    roles:
+    - crate_body
+    - crate_panel
+    - supplies_1
+    - supplies_2
+    - supplies_3
+    - speaker
+    - delivery_pad
+    - lamp
+    scripted_not_live_ai: true
+- id: pix
+  class: creative_prop
+  count: 1
+  source: Reuse eligible Pix/project primitive; no new AI actor
+  settings:
+    scripted_finish_move: true
+    home_local_m:
+    - 18
+    - 18
+    - 0.5
+    finish_local_m:
+    - 19
+    - 17
+    - 0.5
+- id: lamp_light
+  class: customizable_light_device
+  count: 1
+  source: One eligible real dock light; existing moving sphere is insufficient
+  settings:
+    initial_state: 'OFF'
+    wrong_preview_resets: true
+    final_state: 'ON'
+- id: progress_lights
+  class: customizable_light_device
+  count: 3
+  source: Reconcile eligible local lights or place three small instances
+  settings:
+    text_redundancy: true
+    one_per_verified_step: true
+- id: audio
+  class: audio_player_device
+  count: 1
+  source: Retain current player-local tool_audio reference
+  settings:
+    optional_with_caption: true
+- id: island_settings
+  class: island_settings_device
+  count: 1
+  source: Retain existing Island Settings actor; discover exact native schema
+  settings:
+    max_players: 1
+    preserve_other_matchmaking: true
+stages:
+- id: approach
+  zone: arrival
+  purpose: Walk in and see the goal
+  requires: []
+  active_targets: []
+  completion: First request shown automatically.
+- id: scan_crate
+  zone: tool_bay
+  purpose: 'Unknown contents: Scanner observes; Speaker cannot invent; Light cannot
+    scan.'
+  requires:
+  - approach
+  active_targets:
+  - scanner
+  - speaker
+  - light
+  completion: Reveal labelled medical supplies; verify crate state then credit index
+    0.
+  success_target: scanner
+- id: notify_crew
+  zone: tool_bay
+  purpose: 'Known contents: Speaker shares the observed medical supplies.'
+  requires:
+  - scan_crate
+  active_targets:
+  - scanner
+  - speaker
+  - light
+  completion: Pulse speaker, hold announcement caption and crew-ready check; verify
+    then credit index 1.
+  success_target: speaker
+- id: light_dock
+  zone: tool_bay
+  purpose: 'Dark dock: Light makes the delivery area bright.'
+  requires:
+  - notify_crew
+  active_targets:
+  - scanner
+  - speaker
+  - light
+  completion: Lamp ON, pad lit, Pix reaches ready pose; verify then credit index 2
+    and badge.
+  success_target: light
+- id: finish
+  zone: tool_bay
+  purpose: Hold recap and offer Replay/Return.
+  requires:
+  - light_dock
+  active_targets: []
+  completion: Hide target assemblies; retain 3/3 and one-time badge.
+assumptions:
+- id: site
+  detail: Envelope is measured; all marker anchors are proposed placements on retained
+    station-1 floor.
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection
+- id: adapter
+  detail: Existing event controller is not configured by this YAML. Approved implementation
+    explicitly refactors it with verified outputs, target input, quiet rearm and reset;
+    shared adapters are reused.
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection
+- id: solo
+  detail: User requested singleplay only. Set existing Island Settings Max Players
+    to 1; defensive pause on extra player. Other matchmaking settings preserved.
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection
+- id: cleanup
+  detail: 'Remove the prior four games via exact binding ledger: retain station-1
+    controller and Replay/Return; retire other three controllers and 38 controls.
+    Shared infrastructure and shell are protected.'
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection
+- id: lesson
+  detail: Three tools have useful distinct roles. Authored simulation, no network
+    AI, scanner observation precedes spoken content.
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection
+- id: physical_checks
+  detail: Native binding eligibility, mounting, sightlines, light effect and text
+    reliability are required implementation/cooked acceptance gates. Do not guess
+    missing references.
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection
+- id: approval
+  detail: Planning bundle is unapproved; explicit human review and current digest
+    required before mutation.
+  status: resolved
+  evidence: spec.md and plan.md; user request and recorded source/live inspection

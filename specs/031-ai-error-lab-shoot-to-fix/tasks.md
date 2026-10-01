@@ -4,7 +4,7 @@ Planning completion uses offline/read-only evidence. Implementation and acceptan
 
 - [x] P-01 Inspect latest specs/review, Error Lab source/fixtures/progress, shared shooting adapters and current actor bounds (R-01..08; plan.md, evidence/live-debug-inventory-2026-09-30.json).
 - [x] P-02 Generate/check map bundle, inspect preview/implementation plan, record requirement-linked review (R-01..09; review.md, evidence/preview-review.png, evidence/offline-route-check.json, evidence/planning-checks.md).
-- [ ] P-03 Obtain actual explicit human approval of revision 1 and digest; record approval.yaml and pass plan --ready (R-01..09). Never self-approve.
+- [x] P-03 Obtain actual explicit human approval of revision 1 and digest; record approval.yaml and pass plan --ready (R-01..09; approval.yaml, evidence/implementation-status.md).
 - [ ] I-01 Checkpoint and resolve exact actor/component/binding cleanup manifest and protected infrastructure (R-01/06/07).
 - [ ] I-02 Refactor existing controller with solo stage data, verified endpoint execution, attribution, reset and quiet rearm; build Verse (R-03..06).
 - [ ] I-03 Configure bay, three target assemblies, entry detection, track/Pix/goal, readable boards/HUD and progress lights; read back full transforms/settings (R-01/02/03/08).
