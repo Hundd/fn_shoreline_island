@@ -204,7 +204,7 @@ fn_shoreline_island_debug_station := class(creative_device):
         set pose.Translation = track_origin + vector3{X := tile * tile_spacing, Z := 100.0}
         if (goal_marker.TeleportTo[pose]) {}
         var label_pose:transform = goal_label.GetTransform()
-        set label_pose.Translation = pose.Translation + vector3{Y := 10.0, Z := 20.0}
+        set label_pose.Translation = pose.Translation + vector3{Y := 10.0, Z := -40.0}
         if (goal_label.TeleportTo[label_pose]) {}
         display(goal_label, text("GOAL {tile}"))
 

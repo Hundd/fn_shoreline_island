@@ -1,6 +1,6 @@
 # AI Error Lab: Fix Pix's Route
 
-Revision 1, 2026-09-30. Proposed design; awaiting explicit human review. Supersedes feature 006's four-station gameplay in this location and feature 022's presentation only after approval and implementation. No editor or gameplay-code changes belong to this planning phase. Single-player only, as requested; multiplayer is outside this feature's implementation and acceptance scope.
+Revision 1, approved by the project owner on 2026-09-30. Supersedes feature 006's four-station gameplay in this location and feature 022's presentation. Editor implementation and build evidence are recorded; cooked gameplay acceptance remains pending. Single-player only, as requested; multiplayer is outside this feature's implementation and acceptance scope.
 
 ## Experience
 
