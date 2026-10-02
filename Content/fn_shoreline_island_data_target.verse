@@ -70,6 +70,7 @@ fn_shoreline_island_data_target := class(creative_device):
     var wrong_until:float = 0.0
     # Controllers opt in; other missions keep their existing feedback timing.
     var explicit_answer_feedback:logic = false
+    var hit_subscription_ready:logic = false
     var answer_feedback_seconds:float = 0.4
     neutral_ring_material:DataBlaster.m_data_ring = DataBlaster.m_data_ring{}
     wrong_ring_material:DataBlaster.mi_target_grey = DataBlaster.mi_target_grey{}
@@ -82,9 +83,17 @@ fn_shoreline_island_data_target := class(creative_device):
             set answer_feedback_seconds = 0.75
         set ring_home = ring_mesh.GetTransform()
         deactivate()
-        hit_surface.TriggeredEvent.Subscribe(on_damage)
+        initialize_hit_subscription()
+
+    initialize_hit_subscription():void =
+        if (not hit_subscription_ready?):
+            hit_surface.TriggeredEvent.Subscribe(on_damage)
+            set hit_subscription_ready = true
+            if (mission_id = 7):
+                Print("TOOL LAB: hit subscription ready target={target_id}")
 
     activate():void =
+        initialize_hit_subscription()
         initialize_surface_home()
         if (hit_surface.TeleportTo[surface_home]) {}
         set generation += 1
@@ -132,6 +141,8 @@ fn_shoreline_island_data_target := class(creative_device):
         wrong_sparks.End()
 
     on_damage(maybe_agent:?agent):void =
+        if (mission_id = 7):
+            Print("TOOL LAB: surface hit target={target_id}")
         if (state = data_target_state.active, input_agent := maybe_agent?):
             Hit.Signal(input_agent)
 

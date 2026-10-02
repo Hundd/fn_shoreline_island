@@ -1,0 +1,155 @@
+{
+  "targets": {
+    "scanner": {
+      "device": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2089865923"
+      },
+      "trigger": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5150703_2090318924"
+      },
+      "device_transform": {
+        "location": {
+          "x": -3500,
+          "y": -9500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "trigger_transform": {
+        "location": {
+          "x": -3500,
+          "y": -9500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    "speaker": {
+      "device": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2090584925"
+      },
+      "trigger": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5150703_2090833926"
+      },
+      "device_transform": {
+        "location": {
+          "x": -3200,
+          "y": -9500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "trigger_transform": {
+        "location": {
+          "x": -3200,
+          "y": -9500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    "light": {
+      "device": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2091052927"
+      },
+      "trigger": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5150703_2091175928"
+      },
+      "device_transform": {
+        "location": {
+          "x": -2900,
+          "y": -9500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "trigger_transform": {
+        "location": {
+          "x": -2900,
+          "y": -9500,
+          "z": 2580
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    }
+  },
+  "others": {
+    "dock": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5150703_2114626929"
+    },
+    "step_1": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5150703_2114899930"
+    },
+    "step_2": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5150703_2114957931"
+    },
+    "step_3": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5150703_2115025932"
+    },
+    "entry": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5150703_2115090933"
+    }
+  },
+  "build": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[]}"
+      }
+    ]
+  }
+}

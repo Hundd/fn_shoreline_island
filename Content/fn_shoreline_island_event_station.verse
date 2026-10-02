@@ -1,29 +1,30 @@
-﻿using { /Fortnite.com/Devices }
+using { /Fortnite.com/Devices }
 using { /Fortnite.com/Characters }
 using { /Verse.org/Simulation }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
+tool_request_stage := class<concrete>:
+    @editable
+    tool_id:int = 0
+    @editable
+    request:string = "What's inside the mystery crate?"
+
 fn_shoreline_island_event_station := class(creative_device):
+    @editable
+    configured:logic = false
     @editable
     station_id:int = 0
     @editable
     progress:fn_shoreline_island_event_progress = fn_shoreline_island_event_progress{}
     @editable
-    claim_button:button_device = button_device{}
+    targets:[]fn_shoreline_island_data_target = array{}
     @editable
-    link_bell_button:button_device = button_device{}
+    stages:[]tool_request_stage = array{
+        tool_request_stage{},
+        tool_request_stage{tool_id := 1, request := "Tell the dock crew what we found."},
+        tool_request_stage{tool_id := 2, request := "Brighten the dock for collection."}}
     @editable
-    link_lever_button:button_device = button_device{}
-    @editable
-    bell_button:button_device = button_device{}
-    @editable
-    lever_button:button_device = button_device{}
-    @editable
-    demo_button:button_device = button_device{}
-    @editable
-    help_button:button_device = button_device{}
-    @editable
-    next_button:button_device = button_device{}
+    entry_zone:mutator_zone_device = mutator_zone_device{}
     @editable
     replay_button:button_device = button_device{}
     @editable
@@ -37,15 +38,25 @@ fn_shoreline_island_event_station := class(creative_device):
     @editable
     board:billboard_device = billboard_device{}
     @editable
-    recent_board:billboard_device = billboard_device{}
-    @editable
     response_board:billboard_device = billboard_device{}
     @editable
     chute:creative_prop = creative_prop{}
     @editable
-    parcel:creative_prop = creative_prop{}
+    scan_beam:creative_prop = creative_prop{}
+    @editable
+    supplies:[]creative_prop = array{creative_prop{}, creative_prop{}, creative_prop{}}
+    @editable
+    supplies_label:billboard_device = billboard_device{}
+    @editable
+    speaker:creative_prop = creative_prop{}
     @editable
     lamp:creative_prop = creative_prop{}
+    @editable
+    pix:creative_prop = creative_prop{}
+    @editable
+    dock_light:customizable_light_device = customizable_light_device{}
+    @editable
+    lights:[]customizable_light_device = array{customizable_light_device{}, customizable_light_device{}, customizable_light_device{}}
     @editable
     hub_spawner_0:player_spawner_device = player_spawner_device{}
     @editable
@@ -54,444 +65,360 @@ fn_shoreline_island_event_station := class(creative_device):
     hub_spawner_2:player_spawner_device = player_spawner_device{}
     @editable
     hub_spawner_3:player_spawner_device = player_spawner_device{}
+    @editable
+    bay_min:vector3 = vector3{X := -4600.0, Y := -11600.0, Z := 2350.0}
+    @editable
+    bay_max:vector3 = vector3{X := -2200.0, Y := -7800.0, Z := 3300.0}
+    @editable
+    pix_finish:vector3 = vector3{X := -2700.0, Y := -9900.0, Z := 2450.0}
 
-    fixtures:fn_shoreline_island_event_fixtures = fn_shoreline_island_event_fixtures{}
     var owner:?player = false
-    var running:logic = false
+    var owner_character:?fort_character = false
+    var phase:int = -1
+    var busy:logic = false
     var generation:int = 0
     var observed_round:int = -1
+    var last_hit:float = 0.0
+    var last_activity:float = 0.0
+    var hint_shown:logic = false
+    var crate_scanned:logic = false
+    var crew_notified:logic = false
+    var dock_lit:logic = false
     var chute_home:transform = transform{}
-    var parcel_home:transform = transform{}
-    var lamp_home:transform = transform{}
-
-    claim_text<localizes>:message = "Claim AI Tool Lab"
-    link_bell_text<localizes>:message = "Choose Scan Object tool"
-    link_lever_text<localizes>:message = "Choose Announce Result tool"
-    bell_text<localizes>:message = "Test Scan Object / Identify Scan"
-    lever_text<localizes>:message = "Test Announce Result / Identify Announce"
-    demo_text<localizes>:message = "Show the recent request again"
-    help_text<localizes>:message = "Help"
-    next_text<localizes>:message = "Next challenge / Replay all"
-    replay_text<localizes>:message = "Replay this challenge"
-    return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "AI TOOL LAB | Station {number}\nChoose a tool for each request.\nPress CLAIM to begin."
-    occupied_text<localizes>:message = "This AI Tool Lab station is in use. Choose another station."
-    other_text<localizes>:message = "Leave your current AI Tool Lab station before claiming another."
-    first_text<localizes>:message = "Mystery crate: what's inside? Choose Scanner, Speaker, or Light. Connect Scan Object to Scanner, then test."
-    identify_text<localizes>:message = "Watch the tool demonstration. Which request made it run: Scan Object or Announce Result?"
-    final_text<localizes>:message = "Connect Scan Object to Scanner and Announce Result to Speaker. Test both."
-    solved_text<localizes>:message = "Challenge complete! Next or Replay."
-    finish_text<localizes>:message = "Complete this challenge first. Help is always available."
-    complete_text<localizes>:message = "PIX MODULE RESTORED: TOOLS ONLINE\nTool Master Badge earned! Some AI systems can choose tools to help complete tasks. Replay or return to the hub."
-    retained_text<localizes>:message = "Tool action completed again! Your Tool Master Badge stays earned for this round."
-    complete_board_text<localizes>:message = "Tool Master Badge earned. Replay is optional."
-    wrong_text<localizes>(input:message, expected:message):message = "That tool action does not match {input}. This input needs {expected}. Choose again and try again."
-    wrong_answer_text<localizes>:message = "Watch the same request again. Read its name on the recent-request board."
-    later_text<localizes>:message = "This control is used in a later challenge."
-    fixed_text<localizes>:message = "This demonstration has fixed tool choices. Identify the request."
-    bell_name<localizes>:message = "Scan Object"
-    lever_name<localizes>:message = "Announce Result"
-    chute_name<localizes>:message = "Scanner"
-    lamp_name<localizes>:message = "Speaker"
-    light_name<localizes>:message = "Light"
-    yes_text<localizes>:message = "PASS"
-    no_text<localizes>:message = "not tested"
-    recent_empty<localizes>:message = "RECENT REQUEST: none\nTOOL: none"
-    recent_text<localizes>(event_id:message, response:message):message = "RECENT REQUEST: {event_id}\nTOOL USED: {response}"
-    idle_text<localizes>:message = "SCANNER: IDLE | CRATE: CLOSED\nSPEAKER: QUIET | LIGHT: OFF"
-    chute_status<localizes>:message = "SCANNER: COMPLETE | CRATE: OPEN\nCONTENTS: MEDICAL SUPPLIES"
-    lamp_status<localizes>:message = "SPEAKER: ANNOUNCEMENT SENT\nSCANNER: IDLE | CRATE: CLOSED"
-    light_status<localizes>:message = "LIGHT: ON | CRATE: CLOSED\nThe light cannot scan the contents."
-    board_text<localizes>(number:int, goal:message, bell:message, lever:message):message = "AI TOOL LAB | Challenge {number}\n{goal}\nScan Object > {bell}\nAnnounce Result > {lever}"
-    first_goal<localizes>:message = "GOAL: Scan the mystery crate to reveal its contents."
-    final_goal<localizes>:message = "GOAL: Scan Object > Scanner; Announce Result > Speaker."
-    demo_board_text<localizes>(number:int):message = "TRACE THE REQUEST | Example {number} of 3\nRead RECENT REQUEST: Scan Object or Announce Result?\nShow request repeats the demonstration."
-    tests_text<localizes>(recent:message, bell:message, lever:message):message = "{recent}\nScan > Scanner: {bell}\nAnnounce > Speaker: {lever}"
-    first_hint<localizes>:message = "A tool choice decides which action follows an input. Try the current action."
-    first_worked<localizes>:message = "Set Scan Object to Scanner. Then test Scan Object."
-    identify_hint<localizes>:message = "The recent-request board names what caused the demonstrated tool action."
-    identify_worked<localizes>:message = "Read RECENT REQUEST. Select Scan Object or Announce Result to match it."
-    final_hint<localizes>:message = "Each request has its own tool. Testing Scan Object should leave Speaker quiet."
-    final_worked<localizes>:message = "Set Scan Object > Scanner and Announce Result > Speaker. Test each request."
+    var scan_beam_home:transform = transform{}
+    var speaker_home:transform = transform{}
+    var pix_home:transform = transform{}
+    var action_result:string = "Contents UNKNOWN | Crew waiting | Dock DARK"
+    text<localizes>(value:string):message = "{value}"
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (not configured?):
+            return
+        Sleep(0.1)
+        if (not valid_configuration[]):
+            for (target : targets):
+                target.deactivate()
+            Print("TOOL LAB: incomplete configuration; choices disabled")
+            return
         set chute_home = chute.GetTransform()
-        set parcel_home = parcel.GetTransform()
-        set lamp_home = lamp.GetTransform()
-        claim_button.SetInteractionText(claim_text)
-        link_bell_button.SetInteractionText(link_bell_text)
-        link_lever_button.SetInteractionText(link_lever_text)
-        bell_button.SetInteractionText(bell_text)
-        lever_button.SetInteractionText(lever_text)
-        demo_button.SetInteractionText(demo_text)
-        help_button.SetInteractionText(help_text)
-        next_button.SetInteractionText(next_text)
-        replay_button.SetInteractionText(replay_text)
-        return_button.SetInteractionText(return_text)
-        for (control : array{claim_button, link_bell_button, link_lever_button, bell_button, lever_button, demo_button, help_button, next_button, replay_button, return_button}):
+        set scan_beam_home = scan_beam.GetTransform()
+        set speaker_home = speaker.GetTransform()
+        set pix_home = pix.GetTransform()
+        set observed_round = progress.round_generation
+        for (target : targets):
+            target.initialize_surface_home()
+            set target.explicit_answer_feedback = true
+        replay_button.SetInteractionText(text("REPLAY"))
+        return_button.SetInteractionText(text("RETURN TO HUB"))
+        for (control : array{replay_button, return_button}):
             control.SetInteractionTime(0.0)
             control.SetMaxTriggerCount(0)
-        claim_button.InteractedWithEvent.Subscribe(on_claim)
-        link_bell_button.InteractedWithEvent.Subscribe(on_link_bell)
-        link_lever_button.InteractedWithEvent.Subscribe(on_link_lever)
-        bell_button.InteractedWithEvent.Subscribe(on_bell)
-        lever_button.InteractedWithEvent.Subscribe(on_lever)
-        demo_button.InteractedWithEvent.Subscribe(on_demo)
-        help_button.InteractedWithEvent.Subscribe(on_help)
-        next_button.InteractedWithEvent.Subscribe(on_next)
         replay_button.InteractedWithEvent.Subscribe(on_replay)
         return_button.InteractedWithEvent.Subscribe(on_return)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_removed)
         for (spawner : array{hub_spawner_0, hub_spawner_1, hub_spawner_2, hub_spawner_3}):
             spawner.SpawnedEvent.Subscribe(on_spawn)
-        for (label : array{board, recent_board, response_board}):
-            label.SetTextSize(10)
-        release()
-        loop:
-            Sleep(0.25)
-            if (observed_round <> progress.round_generation):
-                set observed_round = progress.round_generation
-                release()
-            if (input_player := owner?):
-                if (character := input_player.GetFortCharacter[], character.IsActive[]):
-                    if (Distance(character.GetTransform().Translation, GetTransform().Translation) > 1400.0):
-                        release()
-                else:
-                    release()
+        for (index -> target : targets):
+            spawn { listen_hits(target, index) }
+        reset_bay()
+        monitor_player()
 
-    display(label:billboard_device, text:message):void =
-        label.SetText(text)
+    valid_configuration()<transacts><decides>:void =
+        targets.Length = 3
+        supplies.Length = 3
+        lights.Length = 3
+        stages.Length = 3
+        chute.IsValid[]
+        scan_beam.IsValid[]
+        speaker.IsValid[]
+        lamp.IsValid[]
+        pix.IsValid[]
+        bay_min.X < bay_max.X
+        bay_min.Y < bay_max.Y
+        bay_min.Z < bay_max.Z
+        for (index -> target : targets):
+            target.target_id = index
+            target.mission_id = 7
+        for (index -> stage : stages):
+            stage.tool_id = index
+        for (supply : supplies):
+            supply.IsValid[]
+
+    in_bay(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        location.X >= bay_min.X
+        location.X <= bay_max.X
+        location.Y >= bay_min.Y
+        location.Y <= bay_max.Y
+        location.Z >= bay_min.Z
+        location.Z <= bay_max.Z
+
+    is_owner(input_agent:agent)<transacts><decides>:void =
+        GetPlayspace().GetPlayers().Length = 1
+        current := owner?
+        current = input_agent
+        saved := owner_character?
+        character := current.GetFortCharacter[]
+        character = saved
+        character.IsActive[]
+        in_bay[current]
+
+    run_valid(token:int, expected_phase:int)<transacts><decides>:void =
+        generation = token
+        phase = expected_phase
+        observed_round = progress.round_generation
+        current := owner?
+        is_owner[current]
+
+    display(label:billboard_device, content:string):void =
+        label.SetText(text(content))
+        label.ShowText()
         label.UpdateDisplay()
 
-    event_name(event_id:int):message =
-        if (event_id = 0):
-            bell_name
+    show_board():void =
+        if (phase >= 0, phase < 3, stage := stages[phase]):
+            display(board, "PIX'S DOCK RESCUE | {phase}/3\n{stage.request}\nShoot A, B or C.")
+        else if (phase = 3):
+            display(board, "3/3 | TOOL MASTER BADGE\nScanner finds. Speaker shares. Light brightens.\nReplay or Return to Hub")
         else:
-            lever_name
+            display(board, "AI TOOL LAB | PIX'S DOCK RESCUE\nHelp Pix ready the dock.\nWalk in. Shoot the tool that fits.")
+        display(response_board, action_result)
 
-    response_name(response:int):message =
-        if (response = 0):
-            chute_name
-        else if (response = 1):
-            lamp_name
-        else:
-            light_name
-
-    expected_response(event_id:int):message =
-        if (event_id = 0):
-            chute_name
-        else:
-            lamp_name
-
-    test_name(tested:logic):message =
-        if (tested?):
-            yes_text
-        else:
-            no_text
-
-    objective(state:event_player_progress):message =
-        if (state.solved?):
-            if (state.badge_earned?):
-                complete_board_text
-            else:
-                solved_text
-        else if (state.challenge = 0):
-            first_text
-        else if (state.challenge = 1):
-            identify_text
-        else:
-            final_text
-
-    reset_props():void =
-        if (chute.TeleportTo[chute_home]) {}
-        if (parcel.TeleportTo[parcel_home]) {}
-        if (lamp.TeleportTo[lamp_home]) {}
-        display(response_board, idle_text)
-
-    restore_response(response:int):void =
-        reset_props()
-        if (response = 0):
-            var opened:transform = chute_home
-            set opened.Translation.Z += 250.0
-            var delivered:transform = parcel_home
-            set delivered.Translation.X += 480.0
-            if (chute.TeleportTo[opened]) {}
-            if (parcel.TeleportTo[delivered]) {}
-            display(response_board, chute_status)
-        else if (response = 1):
-            display(response_board, lamp_status)
-        else if (response = 2):
-            var lit:transform = lamp_home
-            set lit.Translation.Z += 120.0
-            if (lamp.TeleportTo[lit]) {}
-            display(response_board, light_status)
-
-    show_board(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        if (state.challenge = 1):
-            display(board, demo_board_text(state.demo_index + 1))
-        else:
-            var goal:message = first_goal
-            if (state.challenge = 2):
-                set goal = final_goal
-            display(board, board_text(state.challenge + 1, goal, response_name(state.bell_response), response_name(state.lever_response)))
-        if (state.last_event >= 0):
-            display(recent_board, recent_text(event_name(state.last_event), response_name(state.last_response)))
-        else:
-            display(recent_board, recent_empty)
-        if (state.challenge = 2, not running?):
-            var recent:message = recent_empty
-            if (state.last_event >= 0):
-                set recent = recent_text(event_name(state.last_event), response_name(state.last_response))
-            display(recent_board, tests_text(recent, test_name(state.bell_tested), test_name(state.lever_tested)))
-
-    release():void =
-        if (input_player := owner?, state := progress.states[input_player], state.station_id = station_id):
-            set state.station_id = -1
-            if (running?):
-                set state.last_event = -1
-                set state.last_response = -1
+    reset_bay():void =
         set generation += 1
-        set running = false
+        if (current := owner?):
+            feedback.Hide(current)
         set owner = false
-        reset_props()
-        display(board, available_text(station_id + 1))
-        display(recent_board, recent_empty)
+        set owner_character = false
+        set phase = -1
+        set busy = false
+        set crate_scanned = false
+        set crew_notified = false
+        set dock_lit = false
+        set hint_shown = false
+        for (target : targets):
+            target.deactivate()
+        for (light : lights):
+            light.TurnOff()
+        dock_light.TurnOff()
+        for (supply : supplies):
+            supply.Hide()
+        supplies_label.HideText()
+        scan_beam.Hide()
+        if (scan_beam.TeleportTo[scan_beam_home]) {}
+        if (chute.TeleportTo[chute_home]) {}
+        if (speaker.TeleportTo[speaker_home]) {}
+        if (pix.TeleportTo[pix_home]) {}
+        replay_button.Disable()
+        return_button.Enable()
+        set action_result = "Contents UNKNOWN | Crew waiting | Dock DARK"
+        show_board()
 
-    on_claim(input_agent:agent):void =
-        if (input_player := player[input_agent]):
-            if (current := owner?):
-                if (current <> input_player):
-                    feedback.Show(input_player, occupied_text, ?DisplayTime := 5.0)
+    fixtures_home()<transacts><decides>:void =
+        Distance(chute.GetTransform().Translation, chute_home.Translation) <= 5.0
+        Distance(speaker.GetTransform().Translation, speaker_home.Translation) <= 5.0
+        Distance(pix.GetTransform().Translation, pix_home.Translation) <= 5.0
+
+    begin_solo(input_player:player):void =
+        if (GetPlayspace().GetPlayers().Length = 1, character := input_player.GetFortCharacter[], character.IsActive[], in_bay[input_player]):
+            reset_bay()
+            if (not fixtures_home[]):
+                display(response_board, "Display reset failed. Leave and try again.")
                 return
             state := progress.ensure_player(input_player)
-            if (state.station_id >= 0):
-                feedback.Show(input_player, other_text, ?DisplayTime := 5.0)
-                return
-            set state.station_id = station_id
-            set owner = option{input_player}
-            set observed_round = progress.round_generation
-            restore_response(state.last_response)
-            show_board(input_player)
-            feedback.Show(input_player, objective(state), ?DisplayTime := 10.0)
-            if (state.challenge = 1, not state.solved?):
-                demonstrate(input_player)
-
-    edit_connection(input_agent:agent, event_id:int):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.challenge = 1):
-                feedback.Show(input_player, fixed_text, ?DisplayTime := 5.0)
-                return
-            if (event_id = 1, state.challenge = 0):
-                feedback.Show(input_player, later_text, ?DisplayTime := 5.0)
-                return
-            if (event_id = 0):
-                set state.bell_response = fixtures.toggle_response(state.bell_response)
-            else:
-                set state.lever_response = fixtures.toggle_response(state.lever_response)
-            tool_audio.Play(input_player)
-            set state.bell_tested = false
-            set state.lever_tested = false
+            set state.challenge = 0
+            set state.completed = array{false, false, false}
             set state.solved = false
-            set state.last_event = -1
-            set state.last_response = -1
-            reset_props()
-            show_board(input_player)
+            set state.station_id = 0
+            set owner = option{input_player}
+            set owner_character = option{character}
+            set phase = 0
+            set last_activity = GetSimulationElapsedTime()
+            for (target : targets):
+                target.activate()
+            show_board()
+            Print("TOOL LAB: solo entry; contents unknown; step=0")
 
-    on_link_bell(input_agent:agent):void =
-        edit_connection(input_agent, 0)
+    monitor_player()<suspends>:void =
+        loop:
+            if (observed_round <> progress.round_generation):
+                set observed_round = progress.round_generation
+                reset_bay()
+            if (GetPlayspace().GetPlayers().Length <> 1):
+                if (owner?):
+                    reset_bay()
+                display(board, "AI TOOL LAB | SINGLE PLAYER ONLY\nResume with one player.")
+            else if (current := owner?):
+                if (not is_owner[current]):
+                    reset_bay()
+                else if (not busy?, phase >= 0, phase < 3, not hint_shown?, GetSimulationElapsedTime() - last_activity >= 8.0):
+                    set hint_shown = true
+                    var hint:string = "Scanner finds out what is inside. Shoot A SCANNER."
+                    if (phase = 1):
+                        set hint = "Speaker shares what we found. Shoot B SPEAKER."
+                    else if (phase = 2):
+                        set hint = "Light brightens the dock. Shoot C LIGHT."
+                    feedback.Show(current, text(hint), ?DisplayTime := 5.0)
+            else if (candidate := GetPlayspace().GetPlayers()[0]):
+                begin_solo(candidate)
+            Sleep(0.1)
 
-    on_link_lever(input_agent:agent):void =
-        edit_connection(input_agent, 1)
+    listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
+        loop:
+            input_agent := target.Hit.Await()
+            on_hit(input_agent, target, index)
 
-    on_bell(input_agent:agent):void =
-        input_event(input_agent, 0)
+    on_hit(input_agent:agent, target:fn_shoreline_island_data_target, index:int):void =
+        if (not is_owner[input_agent]):
+            Print("TOOL LAB: ignored non-owner hit target={index}")
+            return
+        set last_hit = GetSimulationElapsedTime()
+        if (busy? or phase < 0 or phase >= 3):
+            return
+        set busy = true
+        set last_activity = last_hit
+        set hint_shown = false
+        spawn { execute_action(input_agent, target, index, generation, phase) }
 
-    on_lever(input_agent:agent):void =
-        input_event(input_agent, 1)
-
-    input_event(input_agent:agent, event_id:int):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.challenge = 1):
-                if (state.solved?):
-                    feedback.Show(input_player, objective(state), ?DisplayTime := 5.0)
-                    return
-                expected_event := fixtures.demonstration_event(state.demo_index)
-                if (event_id = expected_event):
-                    if (state.demo_index < 2):
-                        set state.demo_index += 1
-                        demonstrate(input_player)
-                    else:
-                        finish(input_player)
-                else:
-                    feedback.Show(input_player, wrong_answer_text, ?DisplayTime := 10.0)
-                    demonstrate(input_player)
-                return
-            if (state.challenge = 0, event_id = 1):
-                feedback.Show(input_player, later_text, ?DisplayTime := 5.0)
-                return
-            var response:int = state.bell_response
-            if (event_id = 1):
-                set response = state.lever_response
-            begin_response(input_player, event_id, response, false)
-
-    demonstrate(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        begin_response(input_player, fixtures.demonstration_event(state.demo_index), fixtures.demonstration_response(state.demo_index), true)
-
-    on_demo(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (state.challenge = 1):
-                demonstrate(input_player)
-            else:
-                feedback.Show(input_player, objective(state), ?DisplayTime := 8.0)
-
-    begin_response(input_player:player, event_id:int, response:int, demonstration:logic):void =
-        set generation += 1
-        set running = true
-        state := progress.ensure_player(input_player)
-        set state.last_event = event_id
-        set state.last_response = response
-        reset_props()
-        show_board(input_player)
-        spawn{execute_response(input_player, event_id, response, demonstration, generation, progress.round_generation)}
-
-    valid_run(input_player:player, token:int, round_token:int)<transacts><decides>:void =
-        owner? = input_player
-        generation = token
-        progress.round_generation = round_token
-        running?
-
-    animate(input_player:player, prop:creative_prop, target:transform, token:int, round_token:int)<suspends>:void =
+    # Check cancellation and successful teleport at every animation frame.
+    animate(prop:creative_prop, destination:transform, token:int, expected_phase:int)<suspends>:logic =
         start := prop.GetTransform()
-        for (frame := 1..12):
-            if (not valid_run[input_player, token, round_token]):
-                return
-            var pose:transform = start
-            set pose.Translation = start.Translation + (target.Translation - start.Translation) * (frame * 1.0 / 12.0)
-            if (prop.TeleportTo[pose]) {}
+        for (frame := 1..10):
+            if (not run_valid[token, expected_phase]):
+                return false
+            var pose:transform = destination
+            set pose.Translation = start.Translation + (destination.Translation - start.Translation) * (frame * 0.1)
+            if (not prop.TeleportTo[pose]):
+                return false
             Sleep(0.05)
+        if (not run_valid[token, expected_phase]):
+            return false
+        if (Distance(prop.GetTransform().Translation, destination.Translation) > 5.0):
+            return false
+        return true
 
-    execute_response(input_player:player, event_id:int, response:int, demonstration:logic, token:int, round_token:int)<suspends>:void =
-        Sleep(0.5)
-        if (not valid_run[input_player, token, round_token]):
+    execute_action(input_agent:agent, target:fn_shoreline_island_data_target, index:int, token:int, expected_phase:int)<suspends>:void =
+        var output_ok:logic = true
+        if (not run_valid[token, expected_phase]):
             return
-        if (response = 0):
-            var opened:transform = chute_home
-            set opened.Translation.Z += 250.0
-            animate(input_player, chute, opened, token, round_token)
-            var delivered:transform = parcel_home
-            set delivered.Translation.X += 480.0
-            animate(input_player, parcel, delivered, token, round_token)
-        else if (response = 1):
-            tool_audio.Play(input_player)
+        if (index = 0):
+            if (not crate_scanned?):
+                var sweep_end:transform = scan_beam_home
+                set sweep_end.Translation.X += 200.0
+                scan_beam.Show()
+                set output_ok = animate(scan_beam, sweep_end, token, expected_phase)
+                if (not run_valid[token, expected_phase]):
+                    return
+                scan_beam.Hide()
+                var opened:transform = chute_home
+                set opened.Translation.Z += 120.0
+                if (output_ok?, run_valid[token, expected_phase]):
+                    set output_ok = animate(chute, opened, token, expected_phase)
+                if (output_ok?, run_valid[token, expected_phase]):
+                    for (supply : supplies):
+                        supply.Show()
+                    display(supplies_label, "MEDICAL SUPPLIES x3")
+                    set crate_scanned = true
+            if (output_ok?):
+                set action_result = "SCANNER: medical supplies found.\nThe scanner finds information."
+        else if (index = 1):
+            if (crate_scanned?):
+                var pulse:transform = speaker_home
+                set pulse.Scale = speaker_home.Scale * 1.15
+                set output_ok = animate(speaker, pulse, token, expected_phase)
+                if (output_ok?, run_valid[token, expected_phase]):
+                    if (not speaker.TeleportTo[speaker_home]):
+                        set output_ok = false
+                if (output_ok?, run_valid[token, expected_phase]):
+                    tool_audio.Play(input_agent)
+                    set crew_notified = true
+                    set action_result = "SPEAKER: crew notified - medical supplies.\n[OK] Crew ready. Speaker shares information."
+            else:
+                set action_result = "SPEAKER: contents unknown - scan first.\nSpeaking cannot reveal what's inside."
+        else if (index = 2):
+            dock_light.TurnOn()
+            set action_result = "LIGHT: dock bright.\nLight cannot scan or notify the crew."
+            if (expected_phase = 2, crate_scanned?, crew_notified?):
+                var destination:transform = pix_home
+                set destination.Translation = pix_finish
+                set output_ok = animate(pix, destination, token, expected_phase)
+                if (output_ok?, run_valid[token, expected_phase]):
+                    set dock_lit = true
+                    set action_result = "LIGHT: dock ON. Pix ready for collection!\n[OK] Crate scanned. Crew notified. Dock lit."
+            else:
+                Sleep(0.5)
+        if (not run_valid[token, expected_phase]):
+            return
+        var correct:logic = false
+        if (stage := stages[expected_phase], stage.tool_id = index, output_ok?):
+            if (expected_phase = 0, crate_scanned?):
+                set correct = true
+            else if (expected_phase = 1, crate_scanned?, crew_notified?):
+                set correct = true
+            else if (expected_phase = 2, crate_scanned?, crew_notified?, dock_lit?):
+                set correct = true
+        if (correct?, current := owner?):
+            target.accept(input_agent, false)
+            state := progress.ensure_player(current)
+            set state.challenge = expected_phase
+            progress.complete(current)
+            if (light := lights[expected_phase]):
+                light.TurnOn()
+            Print("TOOL LAB: verified step={expected_phase} tool={index} output={action_result}")
         else:
-            var lit:transform = lamp_home
-            set lit.Translation.Z += 120.0
-            animate(input_player, lamp, lit, token, round_token)
-        if (not valid_run[input_player, token, round_token]):
+            target.reject(input_agent)
+            if (not output_ok?):
+                set action_result = "Tool movement failed. No credit; try again."
+            else if (stage := stages[expected_phase]):
+                set action_result = "{action_result}\nStill needed: {stage.request}"
+            Print("TOOL LAB: retry step={expected_phase} tool={index} output={action_result}")
+        show_board()
+        Sleep(1.0)
+        if (not run_valid[token, expected_phase]):
             return
-        restore_response(response)
-        set running = false
-        state := progress.ensure_player(input_player)
-        if (demonstration?):
-            feedback.Show(input_player, objective(state), ?DisplayTime := 10.0)
-            return
-        if (state.challenge = 0):
-            if (event_id = 0, response = 0):
-                finish(input_player)
-            else:
-                feedback.Show(input_player, wrong_text(event_name(event_id), expected_response(event_id)), ?DisplayTime := 8.0)
-        else if (state.challenge = 2):
-            if (event_id = 0, response = 0):
-                set state.bell_tested = true
-            else if (event_id = 1, response = 1):
-                set state.lever_tested = true
-            else:
-                feedback.Show(input_player, wrong_text(event_name(event_id), expected_response(event_id)), ?DisplayTime := 8.0)
-            if (state.bell_tested?, state.lever_tested?):
-                finish(input_player)
-            show_board(input_player)
-
-    finish(input_player:player):void =
-        state := progress.ensure_player(input_player)
-        was_earned := state.badge_earned
-        progress.complete(input_player)
-        var text:message = solved_text
-        if (state.badge_earned?):
-            if (was_earned?):
-                set text = retained_text
-            else:
-                set text = complete_text
-        feedback.Show(input_player, text, ?DisplayTime := 12.0)
-        show_board(input_player)
-
-    restart(input_player:player):void =
-        set generation += 1
-        set running = false
-        state := progress.ensure_player(input_player)
-        set state.bell_response = 1
-        set state.lever_response = 0
-        set state.demo_index = 0
-        set state.bell_tested = false
-        set state.lever_tested = false
-        set state.last_event = -1
-        set state.last_response = -1
-        set state.hint_level = 0
-        set state.solved = false
-        reset_props()
-        show_board(input_player)
-        feedback.Show(input_player, objective(state), ?DisplayTime := 10.0)
-        if (state.challenge = 1):
-            demonstrate(input_player)
+        if (not dock_lit?):
+            dock_light.TurnOff()
+        if (correct?):
+            set phase += 1
+            if (phase = 3):
+                for (choice : targets):
+                    choice.deactivate()
+                replay_button.Enable()
+                set busy = false
+                show_board()
+                feedback.Show(input_agent, text("Tool Master Badge! Scanner finds. Speaker shares. Light brightens."), ?DisplayTime := 8.0)
+                return
+        # Keep hit surfaces active so held fire extends the lock.
+        loop:
+            if (generation <> token or not is_owner[input_agent]):
+                return
+            if (GetSimulationElapsedTime() - last_hit >= 0.5):
+                break
+            Sleep(0.05)
+        set busy = false
+        set last_activity = GetSimulationElapsedTime()
+        set hint_shown = false
+        if (current := owner?):
+            state := progress.ensure_player(current)
+            set state.solved = false
+        show_board()
 
     on_replay(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            restart(input_player)
-
-    on_next(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent, not running?):
-            state := progress.ensure_player(input_player)
-            if (not state.solved?):
-                feedback.Show(input_player, finish_text, ?DisplayTime := 5.0)
-                return
-            if (state.challenge < 2):
-                set state.challenge += 1
-            else:
-                set state.challenge = 0
-            restart(input_player)
-
-    on_help(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            state := progress.ensure_player(input_player)
-            set state.hint_level += 1
-            var hint:message = first_hint
-            if (state.challenge = 1):
-                set hint = identify_hint
-            else if (state.challenge = 2):
-                set hint = final_hint
-            if (state.hint_level > 1):
-                if (state.challenge = 0):
-                    set hint = first_worked
-                else if (state.challenge = 1):
-                    set hint = identify_worked
-                else:
-                    set hint = final_worked
-            feedback.Show(input_player, hint, ?DisplayTime := 10.0)
+        if (phase = 3, is_owner[input_agent], current := owner?):
+            begin_solo(current)
 
     on_return(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            release()
+        if (current := owner?, current = input_agent):
+            reset_bay()
         hub_destination.Teleport(input_agent)
 
     on_spawn(input_agent:agent):void =
-        if (input_player := owner?, input_player = input_agent):
-            release()
+        if (current := owner?, current = input_agent):
+            reset_bay()
 
     on_removed(input_player:player):void =
         if (current := owner?, current = input_player):
-            release()
+            reset_bay()
+
