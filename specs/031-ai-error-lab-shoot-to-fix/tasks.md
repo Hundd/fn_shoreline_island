@@ -2,6 +2,8 @@
 
 Planning completion uses offline/read-only evidence. Implementation and acceptance tasks remain unchecked until their corresponding UEFN/readback/playtest evidence exists.
 
+2026-10-02 partial rifle evidence: real-rifle-acceptance-2026-10-02.md and real-rifle-log-2026-10-02.json record all three correct repairs, five wrong alternatives, hints and completion display. The board-clipping fix built/saved; post-fix reading, stage 1 LEFT and broader lifecycle/input/badge-consumer checks remain pending, so V-02..06 are not whole-task passes.
+
 - [x] P-01 Inspect latest specs/review, Error Lab source/fixtures/progress, shared shooting adapters and current actor bounds (R-01..08; plan.md, evidence/live-debug-inventory-2026-09-30.json).
 - [x] P-02 Generate/check map bundle, inspect preview/implementation plan, record requirement-linked review (R-01..09; review.md, evidence/preview-review.png, evidence/offline-route-check.json, evidence/planning-checks.md).
 - [x] P-03 Obtain actual explicit human approval of revision 1 and digest; record approval.yaml and pass plan --ready (R-01..09; approval.yaml, evidence/implementation-status.md).

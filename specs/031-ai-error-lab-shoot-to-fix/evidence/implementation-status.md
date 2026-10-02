@@ -1,5 +1,13 @@
 # Feature 031 implementation status
 
+## Latest rifle test and board fix: 2026-10-02
+
+Actual parent-controlled rifle shots and native LogVerse records confirm all three correct repairs (RIGHT, LEFT, STOP), five wrong replacements with no credit, useful-action hints, automatic rifle grant and visible 3/3 completion with targets hidden. Stage 1 LEFT and broader lifecycle/input/tracker-consumer/learning checks remain pending. The main board was visibly clipping; short board text/hints and textSize=10 were applied within the unchanged face envelope, built without diagnostics, saved, and cooked/activated successfully at 10:28:32 UTC. Visual correction is not yet verified. See real-rifle-acceptance-2026-10-02.md for exact partial acceptance and remaining gaps. Launch-local validation passed; separate full-project validation remains unproven. An engine AssetHotfix warning is recorded without claiming resolution. Final game/session states are Unconnected/Disconnected, UEFN open, editor/input ownership released to parent. The goal remains unfinished.
+
+## Latest resumed check: 2026-10-02
+
+Approval readiness passed and current Verse BuildAll returned no diagnostics. Readback reconfirmed configured solo controller, ordered LEFT/STOP/RIGHT bindings and transforms. UI activation failed twice with `failed to activate captured window`, including fresh window selection, so UI input stopped; no new session, rifle acceptance or full validation is claimed. Gameplay tasks remain pending. See verification-2026-10-02.md and resume-verification-2026-10-02.json for exact continuation operations and current source hashes. Final game/session states were Unconnected/Disconnected; UEFN remains open. No source or actor mutations were made during this resumed check.
+
 ## Latest handoff: 2026-10-01
 
 The editor implementation is saved and the final Verse build has no diagnostics. Final native readbacks confirm 36 Error Lab actors, the ordered LEFT/STOP/RIGHT target assemblies, retained badge/round settings/journal bindings and ten unchanged full structural/shelter transforms. Progress-light percentage settings and evidence/goal display clearance were corrected to the approved intent; see verification-2026-10-01.md and its linked readbacks. Final client/server cook activated successfully at 18:12:09 UTC and StartSession returned Completed.

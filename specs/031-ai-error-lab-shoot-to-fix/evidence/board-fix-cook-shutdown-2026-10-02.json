@@ -1,0 +1,74 @@
+{
+  "cook": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[\"[2026.10.02-10.17.10:746][404]LogValkyrieActivityTracker: Session -> Start Activity: LoadingNewContent - Cooking for client and server platforms\",\"[2026.10.02-10.17.12:316][553]LogValkyrieActivityTracker: Session -> Continue Activity: LoadingNewContent - Cooking for server platforms finished, waiting on client platforms...\",\"[2026.10.02-10.18.16:946][ 23]LogValkyrieActivityTracker: Session -> Continue Activity: LoadingNewContent - Cooking for client platforms finished, waiting on Server platforms...\",\"[2026.10.02-10.18.16:948][ 23]LogValkyrieActivityTracker: Session -> Complete Activity: LoadingNewContent\",\"[2026.10.02-10.27.24:954][727]LogValkyrieActivityTracker: Session -> Start Activity: LoadingNewContent - Cooking for client and server platforms\",\"[2026.10.02-10.28.29:957][514]LogValkyrieActivityTracker: Session -> Continue Activity: LoadingNewContent - Cooking for server platforms finished, waiting on client platforms...\",\"[2026.10.02-10.28.30:090][530]LogValkyrieActivityTracker: Session -> Continue Activity: LoadingNewContent - Cooking for client platforms finished, waiting on Server platforms...\",\"[2026.10.02-10.28.32:493][818]LogValkyrieActivityTracker: Session -> Complete Activity: LoadingNewContent\"]}"
+      }
+    ]
+  },
+  "activation": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[\"[2026.10.02-10.18.16:948][ 23]LogValkyrieSummary: Server Summary - Successfully activated content on all platforms\",\"[2026.10.02-10.28.32:493][818]LogValkyrieSummary: Server Summary - Successfully activated content on all platforms\"]}"
+      }
+    ]
+  },
+  "validation": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_Skeletons validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_GameplayTagSources validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/DataValidation.WorldPartitionChangelistValidator validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_BlueprintVariables validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/CheatInputSystemEditor.TerminalSuccessActionTableValidator validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_Metasound validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_FortExposedAssets validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_WidgetBlueprints validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_SourceControl validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/ValkyrieFortniteEditor.ValkyrieValidator_WidgetBlueprint validated 0 assets in 0.000001 seconds\"]}"
+      }
+    ]
+  },
+  "game_before_shutdown": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Running\"}"
+      }
+    ]
+  },
+  "stop_game": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Completed\"}"
+      }
+    ]
+  },
+  "stop_session": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":null}"
+      }
+    ]
+  },
+  "final_game": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Unconnected\"}"
+      }
+    ]
+  },
+  "final_session": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Disconnected\"}"
+      }
+    ]
+  },
+  "local_validation_coverage": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_Metasound validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_FortExposedAssets validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_WidgetBlueprints validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/FortniteEditor.FortValidator_SourceControl validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:260][438]LogValkyrieValidation: Display: \\t/Script/ValkyrieFortniteEditor.ValkyrieValidator_WidgetBlueprint validated 0 assets in 0.000001 seconds\",\"[2026.10.02-10.27.13:345][438]LogValkyrieSyncProject: Display: Finished basic user validation\",\"[2026.10.02-10.27.13:349][438]LogValkyrie: FlowStep_RunLocalValidation(): Complete\",\"[2026.10.02-10.27.13:350][438]LogHotfixManager: Display: Update State UpdatePending -> CheckingForPatch\",\"[2026.10.02-10.27.13:563][464]LogHotfixManager: Display: Update State CheckingForPatch -> CheckingForHotfix\",\"[2026.10.02-10.27.13:823][495]LogHotfixManager: Display: Returned hotfix data is the same as last application, skipping the apply phase\",\"[2026.10.02-10.27.13:829][495]LogHotfixManager: Warning: Only 3 of 64 assets were successfully patched from ''AssetHotfix'' section in the Game .ini file. Inspect log for patch errors for more details.\",\"[2026.10.02-10.27.13:831][495]LogHotfixManager: Display: Update State CheckingForHotfix -> WaitingOnInitialLoad\"]}"
+      }
+    ]
+  }
+}

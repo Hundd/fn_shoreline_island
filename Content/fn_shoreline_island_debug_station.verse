@@ -84,8 +84,8 @@ fn_shoreline_island_debug_station := class(creative_device):
     var current_commands:[]int = array{}
 
     text<localizes>(value:string):message = "{value}"
-    welcome<localizes>:message = "AI ERROR LAB\nFIX PIX'S ROUTE\nShoot LEFT, STOP or RIGHT to fix the boxed step."
-    recap<localizes>:message = "3/3 - AI DETECTIVE BADGE EARNED\nCheck the goal. Change one mistake.\nRun again and check the result.\nReplay or Return to Hub"
+    welcome<localizes>:message = "AI ERROR LAB - FIX PIX'S ROUTE\nShoot LEFT, STOP or RIGHT.\nFix the boxed step."
+    recap<localizes>:message = "3/3 - AI DETECTIVE BADGE EARNED\nChange. Run. Check the result.\nReplay or Return to Hub"
 
     OnBegin<override>()<suspends>:void =
         Hide()
@@ -365,14 +365,20 @@ fn_shoreline_island_debug_station := class(creative_device):
             else:
                 set mistakes += 1
                 var hint:string = "Reached {actual_tile}; goal is {stage.goal_tile}. Change the boxed step."
+                var board_hint:string = "MISMATCH - TRY ANOTHER SHOT"
                 if (mistakes >= 2):
                     if (phase = 0):
                         set hint = "All three steps need to go right. Shoot RIGHT."
+                        set board_hint = "HINT: SHOOT RIGHT"
                     else if (phase = 1):
                         set hint = "From tile 2, move left to tile 1. Shoot LEFT."
+                        set board_hint = "HINT: SHOOT LEFT"
                     else:
                         set hint = "The extra step overshoots. Shoot STOP."
-                show_result(hint)
+                        set board_hint = "HINT: SHOOT STOP"
+                # Keep the four-line evidence board within its native canvas.
+                # The HUD retains the full explanation for safe retry learning.
+                show_result(board_hint)
                 if (current := active_player?):
                     error_audio.Play(current)
                     feedback.Show(current, text(hint), ?DisplayTime := 0.0)

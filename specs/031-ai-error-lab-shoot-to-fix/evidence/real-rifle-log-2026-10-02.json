@@ -1,0 +1,28 @@
+{
+  "source": "EditorToolset.LogsToolset.GetLogEntries category=LogVerse pattern=ERROR LAB; parent direct Computer Use observations",
+  "lines": [
+    "[2026.10.02-10.18.33:135][893]LogVerse: : ERROR LAB: configured stage=0 start=0 goal=3 slot=1 program=RIGHT  [LEFT]  RIGHT",
+    "[2026.10.02-10.18.33:136][893]LogVerse: : ERROR LAB: configured stage=1 start=2 goal=1 slot=0 program=[RIGHT]",
+    "[2026.10.02-10.18.33:136][893]LogVerse: : ERROR LAB: configured stage=2 start=1 goal=2 slot=1 program=RIGHT  [RIGHT]",
+    "[2026.10.02-10.19.51:376][507]LogVerse: : ERROR LAB: shot phase=0 command=1",
+    "[2026.10.02-10.19.52:881][668]LogVerse: : ERROR LAB: mismatch phase=0 goal=3 actual=2",
+    "[2026.10.02-10.20.30:594][922]LogVerse: : ERROR LAB: shot phase=0 command=1",
+    "[2026.10.02-10.20.32:055][ 84]LogVerse: : ERROR LAB: mismatch phase=0 goal=3 actual=2",
+    "[2026.10.02-10.20.59:558][165]LogVerse: : ERROR LAB: shot phase=0 command=1",
+    "[2026.10.02-10.21.01:047][325]LogVerse: : ERROR LAB: mismatch phase=0 goal=3 actual=2",
+    "[2026.10.02-10.21.14:184][802]LogVerse: : ERROR LAB: shot phase=0 command=2",
+    "[2026.10.02-10.21.15:683][966]LogVerse: : ERROR LAB: verified phase=0 goal=3 actual=3",
+    "[2026.10.02-10.21.42:296][864]LogVerse: : ERROR LAB: shot phase=1 command=2",
+    "[2026.10.02-10.21.42:795][915]LogVerse: : ERROR LAB: mismatch phase=1 goal=1 actual=3",
+    "[2026.10.02-10.22.03:522][190]LogVerse: : ERROR LAB: shot phase=1 command=1",
+    "[2026.10.02-10.22.04:027][244]LogVerse: : ERROR LAB: mismatch phase=1 goal=1 actual=2",
+    "[2026.10.02-10.22.25:731][627]LogVerse: : ERROR LAB: shot phase=1 command=0",
+    "[2026.10.02-10.22.26:231][680]LogVerse: : ERROR LAB: verified phase=1 goal=1 actual=1",
+    "[2026.10.02-10.22.48:208][110]LogVerse: : ERROR LAB: shot phase=2 command=0",
+    "[2026.10.02-10.22.49:201][217]LogVerse: : ERROR LAB: mismatch phase=2 goal=2 actual=1",
+    "[2026.10.02-10.23.10:022][489]LogVerse: : ERROR LAB: shot phase=2 command=2",
+    "[2026.10.02-10.23.11:012][597]LogVerse: : ERROR LAB: mismatch phase=2 goal=2 actual=3",
+    "[2026.10.02-10.23.30:877][776]LogVerse: : ERROR LAB: shot phase=2 command=1",
+    "[2026.10.02-10.23.31:890][886]LogVerse: : ERROR LAB: verified phase=2 goal=2 actual=2"
+  ]
+}
