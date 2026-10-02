@@ -29,7 +29,7 @@ fn_shoreline_island_data_target := class(creative_device):
     @editable
     label_board:billboard_device = billboard_device{}
     @editable
-    display_label:string = "DATA TARGET"
+    var display_label:string = "DATA TARGET"
     # Opt-in for the solo bay; existing moving mission targets retain their cues.
     @editable
     stationary_y_facing:logic = false
@@ -84,6 +84,7 @@ fn_shoreline_island_data_target := class(creative_device):
         set ring_home = ring_mesh.GetTransform()
         deactivate()
         initialize_hit_subscription()
+
 
     initialize_hit_subscription():void =
         if (not hit_subscription_ready?):

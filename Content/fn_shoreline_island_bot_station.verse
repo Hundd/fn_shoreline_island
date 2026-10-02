@@ -5,6 +5,47 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 
 fn_shoreline_island_bot_station := class(creative_device):
     @editable
+    rescue_mode:logic = false
+    @editable
+    rescue_configured:logic = false
+    @editable
+    rescue_targets:[]fn_shoreline_island_data_target = array{}
+    @editable
+    rescue_boards:[]billboard_device = array{billboard_device{}, billboard_device{}, billboard_device{}}
+    @editable
+    rescue_returns:[]button_device = array{button_device{}, button_device{}, button_device{}}
+    @editable
+    rescue_replay_destination:teleporter_device = teleporter_device{}
+    @editable
+    rescue_gate:creative_prop = creative_prop{}
+    @editable
+    rescue_scanner:creative_prop = creative_prop{}
+    @editable
+    rescue_core:creative_prop = creative_prop{}
+    @editable
+    rescue_crate_label:billboard_device = billboard_device{}
+    @editable
+    rescue_route_label:billboard_device = billboard_device{}
+    @editable
+    rescue_firing_points:[]vector3 = array{
+        vector3{X := -4400.0, Y := -13500.0, Z := 2400.0},
+        vector3{X := -6600.0, Y := -13500.0, Z := 2400.0},
+        vector3{X := -9000.0, Y := -13500.0, Z := 2400.0}}
+    @editable
+    rescue_path:[]vector3 = array{
+        vector3{X := -4400.0, Y := -14700.0, Z := 2460.0},
+        vector3{X := -6600.0, Y := -14700.0, Z := 2460.0},
+        vector3{X := -6600.0, Y := -15000.0, Z := 2460.0},
+        vector3{X := -9000.0, Y := -15000.0, Z := 2460.0},
+        vector3{X := -9000.0, Y := -14700.0, Z := 2460.0}}
+    @editable
+    rescue_drop:vector3 = vector3{X := -9000.0, Y := -14700.0, Z := 2450.0}
+    @editable
+    rescue_min:vector3 = vector3{X := -12000.0, Y := -15300.0, Z := 2350.0}
+    @editable
+    rescue_max:vector3 = vector3{X := -1800.0, Y := -11600.0, Z := 3300.0}
+
+    @editable
     station_id:int = 0
     @editable
     progress:fn_shoreline_island_bot_progress = fn_shoreline_island_bot_progress{}
@@ -241,6 +282,9 @@ fn_shoreline_island_bot_station := class(creative_device):
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (rescue_mode?):
+            rescue_begin()
+            return
         set robot_home = robot.GetTransform()
         set seed_home = seed.GetTransform()
         set parcel_home = parcel.GetTransform()
@@ -1054,3 +1098,581 @@ fn_shoreline_island_bot_station := class(creative_device):
     on_removed(input_player:player):void =
         if (current := owner?, current = input_player):
             release()
+
+    # Rescue state deliberately does not reuse legacy stage/program/completed.
+    # Ownership 100 is separate from retained legacy station IDs 0..3.
+    var rescue_phase:int = -1
+    var rescue_character:?fort_character = false
+    var rescue_last_hit:float = 0.0
+    var rescue_last_activity:float = 0.0
+    var rescue_hint_shown:logic = false
+    var rescue_cargo_selected:logic = false
+    var rescue_scanned:logic = false
+    var rescue_first_leg:logic = false
+    var rescue_delivered:logic = false
+    var rescue_carrying:logic = false
+    var rescue_gate_home:transform = transform{}
+    var rescue_scanner_home:transform = transform{}
+    var rescue_core_home:transform = transform{}
+    var rescue_label_home:transform = transform{}
+    var rescue_status:string = "Walk to Dispatch. Return is always available."
+    rescue_text<localizes>(value:string):message = "{value}"
+
+    rescue_begin()<suspends>:void =
+        if (not rescue_configured?):
+            return
+        Sleep(0.2)
+        if (not rescue_valid_configuration[]):
+            Print("RESCUE: invalid configuration; disabled")
+            return
+        set robot_home = robot.GetTransform()
+        set seed_home = seed.GetTransform()
+        set rescue_gate_home = rescue_gate.GetTransform()
+        set rescue_scanner_home = rescue_scanner.GetTransform()
+        set rescue_core_home = rescue_core.GetTransform()
+        set rescue_label_home = rescue_crate_label.GetTransform()
+        set observed_round = progress.round_generation
+        for (target : rescue_targets):
+            target.initialize_surface_home()
+            set target.explicit_answer_feedback = true
+            target.label_board.SetTextSize(18)
+        for (board : rescue_boards):
+            board.SetTextSize(14)
+        for (control : rescue_returns):
+            control.SetInteractionText(rescue_text("RETURN TO HUB"))
+            control.SetInteractionTime(0.0)
+            control.SetMaxTriggerCount(0)
+            control.InteractedWithEvent.Subscribe(rescue_return)
+        replay_button.SetInteractionText(rescue_text("REPLAY RESCUE"))
+        replay_button.SetInteractionTime(0.0)
+        replay_button.SetMaxTriggerCount(0)
+        replay_button.InteractedWithEvent.Subscribe(rescue_replay)
+        GetPlayspace().PlayerRemovedEvent().Subscribe(rescue_removed)
+        for (spawner : array{hub_spawner_0, hub_spawner_1, hub_spawner_2, hub_spawner_3}):
+            spawner.SpawnedEvent.Subscribe(rescue_spawned)
+        for (index -> target : rescue_targets):
+            spawn { rescue_listen(target, index) }
+        rescue_reset()
+        spawn { rescue_acceptance_fixture() }
+        rescue_monitor()
+
+    # TEMPORARY ACCEPTANCE FIXTURE: remove before final build/cook.
+    rescue_acceptance_fixture()<suspends>:void =
+        Sleep(3.0)
+        for (p : GetPlayspace().GetPlayers(), c := p.GetFortCharacter[]):
+            if (c.TeleportTo[vector3{X := -4400.0, Y := -13500.0, Z := 2500.0}, MakeRotationFromYawPitchRollDegrees(-90.0, -5.0, 0.0)]) {}
+            Print("RESCUE FIXTURE: at Dispatch LOCKED; seven prerequisites absent")
+        Sleep(10.0)
+        for (p : GetPlayspace().GetPlayers()):
+            academy_journal.garden.ensure_player(p)
+            if (s := academy_journal.garden.player_states[p]):
+                set s.badge_earned = true
+            l := academy_journal.lagoon.ensure_player(p)
+            set l.badge_earned = true
+            academy_journal.garden.badge_tracker.SetValue(p, 1)
+            academy_journal.lagoon.badge_tracker.SetValue(p, 1)
+            for (i : array{0, 1, 2, 3, 5}, badge := academy_journal.later_badge_trackers[i]):
+                badge.SetValue(p, 1)
+            Print("RESCUE FIXTURE: seeded exact seven prerequisite backing states; Agent remains zero")
+        var last_phase:int = -9
+        var moved_route:logic = false
+        var moved_check:logic = false
+        loop:
+            Sleep(1.0)
+            if (rescue_first_leg?, not moved_route?):
+                set moved_route = true
+                for (p : GetPlayspace().GetPlayers(), c := p.GetFortCharacter[]):
+                    if (c.TeleportTo[vector3{X := -6600.0, Y := -13500.0, Z := 2500.0}, MakeRotationFromYawPitchRollDegrees(-90.0, -5.0, 0.0)]) {}
+                Print("RESCUE FIXTURE: positioned player at Route; not natural traversal")
+            if (rescue_delivered?, not moved_check?):
+                set moved_check = true
+                for (p : GetPlayspace().GetPlayers(), c := p.GetFortCharacter[]):
+                    if (c.TeleportTo[vector3{X := -9000.0, Y := -13500.0, Z := 2500.0}, MakeRotationFromYawPitchRollDegrees(-90.0, -5.0, 0.0)]) {}
+                Print("RESCUE FIXTURE: positioned player at Check; not natural traversal")
+            if (last_phase <> rescue_phase):
+                set last_phase = rescue_phase
+                Print("RESCUE FIXTURE: phase={rescue_phase} robot={robot.GetTransform().Translation} medical={seed.GetTransform().Translation}")
+
+    rescue_valid_configuration()<transacts><decides>:void =
+        rescue_targets.Length = 9
+        rescue_boards.Length = 3
+        rescue_returns.Length = 3
+        rescue_path.Length = 5
+        rescue_firing_points.Length = 3
+        robot.IsValid[]
+        seed.IsValid[]
+        rescue_gate.IsValid[]
+        rescue_scanner.IsValid[]
+        rescue_core.IsValid[]
+        for (index -> target : rescue_targets):
+            target.target_id = index
+            target.mission_id = 8
+
+    rescue_in_bounds(input_agent:agent)<transacts><decides>:void =
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        location.X >= rescue_min.X
+        location.X <= rescue_max.X
+        location.Y >= rescue_min.Y
+        location.Y <= rescue_max.Y
+        location.Z >= rescue_min.Z
+        location.Z <= rescue_max.Z
+
+    rescue_is_owner(input_agent:agent)<transacts><decides>:void =
+        current := owner?
+        current = input_agent
+        saved := rescue_character?
+        character := current.GetFortCharacter[]
+        character = saved
+        character.IsActive[]
+        rescue_in_bounds[current]
+        state := progress.states[current]
+        state.station_id = 100
+        observed_round = progress.round_generation
+
+    rescue_run_valid(token:int)<transacts><decides>:void =
+        token = generation
+        current := owner?
+        rescue_is_owner[current]
+
+    rescue_near(input_agent:agent, beat:int)<transacts><decides>:void =
+        point := rescue_firing_points[beat]
+        character := input_agent.GetFortCharacter[]
+        location := character.GetTransform().Translation
+        # Horizontal radius includes the character capsule's vertical offset.
+        Distance(vector3{X := location.X, Y := location.Y}, vector3{X := point.X, Y := point.Y}) <= 600.0
+
+    rescue_beat()<transacts>:int =
+        if (rescue_phase >= 4):
+            return 2
+        if (rescue_phase >= 2):
+            return 1
+        return 0
+
+    rescue_display(board:billboard_device, value:string):void =
+        display(board, rescue_text(value))
+
+    rescue_show():void =
+        prompts := array{"Which cargo is needed?", "Which skill delivers it?",
+            "What tool finds a route?", "Which route is open?",
+            "What proves delivery?"}
+        var prompt:string = "Walk into Dispatch to help Pix."
+        if (p := prompts[rescue_phase]):
+            set prompt = p
+        if (rescue_phase = 5):
+            set prompt = "Observe. Choose. Act. Check."
+        for (beat -> board : rescue_boards):
+            var line:string = "Follow Pix through Dispatch, Route Rescue and Delivery Check."
+            if (beat = rescue_beat() or rescue_phase < 0 or rescue_phase = 5):
+                results := array{"Choose cargo for the lab.", "MEDICAL selected.",
+                    "BRIDGE CLOSED | DOCK ?", "SCAN: DOCK OPEN", "Inspect the crate at LAB."}
+                var caption:string = "Walk into Dispatch."
+                if (value := results[rescue_phase]):
+                    set caption = value
+                if (running?):
+                    set caption = "Pix is acting. Watch!"
+                    if (rescue_phase = 1):
+                        set caption = "FOLLOW PIX > ROUTE RESCUE"
+                    if (rescue_phase = 3):
+                        set caption = "FOLLOW PIX > DELIVERY"
+                if (rescue_phase = 5):
+                    set caption = "AI CORE ONLINE! REPLAY?"
+                set line = "{prompt}\n{caption}"
+            else:
+                set line = "FOLLOW PIX\nOne rescue. Three beats."
+            rescue_display(board, "MEDICAL > RESEARCH LAB\n{line}")
+        if (current := owner?):
+            feedback.Show(current, rescue_text(rescue_status), ?DisplayTime := 5.0)
+
+    rescue_reset():void =
+        # No MoveTo tasks exist: every frame teleports synchronously after its
+        # generation check. Increment before restoration; old coroutines cannot
+        # write after their next Sleep, even if a new owner enters immediately.
+        set generation += 1
+        if (current := owner?, state := progress.states[current], state.station_id = 100):
+            set state.station_id = -1
+            feedback.Hide(current)
+        set owner = false
+        set rescue_character = false
+        set rescue_phase = -1
+        set running = false
+        set rescue_cargo_selected = false
+        set rescue_scanned = false
+        set rescue_first_leg = false
+        set rescue_delivered = false
+        set rescue_carrying = false
+        set rescue_hint_shown = false
+        for (target : rescue_targets):
+            target.deactivate()
+        if (robot.TeleportTo[robot_home]) {}
+        if (seed.TeleportTo[seed_home]) {}
+        if (rescue_gate.TeleportTo[rescue_gate_home]) {}
+        if (rescue_scanner.TeleportTo[rescue_scanner_home]) {}
+        if (rescue_core.TeleportTo[rescue_core_home]) {}
+        if (rescue_crate_label.TeleportTo[rescue_label_home]) {}
+        robot.Show()
+        seed.Show()
+        rescue_gate.Hide()
+        rescue_scanner.Show()
+        rescue_core.Show()
+        rescue_display(rescue_crate_label, "+ MEDICAL")
+        rescue_display(rescue_route_label, "ROUTE: OPEN\nAlternative: UNKNOWN")
+        replay_button.Disable()
+        for (control : rescue_returns):
+            control.Enable()
+        set rescue_status = "Walk to Dispatch. Return is always available."
+        rescue_show()
+
+    rescue_home_valid()<transacts><decides>:void =
+        Distance(robot.GetTransform().Translation, robot_home.Translation) <= 5.0
+        Distance(seed.GetTransform().Translation, seed_home.Translation) <= 5.0
+
+    rescue_missing(input_player:player):message =
+        if (not academy_journal.has_garden[input_player]):
+            return academy_journal.garden_next
+        if (not academy_journal.has_loop[input_player]):
+            return academy_journal.loop_next
+        indices := array{0, 1, 2, 3, 5}
+        names := array{academy_journal.signal_next, academy_journal.energy_next,
+            academy_journal.debug_next, academy_journal.event_next, academy_journal.nursery_next}
+        for (i -> index : indices, name := names[i]):
+            if (badge := academy_journal.later_badge_trackers[index]):
+                if (badge.GetValue(input_player) < 1):
+                    return name
+            else:
+                return name
+        return academy_journal.bot_next
+
+    rescue_monitor()<suspends>:void =
+        loop:
+            if (observed_round <> progress.round_generation):
+                set observed_round = progress.round_generation
+                rescue_reset()
+            if (current := owner?):
+                if (not rescue_is_owner[current]):
+                    rescue_reset()
+                else if (not running?, rescue_phase >= 0, rescue_phase < 5, not rescue_hint_shown?, GetSimulationElapsedTime() - rescue_last_activity >= 8.0):
+                    set rescue_hint_shown = true
+                    hints := array{"Match the crate to MEDICAL supplies.", "Delivery needs Pickup, Move and Drop.",
+                        "We need a tool that finds route information.", "Compare the scan with the three route choices.",
+                        "Look for the Medical crate at Animal Research Station."}
+                    if (hint := hints[rescue_phase]):
+                        feedback.Show(current, rescue_text(hint), ?DisplayTime := 6.0)
+            else:
+                for (input_player : GetPlayspace().GetPlayers(), rescue_in_bounds[input_player]):
+                    if (not academy_journal.first_seven_online(input_player)?):
+                        if (board := rescue_boards[0]):
+                            next := rescue_missing(input_player)
+                            display(board, rescue_text("DELIVER MEDICAL\nAGENT MODE LOCKED\nRestore 7 modules to unlock."))
+                            feedback.Show(input_player, next, ?DisplayTime := 1.0)
+                    else if (not owner?, rescue_near[input_player, 0], character := input_player.GetFortCharacter[], character.IsActive[]):
+                        state := progress.ensure_player(input_player)
+                        if (state.station_id < 0):
+                            rescue_reset()
+                            if (rescue_home_valid[]):
+                                set owner = option{input_player}
+                                set rescue_character = option{character}
+                                set state.station_id = 100
+                                set running = true
+                                set rescue_status = "Pix waking up... Ready to rescue!"
+                                rescue_show()
+                                spawn { rescue_wake(generation) }
+            Sleep(0.25)
+
+    rescue_wake(token:int)<suspends>:void =
+        Sleep(2.0)
+        if (rescue_run_valid[token]):
+            set rescue_phase = 0
+            set rescue_status = "Shoot A, B or C."
+            rescue_activate_bank()
+            rescue_rearm(token)
+
+    rescue_labels():[]string =
+        if (rescue_phase = 0):
+            return array{"A | [FOOD]\nFOOD", "B | [+]\nMEDICAL", "C | [TOOL]\nTOOLS"}
+        if (rescue_phase = 1):
+            return array{"A | [BOX >]\nDELIVER", "B | [SUN]\nLIGHT", "C | [VOICE]\nANNOUNCE"}
+        if (rescue_phase = 2):
+            return array{"A | [?]\nSCAN", "B | [VOICE]\nANNOUNCE", "C | [X]\nFORCE THROUGH"}
+        if (rescue_phase = 3):
+            return array{"A | [=]\nBRIDGE", "B | [II]\nWAIT", "C | [~]\nDOCK"}
+        return array{"A | [VOICE]\nPIX SAID DONE", "B | [+ @ LAB]\nMEDICAL AT LAB", "C | [HOME]\nCRATE AT HOME"}
+
+    rescue_activate_bank():void =
+        labels := rescue_labels()
+        bank := rescue_beat()
+        for (index -> target : rescue_targets):
+            if (index >= bank * 3, index < bank * 3 + 3, label := labels[index - bank * 3]):
+                set target.display_label = label
+                target.activate()
+            else:
+                target.deactivate()
+        set rescue_last_hit = GetSimulationElapsedTime()
+        rescue_show()
+
+    rescue_listen(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
+        loop:
+            input_agent := target.Hit.Await()
+            previous_hit := rescue_last_hit
+            if (rescue_is_owner[input_agent]):
+                set rescue_last_hit = GetSimulationElapsedTime()
+            if (not running?, rescue_is_owner[input_agent], rescue_phase >= 0, rescue_phase < 5,
+                rescue_near[input_agent, rescue_beat()], index >= rescue_beat() * 3, index < rescue_beat() * 3 + 3,
+                rescue_last_hit - previous_hit >= 0.5):
+                set running = true
+                set rescue_last_activity = rescue_last_hit
+                set rescue_hint_shown = false
+                spawn { rescue_answer(input_agent, target, index, generation, rescue_phase) }
+
+    rescue_rearm(token:int)<suspends>:void =
+        loop:
+            if (not rescue_run_valid[token]):
+                return
+            if (GetSimulationElapsedTime() - rescue_last_hit >= 0.5):
+                break
+            Sleep(0.05)
+        set running = false
+        set rescue_last_activity = GetSimulationElapsedTime()
+        set rescue_hint_shown = false
+        rescue_show()
+
+    # 4 m/s, one synchronous frame at a time. Move result AND endpoint checked.
+    rescue_travel(destination:vector3, token:int)<suspends>:logic =
+        start := robot.GetTransform()
+        distance := Distance(start.Translation, destination)
+        var travelled:float = 0.0
+        loop:
+            if (not rescue_run_valid[token]):
+                return false
+            set travelled = Min(distance, travelled + 20.0)
+            var pose:transform = start
+            if (distance > 0.0):
+                set pose.Translation = start.Translation + (destination - start.Translation) * (travelled / distance)
+            if (robot.TeleportTo[pose]) {}
+            else:
+                Print("RESCUE: movement failure ROBOT teleport")
+                return false
+            if (rescue_carrying?):
+                var cargo_pose:transform = seed_home
+                set cargo_pose.Translation = pose.Translation + vector3{Y := 100.0, Z := 50.0}
+                if (seed.TeleportTo[cargo_pose]) {}
+                else:
+                    Print("RESCUE: movement failure MEDICAL teleport")
+                    return false
+                var label_pose:transform = rescue_label_home
+                set label_pose.Translation = cargo_pose.Translation + vector3{Y := 50.0, Z := 80.0}
+                if (rescue_crate_label.TeleportTo[label_pose]) {}
+                else:
+                    Print("RESCUE: movement failure LABEL teleport")
+                    return false
+            if (travelled >= distance):
+                break
+            Sleep(0.05)
+        if (not rescue_run_valid[token]):
+            return false
+        if (Distance(robot.GetTransform().Translation, destination) > 5.0):
+            Print("RESCUE: movement failure ROBOT endpoint")
+            return false
+        if (rescue_carrying?, Distance(seed.GetTransform().Translation, destination + vector3{Y := 100.0, Z := 50.0}) > 5.0):
+            Print("RESCUE: movement failure MEDICAL endpoint")
+            return false
+        return true
+
+    rescue_wait_arrival(beat:int, token:int)<suspends>:void =
+        loop:
+            if (not rescue_run_valid[token]):
+                return
+            if (current := owner?, rescue_near[current, beat]):
+                break
+            Sleep(0.1)
+
+    rescue_actual_delivery()<transacts><decides>:void =
+        rescue_cargo_selected?
+        rescue_first_leg?
+        rescue_scanned?
+        rescue_delivered?
+        not rescue_carrying?
+        # seed is the immutable, audited Medical creative_prop binding. The
+        # same object is picked up, carried and inspected; no cargo substitution
+        # or completion message can change this identity.
+        seed.IsValid[]
+        robot.IsValid[]
+        Distance(seed.GetTransform().Translation, rescue_drop) <= 50.0
+        endpoint := rescue_path[4]
+        Distance(robot.GetTransform().Translation, endpoint) <= 5.0
+        Distance(seed.GetTransform().Translation, endpoint + vector3{Y := 100.0, Z := 50.0}) > 50.0
+
+    rescue_wrong(expected:int, index:int):string =
+        if (expected = 0):
+            return "The lab needs MEDICAL. That cargo cannot meet the goal."
+        if (expected = 1, index = 1):
+            return "LIGHT brightens. It cannot move the Medical crate."
+        if (expected = 1):
+            return "ANNOUNCE speaks. The Medical crate is still at home."
+        if (expected = 2, index = 4):
+            return "ANNOUNCE cannot reveal an unknown route. We still need evidence."
+        if (expected = 2):
+            return "FORCE THROUGH is unsafe. Pix stays before the closed gate."
+        if (expected = 3, index = 3):
+            return "BRIDGE is blocked. Pix keeps the Medical crate safe."
+        if (expected = 3):
+            return "WAIT keeps Pix safe, but does not deliver the crate."
+        if (index = 6):
+            return "Saying DONE is not proof. Check the actual cargo and place."
+        return "A crate at HOME has not reached the lab."
+
+    rescue_answer(input_agent:agent, target:fn_shoreline_island_data_target, index:int, token:int, expected:int)<suspends>:void =
+        if (not rescue_run_valid[token] or rescue_phase <> expected):
+            return
+        success := array{1, 0, 3, 5, 7}
+        if (correct := success[expected], correct <> index):
+            target.reject(input_agent)
+            set rescue_status = rescue_wrong(expected, index)
+            rescue_show()
+            feedback.Show(input_agent, rescue_text(rescue_status), ?DisplayTime := 4.0)
+            Print("RESCUE: wrong phase={expected} target={index}; no credit")
+            # TEMPORARY AC11 fixture: after testing CRATE AT HOME, falsify delivery.
+            if (expected = 4, index = 8):
+                if (seed.TeleportTo[seed_home]) {}
+                Print("RESCUE FIXTURE: original Medical displaced home, delivered flag retained; next correct label must reject")
+            Sleep(1.0)
+            if (rescue_run_valid[token]):
+                rescue_rearm(token)
+            return
+        var ok:logic = true
+        if (expected = 0):
+            var selected:transform = seed_home
+            set selected.Translation.Z += 60.0
+            if (seed.TeleportTo[selected]):
+                set rescue_cargo_selected = true
+                set rescue_status = "MEDICAL selected. Now choose a delivery skill."
+            else:
+                set ok = false
+        else if (expected = 1 or expected = 3):
+            start_robot := robot.GetTransform()
+            start_cargo := seed.GetTransform()
+            start_label := rescue_crate_label.GetTransform()
+            set rescue_carrying = true
+            set rescue_status = "Pickup > Move > Drop. FOLLOW PIX."
+            rescue_show()
+            if (expected = 1, endpoint := rescue_path[1]):
+                set ok = rescue_travel(endpoint, token)
+                if (ok?, rescue_run_valid[token]):
+                    rescue_gate.Show()
+                    rescue_display(rescue_route_label, "BRIDGE: CLOSED\nAlternative: UNKNOWN")
+                    set rescue_first_leg = true
+                    set rescue_status = "Safety gate CLOSED. Pix waits safely. FOLLOW PIX."
+            else if (expected = 3):
+                rescue_display(rescue_route_label, "BRIDGE: BLOCKED\nDOCK: OPEN > DELIVERY RESUMED")
+                for (i := 2..4, point := rescue_path[i], ok?):
+                    set ok = rescue_travel(point, token)
+                if (ok?, rescue_run_valid[token]):
+                    var dropped:transform = seed_home
+                    set dropped.Translation = rescue_drop
+                    if (seed.TeleportTo[dropped]):
+                        set rescue_carrying = false
+                        set rescue_delivered = true
+                        var label_pose:transform = rescue_label_home
+                        set label_pose.Translation = rescue_drop + vector3{Y := 50.0, Z := 80.0}
+                        if (rescue_crate_label.TeleportTo[label_pose]) {}
+                        if (not rescue_actual_delivery[]):
+                            set ok = false
+                    else:
+                        set ok = false
+                    set rescue_status = "Medical crate dropped at the lab. CHECK THE DELIVERY."
+            if (not rescue_run_valid[token]):
+                return
+            if (not ok?):
+                if (robot.TeleportTo[start_robot]) {}
+                if (seed.TeleportTo[start_cargo]) {}
+                if (rescue_crate_label.TeleportTo[start_label]) {}
+                set rescue_delivered = false
+                if (expected = 1):
+                    set rescue_carrying = false
+                    set rescue_first_leg = false
+                    rescue_gate.Hide()
+                set rescue_status = "Delivery stopped - try again. No delivery credit."
+            else:
+                rescue_show()
+                if (expected = 1):
+                    rescue_wait_arrival(1, token)
+                else:
+                    rescue_wait_arrival(2, token)
+        else if (expected = 2):
+            var sweep:transform = rescue_scanner_home
+            set sweep.Translation.X += 150.0
+            if (rescue_scanner.TeleportTo[sweep]):
+                Sleep(0.75)
+                if (not rescue_run_valid[token]):
+                    return
+                if (rescue_scanner.TeleportTo[rescue_scanner_home]):
+                    set rescue_scanned = true
+                    rescue_display(rescue_route_label, "SCAN RESULT\nBRIDGE: BLOCKED | DOCK: OPEN")
+                    set rescue_status = "SCAN: Bridge blocked. Dock open. Choose a route."
+                else:
+                    set ok = false
+            else:
+                set ok = false
+        else if (expected = 4):
+            if (rescue_actual_delivery[], rescue_run_valid[token], current := owner?, rescue_near[current, 2]):
+                progress.award_badge(current)
+                set rescue_status = "AI CORE RESTORED! AI Agent Badge. Replay or Return."
+                Print("RESCUE: physical verification PASS; shared badge awarded")
+            else:
+                set ok = false
+                set rescue_status = "Evidence does not match. Medical must really be at the lab."
+                Print("RESCUE: physical verification REJECT; no badge")
+                # TEMPORARY AC11 fixture restores original Medical only after rejection.
+                var restored:transform = seed_home
+                set restored.Translation = rescue_drop
+                if (seed.TeleportTo[restored]) {}
+                Print("RESCUE FIXTURE: original Medical restored to lab for retry")
+        if (not rescue_run_valid[token]):
+            return
+        if (ok?):
+            target.accept(input_agent, false)
+        else:
+            target.reject(input_agent)
+        rescue_show()
+        Sleep(0.8)
+        if (not rescue_run_valid[token]):
+            return
+        if (ok?):
+            set rescue_phase += 1
+            if (rescue_phase = 5):
+                for (choice : rescue_targets):
+                    choice.deactivate()
+                rescue_show()
+                var pulse:transform = rescue_core_home
+                set pulse.Scale = pulse.Scale * 1.25
+                if (rescue_core.TeleportTo[pulse]) {}
+                feedback.Show(input_agent, rescue_text("AI CORE RESTORED! Observe. Choose. Act. Check."), ?DisplayTime := 6.0)
+                Sleep(1.0)
+                if (rescue_run_valid[token]):
+                    if (rescue_core.TeleportTo[rescue_core_home]) {}
+                    replay_button.Enable()
+                    set running = false
+                    rescue_show()
+                return
+            # Same bank stays active while waiting for quiet; bank changes are
+            # made while busy and impose a fresh quiet interval at the new bank.
+            rescue_activate_bank()
+        rescue_rearm(token)
+
+    rescue_return(input_agent:agent):void =
+        if (current := owner?, current = input_agent):
+            rescue_reset()
+        hub_destination.Teleport(input_agent)
+
+    rescue_replay(input_agent:agent):void =
+        if (rescue_phase = 5, rescue_is_owner[input_agent]):
+            rescue_reset()
+            rescue_replay_destination.Teleport(input_agent)
+
+    rescue_spawned(input_agent:agent):void =
+        if (current := owner?, current = input_agent):
+            rescue_reset()
+
+    rescue_removed(input_player:player):void =
+        if (current := owner?, current = input_player):
+            rescue_reset()

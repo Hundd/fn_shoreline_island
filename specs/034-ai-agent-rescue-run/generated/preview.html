@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pix&#x27;s Rescue Run - Dispatch, Replan, Verify blockout</title>
+<style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 20px;color:#172e43;background:#fff}svg{width:100%;max-height:900px}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #ccd8df;padding:8px}td:last-child{font-size:12px;overflow-wrap:anywhere}li{margin:8px 0}.notice{background:#fff3cf;padding:14px}</style>
+<h1>Pix&#x27;s Rescue Run - Dispatch, Replan, Verify review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
+<p>Give an agent a goal, observe autonomous action, replan when conditions change, and check real results.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1110 1071" role="img" aria-label="Pix&#x27;s Rescue Run - Dispatch, Replan, Verify blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="1110" height="1071" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Pix&#x27;s Rescue Run - Dispatch, Replan, Verify — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="385" y="65" width="340" height="370" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="392" y="84">Floor 2 - Surprise route rescue</text>
+<text font-size="11" x="392" y="100">34 × 37m</text>
+<rect x="45" y="65" width="340" height="370" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">Floor 3 - Check the real delivery</text>
+<text font-size="11" x="52" y="100">34 × 37m</text>
+<rect x="725" y="65" width="260" height="370" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="732" y="84">Floor 1 - Dispatch Pix</text>
+<text font-size="11" x="732" y="100">26 × 37m</text>
+<rect x="985" y="65" width="80" height="370" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="992" y="84">Entry</text>
+<text font-size="11" x="992" y="100">8 × 37m</text>
+<polyline points="1025,195 965,245 805,245" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → dispatch / always</title></polyline>
+<polyline points="805,245 585,245" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>dispatch → route_rescue / always</title></polyline>
+<polyline points="585,245 345,245" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>route_rescue → delivery_check / always</title></polyline>
+<g><title>Campus arrival - no new spawn; XYZ [98, 13, 0]; Proposed anchor on measured floor; evidence/live-floor-transforms-2026-10-02.json</title><circle cx="1025" cy="195" r="8" fill="#42a86b" stroke="white"/>
+<text x="1025" y="198" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Existing Data Blaster inventory; XYZ [98, 15, 0]; Annotation of shared loadout; no new granter</title><circle cx="1025" cy="215" r="8" fill="#b377dc" stroke="white"/>
+<text x="1025" y="218" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Dispatch firing point; XYZ [76, 18, 0]; Proposed local anchor; annotation not checkpoint device</title><circle cx="805" cy="245" r="8" fill="#db8b29" stroke="white"/>
+<text x="805" y="248" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>Route Rescue firing point; XYZ [54, 18, 0]; Proposed local anchor; annotation not checkpoint device</title><circle cx="585" cy="245" r="8" fill="#db8b29" stroke="white"/>
+<text x="585" y="248" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>Delivery Check firing point; XYZ [30, 18, 0]; Proposed local anchor; annotation not checkpoint device</title><circle cx="345" cy="245" r="8" fill="#db8b29" stroke="white"/>
+<text x="345" y="248" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>A FOOD then DELIVER; XYZ [73, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="775" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="775" y="168" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>B MEDICAL then LIGHT; XYZ [76, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="805" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="805" y="168" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>C TOOLS then ANNOUNCE; XYZ [79, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="835" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="835" y="168" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>A SCAN then BRIDGE; XYZ [51, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="555" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="555" y="168" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>B ANNOUNCE then WAIT; XYZ [54, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="585" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="585" y="168" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>C FORCE THROUGH then DOCK; XYZ [57, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="615" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="615" y="168" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>A PIX SAID DONE; XYZ [27, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="315" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="315" y="168" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<g><title>B MEDICAL AT LAB; XYZ [30, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="345" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="345" y="168" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
+<g><title>C CRATE AT HOME; XYZ [33, 10, 1.8]; Proposed complete assembly; same shared data_target class</title><circle cx="375" cy="165" r="8" fill="#e25757" stroke="white"/>
+<text x="375" y="168" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
+<g><title>Goal / selected cargo / skill; XYZ [76, 2, 4.8]; Proposed board face center; native pivot and font require implementation readback</title><circle cx="805" cy="85" r="8" fill="#329bd0" stroke="white"/>
+<text x="805" y="88" text-anchor="middle" font-size="9" style="fill:white">15</text></g>
+<g><title>Changed route / scan evidence; XYZ [54, 2, 4.8]; Proposed board face center; native pivot and font require implementation readback</title><circle cx="585" cy="85" r="8" fill="#329bd0" stroke="white"/>
+<text x="585" y="88" text-anchor="middle" font-size="9" style="fill:white">16</text></g>
+<g><title>Goal vs actual delivery; XYZ [30, 2, 4.8]; Proposed board face center; native pivot and font require implementation readback</title><circle cx="345" cy="85" r="8" fill="#329bd0" stroke="white"/>
+<text x="345" y="88" text-anchor="middle" font-size="9" style="fill:white">17</text></g>
+<g><title>Pix picks up Medical crate; XYZ [76, 6, 0.6]; Proposed scripted prop anchor on measured floor</title><circle cx="805" cy="125" r="8" fill="#329bd0" stroke="white"/>
+<text x="805" y="128" text-anchor="middle" font-size="9" style="fill:white">18</text></g>
+<g><title>Pix stops and waits; XYZ [54, 6, 0.6]; Proposed scripted prop anchor on measured floor</title><circle cx="585" cy="125" r="8" fill="#329bd0" stroke="white"/>
+<text x="585" y="128" text-anchor="middle" font-size="9" style="fill:white">19</text></g>
+<g><title>Safety gate closes ahead of Pix; XYZ [50, 6, 1]; New narrow robot-lane prop only; never blocks player path</title><circle cx="545" cy="125" r="8" fill="#329bd0" stroke="white"/>
+<text x="545" y="128" text-anchor="middle" font-size="9" style="fill:white">20</text></g>
+<g><title>Dock detour around safety gate; XYZ [48, 3, 0.1]; Authored robot path shown in plan; no player platforming or pathfinding</title><circle cx="525" cy="95" r="8" fill="#329bd0" stroke="white"/>
+<text x="525" y="98" text-anchor="middle" font-size="9" style="fill:white">21</text></g>
+<g><title>Animal Research Station / real crate drop; XYZ [30, 6, 0.5]; Proposed physical result anchor; crate transform independently checked at final answer</title><circle cx="345" cy="125" r="8" fill="#329bd0" stroke="white"/>
+<text x="345" y="128" text-anchor="middle" font-size="9" style="fill:white">22</text></g>
+<g><title>Agent Mode core and once-only badge; XYZ [22, 6, 2]; Proposed finale display; existing shared tracker is authoritative</title><circle cx="265" cy="125" r="8" fill="#c79c17" stroke="white"/>
+<text x="265" y="128" text-anchor="middle" font-size="9" style="fill:white">23</text></g>
+<g><title>Mounted Return; XYZ [81, 19, 0.9]; Reuse station-1 button and support; actual seating measured before binding</title><circle cx="855" cy="255" r="8" fill="#526476" stroke="white"/>
+<text x="855" y="258" text-anchor="middle" font-size="9" style="fill:white">24</text></g>
+<g><title>Mounted Return; XYZ [59, 19, 0.9]; Reuse station-2 button and support; actual seating measured before binding</title><circle cx="635" cy="255" r="8" fill="#526476" stroke="white"/>
+<text x="635" y="258" text-anchor="middle" font-size="9" style="fill:white">25</text></g>
+<g><title>Mounted Return; XYZ [33, 19, 0.9]; Reuse station-3 button and support; actual seating measured before binding</title><circle cx="375" cy="255" r="8" fill="#526476" stroke="white"/>
+<text x="375" y="258" text-anchor="middle" font-size="9" style="fill:white">26</text></g>
+<g><title>Replay returns to Dispatch; XYZ [27, 19, 0.9]; Reuse station-3 Replay; one mission-local teleporter destination at Dispatch</title><circle cx="315" cy="255" r="8" fill="#db8b29" stroke="white"/>
+<text x="315" y="258" text-anchor="middle" font-size="9" style="fill:white">27</text></g>
+<path d="M45,470 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="475" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+<text x="45" y="513" font-size="16" font-weight="bold">Map legend</text>
+<text x="45" y="535" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
+<circle cx="54.0" cy="559" r="9" fill="#42a86b"/>
+<text x="54.0" y="562" text-anchor="middle" font-size="9" style="fill:white">1</text>
+<text x="73.0" y="563" font-size="12">Campus arrival - no new spawn</text>
+<circle cx="564.0" cy="559" r="9" fill="#b377dc"/>
+<text x="564.0" y="562" text-anchor="middle" font-size="9" style="fill:white">2</text>
+<text x="583.0" y="563" font-size="12">Existing Data Blaster inventory</text>
+<circle cx="54.0" cy="593" r="9" fill="#db8b29"/>
+<text x="54.0" y="596" text-anchor="middle" font-size="9" style="fill:white">3</text>
+<text x="73.0" y="597" font-size="12">Dispatch firing point</text>
+<circle cx="564.0" cy="593" r="9" fill="#db8b29"/>
+<text x="564.0" y="596" text-anchor="middle" font-size="9" style="fill:white">4</text>
+<text x="583.0" y="597" font-size="12">Route Rescue firing point</text>
+<circle cx="54.0" cy="627" r="9" fill="#db8b29"/>
+<text x="54.0" y="630" text-anchor="middle" font-size="9" style="fill:white">5</text>
+<text x="73.0" y="631" font-size="12">Delivery Check firing point</text>
+<circle cx="564.0" cy="627" r="9" fill="#e25757"/>
+<text x="564.0" y="630" text-anchor="middle" font-size="9" style="fill:white">6</text>
+<text x="583.0" y="631" font-size="12">A FOOD then DELIVER</text>
+<circle cx="54.0" cy="661" r="9" fill="#e25757"/>
+<text x="54.0" y="664" text-anchor="middle" font-size="9" style="fill:white">7</text>
+<text x="73.0" y="665" font-size="12">B MEDICAL then LIGHT</text>
+<circle cx="564.0" cy="661" r="9" fill="#e25757"/>
+<text x="564.0" y="664" text-anchor="middle" font-size="9" style="fill:white">8</text>
+<text x="583.0" y="665" font-size="12">C TOOLS then ANNOUNCE</text>
+<circle cx="54.0" cy="695" r="9" fill="#e25757"/>
+<text x="54.0" y="698" text-anchor="middle" font-size="9" style="fill:white">9</text>
+<text x="73.0" y="699" font-size="12">A SCAN then BRIDGE</text>
+<circle cx="564.0" cy="695" r="9" fill="#e25757"/>
+<text x="564.0" y="698" text-anchor="middle" font-size="9" style="fill:white">10</text>
+<text x="583.0" y="699" font-size="12">B ANNOUNCE then WAIT</text>
+<circle cx="54.0" cy="729" r="9" fill="#e25757"/>
+<text x="54.0" y="732" text-anchor="middle" font-size="9" style="fill:white">11</text>
+<text x="73.0" y="733" font-size="12">C FORCE THROUGH then DOCK</text>
+<circle cx="564.0" cy="729" r="9" fill="#e25757"/>
+<text x="564.0" y="732" text-anchor="middle" font-size="9" style="fill:white">12</text>
+<text x="583.0" y="733" font-size="12">A PIX SAID DONE</text>
+<circle cx="54.0" cy="763" r="9" fill="#e25757"/>
+<text x="54.0" y="766" text-anchor="middle" font-size="9" style="fill:white">13</text>
+<text x="73.0" y="767" font-size="12">B MEDICAL AT LAB</text>
+<circle cx="564.0" cy="763" r="9" fill="#e25757"/>
+<text x="564.0" y="766" text-anchor="middle" font-size="9" style="fill:white">14</text>
+<text x="583.0" y="767" font-size="12">C CRATE AT HOME</text>
+<circle cx="54.0" cy="797" r="9" fill="#329bd0"/>
+<text x="54.0" y="800" text-anchor="middle" font-size="9" style="fill:white">15</text>
+<text x="73.0" y="801" font-size="12">Goal / selected cargo / skill</text>
+<circle cx="564.0" cy="797" r="9" fill="#329bd0"/>
+<text x="564.0" y="800" text-anchor="middle" font-size="9" style="fill:white">16</text>
+<text x="583.0" y="801" font-size="12">Changed route / scan evidence</text>
+<circle cx="54.0" cy="831" r="9" fill="#329bd0"/>
+<text x="54.0" y="834" text-anchor="middle" font-size="9" style="fill:white">17</text>
+<text x="73.0" y="835" font-size="12">Goal vs actual delivery</text>
+<circle cx="564.0" cy="831" r="9" fill="#329bd0"/>
+<text x="564.0" y="834" text-anchor="middle" font-size="9" style="fill:white">18</text>
+<text x="583.0" y="835" font-size="12">Pix picks up Medical crate</text>
+<circle cx="54.0" cy="865" r="9" fill="#329bd0"/>
+<text x="54.0" y="868" text-anchor="middle" font-size="9" style="fill:white">19</text>
+<text x="73.0" y="869" font-size="12">Pix stops and waits</text>
+<circle cx="564.0" cy="865" r="9" fill="#329bd0"/>
+<text x="564.0" y="868" text-anchor="middle" font-size="9" style="fill:white">20</text>
+<text x="583.0" y="869" font-size="12">Safety gate closes ahead of Pix</text>
+<circle cx="54.0" cy="899" r="9" fill="#329bd0"/>
+<text x="54.0" y="902" text-anchor="middle" font-size="9" style="fill:white">21</text>
+<text x="73.0" y="903" font-size="12">Dock detour around safety gate</text>
+<circle cx="564.0" cy="899" r="9" fill="#329bd0"/>
+<text x="564.0" y="902" text-anchor="middle" font-size="9" style="fill:white">22</text>
+<text x="583.0" y="903" font-size="12">Animal Research Station / real crate drop</text>
+<circle cx="54.0" cy="933" r="9" fill="#c79c17"/>
+<text x="54.0" y="936" text-anchor="middle" font-size="9" style="fill:white">23</text>
+<text x="73.0" y="937" font-size="12">Agent Mode core and once-only badge</text>
+<circle cx="564.0" cy="933" r="9" fill="#526476"/>
+<text x="564.0" y="936" text-anchor="middle" font-size="9" style="fill:white">24</text>
+<text x="583.0" y="937" font-size="12">Mounted Return</text>
+<circle cx="54.0" cy="967" r="9" fill="#526476"/>
+<text x="54.0" y="970" text-anchor="middle" font-size="9" style="fill:white">25</text>
+<text x="73.0" y="971" font-size="12">Mounted Return</text>
+<circle cx="564.0" cy="967" r="9" fill="#526476"/>
+<text x="564.0" y="970" text-anchor="middle" font-size="9" style="fill:white">26</text>
+<text x="583.0" y="971" font-size="12">Mounted Return</text>
+<circle cx="54.0" cy="1001" r="9" fill="#db8b29"/>
+<text x="54.0" y="1004" text-anchor="middle" font-size="9" style="fill:white">27</text>
+<text x="73.0" y="1005" font-size="12">Replay returns to Dispatch</text>
+</svg>
+<p><span style="color:#42a86b">● spawn</span> · <span style="color:#e25757">● target</span> · <span style="color:#b377dc">● weapon</span> · <span style="color:#329bd0">● knowledge</span> · <span style="color:#526476">● exit</span> · <span style="color:#db8b29">● checkpoint</span> · <span style="color:#c79c17">● reward</span></p>
+<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Campus arrival - no new spawn</td><td>[98, 13, 0]</td><td>Proposed anchor on measured floor; evidence/live-floor-transforms-2026-10-02.json</td></tr><tr><td>2</td><td>weapon</td><td>Existing Data Blaster inventory</td><td>[98, 15, 0]</td><td>Annotation of shared loadout; no new granter</td></tr><tr><td>3</td><td>checkpoint</td><td>Dispatch firing point</td><td>[76, 18, 0]</td><td>Proposed local anchor; annotation not checkpoint device</td></tr><tr><td>4</td><td>checkpoint</td><td>Route Rescue firing point</td><td>[54, 18, 0]</td><td>Proposed local anchor; annotation not checkpoint device</td></tr><tr><td>5</td><td>checkpoint</td><td>Delivery Check firing point</td><td>[30, 18, 0]</td><td>Proposed local anchor; annotation not checkpoint device</td></tr><tr><td>6</td><td>target</td><td>A FOOD then DELIVER</td><td>[73, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>7</td><td>target</td><td>B MEDICAL then LIGHT</td><td>[76, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>8</td><td>target</td><td>C TOOLS then ANNOUNCE</td><td>[79, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>9</td><td>target</td><td>A SCAN then BRIDGE</td><td>[51, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>10</td><td>target</td><td>B ANNOUNCE then WAIT</td><td>[54, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>11</td><td>target</td><td>C FORCE THROUGH then DOCK</td><td>[57, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>12</td><td>target</td><td>A PIX SAID DONE</td><td>[27, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>13</td><td>target</td><td>B MEDICAL AT LAB</td><td>[30, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>14</td><td>target</td><td>C CRATE AT HOME</td><td>[33, 10, 1.8]</td><td>Proposed complete assembly; same shared data_target class</td></tr><tr><td>15</td><td>knowledge</td><td>Goal / selected cargo / skill</td><td>[76, 2, 4.8]</td><td>Proposed board face center; native pivot and font require implementation readback</td></tr><tr><td>16</td><td>knowledge</td><td>Changed route / scan evidence</td><td>[54, 2, 4.8]</td><td>Proposed board face center; native pivot and font require implementation readback</td></tr><tr><td>17</td><td>knowledge</td><td>Goal vs actual delivery</td><td>[30, 2, 4.8]</td><td>Proposed board face center; native pivot and font require implementation readback</td></tr><tr><td>18</td><td>knowledge</td><td>Pix picks up Medical crate</td><td>[76, 6, 0.6]</td><td>Proposed scripted prop anchor on measured floor</td></tr><tr><td>19</td><td>knowledge</td><td>Pix stops and waits</td><td>[54, 6, 0.6]</td><td>Proposed scripted prop anchor on measured floor</td></tr><tr><td>20</td><td>knowledge</td><td>Safety gate closes ahead of Pix</td><td>[50, 6, 1]</td><td>New narrow robot-lane prop only; never blocks player path</td></tr><tr><td>21</td><td>knowledge</td><td>Dock detour around safety gate</td><td>[48, 3, 0.1]</td><td>Authored robot path shown in plan; no player platforming or pathfinding</td></tr><tr><td>22</td><td>knowledge</td><td>Animal Research Station / real crate drop</td><td>[30, 6, 0.5]</td><td>Proposed physical result anchor; crate transform independently checked at final answer</td></tr><tr><td>23</td><td>reward</td><td>Agent Mode core and once-only badge</td><td>[22, 6, 2]</td><td>Proposed finale display; existing shared tracker is authoritative</td></tr><tr><td>24</td><td>exit</td><td>Mounted Return</td><td>[81, 19, 0.9]</td><td>Reuse station-1 button and support; actual seating measured before binding</td></tr><tr><td>25</td><td>exit</td><td>Mounted Return</td><td>[59, 19, 0.9]</td><td>Reuse station-2 button and support; actual seating measured before binding</td></tr><tr><td>26</td><td>exit</td><td>Mounted Return</td><td>[33, 19, 0.9]</td><td>Reuse station-3 button and support; actual seating measured before binding</td></tr><tr><td>27</td><td>checkpoint</td><td>Replay returns to Dispatch</td><td>[27, 19, 0.9]</td><td>Reuse station-3 Replay; one mission-local teleporter destination at Dispatch</td></tr></table>
+<h2>Mission sequence</h2><ol><li><b>approach</b>: Observe goal and seven-module gate — Eligible owner auto-starts; locked players get next-module guidance and Return</li><li><b>choose_cargo</b>: Match cargo to real goal — Medical crate is selected visibly</li><li><b>launch_skill</b>: Give Pix a reusable skill then follow its action — Pickup then Move to floor2; stop before changed gate and await owner arrival</li><li><b>observe_change</b>: Obtain evidence before changing a plan — Scanner reveals Bridge blocked and Dock open</li><li><b>replan_route</b>: Adapt the same active delivery to new information — Resume via Dock detour; actual successful Drop at lab plus owner arrival</li><li><b>verify_result</b>: Check actual cargo identity and destination rather than agent claim — Fresh evidence choice plus actual Medical prop within 0.5m of lab; shared one-time badge and finale</li><li><b>finish</b>: Hold recap and allow Replay or Return — Target banks inactive and badge retained</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — Floors1-3 are adjacent same-height slabs; anchors are proposed placements inside measured bounds</li><li>resolved — YAML does not already configure the bot controller; approved scope includes opt-in five-phase rescue adapter and separate attempt state plus shared award guard</li><li>resolved — Preserve floor4 and its legacy controller/state; rescue ownership prevents one player holding both; shared badge stays once-only</li><li>resolved — Cleanup is bounded to candidate ledger and only exclusively local references; protected shell and shared devices never removed</li><li>resolved — Collision/visibility/native bindings and actual movement cancellation are required implementation and cooked checks; no proof of playability is claimed by offline check</li></ul></html>

@@ -1,0 +1,683 @@
+version: 1
+map_id: ai_agent_rescue_run
+spec_digest: 53f194502064d6f1cb11974dd6a353f593428f86d3101d39ae0c7eb8d398c0ff
+patterns_digest: 8a4742b9b975339573390959480b33480edb39fd6f38a5d601066fd1b71e8ea8
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: ai_agent_rescue_run
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -2600
+  - -15300
+  - 2400
+  size_cm:
+  - 800
+  - 3700
+  - 800
+  parameters:
+    width_m: 3
+    access: Always open campus approach and Return
+  markers:
+  - id: arrival
+    kind: spawn
+    zone: arrival
+    label: Campus arrival - no new spawn
+    position:
+    - 98
+    - 13
+    - 0
+    source: Proposed anchor on measured floor; evidence/live-floor-transforms-2026-10-02.json
+  - id: rifle
+    kind: weapon
+    zone: arrival
+    label: Existing Data Blaster inventory
+    position:
+    - 98
+    - 15
+    - 0
+    source: Annotation of shared loadout; no new granter
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: dispatch
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -5200
+  - -15300
+  - 2400
+  size_cm:
+  - 2600
+  - 3700
+  - 800
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: play_dispatch
+    kind: checkpoint
+    zone: dispatch
+    label: Dispatch firing point
+    position:
+    - 76
+    - 18
+    - 0
+    source: Proposed local anchor; annotation not checkpoint device
+  - id: dispatch_a
+    kind: target
+    zone: dispatch
+    label: A FOOD then DELIVER
+    position:
+    - 73
+    - 10
+    - 1.8
+    target_id: 0
+    source: Proposed complete assembly; same shared data_target class
+  - id: dispatch_b
+    kind: target
+    zone: dispatch
+    label: B MEDICAL then LIGHT
+    position:
+    - 76
+    - 10
+    - 1.8
+    target_id: 1
+    source: Proposed complete assembly; same shared data_target class
+  - id: dispatch_c
+    kind: target
+    zone: dispatch
+    label: C TOOLS then ANNOUNCE
+    position:
+    - 79
+    - 10
+    - 1.8
+    target_id: 2
+    source: Proposed complete assembly; same shared data_target class
+  - id: dispatch_board
+    kind: knowledge
+    zone: dispatch
+    label: Goal / selected cargo / skill
+    position:
+    - 76
+    - 2
+    - 4.8
+    source: Proposed board face center; native pivot and font require implementation
+      readback
+  - id: pix_home
+    kind: knowledge
+    zone: dispatch
+    label: Pix picks up Medical crate
+    position:
+    - 76
+    - 6
+    - 0.6
+    source: Proposed scripted prop anchor on measured floor
+  - id: return_dispatch
+    kind: exit
+    zone: dispatch
+    label: Mounted Return
+    position:
+    - 81
+    - 19
+    - 0.9
+    source: Reuse station-1 button and support; actual seating measured before binding
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: route_rescue
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -8600
+  - -15300
+  - 2400
+  size_cm:
+  - 3400
+  - 3700
+  - 800
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: play_rescue
+    kind: checkpoint
+    zone: route_rescue
+    label: Route Rescue firing point
+    position:
+    - 54
+    - 18
+    - 0
+    source: Proposed local anchor; annotation not checkpoint device
+  - id: rescue_a
+    kind: target
+    zone: route_rescue
+    label: A SCAN then BRIDGE
+    position:
+    - 51
+    - 10
+    - 1.8
+    target_id: 3
+    source: Proposed complete assembly; same shared data_target class
+  - id: rescue_b
+    kind: target
+    zone: route_rescue
+    label: B ANNOUNCE then WAIT
+    position:
+    - 54
+    - 10
+    - 1.8
+    target_id: 4
+    source: Proposed complete assembly; same shared data_target class
+  - id: rescue_c
+    kind: target
+    zone: route_rescue
+    label: C FORCE THROUGH then DOCK
+    position:
+    - 57
+    - 10
+    - 1.8
+    target_id: 5
+    source: Proposed complete assembly; same shared data_target class
+  - id: rescue_board
+    kind: knowledge
+    zone: route_rescue
+    label: Changed route / scan evidence
+    position:
+    - 54
+    - 2
+    - 4.8
+    source: Proposed board face center; native pivot and font require implementation
+      readback
+  - id: pix_stop
+    kind: knowledge
+    zone: route_rescue
+    label: Pix stops and waits
+    position:
+    - 54
+    - 6
+    - 0.6
+    source: Proposed scripted prop anchor on measured floor
+  - id: gate
+    kind: knowledge
+    zone: route_rescue
+    label: Safety gate closes ahead of Pix
+    position:
+    - 50
+    - 6
+    - 1
+    source: New narrow robot-lane prop only; never blocks player path
+  - id: detour
+    kind: knowledge
+    zone: route_rescue
+    label: Dock detour around safety gate
+    position:
+    - 48
+    - 3
+    - 0.1
+    source: Authored robot path shown in plan; no player platforming or pathfinding
+  - id: return_rescue
+    kind: exit
+    zone: route_rescue
+    label: Mounted Return
+    position:
+    - 59
+    - 19
+    - 0.9
+    source: Reuse station-2 button and support; actual seating measured before binding
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: delivery_check
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -12000
+  - -15300
+  - 2400
+  size_cm:
+  - 3400
+  - 3700
+  - 800
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: play_check
+    kind: checkpoint
+    zone: delivery_check
+    label: Delivery Check firing point
+    position:
+    - 30
+    - 18
+    - 0
+    source: Proposed local anchor; annotation not checkpoint device
+  - id: check_a
+    kind: target
+    zone: delivery_check
+    label: A PIX SAID DONE
+    position:
+    - 27
+    - 10
+    - 1.8
+    target_id: 6
+    source: Proposed complete assembly; same shared data_target class
+  - id: check_b
+    kind: target
+    zone: delivery_check
+    label: B MEDICAL AT LAB
+    position:
+    - 30
+    - 10
+    - 1.8
+    target_id: 7
+    source: Proposed complete assembly; same shared data_target class
+  - id: check_c
+    kind: target
+    zone: delivery_check
+    label: C CRATE AT HOME
+    position:
+    - 33
+    - 10
+    - 1.8
+    target_id: 8
+    source: Proposed complete assembly; same shared data_target class
+  - id: check_board
+    kind: knowledge
+    zone: delivery_check
+    label: Goal vs actual delivery
+    position:
+    - 30
+    - 2
+    - 4.8
+    source: Proposed board face center; native pivot and font require implementation
+      readback
+  - id: lab
+    kind: knowledge
+    zone: delivery_check
+    label: Animal Research Station / real crate drop
+    position:
+    - 30
+    - 6
+    - 0.5
+    source: Proposed physical result anchor; crate transform independently checked
+      at final answer
+  - id: badge
+    kind: reward
+    zone: delivery_check
+    label: Agent Mode core and once-only badge
+    position:
+    - 22
+    - 6
+    - 2
+    source: Proposed finale display; existing shared tracker is authoritative
+  - id: return_check
+    kind: exit
+    zone: delivery_check
+    label: Mounted Return
+    position:
+    - 33
+    - 19
+    - 0.9
+    source: Reuse station-3 button and support; actual seating measured before binding
+  - id: replay
+    kind: checkpoint
+    zone: delivery_check
+    label: Replay returns to Dispatch
+    position:
+    - 27
+    - 19
+    - 0.9
+    source: Reuse station-3 Replay; one mission-local teleporter destination at Dispatch
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: controller
+    class: fn_shoreline_island_bot_station
+    count: 1
+    source: Reuse station 1 with opt-in rescue mode; retire controllers 2/3; preserve
+      station 4 legacy mode
+    settings:
+      rescue_mode: true
+      phase_success_ids:
+      - 1
+      - 0
+      - 3
+      - 5
+      - 7
+      quiet_rearm_seconds: 0.5
+      hint_seconds: 8
+      interaction_radius_m: 6
+      full_attempt_bounds_local:
+      - 0
+      - 0
+      - 102
+      - 37
+      no_stage_skip: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: dispatch_targets
+    class: fn_shoreline_island_data_target
+    count: 3
+    source: Reconcile complete shared target assemblies for floor 1
+    settings:
+      target_ids:
+      - 0
+      - 1
+      - 2
+      mission_id: 8
+      stationary_y_facing: true
+      stationary_positive_y: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: rescue_targets
+    class: fn_shoreline_island_data_target
+    count: 3
+    source: Reconcile complete shared target assemblies for floor 2
+    settings:
+      target_ids:
+      - 3
+      - 4
+      - 5
+      mission_id: 8
+      stationary_y_facing: true
+      stationary_positive_y: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: check_targets
+    class: fn_shoreline_island_data_target
+    count: 3
+    source: Reconcile complete shared target assemblies for floor 3
+    settings:
+      target_ids:
+      - 6
+      - 7
+      - 8
+      mission_id: 8
+      stationary_y_facing: true
+      stationary_positive_y: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: blaster
+    class: fn_shoreline_island_data_blaster
+    count: 1
+    source: Retain shared existing rifle loadout
+    settings:
+      no_extra_granter: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: fn_shoreline_island_bot_progress
+    count: 1
+    source: Retain placed existing bot progress identity
+    settings:
+      rescue_attempt_separate_from_legacy: true
+      one_badge_guard: true
+      award_only_verified_rescue: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: tracker
+    class: tracker_device
+    count: 1
+    source: Retain fn_shoreline_bot_1_badge_tracker
+    settings:
+      target: 1
+      preserve_identity: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: journal
+    class: fn_shoreline_island_academy_journal
+    count: 1
+    source: Retain current deployed journal reference; feature033 remains draft
+    settings:
+      prerequisite_modules: 7
+      read_only_consumer: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: boards
+    class: billboard_device
+    count: 3
+    source: Reuse one main board per existing station1-3; target labels belong to
+      assemblies
+    settings:
+      max_lines: 3
+      persistent_goal_and_result: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: feedback
+    class: hud_message_device
+    count: 1
+    source: Reuse station1 feedback
+    settings:
+      recipient: TriggeringPlayer
+      short_contextual_feedback: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controls
+    class: button_device
+    count: 4
+    source: Reuse Return from stations1-3 and Replay from station3
+    settings:
+      return_always: true
+      replay_finished_only: true
+      mounted: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hub
+    class: teleporter_device
+    count: 1
+    source: Reuse shared hub destination
+    settings:
+      no_relocation: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: replay_destination
+    class: teleporter_device
+    count: 1
+    source: One local destination at Dispatch using existing native teleporter API
+    settings:
+      local_position_m:
+      - 76
+      - 18
+      - 0
+      no_touch_teleport: true
+      owner_replay_only: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: props
+    class: creative_prop
+    count: 11
+    source: Reuse eligible bot1-3 assets and existing project primitives; scene delta
+      specifies roles, not new unverified imported assets
+    settings:
+      roles:
+      - pix
+      - medical_crate
+      - food_crate
+      - tools_crate
+      - safety_gate
+      - scanner
+      - lab_pad
+      - agent_core
+      - dispatch_mount
+      - rescue_mount
+      - check_mount
+      pix_path_local_m:
+      - - 76
+        - 6
+        - 0.6
+      - - 54
+        - 6
+        - 0.6
+      - - 54
+        - 3
+        - 0.6
+      - - 30
+        - 3
+        - 0.6
+      - - 30
+        - 6
+        - 0.6
+      actual_crate_drop_tolerance_m: 0.5
+      reuse_parts_as_assemblies: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: approach
+    zone: arrival
+    purpose: Observe goal and seven-module gate
+    requires: []
+    active_targets: []
+    completion: Eligible owner auto-starts; locked players get next-module guidance
+      and Return
+  - id: choose_cargo
+    zone: dispatch
+    purpose: Match cargo to real goal
+    requires:
+    - approach
+    active_targets:
+    - dispatch_a
+    - dispatch_b
+    - dispatch_c
+    success_target: dispatch_b
+    completion: Medical crate is selected visibly
+  - id: launch_skill
+    zone: dispatch
+    purpose: Give Pix a reusable skill then follow its action
+    requires:
+    - choose_cargo
+    active_targets:
+    - dispatch_a
+    - dispatch_b
+    - dispatch_c
+    success_target: dispatch_a
+    completion: Pickup then Move to floor2; stop before changed gate and await owner
+      arrival
+  - id: observe_change
+    zone: route_rescue
+    purpose: Obtain evidence before changing a plan
+    requires:
+    - launch_skill
+    active_targets:
+    - rescue_a
+    - rescue_b
+    - rescue_c
+    success_target: rescue_a
+    completion: Scanner reveals Bridge blocked and Dock open
+  - id: replan_route
+    zone: route_rescue
+    purpose: Adapt the same active delivery to new information
+    requires:
+    - observe_change
+    active_targets:
+    - rescue_a
+    - rescue_b
+    - rescue_c
+    success_target: rescue_c
+    completion: Resume via Dock detour; actual successful Drop at lab plus owner arrival
+  - id: verify_result
+    zone: delivery_check
+    purpose: Check actual cargo identity and destination rather than agent claim
+    requires:
+    - replan_route
+    active_targets:
+    - check_a
+    - check_b
+    - check_c
+    success_target: check_b
+    completion: Fresh evidence choice plus actual Medical prop within 0.5m of lab;
+      shared one-time badge and finale
+  - id: finish
+    zone: delivery_check
+    purpose: Hold recap and allow Replay or Return
+    requires:
+    - verify_result
+    active_targets: []
+    completion: Target banks inactive and badge retained
+  connections:
+  - from: arrival
+    to: dispatch
+    mode: walk
+    width: 3
+    points:
+    - - 98
+      - 13
+      - 0
+    - - 92
+      - 18
+      - 0
+    - - 76
+      - 18
+      - 0
+    gate: always
+  - from: dispatch
+    to: route_rescue
+    mode: walk
+    width: 3
+    points:
+    - - 76
+      - 18
+      - 0
+    - - 54
+      - 18
+      - 0
+    gate: always
+  - from: route_rescue
+    to: delivery_check
+    mode: walk
+    width: 3
+    points:
+    - - 54
+      - 18
+      - 0
+    - - 30
+      - 18
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

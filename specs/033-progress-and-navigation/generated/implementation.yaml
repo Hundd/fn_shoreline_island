@@ -1,0 +1,179 @@
+version: 1
+map_id: progress_and_navigation
+spec_digest: ebc65a8f2f7d53999fd9dee0ebf7fbbbbc2bd644d1d84af232c7a48a70536680
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers:
+- 'a_01: All coordinates are schematic. Survey actual entrance transforms, campus
+  bounds, reachable paths and sign sightlines, then replace diagram geometry before
+  implementation review.'
+- 'a_02: Discover existing map indicators, settings and installed per-agent objective
+  pulse behavior; resolve exact reuse/new counts and bindings.'
+- 'a_03: Resolve per-controller stage adapters/totals, event ordering, missing-binding
+  handling and HUD safe regions; corridor pattern supplies no UI adapter.'
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: progress_and_navigation
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: navigation_overlay
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 0
+  - 0
+  - 0
+  size_cm:
+  - 4500
+  - 3500
+  - 400
+  parameters:
+    width_m: 2
+    access: Existing access preserved; Agent requires seven modules. Diagram does
+      not model physical gates.
+  markers:
+  - id: destination_1
+    kind: knowledge
+    zone: navigation_overlay
+    label: 1 Prompt Workshop
+    position:
+    - 7
+    - 6
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_2
+    kind: knowledge
+    zone: navigation_overlay
+    label: 2 Pattern Scanner
+    position:
+    - 22
+    - 6
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_3
+    kind: knowledge
+    zone: navigation_overlay
+    label: 3 AI Classifier
+    position:
+    - 37
+    - 6
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_4
+    kind: knowledge
+    zone: navigation_overlay
+    label: 4 Confidence Core
+    position:
+    - 7
+    - 17
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_5
+    kind: knowledge
+    zone: navigation_overlay
+    label: 5 AI Error Lab
+    position:
+    - 22
+    - 17
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_6
+    kind: knowledge
+    zone: navigation_overlay
+    label: 6 AI Tool Lab
+    position:
+    - 37
+    - 17
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_7
+    kind: knowledge
+    zone: navigation_overlay
+    label: 7 AI Skills Lab
+    position:
+    - 7
+    - 28
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_8
+    kind: knowledge
+    zone: navigation_overlay
+    label: 8 AI Agent Mission
+    position:
+    - 22
+    - 28
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  - id: destination_9
+    kind: knowledge
+    zone: navigation_overlay
+    label: Hub / Journal
+    position:
+    - 37
+    - 28
+    - 0
+    source: Schematic annotation only; not a measured transform or proposed physical
+      relocation. a_01 blocks execution.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: indicators
+    class: map_indicator_device
+    count: 9
+    source: 'Proposed total: eight module entrances plus Hub. Reconcile existing devices
+      before creating; exact transforms unresolved.'
+    settings:
+      maps: minimap and overview
+      labels: numbers and canonical destination names
+      pulse: only selected destination, per agent; native behavior pending verification
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: journal
+    class: fn_shoreline_island_academy_journal
+    count: 1
+    source: Reuse existing journal; Content/fn_shoreline_island_academy_journal.verse
+    settings:
+      progress: authoritative unique badges / 8
+      hud: persistent noninteractive panel
+      local_stage: new reporting hooks required
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: navigation_guidance
+    zone: navigation_overlay
+    purpose: Read progress and follow a recommended available destination; free-order
+      behavior is specified in spec.md, not this linear schema.
+    requires: []
+    active_targets: []
+    completion: All eight unique badges earned; clear required destination and offer
+      replay/exploration.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

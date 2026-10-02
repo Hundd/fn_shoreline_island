@@ -89,6 +89,12 @@ fn_shoreline_island_bot_progress := class(creative_device):
         state := ensure_player(input_player)
         set state.solved = true
         if (set state.completed[state.stage] = true) {}
-        if (state.completed[0]?, state.completed[1]?, state.completed[2]?, not state.badge_earned?):
+        if (state.completed[0]?, state.completed[1]?, state.completed[2]?):
+            award_badge(input_player)
+
+    # Shared by legacy stage completion and the rescue's physical verification.
+    award_badge(input_player:player):void =
+        state := ensure_player(input_player)
+        if (not state.badge_earned?):
             set state.badge_earned = true
             badge_tracker.SetValue(input_player, 1)

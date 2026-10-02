@@ -1,0 +1,186 @@
+version: 1
+map:
+  id: progress_and_navigation
+  title: SCHEMATIC ONLY - Progress and navigation
+  theme: ai_core_wayfinding
+  units: meters
+  origin_cm:
+  - 0
+  - 0
+  - 0
+  size:
+  - 45
+  - 35
+  - 4
+  learning_objective: Know restored module count, the next action and its destination.
+    Diagram coordinates only; no physical placement authorization.
+  source_feature: specs/033-progress-and-navigation/spec.md
+  intent: propose_change
+  min_path_width: 2
+  position_tolerance: 0.25
+player_flow:
+- navigation_overlay
+zones:
+- id: navigation_overlay
+  label: Schematic campus navigation scope - NOT measured geometry
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 45
+  - 35
+  - 4
+  purpose: Annotate destination naming; retain actual campus routes pending survey.
+    Do not build this rectangle.
+  parameters:
+    width_m: 2
+    access: Existing access preserved; Agent requires seven modules. Diagram does
+      not model physical gates.
+  devices:
+  - indicators
+  - journal
+  overlap_with: []
+  completion: Player finds the next eligible activity; completion remains owned by
+    existing mission controllers.
+  reset: Recompute personal count and destination from authoritative round state;
+    cancel old pulses.
+connections: []
+markers:
+- id: destination_1
+  kind: knowledge
+  zone: navigation_overlay
+  label: 1 Prompt Workshop
+  position:
+  - 7
+  - 6
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_2
+  kind: knowledge
+  zone: navigation_overlay
+  label: 2 Pattern Scanner
+  position:
+  - 22
+  - 6
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_3
+  kind: knowledge
+  zone: navigation_overlay
+  label: 3 AI Classifier
+  position:
+  - 37
+  - 6
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_4
+  kind: knowledge
+  zone: navigation_overlay
+  label: 4 Confidence Core
+  position:
+  - 7
+  - 17
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_5
+  kind: knowledge
+  zone: navigation_overlay
+  label: 5 AI Error Lab
+  position:
+  - 22
+  - 17
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_6
+  kind: knowledge
+  zone: navigation_overlay
+  label: 6 AI Tool Lab
+  position:
+  - 37
+  - 17
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_7
+  kind: knowledge
+  zone: navigation_overlay
+  label: 7 AI Skills Lab
+  position:
+  - 7
+  - 28
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_8
+  kind: knowledge
+  zone: navigation_overlay
+  label: 8 AI Agent Mission
+  position:
+  - 22
+  - 28
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+- id: destination_9
+  kind: knowledge
+  zone: navigation_overlay
+  label: Hub / Journal
+  position:
+  - 37
+  - 28
+  - 0
+  source: Schematic annotation only; not a measured transform or proposed physical
+    relocation. a_01 blocks execution.
+devices:
+- id: indicators
+  class: map_indicator_device
+  count: 9
+  source: 'Proposed total: eight module entrances plus Hub. Reconcile existing devices
+    before creating; exact transforms unresolved.'
+  settings:
+    maps: minimap and overview
+    labels: numbers and canonical destination names
+    pulse: only selected destination, per agent; native behavior pending verification
+- id: journal
+  class: fn_shoreline_island_academy_journal
+  count: 1
+  source: Reuse existing journal; Content/fn_shoreline_island_academy_journal.verse
+  settings:
+    progress: authoritative unique badges / 8
+    hud: persistent noninteractive panel
+    local_stage: new reporting hooks required
+stages:
+- id: navigation_guidance
+  zone: navigation_overlay
+  purpose: Read progress and follow a recommended available destination; free-order
+    behavior is specified in spec.md, not this linear schema.
+  requires: []
+  active_targets: []
+  completion: All eight unique badges earned; clear required destination and offer
+    replay/exploration.
+assumptions:
+- id: a_01
+  detail: All coordinates are schematic. Survey actual entrance transforms, campus
+    bounds, reachable paths and sign sightlines, then replace diagram geometry before
+    implementation review.
+  status: open
+  evidence: No live spatial survey performed for feature 033; plan.md spatial boundary.
+- id: a_02
+  detail: Discover existing map indicators, settings and installed per-agent objective
+    pulse behavior; resolve exact reuse/new counts and bindings.
+  status: open
+  evidence: Native API supports objective pulses; project-specific runtime integration
+    unverified.
+- id: a_03
+  detail: Resolve per-controller stage adapters/totals, event ordering, missing-binding
+    handling and HUD safe regions; corridor pattern supplies no UI adapter.
+  status: open
+  evidence: Journal source supplies badge count/recommendation but not generic local-stage
+    reporting.
