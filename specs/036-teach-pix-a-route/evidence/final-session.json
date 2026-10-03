@@ -1,0 +1,66 @@
+{
+  "final_build": {
+    "returnValue": []
+  },
+  "session_start": "Completed (final production source after HOME/LOAD label and X flash changes)",
+  "local_validation": {
+    "returnValue": [
+      "[2026.10.03-14.56.15:304][196]LogValkyrie: FlowStep_RunLocalValidation()",
+      "[2026.10.03-14.56.16:589][235]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+      "[2026.10.03-15.07.52:534][351]LogValkyrie: FlowStep_RunLocalValidation()",
+      "[2026.10.03-15.07.53:746][376]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+      "[2026.10.03-15.27.08:226][ 99]LogValkyrie: FlowStep_RunLocalValidation()",
+      "[2026.10.03-15.27.09:519][119]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+      "[2026.10.03-15.28.21:378][899]LogValkyrie: FlowStep_RunLocalValidation()",
+      "[2026.10.03-15.28.22:627][923]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+      "[2026.10.03-18.29.13:803][392]LogValkyrie: FlowStep_RunLocalValidation()",
+      "[2026.10.03-18.29.17:207][417]LogValkyrie: FlowStep_RunLocalValidation(): Complete",
+      "[2026.10.03-18.34.51:011][394]LogValkyrie: FlowStep_RunLocalValidation()",
+      "[2026.10.03-18.34.52:742][406]LogValkyrie: FlowStep_RunLocalValidation(): Complete"
+    ]
+  },
+  "final_game_state": "Unconnected",
+  "final_session_state": "Disconnected",
+  "stop_game": "Completed",
+  "stop_session": "returned null; disconnected verified",
+  "protected_hangar": {
+    "returnValue": {
+      "location": {
+        "x": 6144,
+        "y": -14336,
+        "z": 2304
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -99.99999999999996,
+        "roll": 0
+      },
+      "scale": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      }
+    }
+  },
+  "protected_original_workshop_pix": {
+    "returnValue": {
+      "location": {
+        "x": 7600,
+        "y": 1400,
+        "z": 2600
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1.4,
+        "y": 1.4,
+        "z": 1.4
+      }
+    }
+  },
+  "dedicated_actor_count": 154,
+  "interactive_acceptance": "Blocked: Windows desktop lockscreen. No UI input attempted. Native cook/runtime initialization is not gameplay acceptance."
+}

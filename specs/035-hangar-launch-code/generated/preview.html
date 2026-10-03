@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hangar Launch Code - revision 1 blockout</title>
+<style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 20px;color:#172e43;background:#fff}svg{width:100%;max-height:900px}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #ccd8df;padding:8px}td:last-child{font-size:12px;overflow-wrap:anywhere}li{margin:8px 0}.notice{background:#fff3cf;padding:14px}</style>
+<h1>Hangar Launch Code - revision 1 review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
+<p>Follow a visible instruction sequence in order; check and retry the current code when an input is wrong.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 569" role="img" aria-label="Hangar Launch Code - revision 1 blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="569" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Hangar Launch Code - revision 1 — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="145" y="65" width="180" height="140" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="152" y="84">3 codes / 3 beacons</text>
+<text font-size="11" x="152" y="100">18 × 14m</text>
+<rect x="45" y="65" width="100" height="140" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">Walk in / out</text>
+<text font-size="11" x="52" y="100">10 × 14m</text>
+<polyline points="65,155 145,155 185,155 255,105" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → launch_bay / always</title></polyline>
+<g><title>Existing west walk-in; no new spawn; XYZ [2, 9, 0]; Measured hangar west entry and clear entry ray; planning-measurements.md</title><circle cx="65" cy="155" r="8" fill="#42a86b" stroke="white"/>
+<text x="65" y="158" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Walk out any time; XYZ [2, 6, 0]; Same preserved west entrance, not a teleporter</title><circle cx="65" cy="125" r="8" fill="#526476" stroke="white"/>
+<text x="65" y="128" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>START / REPLAY; XYZ [13, 6, 1]; Proposed dedicated button; plan.md</title><circle cx="175" cy="125" r="8" fill="#db8b29" stroke="white"/>
+<text x="175" y="128" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>CANCEL TEST; XYZ [13, 3, 1]; Proposed owner-only release control; ordinary walk-out always open</title><circle cx="175" cy="95" r="8" fill="#526476" stroke="white"/>
+<text x="175" y="98" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>Suggested aim point; existing blaster; XYZ [21, 4, 0]; Ground and sight traces; shared blaster already grants on join/spawn; no new grant</title><circle cx="255" cy="105" r="8" fill="#b377dc" stroke="white"/>
+<text x="255" y="108" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>Visible code + next slot; XYZ [20, 14, 4.2]; Proposed board; full code remains visible</title><circle cx="245" cy="205" r="8" fill="#329bd0" stroke="white"/>
+<text x="245" y="208" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>A circle; XYZ [15, 12, 1.7]; Proposed new assembly within measured clear sight fan; 1.5 m face</title><circle cx="195" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="195" y="188" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>B triangle; XYZ [20, 12, 1.7]; Proposed new assembly within measured clear sight fan; 1.5 m face</title><circle cx="245" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="245" y="188" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>C square; XYZ [25, 12, 1.7]; Proposed new assembly within measured clear sight fan; 1.5 m face</title><circle cx="295" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="295" y="188" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>1/3 POWER; XYZ [16.5, 14, 2]; Proposed customizable light; visual completion only, no Academy reward</title><circle cx="210.0" cy="205" r="8" fill="#c79c17" stroke="white"/>
+<text x="210.0" y="208" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>2/3 LINK; XYZ [20, 14, 2]; Proposed customizable light; visual completion only, no Academy reward</title><circle cx="245" cy="205" r="8" fill="#c79c17" stroke="white"/>
+<text x="245" y="208" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>3/3 READY; XYZ [23.5, 14, 2]; Proposed customizable light; visual completion only, no Academy reward</title><circle cx="280.0" cy="205" r="8" fill="#c79c17" stroke="white"/>
+<text x="280.0" y="208" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<path d="M45,240 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="245" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+<text x="45" y="283" font-size="16" font-weight="bold">Map legend</text>
+<text x="45" y="305" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
+<circle cx="54.0" cy="329" r="9" fill="#42a86b"/>
+<text x="54.0" y="332" text-anchor="middle" font-size="9" style="fill:white">1</text>
+<text x="73.0" y="333" font-size="12">Existing west walk-in; no new spawn</text>
+<circle cx="419.0" cy="329" r="9" fill="#526476"/>
+<text x="419.0" y="332" text-anchor="middle" font-size="9" style="fill:white">2</text>
+<text x="438.0" y="333" font-size="12">Walk out any time</text>
+<circle cx="54.0" cy="363" r="9" fill="#db8b29"/>
+<text x="54.0" y="366" text-anchor="middle" font-size="9" style="fill:white">3</text>
+<text x="73.0" y="367" font-size="12">START / REPLAY</text>
+<circle cx="419.0" cy="363" r="9" fill="#526476"/>
+<text x="419.0" y="366" text-anchor="middle" font-size="9" style="fill:white">4</text>
+<text x="438.0" y="367" font-size="12">CANCEL TEST</text>
+<circle cx="54.0" cy="397" r="9" fill="#b377dc"/>
+<text x="54.0" y="400" text-anchor="middle" font-size="9" style="fill:white">5</text>
+<text x="73.0" y="401" font-size="12">Suggested aim point; existing blaster</text>
+<circle cx="419.0" cy="397" r="9" fill="#329bd0"/>
+<text x="419.0" y="400" text-anchor="middle" font-size="9" style="fill:white">6</text>
+<text x="438.0" y="401" font-size="12">Visible code + next slot</text>
+<circle cx="54.0" cy="431" r="9" fill="#e25757"/>
+<text x="54.0" y="434" text-anchor="middle" font-size="9" style="fill:white">7</text>
+<text x="73.0" y="435" font-size="12">A circle</text>
+<circle cx="419.0" cy="431" r="9" fill="#e25757"/>
+<text x="419.0" y="434" text-anchor="middle" font-size="9" style="fill:white">8</text>
+<text x="438.0" y="435" font-size="12">B triangle</text>
+<circle cx="54.0" cy="465" r="9" fill="#e25757"/>
+<text x="54.0" y="468" text-anchor="middle" font-size="9" style="fill:white">9</text>
+<text x="73.0" y="469" font-size="12">C square</text>
+<circle cx="419.0" cy="465" r="9" fill="#c79c17"/>
+<text x="419.0" y="468" text-anchor="middle" font-size="9" style="fill:white">10</text>
+<text x="438.0" y="469" font-size="12">1/3 POWER</text>
+<circle cx="54.0" cy="499" r="9" fill="#c79c17"/>
+<text x="54.0" y="502" text-anchor="middle" font-size="9" style="fill:white">11</text>
+<text x="73.0" y="503" font-size="12">2/3 LINK</text>
+<circle cx="419.0" cy="499" r="9" fill="#c79c17"/>
+<text x="419.0" y="502" text-anchor="middle" font-size="9" style="fill:white">12</text>
+<text x="438.0" y="503" font-size="12">3/3 READY</text>
+</svg>
+<p><span style="color:#42a86b">● spawn</span> · <span style="color:#e25757">● target</span> · <span style="color:#b377dc">● weapon</span> · <span style="color:#329bd0">● knowledge</span> · <span style="color:#526476">● exit</span> · <span style="color:#db8b29">● checkpoint</span> · <span style="color:#c79c17">● reward</span></p>
+<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Existing west walk-in; no new spawn</td><td>[2, 9, 0]</td><td>Measured hangar west entry and clear entry ray; planning-measurements.md</td></tr><tr><td>2</td><td>exit</td><td>Walk out any time</td><td>[2, 6, 0]</td><td>Same preserved west entrance, not a teleporter</td></tr><tr><td>3</td><td>checkpoint</td><td>START / REPLAY</td><td>[13, 6, 1]</td><td>Proposed dedicated button; plan.md</td></tr><tr><td>4</td><td>exit</td><td>CANCEL TEST</td><td>[13, 3, 1]</td><td>Proposed owner-only release control; ordinary walk-out always open</td></tr><tr><td>5</td><td>weapon</td><td>Suggested aim point; existing blaster</td><td>[21, 4, 0]</td><td>Ground and sight traces; shared blaster already grants on join/spawn; no new grant</td></tr><tr><td>6</td><td>knowledge</td><td>Visible code + next slot</td><td>[20, 14, 4.2]</td><td>Proposed board; full code remains visible</td></tr><tr><td>7</td><td>target</td><td>A circle</td><td>[15, 12, 1.7]</td><td>Proposed new assembly within measured clear sight fan; 1.5 m face</td></tr><tr><td>8</td><td>target</td><td>B triangle</td><td>[20, 12, 1.7]</td><td>Proposed new assembly within measured clear sight fan; 1.5 m face</td></tr><tr><td>9</td><td>target</td><td>C square</td><td>[25, 12, 1.7]</td><td>Proposed new assembly within measured clear sight fan; 1.5 m face</td></tr><tr><td>10</td><td>reward</td><td>1/3 POWER</td><td>[16.5, 14, 2]</td><td>Proposed customizable light; visual completion only, no Academy reward</td></tr><tr><td>11</td><td>reward</td><td>2/3 LINK</td><td>[20, 14, 2]</td><td>Proposed customizable light; visual completion only, no Academy reward</td></tr><tr><td>12</td><td>reward</td><td>3/3 READY</td><td>[23.5, 14, 2]</td><td>Proposed customizable light; visual completion only, no Academy reward</td></tr></table>
+<h2>Mission sequence</h2><ol><li><b>approach</b>: Walk through existing west entrance — Reach Start control; exit stays open.</li><li><b>start</b>: Owner presses Start; visible code 1 — Claim owner; reset lights and slots, arm pads.</li><li><b>code_1_slot_1</b>: Code 1, slot 1/3: A — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_1_slot_2</b>: Code 1, slot 2/3: B — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_1_slot_3</b>: Code 1, slot 3/3: C — Light beacon 1; hold 1 second. Show next code.</li><li><b>code_2_slot_1</b>: Code 2, slot 1/4: B — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_2_slot_2</b>: Code 2, slot 2/4: A — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_2_slot_3</b>: Code 2, slot 3/4: B — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_2_slot_4</b>: Code 2, slot 4/4: C — Light beacon 2; hold 1 second. Show next code.</li><li><b>code_3_slot_1</b>: Code 3, slot 1/5: C — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_3_slot_2</b>: Code 3, slot 2/5: A — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_3_slot_3</b>: Code 3, slot 3/5: B — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_3_slot_4</b>: Code 3, slot 4/5: A — Fill slot, require 0.5 seconds quiet; wrong input returns to this code slot 1.</li><li><b>code_3_slot_5</b>: Code 3, slot 5/5: C — Light beacon 3; hold 1 second. Sweep lights, burst, hold Launch Ready.</li><li><b>complete</b>: Launch Ready; replay or walk out — Replay clears all local state; no badge or energy change.</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — Axis-aligned 28 x 14 m envelope inside existing rotated prefab; preserve shell, stairs, toolbox and shelves.</li><li>resolved — Existing gallery provides agent-attributed inputs and feedback. Ordered-code controller is explicitly required new implementation, not a claim of existing arbitrary pattern support.</li><li>resolved — Map lists linear success path; spec R-03/R-06/R-07 defines retries and lifecycle. No branching route or target state-machine schema extension is implied.</li><li>resolved — Optional hangar test only; visible beacons and finale, no new progression dependency or Academy badge.</li><li>resolved — Seven floor traces and three sight samples support anchors. Swept route collision, labels and native transforms remain explicit implementation acceptance checks.</li><li>resolved — This is an unapproved proposal; no approval.yaml created. Human review is next.</li></ul></html>

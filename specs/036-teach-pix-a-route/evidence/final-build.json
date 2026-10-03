@@ -1,0 +1,10 @@
+{
+  "native_tool": "ValkyrieToolset.VerseToolset.BuildAll",
+  "result": {
+    "returnValue": []
+  },
+  "geometry_command": "python -m unittest tools.tests.test_route_geometry -v",
+  "geometry_result": "5 tests pass, including 2000 independent edge-oracle comparisons",
+  "readiness_command": "python tools/map_workflow.py plan specs/036-teach-pix-a-route/map.yaml --ready",
+  "readiness_result": "READY FOR AGENT PREFLIGHT: approval matches"
+}

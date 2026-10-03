@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 569" role="img" aria-label="Hangar Launch Code - revision 1 blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="569" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Hangar Launch Code - revision 1 — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="145" y="65" width="180" height="140" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="152" y="84">3 codes / 3 beacons</text>
+<text font-size="11" x="152" y="100">18 × 14m</text>
+<rect x="45" y="65" width="100" height="140" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">Walk in / out</text>
+<text font-size="11" x="52" y="100">10 × 14m</text>
+<polyline points="65,155 145,155 185,155 255,105" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → launch_bay / always</title></polyline>
+<g><title>Existing west walk-in; no new spawn; XYZ [2, 9, 0]; Measured hangar west entry and clear entry ray; planning-measurements.md</title><circle cx="65" cy="155" r="8" fill="#42a86b" stroke="white"/>
+<text x="65" y="158" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Walk out any time; XYZ [2, 6, 0]; Same preserved west entrance, not a teleporter</title><circle cx="65" cy="125" r="8" fill="#526476" stroke="white"/>
+<text x="65" y="128" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>START / REPLAY; XYZ [13, 6, 1]; Proposed dedicated button; plan.md</title><circle cx="175" cy="125" r="8" fill="#db8b29" stroke="white"/>
+<text x="175" y="128" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>CANCEL TEST; XYZ [13, 3, 1]; Proposed owner-only release control; ordinary walk-out always open</title><circle cx="175" cy="95" r="8" fill="#526476" stroke="white"/>
+<text x="175" y="98" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>Suggested aim point; existing blaster; XYZ [21, 4, 0]; Ground and sight traces; shared blaster already grants on join/spawn; no new grant</title><circle cx="255" cy="105" r="8" fill="#b377dc" stroke="white"/>
+<text x="255" y="108" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>Visible code + next slot; XYZ [20, 14, 4.2]; Proposed board; full code remains visible</title><circle cx="245" cy="205" r="8" fill="#329bd0" stroke="white"/>
+<text x="245" y="208" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>A circle; XYZ [15, 12, 1.7]; Proposed new assembly within measured clear sight fan; 1.5 m face</title><circle cx="195" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="195" y="188" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>B triangle; XYZ [20, 12, 1.7]; Proposed new assembly within measured clear sight fan; 1.5 m face</title><circle cx="245" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="245" y="188" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>C square; XYZ [25, 12, 1.7]; Proposed new assembly within measured clear sight fan; 1.5 m face</title><circle cx="295" cy="185" r="8" fill="#e25757" stroke="white"/>
+<text x="295" y="188" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>1/3 POWER; XYZ [16.5, 14, 2]; Proposed customizable light; visual completion only, no Academy reward</title><circle cx="210.0" cy="205" r="8" fill="#c79c17" stroke="white"/>
+<text x="210.0" y="208" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>2/3 LINK; XYZ [20, 14, 2]; Proposed customizable light; visual completion only, no Academy reward</title><circle cx="245" cy="205" r="8" fill="#c79c17" stroke="white"/>
+<text x="245" y="208" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>3/3 READY; XYZ [23.5, 14, 2]; Proposed customizable light; visual completion only, no Academy reward</title><circle cx="280.0" cy="205" r="8" fill="#c79c17" stroke="white"/>
+<text x="280.0" y="208" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<path d="M45,240 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="245" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+<text x="45" y="283" font-size="16" font-weight="bold">Map legend</text>
+<text x="45" y="305" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
+<circle cx="54.0" cy="329" r="9" fill="#42a86b"/>
+<text x="54.0" y="332" text-anchor="middle" font-size="9" style="fill:white">1</text>
+<text x="73.0" y="333" font-size="12">Existing west walk-in; no new spawn</text>
+<circle cx="419.0" cy="329" r="9" fill="#526476"/>
+<text x="419.0" y="332" text-anchor="middle" font-size="9" style="fill:white">2</text>
+<text x="438.0" y="333" font-size="12">Walk out any time</text>
+<circle cx="54.0" cy="363" r="9" fill="#db8b29"/>
+<text x="54.0" y="366" text-anchor="middle" font-size="9" style="fill:white">3</text>
+<text x="73.0" y="367" font-size="12">START / REPLAY</text>
+<circle cx="419.0" cy="363" r="9" fill="#526476"/>
+<text x="419.0" y="366" text-anchor="middle" font-size="9" style="fill:white">4</text>
+<text x="438.0" y="367" font-size="12">CANCEL TEST</text>
+<circle cx="54.0" cy="397" r="9" fill="#b377dc"/>
+<text x="54.0" y="400" text-anchor="middle" font-size="9" style="fill:white">5</text>
+<text x="73.0" y="401" font-size="12">Suggested aim point; existing blaster</text>
+<circle cx="419.0" cy="397" r="9" fill="#329bd0"/>
+<text x="419.0" y="400" text-anchor="middle" font-size="9" style="fill:white">6</text>
+<text x="438.0" y="401" font-size="12">Visible code + next slot</text>
+<circle cx="54.0" cy="431" r="9" fill="#e25757"/>
+<text x="54.0" y="434" text-anchor="middle" font-size="9" style="fill:white">7</text>
+<text x="73.0" y="435" font-size="12">A circle</text>
+<circle cx="419.0" cy="431" r="9" fill="#e25757"/>
+<text x="419.0" y="434" text-anchor="middle" font-size="9" style="fill:white">8</text>
+<text x="438.0" y="435" font-size="12">B triangle</text>
+<circle cx="54.0" cy="465" r="9" fill="#e25757"/>
+<text x="54.0" y="468" text-anchor="middle" font-size="9" style="fill:white">9</text>
+<text x="73.0" y="469" font-size="12">C square</text>
+<circle cx="419.0" cy="465" r="9" fill="#c79c17"/>
+<text x="419.0" y="468" text-anchor="middle" font-size="9" style="fill:white">10</text>
+<text x="438.0" y="469" font-size="12">1/3 POWER</text>
+<circle cx="54.0" cy="499" r="9" fill="#c79c17"/>
+<text x="54.0" y="502" text-anchor="middle" font-size="9" style="fill:white">11</text>
+<text x="73.0" y="503" font-size="12">2/3 LINK</text>
+<circle cx="419.0" cy="499" r="9" fill="#c79c17"/>
+<text x="419.0" y="502" text-anchor="middle" font-size="9" style="fill:white">12</text>
+<text x="438.0" y="503" font-size="12">3/3 READY</text>
+</svg>

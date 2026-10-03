@@ -1,0 +1,495 @@
+version: 1
+map:
+  id: hangar_launch_code
+  title: Hangar Launch Code - revision 1
+  theme: noncombat_launch_signal_test
+  units: meters
+  origin_cm:
+  - 5400
+  - -14300
+  - 2314
+  size:
+  - 28
+  - 14
+  - 6
+  learning_objective: Follow a visible instruction sequence in order; check and retry
+    the current code when an input is wrong.
+  source_feature: specs/035-hangar-launch-code/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- launch_bay
+zones:
+- id: arrival
+  label: Walk in / out
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 10
+  - 14
+  - 6
+  purpose: Preserved west entrance; no locked exit.
+  parameters:
+    width_m: 3
+    access: Always open west route, no gate or new wall
+  devices: []
+  overlap_with: []
+  completion: Walk to Start Launch Test.
+  reset: Entrance stays open.
+- id: launch_bay
+  label: 3 codes / 3 beacons
+  pattern: shooting_gallery
+  position:
+  - 10
+  - 0
+  - 0
+  size:
+  - 18
+  - 14
+  - 6
+  purpose: Three stable symbol pads, visible code strip, one beacon per completed
+    code.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - controller
+  - targets
+  - blaster
+  - board
+  - hud
+  - controls
+  - control_labels
+  - lights
+  - finale
+  - round_settings
+  overlap_with: []
+  completion: Enter A B C, then B A B C, then C A B A C. All beacons lit; Launch Ready.
+  reset: Wrong shot restarts current code; completed beacons retained. Replay/cancel/exit/respawn/disconnect/round
+    reset clear all local state.
+connections:
+- from: arrival
+  to: launch_bay
+  mode: walk
+  width: 3
+  points:
+  - - 2
+    - 9
+    - 0
+  - - 10
+    - 9
+    - 0
+  - - 14
+    - 9
+    - 0
+  - - 21
+    - 4
+    - 0
+  gate: always
+markers:
+- id: entry
+  kind: spawn
+  zone: arrival
+  label: Existing west walk-in; no new spawn
+  position:
+  - 2
+  - 9
+  - 0
+  source: Measured hangar west entry and clear entry ray; planning-measurements.md
+- id: exit
+  kind: exit
+  zone: arrival
+  label: Walk out any time
+  position:
+  - 2
+  - 6
+  - 0
+  source: Same preserved west entrance, not a teleporter
+- id: start
+  kind: checkpoint
+  zone: launch_bay
+  label: START / REPLAY
+  position:
+  - 13
+  - 6
+  - 1
+  source: Proposed dedicated button; plan.md
+- id: cancel
+  kind: exit
+  zone: launch_bay
+  label: CANCEL TEST
+  position:
+  - 13
+  - 3
+  - 1
+  source: Proposed owner-only release control; ordinary walk-out always open
+- id: stance
+  kind: weapon
+  zone: launch_bay
+  label: Suggested aim point; existing blaster
+  position:
+  - 21
+  - 4
+  - 0
+  source: Ground and sight traces; shared blaster already grants on join/spawn; no
+    new grant
+- id: code_board
+  kind: knowledge
+  zone: launch_bay
+  label: Visible code + next slot
+  position:
+  - 20
+  - 14
+  - 4.2
+  source: Proposed board; full code remains visible
+- id: pad_0
+  kind: target
+  zone: launch_bay
+  label: A circle
+  position:
+  - 15
+  - 12
+  - 1.7
+  target_id: 0
+  source: Proposed new assembly within measured clear sight fan; 1.5 m face
+- id: pad_1
+  kind: target
+  zone: launch_bay
+  label: B triangle
+  position:
+  - 20
+  - 12
+  - 1.7
+  target_id: 1
+  source: Proposed new assembly within measured clear sight fan; 1.5 m face
+- id: pad_2
+  kind: target
+  zone: launch_bay
+  label: C square
+  position:
+  - 25
+  - 12
+  - 1.7
+  target_id: 2
+  source: Proposed new assembly within measured clear sight fan; 1.5 m face
+- id: beacon_0
+  kind: reward
+  zone: launch_bay
+  label: 1/3 POWER
+  position:
+  - 16.5
+  - 14
+  - 2
+  source: Proposed customizable light; visual completion only, no Academy reward
+- id: beacon_1
+  kind: reward
+  zone: launch_bay
+  label: 2/3 LINK
+  position:
+  - 20
+  - 14
+  - 2
+  source: Proposed customizable light; visual completion only, no Academy reward
+- id: beacon_2
+  kind: reward
+  zone: launch_bay
+  label: 3/3 READY
+  position:
+  - 23.5
+  - 14
+  - 2
+  source: Proposed customizable light; visual completion only, no Academy reward
+devices:
+- id: controller
+  class: fn_shoreline_island_launch_sequence
+  count: 1
+  source: New focused adapter explicitly scoped in plan.md; not currently implemented
+  settings:
+    codes:
+    - A B C
+    - B A B C
+    - C A B A C
+    quiet_interval_seconds: 0.5
+    wrong_input: restart current code only
+    owner: one active player; other players spectate
+    bounds_world_cm:
+    - 6400
+    - 8200
+    - -14300
+    - -12900
+    - 2264
+    - 2914
+- id: targets
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Reuse current data_target source and existing ring/trigger assembly recipe;
+    create dedicated instances
+  settings:
+    ids:
+    - 0
+    - 1
+    - 2
+    objective: false
+    reward_value: 0
+    face_size_m: 1.5
+    stationary_y_facing: true
+    stationary_positive_y: false
+    supporting_devices: Each requires dedicated damage trigger, ring, label, VFX/audio
+      and hidden objective references per live schema; included in three assemblies,
+      not three actors total
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing live fn_shoreline_island_data_blaster; shared read-only dependency
+  settings:
+    reuse_only: true
+    new_instances: 0
+- id: board
+  class: billboard_device
+  count: 1
+  source: New hangar_launch_code_board
+  settings:
+    text: code, checked slots, next cursor; maximum three short lines
+- id: hud
+  class: hud_message_device
+  count: 1
+  source: New dedicated owner HUD
+  settings:
+    recipient: active owner
+    wrong_text: Order matters. Try this code again.
+- id: controls
+  class: button_device
+  count: 2
+  source: New hangar_launch_start and hangar_launch_cancel
+  settings:
+    instant: true
+    owner_only_during_run: true
+- id: control_labels
+  class: billboard_device
+  count: 2
+  source: New Start/Cancel instruction signs
+  settings:
+    text:
+    - START LAUNCH TEST / Shoot the code in order
+    - CANCEL TEST / Or walk out any time
+- id: lights
+  class: customizable_light_device
+  count: 3
+  source: New POWER/LINK/READY beacons
+  settings:
+    start_on: false
+    one_per_completed_code: true
+- id: finale
+  class: vfx_creator_device
+  count: 1
+  source: Existing native VFX device recipe, dedicated instance
+  settings:
+    duration_seconds: 1
+    noncombat: true
+- id: round_settings
+  class: round_settings_device
+  count: 1
+  source: Existing shared round settings resolved by live bindings before implementation
+  settings:
+    reuse_only: true
+    new_instances: 0
+stages:
+- id: approach
+  zone: arrival
+  purpose: Walk through existing west entrance
+  requires: []
+  active_targets: []
+  completion: Reach Start control; exit stays open.
+- id: start
+  zone: launch_bay
+  purpose: Owner presses Start; visible code 1
+  requires:
+  - approach
+  active_targets: []
+  completion: Claim owner; reset lights and slots, arm pads.
+- id: code_1_slot_1
+  zone: launch_bay
+  purpose: 'Code 1, slot 1/3: A'
+  requires:
+  - start
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_0
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_1_slot_2
+  zone: launch_bay
+  purpose: 'Code 1, slot 2/3: B'
+  requires:
+  - code_1_slot_1
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_1
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_1_slot_3
+  zone: launch_bay
+  purpose: 'Code 1, slot 3/3: C'
+  requires:
+  - code_1_slot_2
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_2
+  completion: Light beacon 1; hold 1 second. Show next code.
+- id: code_2_slot_1
+  zone: launch_bay
+  purpose: 'Code 2, slot 1/4: B'
+  requires:
+  - code_1_slot_3
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_1
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_2_slot_2
+  zone: launch_bay
+  purpose: 'Code 2, slot 2/4: A'
+  requires:
+  - code_2_slot_1
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_0
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_2_slot_3
+  zone: launch_bay
+  purpose: 'Code 2, slot 3/4: B'
+  requires:
+  - code_2_slot_2
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_1
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_2_slot_4
+  zone: launch_bay
+  purpose: 'Code 2, slot 4/4: C'
+  requires:
+  - code_2_slot_3
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_2
+  completion: Light beacon 2; hold 1 second. Show next code.
+- id: code_3_slot_1
+  zone: launch_bay
+  purpose: 'Code 3, slot 1/5: C'
+  requires:
+  - code_2_slot_4
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_2
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_3_slot_2
+  zone: launch_bay
+  purpose: 'Code 3, slot 2/5: A'
+  requires:
+  - code_3_slot_1
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_0
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_3_slot_3
+  zone: launch_bay
+  purpose: 'Code 3, slot 3/5: B'
+  requires:
+  - code_3_slot_2
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_1
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_3_slot_4
+  zone: launch_bay
+  purpose: 'Code 3, slot 4/5: A'
+  requires:
+  - code_3_slot_3
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_0
+  completion: Fill slot, require 0.5 seconds quiet; wrong input returns to this code
+    slot 1.
+- id: code_3_slot_5
+  zone: launch_bay
+  purpose: 'Code 3, slot 5/5: C'
+  requires:
+  - code_3_slot_4
+  active_targets:
+  - pad_0
+  - pad_1
+  - pad_2
+  success_target: pad_2
+  completion: Light beacon 3; hold 1 second. Sweep lights, burst, hold Launch Ready.
+- id: complete
+  zone: launch_bay
+  purpose: Launch Ready; replay or walk out
+  requires:
+  - code_3_slot_5
+  active_targets: []
+  completion: Replay clears all local state; no badge or energy change.
+assumptions:
+- id: measured_site
+  detail: Axis-aligned 28 x 14 m envelope inside existing rotated prefab; preserve
+    shell, stairs, toolbox and shelves.
+  status: resolved
+  evidence: evidence/planning-measurements.md; plan.md
+- id: adapter
+  detail: Existing gallery provides agent-attributed inputs and feedback. Ordered-code
+    controller is explicitly required new implementation, not a claim of existing
+    arbitrary pattern support.
+  status: resolved
+  evidence: plan.md; Content/fn_shoreline_island_data_target.verse; Content/fn_shoreline_island_pattern_line.verse
+- id: stage_model
+  detail: Map lists linear success path; spec R-03/R-06/R-07 defines retries and lifecycle.
+    No branching route or target state-machine schema extension is implied.
+  status: resolved
+  evidence: spec.md AC-03..08
+- id: reward_scope
+  detail: Optional hangar test only; visible beacons and finale, no new progression
+    dependency or Academy badge.
+  status: resolved
+  evidence: spec.md R-04/R-07
+- id: physical_checks
+  detail: Seven floor traces and three sight samples support anchors. Swept route
+    collision, labels and native transforms remain explicit implementation acceptance
+    checks.
+  status: resolved
+  evidence: evidence/planning-measurements.md; AC-01/09
+- id: approval
+  detail: This is an unapproved proposal; no approval.yaml created. Human review is
+    next.
+  status: resolved
+  evidence: tasks.md P-04

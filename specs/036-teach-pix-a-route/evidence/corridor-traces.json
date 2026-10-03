@@ -1,0 +1,495 @@
+{
+  "date": "2026-10-03",
+  "method": "Sequential SceneTools.trace_world route samples at three heights; no swept capsule proof",
+  "segments": [
+    {
+      "start": [
+        6600,
+        -14200,
+        2364
+      ],
+      "end": [
+        8000,
+        -14200,
+        2364
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -14200,
+        2514
+      ],
+      "end": [
+        8000,
+        -14200,
+        2514
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -14200,
+        2714
+      ],
+      "end": [
+        8000,
+        -14200,
+        2714
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -13000,
+        2364
+      ],
+      "end": [
+        8000,
+        -13000,
+        2364
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -13000,
+        2514
+      ],
+      "end": [
+        8000,
+        -13000,
+        2514
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -13000,
+        2714
+      ],
+      "end": [
+        8000,
+        -13000,
+        2714
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6650,
+        -14200,
+        2364
+      ],
+      "end": [
+        6650,
+        -13000,
+        2364
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6650,
+        -14200,
+        2514
+      ],
+      "end": [
+        6650,
+        -13000,
+        2514
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6650,
+        -14200,
+        2714
+      ],
+      "end": [
+        6650,
+        -13000,
+        2714
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        7950,
+        -14200,
+        2364
+      ],
+      "end": [
+        7950,
+        -13000,
+        2364
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        7950,
+        -14200,
+        2514
+      ],
+      "end": [
+        7950,
+        -13000,
+        2514
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        7950,
+        -14200,
+        2714
+      ],
+      "end": [
+        7950,
+        -13000,
+        2714
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -13600,
+        2364
+      ],
+      "end": [
+        8000,
+        -13600,
+        2364
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -13600,
+        2514
+      ],
+      "end": [
+        8000,
+        -13600,
+        2514
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        6600,
+        -13600,
+        2714
+      ],
+      "end": [
+        8000,
+        -13600,
+        2714
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        5600,
+        -13600,
+        2364
+      ],
+      "end": [
+        6650,
+        -13600,
+        2364
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        5600,
+        -13600,
+        2514
+      ],
+      "end": [
+        6650,
+        -13600,
+        2514
+      ],
+      "result": {
+        "returnValue": null
+      }
+    },
+    {
+      "start": [
+        5600,
+        -13600,
+        2714
+      ],
+      "end": [
+        6650,
+        -13600,
+        2714
+      ],
+      "result": {
+        "returnValue": null
+      }
+    }
+  ],
+  "overlap_query": [
+    {
+      "guid": "0ECA96D3-404E-5DF5-0BD9-FC95DCC2C282",
+      "nativeClass": {
+        "refPath": "/Script/Engine.LevelBounds"
+      },
+      "class": {
+        "refPath": "/Script/Engine.LevelBounds"
+      },
+      "name": "LevelBounds_0",
+      "label": "LevelBounds",
+      "bounds": {
+        "min": {
+          "x": -4057600.0010681152,
+          "y": -4057600.0010681152,
+          "z": -57082.18910217285
+        },
+        "max": {
+          "x": 4057600.0021362305,
+          "y": 4057600.0021362305,
+          "z": 102241.787109625
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.LevelBounds_0",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "DDD70598-4F4F-A91A-18EF-96BEB878DF5B",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5080103_1720675021",
+      "label": "event_station_1_replay_button",
+      "bounds": {
+        "min": {
+          "x": -18500,
+          "y": -23599.99885559082,
+          "z": -12497
+        },
+        "max": {
+          "x": 11500,
+          "y": 6400.00114440918,
+          "z": 17503
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1720675021",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "6E80A199-4837-B3F9-6ECA-9A83E77DB4F1",
+      "nativeClass": {
+        "refPath": "/Script/Water.WaterZone"
+      },
+      "class": {
+        "refPath": "/Script/Water.WaterZone"
+      },
+      "name": "WaterZone_0",
+      "label": "WaterZone",
+      "bounds": {
+        "min": {
+          "x": -4057600.0010681152,
+          "y": -4057600.0010681152,
+          "z": -57082.18910217285
+        },
+        "max": {
+          "x": 4057600.0021362305,
+          "y": 4057600.0021362305,
+          "z": 58117.81410217285
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.WaterZone_0",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "4D498184-40F8-7E63-6401-368CB951DC83",
+      "nativeClass": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "class": {
+        "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+      },
+      "name": "Device_Button_V2_C_UAID_E89C2592D1B5080103_1721691023",
+      "label": "event_station_1_return_button",
+      "bounds": {
+        "min": {
+          "x": -17900,
+          "y": -23599.99885559082,
+          "z": -12497
+        },
+        "max": {
+          "x": 12100,
+          "y": 6400.00114440918,
+          "z": 17503
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1721691023",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "7490F5D7-49DD-E5AA-8CDE-899068124466",
+      "nativeClass": {
+        "refPath": "/Script/Engine.Actor"
+      },
+      "class": {
+        "refPath": "/Script/Engine.Actor"
+      },
+      "name": "Actor_UAID_E89C2592D1B5C30303_2042537342",
+      "label": "campus_main_promenade",
+      "bounds": {
+        "min": {
+          "x": -15200,
+          "y": -18000,
+          "z": 2272
+        },
+        "max": {
+          "x": 7200,
+          "y": 3515,
+          "z": 2580
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C30303_2042537342",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "3230AF31-4BB2-D79C-50CF-A8A4C79C0EE1",
+      "nativeClass": {
+        "refPath": "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch5/DSA_UEFN_Ch5S1.DSA_UEFN_Ch5S1_C"
+      },
+      "class": {
+        "refPath": "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch5/DSA_UEFN_Ch5S1.DSA_UEFN_Ch5S1_C"
+      },
+      "name": "DSA_UEFN_Ch5S1_C_0",
+      "label": "DSA_UEFN_Ch5S1_C0",
+      "bounds": {
+        "min": {
+          "x": -3607798.681640625,
+          "y": -3607798.828125,
+          "z": -250001000
+        },
+        "max": {
+          "x": 3607798.974609375,
+          "y": 3607798.828125,
+          "z": 249999000
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.DSA_UEFN_Ch5S1_C_0",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    {
+      "guid": "68E525A0-4128-850F-C46F-E685B8786C98",
+      "nativeClass": {
+        "refPath": "/Script/SmartObjectsModule.SmartObjectSubsystemRenderingActor"
+      },
+      "class": {
+        "refPath": "/Script/SmartObjectsModule.SmartObjectSubsystemRenderingActor"
+      },
+      "name": "SmartObjectSubsystemRenderingActor_0",
+      "label": "SmartObjectSubsystemRenderingActor0",
+      "bounds": {
+        "min": {
+          "x": -2387028.126218795,
+          "y": -2289176.1244085194,
+          "z": -57082.18910217285
+        },
+        "max": {
+          "x": 2816195.5757518904,
+          "y": 3484926.197275123,
+          "z": 102241.787109625
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.SmartObjectSubsystemRenderingActor_0",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    }
+  ]
+}

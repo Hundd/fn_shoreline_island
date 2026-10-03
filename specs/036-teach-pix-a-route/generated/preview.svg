@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 623" role="img" aria-label="Teach Pix a Route - revision 1 blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="623" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Teach Pix a Route - revision 1 — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="145" y="65" width="180" height="160" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="152" y="84">Walk / test / revise</text>
+<text font-size="11" x="152" y="100">18 × 16m</text>
+<rect x="45" y="65" width="100" height="160" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">Walk in / out</text>
+<text font-size="11" x="52" y="100">10 × 16m</text>
+<polyline points="65,145 145,145 170.0,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → playground / always</title></polyline>
+<g><title>Existing walk-in; no new spawn; XYZ [2, 8, 0]; Live west approach trace; no teleport or spawn added</title><circle cx="65" cy="145" r="8" fill="#42a86b" stroke="white"/>
+<text x="65" y="148" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Walk out any time; XYZ [2, 4, 0]; Preserved ordinary west entrance</title><circle cx="65" cy="105" r="8" fill="#526476" stroke="white"/>
+<text x="65" y="108" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>HOME - begin demonstration; XYZ [12.5, 8, 0]; Proposed pad at world (6650,-13600), measured floor; not respawn checkpoint</title><circle cx="170.0" cy="145" r="8" fill="#db8b29" stroke="white"/>
+<text x="170.0" y="148" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>LOAD - actual arrival required; XYZ [25.5, 8, 0]; Proposed loading pad (7950,-13600); robot+crate readback gate</title><circle cx="300.0" cy="145" r="8" fill="#c79c17" stroke="white"/>
+<text x="300.0" y="148" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>SHOW ROUTE / SHOW AGAIN; XYZ [11, 7, 1]; Proposed dedicated control; input is player walking, not this button selecting a route</title><circle cx="155" cy="135" r="8" fill="#329bd0" stroke="white"/>
+<text x="155" y="138" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>TRY MY ROUTE / TRY OLD ROUTE; XYZ [26.5, 7, 1]; Proposed Test control plays recorded data; Replay after completion</title><circle cx="310.0" cy="135" r="8" fill="#329bd0" stroke="white"/>
+<text x="310.0" y="138" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>CANCEL; XYZ [11, 4.5, 1]; Owner-only release/reset control; ordinary exit always available</title><circle cx="155" cy="110.0" r="8" fill="#526476" stroke="white"/>
+<text x="155" y="113.0" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>3x6m SAFETY CLOSURE after delivery1; XYZ [19, 8, 0.1]; World rectangle X7150..7450 Y-13900..-13300; geometry check inflated 0.75m; hologram non-colliding</title><circle cx="235" cy="145" r="8" fill="#329bd0" stroke="white"/>
+<text x="235" y="148" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>Lower bypass example - any safe path; XYZ [19, 2.5, 0]; Measured corridor near Y-14150; example only, not a waypoint imposed on player</title><circle cx="235" cy="90.0" r="8" fill="#db8b29" stroke="white"/>
+<text x="235" y="93.0" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>Upper bypass example - equally valid; XYZ [19, 13.5, 0]; Measured corridor near Y-13050; example only, no forced routing</title><circle cx="235" cy="200.0" r="8" fill="#db8b29" stroke="white"/>
+<text x="235" y="203.0" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>Instructions / stop reason / recap; XYZ [14, 15, 2.8]; Proposed board; owner HUD repeats current short action</title><circle cx="185" cy="215" r="8" fill="#329bd0" stroke="white"/>
+<text x="185" y="218" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>Delivery 1 light; XYZ [23, 15, 2]; Proposed indicator; no Academy badge or energy</title><circle cx="275" cy="215" r="8" fill="#c79c17" stroke="white"/>
+<text x="275" y="218" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<g><title>Delivery 2 light; XYZ [25.5, 15, 2]; Proposed indicator; verified second arrival only</title><circle cx="300.0" cy="215" r="8" fill="#c79c17" stroke="white"/>
+<text x="300.0" y="218" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
+<path d="M45,260 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="265" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+<text x="45" y="303" font-size="16" font-weight="bold">Map legend</text>
+<text x="45" y="325" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
+<circle cx="54.0" cy="349" r="9" fill="#42a86b"/>
+<text x="54.0" y="352" text-anchor="middle" font-size="9" style="fill:white">1</text>
+<text x="73.0" y="353" font-size="12">Existing walk-in; no new spawn</text>
+<circle cx="419.0" cy="349" r="9" fill="#526476"/>
+<text x="419.0" y="352" text-anchor="middle" font-size="9" style="fill:white">2</text>
+<text x="438.0" y="353" font-size="12">Walk out any time</text>
+<circle cx="54.0" cy="383" r="9" fill="#db8b29"/>
+<text x="54.0" y="386" text-anchor="middle" font-size="9" style="fill:white">3</text>
+<text x="73.0" y="387" font-size="12">HOME - begin demonstration</text>
+<circle cx="419.0" cy="383" r="9" fill="#c79c17"/>
+<text x="419.0" y="386" text-anchor="middle" font-size="9" style="fill:white">4</text>
+<text x="438.0" y="387" font-size="12">LOAD - actual arrival required</text>
+<circle cx="54.0" cy="417" r="9" fill="#329bd0"/>
+<text x="54.0" y="420" text-anchor="middle" font-size="9" style="fill:white">5</text>
+<text x="73.0" y="421" font-size="12">SHOW ROUTE / SHOW AGAIN</text>
+<circle cx="419.0" cy="417" r="9" fill="#329bd0"/>
+<text x="419.0" y="420" text-anchor="middle" font-size="9" style="fill:white">6</text>
+<text x="438.0" y="421" font-size="12">TRY MY ROUTE / TRY OLD ROUTE</text>
+<circle cx="54.0" cy="451" r="9" fill="#526476"/>
+<text x="54.0" y="454" text-anchor="middle" font-size="9" style="fill:white">7</text>
+<text x="73.0" y="455" font-size="12">CANCEL</text>
+<circle cx="419.0" cy="451" r="9" fill="#329bd0"/>
+<text x="419.0" y="454" text-anchor="middle" font-size="9" style="fill:white">8</text>
+<text x="438.0" y="455" font-size="12">3x6m SAFETY CLOSURE after delivery1</text>
+<circle cx="54.0" cy="485" r="9" fill="#db8b29"/>
+<text x="54.0" y="488" text-anchor="middle" font-size="9" style="fill:white">9</text>
+<text x="73.0" y="489" font-size="12">Lower bypass example - any safe path</text>
+<circle cx="419.0" cy="485" r="9" fill="#db8b29"/>
+<text x="419.0" y="488" text-anchor="middle" font-size="9" style="fill:white">10</text>
+<text x="438.0" y="489" font-size="12">Upper bypass example - equally valid</text>
+<circle cx="54.0" cy="519" r="9" fill="#329bd0"/>
+<text x="54.0" y="522" text-anchor="middle" font-size="9" style="fill:white">11</text>
+<text x="73.0" y="523" font-size="12">Instructions / stop reason / recap</text>
+<circle cx="419.0" cy="519" r="9" fill="#c79c17"/>
+<text x="419.0" y="522" text-anchor="middle" font-size="9" style="fill:white">12</text>
+<text x="438.0" y="523" font-size="12">Delivery 1 light</text>
+<circle cx="54.0" cy="553" r="9" fill="#c79c17"/>
+<text x="54.0" y="556" text-anchor="middle" font-size="9" style="fill:white">13</text>
+<text x="73.0" y="557" font-size="12">Delivery 2 light</text>
+</svg>

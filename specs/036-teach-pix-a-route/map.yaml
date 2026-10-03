@@ -1,0 +1,449 @@
+version: 1
+map:
+  id: teach_pix_a_route
+  title: Teach Pix a Route - revision 1
+  theme: hangar_robot_training_playground
+  units: meters
+  origin_cm:
+  - 5400
+  - -14400
+  - 2314
+  size:
+  - 28
+  - 16
+  - 6
+  learning_objective: Demonstrate a physical route, test a copying robot, and improve
+    the example when the bay changes.
+  source_feature: specs/036-teach-pix-a-route/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- playground
+zones:
+- id: arrival
+  label: Walk in / out
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 10
+  - 16
+  - 6
+  purpose: Preserve west hangar entrance and exit.
+  parameters:
+    width_m: 3
+    access: Always open west route; no new wall or gate
+  devices: []
+  overlap_with: []
+  completion: Reach home pad; optional activity, no prerequisite.
+  reset: Exit remains open.
+- id: playground
+  label: Walk / test / revise
+  pattern: corridor
+  position:
+  - 10
+  - 0
+  - 0
+  size:
+  - 18
+  - 16
+  - 6
+  purpose: Actual walked waypoints become the robot route; two deliveries with a changed
+    bay.
+  parameters:
+    width_m: 3
+    access: First demonstration in broad 6m practice strip; then full floor with two
+      5m bypasses. Closure only blocks robot by explicit geometry, never exit.
+  devices:
+  - controller
+  - robot
+  - crate
+  - pads
+  - footprints
+  - controls
+  - control_labels
+  - board
+  - hud
+  - lights
+  - closure
+  - outline
+  - round_settings
+  overlap_with: []
+  completion: Two real robot-and-crate arrivals; old route tested and stopped at closure
+    before revision.
+  reset: Rerecord preserves delivery1; Cancel/Replay/departure/respawn/disconnect/round
+    reset clears all local state and cancels stale playback.
+connections:
+- from: arrival
+  to: playground
+  mode: walk
+  width: 3
+  points:
+  - - 2
+    - 8
+    - 0
+  - - 10
+    - 8
+    - 0
+  - - 12.5
+    - 8
+    - 0
+  gate: always
+markers:
+- id: arrival
+  kind: spawn
+  zone: arrival
+  label: Existing walk-in; no new spawn
+  position:
+  - 2
+  - 8
+  - 0
+  source: Live west approach trace; no teleport or spawn added
+- id: exit
+  kind: exit
+  zone: arrival
+  label: Walk out any time
+  position:
+  - 2
+  - 4
+  - 0
+  source: Preserved ordinary west entrance
+- id: home
+  kind: checkpoint
+  zone: playground
+  label: HOME - begin demonstration
+  position:
+  - 12.5
+  - 8
+  - 0
+  source: Proposed pad at world (6650,-13600), measured floor; not respawn checkpoint
+- id: load
+  kind: reward
+  zone: playground
+  label: LOAD - actual arrival required
+  position:
+  - 25.5
+  - 8
+  - 0
+  source: Proposed loading pad (7950,-13600); robot+crate readback gate
+- id: home_control
+  kind: knowledge
+  zone: playground
+  label: SHOW ROUTE / SHOW AGAIN
+  position:
+  - 11
+  - 7
+  - 1
+  source: Proposed dedicated control; input is player walking, not this button selecting
+    a route
+- id: test
+  kind: knowledge
+  zone: playground
+  label: TRY MY ROUTE / TRY OLD ROUTE
+  position:
+  - 26.5
+  - 7
+  - 1
+  source: Proposed Test control plays recorded data; Replay after completion
+- id: cancel
+  kind: exit
+  zone: playground
+  label: CANCEL
+  position:
+  - 11
+  - 4.5
+  - 1
+  source: Owner-only release/reset control; ordinary exit always available
+- id: closure
+  kind: knowledge
+  zone: playground
+  label: 3x6m SAFETY CLOSURE after delivery1
+  position:
+  - 19
+  - 8
+  - 0.1
+  source: World rectangle X7150..7450 Y-13900..-13300; geometry check inflated 0.75m;
+    hologram non-colliding
+- id: lower
+  kind: checkpoint
+  zone: playground
+  label: Lower bypass example - any safe path
+  position:
+  - 19
+  - 2.5
+  - 0
+  source: Measured corridor near Y-14150; example only, not a waypoint imposed on
+    player
+- id: upper
+  kind: checkpoint
+  zone: playground
+  label: Upper bypass example - equally valid
+  position:
+  - 19
+  - 13.5
+  - 0
+  source: Measured corridor near Y-13050; example only, no forced routing
+- id: board
+  kind: knowledge
+  zone: playground
+  label: Instructions / stop reason / recap
+  position:
+  - 14
+  - 15
+  - 2.8
+  source: Proposed board; owner HUD repeats current short action
+- id: delivery1
+  kind: reward
+  zone: playground
+  label: Delivery 1 light
+  position:
+  - 23
+  - 15
+  - 2
+  source: Proposed indicator; no Academy badge or energy
+- id: delivery2
+  kind: reward
+  zone: playground
+  label: Delivery 2 light
+  position:
+  - 25.5
+  - 15
+  - 2
+  source: Proposed indicator; verified second arrival only
+devices:
+- id: controller
+  class: fn_shoreline_island_route_demonstration
+  count: 1
+  source: New bounded recorder/playback adapter explicitly scoped in plan.md; not
+    shipped
+  settings:
+    sample_hz: 10
+    spacing_m: 0.5
+    corner_degrees: 20
+    corner_min_travel_m: 0.1
+    max_points: 128
+    max_travel_m: 60
+    playback_m_per_s: 2
+    frame_seconds: 0.05
+    geometry_inset_m: 0.75
+    arrival_tolerance_cm: 5
+    first_strip_world_cm:
+    - 6400
+    - 8200
+    - -13900
+    - -13300
+    playground_world_cm:
+    - 6400
+    - 8200
+    - -14400
+    - -12800
+    closure_world_cm:
+    - 7150
+    - 7450
+    - -13900
+    - -13300
+    recording: Actual grounded owner XY; no fixed-route snapping; validate observations
+      and retained chords
+    stop: Before inflated unsafe boundary; highlight segment; preserve first delivery
+    success: Actual correct robot and crate transforms, valid route, verified deposit
+    combined_circle_diameter_m: 1.2
+- id: robot
+  class: creative_prop
+  count: 1
+  source: New dedicated copy of prompt_workshop_pix visual recipe; actor located live
+  settings:
+    combined_footprint_max_m: 1.2
+    collision: false
+    movement: Cancellable synchronous TeleportTo frames; turn in place, no pathfinding
+    envelope: Robot and carried crate fit diameter1.2m circle at every yaw
+- id: crate
+  class: creative_prop
+  count: 1
+  source: New dedicated cube crate using existing project materials
+  settings:
+    size_m: 0.4
+    collision: false
+    carried: Above robot inside validated combined footprint; actual identity/position
+      checked
+- id: pads
+  class: creative_prop
+  count: 2
+  source: New primitive floor home/load markers, not gameplay respawn devices
+  settings:
+    diameter_m: 2
+    collision: false
+    height: Flush over measured floor, no step
+- id: footprints
+  class: creative_prop
+  count: 128
+  source: Fixed new pool of flat footprint pairs with simple mesh components; hidden
+    when unused
+  settings:
+    length_m: 0.4
+    collision: false
+    dynamic_spawning: false
+    states: Recorded, current cursor, invalid X; distinguish without color alone
+- id: controls
+  class: button_device
+  count: 3
+  source: New dedicated Home, Test and Cancel controls
+  settings:
+    instant: true
+    owner_only_during_run: true
+    not_route_selection: true
+- id: control_labels
+  class: billboard_device
+  count: 3
+  source: New dedicated control labels
+  settings:
+    brief_text: true
+- id: board
+  class: billboard_device
+  count: 1
+  source: New main teaching board
+  settings:
+    text: Walk to Load. Pix copies your footprints. Test and improve.
+- id: hud
+  class: hud_message_device
+  count: 1
+  source: New owner-specific feedback
+  settings:
+    reason_on_failure: true
+    no_punitive_timer: true
+- id: lights
+  class: customizable_light_device
+  count: 2
+  source: New dedicated delivery indicators
+  settings:
+    initially_off: true
+    first_retained_on_rerecord: true
+    no_badge_award: true
+- id: closure
+  class: creative_prop
+  count: 3
+  source: New stripe/hologram floor rectangle plus two posts; existing primitive/material
+    recipe
+  settings:
+    extent_m:
+    - 3
+    - 6
+    collision: false
+    initially_hidden: true
+    appears: After first actual delivery; never on exit path
+- id: outline
+  class: creative_prop
+  count: 8
+  source: New four playground boundary strips plus four initial-strip/bypass indicator
+    strips
+  settings:
+    collision: false
+    purpose: Visible recording permission boundaries; bypasses brighten after closure
+- id: round_settings
+  class: round_settings_device
+  count: 1
+  source: Existing shared round-settings dependency, resolve native ref before binding
+  settings:
+    reuse_only: true
+    new_instances: 0
+stages:
+- id: approach
+  zone: arrival
+  purpose: Enter ordinary west approach
+  requires: []
+  active_targets: []
+  completion: Reach Home; no lock.
+- id: demonstrate
+  zone: playground
+  purpose: Walk real first path in broad practice strip
+  requires:
+  - approach
+  active_targets: []
+  completion: Grounded owner reaches Load; retained validated point array and footprints.
+- id: test_first
+  zone: playground
+  purpose: Test copied first path carrying crate
+  requires:
+  - demonstrate
+  active_targets: []
+  completion: Real robot/crate arrival and deposit; delivery1 light.
+- id: changed_bay
+  zone: playground
+  purpose: Closure appears; bypasses become available
+  requires:
+  - test_first
+  active_targets: []
+  completion: One-second New Delivery cue; robot and crate reset Home; original route
+    retained.
+- id: test_old
+  zone: playground
+  purpose: Test unchanged recorded path
+  requires:
+  - changed_bay
+  active_targets: []
+  completion: Stop before closure with crate; highlight unsafe segment and explain
+    changed bay.
+- id: revise
+  zone: playground
+  purpose: Walk a new route around either side
+  requires:
+  - test_old
+  active_targets: []
+  completion: Replace footprints with actual new path; preserve delivery1.
+- id: test_revision
+  zone: playground
+  purpose: Test the newly demonstrated path
+  requires:
+  - revise
+  active_targets: []
+  completion: Real robot/crate arrival and deposit through permitted space; delivery2
+    light.
+- id: complete
+  zone: playground
+  purpose: Hold recap; Replay or walk out
+  requires:
+  - test_revision
+  active_targets: []
+  completion: No badge/energy change; Replay resets complete activity.
+assumptions:
+- id: site
+  detail: Fresh 35 ground samples and 18 route rays support compact ground floor and
+    both bypasses; shell/furnishings untouched.
+  status: resolved
+  evidence: evidence/floor-traces.json; evidence/corridor-traces.json; 035/evidence/live-inspection.json
+- id: new_adapter
+  detail: Demonstration is a new bounded recorder with inspected supported APIs, explicit
+    segment math, limits and playback; no existing generic recorder is claimed.
+  status: resolved
+  evidence: plan.md runtime contract; evidence/feasibility.md
+- id: two_paths
+  detail: Initial six-meter strip allows different walked XY demonstrations. Closure
+    spans it; expanded floor supplies two five-meter physical bypasses. No route ID
+    substitutes for recording.
+  status: resolved
+  evidence: spec.md R-02/06; plan.md anchors
+- id: schema_limits
+  detail: Map v1 depicts one playground and linear teaching lifecycle. Bypass markers
+    are illustrative, not branching mission routes or imposed recorded waypoints.
+    Full segment contract is explicit in plan/settings.
+  status: resolved
+  evidence: plan.md; spec.md AC-02/05
+- id: assets
+  detail: Dedicated props use existing Pix/primitive/material construction; exact
+    refs and full transforms are implementation readback checks, not a request to
+    relocate current actors.
+  status: resolved
+  evidence: plan.md reuse section; live prompt_workshop_pix actor lookup
+- id: collision
+  detail: Runtime uses authored inset rectangle and inflated closure checks, not automatic
+    physics avoidance. Full swept playability and footprint fit require cooked acceptance.
+  status: resolved
+  evidence: spec.md R-04/09; AC-07/10
+- id: approval
+  detail: User selected the Producer direction. This later concrete revision is unapproved;
+    no approval.yaml is created.
+  status: resolved
+  evidence: spec.md status; tasks.md P-05
