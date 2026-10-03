@@ -46,6 +46,7 @@ Follow [docs/AI_MAP_WORKFLOW.md](docs/AI_MAP_WORKFLOW.md) for requests to build 
 
 Project-local roles use the existing skill mechanism. All agents should read the relevant file directly if their client does not auto-discover `.cline/skills/`:
 
+- Producer: `.agents/skills/uefn-producer/SKILL.md` (product direction and feature briefs upstream of planning)
 - Planner: `.cline/skills/map-planner/SKILL.md`
 - Reviewer: `.cline/skills/blockout-reviewer/SKILL.md`
 - Implementer: `.cline/skills/uefn-implementer/SKILL.md`

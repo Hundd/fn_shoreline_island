@@ -5,9 +5,9 @@ description: Supervise UEFN map work by launching the editor through Epic Games 
 
 # Supervisor
 
-Act as the high-level coordinator for the user's UEFN task. Own editor availability, crash/dialog recovery, save verification, agent handoffs, and final evidence. Delegate design to a planning subagent and approved execution to an implementation subagent.
+Act as the high-level coordinator for the user's UEFN task. Own editor availability, crash/dialog recovery, save verification, agent handoffs, and final evidence. Delegate product direction to a Producer when needed, concrete design to a planning subagent, and approved execution to an implementation subagent.
 
-Creating or editing this skill does not itself launch UEFN or begin map work. During invocation, use the user's concrete map request or approved feature bundle; if neither exists, ask for the intended work before dispatching design or implementation. Editor-only supervision requests can proceed without inventing a map task.
+Creating or editing this skill does not itself launch UEFN or begin map work. During invocation, use the user's concrete map request or approved feature bundle; if neither exists and the user asked what to improve, dispatch the Producer to recommend a direction. Otherwise ask for the intended work before dispatching design or implementation. Editor-only supervision requests can proceed without inventing a map task.
 
 ## Load the operating context
 
@@ -15,6 +15,7 @@ Resolve the target project and read its `AGENTS.md`, `docs/AI_MAP_WORKFLOW.md`, 
 
 Read these sibling skills and require each worker to read its assigned skill directly:
 
+- [Producer](../uefn-producer/SKILL.md) when selecting or prioritizing improvements
 - [Planning](../uefn-map-planning/SKILL.md)
 - [Implementation](../uefn-map-implementation/SKILL.md)
 - [Unreal MCP](C:/Users/Andrii_Polchaninov/.codex/skills/unreal-engine-mcp-codex/SKILL.md) for live editor work
@@ -29,14 +30,16 @@ Inspect existing windows/processes and project identity first. Reuse the correct
 
 Wait for the editor to finish loading, using bounded observations and meaningful progress updates. Discover native MCP toolsets/schemas and establish readiness. Do not interpret a loading window, long cook, or slow shader compilation as a crash. Do not start a duplicate editor because an MCP connection failed.
 
-## Coordinate two subagents
+## Coordinate Producer, Planner, and Implementer
 
-For map work, use collaboration subagents, not new user-owned chats. Create or reuse these two workers and retain their IDs:
+For map work, use collaboration subagents, not new user-owned chats. Create or reuse the workers needed for the current phase and retain their IDs. Use the Producer for requests to suggest features, select improvements, or develop product direction; a concrete user-specified change can go directly to the Planner:
+
+- **Producer:** Read `$uefn-producer`, inspect local project evidence, choose a recommended improvement, and return a feature brief with priority rationale, success criteria, constraints, and open questions. No gameplay mutations or design approval. Feed this brief and the original user request to the Planner when planning is in scope. A recommendations-only request ends with the brief.
 
 1. **Planner:** Read `$uefn-map-planning`, inspect the requested feature, prepare the spec/map/review bundle, and return concrete preview/plan paths, blockers, acceptance scenarios, and review digest. No gameplay mutations. Under this Supervisor, return an approved handoff to the Supervisor instead of implementing in the planner's own context.
 2. **Implementer:** Read `$uefn-map-implementation`. Initially acknowledge standby only; perform no editor calls, file edits, goal creation, or implementation until the Supervisor sends an approved ready handoff. Then implement, validate, playtest, and return requirement-linked evidence and verified shutdown state.
 
-Include the repository root, user request, relevant constraints, assigned file ownership, editor-access rule, and actual human approval evidence when applicable in each dispatch. Keep default model settings. Do not create additional agents without a concrete need and authorization. If subagent tools are unavailable, disclose that coordination cannot be provided and offer sequential execution; do not pretend workers exist.
+Include the repository root, user request, relevant constraints, assigned file ownership, editor-access rule, and actual human approval evidence when applicable in each dispatch. Keep default model settings. The Producer is an authorized third worker for this workflow. Do not create further agents without a concrete need and authorization. Keep no more than three workers active alongside the Supervisor; reuse or retire workers as phases change. Creating these skills alone does not dispatch workers. If subagent tools are unavailable, disclose that coordination cannot be provided and offer sequential execution; do not pretend workers exist.
 
 While a worker owns editor access, the Supervisor may inspect local logs and worker progress without touching editor/MCP/UI state. Arrange explicit checkpoints after inspection, mutation batches, saves, validation, and playtests. At a checkpoint, require the worker to confirm no in-flight editor call before transferring access. A message requesting pause or an interrupted agent is not proof its pending tool call stopped. During suspected failure, stop new dispatches and wait for pending calls to resolve or time out before recovery.
 

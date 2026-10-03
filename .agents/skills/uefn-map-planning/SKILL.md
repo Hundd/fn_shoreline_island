@@ -20,6 +20,10 @@ Resolve paths below against the target repository root, not this skill directory
 
 Use the project-local roles by reading `.cline/skills/map-planner/SKILL.md` and `.cline/skills/blockout-reviewer/SKILL.md`. These are workflow roles, not instructions to spawn agents. If required workflow files are missing, report the missing prerequisites rather than inventing a compatible schema or approval process.
 
+## Producer input
+
+When a Producer brief is supplied, read it alongside the original user request and current evidence. Carry its player problem, learning goal, scope, and success criteria into the numbered feature spec. Check feasibility and resolve assumptions through inspection. Return changes that materially alter the intended experience to the Producer or Supervisor. A brief is input to planning, not an approved design or a substitute for the review bundle.
+
 ## Prepare the concrete design
 
 1. Inspect the existing mission, relevant Verse, reusable devices, assets, bindings, and latest evidence. Preserve working functionality and the user's learning intent.
