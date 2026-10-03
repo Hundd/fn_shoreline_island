@@ -1,0 +1,67 @@
+*** Begin Patch
+*** Update File: C:/labs/fn_shoreline_island/Content/fn_shoreline_island_bot_station.verse
+@@
+     var rescue_status:string = "Walk to Dispatch. Return is always available."
++    var rescue_fixture_displaced:logic = false
+     rescue_text<localizes>(value:string):message = "{value}"
+@@
+         for (index -> target : rescue_targets):
+             spawn { rescue_listen(target, index) }
+         rescue_reset()
++        spawn { rescue_acceptance_fixture() }
+         rescue_monitor()
+ 
++    # TEMPORARY ACCEPTANCE FIXTURE: one initial Dispatch setup position, then seven prerequisites.
++    rescue_acceptance_fixture()<suspends>:void =
++        Sleep(3.0)
++        for (p : GetPlayspace().GetPlayers(), c := p.GetFortCharacter[]):
++            if (c.TeleportTo[vector3{X := -4400.0, Y := -13500.0, Z := 2500.0}, MakeRotationFromYawPitchRollDegrees(-90.0, -5.0, 0.0)]) {}
++            Print("RESCUE FIXTURE: positioned tester once at Dispatch, seven-module gate remains locked")
++        Sleep(7.0)
++        for (p : GetPlayspace().GetPlayers()):
++            academy_journal.garden.ensure_player(p)
++            if (s := academy_journal.garden.player_states[p]):
++                set s.badge_earned = true
++            l := academy_journal.lagoon.ensure_player(p)
++            set l.badge_earned = true
++            academy_journal.garden.badge_tracker.SetValue(p, 1)
++            academy_journal.lagoon.badge_tracker.SetValue(p, 1)
++            for (i : array{0, 1, 2, 3, 5}, badge := academy_journal.later_badge_trackers[i]):
++                badge.SetValue(p, 1)
++            Print("RESCUE FIXTURE: seeded exactly seven prerequisite backing states; Agent badge still zero")
++        var last_phase:int = -9
++        loop:
++            Sleep(1.0)
++            if (last_phase <> rescue_phase):
++                set last_phase = rescue_phase
++                for (p : GetPlayspace().GetPlayers(), s := progress.states[p]):
++                    Print("RESCUE FIXTURE: phase={rescue_phase} owner_station={s.station_id} badge={progress.badge_tracker.GetValue(p)} robot={robot.GetTransform().Translation} medical={seed.GetTransform().Translation}")
++
+     rescue_valid_configuration()<transacts><decides>:void =
+@@
+         set rescue_delivered = false
+         set rescue_carrying = false
++        set rescue_fixture_displaced = false
+         set rescue_hint_shown = false
+@@
+             feedback.Show(input_agent, rescue_text(rescue_status), ?DisplayTime := 4.0)
+             Print("RESCUE: wrong phase={expected} target={index}; no credit")
++            # TEMPORARY AC11 fixture: the player's wrong C shot displaces the original Medical prop.
++            if (expected = 4, index = 8, rescue_delivered?):
++                if (seed.TeleportTo[seed_home]):
++                    set rescue_fixture_displaced = true
++                    Print("RESCUE FIXTURE: Medical displaced home after wrong C; next B must reject")
+             Sleep(1.0)
+@@
+                 set ok = false
+                 set rescue_status = "Evidence does not match. Medical must really be at the lab."
+                 Print("RESCUE: physical verification REJECT; no badge")
++                # TEMPORARY AC11 fixture: restore only after the falsified B rejection.
++                if (rescue_fixture_displaced?):
++                    var restored:transform = seed_home
++                    set restored.Translation = rescue_drop
++                    if (seed.TeleportTo[restored]):
++                        set rescue_fixture_displaced = false
++                        Print("RESCUE FIXTURE: original Medical restored at lab for fresh B retry")
+         if (not rescue_run_valid[token]):
+*** End Patch

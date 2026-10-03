@@ -1,6 +1,6 @@
 # Tasks
 
-Planning and editor implementation are complete; cooked gameplay acceptance remains in progress. Evidence: approval.yaml, checkpoint-paths.json, cleanup-executed.json, target-assemblies.json, scene-setup.json, final-bindings.json and protected-readback.json in this feature. BuildAll returned no diagnostics after final scene configuration. The temporary acceptance fixture must be removed before final build/cook.
+Planning and editor implementation are complete; cooked gameplay acceptance remains in progress. Evidence: approval.yaml, checkpoint-paths.json, cleanup-executed.json, target-assemblies.json, scene-setup.json, final-bindings.json and protected-readback.json in this feature. All temporary acceptance fixtures were removed on 2026-10-03, followed by successful production Verse build, Validate Project and full recook. The game is stopped and UEFN remains open/saved. Final lab-sign placement, Replay/Return and the remaining acceptance scenarios in evidence/qa-report.md are still unverified.
 
 - [x] T-01 (R-01): Reconcile measured floor/access inventory, offline blockout and review; obtain actual human approval of the current digest.
 - [x] T-02 (R-01/07): After readiness, checkpoint saved state and record an exact keep/repurpose/remove ledger including fourth station and shared references.

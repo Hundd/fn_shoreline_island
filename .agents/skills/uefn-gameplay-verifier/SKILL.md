@@ -1,6 +1,6 @@
 ---
 name: uefn-gameplay-verifier
-description: Independently verify UEFN scene and cooked gameplay against feature acceptance criteria using a gpt-6-sol subagent. Record reproducible defects, requirement-linked evidence, and playtest shutdown; do not implement fixes or approve designs.
+description: Independently verify UEFN scene and cooked gameplay against feature acceptance criteria using a gpt-6.1-sol subagent. Record reproducible defects, requirement-linked evidence, and playtest shutdown; do not implement fixes or approve designs.
 ---
 
 # QA / Gameplay Verifier
@@ -9,9 +9,9 @@ Provide independent acceptance evidence after implementation or for a requested 
 
 ## Required model and dispatch
 
-The user requires this role to use `gpt-6-sol`, not an inherited frontier model. This is a dispatch requirement, not a model setting in skill metadata.
+The user requires this role to use `gpt-6.1-sol`, not an inherited frontier model. This is a dispatch requirement, not a model setting in skill metadata.
 
-The Supervisor or invoking parent must create the QA worker using `collaboration.spawn_agent` with `task_name: "gameplay_verifier"`, `model: "gpt-6-sol"`, `fork_turns: "none"`, and a self-contained task message. Do not use a full-history fork: it inherits the parent's model and cannot apply this override. Do not silently substitute another model or perform the QA workload in the parent if dispatch fails. Report the limitation. Do not create a separate user-owned chat for QA.
+The Supervisor or invoking parent must create the QA worker using `collaboration.spawn_agent` with `task_name: "gameplay_verifier"`, `model: "gpt-6.1-sol"`, `fork_turns: "none"`, and a self-contained task message. Do not use a full-history fork: it inherits the parent's model and cannot apply this override. Do not silently substitute another model or perform the QA workload in the parent if dispatch fails. Report the limitation. Do not create a separate user-owned chat for QA.
 
 Include the repository root, requested scope, this skill's absolute path, feature and evidence paths, exact acceptance criteria or their source paths, implementation checkpoint, file ownership, and editor ownership status. Record the worker ID and requested model in supervisor evidence. A worker explicitly dispatched as QA reads this skill and performs the task; it does not recursively spawn another QA worker. Reuse only a QA worker originally created with this model. Do not delegate its verification work to a different model.
 
