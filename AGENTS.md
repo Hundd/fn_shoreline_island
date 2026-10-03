@@ -49,8 +49,9 @@ Project-local roles use the existing skill mechanism. All agents should read the
 - Producer: `.agents/skills/uefn-producer/SKILL.md` (product direction and feature briefs upstream of planning)
 - Planner: `.cline/skills/map-planner/SKILL.md`
 - Reviewer: `.cline/skills/blockout-reviewer/SKILL.md`
-- Implementer: `.cline/skills/uefn-implementer/SKILL.md`
-- Verifier: `.cline/skills/uefn-verifier/SKILL.md`
+- Implementer: `.agents/skills/uefn-map-implementation/SKILL.md` (dispatch with `model: "gpt-6-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback); execution checks: `.cline/skills/uefn-implementer/SKILL.md`
+- QA / Gameplay Verifier: `.agents/skills/uefn-gameplay-verifier/SKILL.md` (dispatch with `model: "gpt-6-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback)
+- Verifier checks: `.cline/skills/uefn-verifier/SKILL.md`
 
 These are workflow roles, not a request to spawn parallel agents. Keep all editor calls serialized. For tooling/documentation-only tasks, task completion may use recorded offline command/test evidence; UEFN validation/playtest requirements still apply to gameplay changes. Existing MCP endpoints and client approval policies remain in force.
 

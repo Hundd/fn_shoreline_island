@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA / Gameplay Verifier"
+  short_description: "Verify island gameplay independently with GPT-6 Sol"
+  default_prompt: "Use $uefn-gameplay-verifier to dispatch a gpt-6-sol QA worker and verify the implemented feature against its acceptance criteria."

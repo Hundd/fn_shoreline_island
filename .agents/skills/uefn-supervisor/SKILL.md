@@ -1,11 +1,11 @@
 ---
 name: uefn-supervisor
-description: Supervise UEFN map work by launching the editor through Epic Games Launcher, handling editor health and saves, and coordinating dedicated planning and implementation subagents. Use for supervised UEFN workflows; preserve human design approval before implementation.
+description: Supervise UEFN map work by launching the editor through Epic Games Launcher, handling editor health and saves, and coordinating Producer, Planner, Implementer, and independent QA subagents. Use for supervised UEFN workflows; preserve human design approval before implementation.
 ---
 
 # Supervisor
 
-Act as the high-level coordinator for the user's UEFN task. Own editor availability, crash/dialog recovery, save verification, agent handoffs, and final evidence. Delegate product direction to a Producer when needed, concrete design to a planning subagent, and approved execution to an implementation subagent.
+Act as the high-level coordinator for the user's UEFN task. Own editor availability, crash/dialog recovery, save verification, agent handoffs, and final evidence. Delegate product direction to a Producer when needed, concrete design to a planning subagent, and approved execution to an implementation subagent, and independent acceptance verification to a GPT-6 Sol QA subagent.
 
 Creating or editing this skill does not itself launch UEFN or begin map work. During invocation, use the user's concrete map request or approved feature bundle; if neither exists and the user asked what to improve, dispatch the Producer to recommend a direction. Otherwise ask for the intended work before dispatching design or implementation. Editor-only supervision requests can proceed without inventing a map task.
 
@@ -18,6 +18,7 @@ Read these sibling skills and require each worker to read its assigned skill dir
 - [Producer](../uefn-producer/SKILL.md) when selecting or prioritizing improvements
 - [Planning](../uefn-map-planning/SKILL.md)
 - [Implementation](../uefn-map-implementation/SKILL.md)
+- [QA / Gameplay Verifier](../uefn-gameplay-verifier/SKILL.md)
 - [Unreal MCP](C:/Users/Andrii_Polchaninov/.codex/skills/unreal-engine-mcp-codex/SKILL.md) for live editor work
 
 Before Windows UI control, discover and read the installed `computer-use:computer-use` skill and its required guidance and confirmations references. Do not hardcode a plugin version, screen coordinates, launcher executable, launch URI, or MCP schema. Use available native tools and observe actual state. Report missing capabilities without claiming supervision is active.
@@ -30,16 +31,20 @@ Inspect existing windows/processes and project identity first. Reuse the correct
 
 Wait for the editor to finish loading, using bounded observations and meaningful progress updates. Discover native MCP toolsets/schemas and establish readiness. Do not interpret a loading window, long cook, or slow shader compilation as a crash. Do not start a duplicate editor because an MCP connection failed.
 
-## Coordinate Producer, Planner, and Implementer
+## Coordinate Producer, Planner, Implementer, and QA
 
 For map work, use collaboration subagents, not new user-owned chats. Create or reuse the workers needed for the current phase and retain their IDs. Use the Producer for requests to suggest features, select improvements, or develop product direction; a concrete user-specified change can go directly to the Planner:
 
 - **Producer:** Read `$uefn-producer`, inspect local project evidence, choose a recommended improvement, and return a feature brief with priority rationale, success criteria, constraints, and open questions. No gameplay mutations or design approval. Feed this brief and the original user request to the Planner when planning is in scope. A recommendations-only request ends with the brief.
 
-1. **Planner:** Read `$uefn-map-planning`, inspect the requested feature, prepare the spec/map/review bundle, and return concrete preview/plan paths, blockers, acceptance scenarios, and review digest. No gameplay mutations. Under this Supervisor, return an approved handoff to the Supervisor instead of implementing in the planner's own context.
-2. **Implementer:** Read `$uefn-map-implementation`. Initially acknowledge standby only; perform no editor calls, file edits, goal creation, or implementation until the Supervisor sends an approved ready handoff. Then implement, validate, playtest, and return requirement-linked evidence and verified shutdown state.
+- **Planner:** Read `$uefn-map-planning`, inspect the requested feature, prepare the spec/map/review bundle, and return concrete preview/plan paths, blockers, acceptance scenarios, and review digest. No gameplay mutations. Under this Supervisor, return an approved handoff to the Supervisor instead of implementing in the planner's own context.
+- **Implementer:** Read `$uefn-map-implementation`. Initially acknowledge standby only; perform no editor calls, file edits, goal creation, or implementation until the Supervisor sends an approved ready handoff. Then implement, validate, playtest, and return requirement-linked evidence and verified shutdown state.
 
-Include the repository root, user request, relevant constraints, assigned file ownership, editor-access rule, and actual human approval evidence when applicable in each dispatch. Keep default model settings. The Producer is an authorized third worker for this workflow. Do not create further agents without a concrete need and authorization. Keep no more than three workers active alongside the Supervisor; reuse or retire workers as phases change. Creating these skills alone does not dispatch workers. If subagent tools are unavailable, disclose that coordination cannot be provided and offer sequential execution; do not pretend workers exist.
+- **QA / Gameplay Verifier:** Read `$uefn-gameplay-verifier`. Independently verify the implemented feature, report requirement-linked acceptance evidence and reproducible defects, and confirm shutdown. Own QA evidence only; send fixes back to the Implementer. Dispatch after the Implementer has saved, stopped playtests, and released editor ownership.
+
+Include the repository root, user request, relevant constraints, assigned file ownership, editor-access rule, and actual human approval evidence when applicable in each dispatch. Keep default model settings for Producer and Planner. For Implementer, explicitly call `collaboration.spawn_agent` with `model: "gpt-6-sol"`, `fork_turns: "none"`, `task_name: "implementer"`, and a self-contained handoff including its skill path. Use the same explicit model even for initial standby dispatch. For QA, explicitly call `collaboration.spawn_agent` with `model: "gpt-6-sol"`, `fork_turns: "none"`, `task_name: "gameplay_verifier"`, and a self-contained handoff including the QA skill path. Never inherit the Supervisor's model for Implementer or QA or silently substitute a frontier model. If either dispatch is unavailable, report that role's work as pending/not run. Reuse only workers originally created with the required model; record worker ID and requested model in evidence. Replace existing Implementer/QA workers on another or unknown model only after pending calls finish and editor ownership is released; pass the saved checkpoint to the replacement.
+
+Producer, Planner, Implementer, and QA are authorized roles for this workflow. Do not create further agents without a concrete need and authorization. At most three workers can be active alongside the Supervisor, so schedule QA after an earlier worker finishes and capacity is available. If capacity is unavailable, wait or report the scheduling blocker; do not bypass QA's model requirement by running it in the parent. Creating these skills alone does not dispatch workers. If subagent tools are unavailable, disclose that coordination cannot be provided and offer sequential execution; do not pretend workers exist.
 
 While a worker owns editor access, the Supervisor may inspect local logs and worker progress without touching editor/MCP/UI state. Arrange explicit checkpoints after inspection, mutation batches, saves, validation, and playtests. At a checkpoint, require the worker to confirm no in-flight editor call before transferring access. A message requesting pause or an interrupted agent is not proof its pending tool call stopped. During suspected failure, stop new dispatches and wait for pending calls to resolve or time out before recovery.
 
@@ -52,6 +57,10 @@ Present the actual preview and implementation plan with unresolved decisions for
 Have the Planner record actual approval evidence and the current review-manifest digest, then run `python tools/map_workflow.py plan <map.yaml> --ready`. Send the Implementer the feature path, approved scope/revision, human evidence, digest, generated plan, acceptance scenarios, and current editor/checkpoint state only after readiness passes. The Implementer rechecks readiness and follows its skill's goal workflow; do not create competing goals in the Supervisor or standby worker.
 
 If implementation uncovers a material design change or missing mechanics, stop mutations, release editor ownership, and return the issue to the Planner. Regenerate and obtain renewed human review for changed scope/revision. Do not weaken readiness or approval checks to resume faster.
+
+## Independent QA handoff
+
+After implementation verification, pass QA the feature path, approved revision and digest, acceptance scenarios, saved checkpoint, implementation evidence, and known warnings. The Implementer's own checks remain required; QA independently tests acceptance without assuming those checks passed. Route defects to the Implementer and retest affected scenarios after fixes. Material design changes return to planning and human approval. Reconcile task completion against QA evidence; do not report overall supervised acceptance while required QA is failed, blocked, or not run.
 
 ## Dialogs, crashes, and saves
 
@@ -67,7 +76,7 @@ Require checkpoint saves before risky edits and after each verified mutation gro
 
 ## Finish or hand back
 
-Completion requires the approved changes, required Verse build/project validation/cooked playtests, evidence-linked tasks, and verified saves. Report unavailable checks as unfinished work. For tooling-only tasks, use offline evidence as allowed by project rules.
+Completion requires the approved changes, required Verse build/project validation/cooked playtests, evidence-linked tasks, independent QA acceptance, and verified saves. Report unavailable checks as unfinished work. For tooling-only tasks, use offline evidence as allowed by project rules.
 
 Before each final response, coordinate shutdown of any active UEFN/Fortnite playtest through supported End Game or Stop Session controls and verify the game is no longer running. Leave UEFN open. If verification or shutdown fails, state that limitation plainly. Do not mark implementation complete while required verification or shutdown is missing.
 
