@@ -221,8 +221,10 @@ fn_shoreline_island_data_target := class(creative_device):
         position := hit_surface.GetTransform().Translation
         for (effect : array{hit_flash, complete_burst, wrong_sparks}):
             var pose:transform = effect.GetTransform()
-            set pose.Translation = position
-            if (effect.TeleportTo[pose]) {}
+            # Optional VFX refs may be unset; their default transform is identity.
+            if (pose.Translation <> vector3{}):
+                set pose.Translation = position
+                if (effect.TeleportTo[pose]) {}
 
     # Track the hit surface so a moving answer keeps its ring and particles.
     # A slow, small scale pulse draws attention without obscuring its label.
@@ -260,8 +262,9 @@ fn_shoreline_island_data_target := class(creative_device):
                             set label_pose.Rotation = MakeRotationFromYawPitchRollDegrees(180.0, 0.0, 0.0)
             if (label_board.TeleportTo[label_pose]) {}
             var particle_pose:transform = active_particles.GetTransform()
-            set particle_pose.Translation = position
-            if (active_particles.TeleportTo[particle_pose]) {}
+            if (particle_pose.Translation <> vector3{}):
+                set particle_pose.Translation = position
+                if (active_particles.TeleportTo[particle_pose]) {}
             set pulse += direction * 0.05
             if (pulse >= 1.0):
                 set direction = -1.0

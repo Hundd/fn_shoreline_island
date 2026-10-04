@@ -1,0 +1,200 @@
+version: 1
+map:
+  id: single_player_academy
+  title: Solo Academy and eight-segment Pix Core
+  theme: ai_core_wayfinding
+  units: meters
+  origin_cm:
+  - -1700
+  - 0
+  - 2300
+  size:
+  - 45
+  - 30
+  - 15
+  learning_objective: One player restores eight abilities; every earned module visibly
+    restores its matching Core segment.
+  source_feature: specs/037-single-player-academy/spec.md
+  intent: propose_change
+  min_path_width: 2
+  position_tolerance: 0.25
+player_flow:
+- hub_core
+zones:
+- id: hub_core
+  label: Existing Hub Core and readable restoration display
+  pattern: reward_room
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 45
+  - 30
+  - 15
+  purpose: Eight labelled light segments on the clear west hub foundation; preserve
+    existing Core, greenhouse and walkways.
+  parameters:
+    badge: Existing eight unique module badges; no ninth
+    return_mode: Existing Hub and free exploration
+  devices:
+  - journal
+  - manager
+  - journal_open
+  - segment_labels
+  - segment_lights
+  overlap_with: []
+  completion: Full restoration derived from all eight authoritative badges.
+  reset: Local replay/respawn preserve; round reset clears presentation after managers.
+connections: []
+markers:
+- id: core_segment_1
+  kind: reward
+  zone: hub_core
+  label: 1 Prompt
+  position:
+  - 2.0
+  - 23
+  - 5.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_2
+  kind: reward
+  zone: hub_core
+  label: 2 Pattern
+  position:
+  - 5.0
+  - 23
+  - 5.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_3
+  kind: reward
+  zone: hub_core
+  label: 3 Classifier
+  position:
+  - 8.0
+  - 23
+  - 5.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_4
+  kind: reward
+  zone: hub_core
+  label: 4 Confidence
+  position:
+  - 11.0
+  - 23
+  - 5.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_5
+  kind: reward
+  zone: hub_core
+  label: 5 Error
+  position:
+  - 2.0
+  - 23
+  - 3.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_6
+  kind: reward
+  zone: hub_core
+  label: 6 Tools
+  position:
+  - 5.0
+  - 23
+  - 3.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_7
+  kind: reward
+  zone: hub_core
+  label: 7 Skills
+  position:
+  - 8.0
+  - 23
+  - 3.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+- id: core_segment_8
+  kind: reward
+  zone: hub_core
+  label: 8 Agent
+  position:
+  - 11.0
+  - 23
+  - 3.5
+  source: Relocated after actual cooked Core obstruction; saved native survey ../033-progress-and-navigation/evidence/core-relocation-survey.json.
+    World X columns -1500,-1200,-900,-600; Y2300; Z2850/2650; foundation top2400.
+    Fresh cooked readability still required.
+devices:
+- id: journal
+  class: fn_shoreline_island_academy_journal
+  count: 1
+  source: Existing shared journal; feature033 extensions
+  settings:
+    core: badge-derived lights plus explicit RESTORED/WAITING labels
+- id: manager
+  class: byte_island_game_manager
+  count: 1
+  source: Existing garden owner, do not duplicate
+  settings:
+    badges: unchanged
+- id: journal_open
+  class: button_device
+  count: 1
+  source: Existing academy_journal_open; preserve
+  settings:
+    action: Open journal
+- id: segment_labels
+  class: billboard_device
+  count: 8
+  source: Reuse the eight existing official catalog billboards; relocate only, no
+    duplicates.
+  settings:
+    textSize: 16
+    scale: 0.65
+    twoSided: true
+    border: false
+    text: Number, module, RESTORED or WAITING
+    rotation: pitch0 yaw180 roll0; full-transform facing trial, fresh cooked visibility
+      required
+- id: segment_lights
+  class: customizable_light_device
+  count: 8
+  source: Reuse eight existing catalog customizable lights; relocate only.
+  settings:
+    initial: 'off'
+    'on': authoritative matching badge
+    brightness: bounded readable local indicator, no map-wide glare
+    transforms: Matching label X, Y2340, label Z minus35; retain actual pitch0 yaw0
+      roll0, scale0.25; point lights are nondirectional
+stages:
+- id: restore_core
+  zone: hub_core
+  purpose: See each unique badge restore one labelled segment.
+  requires: []
+  active_targets: []
+  completion: All8 restored; Replay/Explore offered.
+assumptions:
+- id: a_01
+  detail: Existing native admission caps already one; explicitly disable social joining
+    and late active spawn.
+  status: resolved
+  evidence: Native settings snapshot in feature033 evidence; maxPlayers and queue/team/socialparty
+    caps all1; actual second-player attempts remain required release acceptance.
+- id: a_02
+  detail: World Core adapter added to existing journal; eight new labels/eight lights,
+    no additional badge owner.
+  status: resolved
+  evidence: Plan resolves relocated transforms using saved native inventory and observed
+    old-position obstruction. Bounds clearance is not fresh cooked visibility acceptance.

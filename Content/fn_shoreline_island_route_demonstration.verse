@@ -25,7 +25,12 @@ fn_shoreline_island_route_demonstration := class(creative_device):
     @editable
     cancel_button:button_device = button_device{}
     @editable
-    labels:[]billboard_device = array{billboard_device{}, billboard_device{}, billboard_device{}}
+    home_label:billboard_device = billboard_device{}
+    @editable
+    load_label:billboard_device = billboard_device{}
+    @editable
+    cancel_label:billboard_device = billboard_device{}
+    var control_labels:[]billboard_device = array{}
     @editable
     teaching_board:billboard_device = billboard_device{}
     @editable
@@ -75,8 +80,15 @@ fn_shoreline_island_route_demonstration := class(creative_device):
         Hide()
         if (not configured?):
             return
-        if (footprints.Length <> 128 or closure.Length <> 3 or outlines.Length <> 8 or labels.Length <> 3 or delivery_lights.Length <> 2):
+        set control_labels = array{home_label, load_label, cancel_label}
+        if (footprints.Length <> 128 or closure.Length <> 3 or outlines.Length <> 8 or control_labels.Length <> 3 or delivery_lights.Length <> 2):
             Print("HANGAR ROUTE: incomplete configuration")
+            return
+        bindings_ok := bindings_valid()
+        if (not bindings_ok?):
+            Print("HANGAR ROUTE: invalid actor binding; check controller configuration")
+            for (control : array{home_button, test_button, cancel_button}):
+                control.Disable()
             return
         set robot_home = robot.GetTransform()
         set crate_home = crate.GetTransform()
@@ -89,10 +101,23 @@ fn_shoreline_island_route_demonstration := class(creative_device):
         home_button.InteractedWithEvent.Subscribe(on_home)
         test_button.InteractedWithEvent.Subscribe(on_test)
         cancel_button.InteractedWithEvent.Subscribe(on_cancel)
+        Print("HANGAR ROUTE: controls subscribed")
         round_settings.RoundBeginEvent.Subscribe(on_round)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
         reset_all()
         monitor()
+
+    bindings_valid()<transacts>:logic =
+        if (not robot.IsValid[] or not crate.IsValid[]):
+            return false
+        for (prop : footprints + closure + outlines):
+            if (not prop.IsValid[]):
+                return false
+        for (label : control_labels):
+            position := label.GetTransform().Translation
+            if (position.X < 6400.0 or position.X > 8150.0 or position.Y < -14050.0 or position.Y > -13600.0 or position.Z < 2500.0 or position.Z > 2550.0):
+                return false
+        return true
 
     in_activity(input_agent:agent)<transacts><decides>:void =
         c := input_agent.GetFortCharacter[]
@@ -174,7 +199,7 @@ fn_shoreline_island_route_demonstration := class(creative_device):
         home_button.SetInteractionText(text(home_text))
         test_button.SetInteractionText(text(test_text))
         cancel_button.SetInteractionText(text("CANCEL"))
-        for (index -> label : labels):
+        for (index -> label : control_labels):
             var value:string = "CANCEL"
             if (index = 0):
                 set value = "HOME\n{home_text}"
@@ -189,7 +214,7 @@ fn_shoreline_island_route_demonstration := class(creative_device):
             mark.Hide()
         set cursor = -1
 
-    set_mark(index:int, kind:int):void =
+    set_mark(index:int, kind:int):logic =
         if (mark := footprints[index], p := points[index]):
             var pose:transform = transform{}
             set pose.Translation = p + vector3{Z := 3.0}
@@ -209,6 +234,9 @@ fn_shoreline_island_route_demonstration := class(creative_device):
                 set pose.Translation.Z += 2.0
             if (mark.TeleportTo[pose]):
                 mark.Show()
+                return true
+        Print("HANGAR ROUTE: footprint {index} failed to move")
+        return false
 
     highlight(index:int, kind:int):void =
         if (cursor >= 0):
@@ -279,6 +307,17 @@ fn_shoreline_island_route_demonstration := class(creative_device):
             reset_all()
 
     on_home(a:agent):void =
+        Print("HANGAR ROUTE: HOME interaction phase {phase}")
+        if (p := player[a], c := p.GetFortCharacter[]):
+            if (not in_activity[p]):
+                feedback.Show(p, text("Enter the practice bay to teach Pix."), ?DisplayTime := 3.0)
+                return
+            if (not c.IsOnGround[]):
+                feedback.Show(p, text("Stand on the HOME pad to start."), ?DisplayTime := 3.0)
+                return
+            if (Distance(flat(c.GetTransform().Translation), home()) > 100.0):
+                feedback.Show(p, text("Stand inside HOME, then press SHOW A ROUTE."), ?DisplayTime := 3.0)
+                return
         if (p := player[a], in_activity[p], c := p.GetFortCharacter[], c.IsOnGround[], Distance(flat(c.GetTransform().Translation), home()) <= 100.0):
             if (current := owner?, current <> p):
                 feedback.Show(p, text("Pix is copying another player's example."), ?DisplayTime := 3.0)
@@ -307,7 +346,7 @@ fn_shoreline_island_route_demonstration := class(creative_device):
             set previous = flat(c.GetTransform().Translation)
             set travel = Distance(home(), previous)
             set sample_time = GetSimulationElapsedTime()
-            if (not safe[home(), previous, delivered_one?]):
+            if (not safe[home(), previous, delivered_one]):
                 reject("Stand inside HOME. SHOW AGAIN.")
                 return
             added := append_point(home())
@@ -330,13 +369,19 @@ fn_shoreline_island_route_demonstration := class(creative_device):
         if (prior_point := points[points.Length - 1]):
             if (Distance(prior_point, p) < 0.01):
                 return true
-            if (not safe[prior_point, p, delivered_one?]):
+            if (not safe[prior_point, p, delivered_one]):
                 reject("That shortcut crosses unsafe space. SHOW AGAIN.")
                 return false
         set points += array{p}
-        set_mark(points.Length - 1, 0)
+        placed := set_mark(points.Length - 1, 0)
+        if (not placed?):
+            reject("Footprint display failed. SHOW AGAIN.")
+            return false
         if (points.Length >= 2):
-            set_mark(points.Length - 2, 0)
+            oriented := set_mark(points.Length - 2, 0)
+            if (not oriented?):
+                reject("Footprint display failed. SHOW AGAIN.")
+                return false
         Print("HANGAR ROUTE POINT {points.Length - 1}: {p.X},{p.Y}")
         return true
 
@@ -367,10 +412,10 @@ fn_shoreline_island_route_demonstration := class(creative_device):
             if (distance > 150.0):
                 reject("Movement jumped too far. SHOW AGAIN.")
                 return
-            if (not inside[current, delivered_one?]):
+            if (not inside[current, delivered_one]):
                 reject("Stay inside the bright route area. SHOW AGAIN.")
                 return
-            if (not safe[previous, current, delivered_one?]):
+            if (not safe[previous, current, delivered_one]):
                 reject("Pix won't cross the striped safety area. SHOW AGAIN.")
                 return
             set travel += distance
@@ -425,7 +470,10 @@ fn_shoreline_island_route_demonstration := class(creative_device):
             Sleep(0.1)
 
     on_test(a:agent):void =
+        Print("HANGAR ROUTE: TEST interaction phase {phase}")
         if (not is_owner[a]):
+            if (p := player[a]):
+                feedback.Show(p, text("Start at HOME and show Pix a route first."), ?DisplayTime := 3.0)
             return
         if (phase = 6):
             reset_all()
@@ -519,7 +567,7 @@ fn_shoreline_island_route_demonstration := class(creative_device):
                     return
                 set yaw = next_yaw
                 highlight(index, 1)
-                if (not safe[a, b, delivered_one?]):
+                if (not safe[a, b, delivered_one]):
                     entry := closure_entry(a, b)
                     var stop:vector3 = a
                     length := Distance(a, b)

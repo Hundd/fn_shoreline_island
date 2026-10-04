@@ -6,6 +6,8 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 # One cooperative room state; only players who enter participate in its badge.
 fn_shoreline_island_prompt_blaster := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     progress:byte_island_game_manager = byte_island_game_manager{}
@@ -112,9 +114,13 @@ fn_shoreline_island_prompt_blaster := class(creative_device):
             set target_home = moving.surface_home
         reset_room()
         entry_zone.AgentEntersEvent.Subscribe(on_enter)
+        entry_zone.AgentExitsEvent.Subscribe(on_exit)
+        spawn{navigation_monitor()}
         replay.InteractedWithEvent.Subscribe(on_replay)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_leave)
         progress.round_settings.RoundBeginEvent.Subscribe(on_round)
+        for (spawner : array{progress.hub_spawner_0, progress.hub_spawner_1, progress.hub_spawner_2, progress.hub_spawner_3}):
+            spawner.SpawnedEvent.Subscribe(on_navigation_spawn)
         for (index -> target : targets):
             spawn { listen_hits(target, index) }
         Sleep(0.2)
@@ -362,3 +368,38 @@ fn_shoreline_island_prompt_blaster := class(creative_device):
         return_ride.Enable()
         return_ride.Show()
         set stage = 7
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    on_exit(input_agent:agent):void =
+        if (input_player := player[input_agent]):
+            navigation_journal.clear_activity(input_player)
+            on_leave(input_player)
+
+    navigation_monitor()<suspends>:void =
+        loop:
+            for (input_player -> participating : participants, participating?):
+                var step:int = stage
+                var instruction:string = "Get ready for the optional Prompt arena."
+                if (stage = -2):
+                    set step = 3
+                    set instruction = "Watch Pix transform the core."
+                else if (stage >= 1):
+                    actions := array{"Shoot BLUE.", "Shoot LARGE.", "Shoot the matching large blue core.", "Shoot the moving core to pick it up.", "Choose the reactor destination."}
+                    if (action := actions[stage - 1]):
+                        set instruction = action
+                    else if (stage = 6):
+                        set instruction = "Watch Pix deliver the core."
+                    else:
+                        set instruction = "Completed. Same Prompt badge; optional replay."
+                if (step < 1):
+                    set step = 1
+                if (step > 5):
+                    set step = 5
+                navigation_journal.report_activity(input_player, 8, 0, step, 5, navigation_text(instruction), generation)
+            Sleep(0.25)
+
+    on_navigation_spawn(input_agent:agent):void =
+        if (input_player := player[input_agent]):
+            navigation_journal.clear_activity(input_player)
+            on_leave(input_player)

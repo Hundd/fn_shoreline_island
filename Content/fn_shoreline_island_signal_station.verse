@@ -6,6 +6,8 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 # One solo lesson; the same three category targets serve all seven decisions.
 fn_shoreline_island_signal_station := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     progress:fn_shoreline_island_signal_progress = fn_shoreline_island_signal_progress{}
@@ -203,6 +205,7 @@ fn_shoreline_island_signal_station := class(creative_device):
             else:
                 for (candidate : GetPlayspace().GetPlayers(), not active_player?):
                     begin_solo(candidate)
+            report_navigation()
             Sleep(0.1)
 
     on_departure(input_player:player):void =
@@ -326,3 +329,19 @@ fn_shoreline_island_signal_station := class(creative_device):
             show_prompt("")
         else:
             reset_run()
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    report_navigation():void =
+        if (current := active_player?, is_active_player[current]):
+            var instruction:message = navigation_text("Completed. Replay or return to Hub.")
+            if (item := item_names[phase]):
+                set instruction = text("Shoot the category for {item}.")
+            if (busy?):
+                set instruction = navigation_text("Watch Pix's result.")
+            var step:int = phase + 1
+            if (step > 7):
+                set step = 7
+            if (step < 1):
+                set step = 1
+            navigation_journal.report_activity(current, 2, 2, step, 7, instruction, generation)

@@ -11,6 +11,8 @@ tool_request_stage := class<concrete>:
 
 fn_shoreline_island_event_station := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     station_id:int = 0
@@ -122,6 +124,7 @@ fn_shoreline_island_event_station := class(creative_device):
         for (index -> target : targets):
             spawn { listen_hits(target, index) }
         reset_bay()
+
         monitor_player()
 
     valid_configuration()<transacts><decides>:void =
@@ -263,6 +266,7 @@ fn_shoreline_island_event_station := class(creative_device):
                     feedback.Show(current, text(hint), ?DisplayTime := 5.0)
             else if (candidate := GetPlayspace().GetPlayers()[0]):
                 begin_solo(candidate)
+            report_navigation()
             Sleep(0.1)
 
     listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
@@ -290,12 +294,17 @@ fn_shoreline_island_event_station := class(creative_device):
                 return false
             var pose:transform = destination
             set pose.Translation = start.Translation + (destination.Translation - start.Translation) * (frame * 0.1)
-            if (not prop.TeleportTo[pose]):
+            if (prop.TeleportTo[pose]):
+                # Commit successful movement outside an inverted failure context.
+            else:
+                Print("TOOL ANIMATE: TeleportTo failed frame={frame} destination={pose.Translation.X},{pose.Translation.Y},{pose.Translation.Z}")
                 return false
             Sleep(0.05)
         if (not run_valid[token, expected_phase]):
             return false
         if (Distance(prop.GetTransform().Translation, destination.Translation) > 5.0):
+            actual := prop.GetTransform().Translation
+            Print("TOOL ANIMATE: arrival failed actual={actual.X},{actual.Y},{actual.Z} wanted={destination.Translation.X},{destination.Translation.Y},{destination.Translation.Z}")
             return false
         return true
 
@@ -329,7 +338,9 @@ fn_shoreline_island_event_station := class(creative_device):
                 set pulse.Scale = speaker_home.Scale * 1.15
                 set output_ok = animate(speaker, pulse, token, expected_phase)
                 if (output_ok?, run_valid[token, expected_phase]):
-                    if (not speaker.TeleportTo[speaker_home]):
+                    if (speaker.TeleportTo[speaker_home]):
+                        # Commit successful reset.
+                    else:
                         set output_ok = false
                 if (output_ok?, run_valid[token, expected_phase]):
                     tool_audio.Play(input_agent)
@@ -422,3 +433,19 @@ fn_shoreline_island_event_station := class(creative_device):
         if (current := owner?, current = input_player):
             reset_bay()
 
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    report_navigation():void =
+        if (current := owner?, is_owner[current]):
+            var instruction:message = navigation_text("Completed. Replay or return to Hub.")
+            if (stage := stages[phase]):
+                set instruction = text(stage.request)
+            if (busy?):
+                set instruction = navigation_text("Watch Pix's result.")
+            var step:int = phase + 1
+            if (step > 3):
+                set step = 3
+            if (step < 1):
+                set step = 1
+            navigation_journal.report_activity(current, 5, 5, step, 3, instruction, generation)

@@ -6,6 +6,10 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 # One shared definition is expanded for each caller instruction in a frozen trace.
 fn_shoreline_island_nursery_station := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
+    solo_active:logic = true
+    @editable
     station_id:int = 0
     @editable
     progress:fn_shoreline_island_nursery_progress = fn_shoreline_island_nursery_progress{}
@@ -125,7 +129,7 @@ fn_shoreline_island_nursery_station := class(creative_device):
     var plant_homes:[]transform = array{}
     var robot_home:transform = transform{}
 
-    claim_text<localizes>:message = "Claim AI Skills Lab"
+    claim_text<localizes>:message = "Start AI Skills Lab"
     slot_text<localizes>(number:int):message = "Edit GrowPlant skill step {number}"
     run_text<localizes>:message = "Run the skill plan"
     caller_text<localizes>(number:int):message = "Edit plan slot {number}: GrowPlant / Move"
@@ -136,7 +140,7 @@ fn_shoreline_island_nursery_station := class(creative_device):
     help_text<localizes>:message = "Help / Worked answer"
     replay_text<localizes>:message = "Replay this challenge"
     return_text<localizes>:message = "Return to Academy Hub"
-    available_text<localizes>(number:int):message = "AI SKILLS LAB | Station {number}\nHelp Pix reuse a useful skill. Claim to begin."
+    available_text<localizes>(number:int):message = "AI SKILLS LAB\nHelp Pix reuse GrowPlant. Start to begin."
     objective_text<localizes>:message = "DEFINE GROWPLANT | Challenge 1\nGive GrowPlant the steps Water, Plant, Wait, Harvest.\nYour plan uses GrowPlant once to restore this planter."
     row_objective<localizes>:message = "REUSE GROWPLANT | Restore two planters. Use GrowPlant at each bed; Move between them."
     repeat_objective<localizes>:message = "REUSE GROWPLANT | Restore three planters and reach the Exit. Repeat [GrowPlant, Move]."
@@ -179,8 +183,8 @@ fn_shoreline_island_nursery_station := class(creative_device):
     row_answer<localizes>:message = "Define GrowPlant: Water, Plant, Wait, Harvest. Set the plan: GrowPlant, Move, GrowPlant. Then Run."
     repeat_concept<localizes>:message = "Each repeat cares for one bed, then moves. Count the beds before the Exit."
     repeat_answer<localizes>:message = "Define GrowPlant: Water, Plant, Wait, Harvest. Set Repeat 3 [GrowPlant, Move]. Then Run."
-    occupied_text<localizes>:message = "This AI Skills Lab station is in use. Choose another station."
-    other_text<localizes>:message = "Leave your current AI Skills Lab station before claiming another."
+    occupied_text<localizes>:message = "This attempt is already active. Replay or return to Hub."
+    other_text<localizes>:message = "Finish or leave your current activity before starting this lesson."
     remix_text<localizes>:message = "Optional remix / Return to normal challenges"
     remix_label_text<localizes>:message = "REMIX / NORMAL"
     remix_locked<localizes>:message = "Finish all three AI Skills Lab challenges first. The remix is optional."
@@ -246,6 +250,21 @@ fn_shoreline_island_nursery_station := class(creative_device):
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (not solo_active?):
+            for (index -> control : buttons(), index <> 8):
+                control.Disable()
+            remix_button.Disable()
+            for (board : display_boards()):
+                board.HideText()
+            return_button.SetInteractionText(return_text)
+            label_8.SetText(return_text)
+            label_8.ShowText()
+            label_8.UpdateDisplay()
+            return_button.SetInteractionTime(0.0)
+            return_button.SetMaxTriggerCount(0)
+            return_button.Enable()
+            return_button.InteractedWithEvent.Subscribe(on_return)
+            return
         set plant_homes = array{plant.GetTransform(), plant_2.GetTransform(), plant_3.GetTransform()}
         set robot_home = robot.GetTransform()
         set observed_round = progress.round_generation
@@ -289,6 +308,8 @@ fn_shoreline_island_nursery_station := class(creative_device):
                         release()
                 else:
                     release()
+
+            report_navigation()
 
     command_name(command:int):message =
         if (command = 4):
@@ -617,3 +638,17 @@ fn_shoreline_island_nursery_station := class(creative_device):
     on_removed(input_player:player):void =
         if (current := owner?, current = input_player):
             release()
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    report_navigation():void =
+        if (input_player := owner?):
+            actions := array{"Define GrowPlant: Water, Plant, Wait, Harvest.", "Reuse GrowPlant on two planters.", "Repeat GrowPlant and Move for three beds, then Exit."}
+            var instruction:string = "Optional remix - the Skills badge stays unchanged."
+            if (not remix?, action := actions[challenge]):
+                set instruction = action
+            if (running?):
+                set instruction = "Watch Pix use your skill."
+            else if (solved?):
+                set instruction = "Challenge complete. Choose Next or return to Hub."
+            navigation_journal.report_activity(input_player, 6, 6, challenge + 1, 3, navigation_text(instruction), generation)

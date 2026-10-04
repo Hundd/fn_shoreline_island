@@ -6,6 +6,8 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 # Solo pattern completion: the same three stationary answers serve every round.
 fn_shoreline_island_pattern_line := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     progress:fn_shoreline_island_loop_progress = fn_shoreline_island_loop_progress{}
@@ -199,6 +201,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
                 # Solo only: no cohorts, shared answers or enrollment.
                 for (candidate : GetPlayspace().GetPlayers(), not active_player?):
                     begin_solo(candidate)
+            report_navigation()
             Sleep(0.1)
 
     on_replay(input_agent:agent):void =
@@ -290,3 +293,19 @@ fn_shoreline_island_pattern_line := class(creative_device):
             if (GetSimulationElapsedTime() - last_hit >= 0.5):
                 set busy = false
                 return
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    report_navigation():void =
+        if (current := active_player?, is_active_player[current]):
+            var instruction:message = navigation_text("Completed. Replay or return to Hub.")
+            if (pattern := round_patterns[phase], hint := round_hints[phase]):
+                set instruction = text("{pattern} | {hint}")
+            if (busy?):
+                set instruction = navigation_text("Watch Pix's result.")
+            var step:int = phase + 1
+            if (step > 3):
+                set step = 3
+            if (step < 1):
+                set step = 1
+            navigation_journal.report_activity(current, 1, 1, step, 3, instruction, generation)

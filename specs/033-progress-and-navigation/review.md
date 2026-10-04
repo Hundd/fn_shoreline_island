@@ -1,36 +1,22 @@
-# Draft review — 2026-10-02
+# Review — resolved progress/navigation revision
 
-Requirements are ready for product review. Implementation readiness is blocked.
+Reviewed 2026-10-03 against spec, generated preview.html/SVG and implementation.yaml, live read-only survey and actual controller source. Both automated check and schema validation have zero execution blockers. This is agent review under delegated design authority, not a fabricated human preview approval.
 
-| Finding | Requirements | Disposition |
-|---|---|---|
-| Eight unique badges already provide a stable count; two Prompt activities share one badge. | FR-001,006 | Preserve module identities and recommend Workshop. |
-| Current journal supplies next destination but no persistent progress HUD or generic stage interface. | FR-002,003,008 | Reuse readers; explicitly implement presentation/stage hooks. |
-| Actual entrance positions, floor clearance and walking distances are not surveyed here. | FR-004 | Blocking a_01; schematic preview is not a physical route or new room layout. |
-| Per-agent pulse lifecycle, existing indicators and map visibility settings need inspection. | FR-004,010 | Blocking a_02; do not assume static map icon state is personalized. |
-| Mission steps and HUD safe regions must be audited before editing. | FR-002,008 | Blocking a_03; source-level count support does not establish a generic adapter. |
+- FR-004: Nine exact marker transforms are floor-supported by native traces. Existing route floors/promenade and native entry bounds identify the approaches. There are no existing MapIndicator-class actors, so delta is exactly9; catalog and property schema confirmed. No arena relocation or added paths/walls. Campus envelope is informational; linear map schema does not invent the free-order graph.
+- FR-001/003/005/009: Existing journal's authoritative sources are resolved through savedActor, including Skills/Agent tracker-order difference. No new progression owner or ninth objective. Missing binding stays unavailable. Free exploration and existing Agent prerequisite preserved.
+- FR-008: All required controllers plus optional Prompt source mappings are explicitly reviewed in plan.md. Totals6/3/7/4/3/3/3/5; optional arena5. Intro/animation phases do not fabricate solved stages. New reporting hooks are implementation work, never assumed pre-existing adapter.
+- FR-002/007: Proposed bottom-left HUD avoids current top-left objective/upper-right minimap/center aiming. Actual compact-screen/controller view and local feedback overlap require cook. First-completion popup consolidated4seconds, no duplicate replays.
+- FR-006: Hub signs AND manager initial objective must agree on Workshop; alternative Prompt sign states samebadge.
+- FR-010: New round/respawn/departure/late-report cancellation specified. Multiplayer AC-09 explicitly superseded by037 solo admission/lifecycle, no false multiplayer pass.
+- Tradeoffs: existing campus reaches Skills about170m south of Hub; this proposal improves guidance without forcedteleports or roommoves. Existing returns reduce backtracking. Actual route timing and first-time comprehension are unknown until playtest.
+- Verification limits: floor traces do not prove full capsule access/collision; nativeAPI doesnot prove pulse rendering; maplabels may collide at overview zoom and require bounded native cosmetics adjustment. Tool actual-shot and ErrorReturn failures are scoped dependencies, not hidden with countchanges.
+- No unresolved design blockers. Real gameplay acceptance remains open. Native game Unconnected/sessionDisconnected confirmed at planning handback; no playtest started byPlanner.
 
-Scale, accessibility and entry/exit clearance cannot be accepted from diagram
-coordinates. No new walking detours, targets, weapon devices or interactions are
-proposed. Learning remains in the existing games; navigation makes the next action
-clear. Agent's existing seven-module gate remains; optional content stays optional.
-Labels use numbers/text as well as color. All cooked readability, reset, route and
-multiplayer checks remain pending. Successful generation is offline evidence only.
+Review-manifest digest and actual delegated authority are recorded in approval.yaml; ready command must pass before edits.
 
-No human approval is recorded. An approved, resolved bundle can later hand off to
-the uefn-map-implementation skill. This request creates specifications only.
 
-## Offline evidence
+## Revision review — numeric map labels, 2026-10-04
 
-- `python tools/map_workflow.py check specs/033-progress-and-navigation/map.yaml`
-  passed, generating preview.html, preview.svg, implementation.yaml and manifest.
-- `python tools/map_workflow.py validate specs/033-progress-and-navigation/map.yaml`
-  passed. Both commands report the three intentionally open assumptions above.
-- Generated HTML and implementation intent were inspected: schematic title and
-  marker provenance are explicit, with no invented walk connections. The generated
-  plan remains a draft with execution blockers; its reconcile instructions must
-  not be used as placement commands while schematic coordinates remain.
-- No gameplay acceptance tasks were checked off; no approval record was created.
+FR-003/004 and AC-04 now specify literal map labels1..8/HUB with full numbered HUD/journal names and numbered Core legend. Reviewed the initial cooked overlap screenshot directly; it shows named 3/4 and Hub/Pattern text colliding. Implementation-progress.md records subsequent compact names and attempted size11/staggered offsets. Supervisor reports those settings reverted on cook to size12/offset-5 and the name overlap persisted. Final numeric treatment is selected under the user's existing autonomous design authority; it has not yet been independently verified in this offline reconciliation.
 
-Session inspection during specification authoring returned Unconnected; no playtest
-was launched and no editor mutations were performed.
+Count9, positions, supported entrance surfaces, recommended order, optional activities and instigator pulse behavior are unchanged. Canonical names remain available through existing HUD, journal and world legend. This accepts an extra number-to-name lookup for browsing the map in exchange for distinct nearby markers; next guidance already supplies that pairing. Cooked numeric visibility, 3/4 separation and name/number consistency remain AC-04 requirements, not checked-off evidence. No live editor calls or gameplay assertions were made by this reconciliation.

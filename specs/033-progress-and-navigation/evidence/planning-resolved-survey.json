@@ -1,0 +1,2647 @@
+{
+  "settings": {
+    "testPlayerDefinitionComponent": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IslandSettings_0.TestPlayerDefinitionComponent"
+    },
+    "bEndGameOnMatchPointWin": false,
+    "playerPersistence": "None",
+    "bIncludePlayersWhoLeftGameInScoreboard": false,
+    "playerBuiltWoodStructureHealthMultiplier": 1,
+    "playerBuiltStoneStructureHealthMultiplier": 1,
+    "playerBuiltMetalStructureHealthMultiplier": 1,
+    "bIsPlayerTriggeredRespawnAllowed": true,
+    "gameDescriptionData": [],
+    "onGameDescriptionDataChanged": "()",
+    "bKeepPlayerBuiltStructuresBetweenRounds": false,
+    "matchmakingSettings": {
+      "minimumNumberOfPlayers": -1,
+      "maximumNumberOfPlayers": -1,
+      "mmsType": "",
+      "mmsPrivacy": "",
+      "override_Playlist": "",
+      "playerCount": 0,
+      "numberOfTeams": 0,
+      "playersPerTeam": 0,
+      "bAllowJoinInProgress": true,
+      "selectedJoinInProgressType": 979,
+      "joinInProgressTeam": 255
+    },
+    "matchmakingType": "Off",
+    "matchmakingPrivacy": "Public",
+    "maxPlayers": 1,
+    "creativeMatchmakingPrivacy": "Public",
+    "islandMatchmakingPrivacy": "Unrestricted",
+    "joinInProgress": {
+      "teamType": "SpawnOnNextRound",
+      "teamIndex": 1
+    },
+    "socialJoining": "Enabled",
+    "joinInProgressBehavior": "SpawnImmediately",
+    "bJoinInProgressAssignedTeamOverride": false,
+    "joinInProgressAssignedTeam": 1,
+    "bForceStartAtMaxPlayers": true,
+    "bUseCustomMatchmakingSettings": false,
+    "matchmaking_MaxPlayersPerSession": 1,
+    "matchmaking_MaxTeamCount": 1,
+    "matchmaking_MaxTeamSize": 1,
+    "matchmaking_MaxSocialPartySize": 1,
+    "matchmaking_MinPlayers": 1,
+    "matchmaking_OvertimePlayerTarget": 1,
+    "matchmaking_QueueMainDuration": 5,
+    "matchmaking_QueueOvertimeDuration": 5,
+    "playerBuiltWoodStructureHealthMultiplierSetting": {
+      "value": 1,
+      "curve": {
+        "curveTable": null,
+        "rowName": "Default.Experience.PlayerBuiltWoodStructureHealthMultiplier"
+      },
+      "registryType": "Fort.DataRegistry"
+    },
+    "playerBuiltStoneStructureHealthMultiplierSetting": {
+      "value": 1,
+      "curve": {
+        "curveTable": null,
+        "rowName": "Default.Experience.PlayerBuiltStoneStructureHealthMultiplier"
+      },
+      "registryType": "Fort.DataRegistry"
+    },
+    "playerBuiltMetalStructureHealthMultiplierSetting": {
+      "value": 1,
+      "curve": {
+        "curveTable": null,
+        "rowName": "Default.Experience.PlayerBuiltMetalStructureHealthMultiplier"
+      },
+      "registryType": "Fort.DataRegistry"
+    },
+    "playerIndicatorOverrideFlags": 0
+  },
+  "settingsSchema": {
+    "testPlayerDefinitionComponent": {
+      "type": "object",
+      "title": "/CreativeCoreDevices/ExperienceSettings/TestPlayerDefinitionComponent.TestPlayerDefinitionComponent_C",
+      "description": "Represents a reference to a UObject or UClass.",
+      "properties": {
+        "refPath": {
+          "type": "string",
+          "description": "The reference stored as a soft path string."
+        }
+      },
+      "required": [
+        "refPath"
+      ]
+    },
+    "bEndGameOnMatchPointWin": {
+      "type": "boolean",
+      "description": "Causes the game to end when one player or team has won enough rounds that they can no longer be beaten."
+    },
+    "playerPersistence": {
+      "type": "string",
+      "title": "EMinigamePlayerPersistence",
+      "enum": [
+        "None",
+        "PartyLeaderOnly",
+        "AllPlayers"
+      ]
+    },
+    "bIncludePlayersWhoLeftGameInScoreboard": {
+      "type": "boolean",
+      "description": "Whether or not to include any players who left the game in the scoreboard"
+    },
+    "playerBuiltWoodStructureHealthMultiplier": {
+      "type": "number",
+      "description": "Health multiplier applied to Player Built Structures made of Wood.",
+      "minimum": 0.1,
+      "maximum": 100
+    },
+    "playerBuiltStoneStructureHealthMultiplier": {
+      "type": "number",
+      "description": "Health multiplier applied to Player Built Structures made of Stone.",
+      "minimum": 0.1,
+      "maximum": 100
+    },
+    "playerBuiltMetalStructureHealthMultiplier": {
+      "type": "number",
+      "description": "Health multiplier applied to Player Built Structures made of Metal.",
+      "minimum": 0.1,
+      "maximum": 100
+    },
+    "bIsPlayerTriggeredRespawnAllowed": {
+      "type": "boolean",
+      "description": "Determines whether players can use the Respawn menu option during the game."
+    },
+    "gameDescriptionData": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Game description that can be displayed to other users when starting a game."
+    },
+    "onGameDescriptionDataChanged": {},
+    "bKeepPlayerBuiltStructuresBetweenRounds": {
+      "type": "boolean",
+      "description": "Causes player built structures to be kept between rounds."
+    },
+    "matchmakingSettings": {
+      "title": "CreativeIslandMatchmakingSettings",
+      "type": "object",
+      "properties": {
+        "minimumNumberOfPlayers": {
+          "type": "integer"
+        },
+        "maximumNumberOfPlayers": {
+          "type": "integer"
+        },
+        "mmsType": {
+          "type": "string",
+          "description": "Dictates how matchmaking will split up parties, handle backfill, etc."
+        },
+        "mmsPrivacy": {
+          "type": "string",
+          "description": "Dictates if any player can use the island code or only the owner.\nPossible values are Public (anyone can use it) and Private (only owner)."
+        },
+        "override_Playlist": {
+          "type": "string",
+          "description": "Dictates how matchmaking will split up parties, handle backfill, etc."
+        },
+        "playerCount": {
+          "type": "integer",
+          "description": "Target number of players to place in a single session"
+        },
+        "numberOfTeams": {
+          "type": "integer",
+          "description": "Target number of teams to split players between"
+        },
+        "playersPerTeam": {
+          "type": "integer",
+          "description": "Target number of players to allocate per team"
+        },
+        "bAllowJoinInProgress": {
+          "type": "boolean"
+        },
+        "selectedJoinInProgressType": {
+          "type": "integer"
+        },
+        "joinInProgressTeam": {
+          "type": "integer",
+          "description": "This represents the 'Join Immediately' JOI Type"
+        }
+      },
+      "required": [
+        "minimumNumberOfPlayers",
+        "maximumNumberOfPlayers",
+        "mmsType",
+        "mmsPrivacy",
+        "override_Playlist",
+        "playerCount",
+        "numberOfTeams",
+        "playersPerTeam",
+        "bAllowJoinInProgress",
+        "selectedJoinInProgressType",
+        "joinInProgressTeam"
+      ]
+    },
+    "matchmakingType": {
+      "type": "string",
+      "title": "EMMSRulePreset",
+      "enum": [
+        "RespectParties",
+        "KeepFull",
+        "Off"
+      ],
+      "description": "Determines the type of matchmaking used on this island. FLEXIBLE TEAMS - Allows party members to be on any team to matchmake quickly and keep games full. OFF - Disables matchmaking on this island."
+    },
+    "matchmakingPrivacy": {
+      "type": "string",
+      "title": "EMMSPrivacy",
+      "enum": [
+        "Public",
+        "Private"
+      ],
+      "description": "PUBLIC - Anyone can use the island code. PRIVATE - Only the owner of the island can use the code."
+    },
+    "maxPlayers": {
+      "type": "integer",
+      "description": "Maximum number of players allowed into the game.",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "creativeMatchmakingPrivacy": {
+      "type": "string",
+      "title": "EIslandQueuePrivacy",
+      "enum": [
+        "Unrestricted",
+        "Public",
+        "Private"
+      ],
+      "description": "Determines if players can choose between Public Only and Private Only or are restricted to one or the other. Private games alter the behavior of some options from how they are set in Island settings. For example the social party will be evenly distributed across teams regardless of island settings, and parties won't have the ability to Fill regardless of the value of Fill Option."
+    },
+    "islandMatchmakingPrivacy": {
+      "type": "string",
+      "title": "EIslandQueuePrivacy",
+      "enum": [
+        "Unrestricted",
+        "Public",
+        "Private"
+      ],
+      "description": "*DEPRECATED* Determines if players can choose between Public Only and Private Only or are restricted to one or the other. Private games alter the behavior of some options from how they are set in Island settings. For example the social party will be evenly distributed across teams regardless of island settings, and parties won't have the ability to Fill regardless of the value of Fill Option."
+    },
+    "joinInProgress": {
+      "title": "CreativeTeamOption",
+      "description": "*DEPRECATED* Specifies what to do when a player joins while a game is in progress. Set to SPAWN if you want players to join in progress.",
+      "type": "object",
+      "properties": {
+        "teamType": {
+          "type": "string",
+          "title": "ECreativeTeamType",
+          "enum": [
+            "TeamIndex",
+            "None",
+            "All",
+            "Any",
+            "Allies",
+            "Hostiles",
+            "Friendlies",
+            "Enemies",
+            "Neutral",
+            "Random",
+            "DoNotSwitch",
+            "ActivatingTeam",
+            "WinningTeam",
+            "UseGameWinConditions",
+            "CompletingTeamWins",
+            "TriggeringPlayer",
+            "TriggeringTeam",
+            "Spectating",
+            "Cooperative",
+            "FreeForAll",
+            "Custom",
+            "SpawnOnNextRound",
+            "Spawn",
+            "Spectate"
+          ],
+          "description": "What type of team are we?"
+        },
+        "teamIndex": {
+          "type": "integer",
+          "description": "Which team index are we?\nOnly used when TeamType == TeamIndex."
+        }
+      },
+      "required": [
+        "teamType",
+        "teamIndex"
+      ]
+    },
+    "socialJoining": {
+      "type": "string",
+      "title": "ESocialJoiningType",
+      "enum": [
+        "Disabled",
+        "Enabled"
+      ],
+      "description": "Determines if a new player can join a session in-progress when joining a friend or being invited to the game. This does not affect private matches."
+    },
+    "joinInProgressBehavior": {
+      "type": "string",
+      "title": "EJoinInProgressBehavior",
+      "enum": [
+        "SpawnDuringNewRound",
+        "SpawnImmediately",
+        "WatchOnly"
+      ],
+      "description": "Determines how a new player is handled when they join an in-progress match."
+    },
+    "bJoinInProgressAssignedTeamOverride": {
+      "type": "boolean",
+      "description": "Allows the team a join in progress player is assigned to be overridden."
+    },
+    "joinInProgressAssignedTeam": {
+      "type": "integer",
+      "description": "The team that a player will be assigned to when joining in progress."
+    },
+    "bForceStartAtMaxPlayers": {
+      "type": "boolean",
+      "description": "Force the game to start when it reaches the maximum player count"
+    },
+    "bUseCustomMatchmakingSettings": {
+      "type": "boolean",
+      "description": "Allows you to override the generated matchmaking properties derived from various game rules. While this value is false, the matchmaking values update dynamically with game rules."
+    },
+    "matchmaking_MaxPlayersPerSession": {
+      "type": "integer",
+      "description": "Maximum number of players matchmaking will allow to join a session."
+    },
+    "matchmaking_MaxTeamCount": {
+      "type": "integer",
+      "description": "The number of teams the session expects to have."
+    },
+    "matchmaking_MaxTeamSize": {
+      "type": "integer",
+      "description": "The maximum number of players allowed per team. If this is set to -1 it means that the Game will handle team maximums dynamically."
+    },
+    "matchmaking_MaxSocialPartySize": {
+      "type": "integer",
+      "description": "Maximum number of players allowed in a party when players attempt to queue for this experience."
+    },
+    "matchmaking_MinPlayers": {
+      "type": "integer",
+      "description": "This is the number of players required to start a game session. At the end of the Overtime Phase, the queue will be cancelled if it has not reached this many players. (Only applies to public matches)",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "matchmaking_OvertimePlayerTarget": {
+      "type": "integer",
+      "description": "The target number of players that will trigger the queue to send players to a match during the queue's overtime phase. (Only applies to public matches)",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "matchmaking_QueueMainDuration": {
+      "type": "integer",
+      "description": "Determines how long the Main Phase for matchmaking will last. During the queue's main phase, the queue will attempt to achieve a full match. (Only applies to public matches)",
+      "minimum": 1,
+      "maximum": 120
+    },
+    "matchmaking_QueueOvertimeDuration": {
+      "type": "integer",
+      "description": "Determines how long the queue's Overtime Phase for matchmaking will last. During the overtime phase, the queue will attempt to reach the Overtime Player Target. (Only applies to public matches)",
+      "minimum": 1,
+      "maximum": 120
+    },
+    "playerBuiltWoodStructureHealthMultiplierSetting": {
+      "title": "ScalableFloat",
+      "description": "Shared Settings representing Player's Built BuildingActor Health multiplier when made of Wood",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Raw value, is multiplied by curve"
+        },
+        "curve": {
+          "title": "CurveTableRowHandle",
+          "description": "Curve that is evaluated at a specific level. If found, it is multipled by Value",
+          "type": "object",
+          "properties": {
+            "curveTable": {
+              "type": "object",
+              "title": "/Script/Engine.CurveTable",
+              "description": "Pointer to table we want a row from",
+              "properties": {
+                "refPath": {
+                  "type": "string",
+                  "description": "The reference stored as a soft path string."
+                }
+              },
+              "required": [
+                "refPath"
+              ]
+            },
+            "rowName": {
+              "type": "string",
+              "description": "Name of row in the table that we want"
+            }
+          },
+          "required": [
+            "curveTable",
+            "rowName"
+          ]
+        },
+        "registryType": {
+          "title": "DataRegistryType",
+          "description": "Name of Data Registry containing curve to use. If set the RowName inside Curve is used as the item name",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The FName representing this type"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "curve",
+        "registryType"
+      ]
+    },
+    "playerBuiltStoneStructureHealthMultiplierSetting": {
+      "title": "ScalableFloat",
+      "description": "Shared Settings representing Player's Built BuildingActor Health multiplier when made of Stone",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Raw value, is multiplied by curve"
+        },
+        "curve": {
+          "title": "CurveTableRowHandle",
+          "description": "Curve that is evaluated at a specific level. If found, it is multipled by Value",
+          "type": "object",
+          "properties": {
+            "curveTable": {
+              "type": "object",
+              "title": "/Script/Engine.CurveTable",
+              "description": "Pointer to table we want a row from",
+              "properties": {
+                "refPath": {
+                  "type": "string",
+                  "description": "The reference stored as a soft path string."
+                }
+              },
+              "required": [
+                "refPath"
+              ]
+            },
+            "rowName": {
+              "type": "string",
+              "description": "Name of row in the table that we want"
+            }
+          },
+          "required": [
+            "curveTable",
+            "rowName"
+          ]
+        },
+        "registryType": {
+          "title": "DataRegistryType",
+          "description": "Name of Data Registry containing curve to use. If set the RowName inside Curve is used as the item name",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The FName representing this type"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "curve",
+        "registryType"
+      ]
+    },
+    "playerBuiltMetalStructureHealthMultiplierSetting": {
+      "title": "ScalableFloat",
+      "description": "Shared Settings representing Player's Built BuildingActor Health multiplier when made of Metal",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Raw value, is multiplied by curve"
+        },
+        "curve": {
+          "title": "CurveTableRowHandle",
+          "description": "Curve that is evaluated at a specific level. If found, it is multipled by Value",
+          "type": "object",
+          "properties": {
+            "curveTable": {
+              "type": "object",
+              "title": "/Script/Engine.CurveTable",
+              "description": "Pointer to table we want a row from",
+              "properties": {
+                "refPath": {
+                  "type": "string",
+                  "description": "The reference stored as a soft path string."
+                }
+              },
+              "required": [
+                "refPath"
+              ]
+            },
+            "rowName": {
+              "type": "string",
+              "description": "Name of row in the table that we want"
+            }
+          },
+          "required": [
+            "curveTable",
+            "rowName"
+          ]
+        },
+        "registryType": {
+          "title": "DataRegistryType",
+          "description": "Name of Data Registry containing curve to use. If set the RowName inside Curve is used as the item name",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The FName representing this type"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "curve",
+        "registryType"
+      ]
+    },
+    "playerIndicatorOverrideFlags": {
+      "type": "integer",
+      "description": "Overrides the team indicators with a hard set value, this can be useful for mini games to implement custom player indicators without depending on existing team logic. Max distance will still apply."
+    }
+  },
+  "spatial": {
+    "locations": [
+      {
+        "label": "hub_destination",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040",
+        "transform": {
+          "location": {
+            "x": -700,
+            "y": 1500,
+            "z": 2500
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 90.00000000000003,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -1200.0000000000005,
+            "y": 999.9999999999995,
+            "z": 2000
+          },
+          "max": {
+            "x": -199.9999999999996,
+            "y": 2000.0000000000005,
+            "z": 3000
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "event_station_1_floor",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5080103_1758248032",
+        "transform": {
+          "location": {
+            "x": -3200,
+            "y": -9700,
+            "z": 2325
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 28,
+            "y": 38,
+            "z": 1.5
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -4600,
+            "y": -11600,
+            "z": 2250
+          },
+          "max": {
+            "x": -1800,
+            "y": -7800,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "signal_hub_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F50003_1729299315",
+        "transform": {
+          "location": {
+            "x": -1450,
+            "y": 900,
+            "z": 2350
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 7,
+            "y": 30,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -1800,
+            "y": -600,
+            "z": 2300
+          },
+          "max": {
+            "x": -1100,
+            "y": 2400,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "nursery_floor",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5160103_1450557808",
+        "transform": {
+          "location": {
+            "x": -3500,
+            "y": -17150,
+            "z": 2325
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 34,
+            "y": 37,
+            "z": 1.5
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -5200,
+            "y": -19000,
+            "z": 2250
+          },
+          "max": {
+            "x": -1800,
+            "y": -15300,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "energy_0_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5FD0003_1898363872",
+        "transform": {
+          "location": {
+            "x": -1450,
+            "y": -900,
+            "z": 2350
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 7,
+            "y": 30,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -1800,
+            "y": -2400,
+            "z": 2300
+          },
+          "max": {
+            "x": -1100,
+            "y": 600,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "hub_garden_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CA0003_1450873443",
+        "transform": {
+          "location": {
+            "x": 450,
+            "y": 1500,
+            "z": 2402
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 25,
+            "y": 3,
+            "z": 0.04
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -800,
+            "y": 1350,
+            "z": 2400
+          },
+          "max": {
+            "x": 1700,
+            "y": 1650,
+            "z": 2404
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "pix_ai_core_centerpiece",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5360403_1849417564",
+        "transform": {
+          "location": {
+            "x": 800,
+            "y": 1000,
+            "z": 2900
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": 570,
+            "y": 770,
+            "z": 2670
+          },
+          "max": {
+            "x": 1030,
+            "y": 1230,
+            "z": 3255
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "loop_hub_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CD0003_1331795989",
+        "transform": {
+          "location": {
+            "x": -650,
+            "y": 2900,
+            "z": 2352
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 6,
+            "y": 10,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -950,
+            "y": 2400,
+            "z": 2302
+          },
+          "max": {
+            "x": -350,
+            "y": 3400,
+            "z": 2402
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "hub_route_sign",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5C90003_1499694245",
+        "transform": {
+          "location": {
+            "x": 600,
+            "y": 500,
+            "z": 2630
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": -90.00000000000001,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": 572.4195251464844,
+            "y": 321.1944351196289,
+            "z": 2629.9882202148438
+          },
+          "max": {
+            "x": 600.5463221837713,
+            "y": 678.8056411743164,
+            "z": 2791.506561279297
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "pix_ai_core_module_legend",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B56F0403_1596393595",
+        "transform": {
+          "location": {
+            "x": -300,
+            "y": 1850,
+            "z": 2700
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": -90.00000000000001,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -327.5804748535156,
+            "y": 1671.194435119629,
+            "z": 2699.9882202148438
+          },
+          "max": {
+            "x": -299.4536778162287,
+            "y": 2028.8056411743164,
+            "z": 2861.506561279297
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "academy_journal_sign",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1313695498",
+        "transform": {
+          "location": {
+            "x": -300,
+            "y": 1000,
+            "z": 2720
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": -90.00000000000001,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -327.5804748535156,
+            "y": 821.1944351196289,
+            "z": 2719.9882202148438
+          },
+          "max": {
+            "x": -299.4536778162287,
+            "y": 1178.8056411743164,
+            "z": 2881.506561279297
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "debug_station_1_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5030103_1837750036",
+        "transform": {
+          "location": {
+            "x": -2400,
+            "y": -4300,
+            "z": 2350
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 8,
+            "y": 4,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": -2800,
+            "y": -4500,
+            "z": 2300
+          },
+          "max": {
+            "x": -2000,
+            "y": -4100,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      }
+    ],
+    "mapIndicatorClasses": [
+      {
+        "refPath": "/CreativeCoreDevices/Device_MapIndicator_V2.Device_MapIndicator_V2_C"
+      }
+    ],
+    "foundMapIndicators": [],
+    "related": [
+      {
+        "label": "nursery_1_remix_button",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1504758423",
+        "bounds": {
+          "min": {
+            "x": -2278,
+            "y": -17828,
+            "z": 2372
+          },
+          "max": {
+            "x": -2022,
+            "y": -17572,
+            "z": 2628
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "campus_path_greenhouse_extension",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5E20303_1482558781",
+        "bounds": {
+          "min": {
+            "x": -128,
+            "y": -520,
+            "z": -128
+          },
+          "max": {
+            "x": 11750,
+            "y": 2420,
+            "z": 4235.167721053614
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "nursery_1_remix_label",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1506811424",
+        "bounds": {
+          "min": {
+            "x": -2217.94614364624,
+            "y": -17760.480580444335,
+            "z": 2419.995523681641
+          },
+          "max": {
+            "x": -2082.0538853454586,
+            "y": -17749.792397570167,
+            "z": 2481.372493286133
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "cargo_circuit_entry_return_button",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5470603_1874895777",
+        "bounds": {
+          "min": {
+            "x": -778,
+            "y": 3972,
+            "z": 2372
+          },
+          "max": {
+            "x": -522,
+            "y": 4228,
+            "z": 2628
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "campus_path_greenhouse",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1735497153",
+        "bounds": {
+          "min": {
+            "x": 520,
+            "y": 399.9999999999998,
+            "z": 2272
+          },
+          "max": {
+            "x": 3300,
+            "y": 2600,
+            "z": 4385
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "signal_hub_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F50003_1729299315",
+        "bounds": {
+          "min": {
+            "x": -1800,
+            "y": -600,
+            "z": 2300
+          },
+          "max": {
+            "x": -1100,
+            "y": 2400,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "garden_repair_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F10003_1312879496",
+        "bounds": {
+          "min": {
+            "x": 2300,
+            "y": -600,
+            "z": 2302
+          },
+          "max": {
+            "x": 2900,
+            "y": 1200,
+            "z": 2402
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "campus_main_promenade",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C30303_2042537342",
+        "bounds": {
+          "min": {
+            "x": -15200,
+            "y": -18000,
+            "z": 2272
+          },
+          "max": {
+            "x": 7200,
+            "y": 3515,
+            "z": 2580
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "energy_0_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5FD0003_1898363872",
+        "bounds": {
+          "min": {
+            "x": -1800,
+            "y": -2400,
+            "z": 2300
+          },
+          "max": {
+            "x": -1100,
+            "y": 600,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "hub_garden_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CA0003_1450873443",
+        "bounds": {
+          "min": {
+            "x": -800,
+            "y": 1350,
+            "z": 2400
+          },
+          "max": {
+            "x": 1700,
+            "y": 1650,
+            "z": 2404
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "loop_hub_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CD0003_1331795989",
+        "bounds": {
+          "min": {
+            "x": -950,
+            "y": 2400,
+            "z": 2302
+          },
+          "max": {
+            "x": -350,
+            "y": 3400,
+            "z": 2402
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "campus_path_station_identity",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1091212704",
+        "bounds": {
+          "min": {
+            "x": -128,
+            "y": -128,
+            "z": 2272
+          },
+          "max": {
+            "x": 1610,
+            "y": 2540,
+            "z": 2819.999967956538
+          },
+          "isValid": true
+        }
+      },
+      {
+        "label": "debug_station_1_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5030103_1837750036",
+        "bounds": {
+          "min": {
+            "x": -2800,
+            "y": -4500,
+            "z": 2300
+          },
+          "max": {
+            "x": -2000,
+            "y": -4100,
+            "z": 2400
+          },
+          "isValid": true
+        }
+      }
+    ]
+  },
+  "resolved": [
+    {
+      "label": "academy_journal",
+      "key": "later_badge_trackers0",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1584565293.fn_shoreline_island_signal_progress_0.__verse_0x88D94674_badge_tracker",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5F50003_1585984295"
+      },
+      "transform": {
+        "location": {
+          "x": -3400,
+          "y": 200,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "signal_badge_tracker"
+    },
+    {
+      "label": "academy_journal",
+      "key": "later_badge_trackers1",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845.fn_shoreline_island_energy_progress_0.__verse_0x88D94674_badge_tracker",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5FD0003_1838518869"
+      },
+      "transform": {
+        "location": {
+          "x": -3400,
+          "y": -3300,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "energy_0_badge_tracker"
+    },
+    {
+      "label": "academy_journal",
+      "key": "later_badge_trackers2",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5030103_1792824005.fn_shoreline_island_debug_progress_0.__verse_0x88D94674_badge_tracker",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5030103_1794482008"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -7300,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "debug_station_1_badge_tracker"
+    },
+    {
+      "label": "academy_journal",
+      "key": "later_badge_trackers3",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001.fn_shoreline_island_event_progress_0.__verse_0x88D94674_badge_tracker",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5080103_1711609004"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -11100,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "event_station_1_badge_tracker"
+    },
+    {
+      "label": "academy_journal",
+      "key": "later_badge_trackers4",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012.fn_shoreline_island_bot_progress_0.__verse_0x88D94674_badge_tracker",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B50D0103_1846505015"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -15000,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "fn_shoreline_bot_1_badge_tracker"
+    },
+    {
+      "label": "academy_journal",
+      "key": "later_badge_trackers5",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x88D94674_badge_tracker",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5160103_1361400785"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -18600,
+          "z": 2450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "Tracker"
+    },
+    {
+      "label": "fn_shoreline_island_prompt_workshop",
+      "key": "entry_zone",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113.fn_shoreline_island_prompt_workshop_0.__verse_0x05240ED7_entry_zone",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5120603_1689731353"
+      },
+      "transform": {
+        "location": {
+          "x": 3200,
+          "y": 200,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "prompt_workshop_entry_zone"
+    },
+    {
+      "label": "fn_shoreline_island_prompt_workshop",
+      "key": "clue_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113.fn_shoreline_island_prompt_workshop_0.__verse_0x69EF0C79_clue_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F00003_1933179291"
+      },
+      "transform": {
+        "location": {
+          "x": 4800,
+          "y": 1100,
+          "z": 2700
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      },
+      "actorLabel": "repair_0_board"
+    },
+    {
+      "label": "fn_shoreline_island_prompt_workshop",
+      "key": "prompt_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113.fn_shoreline_island_prompt_workshop_0.__verse_0x94D86749_prompt_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F30003_1411772852"
+      },
+      "transform": {
+        "location": {
+          "x": 6700,
+          "y": 1100,
+          "z": 2700
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      },
+      "actorLabel": "repair_1_board"
+    },
+    {
+      "label": "fn_shoreline_island_pattern_line",
+      "key": "predict_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0.__verse_0x9989D27E_predict_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5470603_1843563765"
+      },
+      "transform": {
+        "location": {
+          "x": -100,
+          "y": 4708.02658,
+          "z": 2679
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "cargo_circuit_predict_board"
+    },
+    {
+      "label": "signal_station_0",
+      "key": "board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1585213294.fn_shoreline_island_signal_station_0.__verse_0x7F2172B4_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F50003_1591530307"
+      },
+      "transform": {
+        "location": {
+          "x": -3000.129487,
+          "y": 1310.274024,
+          "z": 2676.32
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.28,
+          "y": 1.28,
+          "z": 1.28
+        }
+      },
+      "actorLabel": "signal_0_board"
+    },
+    {
+      "label": "energy_station_0",
+      "key": "board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0.__verse_0x7F2172B4_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1836812865"
+      },
+      "transform": {
+        "location": {
+          "x": -3000,
+          "y": -3700,
+          "z": 2960
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      },
+      "actorLabel": "energy_0_board"
+    },
+    {
+      "label": "error_lab_solo_controller",
+      "key": "entry_zone",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0x05240ED7_entry_zone",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5C80603_1757225402"
+      },
+      "transform": {
+        "location": {
+          "x": -3400,
+          "y": -5950,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "error_lab_entry_zone"
+    },
+    {
+      "label": "error_lab_solo_controller",
+      "key": "board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0x7F2172B4_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5030103_1802007023"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -6200,
+          "z": 2870
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.2,
+          "y": 2.2,
+          "z": 0.72
+        }
+      },
+      "actorLabel": "error_lab_evidence"
+    },
+    {
+      "label": "error_lab_solo_controller",
+      "key": "instruction_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xCD1E70FE_instruction_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5030103_1803045025"
+      },
+      "transform": {
+        "location": {
+          "x": -2050,
+          "y": -4300,
+          "z": 2550
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.8,
+          "z": 0.8
+        }
+      },
+      "actorLabel": "error_lab_instructions"
+    },
+    {
+      "label": "event_station_1_station",
+      "key": "entry_zone",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002.fn_shoreline_island_event_station_0.__verse_0x05240ED7_entry_zone",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5150703_2115090933"
+      },
+      "transform": {
+        "location": {
+          "x": -3400,
+          "y": -9700,
+          "z": 2800
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "tool_lab_entry"
+    },
+    {
+      "label": "event_station_1_station",
+      "key": "board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002.fn_shoreline_island_event_station_0.__verse_0x7F2172B4_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1722709025"
+      },
+      "transform": {
+        "location": {
+          "x": -3200,
+          "y": -10100,
+          "z": 2780
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.2,
+          "y": 1.2,
+          "z": 1.24
+        }
+      },
+      "actorLabel": "event_station_1_board"
+    },
+    {
+      "label": "event_station_1_station",
+      "key": "response_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002.fn_shoreline_island_event_station_0.__verse_0x5B99EA10_response_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1723860027"
+      },
+      "transform": {
+        "location": {
+          "x": -3100,
+          "y": -10110,
+          "z": 3000
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1,
+          "z": 0.9
+        }
+      },
+      "actorLabel": "event_station_1_response_board"
+    },
+    {
+      "label": "fn_shoreline_island_nursery_station",
+      "key": "claim_button",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x00454591_claim_button",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5160103_1362067786"
+      },
+      "transform": {
+        "location": {
+          "x": -2330,
+          "y": -17700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "Button"
+    },
+    {
+      "label": "fn_shoreline_island_nursery_station",
+      "key": "mission_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x63244C1E_mission_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1372083804"
+      },
+      "transform": {
+        "location": {
+          "x": -3050,
+          "y": -15750,
+          "z": 2670
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actorLabel": "Billboard11"
+    },
+    {
+      "label": "fn_shoreline_island_nursery_station",
+      "key": "program_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0x38ED8F50_program_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1372682805"
+      },
+      "transform": {
+        "location": {
+          "x": -4050,
+          "y": -15750,
+          "z": 2670
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actorLabel": "Billboard12"
+    },
+    {
+      "label": "fn_shoreline_island_nursery_station",
+      "key": "execution_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783.fn_shoreline_island_nursery_station_0.__verse_0xB7F25F8A_execution_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5160103_1373231806"
+      },
+      "transform": {
+        "location": {
+          "x": -3500,
+          "y": -15750,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actorLabel": "Billboard13"
+    },
+    {
+      "label": "fn_shoreline_bot_1_station",
+      "key": "rescue_replay_destination",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0.__verse_0xE36E2BD1_rescue_replay_destination",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B54F0703_1085071149"
+      },
+      "transform": {
+        "location": {
+          "x": -4400,
+          "y": -13500,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "rescue_run_replay_destination"
+    },
+    {
+      "label": "fn_shoreline_bot_1_station",
+      "key": "claim_button",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0.__verse_0x00454591_claim_button",
+      "savedActor": null
+    },
+    {
+      "label": "fn_shoreline_bot_1_station",
+      "key": "mission_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0.__verse_0x63244C1E_mission_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1862177044"
+      },
+      "transform": {
+        "location": {
+          "x": -4400,
+          "y": -15100,
+          "z": 2750.4
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 2.6666666666666665,
+          "z": 1.6
+        }
+      },
+      "actorLabel": "fn_shoreline_bot_1_mission_board"
+    },
+    {
+      "label": "fn_shoreline_bot_1_station",
+      "key": "program_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0.__verse_0x38ED8F50_program_board",
+      "savedActor": null
+    },
+    {
+      "label": "fn_shoreline_bot_1_station",
+      "key": "execution_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0.__verse_0xB7F25F8A_execution_board",
+      "savedActor": null
+    },
+    {
+      "label": "fn_shoreline_island_bot_4_station",
+      "key": "rescue_replay_destination",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194.fn_shoreline_island_bot_station_0.__verse_0xE36E2BD1_rescue_replay_destination",
+      "savedActor": null
+    },
+    {
+      "label": "fn_shoreline_island_bot_4_station",
+      "key": "claim_button",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194.fn_shoreline_island_bot_station_0.__verse_0x00454591_claim_button",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1583131196"
+      },
+      "transform": {
+        "location": {
+          "x": -12530,
+          "y": -14100,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "actorLabel": "fn_shoreline_island_bot_4_claim_button"
+    },
+    {
+      "label": "fn_shoreline_island_bot_4_station",
+      "key": "mission_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194.fn_shoreline_island_bot_station_0.__verse_0x63244C1E_mission_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599946224"
+      },
+      "transform": {
+        "location": {
+          "x": -13350,
+          "y": -12050,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actorLabel": "fn_shoreline_island_bot_4_mission_board"
+    },
+    {
+      "label": "fn_shoreline_island_bot_4_station",
+      "key": "program_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194.fn_shoreline_island_bot_station_0.__verse_0x38ED8F50_program_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1600519225"
+      },
+      "transform": {
+        "location": {
+          "x": -14350,
+          "y": -12050,
+          "z": 2690
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actorLabel": "fn_shoreline_island_bot_4_program_board"
+    },
+    {
+      "label": "fn_shoreline_island_bot_4_station",
+      "key": "execution_board",
+      "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194.fn_shoreline_island_bot_station_0.__verse_0xB7F25F8A_execution_board",
+      "savedActor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601083226"
+      },
+      "transform": {
+        "location": {
+          "x": -13700,
+          "y": -12050,
+          "z": 2440
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7,
+          "y": 1.7,
+          "z": 1.7
+        }
+      },
+      "actorLabel": "fn_shoreline_island_bot_4_execution_board"
+    }
+  ],
+  "traces": [
+    {
+      "xy": [
+        3200,
+        200
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -650,
+        3700
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -1900,
+        900
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -1900,
+        -900
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -2400,
+        -4300
+      ],
+      "hitDistance": 200
+    },
+    {
+      "xy": [
+        -2400,
+        -8000
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -2300,
+        -15400
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -2400,
+        -11800
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        -700,
+        1500
+      ],
+      "hitDistance": 188
+    },
+    {
+      "xy": [
+        200,
+        2100
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        500,
+        2100
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        800,
+        2100
+      ],
+      "hitDistance": 200.00003051757812
+    },
+    {
+      "xy": [
+        1100,
+        2100
+      ],
+      "hitDistance": 200.00003051757812
+    }
+  ],
+  "mapIndicatorSchema": {
+    "creativeMapMarkerComponent": {
+      "type": "object",
+      "title": "/Game/Creative/Devices/MapMarker/CreativeMapMarkerComponent.CreativeMapMarkerComponent_C",
+      "description": "Represents a reference to a UObject or UClass.",
+      "properties": {
+        "refPath": {
+          "type": "string",
+          "description": "The reference stored as a soft path string."
+        }
+      },
+      "required": [
+        "refPath"
+      ]
+    },
+    "enabledWhenReceived": {
+      "type": "object",
+      "title": "/Script/FortniteGame.FortGameplayReceiverMessageComponent",
+      "description": "Represents a reference to a UObject or UClass.",
+      "properties": {
+        "refPath": {
+          "type": "string",
+          "description": "The reference stored as a soft path string."
+        }
+      },
+      "required": [
+        "refPath"
+      ]
+    },
+    "icon": {
+      "title": "CreativeIconOption",
+      "description": "Sets the icon to be displayed on the map.",
+      "type": "object",
+      "properties": {
+        "smallIcon": {
+          "type": "object",
+          "title": "/Script/Engine.Texture2D",
+          "description": "Small icon with 64*64 resolution",
+          "properties": {
+            "refPath": {
+              "type": "string",
+              "description": "The reference stored as a soft path string."
+            }
+          },
+          "required": [
+            "refPath"
+          ]
+        },
+        "largeIcon": {
+          "type": "object",
+          "title": "/Script/Engine.Texture2D",
+          "description": "Large icon with 128*128 resolution",
+          "properties": {
+            "refPath": {
+              "type": "string",
+              "description": "The reference stored as a soft path string."
+            }
+          },
+          "required": [
+            "refPath"
+          ]
+        }
+      },
+      "required": [
+        "smallIcon",
+        "largeIcon"
+      ]
+    },
+    "iconColor": {
+      "type": "object",
+      "title": "LinearColor",
+      "required": [
+        "r",
+        "g",
+        "b",
+        "a"
+      ],
+      "properties": {
+        "r": {
+          "type": "number",
+          "minimum": 0
+        },
+        "g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "b": {
+          "type": "number",
+          "minimum": 0
+        },
+        "a": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "description": "Sets the color of the displayed icon."
+    },
+    "showOnWhichMap": {
+      "type": "string",
+      "title": "E_MapMarker_VisibilityOnMap",
+      "enum": [
+        "None",
+        "Both",
+        "Minimap",
+        "Overview Map"
+      ],
+      "description": "Determines which maps the indicator should be displayed on."
+    },
+    "enabledOnGameStart": {
+      "type": "boolean",
+      "description": "Determines whether the device is enabled when the game starts."
+    },
+    "text": {
+      "type": "string",
+      "description": "Allows custom text to be displayed, centred on the indicator location."
+    },
+    "textColor": {
+      "type": "object",
+      "title": "LinearColor",
+      "required": [
+        "r",
+        "g",
+        "b",
+        "a"
+      ],
+      "properties": {
+        "r": {
+          "type": "number",
+          "minimum": 0
+        },
+        "g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "b": {
+          "type": "number",
+          "minimum": 0
+        },
+        "a": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "description": "Sets the color of the displayed text."
+    },
+    "glowColor": {
+      "type": "object",
+      "title": "LinearColor",
+      "required": [
+        "r",
+        "g",
+        "b",
+        "a"
+      ],
+      "properties": {
+        "r": {
+          "type": "number",
+          "minimum": 0
+        },
+        "g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "b": {
+          "type": "number",
+          "minimum": 0
+        },
+        "a": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "showObjectivePulseToInstigatorOnly": {
+      "type": "boolean",
+      "description": "The Objective Pulse will only appear for the player who activated it. Likewise it will only disappear for the player who activated it."
+    },
+    "showObjectivePulseToFriendlyPlayers": {
+      "type": "boolean",
+      "description": "An Objective Pulse will appear to Friendly Players indicating the location of the device in relation to the Player."
+    },
+    "activate Objective Pulse": {
+      "title": "GameplayEventFunction",
+      "description": "Enables a pulse at Player location pointing toward this Device.",
+      "type": "object",
+      "properties": {
+        "eventSubscriptions": {
+          "type": "array",
+          "items": {
+            "title": "GameplayEventSubscription",
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "object",
+                "title": "/Script/CoreUObject.Object",
+                "description": "The object we want to subscribe to receive events from.",
+                "properties": {
+                  "refPath": {
+                    "type": "string",
+                    "description": "The reference stored as a soft path string."
+                  }
+                },
+                "required": [
+                  "refPath"
+                ]
+              },
+              "eventDescriptor": {
+                "title": "MemberReference",
+                "description": "The property on the object that describes the event we want subscribe to receive.",
+                "type": "object"
+              }
+            },
+            "required": [
+              "object",
+              "eventDescriptor"
+            ]
+          },
+          "description": "The list of events we should subscribe to."
+        }
+      },
+      "required": [
+        "eventSubscriptions"
+      ]
+    },
+    "deactivate Objective Pulse": {
+      "title": "GameplayEventFunction",
+      "description": "Disables a pulse at Player location pointing toward this Device.",
+      "type": "object",
+      "properties": {
+        "eventSubscriptions": {
+          "type": "array",
+          "items": {
+            "title": "GameplayEventSubscription",
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "object",
+                "title": "/Script/CoreUObject.Object",
+                "description": "The object we want to subscribe to receive events from.",
+                "properties": {
+                  "refPath": {
+                    "type": "string",
+                    "description": "The reference stored as a soft path string."
+                  }
+                },
+                "required": [
+                  "refPath"
+                ]
+              },
+              "eventDescriptor": {
+                "title": "MemberReference",
+                "description": "The property on the object that describes the event we want subscribe to receive.",
+                "type": "object"
+              }
+            },
+            "required": [
+              "object",
+              "eventDescriptor"
+            ]
+          },
+          "description": "The list of events we should subscribe to."
+        }
+      },
+      "required": [
+        "eventSubscriptions"
+      ]
+    },
+    "knob_IconColor": {
+      "type": "string",
+      "title": "ECreativeMinimapComponentIconColorType",
+      "enum": [
+        "None",
+        "White",
+        "Red",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Teal",
+        "Blue",
+        "Purple"
+      ]
+    },
+    "knob_fPulseRate": {
+      "type": "number"
+    },
+    "customIconMaterial": {
+      "type": "object",
+      "title": "/Script/Engine.MaterialInterface",
+      "description": "Assign a custom material for the map indicator.\r\nProvided material needs to be set to UI material domain.",
+      "properties": {
+        "refPath": {
+          "type": "string",
+          "description": "The reference stored as a soft path string."
+        }
+      },
+      "required": [
+        "refPath"
+      ]
+    },
+    "customIconMaterial_Override": {
+      "type": "boolean"
+    },
+    "iconScale": {
+      "type": "number",
+      "description": "Sets the scale of the displayed icon.",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "enabledComponent": {
+      "type": "object",
+      "title": "/Game/Creative/Devices/Common/Components/Creative_Enabled_Component.Creative_Enabled_Component_C",
+      "description": "Represents a reference to a UObject or UClass.",
+      "properties": {
+        "refPath": {
+          "type": "string",
+          "description": "The reference stored as a soft path string."
+        }
+      },
+      "required": [
+        "refPath"
+      ]
+    },
+    "enabledIndex": {
+      "type": "integer"
+    },
+    "bMigratedEnabledIndex": {
+      "type": "boolean"
+    },
+    "fourLayerColorInfo": {
+      "type": "array",
+      "items": {
+        "title": "NativeBuildingPropFourLayerMaterial",
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer"
+          },
+          "mId": {
+            "type": "object",
+            "title": "/Script/Engine.MaterialInstanceDynamic",
+            "description": "Represents a reference to a UObject or UClass.",
+            "properties": {
+              "refPath": {
+                "type": "string",
+                "description": "The reference stored as a soft path string."
+              }
+            },
+            "required": [
+              "refPath"
+            ]
+          },
+          "emissiveColors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "title": "LinearColor",
+              "required": [
+                "r",
+                "g",
+                "b",
+                "a"
+              ],
+              "properties": {
+                "r": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "g": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "b": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "a": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "index",
+          "mId",
+          "emissiveColors"
+        ]
+      },
+      "description": "Material and lighting properties for four-layer materials."
+    },
+    "textureData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "/Script/FortniteGame.BuildingTextureData",
+        "description": "Represents a reference to a UObject or UClass.",
+        "properties": {
+          "refPath": {
+            "type": "string",
+            "description": "The reference stored as a soft path string."
+          }
+        },
+        "required": [
+          "refPath"
+        ]
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "Texture (or even complete material) swaps to apply to this instance"
+    },
+    "rVTColorOverride": {
+      "type": "object",
+      "title": "/Script/Engine.RuntimeVirtualTexture",
+      "description": "Represents a reference to a UObject or UClass.",
+      "properties": {
+        "refPath": {
+          "type": "string",
+          "description": "The reference stored as a soft path string."
+        }
+      },
+      "required": [
+        "refPath"
+      ]
+    },
+    "animatingMaterialMappings": {
+      "type": "array",
+      "items": {
+        "title": "AnimatingMaterialPair",
+        "type": "object",
+        "properties": {
+          "original": {
+            "type": "object",
+            "title": "/Script/Engine.MaterialInterface",
+            "description": "Represents a reference to a UObject or UClass.",
+            "properties": {
+              "refPath": {
+                "type": "string",
+                "description": "The reference stored as a soft path string."
+              }
+            },
+            "required": [
+              "refPath"
+            ]
+          },
+          "override": {
+            "type": "object",
+            "title": "/Script/Engine.MaterialInterface",
+            "description": "Represents a reference to a UObject or UClass.",
+            "properties": {
+              "refPath": {
+                "type": "string",
+                "description": "The reference stored as a soft path string."
+              }
+            },
+            "required": [
+              "refPath"
+            ]
+          }
+        },
+        "required": [
+          "original",
+          "override"
+        ]
+      },
+      "description": "Materials to apply to the mesh for this piece when it is animating construction/destruction"
+    },
+    "damagedButNotAnimatingMaterialMappings": {
+      "type": "array",
+      "items": {
+        "title": "AnimatingMaterialPair",
+        "type": "object",
+        "properties": {
+          "original": {
+            "type": "object",
+            "title": "/Script/Engine.MaterialInterface",
+            "description": "Represents a reference to a UObject or UClass.",
+            "properties": {
+              "refPath": {
+                "type": "string",
+                "description": "The reference stored as a soft path string."
+              }
+            },
+            "required": [
+              "refPath"
+            ]
+          },
+          "override": {
+            "type": "object",
+            "title": "/Script/Engine.MaterialInterface",
+            "description": "Represents a reference to a UObject or UClass.",
+            "properties": {
+              "refPath": {
+                "type": "string",
+                "description": "The reference stored as a soft path string."
+              }
+            },
+            "required": [
+              "refPath"
+            ]
+          }
+        },
+        "required": [
+          "original",
+          "override"
+        ]
+      },
+      "description": "Materials to apply when the actor is damaged but not currently animating"
+    },
+    "editorOnlyMapTags": {
+      "title": "GameplayTagContainer",
+      "description": "These are the tags given from the map to this BuildingActor. These tags will be appended to StaticGameplayTags, which IS cooked",
+      "type": "object",
+      "properties": {
+        "gameplayTags": {
+          "type": "array",
+          "items": {
+            "title": "GameplayTag",
+            "type": "object",
+            "properties": {
+              "tagName": {
+                "type": "string",
+                "description": "This Tags Name"
+              }
+            },
+            "required": [
+              "tagName"
+            ]
+          },
+          "description": "Array of gameplay tags"
+        }
+      },
+      "required": [
+        "gameplayTags"
+      ]
+    },
+    "bIsDynamicOnDedicatedServer": {
+      "type": "boolean",
+      "description": "Same as bIsDynamic, but for the dedicated server. WARNING: You really do NOT want to use this flag unless you get permission first. Too many of these will cause performance problems!"
+    },
+    "bShowSmashHotSpotExtraConfig": {
+      "type": "boolean",
+      "description": "if set, extra type config will be included on preview"
+    },
+    "bAsyncPhysicsTickEnabled": {
+      "type": "boolean",
+      "description": "Whether to use use the async physics tick with this actor."
+    }
+  },
+  "mapIndicatorDefaults": {
+    "creativeMapMarkerComponent": null,
+    "enabledWhenReceived": null,
+    "icon": {
+      "smallIcon": null,
+      "largeIcon": null
+    },
+    "iconColor": {
+      "r": 0.35294100642204285,
+      "g": 0.35294100642204285,
+      "b": 0.35294100642204285,
+      "a": 1
+    },
+    "showOnWhichMap": "Both",
+    "enabledOnGameStart": true,
+    "text": "",
+    "textColor": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1
+    },
+    "glowColor": {
+      "r": 0.029999999329447746,
+      "g": 0.25,
+      "b": 0.6000000238418579,
+      "a": 0
+    },
+    "showObjectivePulseToInstigatorOnly": true,
+    "showObjectivePulseToFriendlyPlayers": true,
+    "activate Objective Pulse": "(DefaultHandlerFunctions=(OnEventReceived=(EventHandlerFunction=(MemberName=\"Activate Objective Trail\",MemberGuid=F1B1B2BE4AFC81FF78481E81A8A91AB4,bSelfContext=True)),OnStatefulEventApplied=(EventHandlerFunction=(MemberGuid=00000000000000000000000000000000)),OnStatefulEventCleared=(EventHandlerFunction=(MemberGuid=00000000000000000000000000000000))),Instance=())",
+    "deactivate Objective Pulse": "(DefaultHandlerFunctions=(OnEventReceived=(EventHandlerFunction=(MemberName=\"Deactivate Objective Trail\",MemberGuid=EAB19BC04381FE2F8EC9719C8D47EC16,bSelfContext=True)),OnStatefulEventApplied=(EventHandlerFunction=(MemberGuid=00000000000000000000000000000000)),OnStatefulEventCleared=(EventHandlerFunction=(MemberGuid=00000000000000000000000000000000))),Instance=())",
+    "knob_IconColor": "White",
+    "knob_fPulseRate": 0,
+    "customIconMaterial": null,
+    "customIconMaterial_Override": false,
+    "iconScale": 1,
+    "enabledComponent": null,
+    "enabledIndex": 0,
+    "bMigratedEnabledIndex": false,
+    "fourLayerColorInfo": [],
+    "textureData": [
+      {
+        "refPath": "/Game/Creative/Devices/MapMarker/TD_MapMarker.TD_MapMarker"
+      },
+      null,
+      null,
+      null
+    ],
+    "rVTColorOverride": null,
+    "animatingMaterialMappings": [],
+    "damagedButNotAnimatingMaterialMappings": [],
+    "editorOnlyMapTags": {
+      "gameplayTags": []
+    },
+    "bIsDynamicOnDedicatedServer": false,
+    "bShowSmashHotSpotExtraConfig": false,
+    "bAsyncPhysicsTickEnabled": false
+  }
+}

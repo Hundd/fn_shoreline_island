@@ -16,6 +16,8 @@ debug_route_stage := class<concrete>:
 # LEFT=0, STOP=1, RIGHT=2. Credit follows actual execution, never answer ID.
 fn_shoreline_island_debug_station := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     progress:fn_shoreline_island_debug_progress = fn_shoreline_island_debug_progress{}
@@ -282,6 +284,7 @@ fn_shoreline_island_debug_station := class(creative_device):
             else:
                 for (candidate : GetPlayspace().GetPlayers(), not active_player?):
                     begin_solo(candidate)
+            report_navigation()
             Sleep(0.1)
 
     demonstrate(token:int, expected_phase:int)<suspends>:void =
@@ -407,3 +410,19 @@ fn_shoreline_island_debug_station := class(creative_device):
         if (current := active_player?, current = input_agent):
             reset_bay()
         hub_destination.Teleport(input_agent)
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    report_navigation():void =
+        if (current := active_player?, is_active_player[current]):
+            var instruction:message = navigation_text("Completed. Replay or return to Hub.")
+            if (stage := stages[phase]):
+                set instruction = text("Fix [{program_text(stage.commands, stage.editable_slot)}] to reach tile {stage.goal_tile}.")
+            if (busy?):
+                set instruction = navigation_text("Watch Pix's result.")
+            var step:int = phase + 1
+            if (step > 3):
+                set step = 3
+            if (step < 1):
+                set step = 1
+            navigation_journal.report_activity(current, 4, 4, step, 3, instruction, generation)

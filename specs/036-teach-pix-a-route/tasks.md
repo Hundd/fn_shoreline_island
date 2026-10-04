@@ -14,3 +14,10 @@ Agent implementation closed out on 2026-10-03 at the user's explicit instruction
 - [ ] V-02 Owner manual verification: AC-01..08/10 including two different first routes, both bypasses and actual failure/arrival checks (R-02..09). Agent testing not run; handed off at user's request.
 - [ ] V-03 Owner manual verification: AC-09 isolation if genuine multiplayer available; otherwise record unavailable. Run AC-11 regression and separate Project > Validate Project (R-08/10). Agent testing not run; handed off at user's request.
 - [x] V-04 Native StopGame Completed; final Unconnected/Disconnected, editor open. No validation warning matched native category query; gameplay remains unverified (R-10; evidence/final-session.json).
+
+## Button repair — 2026-10-03
+- [x] B-01 Diagnose actual cooked HOME prompt/event and first-route failure; correct five logic argument queries (R-02/04; evidence/bugfix-buttons.md).
+- [x] B-02 Repair HOME interaction overlap/feedback without changing endpoint constraint; real E starts recording (R-02/08; evidence/bugfix-readable-home.png).
+- [x] B-03 Replace three failed label devices through official catalog, verify correct cooked poses and readable HOME/CANCEL/LOAD text (R-03/09; evidence/bugfix-buttons.md, bugfix-final-native.json).
+- [x] B-04 Remove all fixtures, save/build/final cook, verify production startup, stop game/session (R-10; evidence/bugfix-final-native.json).
+- [x] B-05 Independent focused QA of repaired source/scene and referenced real-input evidence found no blocking repair defect (evidence/qa-buttons-repair.md). Remaining full gameplay scenarios stay owner manual verification, not passed by repair.

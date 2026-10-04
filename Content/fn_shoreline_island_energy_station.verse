@@ -6,6 +6,8 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 # The saved station actors share this class; only the configured solo bay runs.
 fn_shoreline_island_energy_station := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     station_id:int = 0
@@ -190,6 +192,7 @@ fn_shoreline_island_energy_station := class(creative_device):
             else:
                 for (candidate : GetPlayspace().GetPlayers(), not active_player?):
                     begin_solo(candidate)
+            report_navigation()
             Sleep(0.1)
 
     on_replay(input_agent:agent):void =
@@ -347,3 +350,20 @@ fn_shoreline_island_energy_station := class(creative_device):
         if (generation = expected_generation and phase = 4):
             for (choice : targets):
                 choice.deactivate()
+
+    navigation_text<localizes>(value:string):message = "{value}"
+
+    report_navigation():void =
+        if (current := active_player?, is_owner[current]):
+            var instruction:message = navigation_text("Completed. Replay or return to Hub.")
+            actions := array{"CHECK the clue.", "COOL the core.", "CHECK again after cooling.", "RELEASE after the fresh check."}
+            if (action := actions[phase]):
+                set instruction = text(action)
+            if (busy?):
+                set instruction = navigation_text("Watch Pix's result.")
+            var step:int = phase + 1
+            if (step > 4):
+                set step = 4
+            if (step < 1):
+                set step = 1
+            navigation_journal.report_activity(current, 3, 3, step, 4, instruction, generation)

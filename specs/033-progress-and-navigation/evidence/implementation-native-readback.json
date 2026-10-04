@@ -1,0 +1,958 @@
+{
+  "settings": {
+    "socialJoining": "Disabled",
+    "joinInProgressBehavior": "WatchOnly",
+    "gameDescriptionData": [],
+    "maxPlayers": 1,
+    "matchmaking_MaxPlayersPerSession": 1,
+    "matchmaking_MaxTeamCount": 1,
+    "matchmaking_MaxTeamSize": 1,
+    "matchmaking_MaxSocialPartySize": 1,
+    "matchmaking_MinPlayers": 1,
+    "matchmaking_OvertimePlayerTarget": 1,
+    "bUseCustomMatchmakingSettings": false
+  },
+  "groups": [
+    {
+      "kind": "marker",
+      "index": 0,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BD0703_2136985649"
+      },
+      "transform": {
+        "location": {
+          "x": 3200,
+          "y": 200,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "1 Prompt Workshop",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BD0703_2136985649"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 1,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1107638827"
+      },
+      "transform": {
+        "location": {
+          "x": -650,
+          "y": 3700,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "2 Pattern Scanner",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1107638827"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 2,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1108040828"
+      },
+      "transform": {
+        "location": {
+          "x": -1900,
+          "y": 900,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "3 AI Classifier",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1108040828"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 3,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1108368829"
+      },
+      "transform": {
+        "location": {
+          "x": -1900,
+          "y": -900,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "4 Confidence Core",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1108368829"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 4,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1108706830"
+      },
+      "transform": {
+        "location": {
+          "x": -2400,
+          "y": -4300,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "5 AI Error Lab",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1108706830"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 5,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1109034831"
+      },
+      "transform": {
+        "location": {
+          "x": -2400,
+          "y": -8000,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "6 AI Tool Lab",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1109034831"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 6,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1109369832"
+      },
+      "transform": {
+        "location": {
+          "x": -2300,
+          "y": -15400,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "7 AI Skills Lab",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1109369832"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 7,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1109703833"
+      },
+      "transform": {
+        "location": {
+          "x": -2400,
+          "y": -11800,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "8 AI Agent Mission",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1109703833"
+        }
+      }
+    },
+    {
+      "kind": "marker",
+      "index": 8,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1110038834"
+      },
+      "transform": {
+        "location": {
+          "x": -700,
+          "y": 1500,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90.00000000000003,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "settings": {
+        "text": "Hub",
+        "showOnWhichMap": "Both",
+        "iconScale": 1,
+        "enabledOnGameStart": true,
+        "showObjectivePulseToInstigatorOnly": true,
+        "showObjectivePulseToFriendlyPlayers": false
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MapIndicator_V2_C_UAID_E89C2592D1B5BE0703_1110038834"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 0,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BD0703_2137379650"
+      },
+      "transform": {
+        "location": {
+          "x": 200,
+          "y": 2100,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "1 PROMPT\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BD0703_2137379650"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 1,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1110372835"
+      },
+      "transform": {
+        "location": {
+          "x": 500,
+          "y": 2100,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "2 PATTERN\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1110372835"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 2,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1110716836"
+      },
+      "transform": {
+        "location": {
+          "x": 800,
+          "y": 2100,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "3 CLASSIFIER\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1110716836"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 3,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111043837"
+      },
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 2100,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "4 CONFIDENCE\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111043837"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 4,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111377838"
+      },
+      "transform": {
+        "location": {
+          "x": 200,
+          "y": 2100,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "5 ERROR\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111377838"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 5,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111708839"
+      },
+      "transform": {
+        "location": {
+          "x": 500,
+          "y": 2100,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "6 TOOLS\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111708839"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 6,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1112037840"
+      },
+      "transform": {
+        "location": {
+          "x": 800,
+          "y": 2100,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "7 SKILLS\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1112037840"
+        }
+      }
+    },
+    {
+      "kind": "label",
+      "index": 7,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1112372841"
+      },
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 2100,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "settings": {
+        "text": "8 AGENT\nWAITING",
+        "textSize": 16,
+        "displayMode": "Two Sided",
+        "showBorder": false,
+        "backgroundColor": {
+          "r": 0.014999999664723873,
+          "g": 0.03999999910593033,
+          "b": 0.07999999821186066,
+          "a": 1
+        }
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1112372841"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 0,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BD0703_2119316648"
+      },
+      "transform": {
+        "location": {
+          "x": 200,
+          "y": 2140,
+          "z": 2815
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BD0703_2119316648"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 1,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1112705842"
+      },
+      "transform": {
+        "location": {
+          "x": 500,
+          "y": 2140,
+          "z": 2815
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1112705842"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 2,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1113047843"
+      },
+      "transform": {
+        "location": {
+          "x": 800,
+          "y": 2140,
+          "z": 2815
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1113047843"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 3,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1113372844"
+      },
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 2140,
+          "z": 2815
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1113372844"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 4,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1113721845"
+      },
+      "transform": {
+        "location": {
+          "x": 200,
+          "y": 2140,
+          "z": 2615
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1113721845"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 5,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1114044846"
+      },
+      "transform": {
+        "location": {
+          "x": 500,
+          "y": 2140,
+          "z": 2615
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1114044846"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 6,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1114374847"
+      },
+      "transform": {
+        "location": {
+          "x": 800,
+          "y": 2140,
+          "z": 2615
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1114374847"
+        }
+      }
+    },
+    {
+      "kind": "light",
+      "index": 7,
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1114708848"
+      },
+      "transform": {
+        "location": {
+          "x": 1100,
+          "y": 2140,
+          "z": 2615
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      "settings": {
+        "initialState": false,
+        "enabledDuringPhase": "Gameplay Only",
+        "lightSizePercentage": 1,
+        "lightIntensityPercentage": 25
+      },
+      "binding": {
+        "savedActor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PointLight_V2_C_UAID_E89C2592D1B5BE0703_1114708848"
+        }
+      }
+    }
+  ]
+}

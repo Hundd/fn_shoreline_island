@@ -1,0 +1,5688 @@
+{
+  "inventory": [
+    {
+      "query": "journal",
+      "actors": [
+        {
+          "label": "academy_journal",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -426.72035598754877,
+              "y": 541.3575592041016,
+              "z": 2410
+            },
+            "max": {
+              "x": -173.331470489502,
+              "y": 658.2804946899414,
+              "z": 2568.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_journal_open",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5EE0003_1841782935",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -428,
+              "y": 872,
+              "z": 2372
+            },
+            "max": {
+              "x": -172,
+              "y": 1128,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_journal_stand_base",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B52C0103_1283053840",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -350,
+              "y": 950,
+              "z": 2400
+            },
+            "max": {
+              "x": -250,
+              "y": 1050,
+              "z": 2416
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_journal_stand_shelf",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B52C0103_1343380842",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -340,
+              "y": 960,
+              "z": 2472
+            },
+            "max": {
+              "x": -260,
+              "y": 1040,
+              "z": 2480
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_journal_display",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5EE0003_1852374936",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -352.06035828065933,
+              "y": -147.25928370495134,
+              "z": 2488.329710347122
+            },
+            "max": {
+              "x": -281.62450622987944,
+              "y": -67.2441469862012,
+              "z": 2535.42434154219
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_journal_sign",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F10003_1313695498",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -327.5804748535156,
+              "y": 821.1944351196289,
+              "z": 2719.9882202148438
+            },
+            "max": {
+              "x": -299.4536778162287,
+              "y": 1178.8056411743164,
+              "z": 2881.506561279297
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_journal_stand_stem",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B52C0103_1325351841",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -321,
+              "y": 979,
+              "z": 2416
+            },
+            "max": {
+              "x": -279,
+              "y": 1021,
+              "z": 2472
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "hub",
+      "actors": [
+        {
+          "label": "hub_spawner_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1846723041",
+          "class": {
+            "refPath": "/CRD_PlayerSpawn/BP_Creative_Player_Spawner_Prop.BP_Creative_Player_Spawner_Prop_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1128,
+              "y": 743.2771267316957,
+              "z": 2272
+            },
+            "max": {
+              "x": -748.3833216990693,
+              "y": 1028,
+              "z": 2595.884651184082
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_spawner_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1850698046",
+          "class": {
+            "refPath": "/CRD_PlayerSpawn/BP_Creative_Player_Spawner_Prop.BP_Creative_Player_Spawner_Prop_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1128,
+              "y": 1043.2771267316957,
+              "z": 2272
+            },
+            "max": {
+              "x": -748.3833216990693,
+              "y": 1328,
+              "z": 2595.884651184082
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_spawner_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1853365051",
+          "class": {
+            "refPath": "/CRD_PlayerSpawn/BP_Creative_Player_Spawner_Prop.BP_Creative_Player_Spawner_Prop_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1128,
+              "y": 1343.2771267316957,
+              "z": 2272
+            },
+            "max": {
+              "x": -748.3833216990693,
+              "y": 1628,
+              "z": 2595.884651184082
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_spawner_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Creative_Player_Spawner_Prop_C_UAID_E89C2592D1B5C80003_1857366056",
+          "class": {
+            "refPath": "/CRD_PlayerSpawn/BP_Creative_Player_Spawner_Prop.BP_Creative_Player_Spawner_Prop_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1128,
+              "y": 1643.2771267316957,
+              "z": 2272
+            },
+            "max": {
+              "x": -748.3833216990693,
+              "y": 1928,
+              "z": 2595.884651184082
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_destination",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1200.0000000000005,
+              "y": 999.9999999999995,
+              "z": 2000
+            },
+            "max": {
+              "x": -199.9999999999996,
+              "y": 2000.0000000000005,
+              "z": 3000
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_loop_route",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5CD0003_1537700021",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -801.9847949981689,
+              "y": 3076.556596374512,
+              "z": 2649.989987182617
+            },
+            "max": {
+              "x": -498.0152698516846,
+              "y": 3100.4643738562063,
+              "z": 2787.2805770874024
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_hub_walkway",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F50003_1729299315",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -1800,
+              "y": -600,
+              "z": 2300
+            },
+            "max": {
+              "x": -1100,
+              "y": 2400,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_south_hub_guide",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5DA0303_1794773371",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 240,
+              "y": -15628,
+              "z": 2272
+            },
+            "max": {
+              "x": 760,
+              "y": -15372,
+              "z": 2842
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_hub_route",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F50003_1736548331",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1450.4643738562058,
+              "y": 548.015205001831,
+              "z": 2669.989987182617
+            },
+            "max": {
+              "x": -1426.5565963745116,
+              "y": 851.9847301483155,
+              "z": 2807.2805770874024
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_garden_walkway",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CA0003_1450873443",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -800,
+              "y": 1350,
+              "z": 2400
+            },
+            "max": {
+              "x": 1700,
+              "y": 1650,
+              "z": 2404
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "loop_hub_walkway",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CD0003_1331795989",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -950,
+              "y": 2400,
+              "z": 2302
+            },
+            "max": {
+              "x": -350,
+              "y": 3400,
+              "z": 2402
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_route_sign",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5C90003_1499694245",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 572.4195251464844,
+              "y": 321.1944351196289,
+              "z": 2629.9882202148438
+            },
+            "max": {
+              "x": 600.5463221837713,
+              "y": 678.8056411743164,
+              "z": 2791.506561279297
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "pix_hub_helper_figure",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5740403_1367639481",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 72,
+              "y": 1772,
+              "z": 2272
+            },
+            "max": {
+              "x": 328,
+              "y": 2028,
+              "z": 2665
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "hub_static_sign_refresh",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5290103_1378411311",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 473.33147048950195,
+              "y": 141.7195053100586,
+              "z": 2450
+            },
+            "max": {
+              "x": 726.7203559875488,
+              "y": 258.64244079589844,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "core",
+      "actors": [
+        {
+          "label": "pix_agent_core_restored_audio",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_CRD_AudioPlayer_C_UAID_E89C2592D1B5730403_1606849303",
+          "class": {
+            "refPath": "/CRD_AudioPlayer/Device_CRD_AudioPlayer.Device_CRD_AudioPlayer_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 1122,
+              "y": 872,
+              "z": 2772
+            },
+            "max": {
+              "x": 1378,
+              "y": 1128,
+              "z": 3028
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_green_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C40403_1964750578",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": 8875,
+              "y": -4724.999990463257,
+              "z": 2625
+            },
+            "max": {
+              "x": 9125,
+              "y": -4474.999990463257,
+              "z": 2875
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_green_core_blaster",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B59C0503_1396988571",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 9225,
+              "y": -4024.999990463257,
+              "z": 2480
+            },
+            "max": {
+              "x": 9475,
+              "y": -3774.999990463257,
+              "z": 2730
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_small_blue_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1639151778",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 10025,
+              "y": -4274.999994277954,
+              "z": 2480
+            },
+            "max": {
+              "x": 10175,
+              "y": -4124.999994277954,
+              "z": 2630
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "pix_agent_core_restoration_vfx",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5710403_2015792948",
+          "class": {
+            "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1200,
+              "y": -1000,
+              "z": 900
+            },
+            "max": {
+              "x": 2800,
+              "y": 3000,
+              "z": 4900
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_large_blue_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1446873348",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 4775,
+              "y": 1275.0000095367432,
+              "z": 2400
+            },
+            "max": {
+              "x": 5025,
+              "y": 1525.0000095367432,
+              "z": 2650
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_small_blue_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1445030347",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 4425,
+              "y": 1325.000005722046,
+              "z": 2400
+            },
+            "max": {
+              "x": 4575,
+              "y": 1475.000005722046,
+              "z": 2550
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_red_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1448534349",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 4575,
+              "y": 1675.0000095367432,
+              "z": 2400
+            },
+            "max": {
+              "x": 4825,
+              "y": 1925.0000095367432,
+              "z": 2650
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_blue_delivery_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1614380772",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 9225,
+              "y": -3424.999990463257,
+              "z": 2480
+            },
+            "max": {
+              "x": 9475,
+              "y": -3174.999990463257,
+              "z": 2730
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_red_delivery_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1653808173",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 9225,
+              "y": -4624.999990463257,
+              "z": 2480
+            },
+            "max": {
+              "x": 9475,
+              "y": -4374.999990463257,
+              "z": 2730
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_large_blue_delivery_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1615583773",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 10025,
+              "y": -3524.999990463257,
+              "z": 2480
+            },
+            "max": {
+              "x": 10275,
+              "y": -3274.999990463257,
+              "z": 2730
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_data_core_rescue_controller",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C50403_1960683798",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 7473.331470489502,
+              "y": -3858.2804946899414,
+              "z": 2500
+            },
+            "max": {
+              "x": 7726.720355987549,
+              "y": -3741.3575592041016,
+              "z": 2658.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "confidence_core_cooling_vfx",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B59E0603_1416140996",
+          "class": {
+            "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4450,
+              "y": -5000,
+              "z": 550
+            },
+            "max": {
+              "x": -450,
+              "y": -1000,
+              "z": 4550
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "confidence_core_finish_burst",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5A70603_1930347583",
+          "class": {
+            "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4450,
+              "y": -5000,
+              "z": 550
+            },
+            "max": {
+              "x": -450,
+              "y": -1000,
+              "z": 4550
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "confidence_core_generator_probe",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Oak_Prop_Generator_SM_C_UAID_E89C2592D1B59D0603_1367441803",
+          "class": {
+            "refPath": "/Game/Creative/BuildingActors/Props/Oak/BP_Oak_Prop_Generator_SM.BP_Oak_Prop_Generator_SM_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2489.835386657715,
+              "y": -3074.9292915344236,
+              "z": 2499.9999908447267
+            },
+            "max": {
+              "x": -2410.269010925293,
+              "y": -2925.104303741455,
+              "z": 2595.074822998047
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "pix_ai_core_module_pulse_vfx",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5730403_1774547304",
+          "class": {
+            "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1200,
+              "y": -1000,
+              "z": 900
+            },
+            "max": {
+              "x": 2800,
+              "y": 3000,
+              "z": 4900
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "confidence_core_support",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.MilitaryBase_Metal_Crate_01_C_UAID_E89C2592D1B59D0603_1438942804",
+          "class": {
+            "refPath": "/Game/Creative/Sets/MilitaryBase/MilitaryBase_Metal_Crate_01.MilitaryBase_Metal_Crate_01_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2529.5683069229126,
+              "y": -3068.811664581299,
+              "z": 2399.8122024536133
+            },
+            "max": {
+              "x": -2380.7360849380493,
+              "y": -2933.1394271850586,
+              "z": 2499.3645515441895
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "pix_ai_core_centerpiece",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5360403_1849417564",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 570,
+              "y": 770,
+              "z": 2670
+            },
+            "max": {
+              "x": 1030,
+              "y": 1230,
+              "z": 3255
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "pix_ai_core_module_legend",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B56F0403_1596393595",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -327.5804748535156,
+              "y": 1671.194435119629,
+              "z": 2699.9882202148438
+            },
+            "max": {
+              "x": -299.4536778162287,
+              "y": 2028.8056411743164,
+              "z": 2861.506561279297
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "workshop",
+      "actors": [
+        {
+          "label": "prompt_workshop_reactor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1450208350",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 8050,
+              "y": 1250,
+              "z": 2400
+            },
+            "max": {
+              "x": 8350,
+              "y": 1550,
+              "z": 2700
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_module",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1453540352",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 9790,
+              "y": 490.00000839233394,
+              "z": 2560
+            },
+            "max": {
+              "x": 10010,
+              "y": 710.0000083923339,
+              "z": 2780
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_visual_route",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_2068378399",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 3200,
+              "y": -89,
+              "z": 2272
+            },
+            "max": {
+              "x": 11400,
+              "y": 389,
+              "z": 2528
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_visual_test",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_1961967397",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 7425,
+              "y": 989,
+              "z": 2272
+            },
+            "max": {
+              "x": 9275,
+              "y": 1911,
+              "z": 2735
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_visual_entry",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5190603_1484881576",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 3072,
+              "y": -310,
+              "z": 2272
+            },
+            "max": {
+              "x": 3328,
+              "y": 710,
+              "z": 2917
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_prompt_workshop",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 6373.331470489502,
+              "y": 1741.7195053100586,
+              "z": 2450
+            },
+            "max": {
+              "x": 6626.720355987549,
+              "y": 1858.6424407958984,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_entry_zone",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5120603_1689731353",
+          "class": {
+            "refPath": "/CRD_VolumetricRegion/Device_MutatorVolume_V2.Device_MutatorVolume_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 2815.615997314453,
+              "y": -184.38400268554688,
+              "z": 2403.71199798584
+            },
+            "max": {
+              "x": 3584.384002685547,
+              "y": 584.3840026855469,
+              "z": 2980.28800201416
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_pix",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50B0603_1985166114",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 7530,
+              "y": 1321.6000003204344,
+              "z": 2530
+            },
+            "max": {
+              "x": 7670,
+              "y": 1470.000005340576,
+              "z": 2724.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_large_blue_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1446873348",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 4775,
+              "y": 1275.0000095367432,
+              "z": 2400
+            },
+            "max": {
+              "x": 5025,
+              "y": 1525.0000095367432,
+              "z": 2650
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_small_blue_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1445030347",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 4425,
+              "y": 1325.000005722046,
+              "z": 2400
+            },
+            "max": {
+              "x": 4575,
+              "y": 1475.000005722046,
+              "z": 2550
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_red_core",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1448534349",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 4575,
+              "y": 1675.0000095367432,
+              "z": 2400
+            },
+            "max": {
+              "x": 4825,
+              "y": 1925.0000095367432,
+              "z": 2650
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1451881351",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 8740,
+              "y": 1240,
+              "z": 2400
+            },
+            "max": {
+              "x": 9060,
+              "y": 1560,
+              "z": 2520
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_visual_inspect",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_1487458395",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 4140,
+              "y": 1240,
+              "z": 2272
+            },
+            "max": {
+              "x": 5260,
+              "y": 1987,
+              "z": 2712
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_visual_connect",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_2023356398",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 9475,
+              "y": 380,
+              "z": 2272
+            },
+            "max": {
+              "x": 10725,
+              "y": 1370,
+              "z": 2805
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_visual_compose",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5180603_1708106396",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": 5150,
+              "y": 475,
+              "z": 2272
+            },
+            "max": {
+              "x": 6850,
+              "y": 1327.5,
+              "z": 2754
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "scanner",
+      "actors": [
+        {
+          "label": "tool_lab_hit_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5150703_2090318924",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Trigger_V2.Device_Trigger_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3851.5625000000005,
+              "y": -9628,
+              "z": 2228.4375
+            },
+            "max": {
+              "x": -3148.4374999999995,
+              "y": -9372,
+              "z": 2931.5625
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_destination_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5860403_2069096650",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6245,
+              "y": -14945,
+              "z": 2425
+            },
+            "max": {
+              "x": -6155,
+              "y": -14854.099999999999,
+              "z": 2515
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_destination_scanner_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5C40403_2141834586",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 6072,
+              "y": -5428,
+              "z": 2832
+            },
+            "max": {
+              "x": 6328,
+              "y": -5172,
+              "z": 3088
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_target_scanner_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5C40403_2114540585",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 6072,
+              "y": -3128,
+              "z": 2832
+            },
+            "max": {
+              "x": 6328,
+              "y": -2872,
+              "z": 3088
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "tool_lab_ring_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160703_1269791110",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3575,
+              "y": -9490,
+              "z": 2505
+            },
+            "max": {
+              "x": -3425,
+              "y": -9490,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_workshop_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5120603_1451881351",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 8740,
+              "y": 1240,
+              "z": 2400
+            },
+            "max": {
+              "x": 9060,
+              "y": 1560,
+              "z": 2520
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_energy_scanner_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5C50403_1721208785",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 8872,
+              "y": -8128,
+              "z": 2372
+            },
+            "max": {
+              "x": 9128,
+              "y": -7872,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_research_scanner_prop",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1762703174",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": 10690,
+              "y": -3860,
+              "z": 2460
+            },
+            "max": {
+              "x": 11010,
+              "y": -3540,
+              "z": 2580
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "tool_lab_label_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1713927008",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3616.223617172241,
+              "y": -9480.375657842651,
+              "z": 2429.9958770751946
+            },
+            "max": {
+              "x": -3383.7763332366944,
+              "y": -9466.209762573242,
+              "z": 2486.970540947448
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "tool_lab_target_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2089865923",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3626.720355987549,
+              "y": -9558.642440795898,
+              "z": 2580
+            },
+            "max": {
+              "x": -3373.331470489502,
+              "y": -9441.719505310059,
+              "z": 2738.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_research_scanner_lens",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70403_1576481171",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": 11125,
+              "y": -4274.999994277954,
+              "z": 2715
+            },
+            "max": {
+              "x": 11275,
+              "y": -4124.999994277954,
+              "z": 2865
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_4_destination_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870403_1086842829",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13517.5,
+              "y": -12338.25,
+              "z": 2412.5
+            },
+            "max": {
+              "x": -13442.5,
+              "y": -12262.5,
+              "z": 2487.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_destination_scanner_platform",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C40403_2099288583",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": 5900,
+              "y": -5600,
+              "z": 2815
+            },
+            "max": {
+              "x": 6500,
+              "y": -5000,
+              "z": 2865
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_target_scanner_platform",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C40403_2098059582",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": 5900,
+              "y": -3300,
+              "z": 2815
+            },
+            "max": {
+              "x": 6500,
+              "y": -2700,
+              "z": 2865
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "signal",
+      "actors": [
+        {
+          "label": "signal_progress",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1584565293",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": 141.7195053100586,
+              "z": 2450
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": 258.64244079589844,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_badge_tracker",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5F50003_1585984295",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Tracker_V2.Device_Tracker_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3421.66495513916,
+              "y": 178.1214141845703,
+              "z": 2409.363262456299
+            },
+            "max": {
+              "x": -3365.947923177857,
+              "y": 222.01702759195314,
+              "z": 2471.1470880508423
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_1_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F90003_1604114051",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -7400,
+              "y": -600,
+              "z": 2250
+            },
+            "max": {
+              "x": -4600,
+              "y": 2700,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_station_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1585213294",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": 841.7195053100586,
+              "z": 2400
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": 958.6424407958984,
+              "z": 2558.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_0_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F50003_1591530307",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3480.000146472222,
+              "y": 1274.9710161875,
+              "z": 2676.304921875
+            },
+            "max": {
+              "x": -2519.999528281808,
+              "y": 1310.9733163952274,
+              "z": 2883.0483984375005
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_0_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5F50003_1586512296",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3626.4358520507812,
+              "y": 159.60120391845703,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -3578.03409576416,
+              "y": 239.61634063720703,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_0_replay_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F50003_1590595305",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2528,
+              "y": 172,
+              "z": 2372
+            },
+            "max": {
+              "x": -2272,
+              "y": 428,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_0_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5F50003_1591046306",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2528,
+              "y": 572,
+              "z": 2372
+            },
+            "max": {
+              "x": -2272,
+              "y": 828,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_hub_walkway",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F50003_1729299315",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -1800,
+              "y": -600,
+              "z": 2300
+            },
+            "max": {
+              "x": -1100,
+              "y": 2400,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_hub_route",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5F50003_1736548331",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1450.4643738562058,
+              "y": 548.015205001831,
+              "z": 2669.989987182617
+            },
+            "max": {
+              "x": -1426.5565963745116,
+              "y": 851.9847301483155,
+              "z": 2807.2805770874024
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_2_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F90003_1784813086",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -10200,
+              "y": -600,
+              "z": 2250
+            },
+            "max": {
+              "x": -7400,
+              "y": 2700,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_signal_beacon_hall",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1192179148",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -11710,
+              "y": -240,
+              "z": 2272
+            },
+            "max": {
+              "x": -3070,
+              "y": 2040,
+              "z": 4790
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_0_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F50003_1662306310",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -4600,
+              "y": -600,
+              "z": 2250
+            },
+            "max": {
+              "x": -1800,
+              "y": 2700,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_signal_station_identity",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1092774706",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -128,
+              "y": -128,
+              "z": 2272
+            },
+            "max": {
+              "x": 128,
+              "y": 128,
+              "z": 2528
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "signal_3_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5F90003_1880730121",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -13000,
+              "y": -600,
+              "z": 2250
+            },
+            "max": {
+              "x": -10200,
+              "y": 2700,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "energy",
+      "actors": [
+        {
+          "label": "prompt_lab_energy_scan_vfx",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5CB0403_1473904812",
+          "class": {
+            "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 7000,
+              "y": -10000,
+              "z": 900
+            },
+            "max": {
+              "x": 11000,
+              "y": -6000,
+              "z": 4900
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5FD0003_1898725873",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3239.616340637207,
+              "y": -3326.4358520507812,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -3159.601203918457,
+              "y": -3278.03409576416,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_progress_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": -3358.2804946899414,
+              "z": 2450
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": -3241.3575592041016,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_badge_tracker",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5FD0003_1838518869",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Tracker_V2.Device_Tracker_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3422.0170275919536,
+              "y": -3321.66495513916,
+              "z": 2409.363262456299
+            },
+            "max": {
+              "x": -3378.1214141845703,
+              "y": -3265.947923177857,
+              "z": 2471.1470880508423
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_energy",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1590800207",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13497.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13362.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "data_energy_hud",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5860503_1590696722",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 7460.383659362793,
+              "y": -2426.4358520507812,
+              "z": 2599.952516555786
+            },
+            "max": {
+              "x": 7540.398796081543,
+              "y": -2378.03409576416,
+              "z": 2647.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "academy_data_energy_manager",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1779919723",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 7673.331470489502,
+              "y": -2458.2804946899414,
+              "z": 2500
+            },
+            "max": {
+              "x": 7926.720355987549,
+              "y": -2341.3575592041016,
+              "z": 2658.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_energy_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1590208206",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13558,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -13302,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_station_2_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5000103_1702259471",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -7400,
+              "y": -4100,
+              "z": 2250
+            },
+            "max": {
+              "x": -4600,
+              "y": -600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "prompt_lab_energy_scanner_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5C50403_1721208785",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 8872,
+              "y": -8128,
+              "z": 2372
+            },
+            "max": {
+              "x": 9128,
+              "y": -7872,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_station_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": -2658.2804946899414,
+              "z": 2450
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": -2541.3575592041016,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_replay_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1835033861",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2748,
+              "y": -2878,
+              "z": 2408
+            },
+            "max": {
+              "x": -2492,
+              "y": -2622,
+              "z": 2664
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5FD0003_1835898863",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2468,
+              "y": -2878,
+              "z": 2408
+            },
+            "max": {
+              "x": -2212,
+              "y": -2622,
+              "z": 2664
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1836812865",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3357.611129760742,
+              "y": -3701.0926443675426,
+              "z": 2959.9764404296875
+            },
+            "max": {
+              "x": -2642.388717651367,
+              "y": -3644.8390502929688,
+              "z": 3283.0131225585938
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_walkway",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5FD0003_1898363872",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -1800,
+              "y": -2400,
+              "z": 2300
+            },
+            "max": {
+              "x": -1100,
+              "y": 600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_station_3_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5000103_1703364473",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -10200,
+              "y": -4100,
+              "z": 2250
+            },
+            "max": {
+              "x": -7400,
+              "y": -600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_route",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5FD0003_1838082868",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -1300.5463221837713,
+              "y": -828.8056411743164,
+              "z": 2599.9882202148438
+            },
+            "max": {
+              "x": -1272.4195251464844,
+              "y": -471.1944351196289,
+              "z": 2761.506561279297
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "energy_0_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5FD0003_1897994871",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -4600,
+              "y": -4100,
+              "z": 2250
+            },
+            "max": {
+              "x": -1800,
+              "y": -600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "debug",
+      "actors": [
+        {
+          "label": "GameplayDebuggerPlayerManager0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.GameplayDebuggerPlayerManager_0",
+          "class": {
+            "refPath": "/Script/GameplayDebugger.GameplayDebuggerPlayerManager"
+          },
+          "bounds": {
+            "min": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "max": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_1_badge_tracker",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5030103_1794482008",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Tracker_V2.Device_Tracker_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3221.66495513916,
+              "y": -7321.87858581543,
+              "z": 2409.363262456299
+            },
+            "max": {
+              "x": -3165.947923177857,
+              "y": -7277.982972408046,
+              "z": 2471.1470880508423
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_1_progress",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5030103_1792824005",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": -7158.280494689941,
+              "z": 2450
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": -7041.357559204102,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_1_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5030103_1793940007",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3226.4358520507812,
+              "y": -7240.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -3178.03409576416,
+              "y": -7160.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_3_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5060103_1968962645",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -10200,
+              "y": -7800,
+              "z": 2250
+            },
+            "max": {
+              "x": -7400,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_1_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5030103_1837349035",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -4600,
+              "y": -7800,
+              "z": 2250
+            },
+            "max": {
+              "x": -1800,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_debug_repair_garage",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1306682149",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -13890,
+              "y": -7790,
+              "z": 2272
+            },
+            "max": {
+              "x": -966.1836181259623,
+              "y": -5060,
+              "z": 6050
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_2_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5060103_1968086643",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -7400,
+              "y": -7800,
+              "z": 2250
+            },
+            "max": {
+              "x": -4600,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_4_floor4",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -15840,
+              "y": -4108,
+              "z": 2250
+            },
+            "max": {
+              "x": -13040,
+              "y": -408,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_4_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5060103_1916052618",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -11626.435852050781,
+              "y": -7240.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -11578.03409576416,
+              "y": -7160.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_4_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5060103_1969764647",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -13000,
+              "y": -7800,
+              "z": 2250
+            },
+            "max": {
+              "x": -10200,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_debug_station_identity",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1093985708",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -128,
+              "y": -128,
+              "z": 2272
+            },
+            "max": {
+              "x": 128,
+              "y": 128,
+              "z": 2528
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_4_floor2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -15792,
+              "y": -7800,
+              "z": 2250
+            },
+            "max": {
+              "x": -12992,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_4_floor5",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -13048,
+              "y": -4108,
+              "z": 2250
+            },
+            "max": {
+              "x": -10248,
+              "y": -408,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_2_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5060103_1889379566",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -6026.435852050781,
+              "y": -7240.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -5978.03409576416,
+              "y": -7160.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_3_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5060103_1902484592",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -8826.435852050781,
+              "y": -7240.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -8778.03409576416,
+              "y": -7160.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_4_floor3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1462442220",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -15840,
+              "y": -7800,
+              "z": 2250
+            },
+            "max": {
+              "x": -13040,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "debug_station_1_walkway",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5030103_1837750036",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -2800,
+              "y": -4500,
+              "z": 2300
+            },
+            "max": {
+              "x": -2000,
+              "y": -4100,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "event",
+      "actors": [
+        {
+          "label": "event_station_1_progress",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": -10958.280494689941,
+              "z": 2450
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": -10841.357559204102,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_badge_tracker",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5080103_1711609004",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Tracker_V2.Device_Tracker_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3221.66495513916,
+              "y": -11121.87858581543,
+              "z": 2409.363262456299
+            },
+            "max": {
+              "x": -3165.947923177857,
+              "y": -11077.982972408048,
+              "z": 2471.1470880508423
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_replay_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1720675021",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -18500,
+              "y": -23599.99885559082,
+              "z": -12497
+            },
+            "max": {
+              "x": 11500,
+              "y": 6400.00114440918,
+              "z": 17503
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5080103_1758248032",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -4600,
+              "y": -11600,
+              "z": 2250
+            },
+            "max": {
+              "x": -1800,
+              "y": -7800,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5080103_1721691023",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -17900,
+              "y": -23599.99885559082,
+              "z": -12497
+            },
+            "max": {
+              "x": 12100,
+              "y": 6400.00114440918,
+              "z": 17503
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_parcel",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5080103_1759083034",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3780,
+              "y": -9880,
+              "z": 2445
+            },
+            "max": {
+              "x": -3740,
+              "y": -9840,
+              "z": 2495
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5080103_1710805003",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3226.4358520507812,
+              "y": -11040.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -3178.03409576416,
+              "y": -10960.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_response_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1723860027",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3403.9694602966306,
+              "y": -10112.413793872314,
+              "z": 2999.9893981933596
+            },
+            "max": {
+              "x": -2796.0304100036624,
+              "y": -10082.419525146484,
+              "z": 3145.355905151367
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_factory_4_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50B0103_1220432656",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -13000,
+              "y": -11600,
+              "z": 2250
+            },
+            "max": {
+              "x": -10200,
+              "y": -7800,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_event_stepped_factory",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1424475150",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -13800,
+              "y": -11800,
+              "z": 2272
+            },
+            "max": {
+              "x": -1000,
+              "y": -9040,
+              "z": 5850
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_factory_2_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50B0103_1216649648",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -7400,
+              "y": -11600,
+              "z": 2250
+            },
+            "max": {
+              "x": -4600,
+              "y": -7800,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_chute",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5080103_1758679033",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3800,
+              "y": -9815,
+              "z": 2400
+            },
+            "max": {
+              "x": -3600,
+              "y": -9805,
+              "z": 2560
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_route",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1726186031",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2150.437057747017,
+              "y": -8143.044512939453,
+              "z": 2599.990576171875
+            },
+            "max": {
+              "x": -2127.9356201171877,
+              "y": -7856.955548095703,
+              "z": 2729.205249023438
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_station",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3326.668529510498,
+              "y": -10258.280494689941,
+              "z": 2450
+            },
+            "max": {
+              "x": -3073.279644012451,
+              "y": -10141.357559204102,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5080103_1722709025",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3593.372242736816,
+              "y": -10103.746764390693,
+              "z": 2779.9853930664062
+            },
+            "max": {
+              "x": -2806.627589416504,
+              "y": -10066.903430175782,
+              "z": 2980.2681359863277
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_station_1_lamp",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5080103_1759484035",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -2630,
+              "y": -10029.999997711182,
+              "z": 2590
+            },
+            "max": {
+              "x": -2570,
+              "y": -9969.999997711182,
+              "z": 2650
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_event_station_identity",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1094518709",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -11745,
+              "y": -8794.999988937378,
+              "z": 2272
+            },
+            "max": {
+              "x": 128,
+              "y": 128,
+              "z": 3435
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "event_factory_3_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50B0103_1218634652",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -10200,
+              "y": -11600,
+              "z": 2250
+            },
+            "max": {
+              "x": -7400,
+              "y": -7800,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "nursery",
+      "actors": [
+        {
+          "label": "nursery_plant_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5180103_1464095177",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4185,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -4115,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B51D0103_1804822174",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -12000,
+              "y": -19000,
+              "z": 2250
+            },
+            "max": {
+              "x": -8600,
+              "y": -15300,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_1_remix_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1504758423",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2278,
+              "y": -17828,
+              "z": 2372
+            },
+            "max": {
+              "x": -2022,
+              "y": -17572,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3290,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -3210,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1715937170",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6690,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -6610,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_remix_label",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1509195426",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -5617.94614364624,
+              "y": -17760.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -5482.053885345459,
+              "y": -17749.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_nursery_progress",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3626.668529510498,
+              "y": -18558.28049468994,
+              "z": 2450
+            },
+            "max": {
+              "x": -3373.279644012451,
+              "y": -18441.3575592041,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_plant_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1814133183",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -14385,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -14315,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_nursery_station",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3626.668529510498,
+              "y": -17058.28049468994,
+              "z": 2450
+            },
+            "max": {
+              "x": -3373.279644012451,
+              "y": -16941.3575592041,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_plant_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5180103_1463994176",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3735,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -3665,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_plant",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1451019810",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3285,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -3215,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_1_remix_label",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1506811424",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -2217.94614364624,
+              "y": -17760.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -2082.0538853454586,
+              "y": -17749.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_plant",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1806048176",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -10085,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -10015,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_remix_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1510306427",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9078,
+              "y": -17828,
+              "z": 2372
+            },
+            "max": {
+              "x": -8822,
+              "y": -17572,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_plant",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1777284171",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6685,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -6615,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_nursery_station4",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13826.668529510498,
+              "y": -17058.28049468994,
+              "z": 2450
+            },
+            "max": {
+              "x": -13573.279644012451,
+              "y": -16941.3575592041,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_plant_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1812790182",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13935,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -13865,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1810695180",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13490,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -13410,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_plant",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1811489181",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13485,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -13415,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_remix_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1512516429",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12478,
+              "y": -17828,
+              "z": 2372
+            },
+            "max": {
+              "x": -12222,
+              "y": -17572,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_remix_label",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1513508430",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12417.94614364624,
+              "y": -17760.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -12282.05388534546,
+              "y": -17749.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5160103_1450557808",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -5200,
+              "y": -19000,
+              "z": 2250
+            },
+            "max": {
+              "x": -1800,
+              "y": -15300,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_nursery_station3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -10426.668529510498,
+              "y": -17058.28049468994,
+              "z": 2450
+            },
+            "max": {
+              "x": -10173.279644012451,
+              "y": -16941.3575592041,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_plant_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1807420177",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -10535,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -10465,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_plant_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1808730178",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -10985,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -10915,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1805318175",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -10090,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -10010,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_remix_label",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1511327428",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9017.94614364624,
+              "y": -17760.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -8882.05388534546,
+              "y": -17749.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_nursery_station_identity",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1095729711",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -14070,
+              "y": -15929.99998626709,
+              "z": 2272
+            },
+            "max": {
+              "x": 128,
+              "y": 128,
+              "z": 2819.999967956538
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_nursery_canopy_garden",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1632818152",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -15050,
+              "y": -18610,
+              "z": 2272
+            },
+            "max": {
+              "x": -1740,
+              "y": -15550,
+              "z": 5009.999960327143
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_plant_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1801974172",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -7135,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -7065,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_plant_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1803362173",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -7585,
+              "y": -16334.999997329713,
+              "z": 2415
+            },
+            "max": {
+              "x": -7515,
+              "y": -16264.999997329713,
+              "z": 2485
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B51D0103_1715402169",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -8600,
+              "y": -19000,
+              "z": 2250
+            },
+            "max": {
+              "x": -5200,
+              "y": -15300,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_nursery_station2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -7026.668529510498,
+              "y": -17058.28049468994,
+              "z": 2450
+            },
+            "max": {
+              "x": -6773.279644012451,
+              "y": -16941.3575592041,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_remix_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1508057425",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -5678,
+              "y": -17828,
+              "z": 2372
+            },
+            "max": {
+              "x": -5422,
+              "y": -17572,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B51D0103_1810179179",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -15400,
+              "y": -19000,
+              "z": 2250
+            },
+            "max": {
+              "x": -12000,
+              "y": -15300,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "bot",
+      "actors": [
+        {
+          "label": "fn_shoreline_island_bot_4_slot_2_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1586993202",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13198,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -12942,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_return",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1861609043",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4078.805564880371,
+              "y": -13361.249389620847,
+              "z": 2521.114345703125
+            },
+            "max": {
+              "x": -3721.1943588256836,
+              "y": -13343.45171508789,
+              "z": 2598.8898286099393
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_progress",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3626.668529510498,
+              "y": -14858.280494689941,
+              "z": 2450
+            },
+            "max": {
+              "x": -3373.279644012451,
+              "y": -14741.357559204102,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_badge_tracker",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B50D0103_1846505015",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Tracker_V2.Device_Tracker_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3521.66495513916,
+              "y": -15021.87858581543,
+              "z": 2409.363262456299
+            },
+            "max": {
+              "x": -3465.947923177857,
+              "y": -14977.982972408048,
+              "z": 2471.1470880508423
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_parcel",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1675058243",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -9880,
+              "y": -14779.999993896485,
+              "z": 2520
+            },
+            "max": {
+              "x": -9720,
+              "y": -14619.999993896485,
+              "z": 2680
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_lamp_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1989112057",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4775,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -4625,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5130103_1670491233",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -8600,
+              "y": -15300,
+              "z": 2250
+            },
+            "max": {
+              "x": -5200,
+              "y": -11600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5160103_1450887809",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -3290,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -3210,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_2_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1715937170",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6690,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -6610,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_slot_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1585737201",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12957.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -12822.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_label_return",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1553131145",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -6278.805564880371,
+              "y": -13361.249389620847,
+              "z": 2521.114345703125
+            },
+            "max": {
+              "x": -5921.194358825684,
+              "y": -13343.45171508789,
+              "z": 2598.8898286099393
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_food_crate",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B57C0403_1488329898",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4732.5,
+              "y": -14632.5,
+              "z": 2417.5
+            },
+            "max": {
+              "x": -4667.5,
+              "y": -14566.849999999999,
+              "z": 2482.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_lamp_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1673137239",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6375,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -6225,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B50D0103_1845888014",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3526.4358520507812,
+              "y": -14940.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -3478.03409576416,
+              "y": -14860.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_station",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -3626.668529510498,
+              "y": -14058.280494689941,
+              "z": 2450
+            },
+            "max": {
+              "x": -3373.279644012451,
+              "y": -13941.357559204102,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_slot_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1848721019",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4896.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -4503.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_lamp_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1995064058",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4475,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -4325,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_slot_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1849820021",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4596.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -4203.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_lamp_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_2001078059",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4175,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -4025,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_slot_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1850870023",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4296.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -3903.3137947082523,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_lamp_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1672350237",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6975,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -6825,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_label_slot_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1539701121",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -7096.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -6703.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_lamp_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1672753238",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6675,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -6525,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_label_slot_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1540917123",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -6796.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -6403.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_label_slot_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1542115125",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -6496.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -6103.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_lamp_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1675596244",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -9375,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -9225,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_slot_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1561992160",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9496.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -9103.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_lamp_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1676836245",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -9075,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -8925,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_slot_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1563035162",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9196.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -8803.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_lamp_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1677237246",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -8775,
+              "y": -14290,
+              "z": 2505
+            },
+            "max": {
+              "x": -8625,
+              "y": -14290,
+              "z": 2655
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_slot_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1564042164",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -8896.686121368408,
+              "y": -14280.383127764566,
+              "z": 2429.990576171875
+            },
+            "max": {
+              "x": -8503.313794708252,
+              "y": -14252.419525146484,
+              "z": 2559.5638617006484
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_mission_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1862177044",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4869.55223340171,
+              "y": -15100,
+              "z": 2749.2061340250125
+            },
+            "max": {
+              "x": -3930.5549710653486,
+              "y": -15026.452067057293,
+              "z": 3012.3040954671756
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_mission_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1553673146",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -7069.55223340171,
+              "y": -15100,
+              "z": 2749.2061340250125
+            },
+            "max": {
+              "x": -6130.554971065349,
+              "y": -15026.452067057293,
+              "z": 3012.3040954671756
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_mission_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1575374185",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9469.55223340171,
+              "y": -15100,
+              "z": 2749.2061340250125
+            },
+            "max": {
+              "x": -8530.554971065349,
+              "y": -15026.452067057293,
+              "z": 3012.3040954671756
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B50D0103_1861120042",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4028,
+              "y": -13528,
+              "z": 2362
+            },
+            "max": {
+              "x": -3772,
+              "y": -13272,
+              "z": 2618
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1552659144",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -6228,
+              "y": -13528,
+              "z": 2362
+            },
+            "max": {
+              "x": -5972,
+              "y": -13272,
+              "z": 2618
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1574283183",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -8828,
+              "y": -13528,
+              "z": 2362
+            },
+            "max": {
+              "x": -8572,
+              "y": -13272,
+              "z": 2618
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_parcel",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1671963236",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -7010,
+              "y": -14800,
+              "z": 2410
+            },
+            "max": {
+              "x": -6989.299999999999,
+              "y": -14600,
+              "z": 2590
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_destination_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5860403_2069096650",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -6245,
+              "y": -14945,
+              "z": 2425
+            },
+            "max": {
+              "x": -6155,
+              "y": -14854.099999999999,
+              "z": 2515
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_home",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1863891047",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4578.805564880371,
+              "y": -14551.116776675575,
+              "z": 2484.6334033203125
+            },
+            "max": {
+              "x": -4221.194358825684,
+              "y": -14531.613016764324,
+              "z": 2575.211640381935
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_2_label_home",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1555408149",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -7223.140692887273,
+              "y": -15000,
+              "z": 2664.8454853837143
+            },
+            "max": {
+              "x": -6776.966511579785,
+              "y": -14965.064731852213,
+              "z": 2795.9096293623793
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_replay_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1573206181",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9428,
+              "y": -13528,
+              "z": 2362
+            },
+            "max": {
+              "x": -9172,
+              "y": -13272,
+              "z": 2618
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1906902054",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4440,
+              "y": -14730,
+              "z": 2460
+            },
+            "max": {
+              "x": -4360,
+              "y": -14663.400000411988,
+              "z": 2757.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_seed",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1950832055",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4432.5,
+              "y": -14632.5,
+              "z": 2417.5
+            },
+            "max": {
+              "x": -4367.5,
+              "y": -14566.849999999999,
+              "z": 2482.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_parcel",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B50D0103_1982499056",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -9120,
+              "y": -14820,
+              "z": 2400
+            },
+            "max": {
+              "x": -8880,
+              "y": -14580,
+              "z": 2410
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_garden",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1866058051",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4878.805564880371,
+              "y": -14551.116776675575,
+              "z": 2484.6334033203125
+            },
+            "max": {
+              "x": -4521.194358825684,
+              "y": -14531.613016764324,
+              "z": 2575.211640381935
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_label_storage",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B50D0103_1866616052",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -4278.805564880371,
+              "y": -14551.116776675575,
+              "z": 2484.6334033203125
+            },
+            "max": {
+              "x": -3921.1943588256836,
+              "y": -14531.613016764324,
+              "z": 2575.211640381935
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_feedback",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5130103_1582594195",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_HUDMessage_V2.Device_HUDMessage_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13726.435852050781,
+              "y": -14940.398796081543,
+              "z": 2449.952516555786
+            },
+            "max": {
+              "x": -13678.03409576416,
+              "y": -14860.383659362793,
+              "z": 2497.0471477508545
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_bot_station_identity",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1095115710",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -14815.233261035337,
+              "y": -13334.999989700318,
+              "z": 2272
+            },
+            "max": {
+              "x": 128,
+              "y": 128,
+              "z": 3555
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_energy",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1590800207",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13497.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13362.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_claim_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1583131196",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12658,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -12402,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_cell2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1602710229",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14237.28338470459,
+              "y": -13396.54828491211,
+              "z": 2419.992932128906
+            },
+            "max": {
+              "x": -14022.716661071778,
+              "y": -13379.672206689738,
+              "z": 2516.903936767578
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_home",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1577677188",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9235.101137975947,
+              "y": -15000,
+              "z": 2999.98869140625
+            },
+            "max": {
+              "x": -8765.00606649111,
+              "y": -14963.226033528645,
+              "z": 3156.0244939622953
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_repeat_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1588192204",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13378,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -13122,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_slot_0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1584724199",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12777.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -12642.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5130103_1673574240",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -12000,
+              "y": -15300,
+              "z": 2250
+            },
+            "max": {
+              "x": -8600,
+              "y": -11600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_next",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1597144219",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14577.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -14442.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_4_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1810695180",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13490,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -13410,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_station",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+          "class": {
+            "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13826.668529510498,
+              "y": -14058.280494689941,
+              "z": 2450
+            },
+            "max": {
+              "x": -13573.279644012451,
+              "y": -13941.357559204102,
+              "z": 2608.1131439208984
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_slot_0_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1584205198",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12838,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -12582,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_slot_1_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1585259200",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13018,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -12762,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_energy_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1590208206",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13558,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -13302,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_connection_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1591368208",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13738,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -13482,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_rule_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1592398210",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13918,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -13662,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_cargo_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1593448212",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14098,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -13842,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_run_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1594571214",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14278,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -14022,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_help_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1595589216",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14458,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -14202,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_next_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1596684218",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14638,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -14382,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_replay_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1597667220",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14818,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -14562,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_return_button",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1598667222",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14998,
+              "y": -14228,
+              "z": 2372
+            },
+            "max": {
+              "x": -14742,
+              "y": -13972,
+              "z": 2628
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_mission_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599946224",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13653.969589996337,
+              "y": -12096.886807250976,
+              "z": 2689.9799743652343
+            },
+            "max": {
+              "x": -13046.03053970337,
+              "y": -12049.071252287587,
+              "z": 2964.5611541748044
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_program_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1600519225",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14653.969589996337,
+              "y": -12096.886807250976,
+              "z": 2689.9799743652343
+            },
+            "max": {
+              "x": -14046.03053970337,
+              "y": -12049.071252287587,
+              "z": 2964.5611541748044
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_execution_board",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601083226",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14003.969589996337,
+              "y": -12096.886807250976,
+              "z": 2439.9799743652343
+            },
+            "max": {
+              "x": -13396.03053970337,
+              "y": -12049.071252287587,
+              "z": 2714.5611541748044
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1678371248",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13690,
+              "y": -13336.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -13610,
+              "y": -13270,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_seed",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1678810249",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13667.5,
+              "y": -13217.849999999999,
+              "z": 2432.5
+            },
+            "max": {
+              "x": -13632.5,
+              "y": -13182.5,
+              "z": 2467.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_parcel",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1679254250",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13725,
+              "y": -12825,
+              "z": 2425
+            },
+            "max": {
+              "x": -13675,
+              "y": -12775,
+              "z": 2475
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_lamp_1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1679676251",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13915,
+              "y": -13144.999998092651,
+              "z": 2425
+            },
+            "max": {
+              "x": -13865,
+              "y": -13094.999998092651,
+              "z": 2475
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_lamp_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1680115252",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -14155,
+              "y": -13144.999998092651,
+              "z": 2425
+            },
+            "max": {
+              "x": -14105,
+              "y": -13094.999998092651,
+              "z": 2475
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_lamp_3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5130103_1680524253",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -14395,
+              "y": -13144.999998092651,
+              "z": 2425
+            },
+            "max": {
+              "x": -14345,
+              "y": -13094.999998092651,
+              "z": 2475
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_claim",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1583607197",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -12597.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -12462.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_slot_2",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1587533203",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13137.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13002.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_repeat",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1588663205",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13317.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13182.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_connection",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1591844209",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13677.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13542.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_rule",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1592906211",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13857.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13722.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_cargo",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1594025213",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14037.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -13902.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_run",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1595050215",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14217.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -14082.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_help",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1596089217",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14397.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -14262.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_replay",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1598127221",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14757.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -14622.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_return",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599416223",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14937.94614364624,
+              "y": -14160.480580444335,
+              "z": 2419.995523681641
+            },
+            "max": {
+              "x": -14802.05388534546,
+              "y": -14149.792397570167,
+              "z": 2481.372493286133
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_home",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601635227",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13757.28338470459,
+              "y": -13396.54828491211,
+              "z": 2419.992932128906
+            },
+            "max": {
+              "x": -13542.716661071778,
+              "y": -13379.672206689738,
+              "z": 2516.903936767578
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_cell1",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1602141228",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13997.28338470459,
+              "y": -13396.54828491211,
+              "z": 2419.992932128906
+            },
+            "max": {
+              "x": -13782.716661071778,
+              "y": -13379.672206689738,
+              "z": 2516.903936767578
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_cell3",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1603476230",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14477.28338470459,
+              "y": -13396.54828491211,
+              "z": 2419.992932128906
+            },
+            "max": {
+              "x": -14262.716661071778,
+              "y": -13379.672206689738,
+              "z": 2516.903936767578
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_garden",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1604006231",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -13434.566769409179,
+              "y": -12353.096569824218,
+              "z": 2419.9858642578124
+            },
+            "max": {
+              "x": -13005.433322143555,
+              "y": -12319.344413379473,
+              "z": 2613.807873535156
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_label_storage",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1604615232",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -14394.566769409179,
+              "y": -12353.096569824218,
+              "z": 2419.9858642578124
+            },
+            "max": {
+              "x": -13965.433322143555,
+              "y": -12319.344413379473,
+              "z": 2613.807873535156
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B50D0103_1906366053",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -5200,
+              "y": -15300,
+              "z": 2250
+            },
+            "max": {
+              "x": -1800,
+              "y": -11600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_return",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1574814184",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -8878.805564880371,
+              "y": -13361.249389620847,
+              "z": 2521.114345703125
+            },
+            "max": {
+              "x": -8521.194358825684,
+              "y": -13343.45171508789,
+              "z": 2598.8898286099393
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_4_food_crate",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5810403_1586446768",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13567.5,
+              "y": -13217.849999999999,
+              "z": 2432.5
+            },
+            "max": {
+              "x": -13532.5,
+              "y": -13182.5,
+              "z": 2467.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "nursery_3_robot",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B51D0103_1805318175",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -10090,
+              "y": -16586.599999588012,
+              "z": 2400
+            },
+            "max": {
+              "x": -10010,
+              "y": -16520,
+              "z": 2565.6000000000004
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_1_mechanical_crate",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5800403_1974831587",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -4134.5000005449565,
+              "y": -14632.5,
+              "z": 2417.5
+            },
+            "max": {
+              "x": -4065.4999994550435,
+              "y": -14566.849999999999,
+              "z": 2482.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "campus_bot_aframe_hangar",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1530148151",
+          "class": {
+            "refPath": "/Script/Engine.Actor"
+          },
+          "bounds": {
+            "min": {
+              "x": -16110,
+              "y": -15645.829028401553,
+              "z": 2272
+            },
+            "max": {
+              "x": -830,
+              "y": -12354.170971598447,
+              "z": 5090.000000000002
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_4_mechanical_crate",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5810403_1589448769",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13468.576923370361,
+              "y": -13217.849999999999,
+              "z": 2432.5
+            },
+            "max": {
+              "x": -13431.423076629639,
+              "y": -13182.5,
+              "z": 2467.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_4_floor",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5130103_1677950247",
+          "class": {
+            "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+          },
+          "bounds": {
+            "min": {
+              "x": -15400,
+              "y": -15300,
+              "z": 2250
+            },
+            "max": {
+              "x": -12000,
+              "y": -11600,
+              "z": 2400
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_bot_4_destination_scanner",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870403_1086842829",
+          "class": {
+            "refPath": "/Script/FortniteGame.BuildingProp"
+          },
+          "bounds": {
+            "min": {
+              "x": -13517.5,
+              "y": -12338.25,
+              "z": 2412.5
+            },
+            "max": {
+              "x": -13442.5,
+              "y": -12262.5,
+              "z": 2487.5
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_replay",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1573723182",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -9478.805564880371,
+              "y": -13361.249389620847,
+              "z": 2521.114345703125
+            },
+            "max": {
+              "x": -9121.194358825684,
+              "y": -13343.45171508789,
+              "z": 2598.8898286099393
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_home_repaired",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BB0703_1809328293",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 6499.781471126493,
+              "y": -13771.522256469727,
+              "z": 2523.995288085938
+            },
+            "max": {
+              "x": 6511.032189941407,
+              "y": -13628.477774047851,
+              "z": 2588.6026245117187
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_load_repaired",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BB0703_1809742294",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 8049.781471126493,
+              "y": -13771.522256469727,
+              "z": 2523.995288085938
+            },
+            "max": {
+              "x": 8061.032189941407,
+              "y": -13628.477774047851,
+              "z": 2588.6026245117187
+            },
+            "isValid": true
+          }
+        },
+        {
+          "label": "fn_shoreline_island_bot_3_label_cancel_repaired",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BB0703_1810246295",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+          },
+          "bounds": {
+            "min": {
+              "x": 6499.781471126493,
+              "y": -14021.522256469727,
+              "z": 2523.995288085938
+            },
+            "max": {
+              "x": 6511.032189941407,
+              "y": -13878.477774047851,
+              "z": 2588.6026245117187
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "IslandSettings",
+      "actors": [
+        {
+          "label": "IslandSettings0",
+          "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IslandSettings_0",
+          "class": {
+            "refPath": "/CreativeCoreDevices/Device_ExperienceSettings_V2_UEFN.Device_ExperienceSettings_V2_UEFN_C"
+          },
+          "bounds": {
+            "min": {
+              "x": -256,
+              "y": -256,
+              "z": -256
+            },
+            "max": {
+              "x": 256,
+              "y": 256,
+              "z": 256
+            },
+            "isValid": true
+          }
+        }
+      ]
+    },
+    {
+      "query": "MapIndicator",
+      "actors": []
+    }
+  ]
+}

@@ -1,17 +1,10 @@
 version: 1
 map_id: progress_and_navigation
-spec_digest: ebc65a8f2f7d53999fd9dee0ebf7fbbbbc2bd644d1d84af232c7a48a70536680
+spec_digest: 4af1ae47a83342cac03a4272ad1b1be56bd22a6ab4294bce2024a85ba0b852a4
 patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
 status: draft_requires_explicit_human_approval
 executable: false
-blockers:
-- 'a_01: All coordinates are schematic. Survey actual entrance transforms, campus
-  bounds, reachable paths and sign sightlines, then replace diagram geometry before
-  implementation review.'
-- 'a_02: Discover existing map indicators, settings and installed per-agent objective
-  pulse behavior; resolve exact reuse/new counts and bindings.'
-- 'a_03: Resolve per-controller stage adapters/totals, event ordering, missing-binding
-  handling and HUD safe regions; corridor pattern supplies no UI adapter.'
+blockers: []
 position_tolerance_m: 0.25
 implementation:
 - step: inspect_existing
@@ -19,124 +12,135 @@ implementation:
   verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
     before mutations.
 - step: reconcile_zone
-  zone: navigation_overlay
+  zone: campus_guidance
   pattern: corridor
   policy: reuse_first; create or move only after an approved resolved delta
   position_cm:
-  - 0
-  - 0
-  - 0
+  - -16000
+  - -20000
+  - 2300
   size_cm:
-  - 4500
-  - 3500
-  - 400
+  - 29000
+  - 26000
+  - 3000
   parameters:
     width_m: 2
-    access: Existing access preserved; Agent requires seven modules. Diagram does
-      not model physical gates.
+    access: Existing campus paths. First seven freely explorable; existing seven-badge
+      Agent gate retained.
   markers:
   - id: destination_1
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 1 Prompt Workshop
     position:
-    - 7
-    - 6
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 192
+    - 202
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_2
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 2 Pattern Scanner
     position:
-    - 22
-    - 6
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 153.5
+    - 237
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_3
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 3 AI Classifier
     position:
-    - 37
-    - 6
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 141
+    - 209
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_4
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 4 Confidence Core
     position:
-    - 7
-    - 17
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 141
+    - 191
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_5
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 5 AI Error Lab
     position:
-    - 22
-    - 17
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 136
+    - 157
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_6
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 6 AI Tool Lab
     position:
-    - 37
-    - 17
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 136
+    - 120
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_7
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 7 AI Skills Lab
     position:
-    - 7
-    - 28
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 137
+    - 46
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_8
     kind: knowledge
-    zone: navigation_overlay
+    zone: campus_guidance
     label: 8 AI Agent Mission
     position:
-    - 22
-    - 28
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 136
+    - 82
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   - id: destination_9
-    kind: knowledge
-    zone: navigation_overlay
-    label: Hub / Journal
+    kind: spawn
+    zone: campus_guidance
+    label: Hub
     position:
-    - 37
-    - 28
-    - 0
-    source: Schematic annotation only; not a measured transform or proposed physical
-      relocation. a_01 blocks execution.
+    - 153
+    - 215
+    - 2
+    source: Native measured floor/entrance survey 2026-10-03; planning-resolved-survey.json.
+      Ground trace succeeded at XY. Indicator proposed at z2500; no geometry relocation.
   verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
 - step: reconcile_device
   device:
     id: indicators
     class: map_indicator_device
     count: 9
-    source: 'Proposed total: eight module entrances plus Hub. Reconcile existing devices
-      before creating; exact transforms unresolved.'
+    source: Native class inventory zero existing. Official catalog PID_Device_MapIndicator.
+      planning-resolved-survey.json
     settings:
-      maps: minimap and overview
-      labels: numbers and canonical destination names
-      pulse: only selected destination, per agent; native behavior pending verification
+      showOnWhichMap: Both
+      enabledOnGameStart: true
+      text: 'Literal native labels in marker order: 1, 2, 3, 4, 5, 6, 7, 8, HUB'
+      iconScale: 1
+      showObjectivePulseToInstigatorOnly: true
+      showObjectivePulseToFriendlyPlayers: false
+      transforms: marker world XYZ; rotation0; scale1
+      pulse: Only next unfinished destination; suppressed during activity; Hub never
+        objective
+      name_legend: Full numbered next destination in HUD; all eight numbered names
+        in journal and hub Core labels. Marker labels in this map are semantic identities,
+        not native display text.
+      text_layout: Use cooked default font/offset; attempted smaller font and staggered
+        offsets did not persist. Verify numeric separation at normal zoom.
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device
@@ -144,23 +148,22 @@ implementation:
     id: journal
     class: fn_shoreline_island_academy_journal
     count: 1
-    source: Reuse existing journal; Content/fn_shoreline_island_academy_journal.verse
+    source: Reuse academy_journal with current authoritative garden/lagoon/later trackers
+      in planning-live-bindings.json
     settings:
-      progress: authoritative unique badges / 8
-      hud: persistent noninteractive panel
-      local_stage: new reporting hooks required
+      hud: one noninteractive bottom-left panel, Step X/Y separate from N/8
+      local_stage: controller reporting hooks; exact mappings in plan.md
+      badges: existing source identity, never increment presentation counter
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: bind_logic
   stages:
-  - id: navigation_guidance
-    zone: navigation_overlay
-    purpose: Read progress and follow a recommended available destination; free-order
-      behavior is specified in spec.md, not this linear schema.
+  - id: guidance
+    zone: campus_guidance
+    purpose: Observe progress and walk to next eligible lesson.
     requires: []
     active_targets: []
-    completion: All eight unique badges earned; clear required destination and offer
-      replay/exploration.
+    completion: Eight unique badges earned. Clear pulse, offer Replay or Explore.
   connections: []
   verify: Read back ordered target arrays, shared systems and required entry/exit
     gates.

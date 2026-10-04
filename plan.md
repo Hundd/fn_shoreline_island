@@ -6,7 +6,13 @@ Build a bright, non-combat UEFN adventure for ages 8–10. Players help Pix, a f
 
 The shoreline terrain and existing puzzles remain the foundation. Preserve working device bindings, individual progress and one-time rewards while simplifying interactions. The [AI Island Academy implementation plan](docs/AI%20Island%20Academy%20%E2%80%94%20Implementation%20Plan.md) and [feature 022](specs/022-ai-island-academy-migration/spec.md) describe the theme migration baseline; later numbered features supersede their respective activity designs. See the current status below before treating a proposal as implemented.
 
-## Current Migration Status — 2026-09-29
+## Current implementation checkpoint — 2026-10-04
+
+Features033 and037 are implemented under the owner's delegated autonomous authority: the compact personal HUD/journal follows the numbered eight-module route, nine map indicators use1..8/HUB, and eight Core panels/lights derive existing badge state. Native player caps are one, social joining is disabled and join-in-progress watches only. Confirmed duplicate Skills/legacy Agent controls are retired while primary games and Return access remain.
+
+Focused cooked evidence proves original Error Return E and real Tool Scanner/Speaker/Light shots, resulting Tool badge and HUD1/8. Tool decorative collision and transactional movement rollback were corrected without changing the puzzle. Final validation, production cleanup and independent QA status are tracked in033/037 evidence and tasks; full normal eight-module completion, reset and actual second-account admission are not established by this checkpoint. The native description field rejected its write and remains a delivery gate.
+
+## Historical migration status — 2026-09-29
 
 | Area | Status |
 |---|---|
@@ -24,7 +30,7 @@ See [remaining-area review](docs/remaining-area-review-2026-09-29.md) for live i
 - **Audience:** approximately ages 8–10; use brief sentences and explain unfamiliar terms.
 - **Release:** public Discover island after private playtesting and the required publishing checks.
 - **Language:** English for this release; Ukrainian localization is a later feature.
-- **Players:** current legacy systems retain per-player support for up to four players. The requested simplification direction is single-player activities, implemented in 028/029 and proposed in 030. This does not claim island matchmaking or every older module has been converted.
+- **Players:** the current island is configured for one player under037. Per-player attribution remains in legacy controllers for safety; actual second-account admission checks remain pending.
 - **Interaction:** use clear, stable actions with visible consequences. The Data Blaster selects large answer targets where appropriate; the working Prompt Workshop uses physical composition controls. Keep automatic hints, safe retries and short routes. Follow each feature's actual implementation/acceptance status rather than assuming the whole island uses the same controls.
 - **Safety:** the blaster sends data and instructions rather than fighting enemies. Players are invincible, ammunition is unlimited, and PvP, environmental destruction, elimination and punitive timers are disabled. Wrong shots preserve the puzzle and earned Data Energy for an immediate retry.
 - **Rewards:** each main module grants its badge once per player per round. Replays do not duplicate rewards.
@@ -32,7 +38,7 @@ See [remaining-area review](docs/remaining-area-review-2026-09-29.md) for live i
 
 ## Player Journey
 
-The hub introduces Pix's damaged AI Core and points to the Prompt Lab. The personal AI Core Journal reads the existing player progress and recommends an unfinished zone. Agent Mode starts locked until the first seven modules are restored.
+The hub introduces Pix's damaged AI Core and points to1 Prompt Workshop. The personal HUD and AI Core Journal read existing progress and recommend the first incomplete available module. Agent Mission starts locked until the first seven modules are restored. The earlier Prompt shooting activity is optional and shares the same Prompt badge.
 
 1. **Prompt Lab / Prompt Workshop** — compose what, which one and where, watch Pix attempt the request and revise it. **Prompt Badge**. Workshop implementation is tracked in 027; the earlier 024/026 shooting activity remains separately present.
 2. **Pattern Scanner** — shoot the missing symbol in three patterns from one spot. **Pattern Badge**. Implemented solo revision: 028.

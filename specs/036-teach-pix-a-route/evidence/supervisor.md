@@ -1,5 +1,21 @@
 # Supervisor coordination
 
+## Final repair closeout — 2026-10-03
+
+The reported missing HOME prompt and broken control cards are repaired within the approved design. HOME reach is now 2m while recording still requires the player within 1m of HOME. Five failing false-state `delivered_one?` arguments now pass raw logic. Real HOME E input entered recording with initial points and walking feedback. No full walked route or actual TEST E is claimed.
+
+Three faulty billboard actors were replaced through official catalog PlaceDevice after scalar conversion alone failed to correct their cooked identity transforms. Final labels have scale .4, text24, yaw +90, opaque dark background and Two Sided rendering. The supplied cooked capture shows separate readable HOME/CANCEL signs. Dedicated inventory remains154:151 hangar_route-prefix actors plus3 replacement labels named fn_shoreline_island_bot_3_label_*_repaired.
+
+All temporary player-positioning fixtures were removed before final saved production build/cook. BuildAll returned zero diagnostics; five geometry tests passed; final launch validation/cook completed20:14:40UTC and startup initialized20:14:42UTC. Independent GPT-6.1 Sol QA verified final source hash, source guards, native scalar bindings/properties and referenced real-input/readability evidence; no blocking repair defect found. See qa-buttons-repair.md for evidence attribution and limitations. Full deliveries/bypasses, visible walked footprint chain, actual TEST E, multiplayer and separate Project > Validate Project remain unverified under the existing manual handoff; existing performance warning is unresolved.
+
+QA freshly confirmed game Unconnected/session Disconnected, editor open, no in-flight calls, and returned ownership to Supervisor. Repair changes remain uncommitted. Unrelated work preserved. Historical checkpoint statements below describe earlier phases and do not override this closeout.
+
+## Button failure follow-up
+
+User reports "game is not working, buttons do nothing" after manual handoff and commit f1f633e. Repair assigned to existing GPT-6.1 Sol implementer with exclusive editor ownership, no other live calls. Scope is correcting the approved activity, not a design change. Root observed a source hypothesis: Home requires player within 100cm of pad center, while button is about180cm away; rejected interactions have no feedback. Awaiting live reproduction before concluding cause. User asked whether prompt appears. Existing unrelated feature033 changes/producer briefs remain outside repair scope.
+
+User confirmed no interaction prompt and supplied screenshot of overlapping oversized panels. Root causes/findings: 1m interaction radius is correctly measured in meters but leaves only~20cm horizontal overlap with 1m HOME start area; expanded HOME reach to2m without changing route endpoint bounds. Real E at94.34cm from HOME exposed false-state logic-query arguments (`delivered_one?`) failing before geometry calls; implementer corrected five calls to pass raw logic. Cooked real E now starts recording and emits first two points; screenshot bugfix-home-recording.png reviewed by Supervisor. No full walked delivery claimed. Billboard display was OneSided with additional widget rotation; smaller two-sided opaque labels are under final cooked verification. Temporary test-only startup positioning authorized solely to reach controls for real input after native Play From Here proved inconsistent; must be removed before final production handoff. Forced interaction events are not acceptance evidence.
+
 - Date: 2026-10-03.
 - User direction: Selected Producer's Teach Pix a Route concept with "go for it". Concrete layout review remains pending.
 - Source brief: `docs/producer/hangar-new-gameplay.md`.

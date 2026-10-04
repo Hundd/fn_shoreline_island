@@ -37,7 +37,7 @@ byte_island_game_manager := class(creative_device):
 
     var player_states:[player]byte_island_player_state = map{}
 
-    objective_text<localizes>:message = "Pix: My AI Core glitched! Restore 7 modules to unlock Agent Mode. New here? Start at PROMPT LAB. Check your journal for what comes next."
+    objective_text<localizes>:message = "Pix: My AI Core glitched! Restore 7 modules to unlock Agent Mode. New here? Start at 1 PROMPT WORKSHOP. Check your journal for what comes next."
     water_text<localizes>:message = "Find Seed"
     plant_text<localizes>:message = "Dig Hole"
     wait_text<localizes>:message = "Plant Seed"

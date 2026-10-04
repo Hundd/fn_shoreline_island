@@ -46,6 +46,8 @@ fn_shoreline_island_bot_station := class(creative_device):
     rescue_max:vector3 = vector3{X := -1800.0, Y := -11600.0, Z := 3300.0}
 
     @editable
+    solo_active:logic = true
+    @editable
     station_id:int = 0
     @editable
     progress:fn_shoreline_island_bot_progress = fn_shoreline_island_bot_progress{}
@@ -282,6 +284,20 @@ fn_shoreline_island_bot_station := class(creative_device):
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (not solo_active?):
+            for (control : array{claim_button, slot_0_button, slot_1_button, slot_2_button, repeat_button, energy_button, connection_button, rule_button, cargo_button, run_button, help_button, next_button, replay_button}):
+                control.Disable()
+            for (board : array{mission_board, program_board, execution_board, label_claim, label_slot_0, label_slot_1, label_slot_2, label_repeat, label_energy, label_connection, label_rule, label_cargo, label_run, label_help, label_next, label_replay, label_home, label_cell1, label_cell2, label_cell3, label_garden, label_storage}):
+                board.HideText()
+            return_button.SetInteractionText(return_text)
+            label_return.SetText(return_text)
+            label_return.ShowText()
+            label_return.UpdateDisplay()
+            return_button.SetInteractionTime(0.0)
+            return_button.SetMaxTriggerCount(0)
+            return_button.Enable()
+            return_button.InteractedWithEvent.Subscribe(on_return)
+            return
         if (rescue_mode?):
             rescue_begin()
             return
@@ -1339,6 +1355,7 @@ fn_shoreline_island_bot_station := class(creative_device):
                                 set rescue_status = "Pix waking up... Ready to rescue!"
                                 rescue_show()
                                 spawn { rescue_wake(generation) }
+            report_rescue_navigation()
             Sleep(0.25)
 
     rescue_wake(token:int)<suspends>:void =
@@ -1629,3 +1646,18 @@ fn_shoreline_island_bot_station := class(creative_device):
     rescue_removed(input_player:player):void =
         if (current := owner?, current = input_player):
             rescue_reset()
+
+    report_rescue_navigation():void =
+        if (current := owner?, rescue_is_owner[current]):
+            actions := array{"Choose the MEDICAL crate.", "Choose a Pickup, Move, Drop delivery plan.", "SCAN for route information.", "Choose the route supported by the scan.", "Check the actual delivery result."}
+            var instruction:string = "Completed. Replay or explore."
+            if (action := actions[rescue_phase]):
+                set instruction = action
+            if (running?):
+                set instruction = "Watch Pix's rescue result."
+            var step:int = rescue_phase + 1
+            if (step < 1):
+                set step = 1
+            if (step > 5):
+                set step = 5
+            academy_journal.report_activity(current, 7, 7, step, 5, rescue_text(instruction), generation)

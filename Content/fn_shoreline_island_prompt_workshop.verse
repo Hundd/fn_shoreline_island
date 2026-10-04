@@ -22,6 +22,8 @@ prompt_workshop_action := class:
 # the physical scene is shared and Pix serves one submitted request at a time.
 fn_shoreline_island_prompt_workshop := class(creative_device):
     @editable
+    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
+    @editable
     configured:logic = false
     @editable
     progress:byte_island_game_manager = byte_island_game_manager{}
@@ -154,10 +156,14 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
         entry_zone.AgentEntersEvent.Subscribe(on_enter)
         entry_zone.AgentExitsEvent.Subscribe(on_exit)
         progress.round_settings.RoundBeginEvent.Subscribe(on_round)
+        for (spawner : array{progress.hub_spawner_0, progress.hub_spawner_1, progress.hub_spawner_2, progress.hub_spawner_3}):
+            spawner.SpawnedEvent.Subscribe(on_navigation_spawn)
         GetPlayspace().PlayerAddedEvent().Subscribe(on_join)
         GetPlayspace().PlayerRemovedEvent().Subscribe(on_departure)
         for (input_player : GetPlayspace().GetPlayers()):
             on_join(input_player)
+
+        spawn{navigation_monitor()}
 
     get_state(input_player:player):prompt_workshop_state =
         if (existing := states[input_player]):
@@ -228,6 +234,7 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
         if (input_player := player[input_agent]):
             request_hud.Hide(input_player)
             feedback.Hide(input_player)
+            navigation_journal.clear_activity(input_player)
 
     on_departure(input_player:player):void =
         request_hud.Hide(input_player)
@@ -401,3 +408,28 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
             set execution_owner = false
             if (state := states[input_player]):
                 show_request(input_player, state)
+
+    navigation_monitor()<suspends>:void =
+        loop:
+            for (input_agent : entry_zone.GetAgentsInVolume(), input_player := player[input_agent]):
+                state := get_state(input_player)
+                var step:int = 1
+                if (state.connected? or state.delivered?):
+                    set step = 6
+                else if (state.inspected?):
+                    if (state.what < 0):
+                        set step = 2
+                    else if (state.which < 0):
+                        set step = 3
+                    else if (state.destination_choice < 0):
+                        set step = 4
+                    else:
+                        set step = 5
+                navigation_journal.report_activity(input_player, 0, 0, step, 6, next_step(state), generation)
+            Sleep(0.25)
+
+    on_navigation_spawn(input_agent:agent):void =
+        if (input_player := player[input_agent]):
+            navigation_journal.clear_activity(input_player)
+            on_departure(input_player)
+            on_join(input_player)
