@@ -1,0 +1,632 @@
+version: 1
+map_id: retired_control_presentation
+spec_digest: 42eccd0526df3983fe1d2e17c6fc278925e99fc4cdd43a8431f98ce780eeefb3
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.01
+implementation:
+- step: inspect_existing
+  map: retired_control_presentation
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: retired_bays
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -15000
+  - -20000
+  - 2200
+  size_cm:
+  - 12000
+  - 7500
+  - 1200
+  parameters:
+    width_m: 3
+    access: Preserve all existing paths and four Return controls; no placement/movement/geometry
+      operation
+  markers:
+  - id: cluster_0
+    kind: knowledge
+    zone: retired_bays
+    label: fn_shoreline_island_nursery_station4 retired controls
+    position:
+    - 24.7
+    - 23.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: return_0
+    kind: exit
+    zone: retired_bays
+    label: KEEP Return
+    position:
+    - 1.3
+    - 23.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: cluster_1
+    kind: knowledge
+    zone: retired_bays
+    label: fn_shoreline_island_bot_4_station retired controls
+    position:
+    - 24.7
+    - 59.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: return_1
+    kind: exit
+    zone: retired_bays
+    label: KEEP Return
+    position:
+    - 1.3
+    - 59.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: cluster_2
+    kind: knowledge
+    zone: retired_bays
+    label: fn_shoreline_island_nursery_station3 retired controls
+    position:
+    - 58.7
+    - 23.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: return_2
+    kind: exit
+    zone: retired_bays
+    label: KEEP Return
+    position:
+    - 35.3
+    - 23.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: cluster_3
+    kind: knowledge
+    zone: retired_bays
+    label: fn_shoreline_island_nursery_station2 retired controls
+    position:
+    - 92.7
+    - 23.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  - id: return_3
+    kind: exit
+    zone: retired_bays
+    label: KEEP Return
+    position:
+    - 69.3
+    - 23.0
+    - 3.0
+    source: Measured audit device center, not new placement; exact ref in evidence/retirement-ledger.json
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: retired_buttons
+    class: button_device
+    count: 55
+    source: evidence/retirement-ledger.json retire_buttons exact actor refs from fresh
+      audit
+    settings:
+      operation: existing_instances_only
+      visibleDuringGame: false
+      runtime: preserve existing solo_active=false Disable branch
+      delete: false
+      move: false
+      bindings: unchanged
+      exact_actor_bindings:
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: claim_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1672338134
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: slot_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1673397136
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: slot_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1674504138
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: slot_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1675580140
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: slot_3_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1676723142
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: run_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1678366144
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: help_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1679426146
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: replay_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1680461148
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: caller_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1684881156
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: caller_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1685954158
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: caller_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1687085160
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: repeat_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1688221162
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: next_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1689319164
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: remix_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1512516429
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: claim_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1583131196
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: slot_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1584205198
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: slot_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1585259200
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: slot_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1586993202
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: repeat_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1588192204
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: energy_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1590208206
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: connection_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1591368208
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: rule_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1592398210
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: cargo_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1593448212
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: run_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1594571214
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: help_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1595589216
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: next_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1596684218
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: replay_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1597667220
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: claim_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1630232097
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: slot_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1631274099
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: slot_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1632270101
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: slot_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1633342103
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: slot_3_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1634419105
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: run_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1635512107
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: help_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1636571109
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: replay_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1637628111
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: caller_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1642311119
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: caller_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1643405121
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: caller_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1644482123
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: repeat_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1645517125
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: next_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1646617127
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: remix_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1510306427
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: claim_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1591836060
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: slot_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1593102062
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: slot_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1594303064
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: slot_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1595486066
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: slot_3_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1596653068
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: run_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1597754070
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: help_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1598888072
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: replay_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1600036074
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: caller_0_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1604686082
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: caller_1_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1606011084
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: caller_2_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1607068086
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: repeat_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1608169088
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: next_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1609272090
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: remix_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1508057425
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: retired_boards
+    class: billboard_device
+    count: 85
+    source: evidence/retirement-ledger.json retire_billboards; existing source hides
+      these exact fields, excluding Return
+    settings:
+      operation: existing_instances_only
+      bHidden: true
+      runtime_text: existing HideText branch retained
+      preflight: re-resolve field against exact ledger actor; inspect incoming refs;
+        stop on mismatch
+      delete: false
+      hide_parent: false
+      exact_actor_bindings:
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_caller_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1685365157
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_caller_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1686471159
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_caller_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1687665161
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_repeat
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1688757163
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_next
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1689824165
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: planter_2_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1690364166
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: planter_3_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1690922167
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: exit_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1691485168
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: mission_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1682614152
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: program_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1683168153
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: execution_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1683723154
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: planter_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1684313155
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1672816135
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1673900137
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1675019139
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_3
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1676127141
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_4
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1677234143
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_5
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1678877145
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_6
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1679912147
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_7
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1680994149
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: remix_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1513508430
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: mission_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599946224
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: program_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1600519225
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: execution_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601083226
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_claim
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1583607197
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_slot_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1584724199
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_slot_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1585737201
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_slot_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1587533203
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_repeat
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1588663205
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_energy
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1590800207
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_connection
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1591844209
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_rule
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1592906211
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_cargo
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1594025213
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_run
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1595050215
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_help
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1596089217
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_next
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1597144219
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_replay
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1598127221
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_home
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601635227
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_cell1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1602141228
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_cell2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1602710229
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_cell3
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1603476230
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_garden
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1604006231
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_storage
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1604615232
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_caller_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1642817120
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_caller_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1643917122
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_caller_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1644946124
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_repeat
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1646033126
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_next
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1647108128
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: planter_2_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1647696129
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: planter_3_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1648279130
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: exit_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1648886131
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: mission_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1639863115
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: program_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1640471116
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: execution_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1641052117
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: planter_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1641679118
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1630720098
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1631739100
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1632747102
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_3
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1633856104
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_4
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1634962106
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_5
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1636000108
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_6
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1637078110
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_7
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1638120112
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: remix_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1511327428
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_caller_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1605428083
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_caller_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1606526085
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_caller_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1607586087
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_repeat
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1608692089
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_next
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1609785091
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: planter_2_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1610419092
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: planter_3_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1610964093
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: exit_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1611548094
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: mission_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1602286078
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: program_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1602853079
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: execution_board
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1603501080
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: planter_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1604085081
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_0
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1592441061
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_1
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1593686063
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_2
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1594853065
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_3
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1596052067
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_4
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1597170069
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_5
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1598252071
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_6
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1599421073
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_7
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1600553075
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: remix_label
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1509195426
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: returns
+    class: button_device
+    count: 4
+    source: evidence/retirement-ledger.json preserve_buttons
+    settings:
+      operation: preserve_exactly
+      native_visible: true
+      runtime_enabled: true
+      exact_actor_bindings:
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: return_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1681532150
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: return_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1598667222
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: return_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1638695113
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: return_button
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1601152076
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: return_labels
+    class: billboard_device
+    count: 4
+    source: evidence/retirement-ledger.json preserve_billboards
+    settings:
+      operation: preserve_exactly
+      runtime_text: RETURN TO HUB
+      exact_actor_bindings:
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132
+        field: label_8
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1682066151
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194
+        field: label_return
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599416223
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095
+        field: label_8
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1639240114
+      - controller: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058
+        field: label_8
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1601686077
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: clear_presentation
+    zone: retired_bays
+    purpose: Player visits existing retired bay without dead control affordances
+    requires: []
+    active_targets: []
+    completion: Retired presentation absent; scenery intact; useful Return readable
+      and works.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

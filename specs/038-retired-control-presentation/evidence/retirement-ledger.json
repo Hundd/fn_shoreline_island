@@ -1,0 +1,3831 @@
+{
+  "basis": "Exact scoped authorization following fresh audit; no actor deletion",
+  "counts": {
+    "retired_buttons": 55,
+    "retired_billboards": 85,
+    "protected_returns": 4,
+    "protected_return_labels": 4
+  },
+  "controllers": [
+    {
+      "label": "fn_shoreline_island_nursery_station4",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "expected_solo_active": false,
+      "station_id": 3
+    },
+    {
+      "label": "fn_shoreline_island_bot_4_station",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "expected_solo_active": false,
+      "station_id": 3
+    },
+    {
+      "label": "fn_shoreline_island_nursery_station3",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "expected_solo_active": false,
+      "station_id": 2
+    },
+    {
+      "label": "fn_shoreline_island_nursery_station2",
+      "path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "expected_solo_active": false,
+      "station_id": 1
+    }
+  ],
+  "retire_buttons": [
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "claim_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1672338134"
+      },
+      "label": "Button43",
+      "bounds": {
+        "min": {
+          "x": -12658,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -12402,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "slot_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1673397136"
+      },
+      "label": "Button44",
+      "bounds": {
+        "min": {
+          "x": -12838,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -12582,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "slot_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1674504138"
+      },
+      "label": "Button45",
+      "bounds": {
+        "min": {
+          "x": -13018,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -12762,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "slot_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1675580140"
+      },
+      "label": "Button46",
+      "bounds": {
+        "min": {
+          "x": -13198,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -12942,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "slot_3_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1676723142"
+      },
+      "label": "Button47",
+      "bounds": {
+        "min": {
+          "x": -13378,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -13122,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "run_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1678366144"
+      },
+      "label": "Button48",
+      "bounds": {
+        "min": {
+          "x": -14278,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -14022,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "help_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1679426146"
+      },
+      "label": "Button49",
+      "bounds": {
+        "min": {
+          "x": -14458,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -14202,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "replay_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1680461148"
+      },
+      "label": "Button50",
+      "bounds": {
+        "min": {
+          "x": -14818,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -14562,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "caller_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1684881156"
+      },
+      "label": "Button52",
+      "bounds": {
+        "min": {
+          "x": -13558,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -13302,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "caller_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1685954158"
+      },
+      "label": "Button53",
+      "bounds": {
+        "min": {
+          "x": -13738,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -13482,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "caller_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1687085160"
+      },
+      "label": "Button54",
+      "bounds": {
+        "min": {
+          "x": -13918,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -13662,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "repeat_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1688221162"
+      },
+      "label": "Button55",
+      "bounds": {
+        "min": {
+          "x": -14098,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -13842,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "next_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1689319164"
+      },
+      "label": "Button56",
+      "bounds": {
+        "min": {
+          "x": -14638,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -14382,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "remix_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1512516429"
+      },
+      "label": "nursery_4_remix_button",
+      "bounds": {
+        "min": {
+          "x": -12478,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -12222,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "claim_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1583131196"
+      },
+      "label": "fn_shoreline_island_bot_4_claim_button",
+      "bounds": {
+        "min": {
+          "x": -12658,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -12402,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "slot_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1584205198"
+      },
+      "label": "fn_shoreline_island_bot_4_slot_0_button",
+      "bounds": {
+        "min": {
+          "x": -12838,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -12582,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "slot_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1585259200"
+      },
+      "label": "fn_shoreline_island_bot_4_slot_1_button",
+      "bounds": {
+        "min": {
+          "x": -13018,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -12762,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "slot_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1586993202"
+      },
+      "label": "fn_shoreline_island_bot_4_slot_2_button",
+      "bounds": {
+        "min": {
+          "x": -13198,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -12942,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "repeat_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1588192204"
+      },
+      "label": "fn_shoreline_island_bot_4_repeat_button",
+      "bounds": {
+        "min": {
+          "x": -13378,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -13122,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "energy_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1590208206"
+      },
+      "label": "fn_shoreline_island_bot_4_energy_button",
+      "bounds": {
+        "min": {
+          "x": -13558,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -13302,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "connection_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1591368208"
+      },
+      "label": "fn_shoreline_island_bot_4_connection_button",
+      "bounds": {
+        "min": {
+          "x": -13738,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -13482,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "rule_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1592398210"
+      },
+      "label": "fn_shoreline_island_bot_4_rule_button",
+      "bounds": {
+        "min": {
+          "x": -13918,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -13662,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "cargo_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1593448212"
+      },
+      "label": "fn_shoreline_island_bot_4_cargo_button",
+      "bounds": {
+        "min": {
+          "x": -14098,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -13842,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "run_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1594571214"
+      },
+      "label": "fn_shoreline_island_bot_4_run_button",
+      "bounds": {
+        "min": {
+          "x": -14278,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -14022,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "help_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1595589216"
+      },
+      "label": "fn_shoreline_island_bot_4_help_button",
+      "bounds": {
+        "min": {
+          "x": -14458,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -14202,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "next_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1596684218"
+      },
+      "label": "fn_shoreline_island_bot_4_next_button",
+      "bounds": {
+        "min": {
+          "x": -14638,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -14382,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "replay_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1597667220"
+      },
+      "label": "fn_shoreline_island_bot_4_replay_button",
+      "bounds": {
+        "min": {
+          "x": -14818,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -14562,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "claim_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1630232097"
+      },
+      "label": "Button29",
+      "bounds": {
+        "min": {
+          "x": -9258,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -9002,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "slot_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1631274099"
+      },
+      "label": "Button30",
+      "bounds": {
+        "min": {
+          "x": -9438,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -9182,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "slot_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1632270101"
+      },
+      "label": "Button31",
+      "bounds": {
+        "min": {
+          "x": -9618,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -9362,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "slot_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1633342103"
+      },
+      "label": "Button32",
+      "bounds": {
+        "min": {
+          "x": -9798,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -9542,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "slot_3_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1634419105"
+      },
+      "label": "Button33",
+      "bounds": {
+        "min": {
+          "x": -9978,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -9722,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "run_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1635512107"
+      },
+      "label": "Button34",
+      "bounds": {
+        "min": {
+          "x": -10878,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -10622,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "help_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1636571109"
+      },
+      "label": "Button35",
+      "bounds": {
+        "min": {
+          "x": -11058,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -10802,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "replay_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1637628111"
+      },
+      "label": "Button36",
+      "bounds": {
+        "min": {
+          "x": -11418,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -11162,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "caller_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1642311119"
+      },
+      "label": "Button38",
+      "bounds": {
+        "min": {
+          "x": -10158,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -9902,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "caller_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1643405121"
+      },
+      "label": "Button39",
+      "bounds": {
+        "min": {
+          "x": -10338,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -10082,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "caller_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1644482123"
+      },
+      "label": "Button40",
+      "bounds": {
+        "min": {
+          "x": -10518,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -10262,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "repeat_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1645517125"
+      },
+      "label": "Button41",
+      "bounds": {
+        "min": {
+          "x": -10698,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -10442,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "next_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1646617127"
+      },
+      "label": "Button42",
+      "bounds": {
+        "min": {
+          "x": -11238,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -10982,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "remix_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1510306427"
+      },
+      "label": "nursery_3_remix_button",
+      "bounds": {
+        "min": {
+          "x": -9078,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -8822,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "claim_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1591836060"
+      },
+      "label": "Button15",
+      "bounds": {
+        "min": {
+          "x": -5858,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -5602,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "slot_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1593102062"
+      },
+      "label": "Button16",
+      "bounds": {
+        "min": {
+          "x": -6038,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -5782,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "slot_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1594303064"
+      },
+      "label": "Button17",
+      "bounds": {
+        "min": {
+          "x": -6218,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -5962,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "slot_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1595486066"
+      },
+      "label": "Button18",
+      "bounds": {
+        "min": {
+          "x": -6398,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -6142,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "slot_3_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1596653068"
+      },
+      "label": "Button19",
+      "bounds": {
+        "min": {
+          "x": -6578,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -6322,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "run_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1597754070"
+      },
+      "label": "Button20",
+      "bounds": {
+        "min": {
+          "x": -7478,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -7222,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "help_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1598888072"
+      },
+      "label": "Button21",
+      "bounds": {
+        "min": {
+          "x": -7658,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -7402,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "replay_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1600036074"
+      },
+      "label": "Button22",
+      "bounds": {
+        "min": {
+          "x": -8018,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -7762,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "caller_0_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1604686082"
+      },
+      "label": "Button24",
+      "bounds": {
+        "min": {
+          "x": -6758,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -6502,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "caller_1_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1606011084"
+      },
+      "label": "Button25",
+      "bounds": {
+        "min": {
+          "x": -6938,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -6682,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "caller_2_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1607068086"
+      },
+      "label": "Button26",
+      "bounds": {
+        "min": {
+          "x": -7118,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -6862,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "repeat_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1608169088"
+      },
+      "label": "Button27",
+      "bounds": {
+        "min": {
+          "x": -7298,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -7042,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "next_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1609272090"
+      },
+      "label": "Button28",
+      "bounds": {
+        "min": {
+          "x": -7838,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -7582,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "remix_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5240103_1508057425"
+      },
+      "label": "nursery_2_remix_button",
+      "bounds": {
+        "min": {
+          "x": -5678,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -5422,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "hide_native_presentation",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    }
+  ],
+  "retire_billboards": [
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_caller_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1685365157"
+      },
+      "label": "Billboard78",
+      "bounds": {
+        "min": {
+          "x": -13497.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13362.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_caller_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1686471159"
+      },
+      "label": "Billboard79",
+      "bounds": {
+        "min": {
+          "x": -13677.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13542.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_caller_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1687665161"
+      },
+      "label": "Billboard80",
+      "bounds": {
+        "min": {
+          "x": -13857.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13722.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_repeat",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1688757163"
+      },
+      "label": "Billboard81",
+      "bounds": {
+        "min": {
+          "x": -14037.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13902.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_next",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1689824165"
+      },
+      "label": "Billboard82",
+      "bounds": {
+        "min": {
+          "x": -14577.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14442.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "planter_2_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1690364166"
+      },
+      "label": "Billboard83",
+      "bounds": {
+        "min": {
+          "x": -14025.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -13774.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "planter_3_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1690922167"
+      },
+      "label": "Billboard84",
+      "bounds": {
+        "min": {
+          "x": -14475.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -14224.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "exit_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1691485168"
+      },
+      "label": "Billboard85",
+      "bounds": {
+        "min": {
+          "x": -14925.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -14674.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "mission_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1682614152"
+      },
+      "label": "Billboard74",
+      "bounds": {
+        "min": {
+          "x": -13553.969589996337,
+          "y": -15796.886807250976,
+          "z": 2669.9799743652343
+        },
+        "max": {
+          "x": -12946.03053970337,
+          "y": -15749.071252287587,
+          "z": 2944.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "program_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1683168153"
+      },
+      "label": "Billboard75",
+      "bounds": {
+        "min": {
+          "x": -14553.969589996337,
+          "y": -15796.886807250976,
+          "z": 2669.9799743652343
+        },
+        "max": {
+          "x": -13946.03053970337,
+          "y": -15749.071252287587,
+          "z": 2944.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "execution_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1683723154"
+      },
+      "label": "Billboard76",
+      "bounds": {
+        "min": {
+          "x": -14003.969589996337,
+          "y": -15796.886807250976,
+          "z": 2399.9799743652343
+        },
+        "max": {
+          "x": -13396.03053970337,
+          "y": -15749.071252287587,
+          "z": 2674.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "planter_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1684313155"
+      },
+      "label": "Billboard77",
+      "bounds": {
+        "min": {
+          "x": -13575.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -13324.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1672816135"
+      },
+      "label": "Billboard65",
+      "bounds": {
+        "min": {
+          "x": -12597.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12462.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1673900137"
+      },
+      "label": "Billboard66",
+      "bounds": {
+        "min": {
+          "x": -12777.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12642.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1675019139"
+      },
+      "label": "Billboard67",
+      "bounds": {
+        "min": {
+          "x": -12957.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12822.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_3",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1676127141"
+      },
+      "label": "Billboard68",
+      "bounds": {
+        "min": {
+          "x": -13137.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13002.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_4",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1677234143"
+      },
+      "label": "Billboard69",
+      "bounds": {
+        "min": {
+          "x": -13317.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13182.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_5",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1678877145"
+      },
+      "label": "Billboard70",
+      "bounds": {
+        "min": {
+          "x": -14217.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14082.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_6",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1679912147"
+      },
+      "label": "Billboard71",
+      "bounds": {
+        "min": {
+          "x": -14397.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14262.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_7",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1680994149"
+      },
+      "label": "Billboard72",
+      "bounds": {
+        "min": {
+          "x": -14757.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14622.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "remix_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1513508430"
+      },
+      "label": "nursery_4_remix_label",
+      "bounds": {
+        "min": {
+          "x": -12417.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12282.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "mission_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599946224"
+      },
+      "label": "fn_shoreline_island_bot_4_mission_board",
+      "bounds": {
+        "min": {
+          "x": -13653.969589996337,
+          "y": -12096.886807250976,
+          "z": 2689.9799743652343
+        },
+        "max": {
+          "x": -13046.03053970337,
+          "y": -12049.071252287587,
+          "z": 2964.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "program_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1600519225"
+      },
+      "label": "fn_shoreline_island_bot_4_program_board",
+      "bounds": {
+        "min": {
+          "x": -14653.969589996337,
+          "y": -12096.886807250976,
+          "z": 2689.9799743652343
+        },
+        "max": {
+          "x": -14046.03053970337,
+          "y": -12049.071252287587,
+          "z": 2964.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "execution_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601083226"
+      },
+      "label": "fn_shoreline_island_bot_4_execution_board",
+      "bounds": {
+        "min": {
+          "x": -14003.969589996337,
+          "y": -12096.886807250976,
+          "z": 2439.9799743652343
+        },
+        "max": {
+          "x": -13396.03053970337,
+          "y": -12049.071252287587,
+          "z": 2714.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_claim",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1583607197"
+      },
+      "label": "fn_shoreline_island_bot_4_label_claim",
+      "bounds": {
+        "min": {
+          "x": -12597.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12462.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_slot_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1584724199"
+      },
+      "label": "fn_shoreline_island_bot_4_label_slot_0",
+      "bounds": {
+        "min": {
+          "x": -12777.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12642.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_slot_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1585737201"
+      },
+      "label": "fn_shoreline_island_bot_4_label_slot_1",
+      "bounds": {
+        "min": {
+          "x": -12957.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -12822.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_slot_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1587533203"
+      },
+      "label": "fn_shoreline_island_bot_4_label_slot_2",
+      "bounds": {
+        "min": {
+          "x": -13137.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13002.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_repeat",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1588663205"
+      },
+      "label": "fn_shoreline_island_bot_4_label_repeat",
+      "bounds": {
+        "min": {
+          "x": -13317.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13182.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_energy",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1590800207"
+      },
+      "label": "fn_shoreline_island_bot_4_label_energy",
+      "bounds": {
+        "min": {
+          "x": -13497.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13362.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_connection",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1591844209"
+      },
+      "label": "fn_shoreline_island_bot_4_label_connection",
+      "bounds": {
+        "min": {
+          "x": -13677.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13542.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_rule",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1592906211"
+      },
+      "label": "fn_shoreline_island_bot_4_label_rule",
+      "bounds": {
+        "min": {
+          "x": -13857.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13722.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_cargo",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1594025213"
+      },
+      "label": "fn_shoreline_island_bot_4_label_cargo",
+      "bounds": {
+        "min": {
+          "x": -14037.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -13902.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_run",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1595050215"
+      },
+      "label": "fn_shoreline_island_bot_4_label_run",
+      "bounds": {
+        "min": {
+          "x": -14217.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14082.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_help",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1596089217"
+      },
+      "label": "fn_shoreline_island_bot_4_label_help",
+      "bounds": {
+        "min": {
+          "x": -14397.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14262.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_next",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1597144219"
+      },
+      "label": "fn_shoreline_island_bot_4_label_next",
+      "bounds": {
+        "min": {
+          "x": -14577.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14442.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_replay",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1598127221"
+      },
+      "label": "fn_shoreline_island_bot_4_label_replay",
+      "bounds": {
+        "min": {
+          "x": -14757.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14622.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_home",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1601635227"
+      },
+      "label": "fn_shoreline_island_bot_4_label_home",
+      "bounds": {
+        "min": {
+          "x": -13757.28338470459,
+          "y": -13396.54828491211,
+          "z": 2419.992932128906
+        },
+        "max": {
+          "x": -13542.716661071778,
+          "y": -13379.672206689738,
+          "z": 2516.903936767578
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_cell1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1602141228"
+      },
+      "label": "fn_shoreline_island_bot_4_label_cell1",
+      "bounds": {
+        "min": {
+          "x": -13997.28338470459,
+          "y": -13396.54828491211,
+          "z": 2419.992932128906
+        },
+        "max": {
+          "x": -13782.716661071778,
+          "y": -13379.672206689738,
+          "z": 2516.903936767578
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_cell2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1602710229"
+      },
+      "label": "fn_shoreline_island_bot_4_label_cell2",
+      "bounds": {
+        "min": {
+          "x": -14237.28338470459,
+          "y": -13396.54828491211,
+          "z": 2419.992932128906
+        },
+        "max": {
+          "x": -14022.716661071778,
+          "y": -13379.672206689738,
+          "z": 2516.903936767578
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_cell3",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1603476230"
+      },
+      "label": "fn_shoreline_island_bot_4_label_cell3",
+      "bounds": {
+        "min": {
+          "x": -14477.28338470459,
+          "y": -13396.54828491211,
+          "z": 2419.992932128906
+        },
+        "max": {
+          "x": -14262.716661071778,
+          "y": -13379.672206689738,
+          "z": 2516.903936767578
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_garden",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1604006231"
+      },
+      "label": "fn_shoreline_island_bot_4_label_garden",
+      "bounds": {
+        "min": {
+          "x": -13434.566769409179,
+          "y": -12353.096569824218,
+          "z": 2419.9858642578124
+        },
+        "max": {
+          "x": -13005.433322143555,
+          "y": -12319.344413379473,
+          "z": 2613.807873535156
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_storage",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1604615232"
+      },
+      "label": "fn_shoreline_island_bot_4_label_storage",
+      "bounds": {
+        "min": {
+          "x": -14394.566769409179,
+          "y": -12353.096569824218,
+          "z": 2419.9858642578124
+        },
+        "max": {
+          "x": -13965.433322143555,
+          "y": -12319.344413379473,
+          "z": 2613.807873535156
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_caller_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1642817120"
+      },
+      "label": "Billboard57",
+      "bounds": {
+        "min": {
+          "x": -10097.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -9962.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_caller_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1643917122"
+      },
+      "label": "Billboard58",
+      "bounds": {
+        "min": {
+          "x": -10277.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -10142.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_caller_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1644946124"
+      },
+      "label": "Billboard59",
+      "bounds": {
+        "min": {
+          "x": -10457.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -10322.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_repeat",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1646033126"
+      },
+      "label": "Billboard60",
+      "bounds": {
+        "min": {
+          "x": -10637.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -10502.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_next",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1647108128"
+      },
+      "label": "Billboard61",
+      "bounds": {
+        "min": {
+          "x": -11177.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -11042.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "planter_2_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1647696129"
+      },
+      "label": "Billboard62",
+      "bounds": {
+        "min": {
+          "x": -10625.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -10374.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "planter_3_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1648279130"
+      },
+      "label": "Billboard63",
+      "bounds": {
+        "min": {
+          "x": -11075.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -10824.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "exit_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1648886131"
+      },
+      "label": "Billboard64",
+      "bounds": {
+        "min": {
+          "x": -11525.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -11274.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "mission_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1639863115"
+      },
+      "label": "Billboard53",
+      "bounds": {
+        "min": {
+          "x": -10153.969589996337,
+          "y": -15796.886807250976,
+          "z": 2669.9799743652343
+        },
+        "max": {
+          "x": -9546.03053970337,
+          "y": -15749.071252287587,
+          "z": 2944.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "program_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1640471116"
+      },
+      "label": "Billboard54",
+      "bounds": {
+        "min": {
+          "x": -11153.969589996337,
+          "y": -15796.886807250976,
+          "z": 2669.9799743652343
+        },
+        "max": {
+          "x": -10546.03053970337,
+          "y": -15749.071252287587,
+          "z": 2944.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "execution_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1641052117"
+      },
+      "label": "Billboard55",
+      "bounds": {
+        "min": {
+          "x": -10603.969589996337,
+          "y": -15796.886807250976,
+          "z": 2399.9799743652343
+        },
+        "max": {
+          "x": -9996.03053970337,
+          "y": -15749.071252287587,
+          "z": 2674.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "planter_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1641679118"
+      },
+      "label": "Billboard56",
+      "bounds": {
+        "min": {
+          "x": -10175.16394882202,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -9924.836104583741,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1630720098"
+      },
+      "label": "Billboard44",
+      "bounds": {
+        "min": {
+          "x": -9197.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -9062.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1631739100"
+      },
+      "label": "Billboard45",
+      "bounds": {
+        "min": {
+          "x": -9377.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -9242.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1632747102"
+      },
+      "label": "Billboard46",
+      "bounds": {
+        "min": {
+          "x": -9557.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -9422.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_3",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1633856104"
+      },
+      "label": "Billboard47",
+      "bounds": {
+        "min": {
+          "x": -9737.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -9602.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_4",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1634962106"
+      },
+      "label": "Billboard48",
+      "bounds": {
+        "min": {
+          "x": -9917.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -9782.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_5",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1636000108"
+      },
+      "label": "Billboard49",
+      "bounds": {
+        "min": {
+          "x": -10817.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -10682.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_6",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1637078110"
+      },
+      "label": "Billboard50",
+      "bounds": {
+        "min": {
+          "x": -10997.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -10862.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_7",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1638120112"
+      },
+      "label": "Billboard51",
+      "bounds": {
+        "min": {
+          "x": -11357.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -11222.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "remix_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1511327428"
+      },
+      "label": "nursery_3_remix_label",
+      "bounds": {
+        "min": {
+          "x": -9017.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -8882.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_caller_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1605428083"
+      },
+      "label": "Billboard36",
+      "bounds": {
+        "min": {
+          "x": -6697.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -6562.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_caller_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1606526085"
+      },
+      "label": "Billboard37",
+      "bounds": {
+        "min": {
+          "x": -6877.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -6742.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_caller_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1607586087"
+      },
+      "label": "Billboard38",
+      "bounds": {
+        "min": {
+          "x": -7057.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -6922.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_repeat",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1608692089"
+      },
+      "label": "Billboard39",
+      "bounds": {
+        "min": {
+          "x": -7237.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -7102.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_next",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1609785091"
+      },
+      "label": "Billboard40",
+      "bounds": {
+        "min": {
+          "x": -7777.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -7642.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "planter_2_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1610419092"
+      },
+      "label": "Billboard41",
+      "bounds": {
+        "min": {
+          "x": -7225.163948822022,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -6974.83610458374,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "planter_3_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1610964093"
+      },
+      "label": "Billboard42",
+      "bounds": {
+        "min": {
+          "x": -7675.163948822022,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -7424.83610458374,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "exit_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1611548094"
+      },
+      "label": "Billboard43",
+      "bounds": {
+        "min": {
+          "x": -8125.163948822022,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -7874.83610458374,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "mission_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1602286078"
+      },
+      "label": "Billboard32",
+      "bounds": {
+        "min": {
+          "x": -6753.969589996338,
+          "y": -15796.886807250976,
+          "z": 2669.9799743652343
+        },
+        "max": {
+          "x": -6146.030539703369,
+          "y": -15749.071252287587,
+          "z": 2944.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "program_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1602853079"
+      },
+      "label": "Billboard33",
+      "bounds": {
+        "min": {
+          "x": -7753.969589996338,
+          "y": -15796.886807250976,
+          "z": 2669.9799743652343
+        },
+        "max": {
+          "x": -7146.030539703369,
+          "y": -15749.071252287587,
+          "z": 2944.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "execution_board",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1603501080"
+      },
+      "label": "Billboard34",
+      "bounds": {
+        "min": {
+          "x": -7203.969589996338,
+          "y": -15796.886807250976,
+          "z": 2399.9799743652343
+        },
+        "max": {
+          "x": -6596.030539703369,
+          "y": -15749.071252287587,
+          "z": 2674.5611541748044
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "planter_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1604085081"
+      },
+      "label": "Billboard35",
+      "bounds": {
+        "min": {
+          "x": -6775.163948822022,
+          "y": -16919.306332397464,
+          "z": 2419.9917541503905
+        },
+        "max": {
+          "x": -6524.83610458374,
+          "y": -16899.617574471362,
+          "z": 2533.0545928955075
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_0",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1592441061"
+      },
+      "label": "Billboard23",
+      "bounds": {
+        "min": {
+          "x": -5797.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -5662.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1593686063"
+      },
+      "label": "Billboard24",
+      "bounds": {
+        "min": {
+          "x": -5977.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -5842.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1594853065"
+      },
+      "label": "Billboard25",
+      "bounds": {
+        "min": {
+          "x": -6157.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -6022.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_3",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1596052067"
+      },
+      "label": "Billboard26",
+      "bounds": {
+        "min": {
+          "x": -6337.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -6202.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_4",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1597170069"
+      },
+      "label": "Billboard27",
+      "bounds": {
+        "min": {
+          "x": -6517.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -6382.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_5",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1598252071"
+      },
+      "label": "Billboard28",
+      "bounds": {
+        "min": {
+          "x": -7417.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -7282.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_6",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1599421073"
+      },
+      "label": "Billboard29",
+      "bounds": {
+        "min": {
+          "x": -7597.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -7462.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_7",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1600553075"
+      },
+      "label": "Billboard30",
+      "bounds": {
+        "min": {
+          "x": -7957.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -7822.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "remix_label",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5240103_1509195426"
+      },
+      "label": "nursery_2_remix_label",
+      "bounds": {
+        "min": {
+          "x": -5617.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -5482.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "hide_native_presentation",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    }
+  ],
+  "preserve_buttons": [
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "field": "return_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1681532150"
+      },
+      "label": "Button51",
+      "bounds": {
+        "min": {
+          "x": -14998,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -14742,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "preserve",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "field": "return_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5130103_1598667222"
+      },
+      "label": "fn_shoreline_island_bot_4_return_button",
+      "bounds": {
+        "min": {
+          "x": -14998,
+          "y": -14228,
+          "z": 2372
+        },
+        "max": {
+          "x": -14742,
+          "y": -13972,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "preserve",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "field": "return_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1638695113"
+      },
+      "label": "Button37",
+      "bounds": {
+        "min": {
+          "x": -11598,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -11342,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "preserve",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "field": "return_button",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B51D0103_1601152076"
+      },
+      "label": "Button23",
+      "bounds": {
+        "min": {
+          "x": -8198,
+          "y": -17828,
+          "z": 2372
+        },
+        "max": {
+          "x": -7942,
+          "y": -17572,
+          "z": 2628
+        },
+        "isValid": true
+      },
+      "properties": {
+        "visibleDuringGame": true,
+        "bHidden": false,
+        "enabledAtGameStart": true
+      },
+      "action": "preserve",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058"
+    }
+  ],
+  "preserve_billboards": [
+    {
+      "controller": "fn_shoreline_island_nursery_station4",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "field": "label_8",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1682066151"
+      },
+      "label": "Billboard73",
+      "bounds": {
+        "min": {
+          "x": -14937.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14802.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "preserve",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_bot_4_station",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+      "field": "label_return",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5130103_1599416223"
+      },
+      "label": "fn_shoreline_island_bot_4_label_return",
+      "bounds": {
+        "min": {
+          "x": -14937.94614364624,
+          "y": -14160.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -14802.05388534546,
+          "y": -14149.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "preserve",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station3",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "field": "label_8",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1639240114"
+      },
+      "label": "Billboard52",
+      "bounds": {
+        "min": {
+          "x": -11537.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -11402.05388534546,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "preserve",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    },
+    {
+      "controller": "fn_shoreline_island_nursery_station2",
+      "controller_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "field": "label_8",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B51D0103_1601686077"
+      },
+      "label": "Billboard31",
+      "bounds": {
+        "min": {
+          "x": -8137.94614364624,
+          "y": -17760.480580444335,
+          "z": 2419.995523681641
+        },
+        "max": {
+          "x": -8002.053885345459,
+          "y": -17749.792397570167,
+          "z": 2481.372493286133
+        },
+        "isValid": true
+      },
+      "action": "preserve",
+      "basis": "Exact resolved historical reference matched current actor inventory; current inactive branch already hides text; re-resolve same field before mutation"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Implementation checkpoint — 038
+
+Worker /root/implementer, originally dispatched gpt-6.1-sol. Existing 033/037 goal blocked and unchanged; user explicitly directed cleanup tracked through 038 tasks instead of conflicting goal creation.
+
+Readiness passed, digest 1b0e1cc1f9e2061b35402ded9404bc9e032de0317eca526d26eb515529128152. Fresh Unconnected/Disconnected and SaveAll true. Fresh 61 Verse-actor census, 52 with button/billboard or mode fields, 368 native references resolved. All 148 exact owning fields match: 140 retired, 8 protected; no shared ownership conflicts. Four inactive solo modes/station IDs match. Native property schemas discovered. Ownership evidence saved before mutation. Snapshot/mutations pending.
+
+## Saved native implementation
+
+All four bay batches are saved: 140 actors, 55 buttons visibleDuringGame=false and 85 billboards bHidden=true with enabledDuringPhase=None. SaveAll returned true. Separate fresh readback of all 148 actors confirms expected flags, unchanged complete transforms and owning references, and unchanged eight protected Returns/labels. Original billboard colors and borders remain unchanged. See implementation-bay-0..3.json and implementation-final-readback.json. Cook and interactive checks remain pending.
+
+The original bHidden=true setter returned success but read back false with phase Always; the batch stopped immediately. Supported phase None is the minimal prerequisite allowing bHidden=true to persist, within the approved equivalent-setting allowance. The one-board color/border probe was restored. Phase baseline records that first board after the probe; complete original baseline records its pre-mutation hidden flag. Complete baseline and ownership census were saved before mutations. No Verse or geometry changes.
+
+Cook checkpoint: StartSession returned Completed. Actual client spawned normally in the hub despite requested Play From Here at the retired bay4 Return; screenshot cooked-normal-spawn.png records the live client. GetClientLogEntries returned no client log available, so it cannot substantiate absence of errors. Four-bay interactive checks remain pending; temporary position-only test fixture requested from Supervisor because island spawn overrides Play From Here.
+
+## Cooked focused input and QA handoff
+
+Fresh cook Completed; Running/Connected confirmed. Walked from normal hub via western corridor past Error/Tools/Agent to primary Skills and duplicate station1. Existing raised walkway edges required a jump while autorunning; no retired-device obstruction observed on that route. Primary Skills boards and control bank remain visible. Duplicate station1 controls/text/backplates absent, scenery intact. Actual retained Return label and E prompt observed; uppercase E teleported to Academy hub, HUD remained0/8. Evidence: cooked-skills-entrance.png, cooked-skills-duplicate1-walk.png, cooked-skills-return1-prompt.png, cooked-skills-return1-result.png. No forced events, badges, test fixture or input-binding edits.
+
+Remaining focused coverage is explicit: station2, station3, Bot4 individual visual/Return tests, restart/reentry, and representative retained control event regressions. They are not passed by the native audit or this one Return. Supervisor requested bounded camera correction and prompt QA handoff; targeting was achieved for station1, then stopped rather than repeat the entire hub approach for each Return. Separate Project Validate is unsupported in the exposed native/UI workflow previously inspected; cook validation is not a substitute claim. Client-log endpoint returned no log; existing onscreen performance warning remains visible, not attributed to cleanup without evidence.
+
+StopSession issued; fresh GetGameState Unconnected and GetSessionStatus Disconnected verified. SaveAll returned true; editor left open. All editor/UI calls settled; exclusive ownership released for independent QA. Prior033/037 blocked goal remains untouched;038 tracked through its tasks. No Verse edits or commit.
+
+Final save used authoritative AssetTools.save_assets(asset_paths=[]), returning true. The attempted EditorAppToolset.SaveAll alias is unsupported and did not mutate anything; preceding batch checkpoint SaveAll wording refers to the successful dirty-asset save. All final states above were freshly verified after StopSession.
+
+QA approach notes: from hub, autorun equal then same-script timed delay and w to stop. Western corridor reaches Skills beside Agent; jump AFTER starting autorun to clear existing raised edges. Walk primary Skills then first duplicate. Retained Return is on the corridor side with low black label. Same-cursor small camera drags finally targeted it; lower view enough that reticle is on the actual button, approach with350ms bursts until E RETURN TO ACADEMY HUB appears, then uppercase E. Absolute drag coordinates are not portable across fresh matches. Larger UI-recenter drags overshot heading; map/minimap observation is required. No successful other-bay tests claimed.
