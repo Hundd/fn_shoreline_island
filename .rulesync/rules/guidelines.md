@@ -1,3 +1,9 @@
+---
+root: true
+targets: ["*"]
+description: "Repository guidelines for the fn_shoreline_island UEFN island project"
+---
+
 # Repository Guidelines
 
 ## Rule Source of Truth
