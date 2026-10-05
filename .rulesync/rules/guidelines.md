@@ -54,14 +54,15 @@ Follow [docs/AI_MAP_WORKFLOW.md](docs/AI_MAP_WORKFLOW.md) for requests to build 
 7. Use MCP to implement resolved placements, configurations, bindings and approved assets incrementally. Discover live schemas, checkpoint, serialize calls, read back counts/transforms/properties after meaningful groups, then save. MCP must not invent missing scale, mechanics, flow or target logic.
 8. Keep spec and implementation synchronized, record expected/actual deviations, and return blocked design decisions to planning. Successful MCP calls do not prove gameplay quality. Optimize for playability and clarity and verify in a cooked game before accepting gameplay tasks.
 
-Project-local roles use the existing skill mechanism. All agents should read the relevant file directly if their client does not auto-discover `.cline/skills/`:
+Project-local roles use the existing skill mechanism. All agents should read the relevant file directly if their client does not auto-discover `.agents/skills/`:
 
 - Producer: `.agents/skills/uefn-producer/SKILL.md` (product direction and feature briefs upstream of planning)
-- Planner: `.cline/skills/map-planner/SKILL.md`
-- Reviewer: `.cline/skills/blockout-reviewer/SKILL.md`
-- Implementer: `.agents/skills/uefn-map-implementation/SKILL.md` (dispatch with `model: "gpt-6.1-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback); execution checks: `.cline/skills/uefn-implementer/SKILL.md`
+- Planner & Reviewer: `.agents/skills/uefn-map-planning/SKILL.md` (pattern-backed map spec, blockout review, and the human-approval gate)
+- Implementer: `.agents/skills/uefn-map-implementation/SKILL.md` (dispatch with `model: "gpt-6.1-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback)
 - QA / Gameplay Verifier: `.agents/skills/uefn-gameplay-verifier/SKILL.md` (dispatch with `model: "gpt-6.1-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback)
-- Verifier checks: `.cline/skills/uefn-verifier/SKILL.md`
+- Supervisor: `.agents/skills/uefn-supervisor/SKILL.md`
+
+Shared recipes remain under `.cline/skills/`: `uefn-editor-safety`, `uefn-device-binding`, `uefn-playtest`, `uefn-verse-build`, and `uefn-spec-workflow`.
 
 These are workflow roles, not a request to spawn parallel agents. Keep all editor calls serialized. For tooling/documentation-only tasks, task completion may use recorded offline command/test evidence; UEFN validation/playtest requirements still apply to gameplay changes. Existing MCP endpoints and client approval policies remain in force.
 

@@ -17,7 +17,7 @@ Include the repository root, requested scope, this skill's absolute path, featur
 
 ## Scope and ownership
 
-Read `AGENTS.md`, `docs/AI_MAP_WORKFLOW.md`, `.cline/skills/uefn-verifier/SKILL.md`, and `.cline/skills/uefn-editor-safety/SKILL.md`. Read the selected feature's spec, plan, tasks, approval/review bundle when present, and current implementation evidence. Use the applicable feature's current acceptance scenarios; older station scenarios apply only to the matching retained behavior.
+Read `AGENTS.md`, `docs/AI_MAP_WORKFLOW.md`, and `.cline/skills/uefn-editor-safety/SKILL.md`. Read the selected feature's spec, plan, tasks, approval/review bundle when present, and current implementation evidence. Use the applicable feature's current acceptance scenarios; older station scenarios apply only to the matching retained behavior.
 
 For an approved map implementation, check approval consistency using `python tools/map_workflow.py plan <map.yaml> --ready`. Report stale approval without regenerating or altering it. A diagnostic review of existing gameplay can record defects even when no approved map bundle exists; it cannot claim approved-design acceptance.
 
@@ -27,9 +27,9 @@ Own only assigned QA evidence files, normally `<feature>/evidence/qa-report.md` 
 
 ## Verify behavior
 
-Compare scene counts, transforms, target order, native settings, and progression/reward/reset bindings with the declared expectations. Readback establishes configuration, not gameplay success.
+Compare declared device counts (shared instances counted once), target IDs and array order, positions within `map.position_tolerance` meters, required native settings, entry/exit gates, and progression/reward/reset bindings with the declared expectations. Convert local meters with `world_cm = origin_cm + 100 * local_m`; retain existing rotations/scales unless an approved delta explicitly changes them. Readback establishes configuration, not gameplay success.
 
-Run the relevant cooked acceptance scenarios: spawn and approach, correct progression, wrong answers and immediate retry, completion, one-time rewards, replay, round reset, and return navigation. Check solo behavior and multiplayer isolation/shared state when applicable. Include learning clarity and visible feedback in observations. Do not claim multiplayer testing without actual multiple-player evidence.
+Run the relevant cooked acceptance scenarios: spawn and approach, correct progression, wrong answers and immediate retry, completion, one-time rewards, replay, round reset, and return navigation. Check solo behavior and multiplayer isolation/shared state when applicable. Include learning clarity and visible feedback in observations. Do not claim multiplayer testing without actual multiple-player evidence. For Prompt Lab, use feature 024's `prompt-playtest.md`; do not close its gate from this planning example.
 
 Separate evidence from Verse build, project validation, cook, editor inspection, and interactive play. Existing evidence may be referenced with its date and tested revision, but must not be presented as a fresh independent run. If tools, accounts, or controls prevent a test, mark it blocked or not run, never passed. Investigate enough to make failures reproducible without changing the implementation.
 

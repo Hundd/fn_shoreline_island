@@ -32,7 +32,7 @@ Always-on rules for Cline in this UEFN island workspace. Detailed source:
 - Map changes follow `docs/AI_MAP_WORKFLOW.md`: inspect → map.yaml → offline
   preview/validation → explicit human review → approved implementation plan →
   incremental MCP execution/readback → gameplay verification.
-- Use the map-planner, blockout-reviewer, uefn-implementer and uefn-verifier
+- Use the uefn-map-planning, uefn-map-implementation and uefn-gameplay-verifier
   skills for those roles. Run `python tools/map_workflow.py check <map.yaml>`;
   `plan <map.yaml> --ready` must pass before map-design mutations.
 - Prefer reusable devices/Verse configuration. Record deviations; do not

@@ -28,8 +28,9 @@ rebuild existing missions or replace UEFN's authoritative build/playtest process
   with standard-library tests and static HTML/SVG, not Node/React/3D dependencies.
 - Live tool discovery exposed Actor/Scene/Object/Device/Verse/Session toolsets.
   AgentSkillToolset is absent in this editor; project roles therefore use the
-  existing `.cline/skills/` format and explicit routing in AGENTS.md. No editor
-  plugin, remote service or new MCP executor is installed.
+  `.agents/skills/` dispatch skills plus shared `.cline/skills/` recipes, with
+  explicit routing in AGENTS.md. No editor plugin, remote service or new MCP
+  executor is installed.
 - Existing docs, particularly `MCP Map Editing Diagnosis.md`, already favor
   configuration/readback. The new workflow makes their planning boundary concrete.
   Prompt Lab feature 024 supersedes the older feature 023 interaction model;

@@ -17,7 +17,7 @@ Creating or updating this skill does not dispatch implementation or start a goal
 
 ## Establish scope and goal
 
-Read `AGENTS.md`, `docs/AI_MAP_INSTRUCTIONS.md`, `docs/AI_MAP_WORKFLOW.md`, and the selected feature's `spec.md`, `plan.md`, `tasks.md`, `map.yaml`, `review.md`, generated implementation plan, and approval evidence. Read the project-local `.cline/skills/uefn-implementer/SKILL.md`, `.cline/skills/uefn-editor-safety/SKILL.md`, `.cline/skills/uefn-device-binding/SKILL.md`, and `.cline/skills/uefn-verifier/SKILL.md`. Use the available `unreal-engine-mcp-codex` skill for live editor operations.
+Read `AGENTS.md`, `docs/AI_MAP_INSTRUCTIONS.md`, `docs/AI_MAP_WORKFLOW.md`, and the selected feature's `spec.md`, `plan.md`, `tasks.md`, `map.yaml`, `review.md`, generated implementation plan, and approval evidence. Read the project-local `.cline/skills/uefn-editor-safety/SKILL.md` and `.cline/skills/uefn-device-binding/SKILL.md` recipes. Use the available `unreal-engine-mcp-codex` skill for live editor operations.
 
 Verify actual human approval of this scope and revision, not just an approved label. Do not fabricate approval. If approval is missing or stale, use the sibling [uefn-map-planning skill](../uefn-map-planning/SKILL.md) to prepare or refresh the review bundle and obtain approval before design mutations. Existing valid approval does not require another confirmation.
 
@@ -34,7 +34,7 @@ Do not execute draft plans, stale approvals, or plans with unresolved blockers. 
 ## Implement the approved delta
 
 - Discover current MCP schemas and inspect the actual world. Resolve exact actor identities, assets, complete transforms, properties, editable references, and bindings. The generated plan describes intent; it is not executable MCP arguments.
-- Compare current and intended state before edits. Reuse existing controllers, creative devices, prefabs, editable fields, ordered arrays, maps, and structs. Preserve working mission behavior, target indices, and shared-device ownership. Do not treat pattern parameters as proof that a hardcoded controller is configurable.
+- Compare current and intended state before edits. Reuse existing controllers, creative devices, prefabs, editable fields, ordered arrays, maps, and structs. Preserve working mission behavior, Prompt Lab target indices, and shared badge/Data Energy ownership. Do not treat pattern parameters as proof that a hardcoded controller is configurable, and never claim arbitrary sequences are supported by a hardcoded controller.
 - Save a recovery checkpoint. Apply one logical group at a time with serialized editor calls. Discover property names before writing. Preserve rotation and scale when changing position; use complete transforms. Read back counts, transforms, settings, target order, and connections after each meaningful group, then save affected assets.
 - Treat `.uasset` and `.umap` as editor-owned; never hand-edit or move World Partition external files. Keep changes inside the approved scope.
 - Stop on ambiguous mutation outcomes; inspect state before deciding whether to retry. Record expected/actual values, call outcomes, and deviations under the feature's `evidence/`.
