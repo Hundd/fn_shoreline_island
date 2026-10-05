@@ -11,6 +11,7 @@ inventing another implementation. The format is defined in
 | [knowledge_room](knowledge-room/pattern.yaml) | Prompt controller's timed Knowledge/HUD phase |
 | [shooting_gallery](shooting-gallery/pattern.yaml) | Shared data_target and data_blaster; mission still supplies correctness |
 | [target_sequence](target-sequence/pattern.yaml) | Prompt controller's fixed `[0,3,5,5,6]` sequence; no generic sequence engine |
+| [prompt_workbench](prompt-workbench/pattern.yaml) | Feature-023 prompt_lab_controller selection/Send/wrong-result/replay/badge hooks |
 | [classification_arena](classification-arena/pattern.yaml) | Contract only; inspect existing repair/variable-vault systems before adaptation |
 | [wave_arena](wave-arena/pattern.yaml) | Contract only; non-combat learning batches |
 | [reward_room](reward-room/pattern.yaml) | Existing progress manager, badge guard, replay and finale |
@@ -18,5 +19,5 @@ inventing another implementation. The format is defined in
 | [portal](portal/pattern.yaml) | Existing teleporter devices and unlock logic |
 | [checkpoint](checkpoint/pattern.yaml) | Contract only; recovery lifecycle needs verification |
 
-These are ten design contracts, not ten shipped prefabs. Device class names are
+These are eleven design contracts, not eleven shipped prefabs. Device class names are
 intent identifiers; discover actual UEFN types/properties before implementation.
