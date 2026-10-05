@@ -56,6 +56,13 @@ Project-local roles use the existing skill mechanism. All agents should read the
 - QA / Gameplay Verifier: `.agents/skills/uefn-gameplay-verifier/SKILL.md` (same host-resolved cost-controlled worker rule as Implementer; no inherited frontier model or silent model fallback)
 - Supervisor: `.agents/skills/uefn-supervisor/SKILL.md`
 
+PCG domain skills extend these roles when procedural content is requested:
+
+- PCG graph generation: `.agents/skills/pcg-graph-generation/SKILL.md` (repeatable spatial rules, scattering, and environment population)
+- PCG shape grammar: `.agents/skills/pcg-shape-grammar-definition/SKILL.md` (modular layouts along splines; load PCG graph generation first)
+
+These are Codex adapters for Epic's bundled Unreal Agent Skills, not engine plugins. Discover live toolsets before use; skill assets being present does not prove PCG execution tools are available. Prefer the original skills through `AgentSkillToolset.GetSkills` when exposed, since graph-generation inventories are generated at runtime. If the required tools are missing, limit work to inspection and planning and report the prerequisite. Preserve the map approval gate and serialized, incremental editor verification; do not force-enable unsupported UEFN plugins.
+
 Shared recipes remain under `.cline/skills/`: `uefn-editor-safety`, `uefn-device-binding`, `uefn-playtest`, `uefn-verse-build`, and `uefn-spec-workflow`.
 
 These are workflow roles, not a request to spawn parallel agents. Keep all editor calls serialized. For tooling/documentation-only tasks, task completion may use recorded offline command/test evidence; UEFN validation/playtest requirements still apply to gameplay changes. Existing MCP endpoints and client approval policies remain in force.

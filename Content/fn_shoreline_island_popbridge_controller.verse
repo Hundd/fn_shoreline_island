@@ -23,6 +23,7 @@ popbridge_machine := class<concrete>:
     @editable
     mechanisms:[]creative_prop = array{}
     var homes:[]transform = array{}
+    var teaching_animation:logic = false
     @editable
     wrong_puff:vfx_creator_device = vfx_creator_device{}
     @editable
@@ -183,6 +184,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                     show(input_player, "Already popped!")
                 else if (shot_result = 1):
                     machine.target.accept(input_player, false)
+                    set machine.teaching_animation = true
                     spawn { teach_effect(machine, machine.receiver.instruction, state.generation) }
                     teaching_cues()
                 else if (shot_result = 2):
@@ -255,6 +257,8 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
             if (token = state.generation):
                 effect.End()
                 move_mechanism(machine, id, false)
+                set machine.teaching_animation = false
+                refresh_geometry()
 
     move_mechanism(machine:popbridge_machine, id:int, raised:logic):void =
         if (mechanism := machine.mechanisms[id], home := machine.homes[id]):
@@ -313,12 +317,14 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                                     debug("JUMP from={state.checkpoint} feet_z={position.Z} token={state.generation}")
                                 set jump_anchor = state.checkpoint
                                 set jump_generation = state.generation
-                        if (landed < 0, state.prefix > 0, inside(position, catch_min, catch_max)?, GetSimulationElapsedTime() - last_recovery >= 0.2):
+                        if (not state.finished?, landed < 0, state.prefix > 0, inside(position, catch_min, catch_max)?, GetSimulationElapsedTime() - last_recovery >= 0.2):
                             recover(current)
                 else:
                     release()
 
     recover(input_player:player):void =
+        if (state.finished?):
+            return
         clear_jump()
         set last_recovery = GetSimulationElapsedTime()
         if (node := fixtures.find_node(nodes, state.checkpoint)?, character := input_player.GetFortCharacter[], character.IsActive[]):
@@ -328,6 +334,14 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
             else:
                 show(input_player, "Return is available. Trying your last popcorn again.")
 
+    machine_used(machine:popbridge_machine)<transacts>:logic =
+        if (machine.receiver.instruction < 2):
+            if (state.prefix > machine.receiver.instruction, not machine.teaching_animation?):
+                return true
+        else if (state.consumed[machine.receiver.target_id]?):
+            return true
+        return false
+
     refresh_geometry():void =
         for (landing : landings):
             set landing.deck.CanBeDamaged = false
@@ -336,9 +350,10 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
             else:
                 landing.deck.Hide()
         for (machine : machines):
-            machine.target.activate()
-            if (state.prefix >= 3, machine.receiver.instruction < 3):
+            if (machine_used(machine)?):
                 machine.target.deactivate()
+            else:
+                machine.target.activate()
         teaching_cues()
         geometry_changed()
 
@@ -349,7 +364,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
             if (machine.receiver.instruction < 3):
                 machine.target.selectable_ring.End()
                 machine.target.objective_cone.End()
-                if (state.prefix < 3, machine.receiver.instruction = state.prefix):
+                if (not machine_used(machine)?, state.prefix < 3, machine.receiver.instruction = state.prefix):
                     # This target's configured native cone highlights its mechanism.
                     machine.target.selectable_ring.Begin()
                     machine.target.objective_cone.Begin()
@@ -363,6 +378,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
 
     stop_effects():void =
         for (machine : machines):
+            set machine.teaching_animation = false
             for (effect : machine.instructions):
                 effect.End()
             for (id -> mechanism : machine.mechanisms):

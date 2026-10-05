@@ -185,12 +185,12 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
                         prop.Show()
                     else:
                         prop.Hide()
-        for (machine_index := 0..7):
-            if (balloon := course_mechanisms[machine_index * 3 + 2]):
-                if (state.consumed[machine_index]?):
-                    balloon.Hide()
+        for (machine : machines):
+            for (mechanism : machine.mechanisms):
+                if (machine_used(machine)?):
+                    mechanism.Hide()
                 else:
-                    balloon.Show()
+                    mechanism.Show()
 
     committed<override>(target_id:int):void =
         if (target_id = 5):

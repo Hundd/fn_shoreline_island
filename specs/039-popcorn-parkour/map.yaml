@@ -166,7 +166,7 @@ markers:
   label: LOAD
   position:
   - 26.2
-  - 16
+  - 15.6
   - 2.8
   target_id: 0
   source: Damage-only receiver; gated from starter
@@ -186,7 +186,7 @@ markers:
   label: POP
   position:
   - 26.2
-  - 18.4
+  - 18.8
   - 2.8
   target_id: 2
   source: Damage-only receiver; gated from starter
@@ -386,7 +386,7 @@ devices:
         name: LOAD
         position:
         - 26.2
-        - 16
+        - 15.6
         - 2.8
         from_landing: starter
         creates: null
@@ -406,7 +406,7 @@ devices:
         name: POP
         position:
         - 26.2
-        - 18.4
+        - 18.8
         - 2.8
         from_landing: starter
         creates: first
@@ -573,7 +573,7 @@ devices:
       steps: 3
     scene_manifest: production-scene.yaml
     production_scene:
-      revision: production-02-unapproved
+      revision: 040-spacing-and-finish-implemented
       units: local meters except explicit cm
       origin_cm:
       - -5200
@@ -691,7 +691,7 @@ devices:
         name: LOAD
         position:
         - 26.2
-        - 16
+        - 15.6
         - 2.8
         from_landing: starter
         creates: null
@@ -711,7 +711,7 @@ devices:
         name: POP
         position:
         - 26.2
-        - 18.4
+        - 18.8
         - 2.8
         from_landing: starter
         creates: first
@@ -1019,7 +1019,7 @@ devices:
           - 30.2
           - 0
         corridor_width: 3
-        wayfinding: 'Reuse mission board: POPCORN PARKOUR → ramp; shoot LOAD HEAT
+        wayfinding: 'Reuse mission board: POPCORN PARKOUR â†’ ramp; shoot LOAD HEAT
           POP'
         ramp:
           width_m: 3
@@ -1783,10 +1783,10 @@ devices:
       - old primaryretired earlyreturn; existing otherbaybehavior preserved
       - update nursery tracker/journal PopBridge text only; same Core/Agent authorities
       board_faces:
-        mission_board: toward south/-Y; text POPCORN PARKOUR → / Shoot LOAD HEAT POP
-          / Jump onto what you make
-        program_board: 'toward south/-Y beside starter; text PopBridge: LOAD → HEAT
-          → POP, updated with accepted prefix'
+        mission_board: toward south/-Y; text POPCORN PARKOUR â†’ / Shoot LOAD HEAT
+          POP / Jump onto what you make
+        program_board: 'toward south/-Y beside starter; text PopBridge: LOAD â†’ HEAT
+          â†’ POP, updated with accepted prefix'
         execution_board: toward south/-Y; text One shot reuses your skill / Replay
           | Return
       station_ownership: On first accepted starter shot claim existing progress station_id0
