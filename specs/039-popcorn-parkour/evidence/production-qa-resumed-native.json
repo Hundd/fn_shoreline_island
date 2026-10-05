@@ -1,0 +1,65 @@
+{
+  "island": {
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.IslandSettings_0"
+    },
+    "values": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\\"maxPlayers\\\":1,\\\"joinInProgress\\\":{\\\"teamType\\\":\\\"SpawnOnNextRound\\\",\\\"teamIndex\\\":1},\\\"socialJoining\\\":\\\"Disabled\\\",\\\"joinInProgressBehavior\\\":\\\"WatchOnly\\\",\\\"joinInProgressAssignedTeam\\\":1,\\\"bForceStartAtMaxPlayers\\\":true,\\\"matchmaking_MaxPlayersPerSession\\\":1,\\\"matchmaking_MaxTeamCount\\\":1,\\\"matchmaking_MaxTeamSize\\\":1,\\\"matchmaking_MinPlayers\\\":1,\\\"matchmaking_OvertimePlayerTarget\\\":1,\\\"matchmaking_QueueOvertimeDuration\\\":5}\"}"
+        }
+      ]
+    }
+  },
+  "journal": {
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934"
+    },
+    "values": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\r\\n\\t\\\"garden\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80003_1773009032.byte_island_game_manager_0\\\"\\r\\n\\t},\\r\\n\\t\\\"lagoon\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5CD0003_1277002985.fn_shoreline_island_loop_progress_0\\\"\\r\\n\\t},\\r\\n\\t\\\"later_badge_trackers\\\": [\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1584565293.fn_shoreline_island_signal_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845.fn_shoreline_island_energy_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5030103_1792824005.fn_shoreline_island_debug_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001.fn_shoreline_island_event_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012.fn_shoreline_island_bot_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t\\t}\\r\\n\\t]\\r\\n}\"}"
+        }
+      ]
+    }
+  },
+  "nursery": {
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782"
+    },
+    "values": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\r\\n\\t\\\"badge_tracker\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t},\\r\\n\\t\\\"round_settings\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x3A813FFA_round_settings\\\"\\r\\n\\t}\\r\\n}\"}"
+        }
+      ]
+    }
+  },
+  "skills_tracker_native": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"savedActor\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5160103_1361400785\\\"}}\"}"
+      }
+    ]
+  },
+  "bot1": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012.fn_shoreline_island_bot_progress_0\\\"\\r\\n\\t},\\r\\n\\t\\\"academy_journal\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934.fn_shoreline_island_academy_journal_0\\\"\\r\\n\\t}\\r\\n}\"}"
+      }
+    ]
+  },
+  "bot4": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012.fn_shoreline_island_bot_progress_0\\\"\\r\\n\\t},\\r\\n\\t\\\"academy_journal\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934.fn_shoreline_island_academy_journal_0\\\"\\r\\n\\t}\\r\\n}\"}"
+      }
+    ]
+  }
+}

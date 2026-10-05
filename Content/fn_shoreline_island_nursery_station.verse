@@ -6,6 +6,8 @@ using { /UnrealEngine.com/Temporary/SpatialMath }
 # One shared definition is expanded for each caller instruction in a frozen trace.
 fn_shoreline_island_nursery_station := class(creative_device):
     @editable
+    retired_primary:logic = false
+    @editable
     navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}
     @editable
     solo_active:logic = true
@@ -250,6 +252,8 @@ fn_shoreline_island_nursery_station := class(creative_device):
 
     OnBegin<override>()<suspends>:void =
         Hide()
+        if (retired_primary?):
+            return
         if (not solo_active?):
             for (index -> control : buttons(), index <> 8):
                 control.Disable()

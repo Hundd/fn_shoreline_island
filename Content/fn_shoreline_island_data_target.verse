@@ -33,6 +33,8 @@ fn_shoreline_island_data_target := class(creative_device):
     # Opt-in for the solo bay; existing moving mission targets retain their cues.
     @editable
     stationary_y_facing:logic = false
+    @editable
+    stationary_x_facing:logic = false
     # Confidence Core looks toward +Y; Pattern Scanner keeps its -Y offset.
     @editable
     stationary_positive_y:logic = false
@@ -71,6 +73,8 @@ fn_shoreline_island_data_target := class(creative_device):
     # Controllers opt in; other missions keep their existing feedback timing.
     var explicit_answer_feedback:logic = false
     var hit_subscription_ready:logic = false
+    # Readiness handshake for adapters that activate targets during startup.
+    var startup_ready:logic = false
     var answer_feedback_seconds:float = 0.4
     neutral_ring_material:DataBlaster.m_data_ring = DataBlaster.m_data_ring{}
     wrong_ring_material:DataBlaster.mi_target_grey = DataBlaster.mi_target_grey{}
@@ -84,6 +88,8 @@ fn_shoreline_island_data_target := class(creative_device):
         set ring_home = ring_mesh.GetTransform()
         deactivate()
         initialize_hit_subscription()
+
+        set startup_ready = true
 
 
     initialize_hit_subscription():void =
@@ -250,6 +256,8 @@ fn_shoreline_island_data_target := class(creative_device):
             if (ring_mesh.TeleportTo[pose]) {}
             var label_pose:transform = label_board.GetTransform()
             set label_pose.Translation = position + vector3{X := -20.0, Z := 200.0}
+            if (stationary_x_facing?):
+                set label_pose.Translation = position + vector3{X := -20.0, Z := stationary_label_offset_z}
             if (stationary_y_facing?):
                 set label_pose.Translation = position + vector3{Y := -20.0, Z := stationary_label_offset_z}
                 if (stationary_positive_y?):

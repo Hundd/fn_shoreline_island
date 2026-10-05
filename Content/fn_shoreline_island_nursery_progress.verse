@@ -16,7 +16,7 @@ fn_shoreline_island_nursery_progress := class(creative_device):
     var round_generation:int = 0
 
     badge_title<localizes>:message = "AI Skills Badge"
-    badge_description<localizes>:message = "Restore three planter challenges with GrowPlant."
+    badge_description<localizes>:message = "Teach PopBridge and reuse it to cross the popcorn course."
 
     OnBegin<override>()<suspends>:void =
         Hide()

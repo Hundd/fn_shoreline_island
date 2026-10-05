@@ -1,0 +1,40 @@
+{
+  "actor": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5160103_1360785784"
+  },
+  "schema": {
+    "size": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 256
+    }
+  },
+  "before": {
+    "size": 18,
+    "override Default Text Style": true,
+    "text Style": "Default",
+    "verseTextStyle": "",
+    "verseTextStyle_Override": false,
+    "textStyleSet": null,
+    "textStyleSet_Override": false,
+    "isUsingLegacyRichTextStyle": false,
+    "placement": "Bottom Center",
+    "displayTime": 5
+  },
+  "after": {
+    "size": 96,
+    "override Default Text Style": true,
+    "text Style": "Default",
+    "verseTextStyle": "",
+    "verseTextStyle_Override": false,
+    "textStyleSet": null,
+    "textStyleSet_Override": false,
+    "isUsingLegacyRichTextStyle": false,
+    "placement": "Bottom Center",
+    "displayTime": 5
+  },
+  "onlyChanged": "size",
+  "intermediateUncookedValue": 32,
+  "finalValue": 96,
+  "renderVerified": false
+}

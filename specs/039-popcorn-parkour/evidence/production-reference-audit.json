@@ -1,0 +1,19 @@
+{
+  "profile_bindings_count": 133,
+  "profile_bindings_unique": 133,
+  "mismatches": [],
+  "assembly_roles_count": 120,
+  "assembly_unique": 120,
+  "assembly_aliases": [],
+  "inventory_count": 183,
+  "inventory_unique": 183,
+  "notes": "Compiled runtime pose guard is not comprehensive alias validation. This checks actual saved reference identities captured by native readback; cross-role repeats between profile and target wrappers are intentional same object bindings.",
+  "shutdown": {
+    "StopGame": "Completed",
+    "GetGameState": "CanStart",
+    "debug_tag": "",
+    "save_assets": true,
+    "map_dirty": false,
+    "pending_calls": 0
+  }
+}

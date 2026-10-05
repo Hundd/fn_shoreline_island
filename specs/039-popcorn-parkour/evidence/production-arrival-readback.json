@@ -1,0 +1,133 @@
+{
+  "teleporters": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[{\"guid\":\"EC8F2A11-4035-F08A-C111-9FA931BC643F\",\"nativeClass\":{\"refPath\":\"/CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C\"},\"class\":{\"refPath\":\"/CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C\"},\"name\":\"Device_Teleporter_V2_C_UAID_E89C2592D1B54F0703_1085071149\",\"label\":\"rescue_run_replay_destination\",\"bounds\":{\"min\":{\"x\":-4900,\"y\":-14000,\"z\":1900},\"max\":{\"x\":-3900,\"y\":-13000,\"z\":2900},\"isValid\":true},\"runtimeGrid\":\"None\",\"bIsSpatiallyLoaded\":false,\"bActorIsEditorOnly\":false,\"actorPackage\":\"None\",\"actorPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B54F0703_1085071149\",\"folderPath\":\"None\",\"dataLayerAssets\":[]},{\"guid\":\"4D576454-49DB-46A5-F564-0C8CDB0AEAA7\",\"nativeClass\":{\"refPath\":\"/CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C\"},\"class\":{\"refPath\":\"/CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C\"},\"name\":\"Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040\",\"label\":\"hub_destination\",\"bounds\":{\"min\":{\"x\":-1200.0000000000005,\"y\":999.99999999999955,\"z\":2000},\"max\":{\"x\":-199.9999999999996,\"y\":2000.0000000000005,\"z\":3000},\"isValid\":true},\"runtimeGrid\":\"None\",\"bIsSpatiallyLoaded\":false,\"bActorIsEditorOnly\":false,\"actorPackage\":\"None\",\"actorPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040\",\"folderPath\":\"None\",\"dataLayerAssets\":[]}]}"
+      }
+    ]
+  },
+  "arrival_samples": [
+    {
+      "start": {
+        "x": -1750,
+        "y": -16250,
+        "z": 2700
+      },
+      "end": {
+        "x": -4800,
+        "y": -16250,
+        "z": 2700
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "start": {
+        "x": -1750,
+        "y": -16130,
+        "z": 2700
+      },
+      "end": {
+        "x": -4800,
+        "y": -16130,
+        "z": 2700
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "start": {
+        "x": -1750,
+        "y": -16010,
+        "z": 2700
+      },
+      "end": {
+        "x": -4800,
+        "y": -16010,
+        "z": 2700
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "start": {
+        "x": -1850,
+        "y": -16130,
+        "z": 3500
+      },
+      "end": {
+        "x": -1850,
+        "y": -16130,
+        "z": 2300
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":1100}"
+          }
+        ]
+      }
+    },
+    {
+      "start": {
+        "x": -3200,
+        "y": -16130,
+        "z": 3500
+      },
+      "end": {
+        "x": -3200,
+        "y": -16130,
+        "z": 2300
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":1100}"
+          }
+        ]
+      }
+    },
+    {
+      "start": {
+        "x": -4800,
+        "y": -16130,
+        "z": 3500
+      },
+      "end": {
+        "x": -4800,
+        "y": -16130,
+        "z": 2300
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":1100}"
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": "No nursery/Skills arrival teleporter; existing east physical campus access. Floor2400 at corridor samples. Native parallel body-height rays clear, protected coral/entrypod exact bounds checked; final player-capsule access test after placement."
+}

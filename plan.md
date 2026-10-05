@@ -6,11 +6,15 @@ Build a bright, non-combat UEFN adventure for ages 8–10. Players help Pix, a f
 
 The shoreline terrain and existing puzzles remain the foundation. Preserve working device bindings, individual progress and one-time rewards while simplifying interactions. The [AI Island Academy implementation plan](docs/AI%20Island%20Academy%20%E2%80%94%20Implementation%20Plan.md) and [feature 022](specs/022-ai-island-academy-migration/spec.md) describe the theme migration baseline; later numbered features supersede their respective activity designs. See the current status below before treating a proposal as implemented.
 
-## Current implementation checkpoint — 2026-10-04
+## Current implementation checkpoint — 2026-10-05
 
 Features033 and037 are implemented under the owner's delegated autonomous authority: the compact personal HUD/journal follows the numbered eight-module route, nine map indicators use1..8/HUB, and eight Core panels/lights derive existing badge state. Native player caps are one, social joining is disabled and join-in-progress watches only. Confirmed duplicate Skills/legacy Agent controls are retired while primary games and Return access remain.
 
 Focused cooked evidence proves original Error Return E and real Tool Scanner/Speaker/Light shots, resulting Tool badge and HUD1/8. Tool decorative collision and transactional movement rollback were corrected without changing the puzzle. Final validation, production cleanup and independent QA status are tracked in033/037 evidence and tasks; full normal eight-module completion, reset and actual second-account admission are not established by this checkpoint. The native description field rejected its write and remains a delivery gate.
+
+Feature039 replaces the primary Skills Lab with Pix's Popcorn Parkour: teach Load → Heat → Pop through gun shots, reuse PopBridge to create platforms, and take either five-jump branch. The permanent course is saved; independent cooked evidence covers both routes, safe recovery, finale/Core progression, Replay and physical finish Return. Ramp, material, label-facing and all three teaching-caption repairs are verified. The owner's requested cleanup removed thirteen unused old primary buttons and their dormant references; all new-course actors and active controls remain, with project validation and cooking passed. Independent post-cleanup QA verified earned left completion → Replay → right completion → owned finish Return in the same award lifetime: Core stayed1/8 and the attempt cleared on Return. Remaining entry Return, fault, integration and first-use checks are tracked in [039 tasks](specs/039-popcorn-parkour/tasks.md) and its QA evidence. This does not establish full release acceptance or child playtest enjoyment.
+
+The October5 finish-first startability repair separates FINISH from the existing LOAD/ramp direction, explains rejected early shots with a compact readable cue, and preserves the original start conditions. Independent cooked QA verified normal ramp arrival and real LOAD advancing to NEXT HEAT, plus the final readable two-line rejected-shot message with Core0 unchanged. Builds, explicit validation and cooking passed; the saved editor remains open with the game stopped. This is affected-case evidence, not a human first-use or full-island acceptance claim.
 
 ## Historical migration status — 2026-09-29
 
@@ -46,7 +50,7 @@ The hub introduces Pix's damaged AI Core and points to1 Prompt Workshop. The per
 4. **Confidence Core** — use clues to revise Pix's confidence. **Confidence Badge**.
 5. **AI Error Lab** — compare expected and actual results, correct one mistake, and rerun. **AI Detective Badge**.
 6. **AI Tool Lab** — choose a tool response for a task. **Tool Master Badge**.
-7. **AI Skills Lab** — build and reuse the GrowPlant skill. **AI Skills Badge**. Some runtime messages still use the old Care name; the review records this source inconsistency.
+7. **Pix's Popcorn Parkour / AI Skills Lab** — shoot Load, Heat and Pop once, then reuse PopBridge to create popcorn platforms and jump through either branch. **AI Skills Badge**. Implementation and remaining acceptance are tracked in 039.
 8. **AI Agent Mission** — combine earlier abilities to restore the Research Station. **AI Agent Badge**.
 
 The old **Fix the Prompt** repair activity is replaced by feature 027 on its repair tiles; its remaining reconciliation tasks are tracked there. **AI Discovery Trail** is optional exploration and does not block the main route or award another badge. Classifier now uses the accepted solo revision 029; Confidence retains its older gameplay pending approval of 030.

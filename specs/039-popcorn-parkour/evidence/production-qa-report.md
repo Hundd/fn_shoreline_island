@@ -1,0 +1,43 @@
+# Independent production gameplay QA — 2026-10-04
+
+Result: **partial behavioral verification; production acceptance failed/pending repairs**. Independent gpt-6.1-sol QA, `/root/gameplay_verifier`. Approved revision digest `809dcd27d05f7e0711635d560f2615ab543ffb18195ea0e5008e386395d8087a`; human approval is not provided by this report.
+
+The permanent production course was tested using real Fortnite mouse rifle shots, AutoRun `=`, Space jumps, and physical button `e`. No Trigger() hits, player pose injection, or gameplay fixes. Existing source/Python/worker evidence is distinct from this fresh cooked run. Source checkpoint: production `CA5B805A71F901E5E6969015F7571BC6B6DE408A89EA82BD531FDEC3E0A08D00`, controller `6B42411B4EB47C0A823E26063A1929777EB43263103E667DB36D70FAF1D5F90D`, fixtures `223A293E0685799E2612BE2D108F7F8991A8055C486DF939983CE2A575FAD433`.
+
+## Fresh expected/actual evidence
+
+Times below are UTC, from the actual UEFN cooked Verse log exported to `production-qa-actual.log`. PROBE is the existing read-only observer of actual character state, not an input mechanism. Temporary native `debug_tag` changed from blank to `039-production-QA` with Supervisor authorization; full current-content push completed and game ran. FIXTURE0/READY7/8 establish startup/diagnostic checks, not physical acceptance.
+
+| Scenario / requirement | Actual result | Disposition |
+|---|---|---|
+| R01 approach and starter | Real hub→east main promenade near x−193→south beyond y−15980→west approved corridor. Actual Space needed onto raised campus floor at x−1768. Reached ramp and starter; grounded ramp did not connect correctly (PQA01). | Fail ramp; corridor reached physically |
+| R02/R03 wrong answer and immediate retry | Real Pop at15:55:51.881 and Heat at15:56:27.157 gave result3, prefix0; tiny-puff/Next LOAD HUD visible. Load15:57:14.213→Heat31.879→Pop32.460 accepted, COMMIT deck1 at32.762. | Pass observed sequence |
+| R03 taught routine reuse | Each taught and reused routine logged the same ordered steps0/1/2, actual prop transforms +25cm then home. Real target3 at15:59:03.808 committed deck2; target4 at53.502 committed fork; target5 at16:00:47.235 committed left. Bright native flourish and raised mechanism observed; logs alone are not claimed as all animation/comedy acceptance. | Pass ordered transforms/selected visible feedback |
+| R04 actual left five-jump course | Actual airborne departure plus grounded LAND1 at15:58:37.751; LAND2 at15:59:34.164; LAND3 at16:00:17.039; LAND4 at16:01:36.094; LAND6 at16:02:13.547. Complete starter→first→reuse→fork→left→finish through five real jumps. | Pass left route |
+| R05 safe catch | Accidental fork fall RECOVER node3 at16:00:17.849 preserved prefix3/built7; recovered actual grounded pose at17.911. Later terminal fall PROBE(-2414.89,−16588.90,2563.19) at16:06:49.617→RECOVER node6 at49.653→grounded terminal at50.120; visible recovery message, health100 and Core1/8 retained. | Pass these falls; no universal speed bound claimed |
+| R07 finale/progression | Real final rifle SHOT target7 result2 at16:06:02.060; COMMIT creates−2 at02.892. Actual Core HUD0/8→1/8; overflow balls appeared and Pix visible. `production-qa-finale.jpg` records actual completed state. | Pass observed finale/Core update; module badge authority not separately read |
+| R08 physical Replay | Real terminal button e activated Replay, teleported to(-4800,−17280,2597.4), prefix0/checkpoint0/pending−1; journal Step1/3, Core1/8 retained. `production-qa-replay.jpg`. Fresh real Load after Replay at16:12:47.077 accepted result1/prefix1/token3, actual +25cm/home motion. | Pass observed reset/reacquisition; second full award cycle not run |
+| R02/R10 teaching readability and intended presentation | Names absent in starter shooting views; gray checkerboard decks/lobes/assemblies/cosmetics throughout. `production-qa-teach-labels.jpg`, finale capture. | Fail PQA02/PQA03 |
+
+Tool Master Badge0/1 shown on screen is the global all-three-challenges objective; its unchanged value alone is **not** a module award defect. Actual module journal advanced1/3→2/3→3/3 and reset1/3 after Replay. Agent authority and one-time badge award still need explicit independent verification.
+
+## Reproducible defects / next role
+
+**PQA01 — high, entry ramp slopes downward toward the raised starter (R01/R04).** Native ramp `BuildingProp_UAID_E89C2592D1B5FA0703_1905113540`, center[-4800,−16531.0844751,2450.0589782], scale[3,11.0652609549,.2], roll−6.2258290644°. Walk south along x≈−4739: at y−16038.24 raw characterZ2591.216 (feet2514.066); y−16134.63 feet2503.552; near y−17047.9 feet≈2412. Starter top2520 blocks grounded access. A real jump bypassed the defect for course tests. Planner confirmed native roll sign error within approved intended endpoints, northfoot[-4800,−15980,2400]→southstarter[-4800,−17080,2520]. Implementer should apply authorized +6.2258290644° correction, independently read back and retest grounded approach.
+
+**PQA02 — medium, intended palette not present in cooked course (R10 approved production art).** Shoot/traverse left route: assembly lobes, connecting blocks, decks and popcorn/cosmetics use gray checkerboard. Existing campus greens/teal Pix render normally. See captures. Supervisor/Implementer independently noted offline audit `overrideMaterials` uses transient MID_WorldGridMaterial despite intended MI assignment; that cause is implementation evidence, not a fresh QA material readback. Implementer should repair persistent intended material assignment and recook; QA must visually verify palette and comedy shapes.
+
+**PQA03 — high learning clarity, first seven receiver labels absent from intended firing side (R02/R03/R06/R10).** From actual starter(-4837.56,−17203.57,2597.4), face +X: real Load accepted but LOAD/HEAT/POP captions absent; they were also absent during first traversal. Fresh native all8 label audit: text correct; Always; bHiddenfalse; One Sided; viewDistance10000; size20. Labels0–6 yaw90, label7 yaw0. Native target0–6 stationary_x_facingtrue/y_facingfalse; final7 xfalse/ytrue/positive_yfalse; namespace39/IDs0–7 correct. `stationary_label_offset_z` target0 actual90. Source runtime moves labels20cm toward firing side and preserves rotation. Final yaw0 label is actually readable from−Y, whereas yaw90 first labels appear to face+X rather than required−X. Implementer should confirm native billboard front normal, correct facing for0–6 (likely−90/270), preserve intended offset, then recook/readability test. No design/layout change requested by QA.
+
+Fresh label/target readback is preserved verbatim in `production-qa-native-labels.json`. Physical Replay RELEASE occurred at16:08:31.819 UTC; subsequent starter probes confirm reset. The report's screenshots are native computer-use captures, saved without image modification.
+
+## Native scope / remaining checks
+
+Fresh targeted native readback established profile bay[-5200,−19000,2300]..[-1800,−15300,3300], catch[-5200,−19000,2300]..[-1800,−15300,2480], origin77.15, landing tolerance35, shooting inset20; label configuration above and ramp transform. The full183 actor/133 binding/120 assembly uniqueness, target weapon collision/PawnIgnore, all53 decor NoCollision, all7 deck/ramp collision, retirement34 and primary-only guard have worker checkpoint/audit evidence plus source review, **not a completed fresh independent all-object native audit** in this run. These need bounded independent readback with repaired checkpoint.
+
+Not run/accepted: right five-jump route and bucket effect; exact≤20cm legitimate rim landing (JQA01 physical); second completed award cycle; native teleport failure; cross-player ownership/multiplayer; departure/round/replay during final motion; full Core/Agent badge authority and unrelated activity journal isolation; physical Return navigation; muted-audio readability; broad fun/production integration acceptance. Project Validate was not invoked; cooking/diagnostic result0 is not project validation. Supported schema discovery did not expose a validation command; UI validation remains required.
+
+## Shutdown and handoff
+
+At end: supported StopGame returned Completed; fresh GetGameState returned CanStart. Restored exact production profile native debug_tag to blank and read back blank. Targeted `/fn_shoreline_island/fn_shoreline_island` save_assets returnedtrue; is_dirty returnedfalse. Editor left open. No pending editor/MCP/UI calls. QA explicitly released editor ownership to Supervisor/Implementer for authorized repairs; no further live access without new handoff. Permanent course preserved, no source/actor fixes or task/approval changes by QA.
+

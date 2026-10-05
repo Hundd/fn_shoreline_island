@@ -1,0 +1,657 @@
+version: 1
+map:
+  id: popcorn_parkour
+  title: Pix's Popcorn Parkour
+  theme: cream_popcorn_factory_comedy
+  units: meters
+  origin_cm:
+  - -5200
+  - -19000
+  - 2400
+  size:
+  - 34
+  - 37
+  - 8
+  learning_objective: Teach one named sequence once, then reuse it with one shot at
+    new machines; jump on what it creates.
+  source_feature: specs/039-popcorn-parkour/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.1
+player_flow:
+- course
+zones:
+- id: course
+  label: 'Primary Skills bay: teach > shoot > jump > choose > finish'
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 34
+  - 37
+  - 8
+  purpose: Single existing bay envelope; detailed physical route is controller.settings.course_contract
+    and parkour-preview.html, not a continuous walk corridor.
+  parameters:
+    target_count: 8
+    friendly_fire: false
+  devices:
+  - controller
+  - targets
+  - blaster
+  - progress
+  - journal
+  - controls
+  - props
+  overlap_with: []
+  completion: Actual ordered landings plus final skill shot; existing badge once.
+  reset: Cancel owner/generation/round work; clear attempt geometry; preserve earned
+    badge except existing round reset.
+connections: []
+markers:
+- id: arrival
+  kind: spawn
+  zone: course
+  label: Existing campus arrival; no spawn device
+  position:
+  - 17
+  - 2
+  - 0
+  source: Proposed local approach on measured existing floor
+- id: weapon
+  kind: weapon
+  zone: course
+  label: Shared Data Blaster already granted
+  position:
+  - 20
+  - 2
+  - 0
+  source: Existing loadout annotation; no new granter
+- id: return
+  kind: exit
+  zone: course
+  label: Keep primary Return
+  position:
+  - 5.3
+  - 13
+  - 1
+  source: Existing Return approximate design annotation; native ref resolved in evidence,
+    final pose to read back
+- id: ribbon
+  kind: knowledge
+  zone: course
+  label: PopBridge = Load > Heat > Pop
+  position:
+  - 23
+  - 8
+  - 2.6
+  source: Proposed readable ribbon beside starter; not answer-bank
+- id: reward
+  kind: reward
+  zone: course
+  label: Skills badge once + Replay/Return
+  position:
+  - 17
+  - 30.5
+  - 1.2
+  source: Proposed final landing; actual arrival AND final shot required
+- id: starter_landing
+  kind: checkpoint
+  zone: course
+  label: Starter landing
+  position:
+  - 17
+  - 8
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: first_landing
+  kind: checkpoint
+  zone: course
+  label: First landing
+  position:
+  - 17
+  - 12.5
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: reuse_landing
+  kind: checkpoint
+  zone: course
+  label: Reuse landing
+  position:
+  - 17
+  - 17
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: fork_landing
+  kind: checkpoint
+  zone: course
+  label: Fork landing
+  position:
+  - 17
+  - 21.5
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: left_landing
+  kind: checkpoint
+  zone: course
+  label: Left landing
+  position:
+  - 10
+  - 26
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: right_landing
+  kind: checkpoint
+  zone: course
+  label: Right landing
+  position:
+  - 24
+  - 26
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: finish_landing
+  kind: checkpoint
+  zone: course
+  label: Finish landing
+  position:
+  - 17
+  - 30.5
+  - 1.2
+  source: Proposed stable deck; adapter position-checkpoint, not native checkpoint
+    device
+- id: target_0
+  kind: target
+  zone: course
+  label: LOAD
+  position:
+  - 15.5
+  - 10
+  - 2.6
+  target_id: 0
+  source: Proposed damage receiver; course_contract gates from starter
+- id: target_1
+  kind: target
+  zone: course
+  label: HEAT
+  position:
+  - 17
+  - 10
+  - 2.6
+  target_id: 1
+  source: Proposed damage receiver; course_contract gates from starter
+- id: target_2
+  kind: target
+  zone: course
+  label: POP
+  position:
+  - 18.5
+  - 10
+  - 2.6
+  target_id: 2
+  source: Proposed damage receiver; course_contract gates from starter
+- id: target_3
+  kind: target
+  zone: course
+  label: PopBridge
+  position:
+  - 17
+  - 14.8
+  - 2.6
+  target_id: 3
+  source: Proposed damage receiver; course_contract gates from first
+- id: target_4
+  kind: target
+  zone: course
+  label: PopBridge
+  position:
+  - 17
+  - 19.3
+  - 2.6
+  target_id: 4
+  source: Proposed damage receiver; course_contract gates from reuse
+- id: target_5
+  kind: target
+  zone: course
+  label: Moustache PopBridge
+  position:
+  - 12
+  - 24.5
+  - 2.6
+  target_id: 5
+  source: Proposed damage receiver; course_contract gates from fork
+- id: target_6
+  kind: target
+  zone: course
+  label: Bucket PopBridge
+  position:
+  - 22
+  - 24.5
+  - 2.6
+  target_id: 6
+  source: Proposed damage receiver; course_contract gates from fork
+- id: target_7
+  kind: target
+  zone: course
+  label: Final PopBridge
+  position:
+  - 17
+  - 32.7
+  - 2.6
+  target_id: 7
+  source: Proposed damage receiver; course_contract gates from finish
+devices:
+- id: controller
+  class: fn_shoreline_island_popbridge_controller
+  count: 1
+  source: Proposed reusable adapter; absent today; plan.md development boundary
+  settings:
+    course_contract:
+      version: 1
+      status: proposed_adapter_contract_not_runtime
+      coordinate_provenance: New design inside measured primary 34x37m floor; proposed
+        dimensions, not measured jumpability
+      nodes:
+      - id: starter
+        center:
+        - 17
+        - 8
+        - 1.2
+        size:
+        - 6
+        - 4
+        - 0.4
+        initially_built: true
+      - id: first
+        center:
+        - 17
+        - 12.5
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+      - id: reuse
+        center:
+        - 17
+        - 17
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+      - id: fork
+        center:
+        - 17
+        - 21.5
+        - 1.2
+        size:
+        - 8
+        - 4
+        - 0.4
+        initially_built: false
+      - id: left
+        center:
+        - 10
+        - 26
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+      - id: right
+        center:
+        - 24
+        - 26
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+      - id: finish
+        center:
+        - 17
+        - 30.5
+        - 1.2
+        size:
+        - 12
+        - 4
+        - 0.4
+        initially_built: true
+      jump_edges:
+      - source: starter
+        destination: first
+        edge_gap_m: 0.5
+        kind: jump
+      - source: first
+        destination: reuse
+        edge_gap_m: 0.5
+        kind: jump
+      - source: reuse
+        destination: fork
+        edge_gap_m: 0.5
+        kind: jump
+      - source: fork
+        destination: left
+        edge_gap_m: 1.118
+        kind: jump
+      - source: fork
+        destination: right
+        edge_gap_m: 1.118
+        kind: jump
+      - source: left
+        destination: finish
+        edge_gap_m: 0.5
+        kind: jump
+      - source: right
+        destination: finish
+        edge_gap_m: 0.5
+        kind: jump
+      receivers:
+      - target_id: 0
+        name: LOAD
+        position:
+        - 15.5
+        - 10
+        - 2.6
+        from_landing: starter
+        creates: null
+      - target_id: 1
+        name: HEAT
+        position:
+        - 17
+        - 10
+        - 2.6
+        from_landing: starter
+        creates: null
+      - target_id: 2
+        name: POP
+        position:
+        - 18.5
+        - 10
+        - 2.6
+        from_landing: starter
+        creates: first
+      - target_id: 3
+        name: PopBridge
+        position:
+        - 17
+        - 14.8
+        - 2.6
+        from_landing: first
+        creates: reuse
+      - target_id: 4
+        name: PopBridge
+        position:
+        - 17
+        - 19.3
+        - 2.6
+        from_landing: reuse
+        creates: fork
+      - target_id: 5
+        name: Moustache PopBridge
+        position:
+        - 12
+        - 24.5
+        - 2.6
+        from_landing: fork
+        creates: left
+      - target_id: 6
+        name: Bucket PopBridge
+        position:
+        - 22
+        - 24.5
+        - 2.6
+        from_landing: fork
+        creates: right
+      - target_id: 7
+        name: Final PopBridge
+        position:
+        - 17
+        - 32.7
+        - 2.6
+        from_landing: finish
+        creates: basket_overflow
+      branch_rule: Either left or right is equally valid; no preferred target; logical
+        course milestone identical
+      required_paths:
+      - - starter
+        - first
+        - reuse
+        - fork
+        - left
+        - finish
+      - - starter
+        - first
+        - reuse
+        - fork
+        - right
+        - finish
+      landing_rule: Owner grounded/dwell inside inset deck footprint; ordered predecessor
+        accepted; no airborne or floor shortcut
+      recovery:
+        catch_bounds:
+        - 6
+        - 5
+        - 28
+        - 34
+        floor_z: 0
+        deck_top_z: 1.2
+        maximum_latency_seconds: 1
+        preserve:
+        - skill
+        - built_platforms
+        - earned_badge
+        teleport: Last accepted landing center + safe character offset
+        entry_ramp_exemption: Before first landing only; catch area excludes campus
+          approach
+        failure: Keep progress; bounded retry with readable Return
+      skill:
+        name: PopBridge
+        instructions:
+        - Load
+        - Heat
+        - Pop
+        wrong_order: Retain prefix; tiny puff; expected mechanism highlight
+        reuse: Play identical three instructions visibly; platform solid only after
+          completion
+        consumed: Already popped; no geometry duplicate
+      visual:
+        meshes:
+        - /VerseEngineAssets/Cube.Cube
+        - /VerseEngineAssets/Sphere.Sphere
+        stable_collision: Flat cube top; 4m clear landing; spheres outside footprint;
+          no collision animation
+        popcorn: Cream five-lobe sphere cluster with yellow center; targetable machine
+          below far edge; visible ribbon
+        jokes:
+        - tiny kernel failed bridge
+        - left popcorn moustache on Pix
+        - right overflowing bucket
+        - final basket overflow
+        essential_audio: false
+      milestone_mapping:
+        '0': First landing after teaching
+        '1': Reuse landing after first saved invocation
+        '2': Finish arrival after valid branch and final skill shot
+      reset: Generation/round/owner cancellation; replay clears attempt and teleports
+        starter; earned badge retained; round authority unchanged
+      adapter_gate: A01/A02 must resolve with separately approved development and
+        verification before map execution
+    legacy_primary_replacement_only: true
+- id: targets
+  class: fn_shoreline_island_data_target
+  count: 8
+  source: Reuse class; new primary target assemblies IDs0..7
+  settings:
+    mission_id: Resolve unique namespace; do not assume module7 equals target mission7
+    damage_only: true
+    agent_attribution: true
+    surface_size_m:
+    - 1.2
+    - 1.2
+    park_inactive_surfaces: true
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing shared loadout; no duplicate granter
+  settings:
+    reuse_existing: true
+    safe_ammunition: Read existing granter settings; verify sustained retry
+    invulnerability: Existing SetVulnerability(false)
+- id: progress
+  class: fn_shoreline_island_nursery_progress
+  count: 1
+  source: Existing exact primary progress in evidence/planning-inspection.json
+  settings:
+    reuse_existing: true
+    milestones:
+    - 0
+    - 1
+    - 2
+    badge_description: Teach PopBridge and reuse it to cross the popcorn course.
+- id: journal
+  class: fn_shoreline_island_academy_journal
+  count: 1
+  source: Existing navigation_journal binding
+  settings:
+    module_id: 7
+    reuse_existing: true
+    agent_prerequisites: same Skills authority
+- id: controls
+  class: button_device
+  count: 3
+  source: Reuse primary Return/Replay; add finish Return
+  settings:
+    return: Available all phases; existing hub destination
+    replay: Reset attempt, preserve badge
+    old_primary_controls: Hide/disable all other old primary controls and subscriptions
+- id: props
+  class: creative_prop
+  count: 1
+  source: Grouped art/deck reconciliation inventory; count1 denotes assembly group,
+    not spawned-prop count
+  settings:
+    deck_count: 7
+    cube_mesh: /VerseEngineAssets/Cube.Cube
+    sphere_mesh: /VerseEngineAssets/Sphere.Sphere
+    existing_pix: nursery_robot
+    starter_ramp:
+      width_m: 3
+      length_m: 11
+      rise_m: 1.2
+      from:
+      - 3
+      - 8
+      - 0
+      to:
+      - 14
+      - 8
+      - 1.2
+      note: Proposed straight +X ramp, 10.9 percent slope; bounds X3..14 Y6.5..9.5.
+        Joins starter west edge. Catch recovery excludes ramp until first accepted
+        landing.
+    collision_top_m: 1.2
+stages:
+- id: teach_load
+  zone: course
+  purpose: teach load
+  requires: []
+  active_targets:
+  - target_0
+  - target_1
+  - target_2
+  completion: Load accepted; retain prefix on wrong-order shot
+  success_target: target_0
+- id: teach_heat
+  zone: course
+  purpose: teach heat
+  requires:
+  - teach_load
+  active_targets:
+  - target_0
+  - target_1
+  - target_2
+  completion: Heat accepted; retain prefix on wrong-order shot
+  success_target: target_1
+- id: teach_pop
+  zone: course
+  purpose: teach pop
+  requires:
+  - teach_heat
+  active_targets:
+  - target_0
+  - target_1
+  - target_2
+  completion: PopBridge saved, first deck appears; actual first landing completes
+    milestone0
+  success_target: target_2
+- id: first_reuse
+  zone: course
+  purpose: first reuse
+  requires:
+  - teach_pop
+  active_targets:
+  - target_3
+  completion: Requires first landing; replay three instructions then reuse deck appears;
+    landing completes milestone1
+  success_target: target_3
+- id: course_routes
+  zone: course
+  purpose: course routes
+  requires:
+  - first_reuse
+  active_targets: []
+  completion: Detailed settings contract handles target4 then equal targets5 OR6;
+    fork then either branch then finish arrival; no branch selection represented by
+    v1 success_target
+- id: finale
+  zone: course
+  purpose: finale
+  requires:
+  - course_routes
+  active_targets:
+  - target_7
+  completion: Requires valid branch and finish arrival; same routine overflows basket;
+    milestone2 and existing badge once
+  success_target: target_7
+assumptions:
+- id: a01_adapter
+  detail: Reusable PopBridge sequence, equal-route and safe-checkpoint adapter absent.
+    Needs separately approved code-only development/verification gate; map mutations
+    blocked.
+  status: open
+  evidence: Current nursery gardening controller + data_target Hit(agent); plan.md
+    development boundary
+- id: a02_route_contract
+  detail: v1 linear stages do not validate jump edges/equal receivers. Embedded course_contract
+    must gain verified adapter validation before execution; no fake walk links.
+  status: open
+  evidence: design/MAP_SPEC.md; controller.settings.course_contract
+- id: a03_entry_ramp
+  detail: Proposed straight 11m long, 3m wide +X entry ramp from local3,8,0 to14,8,1.2
+    joins starter west edge; 10.9 percent slope, inside primary bay.
+  status: resolved
+  evidence: controller/props settings exact geometry; footprint separate from Return
+    annotation at5.3,13; actual accessibility requires cooked acceptance
+- id: a04_art
+  detail: Known VerseEngineAssets Sphere/Cube are intentional stylized final popcorn
+    art; existing Pix reused. No imported asset dependency.
+  status: resolved
+  evidence: Live asset bounds recorded in evidence/planning-inspection.json; final
+    shape/collision cooking is acceptance work
+- id: a05_bay
+  detail: Primary 34x37m bay measured; compact two-route course stays within it.
+  status: resolved
+  evidence: Live nursery_floor descriptor in evidence/planning-inspection.json

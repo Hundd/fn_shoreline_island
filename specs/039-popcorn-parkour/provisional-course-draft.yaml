@@ -1,0 +1,47 @@
+status: provisional_material_geometry_revision_not_approved_not_executable
+original_review_digest: 8af651188df0764becfce1f677b1b72e3486756bff77712da9c7fa4b0bccf7b5
+purpose: Avoid protected planter wing and computer; preserve shoot-create-jump lesson and two equal routes.
+origin_cm: [-5200, -19000, 2400]
+bay_size_m: [34, 37, 8]
+deck_top_local_z_m: 1.2
+deck_thickness_m: 0.4
+nodes:
+  - {id: starter, center_m: [10, 11.6, 1.2], clear_size_m: [6, 4], initially_built: true}
+  - {id: first, center_m: [17, 11.6, 1.2], clear_size_m: [4, 4], initially_built: false}
+  - {id: reuse, center_m: [17, 17.6, 1.2], clear_size_m: [4, 4], initially_built: false}
+  - {id: fork, center_m: [17, 23.6, 1.2], clear_size_m: [8, 4], initially_built: false}
+  - {id: left, center_m: [9.68, 29.1, 1.2], clear_size_m: [4, 4], initially_built: false}
+  - {id: right, center_m: [24.32, 29.1, 1.2], clear_size_m: [4, 4], initially_built: false}
+  - {id: finish, center_m: [17, 34.6, 1.2], clear_size_m: [8, 4], initially_built: true}
+jump_edges:
+  - {from: starter, to: first, closest_edge_gap_m: 2}
+  - {from: first, to: reuse, closest_edge_gap_m: 2}
+  - {from: reuse, to: fork, closest_edge_gap_m: 2}
+  - {from: fork, to: left, closest_edge_gap_m: 1.9981}
+  - {from: fork, to: right, closest_edge_gap_m: 1.9981}
+  - {from: left, to: finish, closest_edge_gap_m: 1.9981}
+  - {from: right, to: finish, closest_edge_gap_m: 1.9981}
+entry_ramp:
+  from_m: [10, 24.6, 0]
+  to_m: [10, 13.6, 1.2]
+  width_m: 3
+  horizontal_length_m: 11
+  footprint_xy_m: [8.5, 13.6, 11.5, 24.6]
+  slope_percent: 10.91
+  approach: Existing west-side campus access and Return remain; exact collision/access inventory pending.
+unchanged_behavior:
+  skill: PopBridge = Load then Heat then Pop
+  receiver_ids: [0, 1, 2, 3, 4, 5, 6, 7]
+  milestones: Teach landing, first reuse landing, finish arrival plus final shot
+  routes: Two equally valid paths through left or right; no extra mandatory shots midair
+  recovery: Last accepted landing; retain skill and platforms; no elimination/timer
+  art: Known cream sphere popcorn, stable cube decks, Pix moustache or bucket, final overflow
+protected_obstacles_local_m:
+  wing4: {min: [6.5, 3.9, 0], max: [29.5, 9.1, 5.2], policy: Preserve shared campus-shell component}
+  computer: {min: [15.733, 4.441, 1.02], max: [18.267, 5.559, 2.09], policy: Preserve production progress actor}
+unresolved:
+  - Current gap validator accepts at most120cm; proposed200cm needs explicit verified capability change after review.
+  - Native clearance of all other canopy and gardening/control primitives, ramp and shot supports remains unverified.
+  - Ordinary jumping and physical walking rejection across2m gaps, both diagonal paths and edge catch recovery require actual cooked evidence.
+  - Finish has40cm floor buffer at north edge; bound catch region and confirm no unsafe off-floor misses.
+  - Exact receiver positions, full transforms and active surfaces belong to revised review bundle after clearance; do not invent through MCP.

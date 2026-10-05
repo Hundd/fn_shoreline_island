@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "edge": {
+        "source": "starter",
+        "destination": "first",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 6.0
+    },
+    {
+      "edge": {
+        "source": "first",
+        "destination": "reuse",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 5.0
+    },
+    {
+      "edge": {
+        "source": "reuse",
+        "destination": "fork",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 5.385164807134504
+    },
+    {
+      "edge": {
+        "source": "fork",
+        "destination": "left",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 6.4031242374328485
+    },
+    {
+      "edge": {
+        "source": "fork",
+        "destination": "right",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 6.4031242374328485
+    },
+    {
+      "edge": {
+        "source": "left",
+        "destination": "finish",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 6.4031242374328485
+    },
+    {
+      "edge": {
+        "source": "right",
+        "destination": "finish",
+        "edge_gap_m": 1.0,
+        "kind": "jump"
+      },
+      "gap_calculated_m": 1.0,
+      "center_travel_m": 6.4031242374328485
+    }
+  ],
+  "bounds": "pass",
+  "symmetric_branch_travel": "pass",
+  "limitations": "Offline dimensions only, not native collision/cooked acceptance"
+}

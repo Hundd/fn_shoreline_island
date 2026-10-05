@@ -1,0 +1,11 @@
+# Production review handoff
+
+2026-10-04. Planner read-only inspection confirmed current level /fn_shoreline_island/fn_shoreline_island. Supervisor coordinates; workers /root/producer, /root/planner and offline /root/implementer. Planner exclusively owned serialized live inspection during this phase; no scene/source mutations or saves were issued. Final native asset is_dirty=false, GetGameState=CanStart; editor remains open. No in-flight calls. Planner releases editor ownership now.
+
+`python tools/map_workflow.py check specs/039-popcorn-parkour/map.yaml` succeeds, execution blockers0, actual human approval required. Final review digest `809dcd27d05f7e0711635d560f2615ab543ffb18195ea0e5008e386395d8087a`. No approval.yaml. Current production-scene.yaml equals embedded controller.settings.production_scene, so allocation/refs/materials/geometry are digest-bound. Generated implementation is a draft until actual approval and plan --ready.
+
+Review: parkour-preview.html/svg, generated/preview.html, production-revision.md, production-scene.yaml, review.md. Root rendered canonical SVG locally to evidence/full-course-review.png and visually inspected900×910 output: course/branches/ramp/protected context/legend/footer readable and unclipped. PNG is a derived review aid; authoritative SVG/map/scene remain unchanged. No browser render was claimed.
+
+A01/A02 actual evidence: runtime-diagnostic.md full logical self_check result0 and independent runtime-qa-report.md r04 bounded actualgun/orderedmotion/reuse/groundeddenial/airbornejump/recovery. Exact revised gap/bounds/symmetricbranch assertions recorded production-revision-check.json. Native protected bounds/rays and real physical east access in production-planning-readback.json/production-arrival-readback.json. Exact material registry/slots in production-materials.json/production-material-slots.json.
+
+Changed geometry100cm supported gaps avoids protected solid wing/coral without shell edits. Production-profile/cosmetic/journal/station/retiredguard work is explicit implementation scope on known APIs; no further prototype requested. Full course capsule/ramp/two-route jumping/recovery<=1s/mutecomedy/badgeCoreAgent/lifecycle/firstuserfun remain cooked postplacement acceptance, not preapproval circular requirements. Existing scene stays unchanged pending concrete human changed-layout approval.

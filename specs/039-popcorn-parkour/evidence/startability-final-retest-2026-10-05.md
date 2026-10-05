@@ -1,0 +1,11 @@
+# Independent final startability presentation retest — 2026-10-05
+
+Original gpt-6.1-sol QA. Affected scope only: final feedback size48 and shorter rejection cue `Start at LOAD.\nFollow the ramp.`. Strict ownership guards, 3-second duration, final board and layout remain unchanged. Worker BuildAll[]/explicit Validate Project success03:36:25.724 UTC/full cook are reference handoff evidence, not inferred physical acceptance.
+
+**PASS actual render:** a real rifle shot at the final receiver while unowned displayed exactly two compact, legible lines: `Start at LOAD.` / `Follow the ramp.`. No oversized seven-line paragraph, clipping, or text overlap. Core remained0/8, Workshop-next HUD unchanged. Actual capture: `startability-final-compact.jpg` (1280×720). The earlier tiny HUD and oversized96 presentation observations are resolved for this affected cue.
+
+Used explicit supported test setup only: observed current connected session and original Spawn At Viewport Camera unchecked; recorded original editor camera; checked visible option; SetCameraTransform(-2220,-17200,2597;pitch0/yaw90/roll0;scale1). First StartGame after cook still spawned hub, so stopped it and made one bounded current-session StartGame retry. The retry actually spawned finish, confirmed visually before firing. No disconnect/relaunch, synthetic hit, runtime teleport injection, or normal-arrival claim. One initial aim missed, one real aim correction delivered the unique cue. Normal arrival, FINISH sign, ramp and grounded LOAD response were already physically passed in the previous affected-case report and were not repeated.
+
+**Shutdown/release:** StopGame Completed/freshCanStart. Actual Spawn At Viewport Camera restored unchecked and observed unchecked. Exact recorded original camera restored: location(-2283.050288380171,-17045.149320935921,3148.9260117910176), rotation(51.799900447034751,-158.60007883552177,-0.0000019999999960665381), scale1. Native production debug_tag readback empty; no diagnostic setup used. Targeted map save true/is_dirty=false; final fresh CanStart. UEFN left open. No pending calls. Explicit live editor ownership release sent before report completion.
+
+This closes only the Oct5 affected start-direction presentation cases alongside `startability-retest-2026-10-05.md`; it does not expand full-feature, fault-injection, or human first-use acceptance.
