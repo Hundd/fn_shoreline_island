@@ -31,7 +31,6 @@ Use the `unreal-mcp` toolset for all editor actor work. The current map is
 
 ## Safety
 
-- Serialize editor calls (one mutation at a time, read back before the next).
-- Save all affected editor-owned assets before moving on.
-- Scope asset-registry searches to a single content folder; a global search
-  currently hits a missing `AmbientAudio` plugin path.
+Follow `.cline/skills/uefn-editor-safety/SKILL.md` for editor-call safety:
+serialize calls, save/readback, and scope asset-registry searches to a single
+content folder (a global search hits a missing `AmbientAudio` plugin path).

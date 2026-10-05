@@ -28,8 +28,9 @@ rebuild existing missions or replace UEFN's authoritative build/playtest process
   with standard-library tests and static HTML/SVG, not Node/React/3D dependencies.
 - Live tool discovery exposed Actor/Scene/Object/Device/Verse/Session toolsets.
   AgentSkillToolset is absent in this editor; project roles therefore use the
-  existing `.cline/skills/` format and explicit routing in AGENTS.md. No editor
-  plugin, remote service or new MCP executor is installed.
+  `.agents/skills/` dispatch skills plus shared `.cline/skills/` recipes, with
+  explicit routing in AGENTS.md. No editor plugin, remote service or new MCP
+  executor is installed.
 - Existing docs, particularly `MCP Map Editing Diagnosis.md`, already favor
   configuration/readback. The new workflow makes their planning boundary concrete.
   Prompt Lab feature 024 supersedes the older feature 023 interaction model;
@@ -58,8 +59,13 @@ provenance, stages and assumptions. No editor is required.
 **D — Validate and review.** Run validation; inspect the preview. Check player
 flow, accessible size/entry/exit, target positions, active target sets, walking
 burden, interaction density, learning purpose, required devices and controller
-capabilities. Save findings in `review.md`. Automated checks detect basic
-inconsistencies; they do not establish collision or playability.
+capabilities. Save findings in `review.md`. Run the deterministic review gate
+(`python tools/map_gate.py gate <map.yaml>`) first: it turns the
+automatically-checkable subset — walking burden, target and interaction density,
+wrong-choice recovery, learning purpose, return access, orphaned targets — into
+coded findings with a verdict and a review digest bound to the spec revision. A
+human still judges sightlines, aesthetics and enjoyment. Automated checks detect
+basic inconsistencies; they do not establish collision or playability.
 
 **E — Human approval.** Present the actual preview and generated plan, with
 scope, blockers and intended scene delta. Do all review preparation before
@@ -110,6 +116,7 @@ python tools/map_workflow.py validate
 python tools/map_workflow.py preview
 python tools/map_workflow.py plan
 python tools/map_workflow.py check
+python tools/map_gate.py gate
 python -m unittest discover -s tools/tests -v
 ```
 
@@ -133,9 +140,17 @@ itself. There is no automatic MCP runtime enforcement: agent instructions plus
 the readiness check form the v1 boundary. Clients with direct tool access must
 honor it; MCP client approval policies remain an additional existing control.
 
+`map_gate.py gate` runs after `check` and emits a JSON verdict plus coded
+`violations`, `advisories`, and `blockers`. Its exit code is 0 only when the
+verdict is `pass` (advisories allowed); `fail` (a violation), `blocked` (an open
+assumption, `contract_only` pattern, or unsupported target sequence) and
+`invalid` (schema error) all exit 1, and usage errors exit 2. The gate never
+writes files and never authorizes edits; it is the deterministic first pass of
+the review in lifecycle step D, not a substitute for human approval.
+
 ## Reuse and extending patterns
 
-See [the ten-pattern library](../design/patterns/README.md). Prefer existing
+See [the pattern library](../design/patterns/README.md). Prefer existing
 creative devices, Verse classes, editable references, arrays/maps/structs and
 known prefabs. Do not introduce one-off Verse to fit a prompt when parameters
 would suffice. A pattern contract is not proof of a configurable runtime adapter.

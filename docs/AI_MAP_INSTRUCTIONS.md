@@ -15,7 +15,7 @@ from the natural-language request.
 
 Create or update a numbered feature directory containing `spec.md`, `plan.md`,
 `tasks.md` and `map.yaml`. Define testable requirements and Given/When/Then
-acceptance scenarios. Use the [Map Planner skill](../.cline/skills/map-planner/SKILL.md),
+acceptance scenarios. Use the [Map Planning skill](../.agents/skills/uefn-map-planning/SKILL.md),
 [map contract](../design/MAP_SPEC.md) and [pattern library](../design/patterns/README.md).
 
 Specify zone dimensions, player flow, targets, devices, stages, completion and
@@ -34,18 +34,22 @@ python tools/map_workflow.py check
 
 # For your feature, replace the path with its actual map.yaml.
 python tools/map_workflow.py check specs/025-map-planning-workflow/map.yaml
+
+# Deterministic review gate: coded violations/advisories/blockers + a verdict.
+python tools/map_gate.py gate specs/025-map-planning-workflow/map.yaml
 ```
 
 Open `generated/preview.html` beside the map spec. Review it together with
 `generated/implementation.yaml`. Use the
-[Blockout Reviewer skill](../.cline/skills/blockout-reviewer/SKILL.md) to assess
+[Map Planning skill](../.agents/skills/uefn-map-planning/SKILL.md) to assess
 scale, unnecessary walking, target density, accessibility, entry/exit gates,
 learning purpose and reusable-system gaps. Record findings in `review.md`.
 Fix validation errors and resolve execution blockers, then regenerate.
 
-The individual commands are `validate`, `preview` and `plan`. `validate` is
-read-only; `preview`, `plan` and `check` generate the complete review bundle.
-Passing a draft check is not approval to edit the island.
+The individual commands are `validate`, `preview` and `plan`; `check` generates
+the complete review bundle and `gate` adds a deterministic review verdict with
+coded `violations`/`advisories`/`blockers`. `validate` is read-only. Passing a
+draft check is not approval to edit the island.
 
 ## 4. Obtain explicit human approval
 
@@ -69,7 +73,7 @@ AGENTS.md, with the reason recorded in feature evidence.
 
 ## 5. Implement the approved plan
 
-Use the [UEFN Implementer skill](../.cline/skills/uefn-implementer/SKILL.md).
+Use the [Map Implementation skill](../.agents/skills/uefn-map-implementation/SKILL.md).
 Discover live MCP schemas, reconcile existing actors and bindings, and save a
 recovery checkpoint. Apply only the resolved, approved changes, one logical group
 at a time. Serialize editor calls, verify complete transforms and properties,
@@ -80,7 +84,7 @@ return material design changes to planning. Keep the map spec synchronized.
 
 ## 6. Verify and hand off
 
-Use the [UEFN Verifier skill](../.cline/skills/uefn-verifier/SKILL.md). Compare
+Use the [Gameplay Verifier skill](../.agents/skills/uefn-gameplay-verifier/SKILL.md). Compare
 counts, IDs, positions, required settings and connections with the approved spec.
 Build changed Verse, run UEFN validation/cooking and playtest spawn, progression,
 wrong choices, replay/reset, solo and shared multiplayer behavior. Check learning

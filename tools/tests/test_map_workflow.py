@@ -28,7 +28,7 @@ class WorkflowTests(unittest.TestCase):
 
     def test_real_example_and_pattern_library(self):
         warnings = mw.validate(self.data, self.library)
-        self.assertEqual(len(self.library), 10)
+        self.assertEqual(len(self.library), 11)
         self.assertEqual(len([m for m in self.data['markers'] if m['kind'] == 'target']), 9)
         self.assertTrue(any('open assumption' in w for w in warnings))
 

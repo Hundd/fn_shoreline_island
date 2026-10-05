@@ -8,7 +8,7 @@ description: Spec-driven feature workflow for this UEFN island. Use before imple
 For map/room/challenge/mission design, follow `docs/AI_MAP_WORKFLOW.md` and
 `AGENTS.md`'s map-planning gate. Produce `map.yaml`, pattern-backed parameters,
 offline preview and implementation plan before requesting design approval.
-Use the map-planner and blockout-reviewer skills. A Markdown `Approved` status
+Use the uefn-map-planning skill. A Markdown `Approved` status
 alone does not authorize MCP: require explicit human approval for the current
 artifact digest and a passing `plan --ready` check. Read-only discovery is allowed.
 For tooling/documentation tasks, recorded offline validation can complete tasks;

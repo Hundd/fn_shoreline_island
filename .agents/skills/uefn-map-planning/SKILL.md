@@ -18,7 +18,7 @@ Resolve paths below against the target repository root, not this skill directory
 - `design/MAP_SPEC.md`
 - `design/patterns/README.md`
 
-Use the project-local roles by reading `.cline/skills/map-planner/SKILL.md` and `.cline/skills/blockout-reviewer/SKILL.md`. These are workflow roles, not instructions to spawn agents. If required workflow files are missing, report the missing prerequisites rather than inventing a compatible schema or approval process.
+This skill is the single planner/reviewer role. If required workflow files are missing, report the missing prerequisites rather than inventing a compatible schema or approval process.
 
 ## Producer input
 
@@ -27,15 +27,16 @@ When a Producer brief is supplied, read it alongside the original user request a
 ## Prepare the concrete design
 
 1. Inspect the existing mission, relevant Verse, reusable devices, assets, bindings, and latest evidence. Preserve working functionality and the user's learning intent.
-2. Create or update the appropriate numbered feature directory under `specs/` with `spec.md`, `plan.md`, `tasks.md`, and `map.yaml`. Define requirement IDs and Given/When/Then acceptance scenarios before implementation; link tasks to requirements.
-3. Reuse existing gameplay patterns and Verse configuration. Distinguish measured facts from assumptions. Identify missing adapters or unsupported behavior; pattern parameters do not prove a controller supports arbitrary configuration.
+2. Create or update the appropriate numbered feature directory under `specs/` with `spec.md`, `plan.md`, `tasks.md`, and `map.yaml`. Define requirement IDs and Given/When/Then acceptance scenarios before implementation; link tasks to requirements. Label measured positions separately from estimates; use local XYZ meters with an explicit world-centimeter origin, and do not silently turn schematic envelopes into walls.
+3. Reuse existing gameplay patterns and Verse configuration. Distinguish measured facts from assumptions. Identify missing adapters or unsupported behavior; pattern parameters do not prove a controller supports arbitrary configuration. Use the reusable prompts in `design/prompts.md` when helpful.
 4. Run from the repository root:
 
    ```powershell
    python tools/map_workflow.py check <path-to-map.yaml>
+   python tools/map_gate.py gate <path-to-map.yaml>
    ```
 
-5. Inspect the generated preview and implementation plan. Review scale, player flow, walking distance, target placement and active sets, accessibility, entry/exit gates, interaction density, learning purpose, controller capabilities, and reset behavior. Record requirement-linked findings and unresolved blockers in the feature's `review.md`. Offline validation does not establish collision or gameplay quality.
+5. Inspect the generated preview and implementation plan. Resolve the gate's coded `violations` first and judge its `advisories` before the prose review; the gate deterministically covers walking burden, target and interaction density, wrong-choice recovery, learning purpose, return access and orphaned targets, leaving sightlines and enjoyment to human judgment. Review normal arrival, useful sightlines, board readability, target density, walking distance, stage transitions, wrong-choice recovery, reward/return and reset, plus scale, accessibility, entry/exit gates, interaction density, learning purpose and controller capabilities. Separate physical routes from information overlays and ensure choices exercise the learning objective rather than just adding editor objects. Inspect target positions and active sets, shared-device counts and controller capabilities; passing geometry checks cannot establish collision, weapon coverage, visual readability or multiplayer fairness. Record requirement-linked findings, blockers, accepted tradeoffs and needed playtests in the feature's `review.md`. Review is advice, not human approval.
 6. Resolve blockers where evidence allows, regenerate the review bundle after changes, and present clickable paths to the actual preview and implementation plan, proposed scene changes, assumptions, and unresolved decisions for human review.
 
 ## Approval and implementation boundary
