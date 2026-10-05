@@ -65,7 +65,7 @@ markers:
   zone: course
   label: Shared Data Blaster already granted
   position:
-  - 4
+  - 29.0
   - 30.2
   - 0
   source: Shared rifle existing loadout annotation; no new granter
@@ -74,7 +74,7 @@ markers:
   zone: course
   label: Keep primary Return
   position:
-  - 5.3
+  - 27.7
   - 13
   - 1
   source: Existing Return approximate design annotation; native ref resolved in evidence,
@@ -84,7 +84,7 @@ markers:
   zone: course
   label: PopBridge = Load > Heat > Pop
   position:
-  - 4
+  - 29.0
   - 18.7
   - 2.6
   source: Proposed readable ribbon beside starter; not answer-bank
@@ -93,7 +93,7 @@ markers:
   zone: course
   label: Skills badge once + Replay/Return
   position:
-  - 30
+  - 3.0
   - 19.2
   - 1.2
   source: Proposed final landing; actual arrival AND final shot required
@@ -102,7 +102,7 @@ markers:
   zone: course
   label: Starter landing
   position:
-  - 4
+  - 29.0
   - 17.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -111,7 +111,7 @@ markers:
   zone: course
   label: First landing
   position:
-  - 10
+  - 23.0
   - 17.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -120,7 +120,7 @@ markers:
   zone: course
   label: Reuse landing
   position:
-  - 15
+  - 18.0
   - 17.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -129,7 +129,7 @@ markers:
   zone: course
   label: Fork landing
   position:
-  - 20
+  - 13.0
   - 19.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -138,7 +138,7 @@ markers:
   zone: course
   label: Left landing
   position:
-  - 25
+  - 8.0
   - 15.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -147,7 +147,7 @@ markers:
   zone: course
   label: Right landing
   position:
-  - 25
+  - 8.0
   - 23.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -156,7 +156,7 @@ markers:
   zone: course
   label: Finish landing
   position:
-  - 30
+  - 3.0
   - 19.2
   - 1.2
   source: Concrete proposed deck; generic controller airborne/grounded checkpoint
@@ -165,7 +165,7 @@ markers:
   zone: course
   label: LOAD
   position:
-  - 6.8
+  - 26.2
   - 16
   - 2.8
   target_id: 0
@@ -175,7 +175,7 @@ markers:
   zone: course
   label: HEAT
   position:
-  - 6.8
+  - 26.2
   - 17.2
   - 2.8
   target_id: 1
@@ -185,7 +185,7 @@ markers:
   zone: course
   label: POP
   position:
-  - 6.8
+  - 26.2
   - 18.4
   - 2.8
   target_id: 2
@@ -195,7 +195,7 @@ markers:
   zone: course
   label: PopBridge
   position:
-  - 11.8
+  - 21.2
   - 17.2
   - 2.8
   target_id: 3
@@ -205,7 +205,7 @@ markers:
   zone: course
   label: PopBridge
   position:
-  - 16.8
+  - 16.2
   - 19.2
   - 2.8
   target_id: 4
@@ -215,7 +215,7 @@ markers:
   zone: course
   label: Moustache PopBridge
   position:
-  - 21.8
+  - 11.2
   - 15.2
   - 2.8
   target_id: 5
@@ -225,7 +225,7 @@ markers:
   zone: course
   label: Bucket PopBridge
   position:
-  - 21.8
+  - 11.2
   - 23.2
   - 2.8
   target_id: 6
@@ -235,7 +235,7 @@ markers:
   zone: course
   label: Final PopBridge
   position:
-  - 30
+  - 3.0
   - 22
   - 2.8
   target_id: 7
@@ -257,7 +257,7 @@ devices:
       - id: starter
         index: 0
         center:
-        - 4
+        - 29.0
         - 17.2
         - 1.2
         size:
@@ -271,7 +271,7 @@ devices:
       - id: first
         index: 1
         center:
-        - 10
+        - 23.0
         - 17.2
         - 1.2
         size:
@@ -285,7 +285,7 @@ devices:
       - id: reuse
         index: 2
         center:
-        - 15
+        - 18.0
         - 17.2
         - 1.2
         size:
@@ -299,7 +299,7 @@ devices:
       - id: fork
         index: 3
         center:
-        - 20
+        - 13.0
         - 19.2
         - 1.2
         size:
@@ -313,7 +313,7 @@ devices:
       - id: left
         index: 4
         center:
-        - 25
+        - 8.0
         - 15.2
         - 1.2
         size:
@@ -327,7 +327,7 @@ devices:
       - id: right
         index: 5
         center:
-        - 25
+        - 8.0
         - 23.2
         - 1.2
         size:
@@ -341,7 +341,7 @@ devices:
       - id: finish
         index: 6
         center:
-        - 30
+        - 3.0
         - 19.2
         - 1.2
         size:
@@ -385,77 +385,77 @@ devices:
       - target_id: 0
         name: LOAD
         position:
-        - 6.8
+        - 26.2
         - 16
         - 2.8
         from_landing: starter
         creates: null
         instruction: 0
-        face: toward -X
+        face: toward +X
       - target_id: 1
         name: HEAT
         position:
-        - 6.8
+        - 26.2
         - 17.2
         - 2.8
         from_landing: starter
         creates: null
         instruction: 1
-        face: toward -X
+        face: toward +X
       - target_id: 2
         name: POP
         position:
-        - 6.8
+        - 26.2
         - 18.4
         - 2.8
         from_landing: starter
         creates: first
         instruction: 2
-        face: toward -X
+        face: toward +X
       - target_id: 3
         name: PopBridge
         position:
-        - 11.8
+        - 21.2
         - 17.2
         - 2.8
         from_landing: first
         creates: reuse
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 4
         name: PopBridge
         position:
-        - 16.8
+        - 16.2
         - 19.2
         - 2.8
         from_landing: reuse
         creates: fork
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 5
         name: Moustache PopBridge
         position:
-        - 21.8
+        - 11.2
         - 15.2
         - 2.8
         from_landing: fork
         creates: left
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 6
         name: Bucket PopBridge
         position:
-        - 21.8
+        - 11.2
         - 23.2
         - 2.8
         from_landing: fork
         creates: right
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 7
         name: Final PopBridge
         position:
-        - 30
+        - 3.0
         - 22
         - 2.8
         from_landing: finish
@@ -591,7 +591,7 @@ devices:
       - label: pop039_deck_starter
         mesh: cube
         center:
-        - 4
+        - 29.0
         - 17.2
         - 1.0
         scale:
@@ -599,13 +599,13 @@ devices:
         - 4
         - 0.4
         controller_top:
-        - 4
+        - 29.0
         - 17.2
         - 1.2
       - label: pop039_deck_first
         mesh: cube
         center:
-        - 10
+        - 23.0
         - 17.2
         - 1.0
         scale:
@@ -613,13 +613,13 @@ devices:
         - 4
         - 0.4
         controller_top:
-        - 10
+        - 23.0
         - 17.2
         - 1.2
       - label: pop039_deck_reuse
         mesh: cube
         center:
-        - 15
+        - 18.0
         - 17.2
         - 1.0
         scale:
@@ -627,13 +627,13 @@ devices:
         - 4
         - 0.4
         controller_top:
-        - 15
+        - 18.0
         - 17.2
         - 1.2
       - label: pop039_deck_fork
         mesh: cube
         center:
-        - 20
+        - 13.0
         - 19.2
         - 1.0
         scale:
@@ -641,13 +641,13 @@ devices:
         - 8
         - 0.4
         controller_top:
-        - 20
+        - 13.0
         - 19.2
         - 1.2
       - label: pop039_deck_left
         mesh: cube
         center:
-        - 25
+        - 8.0
         - 15.2
         - 1.0
         scale:
@@ -655,13 +655,13 @@ devices:
         - 4
         - 0.4
         controller_top:
-        - 25
+        - 8.0
         - 15.2
         - 1.2
       - label: pop039_deck_right
         mesh: cube
         center:
-        - 25
+        - 8.0
         - 23.2
         - 1.0
         scale:
@@ -669,13 +669,13 @@ devices:
         - 4
         - 0.4
         controller_top:
-        - 25
+        - 8.0
         - 23.2
         - 1.2
       - label: pop039_deck_finish
         mesh: cube
         center:
-        - 30
+        - 3.0
         - 19.2
         - 1.0
         scale:
@@ -683,84 +683,84 @@ devices:
         - 8
         - 0.4
         controller_top:
-        - 30
+        - 3.0
         - 19.2
         - 1.2
       targets:
       - target_id: 0
         name: LOAD
         position:
-        - 6.8
+        - 26.2
         - 16
         - 2.8
         from_landing: starter
         creates: null
         instruction: 0
-        face: toward -X
+        face: toward +X
       - target_id: 1
         name: HEAT
         position:
-        - 6.8
+        - 26.2
         - 17.2
         - 2.8
         from_landing: starter
         creates: null
         instruction: 1
-        face: toward -X
+        face: toward +X
       - target_id: 2
         name: POP
         position:
-        - 6.8
+        - 26.2
         - 18.4
         - 2.8
         from_landing: starter
         creates: first
         instruction: 2
-        face: toward -X
+        face: toward +X
       - target_id: 3
         name: PopBridge
         position:
-        - 11.8
+        - 21.2
         - 17.2
         - 2.8
         from_landing: first
         creates: reuse
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 4
         name: PopBridge
         position:
-        - 16.8
+        - 16.2
         - 19.2
         - 2.8
         from_landing: reuse
         creates: fork
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 5
         name: Moustache PopBridge
         position:
-        - 21.8
+        - 11.2
         - 15.2
         - 2.8
         from_landing: fork
         creates: left
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 6
         name: Bucket PopBridge
         position:
-        - 21.8
+        - 11.2
         - 23.2
         - 2.8
         from_landing: fork
         creates: right
         instruction: 3
-        face: toward -X
+        face: toward +X
       - target_id: 7
         name: Final PopBridge
         position:
-        - 30
+        - 3.0
         - 22
         - 2.8
         from_landing: finish
@@ -958,36 +958,36 @@ devices:
       progress_ref: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0
       moves:
         mission_board:
-        - 4
+        - 29.0
         - 30.7
         - 2.0
         program_board:
-        - 4
+        - 29.0
         - 18.7
         - 2.6
         execution_board:
-        - 30
+        - 3.0
         - 22.7
         - 2.8
         replay_button:
-        - 28.6
+        - 4.4
         - 21.7
         - 2.1
         finish_return_new:
-        - 31.4
+        - 1.6
         - 21.7
         - 2.1
-        entry_return: Existing untouched5.3,13,1
+        entry_return: Existing primary Return mirrored to 27.7,13,1
         pix_home:
-        - 31.1
+        - 1.9
         - 20.7
         - 1.2
         pix_left_pose:
-        - 25.9
+        - 7.1
         - 16.1
         - 1.2
         pix_final_pose:
-        - 31.1
+        - 1.9
         - 20.7
         - 1.2
       profile_actor_world_cm:
@@ -1012,10 +1012,10 @@ devices:
         - - 34
           - 28.7
           - 0
-        - - 4
+        - - 29.0
           - 28.7
           - 0
-        - - 4
+        - - 29.0
           - 30.2
           - 0
         corridor_width: 3
@@ -1026,23 +1026,23 @@ devices:
           length_m: 11
           rise_m: 1.2
           from:
-          - 4
+          - 29.0
           - 30.2
           - 0
           to:
-          - 4
+          - 29.0
           - 19.2
           - 1.2
           slope_percent: 10.91
           world_surface_endpoints_cm:
-          - - -4800
+          - - -2300.0
             - -15980
             - 2400
-          - - -4800
+          - - -2300.0
             - -17080
             - 2520
           cube_center_cm:
-          - -4800
+          - -2300.0
           - -16531.084
           - 2450.059
           cube_scale:
@@ -1132,7 +1132,7 @@ devices:
       - label: pop039_kernel_first_0
         mesh: sphere
         center:
-        - 8.4
+        - 24.6
         - 15.799999999999999
         - 0.55
         scale:
@@ -1144,7 +1144,7 @@ devices:
       - label: pop039_kernel_first_1
         mesh: sphere
         center:
-        - 11.6
+        - 21.4
         - 15.799999999999999
         - 0.55
         scale:
@@ -1156,7 +1156,7 @@ devices:
       - label: pop039_kernel_first_2
         mesh: sphere
         center:
-        - 8.4
+        - 24.6
         - 18.599999999999998
         - 0.55
         scale:
@@ -1168,7 +1168,7 @@ devices:
       - label: pop039_kernel_first_3
         mesh: sphere
         center:
-        - 11.6
+        - 21.4
         - 18.599999999999998
         - 0.55
         scale:
@@ -1180,7 +1180,7 @@ devices:
       - label: pop039_kernel_first_4
         mesh: sphere
         center:
-        - 10
+        - 23.0
         - 17.2
         - 0.55
         scale:
@@ -1192,7 +1192,7 @@ devices:
       - label: pop039_center_first
         mesh: sphere
         center:
-        - 10
+        - 23.0
         - 17.2
         - 0.55
         scale:
@@ -1204,7 +1204,7 @@ devices:
       - label: pop039_kernel_reuse_0
         mesh: sphere
         center:
-        - 13.4
+        - 19.6
         - 15.799999999999999
         - 0.55
         scale:
@@ -1216,7 +1216,7 @@ devices:
       - label: pop039_kernel_reuse_1
         mesh: sphere
         center:
-        - 16.6
+        - 16.4
         - 15.799999999999999
         - 0.55
         scale:
@@ -1228,7 +1228,7 @@ devices:
       - label: pop039_kernel_reuse_2
         mesh: sphere
         center:
-        - 13.4
+        - 19.6
         - 18.599999999999998
         - 0.55
         scale:
@@ -1240,7 +1240,7 @@ devices:
       - label: pop039_kernel_reuse_3
         mesh: sphere
         center:
-        - 16.6
+        - 16.4
         - 18.599999999999998
         - 0.55
         scale:
@@ -1252,7 +1252,7 @@ devices:
       - label: pop039_kernel_reuse_4
         mesh: sphere
         center:
-        - 15
+        - 18.0
         - 17.2
         - 0.55
         scale:
@@ -1264,7 +1264,7 @@ devices:
       - label: pop039_center_reuse
         mesh: sphere
         center:
-        - 15
+        - 18.0
         - 17.2
         - 0.55
         scale:
@@ -1276,7 +1276,7 @@ devices:
       - label: pop039_kernel_fork_0
         mesh: sphere
         center:
-        - 18.4
+        - 14.6
         - 17.8
         - 0.55
         scale:
@@ -1288,7 +1288,7 @@ devices:
       - label: pop039_kernel_fork_1
         mesh: sphere
         center:
-        - 21.6
+        - 11.4
         - 17.8
         - 0.55
         scale:
@@ -1300,7 +1300,7 @@ devices:
       - label: pop039_kernel_fork_2
         mesh: sphere
         center:
-        - 18.4
+        - 14.6
         - 20.599999999999998
         - 0.55
         scale:
@@ -1312,7 +1312,7 @@ devices:
       - label: pop039_kernel_fork_3
         mesh: sphere
         center:
-        - 21.6
+        - 11.4
         - 20.599999999999998
         - 0.55
         scale:
@@ -1324,7 +1324,7 @@ devices:
       - label: pop039_kernel_fork_4
         mesh: sphere
         center:
-        - 20
+        - 13.0
         - 19.2
         - 0.55
         scale:
@@ -1336,7 +1336,7 @@ devices:
       - label: pop039_center_fork
         mesh: sphere
         center:
-        - 20
+        - 13.0
         - 19.2
         - 0.55
         scale:
@@ -1348,7 +1348,7 @@ devices:
       - label: pop039_kernel_left_0
         mesh: sphere
         center:
-        - 23.4
+        - 9.6
         - 13.799999999999999
         - 0.55
         scale:
@@ -1360,7 +1360,7 @@ devices:
       - label: pop039_kernel_left_1
         mesh: sphere
         center:
-        - 26.6
+        - 6.4
         - 13.799999999999999
         - 0.55
         scale:
@@ -1372,7 +1372,7 @@ devices:
       - label: pop039_kernel_left_2
         mesh: sphere
         center:
-        - 23.4
+        - 9.6
         - 16.599999999999998
         - 0.55
         scale:
@@ -1384,7 +1384,7 @@ devices:
       - label: pop039_kernel_left_3
         mesh: sphere
         center:
-        - 26.6
+        - 6.4
         - 16.599999999999998
         - 0.55
         scale:
@@ -1396,7 +1396,7 @@ devices:
       - label: pop039_kernel_left_4
         mesh: sphere
         center:
-        - 25
+        - 8.0
         - 15.2
         - 0.55
         scale:
@@ -1408,7 +1408,7 @@ devices:
       - label: pop039_center_left
         mesh: sphere
         center:
-        - 25
+        - 8.0
         - 15.2
         - 0.55
         scale:
@@ -1420,7 +1420,7 @@ devices:
       - label: pop039_kernel_right_0
         mesh: sphere
         center:
-        - 23.4
+        - 9.6
         - 21.8
         - 0.55
         scale:
@@ -1432,7 +1432,7 @@ devices:
       - label: pop039_kernel_right_1
         mesh: sphere
         center:
-        - 26.6
+        - 6.4
         - 21.8
         - 0.55
         scale:
@@ -1444,7 +1444,7 @@ devices:
       - label: pop039_kernel_right_2
         mesh: sphere
         center:
-        - 23.4
+        - 9.6
         - 24.599999999999998
         - 0.55
         scale:
@@ -1456,7 +1456,7 @@ devices:
       - label: pop039_kernel_right_3
         mesh: sphere
         center:
-        - 26.6
+        - 6.4
         - 24.599999999999998
         - 0.55
         scale:
@@ -1468,7 +1468,7 @@ devices:
       - label: pop039_kernel_right_4
         mesh: sphere
         center:
-        - 25
+        - 8.0
         - 23.2
         - 0.55
         scale:
@@ -1480,7 +1480,7 @@ devices:
       - label: pop039_center_right
         mesh: sphere
         center:
-        - 25
+        - 8.0
         - 23.2
         - 0.55
         scale:
@@ -1492,7 +1492,7 @@ devices:
       - label: pop039_moustache_0
         mesh: sphere
         center:
-        - 25.6
+        - 7.4
         - 15.7
         - 2.05
         scale:
@@ -1505,7 +1505,7 @@ devices:
       - label: pop039_moustache_1
         mesh: sphere
         center:
-        - 25.900000000000002
+        - 7.1
         - 15.7
         - 2.05
         scale:
@@ -1518,7 +1518,7 @@ devices:
       - label: pop039_moustache_2
         mesh: sphere
         center:
-        - 26.200000000000003
+        - 6.8
         - 15.7
         - 2.05
         scale:
@@ -1531,7 +1531,7 @@ devices:
       - label: pop039_bucket_wall0
         mesh: cube
         center:
-        - 26.1
+        - 6.9
         - 24.1
         - 1.35
         scale:
@@ -1543,7 +1543,7 @@ devices:
       - label: pop039_bucket_wall1
         mesh: cube
         center:
-        - 25.700000000000003
+        - 7.3
         - 24.1
         - 1.7
         scale:
@@ -1555,7 +1555,7 @@ devices:
       - label: pop039_bucket_wall2
         mesh: cube
         center:
-        - 26.5
+        - 6.5
         - 24.1
         - 1.7
         scale:
@@ -1567,7 +1567,7 @@ devices:
       - label: pop039_bucket_wall3
         mesh: cube
         center:
-        - 26.1
+        - 6.9
         - 23.700000000000003
         - 1.7
         scale:
@@ -1579,7 +1579,7 @@ devices:
       - label: pop039_bucket_wall4
         mesh: cube
         center:
-        - 26.1
+        - 6.9
         - 24.5
         - 1.7
         scale:
@@ -1591,7 +1591,7 @@ devices:
       - label: pop039_bucket_overflow0
         mesh: sphere
         center:
-        - 25.85
+        - 7.15
         - 23.85
         - 2
         scale:
@@ -1603,7 +1603,7 @@ devices:
       - label: pop039_bucket_overflow1
         mesh: sphere
         center:
-        - 26.35
+        - 6.65
         - 23.85
         - 2
         scale:
@@ -1615,7 +1615,7 @@ devices:
       - label: pop039_bucket_overflow2
         mesh: sphere
         center:
-        - 25.85
+        - 7.15
         - 24.35
         - 2
         scale:
@@ -1627,7 +1627,7 @@ devices:
       - label: pop039_bucket_overflow3
         mesh: sphere
         center:
-        - 26.35
+        - 6.65
         - 24.35
         - 2
         scale:
@@ -1639,7 +1639,7 @@ devices:
       - label: pop039_bucket_overflow4
         mesh: sphere
         center:
-        - 26.1
+        - 6.9
         - 24.1
         - 2.35
         scale:
@@ -1651,7 +1651,7 @@ devices:
       - label: pop039_basket_wall0
         mesh: cube
         center:
-        - 31.1
+        - 1.9
         - 17.2
         - 1.35
         scale:
@@ -1663,7 +1663,7 @@ devices:
       - label: pop039_basket_wall1
         mesh: cube
         center:
-        - 30.700000000000003
+        - 2.3
         - 17.2
         - 1.7
         scale:
@@ -1675,7 +1675,7 @@ devices:
       - label: pop039_basket_wall2
         mesh: cube
         center:
-        - 31.5
+        - 1.5
         - 17.2
         - 1.7
         scale:
@@ -1687,7 +1687,7 @@ devices:
       - label: pop039_basket_wall3
         mesh: cube
         center:
-        - 31.1
+        - 1.9
         - 16.8
         - 1.7
         scale:
@@ -1699,7 +1699,7 @@ devices:
       - label: pop039_basket_wall4
         mesh: cube
         center:
-        - 31.1
+        - 1.9
         - 17.599999999999998
         - 1.7
         scale:
@@ -1711,7 +1711,7 @@ devices:
       - label: pop039_basket_overflow0
         mesh: sphere
         center:
-        - 30.85
+        - 2.15
         - 16.95
         - 2
         scale:
@@ -1723,7 +1723,7 @@ devices:
       - label: pop039_basket_overflow1
         mesh: sphere
         center:
-        - 31.35
+        - 1.65
         - 16.95
         - 2
         scale:
@@ -1735,7 +1735,7 @@ devices:
       - label: pop039_basket_overflow2
         mesh: sphere
         center:
-        - 30.85
+        - 2.15
         - 17.45
         - 2
         scale:
@@ -1747,7 +1747,7 @@ devices:
       - label: pop039_basket_overflow3
         mesh: sphere
         center:
-        - 31.35
+        - 1.65
         - 17.45
         - 2
         scale:
@@ -1759,7 +1759,7 @@ devices:
       - label: pop039_basket_overflow4
         mesh: sphere
         center:
-        - 31.1
+        - 1.9
         - 17.2
         - 2.35
         scale:
@@ -1871,23 +1871,23 @@ devices:
       length_m: 11
       rise_m: 1.2
       from:
-      - 4
+      - 29.0
       - 30.2
       - 0
       to:
-      - 4
+      - 29.0
       - 19.2
       - 1.2
       slope_percent: 10.91
       world_surface_endpoints_cm:
-      - - -4800
+      - - -2300.0
         - -15980
         - 2400
-      - - -4800
+      - - -2300.0
         - -17080
         - 2520
       cube_center_cm:
-      - -4800
+      - -2300.0
       - -16531.084
       - 2450.059
       cube_scale:

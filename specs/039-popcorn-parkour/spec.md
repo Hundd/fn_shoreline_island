@@ -42,3 +42,25 @@ The finish-first view identifies the single receiver title `FINISH`. The existin
 Given an unowned player reaches Finish first, when a real rifle shot reaches its receiver, then compact readable guidance appears without claiming ownership, teleporting, advancing prefix/platforms or awarding progress. Given that player follows the existing ramp and fires LOAD while grounded on Starter, then normal teaching remains available. Independent [affected-case QA](evidence/startability-retest-2026-10-05.md) verified normal arrival/sign/real rejection/Core0 and grounded LOAD prefix1/NEXT HEAT. [Final QA](evidence/startability-final-retest-2026-10-05.md) verified the final48 two-line cue with a real rifle hit; its disclosed viewport setup is not normal-arrival proof.
 
 Source compiled, explicit validation/full cook and saved non-running shutdown are recorded in [implementation evidence](evidence/startability-implementation-2026-10-05.md) and [HUD evidence](evidence/startability-hud-repair-2026-10-05.md). Earlier long-copy/font18 and font96 trials are historical diagnostics in those reports, not current instructions. Full-feature remaining fault, entry Return, human-learning and Agent/journal acceptance remains open.
+
+
+## 2026-10-05 flow reversal - entrance -> deep
+
+The owner reversed the course direction. Original 039 taught and started at the
+deep west end (local X~4) and finished near the east entrance (X~30). The game
+now starts right after the east entrance and plays toward the deep west.
+
+Mirror: local `X' = 33 - X`; world cm `X' = -7100 - X`. Node/edge/receiver
+indices and semantics are unchanged; only positions and receiver face
+directions (`toward -X` -> `toward +X`; final receiver stays `toward -Y`) are
+mirrored. Parked/retired devices, bay bounds, origin, sizes and offsets are
+unchanged; the east arrival marker stays fixed.
+
+New node centers (local m): starter(29,17.2), first(23,17.2), reuse(18,17.2),
+fork(13,19.2), left(8,15.2), right(8,23.2), finish(3,19.2). Ramp foot(29,30.2)
+-> top(29,19.2); corridor from east entry(34,28.7) shortens to the ramp foot.
+
+Acceptance (reversal): Given a fresh spawn through the existing east campus
+access, when the player follows the shortened corridor and ramp, then the
+starter/teach machines are immediately at the entrance and the course progresses
+west to a deep finish. Replay/Return/Pix/badge semantics are unchanged.

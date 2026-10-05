@@ -7,21 +7,21 @@ fn_shoreline_island_popbridge_diagnostic := class(creative_device):
         Hide()
         Print("POPBRIDGE_DIAG 039-A-20261004-r02 BEGIN fixture_sha256=223a293e0685799e2612be2d108f7f8991a8055c486df939983ce2a575fad433")
         nodes := array{
-            popbridge_node{id := 0, center := vector3{X := -3500.000, Y := -18200.000, Z := 2520.000}, size := vector3{X := 600.000, Y := 400.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 0, terminal := false},
-            popbridge_node{id := 1, center := vector3{X := -3500.000, Y := -17750.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 0, route_stage := 1, terminal := false},
-            popbridge_node{id := 2, center := vector3{X := -3500.000, Y := -17300.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 1, route_stage := 2, terminal := false},
-            popbridge_node{id := 3, center := vector3{X := -3500.000, Y := -16850.000, Z := 2520.000}, size := vector3{X := 800.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 3, terminal := false},
-            popbridge_node{id := 4, center := vector3{X := -4200.000, Y := -16400.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false},
-            popbridge_node{id := 5, center := vector3{X := -2800.000, Y := -16400.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false},
-            popbridge_node{id := 6, center := vector3{X := -3500.000, Y := -15950.000, Z := 2520.000}, size := vector3{X := 1200.000, Y := 400.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 5, terminal := true}}
+            popbridge_node{id := 0, center := vector3{X := -2300.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 600.000, Y := 400.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 0, terminal := false},
+            popbridge_node{id := 1, center := vector3{X := -2900.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 0, route_stage := 1, terminal := false},
+            popbridge_node{id := 2, center := vector3{X := -3400.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 1, route_stage := 2, terminal := false},
+            popbridge_node{id := 3, center := vector3{X := -3900.000, Y := -17080.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 800.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 3, terminal := false},
+            popbridge_node{id := 4, center := vector3{X := -4400.000, Y := -17480.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false},
+            popbridge_node{id := 5, center := vector3{X := -4400.000, Y := -16680.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false},
+            popbridge_node{id := 6, center := vector3{X := -4900.000, Y := -17080.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 800.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 5, terminal := true}}
         edges := array{
-            popbridge_edge{source := 0, destination := 1, gap_cm := 50.000},
-            popbridge_edge{source := 1, destination := 2, gap_cm := 50.000},
-            popbridge_edge{source := 2, destination := 3, gap_cm := 50.000},
-            popbridge_edge{source := 3, destination := 4, gap_cm := 111.800},
-            popbridge_edge{source := 3, destination := 5, gap_cm := 111.800},
-            popbridge_edge{source := 4, destination := 6, gap_cm := 50.000},
-            popbridge_edge{source := 5, destination := 6, gap_cm := 50.000}}
+            popbridge_edge{source := 0, destination := 1, gap_cm := 100.000},
+            popbridge_edge{source := 1, destination := 2, gap_cm := 100.000},
+            popbridge_edge{source := 2, destination := 3, gap_cm := 100.000},
+            popbridge_edge{source := 3, destination := 4, gap_cm := 100.000},
+            popbridge_edge{source := 3, destination := 5, gap_cm := 100.000},
+            popbridge_edge{source := 4, destination := 6, gap_cm := 100.000},
+            popbridge_edge{source := 5, destination := 6, gap_cm := 100.000}}
         receivers := array{
             popbridge_receiver{target_id := 0, from_landing := 0, creates := -1, instruction := 0},
             popbridge_receiver{target_id := 1, from_landing := 0, creates := -1, instruction := 1},

@@ -24,3 +24,15 @@ Maintenance outcome: exactly 13 obsolete buttons were removed and 13 dormant Sav
 Implemented only the existing final board/receiver copy and unowned rejection feedback under [Planner review](evidence/startability-design-review-2026-10-05.md). Current copy: receiver `FINISH`; board blank first line followed by `START AT LOAD <-` / `Follow the ramp.`; HUD `Start at LOAD.\nFollow the ramp.` for3s, size48. Generator/source are synchronized; native south-facing poses, all other HUD settings and gameplay guards remain unchanged. No Replay rename, activation redesign, entry teleport, actor movement or approval-bundle regeneration occurred.
 
 BuildAll diagnostics[], explicit Project Validate, full cook and saved non-running shutdown passed. Independent actual sign/rejection/grounded LOAD checks passed in [affected-case QA](evidence/startability-retest-2026-10-05.md); [final QA](evidence/startability-final-retest-2026-10-05.md) passed compact two-line real-hit rendering at48, with Core0/Workshop-next unchanged and all setup restored. Earlier font18/96 and long-copy trials are historical evidence in [HUD repair](evidence/startability-hud-repair-2026-10-05.md). S01–S03 are closed only for this maintenance scope; remaining full-feature checks stay open in tasks.md.
+
+
+## Flow reversal addendum - 2026-10-05
+
+Mirror the whole course about local X=16.5 (X'=33-X; world cm X'=-7100-X).
+Same 7 nodes/7 edges/8 receivers; only positions, receiver face (-X -> +X,
+final -Y stays), ramp roll sign and the final board arrow (<- -> ->) change.
+Parked devices, bay/catch bounds, origin, scales and target-assembly offsets
+are not mirrored. East arrival stays fixed; corridor shortens to the new east
+ramp foot (29,30.2). Regenerate the Verse profile from the mirrored map.yaml +
+production-scene.yaml, then mirror all 183 course actors via MCP with full
+transform readback, then Build Verse + Validate Project + cook + playtest.

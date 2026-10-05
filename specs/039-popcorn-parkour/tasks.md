@@ -1,4 +1,4 @@
-# Full production revision tasks
+﻿# Full production revision tasks
 
 Historical source/runtime completions remain in evidence/source-development.md, source-qa-retest.md, runtime-diagnostic.md and runtime-qa-report.md. Current revision tasks:
 
@@ -85,3 +85,19 @@ Historical Oct4 cleanup shutdown: independent StopGame Completed and fresh CanSt
 - [x] S03 — Independent normal Finish-first → existing corridor/ramp → grounded LOAD passed03:24:47.754UTC; final compact two-line render passed separately through explicitly disclosed viewport test setup. Both reports record restored settings/saved non-running shutdown. No human first-use or broad full-feature acceptance is inferred.
 
 Current Oct5 maintenance disposition: SQA01/SQA02/SQA03 affected presentation cases resolved. Final source BuildAll diagnostics[], Project Validate03:36:25.724UTC and full cook passed; independent final real-shot rendering is compact/readable, Core0 and Workshop-next unchanged. Final QA StopGame Completed/CanStart, camera restored, viewport spawn unchecked, debug tag empty, map saved/is_dirtyfalse, no pending calls/UEFN open; Supervisor independently confirmed CanStart. Historical font18 and96 trials remain in evidence only. I03/V02/V03/V04 and remaining physical entry Return/fault/human/Agent/journal cases remain open; full goal is not complete.
+
+
+# 2026-10-05 flow reversal
+
+- [x] R01 Mirror map.yaml + production-scene.yaml (nodes/receivers/decor/ramp/corridor/boards/Pix/buttons) about X=16.5; regenerate preview; map_workflow check 0 blockers; gate unchanged (3 pre-existing MARKER_UNUSED for fork/branch targets 4/5/6, v1 stage-spine limitation per a02_route_contract).
+- [x] R02 Regenerate fn_shoreline_island_popbridge_production.verse (mirrored centers, +X faces, final board ->, Pix pose -4490, decor offset -520).
+- [x] R03 Record approval.yaml digest 2546643d and pass plan --ready.
+- [x] R04 MCP: mirrored 188 course actors (decks/ramp/targets+subcomponents/mechanisms/instructions/puffs/flourishes/decor/Pix/boards/Replay/returns/ribbon); readback verified starter -4800->-2300 and finish -2200->-4900; save_assets true. 
+- [x] R05 BuildAll no diagnostics; game Running; runtime fixture result=0; session stopped Unconnected/Disconnected. (Interactive shoot/jump/branch/finish and manual Project > Validate Project remain.) 
+
+
+
+# 2026-10-05 finished-state fix
+
+- [x] F01 Hide each machine's balloon (Pop mechanism, course_mechanisms[i*3+2]) in geometry_changed when state.consumed[machine] is true; show otherwise. Generator + production.verse regenerated; BuildAll no diagnostics; fresh session fixture result=0. Interactive pop-hides-balloon visual confirmation remains for human playtest.
+

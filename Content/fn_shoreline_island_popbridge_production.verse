@@ -49,19 +49,19 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
         set landings = array{}
         set machines = array{}
         if (deck := course_decks[0]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 0, center := vector3{X := -4800.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 600.000, Y := 400.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 0, terminal := false}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 0, center := vector3{X := -2300.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 600.000, Y := 400.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 0, terminal := false}, deck := deck}}
         if (deck := course_decks[1]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 1, center := vector3{X := -4200.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 0, route_stage := 1, terminal := false}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 1, center := vector3{X := -2900.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 0, route_stage := 1, terminal := false}, deck := deck}}
         if (deck := course_decks[2]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 2, center := vector3{X := -3700.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 1, route_stage := 2, terminal := false}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 2, center := vector3{X := -3400.000, Y := -17280.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := 1, route_stage := 2, terminal := false}, deck := deck}}
         if (deck := course_decks[3]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 3, center := vector3{X := -3200.000, Y := -17080.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 800.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 3, terminal := false}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 3, center := vector3{X := -3900.000, Y := -17080.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 800.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 3, terminal := false}, deck := deck}}
         if (deck := course_decks[4]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 4, center := vector3{X := -2700.000, Y := -17480.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 4, center := vector3{X := -4400.000, Y := -17480.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false}, deck := deck}}
         if (deck := course_decks[5]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 5, center := vector3{X := -2700.000, Y := -16680.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 5, center := vector3{X := -4400.000, Y := -16680.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 400.000, Z := 40.000}, initially_built := false, milestone := -1, route_stage := 4, terminal := false}, deck := deck}}
         if (deck := course_decks[6]):
-            set landings += array{popbridge_landing{node := popbridge_node{id := 6, center := vector3{X := -2200.000, Y := -17080.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 800.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 5, terminal := true}, deck := deck}}
+            set landings += array{popbridge_landing{node := popbridge_node{id := 6, center := vector3{X := -4900.000, Y := -17080.000, Z := 2520.000}, size := vector3{X := 400.000, Y := 800.000, Z := 40.000}, initially_built := true, milestone := -1, route_stage := 5, terminal := true}, deck := deck}}
         set edges = array{
             popbridge_edge{source := 0, destination := 1, gap_cm := 100.000},
             popbridge_edge{source := 1, destination := 2, gap_cm := 100.000},
@@ -107,7 +107,7 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
             mission_board.SetText(text("POPCORN PARKOUR -> ramp. Shoot LOAD HEAT POP. Jump onto what you make."))
             mission_board.ShowText()
             mission_board.UpdateDisplay()
-            final_board.SetText(text("\nSTART AT LOAD <-\nFollow the ramp."))
+            final_board.SetText(text("\nSTART AT LOAD ->\nFollow the ramp."))
             final_board.ShowText()
             final_board.UpdateDisplay()
             replay_button.SetInteractionText(text("Replay Popcorn Parkour"))
@@ -185,11 +185,17 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
                         prop.Show()
                     else:
                         prop.Hide()
+        for (machine_index := 0..7):
+            if (balloon := course_mechanisms[machine_index * 3 + 2]):
+                if (state.consumed[machine_index]?):
+                    balloon.Hide()
+                else:
+                    balloon.Show()
 
     committed<override>(target_id:int):void =
         if (target_id = 5):
             var pose:transform = pix_home
-            set pose.Translation = vector3{X := -2610.0, Y := -17390.0, Z := 2520.0}
+            set pose.Translation = vector3{X := -4490.0, Y := -17390.0, Z := 2520.0}
             if (pix.TeleportTo[pose]) {}
             for (index := 30..32):
                 if (prop := course_decor[index]):
@@ -203,7 +209,7 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
             for (index := 30..32):
                 if (prop := course_decor[index], home := decor_homes[index]):
                     var pose:transform = home
-                    set pose.Translation = home.Translation + vector3{X := 520.0, Y := 460.0}
+                    set pose.Translation = home.Translation + vector3{X := -520.0, Y := 460.0}
                     if (prop.TeleportTo[pose]) {}
             for (index := 48..52):
                 if (prop := course_decor[index]):

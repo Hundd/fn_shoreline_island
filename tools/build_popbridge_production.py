@@ -32,7 +32,7 @@ for r in contract['receivers']:
     refs=', '.join(f'{name} := {arr}[{index}]' for name,arr,index in [('target','course_targets',i),('a','course_mechanisms',i*3),('b','course_mechanisms',i*3+1),('c','course_mechanisms',i*3+2),('ea','course_instructions',i*3),('eb','course_instructions',i*3+1),('ec','course_instructions',i*3+2),('puff','course_puffs',i),('flourish','course_flourishes',i)])
     lines += [f'        if ({refs}):', f"            set machines += array{{popbridge_machine{{receiver := popbridge_receiver{{target_id := {i}, from_landing := {ids[r['from_landing']]}, creates := {creates}, instruction := {r['instruction']}}}, target := target, mechanisms := array{{a, b, c}}, instructions := array{{ea, eb, ec}}, wrong_puff := puff, flourish := flourish}}}}"]
 lines += ['        checks := fixtures.self_check(array{', *[f'            landing.node,' for n in []], '        }, array{}, array{})'] if False else []
-lines += ['        var checked_nodes:[]popbridge_node = array{}', '        var checked_receivers:[]popbridge_receiver = array{}', '        for (landing : landings):', '            set checked_nodes += array{landing.node}', '        for (machine : machines):', '            set checked_receivers += array{machine.receiver}', '        fixture_result := fixtures.self_check(checked_nodes, edges, checked_receivers)', '        Print("POPBRIDGE_PRODUCTION FIXTURE result={fixture_result}")', '        if (fixture_result <> 0):', '            return', '        targets_started := await_target_startup()', '        if (targets_started?):', '            if (final_machine := machines[7]):', '                set final_machine.target.display_label = "FINISH"', '            initialize()', '            if (ready?, debug_tag <> ""):','                spawn { observe_playtest() }', '            reset_presentation()', '            mission_board.SetText(text("POPCORN PARKOUR -> ramp. Shoot LOAD HEAT POP. Jump onto what you make."))', '            mission_board.ShowText()', '            mission_board.UpdateDisplay()', '            final_board.SetText(text("\\nSTART AT LOAD <-\\nFollow the ramp."))', '            final_board.ShowText()', '            final_board.UpdateDisplay()', '            replay_button.SetInteractionText(text("Replay Popcorn Parkour"))', '            for (button : return_buttons):', '                button.SetInteractionText(text("Return to Hub"))', '']
+lines += ['        var checked_nodes:[]popbridge_node = array{}', '        var checked_receivers:[]popbridge_receiver = array{}', '        for (landing : landings):', '            set checked_nodes += array{landing.node}', '        for (machine : machines):', '            set checked_receivers += array{machine.receiver}', '        fixture_result := fixtures.self_check(checked_nodes, edges, checked_receivers)', '        Print("POPBRIDGE_PRODUCTION FIXTURE result={fixture_result}")', '        if (fixture_result <> 0):', '            return', '        targets_started := await_target_startup()', '        if (targets_started?):', '            if (final_machine := machines[7]):', '                set final_machine.target.display_label = "FINISH"', '            initialize()', '            if (ready?, debug_tag <> ""):','                spawn { observe_playtest() }', '            reset_presentation()', '            mission_board.SetText(text("POPCORN PARKOUR -> ramp. Shoot LOAD HEAT POP. Jump onto what you make."))', '            mission_board.ShowText()', '            mission_board.UpdateDisplay()', '            final_board.SetText(text("\\nSTART AT LOAD ->\\nFollow the ramp."))', '            final_board.ShowText()', '            final_board.UpdateDisplay()', '            replay_button.SetInteractionText(text("Replay Popcorn Parkour"))', '            for (button : return_buttons):', '                button.SetInteractionText(text("Return to Hub"))', '']
 lines += '''    # Diagnostic codes retain the same strict checks; prop order: decks, mechanisms, decor, Pix.
     supports_failure()<transacts>:int =
         for (index -> prop : course_decks + course_mechanisms + course_decor + array{pix}):
@@ -104,11 +104,17 @@ lines += '''    # Diagnostic codes retain the same strict checks; prop order: de
                         prop.Show()
                     else:
                         prop.Hide()
+        for (machine_index := 0..7):
+            if (balloon := course_mechanisms[machine_index * 3 + 2]):
+                if (state.consumed[machine_index]?):
+                    balloon.Hide()
+                else:
+                    balloon.Show()
 
     committed<override>(target_id:int):void =
         if (target_id = 5):
             var pose:transform = pix_home
-            set pose.Translation = vector3{X := -2610.0, Y := -17390.0, Z := 2520.0}
+            set pose.Translation = vector3{X := -4490.0, Y := -17390.0, Z := 2520.0}
             if (pix.TeleportTo[pose]) {}
             for (index := 30..32):
                 if (prop := course_decor[index]):
@@ -122,7 +128,7 @@ lines += '''    # Diagnostic codes retain the same strict checks; prop order: de
             for (index := 30..32):
                 if (prop := course_decor[index], home := decor_homes[index]):
                     var pose:transform = home
-                    set pose.Translation = home.Translation + vector3{X := 520.0, Y := 460.0}
+                    set pose.Translation = home.Translation + vector3{X := -520.0, Y := 460.0}
                     if (prop.TeleportTo[pose]) {}
             for (index := 48..52):
                 if (prop := course_decor[index]):
