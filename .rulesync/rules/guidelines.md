@@ -58,8 +58,8 @@ Project-local roles use the existing skill mechanism. All agents should read the
 
 - Producer: `.agents/skills/uefn-producer/SKILL.md` (product direction and feature briefs upstream of planning)
 - Planner & Reviewer: `.agents/skills/uefn-map-planning/SKILL.md` (pattern-backed map spec, blockout review, and the human-approval gate)
-- Implementer: `.agents/skills/uefn-map-implementation/SKILL.md` (dispatch with `model: "gpt-6.1-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback)
-- QA / Gameplay Verifier: `.agents/skills/uefn-gameplay-verifier/SKILL.md` (dispatch with `model: "gpt-6.1-sol"` and `fork_turns: "none"`; no inherited frontier model or silent model fallback)
+- Implementer: `.agents/skills/uefn-map-implementation/SKILL.md` (dispatch on a cost-controlled worker; resolve the model per host from `worker_model` in `.agents/workflow-models.yaml` — Codex CLI `gpt-6.1-sol` with `fork_turns: "none"`, Claude Code frontmatter `model:`, Cline inherits parent; no inherited frontier model or silent model fallback)
+- QA / Gameplay Verifier: `.agents/skills/uefn-gameplay-verifier/SKILL.md` (same host-resolved cost-controlled worker rule as Implementer; no inherited frontier model or silent model fallback)
 - Supervisor: `.agents/skills/uefn-supervisor/SKILL.md`
 
 Shared recipes remain under `.cline/skills/`: `uefn-editor-safety`, `uefn-device-binding`, `uefn-playtest`, `uefn-verse-build`, and `uefn-spec-workflow`.

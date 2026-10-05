@@ -1,6 +1,6 @@
 ---
 name: uefn-gameplay-verifier
-description: Independently verify UEFN scene and cooked gameplay against feature acceptance criteria using a gpt-6.1-sol subagent. Record reproducible defects, requirement-linked evidence, and playtest shutdown; do not implement fixes or approve designs.
+description: Independently verify UEFN scene and cooked gameplay against feature acceptance criteria using a cost-controlled subagent (model resolved per host from `.agents/workflow-models.yaml`). Record reproducible defects, requirement-linked evidence, and playtest shutdown; do not implement fixes or approve designs.
 ---
 
 # QA / Gameplay Verifier
@@ -9,11 +9,17 @@ Provide independent acceptance evidence after implementation or for a requested 
 
 ## Required model and dispatch
 
-The user requires this role to use `gpt-6.1-sol`, not an inherited frontier model. This is a dispatch requirement, not a model setting in skill metadata.
+The user requires this role to use a cost-controlled model, not an inherited frontier model. This is a dispatch requirement, not a model setting in skill metadata. The exact model is host-specific: read `worker_model` from `.agents/workflow-models.yaml` (the single source of truth) and resolve the entry for the host that is actually executing. Do not hardcode a model string here, and do not silently substitute another model.
 
-The Supervisor or invoking parent must create the QA worker using `collaboration.spawn_agent` with `task_name: "gameplay_verifier"`, `model: "gpt-6.1-sol"`, `fork_turns: "none"`, and a self-contained task message. Do not use a full-history fork: it inherits the parent's model and cannot apply this override. Do not silently substitute another model or perform the QA workload in the parent if dispatch fails. Report the limitation. Do not create a separate user-owned chat for QA.
+Detect the host by the tools/config available, then dispatch on its native subagent mechanism:
 
-Include the repository root, requested scope, this skill's absolute path, feature and evidence paths, exact acceptance criteria or their source paths, implementation checkpoint, file ownership, and editor ownership status. Record the worker ID and requested model in supervisor evidence. A worker explicitly dispatched as QA reads this skill and performs the task; it does not recursively spawn another QA worker. Reuse only a QA worker originally created with this model. Do not delegate its verification work to a different model.
+- **Codex CLI** (`collaboration.spawn_agent` and goal tools present): create the worker with `collaboration.spawn_agent`, `task_name: "gameplay_verifier"`, `model: <worker_model.codexcli>`, and `fork_turns: "none"`. Do not use a full-history fork: it inherits the parent's model and cannot apply this override.
+- **Claude Code** (`Task` tool and `.claude/agents/` present): create a native subagent whose `model:` frontmatter is set to `<worker_model.claudecode>`.
+- **Cline** (`spawn_agent` / `team_spawn_teammate` present): create the worker via `spawn_agent` / `team_spawn_teammate`. Cline's subagent tools expose no `model` override, so the worker inherits the parent model; record that `<worker_model.cline>` (i.e. `inherit`) could not be pinned.
+
+Do not silently substitute another model or perform the QA workload in the parent if dispatch fails. Report the limitation. Do not create a separate user-owned chat for QA.
+
+Include the repository root, requested scope, this skill's absolute path, feature and evidence paths, exact acceptance criteria or their source paths, implementation checkpoint, file ownership, and editor ownership status. Record the host, resolved model, and worker ID in supervisor evidence. A worker explicitly dispatched as QA reads this skill and performs the task; it does not recursively spawn another QA worker. Reuse only a QA worker originally created with the resolved model for that host. Do not delegate its verification work to a different model.
 
 ## Scope and ownership
 

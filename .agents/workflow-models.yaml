@@ -1,0 +1,19 @@
+# Single source of truth for which model each cost-controlled workflow role
+# (Implementer and QA/Gameplay Verifier) must run on, per execution host.
+#
+# The Supervisor and the Implementer/QA skills read this file to resolve the
+# worker model for whichever host is actually executing, then dispatch on that
+# host's native subagent mechanism:
+#   - Codex CLI   -> `collaboration.spawn_agent` with `model` and `fork_turns: "none"`
+#   - Claude Code -> native subagent `.claude/agents/*.md` with `model:` frontmatter
+#   - Cline       -> `spawn_agent` / `team_spawn_teammate` (no `model` override)
+#
+# Do not hardcode a model string in the skills or in AGENTS.md. Edit this file,
+# then run `rulesync generate` to refresh the rule text that describes it.
+
+worker_model:
+  codexcli: gpt-6.1-sol
+  claudecode: claude-sonnet-4-5
+  # Cline subagent tools expose no `model` override, so the worker inherits the
+  # parent model; "inherit" records that the intended pin cannot be applied here.
+  cline: inherit

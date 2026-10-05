@@ -9,9 +9,17 @@ Implement the required changes in the approved feature bundle and carry them thr
 
 ## Required model and dispatch
 
-The user requires implementation to run in a `gpt-6.1-sol` worker to control token cost. Before performing this skill's implementation workflow, the Supervisor or invoking parent must dispatch `collaboration.spawn_agent` with `task_name: "implementer"`, `model: "gpt-6.1-sol"`, and `fork_turns: "none"`. Pass a self-contained message with repository root, this skill's absolute path, original request, approved scope/revision, feature and evidence paths, approval evidence and digest, acceptance criteria, assigned file ownership, goal state, and editor ownership/checkpoint. A full-history fork inherits the parent's model and cannot apply this override.
+The user requires implementation to run on a cost-controlled worker, not an inherited frontier model. The exact model is host-specific: read `worker_model` from `.agents/workflow-models.yaml` (the single source of truth) and resolve the entry for the host that is actually executing. Do not hardcode a model string in this skill, and do not silently substitute a different model.
 
-An Implementer worker explicitly dispatched on that model reads this skill and continues below; it does not recursively dispatch itself. Reuse only a worker originally spawned with `gpt-6.1-sol`. An existing worker on another or unknown model must finish pending calls and release editor ownership before a replacement is dispatched with its checkpoint. Record the requested model and worker ID in coordination evidence. Do not silently substitute a different model, run implementation in the parent, or delegate implementation to a frontier-model worker. If the model or dispatch is unavailable, report the limitation and leave implementation pending.
+Detect the host by the tools/config available, then dispatch on its native subagent mechanism:
+
+- **Codex CLI** (`collaboration.spawn_agent` and goal tools present): dispatch `collaboration.spawn_agent` with `task_name: "implementer"`, `model: <worker_model.codexcli>`, and `fork_turns: "none"`. A full-history fork inherits the parent's model and cannot apply this override.
+- **Claude Code** (`Task` tool and `.claude/agents/` present): dispatch a native subagent whose `model:` frontmatter is set to `<worker_model.claudecode>`.
+- **Cline** (`spawn_agent` / `team_spawn_teammate` present): dispatch via `spawn_agent` / `team_spawn_teammate`. Cline's subagent tools expose no `model` override, so the worker inherits the parent model; record that `<worker_model.cline>` (i.e. `inherit`) could not be pinned.
+
+Pass a self-contained message with repository root, this skill's absolute path, original request, approved scope/revision, feature and evidence paths, approval evidence and digest, acceptance criteria, assigned file ownership, goal state, and editor ownership/checkpoint.
+
+An Implementer worker explicitly dispatched on the resolved model reads this skill and continues below; it does not recursively dispatch itself. Reuse only a worker originally spawned with that host's resolved model. An existing worker on another or unknown model must finish pending calls and release editor ownership before a replacement is dispatched with its checkpoint. Record the host, resolved model, and worker ID in coordination evidence. Do not silently substitute a different model, run implementation in the parent, or delegate implementation to a frontier-model worker. If the resolved model or dispatch is unavailable, report the limitation and leave implementation pending.
 
 Creating or updating this skill does not dispatch implementation or start a goal. Parent coordination can use its existing model; the implementation worker owns the implementation goal and editor work.
 
