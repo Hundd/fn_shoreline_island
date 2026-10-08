@@ -1,0 +1,937 @@
+version: 1
+map:
+  id: popcorn_finish_hub_portal
+  title: 'Popcorn finish: walk into the Hub portal'
+  theme: cream_popcorn_factory_comedy
+  units: meters
+  origin_cm:
+  - -5200
+  - -19000
+  - 2400
+  size:
+  - 50
+  - 210
+  - 8
+  learning_objective: Complete PopBridge reuse, then choose the visible Hub exit while
+    retaining earned progress. No extra learning action or quiz.
+  source_feature: specs/042-popcorn-finish-hub-portal/spec.md
+  intent: propose_change
+  min_path_width: 1.2
+  position_tolerance: 0.1
+player_flow:
+- course
+- finish_portal
+- hub
+zones:
+- id: course
+  label: 'Primary Skills bay: teach > shoot > jump > choose > finish'
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 34
+  - 37
+  - 8
+  purpose: Existing mirrored Popcorn course preserved; finish portal appears/enables
+    only after target7 successful completion and existing reward call.
+  parameters:
+    target_count: 8
+    friendly_fire: false
+  devices:
+  - controller
+  - targets
+  - blaster
+  - progress
+  - journal
+  - controls
+  - props
+  - learning_hud
+  - hit_halos
+  - hit_audio
+  overlap_with:
+  - finish_portal
+  completion: Actual ordered landings plus final skill shot; existing badge once.
+  reset: Cancel owner/generation/round work; clear attempt geometry; preserve earned
+    badge except existing round reset.
+- id: finish_portal
+  label: Finish Hub portal (completion-gated)
+  pattern: portal
+  position:
+  - 1.4
+  - 15.4
+  - 1.2
+  size:
+  - 3.2
+  - 2.8
+  - 2.8
+  purpose: Small informational interaction envelope on existing finish deck, not a
+    new room/floor; deliberate spare-space walk-in exit after mission completion.
+  parameters:
+    destination: hub
+    bidirectional: false
+  devices:
+  - finish_hub_portal
+  - controller
+  overlap_with:
+  - course
+  completion: Owned finished player enters, cleanup-first same Hub destination; no
+    new reward
+  reset: Disable and invalidate gate before attempt reset/round/Return; preserve badge
+- id: hub
+  label: Existing Hub destination annotation
+  pattern: corridor
+  position:
+  - 43.5
+  - 203.5
+  - 0
+  size:
+  - 3
+  - 3
+  - 3
+  purpose: Estimated annotation envelope around measured existing Hub teleporter;
+    no new corridor/floor/actor or Hub layout edit. Same arrival used by existing
+    Returns.
+  parameters:
+    width_m: 3
+    access: Existing Hub arrival, no geometry mutation
+  devices: []
+  overlap_with: []
+  completion: Player has returned to existing Hub destination
+  reset: No change to Hub settings
+connections:
+- from: course
+  to: finish_portal
+  mode: walk
+  width: 1.2
+  points:
+  - - 3
+    - 19.2
+    - 1.2
+  - - 3
+    - 16.8
+    - 1.2
+  gate: finale
+- from: finish_portal
+  to: hub
+  mode: portal
+  width: 1.2
+  points:
+  - - 3
+    - 16.8
+    - 1.2
+  - - 45
+    - 205
+    - 1
+  gate: finale
+markers:
+- id: arrival
+  kind: spawn
+  zone: course
+  label: Existing east campus walk access; follow Popcorn arrow
+  position:
+  - 33
+  - 28.7
+  - 0
+  source: Native floor2400/rays clear; no Skills arrival teleporter exists
+- id: weapon
+  kind: weapon
+  zone: course
+  label: Shared Data Blaster already granted
+  position:
+  - 29.0
+  - 30.2
+  - 0
+  source: Shared rifle existing loadout annotation; no new granter
+- id: return
+  kind: exit
+  zone: course
+  label: Keep primary Return
+  position:
+  - 27.7
+  - 13
+  - 1
+  source: Existing Return approximate design annotation; native ref resolved in evidence,
+    final pose to read back
+- id: ribbon
+  kind: knowledge
+  zone: course
+  label: PopBridge = Load > Heat > Pop
+  position:
+  - 29.0
+  - 18.7
+  - 2.6
+  source: Existing ribbon annotation; HUD gives persistent recipe from every landing;
+    physical readable placement remains live check.
+- id: reward
+  kind: reward
+  zone: course
+  label: Skills badge once + Replay/Return
+  position:
+  - 3.0
+  - 19.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: starter_landing
+  kind: checkpoint
+  zone: course
+  label: Starter landing
+  position:
+  - 29.0
+  - 17.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: first_landing
+  kind: checkpoint
+  zone: course
+  label: First landing
+  position:
+  - 23.0
+  - 17.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: reuse_landing
+  kind: checkpoint
+  zone: course
+  label: Reuse landing
+  position:
+  - 18.0
+  - 17.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: fork_landing
+  kind: checkpoint
+  zone: course
+  label: Fork landing
+  position:
+  - 13.0
+  - 19.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: left_landing
+  kind: checkpoint
+  zone: course
+  label: Left landing
+  position:
+  - 8.0
+  - 15.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: right_landing
+  kind: checkpoint
+  zone: course
+  label: Right landing
+  position:
+  - 8.0
+  - 23.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: finish_landing
+  kind: checkpoint
+  zone: course
+  label: Finish landing
+  position:
+  - 3.0
+  - 19.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_0
+  kind: target
+  zone: course
+  label: LOAD
+  position:
+  - 26.2
+  - 15.6
+  - 2.8
+  target_id: 0
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_1
+  kind: target
+  zone: course
+  label: HEAT
+  position:
+  - 26.2
+  - 17.2
+  - 2.8
+  target_id: 1
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_2
+  kind: target
+  zone: course
+  label: POP
+  position:
+  - 26.2
+  - 18.8
+  - 2.8
+  target_id: 2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_3
+  kind: target
+  zone: course
+  label: PopBridge
+  position:
+  - 21.2
+  - 17.2
+  - 2.8
+  target_id: 3
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_4
+  kind: target
+  zone: course
+  label: PopBridge
+  position:
+  - 16.2
+  - 19.2
+  - 2.8
+  target_id: 4
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_5
+  kind: target
+  zone: course
+  label: Moustache PopBridge
+  position:
+  - 11.2
+  - 15.2
+  - 2.8
+  target_id: 5
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_6
+  kind: target
+  zone: course
+  label: Bucket PopBridge
+  position:
+  - 11.2
+  - 23.2
+  - 2.8
+  target_id: 6
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_7
+  kind: target
+  zone: course
+  label: Final PopBridge
+  position:
+  - 3.0
+  - 22
+  - 2.8
+  target_id: 7
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: finish_portal_entry
+  kind: exit
+  zone: finish_portal
+  label: Glowing HUB portal; walk in after completion
+  position:
+  - 3
+  - 16.8
+  - 1.2
+  source: Proposed feet approach position; actor centre(-4900,-17320,2600)cm/scale1
+    uses measured native overlap dimensions. Existing deck measuredtop2520; no deck
+    mutation.
+- id: hub_arrival
+  kind: exit
+  zone: hub
+  label: Existing Hub destination; unchanged
+  position:
+  - 45
+  - 205
+  - 1
+  source: Measured current hub_destination native actor pivot(-700,1500,2500)cm,yaw90,scale1.
+    Envelope is annotation, not a floor claim.
+devices:
+- id: controller
+  class: fn_shoreline_island_popbridge_production
+  count: 1
+  source: Existing PopBridge controller/production source; native bindings in039 evidence,040
+    saved readback. Inspect before editing.
+  settings:
+    reuse_existing: true
+    course_contract:
+      version: 1
+      status: existing_mirrored_040_route_preserved
+      coordinate_provenance: Saved production source and feature040 final-native-readback;
+        no fresh editor measurement in041.
+      nodes:
+      - id: starter
+        index: 0
+        center:
+        - 29.0
+        - 17.2
+        - 1.2
+        size:
+        - 6
+        - 4
+        - 0.4
+        initially_built: true
+        route_stage: 0
+        milestone: -1
+        terminal: false
+      - id: first
+        index: 1
+        center:
+        - 23.0
+        - 17.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 1
+        milestone: 0
+        terminal: false
+      - id: reuse
+        index: 2
+        center:
+        - 18.0
+        - 17.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 2
+        milestone: 1
+        terminal: false
+      - id: fork
+        index: 3
+        center:
+        - 13.0
+        - 19.2
+        - 1.2
+        size:
+        - 4
+        - 8
+        - 0.4
+        initially_built: false
+        route_stage: 3
+        milestone: -1
+        terminal: false
+      - id: left
+        index: 4
+        center:
+        - 8.0
+        - 15.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 4
+        milestone: -1
+        terminal: false
+      - id: right
+        index: 5
+        center:
+        - 8.0
+        - 23.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 4
+        milestone: -1
+        terminal: false
+      - id: finish
+        index: 6
+        center:
+        - 3.0
+        - 19.2
+        - 1.2
+        size:
+        - 4
+        - 8
+        - 0.4
+        initially_built: true
+        route_stage: 5
+        milestone: -1
+        terminal: true
+      jump_edges:
+      - source: starter
+        destination: first
+        edge_gap_m: 1.0
+        kind: jump
+      - source: first
+        destination: reuse
+        edge_gap_m: 1.0
+        kind: jump
+      - source: reuse
+        destination: fork
+        edge_gap_m: 1.0
+        kind: jump
+      - source: fork
+        destination: left
+        edge_gap_m: 1.0
+        kind: jump
+      - source: fork
+        destination: right
+        edge_gap_m: 1.0
+        kind: jump
+      - source: left
+        destination: finish
+        edge_gap_m: 1.0
+        kind: jump
+      - source: right
+        destination: finish
+        edge_gap_m: 1.0
+        kind: jump
+      receivers:
+      - target_id: 0
+        name: LOAD
+        position:
+        - 26.2
+        - 15.6
+        - 2.8
+        from_landing: starter
+        creates: null
+        instruction: 0
+        face: toward +X
+      - target_id: 1
+        name: HEAT
+        position:
+        - 26.2
+        - 17.2
+        - 2.8
+        from_landing: starter
+        creates: null
+        instruction: 1
+        face: toward +X
+      - target_id: 2
+        name: POP
+        position:
+        - 26.2
+        - 18.8
+        - 2.8
+        from_landing: starter
+        creates: first
+        instruction: 2
+        face: toward +X
+      - target_id: 3
+        name: PopBridge
+        position:
+        - 21.2
+        - 17.2
+        - 2.8
+        from_landing: first
+        creates: reuse
+        instruction: 3
+        face: toward +X
+      - target_id: 4
+        name: PopBridge
+        position:
+        - 16.2
+        - 19.2
+        - 2.8
+        from_landing: reuse
+        creates: fork
+        instruction: 3
+        face: toward +X
+      - target_id: 5
+        name: Moustache PopBridge
+        position:
+        - 11.2
+        - 15.2
+        - 2.8
+        from_landing: fork
+        creates: left
+        instruction: 3
+        face: toward +X
+      - target_id: 6
+        name: Bucket PopBridge
+        position:
+        - 11.2
+        - 23.2
+        - 2.8
+        from_landing: fork
+        creates: right
+        instruction: 3
+        face: toward +X
+      - target_id: 7
+        name: Final PopBridge
+        position:
+        - 3.0
+        - 22
+        - 2.8
+        from_landing: finish
+        creates: basket_overflow
+        instruction: 3
+        face: toward -Y
+      branch_rule: Either left or right is equally valid; no preferred target; logical
+        course milestone identical
+      required_paths:
+      - - starter
+        - first
+        - reuse
+        - fork
+        - left
+        - finish
+      - - starter
+        - first
+        - reuse
+        - fork
+        - right
+        - finish
+      landing_rule: Grounded inset deck footprint plus consumed checkpoint/owner/generation
+        airborne token (>35cm normalized feet rise); next landing cannot be credited
+        by grounded AutoRun. Actual five jumps required per route.
+      recovery:
+        catch_bounds:
+        - 0
+        - 0
+        - 34
+        - 37
+        floor_z_range_m:
+        - 0
+        - 0.12
+        normalized_feet_z_range_cm:
+        - 2300
+        - 2480
+        maximum_latency_seconds: 1
+        preserve:
+        - skill
+        - built_platforms
+        - earned_badge
+        teleport: Last accepted deck center + tested standing offset/safe spawn offset
+        entry_ramp_exemption: No recovery before owner acquires starter; thereafter
+          floor catch anywhere in primary bay
+        failure: Retry keeping progress; Return remains available
+        boundary: Full primary bay covers 2m east and 1m west floor buffer; owner
+          outside bay releases as tested. Production fall/crouch boundary tests pending.
+      skill:
+        name: PopBridge
+        instructions:
+        - Load
+        - Heat
+        - Pop
+        wrong_order: Retain prefix; tiny puff; expected mechanism highlight
+        reuse: Play identical three instructions visibly; platform solid only after
+          completion
+        consumed: Already popped; no geometry duplicate
+      visual:
+        meshes:
+        - /VerseEngineAssets/Cube.Cube
+        - /VerseEngineAssets/Sphere.Sphere
+        stable_collision: Flat Cube decks at2520cm; decorative spheres remain below2520
+          and NoCollision; mechanisms independent from deck collision.
+        popcorn: Cream five-lobe sphere cluster with yellow center; targetable machine
+          below far edge; visible ribbon
+        jokes:
+        - tiny kernel failed bridge
+        - left popcorn moustache on Pix
+        - right overflowing bucket
+        - final basket overflow
+        essential_audio: false
+      milestone_mapping:
+        '0': First landing after teaching
+        '1': Reuse landing after first saved invocation
+        '2': Finish arrival after valid branch and final skill shot
+      reset: Generation/round/owner cancellation; replay clears attempt and teleports
+        starter; earned badge retained; round authority unchanged
+    preserve041: All accepted hit/learning/cancellation/audio settings and existing
+      completion popup, journal/rewards unchanged except final action guidance
+    portal_contract:
+      label: pop042_finish_hub_portal
+      new_editable: finish_hub_portal:teleporter_device
+      world_transform:
+        location:
+          x: -4900
+          y: -17320
+          z: 2600
+        rotation:
+          pitch: 0
+          yaw: 0
+          roll: 0
+        scale:
+          x: 1
+          y: 1
+          z: 1
+      native_class: /CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C
+      catalogue: /CreativeCoreDevices/SetupAssets/PID_Device_Teleporter.PID_Device_Teleporter
+      native_settings:
+        enabledDuringPhase: None
+        knob_TeleporterGroup: Group_None
+        knob_TargetTeleporterGroup: Group_None
+        teleporter Rift Visible: true
+        play Visual Effects: true
+        play Sound Effects: true
+        can Teleport Physics Props: false
+        skydive After Teleport: false
+      gate: Same owner/attempt generation/round, actual finished state, after synchronous
+        existing progress.complete_challenge(player,2) returns; no raw-hit unlock
+      entry: EnterEvent -> guard owned finished ready token/round/bay -> close gate/disable
+        -> existing return_to_hub(agent), which release-cleans then hub_destination.Teleport(agent)
+      fresh_entry: After rewardReady, keep Disabled until current owner horizontal
+        distance from portal centre is >1.0m. Existing sync_card monitor (0.1s) rechecks
+        owner/token/round/finished before arming; this prevents Enable while owner
+        overlaps. Then fresh EnterEvent only.
+      closed: Startup/release/Replay/Return/round/departure/removal disable; finished
+        visibility/state cannot leak to next attempt
+      approach: Walk2.4m from finish centre to portal; native capsule reference effective
+        XY radius0.44m,halfheight0.616m,portal centre0.8m above deckfeet
+      copy: Walk into the glowing HUB portal, or use Return.
+      completion_card: 'Mission complete! You saved three steps and reused them.
+
+        PopBridge = LOAD > HEAT > POP.
+
+        Walk into the glowing HUB portal, or use Return.'
+      completion_card_characters: 136
+    hub_destination_ref: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B5C80003_1842943040
+    hub_destination_world_transform: Measured(-700,1500,2500)cm,yaw90,scale1; reuse
+      unchanged
+    adapter_choice: Small PopBridge optional completion_ready hook after existing
+      reward plus production portal handler/gate; existing shared return path retained.
+      SDK supports API; implementation pending actual approval.
+- id: targets
+  class: fn_shoreline_island_data_target
+  count: 8
+  source: Existing eight mission_id39 damage targets; exact040 positions preserved
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing shared loadout; no duplicate granter
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: progress
+  class: fn_shoreline_island_nursery_progress
+  count: 1
+  source: Existing exact primary progress in evidence/planning-inspection.json
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: journal
+  class: fn_shoreline_island_academy_journal
+  count: 1
+  source: Existing navigation_journal binding
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: controls
+  class: button_device
+  count: 3
+  source: Existing Replay and both Returns
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: props
+  class: creative_prop
+  count: 1
+  source: Existing seven decks, ramp and stylized decor, preserved; count1 is inventory
+    group, no spawn
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: learning_hud
+  class: hud_message_device
+  count: 1
+  source: Existing controller.feedback native binding from039; reuse, layout inspect
+    required
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: hit_halos
+  class: vfx_creator_device
+  count: 8
+  source: Supported native Creator Shockwave sprite/table;8 separate refs to reconcile/place;
+    not current native inventory
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: hit_audio
+  class: audio_player_device
+  count: 8
+  source: Existing8 Audio Player actors repaired/saved to original project-owned imported
+    Popcorn WAV; evidence/validation-audio-repair-native-resolved.json and saved-reference-audit.json
+  settings:
+    reuse_existing: true
+    preserve: Existing041 saved settings/bindings; no042 change to this group
+- id: finish_hub_portal
+  class: teleporter_device
+  count: 1
+  source: Proposed one new native V2 Teleporter; current catalog/schema/capsule readback
+    under042 evidence; existing hub_destination reused
+  settings:
+    label: pop042_finish_hub_portal
+    new_editable: finish_hub_portal:teleporter_device
+    world_transform:
+      location:
+        x: -4900
+        y: -17320
+        z: 2600
+      rotation:
+        pitch: 0
+        yaw: 0
+        roll: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+    native_class: /CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C
+    catalogue: /CreativeCoreDevices/SetupAssets/PID_Device_Teleporter.PID_Device_Teleporter
+    native_settings:
+      enabledDuringPhase: None
+      knob_TeleporterGroup: Group_None
+      knob_TargetTeleporterGroup: Group_None
+      teleporter Rift Visible: true
+      play Visual Effects: true
+      play Sound Effects: true
+      can Teleport Physics Props: false
+      skydive After Teleport: false
+    gate: Same owner/attempt generation/round, actual finished state, after synchronous
+      existing progress.complete_challenge(player,2) returns; no raw-hit unlock
+    entry: EnterEvent -> guard owned finished ready token/round/bay -> close gate/disable
+      -> existing return_to_hub(agent), which release-cleans then hub_destination.Teleport(agent)
+    fresh_entry: After rewardReady, keep Disabled until current owner horizontal distance
+      from portal centre is >1.0m. Existing sync_card monitor (0.1s) rechecks owner/token/round/finished
+      before arming; this prevents Enable while owner overlaps. Then fresh EnterEvent
+      only.
+    closed: Startup/release/Replay/Return/round/departure/removal disable; finished
+      visibility/state cannot leak to next attempt
+    approach: Walk2.4m from finish centre to portal; native capsule reference effective
+      XY radius0.44m,halfheight0.616m,portal centre0.8m above deckfeet
+    copy: Walk into the glowing HUB portal, or use Return.
+    completion_card: 'Mission complete! You saved three steps and reused them.
+
+      PopBridge = LOAD > HEAT > POP.
+
+      Walk into the glowing HUB portal, or use Return.'
+    completion_card_characters: 136
+stages:
+- id: teach_load
+  zone: course
+  purpose: 'One instruction performs one action: LOAD'
+  requires: []
+  active_targets:
+  - target_0
+  - target_1
+  - target_2
+  completion: Load accepted; retain prefix on wrong-order shot
+  success_target: target_0
+- id: teach_heat
+  zone: course
+  purpose: 'Instructions have an order: HEAT after LOAD'
+  requires:
+  - teach_load
+  active_targets:
+  - target_1
+  - target_2
+  completion: Heat accepted; retain prefix on wrong-order shot
+  success_target: target_1
+- id: teach_pop
+  zone: course
+  purpose: POP completes three steps and saves PopBridge on commit
+  requires:
+  - teach_heat
+  active_targets:
+  - target_2
+  completion: PopBridge saved, first deck appears; actual first landing completes
+    milestone0
+  success_target: target_2
+- id: first_reuse
+  zone: course
+  purpose: One invocation runs the saved three steps; actual landing checks result
+  requires:
+  - teach_pop
+  active_targets:
+  - target_3
+  completion: Requires first landing; replay three instructions then reuse deck appears;
+    landing completes milestone1
+  success_target: target_3
+- id: course_routes
+  zone: course
+  purpose: Same skill at another machine; either path valid; actual jumping checks
+    built output
+  requires:
+  - first_reuse
+  active_targets:
+  - target_4
+  - target_5
+  - target_6
+  completion: Runtime guards require target4 from reuse then either target5 or target6
+    from fork. Both branch receivers are valid; actual grounded landings gate further
+    progression. The active set inventories receivers, not simultaneous permission
+    to advance. v1 success_target denotes the first receiver in this grouped stage
+    only; the embedded runtime graph remains authoritative for either branch and finish
+    arrival.
+  success_target: target_4
+- id: finale
+  zone: course
+  purpose: One skill made many bridges; existing reward only after finish commit
+  requires:
+  - course_routes
+  active_targets:
+  - target_7
+  completion: Requires valid branch and finish arrival; same routine overflows basket;
+    milestone2 and existing badge once
+  success_target: target_7
+- id: walk_in_return
+  zone: finish_portal
+  purpose: Choose visible Hub return after completing the saved skill course
+  requires:
+  - finale
+  active_targets: []
+  completion: Owned finished player enters unlocked portal; controller closes gate/releases
+    then calls existing Hub Teleport
+- id: hub_arrival
+  zone: hub
+  purpose: Retain earned Skills progress while continuing Academy from Hub
+  requires:
+  - walk_in_return
+  active_targets: []
+  completion: Existing Hub arrival, no additional lesson/reward authority
+assumptions:
+- id: a01_supported_api
+  status: resolved
+  detail: Local Fortnite SDK exposes teleporter EnterEvent,Enable,Disable,Teleport;
+    native V2 catalogue/groupNone/startNone/visible-effect options measured. EnterEvent
+    with GroupNone is SDK-supported input intent, runtime overlap remains manual acceptance.
+    No new transport engine.
+  evidence: 042 evidence/teleporter-native-schema.json,teleporter-catalogue.json,teleporter-native-supported-settings.json;
+    localFortnite.digest.verse5755..5791
+- id: a02_finish_clearance
+  status: resolved
+  detail: Finish deck bounds measured X[-5100,-4700],Y[-17480,-16680],top2520. Proposed
+    centre(-4900,-17320,2600),scale1,yaw0,default capsule effective44cmXYradius/61.6cmhalfheight,
+    leaves156cmX and116cmnearestYedge clearance. Standing capsule can overlap at deckfeet;
+    no jump/step/deck change. Physical body clearance/effect readability verified
+    manually later.
+  evidence: 042 evidence/finish-deck-native-bounds.json,teleporter-overlap-capsule-values.json;
+    currentstanding feet offset77.15cm in controller
+- id: a03_cleanup_destination
+  status: resolved
+  detail: Reuse same hub_destination actor/currenttransform and existing release->Teleport
+    return path. Completion hook opens gate after successful final commit/reward call;
+    callbacks recheck owner/generation/round/finished and synchronous close prevents
+    duplicate/stale entry. Narrow planned adapter uses existing APIs/state, no extra
+    authority.
+  evidence: Current PopBridge controller execute,release,return_to_hub; production
+    release_owner;042 known-native-refs andhub_destination-native-transform.json
+- id: a04_manual_verification
+  status: resolved
+  detail: 'Existing owner no-testing instruction continues: no tests/QA/ProjectValidate/cook/push/session.
+    Compile/readback/save remain implementation hygiene; owner manually verifies overlap/arrival/gating
+    and preserved course. This is an explicit delivery constraint, not a claim of
+    gameplay pass.'
+  evidence: 041 evidence/human-approval-and-manual-testing.md; currentSupervisor instructions

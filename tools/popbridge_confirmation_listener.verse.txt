@@ -1,0 +1,14 @@
+
+# Native response payload has no nonce; captured fields never mutate or get reused.
+popbridge_confirmation_listener := class:
+    controller:fn_shoreline_island_popbridge_production
+    captured_player:player
+    token:int
+    round:int
+    epoch:int
+
+    respond(payload:tuple(agent, int)):void =
+        controller.hub_confirmation_response(payload(0), payload(1), captured_player, token, round, epoch)
+
+    dismiss(input_agent:agent):void =
+        controller.hub_confirmation_response(input_agent, 1, captured_player, token, round, epoch)

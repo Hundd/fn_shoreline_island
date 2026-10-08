@@ -1,0 +1,15 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "editor_toolset.toolsets.asset.AssetTools",
+      "tool_name": "is_dirty",
+      "arguments": {
+        "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/0/71/9T1H2OE5BLSN8MZF4AS8QK.Device_Teleporter_V2_C_UAID_E89C2592D1B5340903_1718691508"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "ValkyrieToolset.DeviceToolset",
+      "tool_name": "GetDeviceProperties",
+      "arguments": {
+        "device": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541"
+        },
+        "propertyNames": [
+          "course_decks",
+          "course_targets",
+          "course_mechanisms",
+          "course_instructions",
+          "course_puffs",
+          "course_flourishes",
+          "course_hit_halos",
+          "course_decor",
+          "course_returns",
+          "finish_hub_portal",
+          "mission_board",
+          "final_board",
+          "navigation_journal",
+          "pix",
+          "landings",
+          "edges",
+          "machines",
+          "progress",
+          "blaster",
+          "replay_button",
+          "return_buttons",
+          "hub_destination",
+          "ribbon",
+          "feedback",
+          "bay_min",
+          "bay_max",
+          "catch_min",
+          "catch_max",
+          "landing_height_tolerance",
+          "grounded_origin_height",
+          "landing_inset",
+          "debug_tag"
+        ]
+      }
+    }
+  }
+}

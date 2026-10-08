@@ -1,0 +1,1046 @@
+version: 1
+map:
+  id: popcorn_feedback_and_learning
+  title: 'Popcorn Parkour: feedback and learning'
+  theme: cream_popcorn_factory_comedy
+  units: meters
+  origin_cm:
+  - -5200
+  - -19000
+  - 2400
+  size:
+  - 34
+  - 37
+  - 8
+  learning_objective: An instruction is one action; order matters; a named skill groups
+    LOAD, HEAT, POP and repeats those instructions at each new machine. Jumping checks
+    the created result.
+  source_feature: specs/041-popcorn-feedback-and-learning/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.1
+player_flow:
+- course
+zones:
+- id: course
+  label: 'Primary Skills bay: teach > shoot > jump > choose > finish'
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 34
+  - 37
+  - 8
+  purpose: Existing shooting/jumping bay; learn-by-doing with contextual HUD and recipe,
+    eight cosmetic hit pulses; no new walking or lesson room.
+  parameters:
+    target_count: 8
+    friendly_fire: false
+  devices:
+  - controller
+  - targets
+  - blaster
+  - progress
+  - journal
+  - controls
+  - props
+  - learning_hud
+  - hit_halos
+  - hit_audio
+  overlap_with: []
+  completion: Actual ordered landings plus final skill shot; existing badge once.
+  reset: Cancel owner/generation/round work; clear attempt geometry; preserve earned
+    badge except existing round reset.
+connections: []
+markers:
+- id: arrival
+  kind: spawn
+  zone: course
+  label: Existing east campus walk access; follow Popcorn arrow
+  position:
+  - 33
+  - 28.7
+  - 0
+  source: Native floor2400/rays clear; no Skills arrival teleporter exists
+- id: weapon
+  kind: weapon
+  zone: course
+  label: Shared Data Blaster already granted
+  position:
+  - 29.0
+  - 30.2
+  - 0
+  source: Shared rifle existing loadout annotation; no new granter
+- id: return
+  kind: exit
+  zone: course
+  label: Keep primary Return
+  position:
+  - 27.7
+  - 13
+  - 1
+  source: Existing Return approximate design annotation; native ref resolved in evidence,
+    final pose to read back
+- id: ribbon
+  kind: knowledge
+  zone: course
+  label: PopBridge = Load > Heat > Pop
+  position:
+  - 29.0
+  - 18.7
+  - 2.6
+  source: Existing ribbon annotation; HUD gives persistent recipe from every landing;
+    physical readable placement remains live check.
+- id: reward
+  kind: reward
+  zone: course
+  label: Skills badge once + Replay/Return
+  position:
+  - 3.0
+  - 19.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: starter_landing
+  kind: checkpoint
+  zone: course
+  label: Starter landing
+  position:
+  - 29.0
+  - 17.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: first_landing
+  kind: checkpoint
+  zone: course
+  label: First landing
+  position:
+  - 23.0
+  - 17.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: reuse_landing
+  kind: checkpoint
+  zone: course
+  label: Reuse landing
+  position:
+  - 18.0
+  - 17.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: fork_landing
+  kind: checkpoint
+  zone: course
+  label: Fork landing
+  position:
+  - 13.0
+  - 19.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: left_landing
+  kind: checkpoint
+  zone: course
+  label: Left landing
+  position:
+  - 8.0
+  - 15.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: right_landing
+  kind: checkpoint
+  zone: course
+  label: Right landing
+  position:
+  - 8.0
+  - 23.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: finish_landing
+  kind: checkpoint
+  zone: course
+  label: Finish landing
+  position:
+  - 3.0
+  - 19.2
+  - 1.2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_0
+  kind: target
+  zone: course
+  label: LOAD
+  position:
+  - 26.2
+  - 15.6
+  - 2.8
+  target_id: 0
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_1
+  kind: target
+  zone: course
+  label: HEAT
+  position:
+  - 26.2
+  - 17.2
+  - 2.8
+  target_id: 1
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_2
+  kind: target
+  zone: course
+  label: POP
+  position:
+  - 26.2
+  - 18.8
+  - 2.8
+  target_id: 2
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_3
+  kind: target
+  zone: course
+  label: PopBridge
+  position:
+  - 21.2
+  - 17.2
+  - 2.8
+  target_id: 3
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_4
+  kind: target
+  zone: course
+  label: PopBridge
+  position:
+  - 16.2
+  - 19.2
+  - 2.8
+  target_id: 4
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_5
+  kind: target
+  zone: course
+  label: Moustache PopBridge
+  position:
+  - 11.2
+  - 15.2
+  - 2.8
+  target_id: 5
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_6
+  kind: target
+  zone: course
+  label: Bucket PopBridge
+  position:
+  - 11.2
+  - 23.2
+  - 2.8
+  target_id: 6
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+- id: target_7
+  kind: target
+  zone: course
+  label: Final PopBridge
+  position:
+  - 3.0
+  - 22
+  - 2.8
+  target_id: 7
+  source: Preserved040 mirrored local annotation; current production source for nodes;040
+    native readback for teaching receivers. No fresh041 live measurement.
+devices:
+- id: controller
+  class: fn_shoreline_island_popbridge_production
+  count: 1
+  source: Existing PopBridge controller/production source; native bindings in039 evidence,040
+    saved readback. Inspect before editing.
+  settings:
+    reuse_existing: true
+    course_contract:
+      version: 1
+      status: existing_mirrored_040_route_preserved
+      coordinate_provenance: Saved production source and feature040 final-native-readback;
+        no fresh editor measurement in041.
+      nodes:
+      - id: starter
+        index: 0
+        center:
+        - 29.0
+        - 17.2
+        - 1.2
+        size:
+        - 6
+        - 4
+        - 0.4
+        initially_built: true
+        route_stage: 0
+        milestone: -1
+        terminal: false
+      - id: first
+        index: 1
+        center:
+        - 23.0
+        - 17.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 1
+        milestone: 0
+        terminal: false
+      - id: reuse
+        index: 2
+        center:
+        - 18.0
+        - 17.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 2
+        milestone: 1
+        terminal: false
+      - id: fork
+        index: 3
+        center:
+        - 13.0
+        - 19.2
+        - 1.2
+        size:
+        - 4
+        - 8
+        - 0.4
+        initially_built: false
+        route_stage: 3
+        milestone: -1
+        terminal: false
+      - id: left
+        index: 4
+        center:
+        - 8.0
+        - 15.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 4
+        milestone: -1
+        terminal: false
+      - id: right
+        index: 5
+        center:
+        - 8.0
+        - 23.2
+        - 1.2
+        size:
+        - 4
+        - 4
+        - 0.4
+        initially_built: false
+        route_stage: 4
+        milestone: -1
+        terminal: false
+      - id: finish
+        index: 6
+        center:
+        - 3.0
+        - 19.2
+        - 1.2
+        size:
+        - 4
+        - 8
+        - 0.4
+        initially_built: true
+        route_stage: 5
+        milestone: -1
+        terminal: true
+      jump_edges:
+      - source: starter
+        destination: first
+        edge_gap_m: 1.0
+        kind: jump
+      - source: first
+        destination: reuse
+        edge_gap_m: 1.0
+        kind: jump
+      - source: reuse
+        destination: fork
+        edge_gap_m: 1.0
+        kind: jump
+      - source: fork
+        destination: left
+        edge_gap_m: 1.0
+        kind: jump
+      - source: fork
+        destination: right
+        edge_gap_m: 1.0
+        kind: jump
+      - source: left
+        destination: finish
+        edge_gap_m: 1.0
+        kind: jump
+      - source: right
+        destination: finish
+        edge_gap_m: 1.0
+        kind: jump
+      receivers:
+      - target_id: 0
+        name: LOAD
+        position:
+        - 26.2
+        - 15.6
+        - 2.8
+        from_landing: starter
+        creates: null
+        instruction: 0
+        face: toward +X
+      - target_id: 1
+        name: HEAT
+        position:
+        - 26.2
+        - 17.2
+        - 2.8
+        from_landing: starter
+        creates: null
+        instruction: 1
+        face: toward +X
+      - target_id: 2
+        name: POP
+        position:
+        - 26.2
+        - 18.8
+        - 2.8
+        from_landing: starter
+        creates: first
+        instruction: 2
+        face: toward +X
+      - target_id: 3
+        name: PopBridge
+        position:
+        - 21.2
+        - 17.2
+        - 2.8
+        from_landing: first
+        creates: reuse
+        instruction: 3
+        face: toward +X
+      - target_id: 4
+        name: PopBridge
+        position:
+        - 16.2
+        - 19.2
+        - 2.8
+        from_landing: reuse
+        creates: fork
+        instruction: 3
+        face: toward +X
+      - target_id: 5
+        name: Moustache PopBridge
+        position:
+        - 11.2
+        - 15.2
+        - 2.8
+        from_landing: fork
+        creates: left
+        instruction: 3
+        face: toward +X
+      - target_id: 6
+        name: Bucket PopBridge
+        position:
+        - 11.2
+        - 23.2
+        - 2.8
+        from_landing: fork
+        creates: right
+        instruction: 3
+        face: toward +X
+      - target_id: 7
+        name: Final PopBridge
+        position:
+        - 3.0
+        - 22
+        - 2.8
+        from_landing: finish
+        creates: basket_overflow
+        instruction: 3
+        face: toward -Y
+      branch_rule: Either left or right is equally valid; no preferred target; logical
+        course milestone identical
+      required_paths:
+      - - starter
+        - first
+        - reuse
+        - fork
+        - left
+        - finish
+      - - starter
+        - first
+        - reuse
+        - fork
+        - right
+        - finish
+      landing_rule: Grounded inset deck footprint plus consumed checkpoint/owner/generation
+        airborne token (>35cm normalized feet rise); next landing cannot be credited
+        by grounded AutoRun. Actual five jumps required per route.
+      recovery:
+        catch_bounds:
+        - 0
+        - 0
+        - 34
+        - 37
+        floor_z_range_m:
+        - 0
+        - 0.12
+        normalized_feet_z_range_cm:
+        - 2300
+        - 2480
+        maximum_latency_seconds: 1
+        preserve:
+        - skill
+        - built_platforms
+        - earned_badge
+        teleport: Last accepted deck center + tested standing offset/safe spawn offset
+        entry_ramp_exemption: No recovery before owner acquires starter; thereafter
+          floor catch anywhere in primary bay
+        failure: Retry keeping progress; Return remains available
+        boundary: Full primary bay covers 2m east and 1m west floor buffer; owner
+          outside bay releases as tested. Production fall/crouch boundary tests pending.
+      skill:
+        name: PopBridge
+        instructions:
+        - Load
+        - Heat
+        - Pop
+        wrong_order: Retain prefix; tiny puff; expected mechanism highlight
+        reuse: Play identical three instructions visibly; platform solid only after
+          completion
+        consumed: Already popped; no geometry duplicate
+      visual:
+        meshes:
+        - /VerseEngineAssets/Cube.Cube
+        - /VerseEngineAssets/Sphere.Sphere
+        stable_collision: Flat Cube decks at2520cm; decorative spheres remain below2520
+          and NoCollision; mechanisms independent from deck collision.
+        popcorn: Cream five-lobe sphere cluster with yellow center; targetable machine
+          below far edge; visible ribbon
+        jokes:
+        - tiny kernel failed bridge
+        - left popcorn moustache on Pix
+        - right overflowing bucket
+        - final basket overflow
+        essential_audio: false
+      milestone_mapping:
+        '0': First landing after teaching
+        '1': Reuse landing after first saved invocation
+        '2': Finish arrival after valid branch and final skill shot
+      reset: Generation/round/owner cancellation; replay clears attempt and teleports
+        starter; earned badge retained; round authority unchanged
+    scope: Presentation only; zero receiver/deck/ramp/hit-surface relocation;040 spacing,
+      full hide, finished free movement preserved
+    learning_content_file: learning-content.yaml
+    feedback_contract:
+      accepted_only: fixtures.shot results1/2; never raw gun event
+      onset_target_seconds: 0.15
+      halo_seconds: 0.5
+      halo_lifetime: Independent controller-owned per-receiver VFX; does not participate
+        in target deactivate/refresh
+      audio: Reuse target.hit_sound.Play(agent) from accept; bind one short nonlooping
+        pop per receiver; live asset/settings unresolved
+      outcome: Existing flourish only on fixtures.complete success; no extra reward
+        authority
+    presentation_adapter: Planned scoped PopBridge lesson arbitration and halo cancellation;
+      currently absent. Reuse existing feedback/ribbon/journal; no generic configurable
+      lesson engine claimed.
+    learning_content:
+      version: 1
+      lesson_card: Lesson line + recipe/status line + next action; no quiz or delay
+      recipe_before_commit: 'Draft: LOAD > HEAT > POP ({accepted prefix}/3).'
+      recipe_after_commit: PopBridge = LOAD > HEAT > POP.
+      rows:
+      - id: entry
+        trigger: Existing mission board at arrival; also starter card when owner acquired
+        lesson: A skill is a few steps you can use again.
+        action: 'Build PopBridge: shoot LOAD.'
+      - id: load
+        trigger: Accepted LOAD (fixture result1, prefix1)
+        lesson: LOAD puts in a kernel. One instruction, one action.
+        action: 'Next: shoot HEAT.'
+      - id: heat
+        trigger: Accepted HEAT (fixture result1, prefix2)
+        lesson: HEAT warms the kernel. Steps work in order.
+        action: 'Next: shoot POP.'
+      - id: pop_pending
+        trigger: Accepted teaching POP, before commit
+        lesson: POP releases the popcorn.
+        action: Running POP; wait for the platform.
+      - id: saved
+        trigger: Teaching POP successfully commits first platform
+        lesson: POP made popcorn. Three steps are saved as one skill!
+        action: Jump onto your popcorn.
+      - id: land_first
+        trigger: Actual accepted starter -> first landing
+        lesson: You used the popcorn you made. Now reuse the skill.
+        action: Shoot PopBridge to make the next one.
+      - id: reuse_first_pending
+        trigger: Accepted target3 invocation, before commit
+        lesson: One shot runs all three saved steps.
+        action: Running LOAD > HEAT > POP.
+      - id: reuse_first_done
+        trigger: Target3 commit
+        lesson: One shot ran all three saved steps.
+        action: Jump onto the new popcorn.
+      - id: land_reuse
+        trigger: Actual accepted first -> reuse landing
+        lesson: Same steps, another bridge. You checked the result by jumping.
+        action: Shoot PopBridge at the next machine.
+      - id: reuse_fork_pending
+        trigger: Accepted target4 invocation
+        lesson: Same skill, new machine.
+        action: Running LOAD > HEAT > POP.
+      - id: reuse_fork_done
+        trigger: Target4 commit
+        lesson: The same steps made another bridge.
+        action: Jump to the wide popcorn landing.
+      - id: land_fork
+        trigger: Actual accepted reuse -> fork landing
+        lesson: Pick either path. Both use the same skill.
+        action: Shoot the moustache or bucket machine.
+      - id: branch_pending
+        trigger: Accepted target5 or6 invocation
+        lesson: Your chosen machine runs the same three steps.
+        action: Running LOAD > HEAT > POP.
+      - id: branch_done
+        trigger: Target5 or6 commit
+        lesson: Same skill, a different popcorn surprise!
+        action: Jump onto your chosen popcorn.
+      - id: land_branch
+        trigger: Actual accepted fork -> left or right landing
+        lesson: Different path, same skill. Your instructions still work.
+        action: Jump onto the finish landing.
+      - id: land_finish
+        trigger: Actual accepted left/right -> finish landing
+        lesson: Use PopBridge once more. A skill can be reused many times.
+        action: Shoot the final machine.
+      - id: final_pending
+        trigger: Accepted target7, valid final landing and branch
+        lesson: The final machine runs the same saved steps.
+        action: Running LOAD > HEAT > POP.
+      - id: final_done
+        trigger: Target7 successful commit; existing reward
+        lesson: Mission complete! You saved three steps and reused them.
+        action: You can return to the hub. Use Return.
+      - id: wrong_order
+        trigger: Fixture result3, retain actual prefix
+        lesson: Steps work in order. Your finished steps are safe.
+        action: 'Next: {LOAD|HEAT|POP from current prefix}.'
+      - id: recovery
+        trigger: Successful existing recovery teleport, unfinished only
+        lesson: Missed the jump? Your steps and bridges are safe.
+        action: Try the jump again.
+      - id: recovery_fail
+        trigger: Existing recovery teleport failure
+        lesson: Your bridges are safe. Trying your last landing again.
+        action: Return is available.
+      - id: wrong_position
+        trigger: Current owner valid shot rejected for landing/progression
+        lesson: Use the machine from your last completed landing.
+        action: 'Next: {action from current committed state}.'
+      - id: consumed
+        trigger: Fixture result4 if reachable; no pulse
+        lesson: Already popped. Your bridge stays.
+        action: 'Next: {action from current committed state}.'
+      timing:
+        base: Persistent until next meaningful event; no enforced reading time or
+          queued captions
+        retry_seconds: 2.0
+        instruction_beats_seconds: 0.25
+        accepted_halo_seconds: 0.5
+        audio_max_seconds: 0.2
+        accepted_onset_target_seconds: 0.15
+      priority:
+      - Release/round/Return/departure hides all and invalidates epochs
+      - Journal open masks lesson card; closing renders current state without replaying
+        sound/halo
+      - Recovery or rejection action overrides for2s; newer actual accepted shot/commit/landing
+        replaces immediately
+      - Accepted event/commit/changed accepted landing updates base card
+      - Repeated monitor/report_state calls update journal only; never redraw base
+        card or extend override timer
+      cancel: Owner+attempt generation+round+lesson epoch; no speech/message queue;
+        stale timers never restore old stage card
+      recovery_saved_variant: 'After committed saved recipe only: Missed the jump?
+        Your skill and bridges are safe.'
+    resolved_native_configuration:
+      halo:
+        device_class: /CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C
+        count: 8
+        sprite_table_row: Shockwave
+        spriteShape:
+          smallIcon:
+            refPath: /CRD_VFX_Creator/Assets/Icons_64/T_UI_IconLibrary_Shockwave01_64.T_UI_IconLibrary_Shockwave01_64
+          largeIcon:
+            refPath: /CRD_VFX_Creator/Assets/Icons_64/T_UI_IconLibrary_Shockwave01_64.T_UI_IconLibrary_Shockwave01_64
+        resolved_texture: /Game/Effects/Fort_Effects/Textures/Outlander/T_InTheZone_GroundRing_01.T_InTheZone_GroundRing_01
+        native_values:
+          effectGenerationAmount: 1
+          spawnZoneShape: Point
+          spriteRotationAlignment: Planar
+          spriteSpeed: 0
+          effectGravity: 0
+          spriteDuration: 0.5
+          loop: Never
+          loopDuration: 0.5
+          startEffectsWhenEnabled: false
+          enabledDuringPhase: Gameplay Only
+          spriteSize: 0.65
+          bKeepSize: false
+          sizeOverTime: 0.9
+          useRandomColor: false
+          mainColor:
+            r: 0.18
+            g: 0.9
+            b: 0.65
+            a: 1
+          mainColorBrightness: 2
+          useSecondaryColor: true
+          secondaryColor:
+            r: 0.18
+            g: 0.9
+            b: 0.65
+            a: 0
+          secondaryColorBrightness: 0.1
+        lifecycle: Controller independent Begin/End0.5s; no target-deactivate ownership;
+          receiver ring orientation full native readback at binding; exact apparent
+          diameter/fade manual calibration.
+      audio:
+        device_class: /CRD_AudioPlayer/Device_CRD_AudioPlayer.Device_CRD_AudioPlayer_C
+        catalogue: /CRD_AudioPlayer/SetupAssets/PID_CP_Devices_CRD_AudioPlayer.PID_CP_Devices_CRD_AudioPlayer
+        count: 8
+        native_values:
+          audio:
+            refPath: /fn_shoreline_island/Audio/popcorn_hit_original.popcorn_hit_original
+          volume: 0.35
+          play On Hit: false
+          can Be Heard By: Instigator Only
+          play Location: Device
+          loopAudio: false
+          restart Audio When Activated: false
+          enable Spatialization: true
+          enable Volume Attenuation: true
+          attenuation Function: Linear
+          attenuation Min Distance: 600
+          attenuation Falloff Distance: 1200
+          fadeInDuration: 0
+          fadeOutDuration: 0.025
+          playDuringWaitingForPlayers: false
+          playDuringGameCountdown: false
+          playDuringGameplay: false
+          playDuringRoundEnd: false
+          playDuringGameEnd: false
+        source_duration_seconds: 0.175
+        playback_window_seconds: 0.2
+        stop_at_seconds: 0.175
+        lifecycle: Explicit existing accept Play(agent), same epoch-guarded Stop(agent)
+          at0.175s plus0.025s fade; original project-owned source naturally ends at0.175s.
+          Maximum0.2s window unchanged; no audition/revalidation/timing gameplay proof.
+          Native distances cm; no autoplay phase flags.
+        source_provenance:
+          source_wav: Resources/Audio/popcorn_hit_original.wav
+          generator: tools/create_popcorn_hit_audio.py
+          original_synthesized_audio: true
+          sha256: 0ffa24c83dea5dd2011e1d3082cd31a187395221c786b16c1ef8afb7ba05841b
+          format: 48000Hz mono16-bit PCM,8400 frames
+          native_evidence: evidence/original-pop-audio-provenance-imported.json
+          native_dependencies: []
+      hud:
+        actor: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5160103_1360785784
+        native_values:
+          placement: Custom
+          screenAnchor: Bottom Left
+          placementHorizontal: 80
+          placementVertical: -120
+          layer: 5
+          message Priority: Priority
+          allow Multiple in Queue: false
+          queue Message for Join in Progress Players: false
+          displayTimeOption: 0
+          override Default Text Style: true
+          size: 24
+          messageCharLimit: 500
+          backgroundOpacity: 80
+          textColor:
+            r: 1
+            g: 1
+            b: 1
+            a: 1
+          backgroundColor:
+            r: 0.015
+            g: 0.04
+            b: 0.08
+            a: 1
+        runtime: Explicit Show(player,message,DisplayTime0), Hide(player) on journal/release.
+          Lower-left intended composition via supported native offsets; fixed native
+          widget wrap width/apparent safe margins checked manually, no invented width
+          property. Preserve stage labels/action table.
+      journal:
+        existing_source: Content/fn_shoreline_island_academy_journal.verse panels[player]?canvas
+          and show_panel/close_panel
+        integration: Small is_panel_open(player)<transacts>:logic query of existing
+          panels map; PopBridge presentation monitor watches changes and masks/resumes
+          card. No progression/award authority changes.
+    completion_popup_copy_refinement:
+      owner_request: When hitting the last pop039_ring_7 add a popup to user, that
+        they completed the mission and can return to the hub
+      existing_event: Target7 successful fixtures.complete -> committed_lesson ->
+        advance_lesson final_done, owner HUD and final board
+      card_chars: 126
+      card: 'Mission complete! You saved three steps and reused them.
+
+        PopBridge = LOAD > HEAT > POP.
+
+        You can return to the hub. Use Return.'
+      unchanged: No raw-hit completion or extra trigger/device; existing commit/cancellation/reward/Return
+        guards preserved
+- id: targets
+  class: fn_shoreline_island_data_target
+  count: 8
+  source: Existing eight mission_id39 damage targets; exact040 positions preserved
+  settings:
+    reuse_existing: true
+    target_ids:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    no_surface_change: true
+    hit_sound: Existing editable hook, currently unverified binding; do not treat
+      default device{} as configured
+    hit_flash: Existing hook ends on deactivate; do not bind independent halo here
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing shared loadout; no duplicate granter
+  settings:
+    reuse_existing: true
+    safe_ammunition: Read existing granter settings; verify sustained retry
+    invulnerability: Existing SetVulnerability(false)
+- id: progress
+  class: fn_shoreline_island_nursery_progress
+  count: 1
+  source: Existing exact primary progress in evidence/planning-inspection.json
+  settings:
+    reuse_existing: true
+    milestones:
+    - 0
+    - 1
+    - 2
+    badge_description: Teach PopBridge and reuse it to cross the popcorn course.
+- id: journal
+  class: fn_shoreline_island_academy_journal
+  count: 1
+  source: Existing navigation_journal binding
+  settings:
+    module_id: 7
+    reuse_existing: true
+    agent_prerequisites: same Skills authority
+- id: controls
+  class: button_device
+  count: 3
+  source: Existing Replay and both Returns
+  settings:
+    reuse_existing: true
+    count_meaning: Replay plus entry Return plus finish Return
+    preserve: Existing permissions/ownership/teleport/reset
+- id: props
+  class: creative_prop
+  count: 1
+  source: Existing seven decks, ramp and stylized decor, preserved; count1 is inventory
+    group, no spawn
+  settings:
+    reuse_existing: true
+    deck_count: 7
+    no_transform_delta: true
+    no_mesh_collision_delta: true
+- id: learning_hud
+  class: hud_message_device
+  count: 1
+  source: Existing controller.feedback native binding from039; reuse, layout inspect
+    required
+  settings:
+    reuse_existing: true
+    queue: None; replace current owner card directly
+    display: Persistent until meaningful event/release; retry override2s; three short
+      lines maximum
+    placement_intent: Supported Custom BottomLeft offsets80,-120; font24, white text,
+      dark80% backdrop, layer5 Priority, permanent displayTimeOption0; native wrapping/manual
+      readability pending
+- id: hit_halos
+  class: vfx_creator_device
+  count: 8
+  source: Supported native Creator Shockwave sprite/table;8 separate refs to reconcile/place;
+    not current native inventory
+  settings:
+    reuse_before_create: true
+    per_receiver:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    on_seconds: 0.5
+    shape: Hollow glowing annulus expands once from0.65m to0.9m diameter, no solid
+      fill; receiver plane, centre at saved target position
+    collision: None
+    strobe: No flashing repetition
+    detach_lifetime: true
+    reset: Stop all on release/replay/return/round/departure; per-effect epoch prevents
+      old task ending a new pulse
+    asset: Shockwave row in /CRD_VFX_Creator/Assets/DT_SpriteTable; GroundRing texture
+    native_configuration: controller.settings.resolved_native_configuration.halo
+- id: hit_audio
+  class: audio_player_device
+  count: 8
+  source: Existing8 Audio Player actors repaired/saved to original project-owned imported
+    Popcorn WAV; evidence/validation-audio-repair-native-resolved.json and saved-reference-audit.json
+  settings:
+    reuse_before_create: true
+    duration_max_seconds: 0.2
+    looping: false
+    autoplay: false
+    instigator_only: true
+    attenuation_intent: Native cm values600 minimum/1200 falloff; supported schema,
+      manual mix calibration
+    volume_intent: Start normalized0.35; audible below gunfire with no sharp peaks;
+      verify cooked mix
+    concurrency: One per target accepted event, global min gap0.15s cosmetic only;
+      reject held repeats and stop all on cancellation
+    asset: /fn_shoreline_island/Audio/popcorn_hit_original.popcorn_hit_original; original0.175s
+      source, unchanged guarded0.2s playback window
+stages:
+- id: teach_load
+  zone: course
+  purpose: 'One instruction performs one action: LOAD'
+  requires: []
+  active_targets:
+  - target_0
+  - target_1
+  - target_2
+  completion: Load accepted; retain prefix on wrong-order shot
+  success_target: target_0
+- id: teach_heat
+  zone: course
+  purpose: 'Instructions have an order: HEAT after LOAD'
+  requires:
+  - teach_load
+  active_targets:
+  - target_1
+  - target_2
+  completion: Heat accepted; retain prefix on wrong-order shot
+  success_target: target_1
+- id: teach_pop
+  zone: course
+  purpose: POP completes three steps and saves PopBridge on commit
+  requires:
+  - teach_heat
+  active_targets:
+  - target_2
+  completion: PopBridge saved, first deck appears; actual first landing completes
+    milestone0
+  success_target: target_2
+- id: first_reuse
+  zone: course
+  purpose: One invocation runs the saved three steps; actual landing checks result
+  requires:
+  - teach_pop
+  active_targets:
+  - target_3
+  completion: Requires first landing; replay three instructions then reuse deck appears;
+    landing completes milestone1
+  success_target: target_3
+- id: course_routes
+  zone: course
+  purpose: Same skill at another machine; either path valid; actual jumping checks
+    built output
+  requires:
+  - first_reuse
+  active_targets:
+  - target_4
+  - target_5
+  - target_6
+  completion: Runtime guards require target4 from reuse then either target5 or target6
+    from fork. Both branch receivers are valid; actual grounded landings gate further
+    progression. The active set inventories receivers, not simultaneous permission
+    to advance. v1 success_target denotes the first receiver in this grouped stage
+    only; the embedded runtime graph remains authoritative for either branch and finish
+    arrival.
+  success_target: target_4
+- id: finale
+  zone: course
+  purpose: One skill made many bridges; existing reward only after finish commit
+  requires:
+  - course_routes
+  active_targets:
+  - target_7
+  completion: Requires valid branch and finish arrival; same routine overflows basket;
+    milestone2 and existing badge once
+  success_target: target_7
+assumptions:
+- id: a01_existing_route
+  status: resolved
+  detail: Preserve seven nodes, seven edges, eight receivers, two equal branches,
+    1m gaps,040160cm teaching centres and full hide/free finish. No new geometry choice.
+  evidence: Current production source;040 evidence/implementation.md and final-native-readback.json;
+    owner reports successful playtest2026-10-08.
+- id: a02_halo_asset
+  status: resolved
+  detail: Native Creator Shockwave ring sprite/table and one-shot Point/Planar/size/fade
+    properties confirmed;8 independent controller refs remain approved implementation
+    work, not placed/runtime evidence.
+  evidence: evidence/halo-vfx-native-schema.json, halo-sprite-candidates.json, halo-shockwave-texture-tags.json
+    and resolved-native-configuration.json; duration/apparent size visibility are
+    owner manual acceptance.
+- id: a03_pop_audio
+  status: resolved
+  detail: Existing8 players now reference original project-owned popcorn_hit_original
+    SoundWave (native duration0.175s), synthesized from retained48kmonoPCM WAV with
+    no sample/engine reuse. Same supported instigator/spatial/attenuation settings
+    and0.175s guarded Stop+0.025s fade. Previous internal Fortnite wave was manually
+    reported disallowed and is historical only. Native import/binding/save evidence
+    supports corrective implementation; owner revalidation/mix remain unperformed.
+  evidence: evidence/original-pop-audio-provenance-imported.json, validation-audio-repair-native-resolved.json,
+    validation-audio-repair-saved-reference-audit.json and resolved-native-configuration.json.
+    Asset loadability/type compatibility alone never establishes UEFN reference permission.
+- id: a04_hud_layout
+  status: resolved
+  detail: Existing feedback native actor Custom/BottomLeft offsets, layer5, Priority
+    replacement, permanent displayTimeOption0, font/color/char limit are supported.
+    Source journal panels map plus scoped query supports masking. Final wrapping/occlusion/readability
+    are manual acceptance, not absent API blockers.
+  evidence: evidence/hud-saved-actor.json, hud-native-schema.json, hud-native-current-settings.json;
+    existing journal source show_panel/close_panel/panels; resolved-native-configuration.json.

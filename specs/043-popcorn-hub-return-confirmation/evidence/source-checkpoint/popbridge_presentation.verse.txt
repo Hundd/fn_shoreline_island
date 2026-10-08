@@ -1,0 +1,235 @@
+    # Feature041 presentation only; fixture/progress decisions stay in controller.
+    var lesson_id:string = "entry"
+    var override_id:string = ""
+    var lesson_epoch:int = 0
+    var recipe_saved:logic = false
+    var journal_masked:logic = false
+    var last_rejection:float = -10.0
+    var last_pop_audio:float = -10.0
+    var halo_epochs:[int]int = map{}
+    var audio_epochs:[int]int = map{}
+
+    recipe_line():string =
+        if (recipe_saved?):
+            return "PopBridge = LOAD > HEAT > POP."
+        return "Draft: LOAD > HEAT > POP ({state.prefix}/3)."
+
+    card_for(event_id:string):string =
+        return "{lesson_line(event_id)}\n{recipe_line()}\n{action_line(event_id)}"
+
+    current_card():string =
+        if (override_id <> ""):
+            return card_for(override_id)
+        return card_for(lesson_id)
+
+    render_card(input_player:player):void =
+        if (valid(input_player, state.generation, observed_round)?):
+            set journal_masked = navigation_journal.is_panel_open(input_player)
+            if (journal_masked?):
+                feedback.Hide(input_player)
+            else:
+                # Replace this owner's previous card; never enqueue captions.
+                feedback.Hide(input_player)
+                feedback.Show(input_player, text(current_card()), ?DisplayTime := 0.0)
+
+    sync_card<override>(input_player:player):void =
+        arm_finish_portal(input_player)
+        poll_finish_portal(input_player)
+        panel_visible := navigation_journal.is_panel_open(input_player)
+        if (panel_visible <> journal_masked):
+            render_card(input_player)
+
+    advance_lesson(input_player:player, event_id:string):void =
+        set lesson_epoch += 1
+        set override_id = ""
+        set lesson_id = event_id
+        render_card(input_player)
+        report_state(input_player)
+
+    owner_acquired<override>(input_player:player):void =
+        set presentation_owner = option{input_player}
+        set recipe_saved = false
+        set last_rejection = -10.0
+        set last_pop_audio = -10.0
+        advance_lesson(input_player, "entry")
+
+    accepted_feedback<override>(machine:popbridge_machine, input_player:player):void =
+        id := machine.receiver.target_id
+        # Snapshot before teaching refresh/commit parks the disabled hit surface.
+        if (halo := course_hit_halos[id]):
+            var pose:transform = halo.GetTransform()
+            set pose.Translation = machine.target.hit_surface.GetTransform().Translation
+            if (halo.TeleportTo[pose]):
+                var epoch:int = 0
+                if (previous := halo_epochs[id]):
+                    set epoch = previous
+                set epoch += 1
+                if (set halo_epochs[id] = epoch) {}
+                halo.Begin()
+                spawn { finish_halo(input_player, id, state.generation, observed_round, epoch) }
+        var play_pop:logic = false
+        if (GetSimulationElapsedTime() - last_pop_audio >= 0.15):
+            set play_pop = true
+            set last_pop_audio = GetSimulationElapsedTime()
+        machine.target.accept(input_player, false, ?play_audio := play_pop)
+        if (play_pop?):
+            var epoch:int = 0
+            if (previous := audio_epochs[id]):
+                set epoch = previous
+            set epoch += 1
+            if (set audio_epochs[id] = epoch) {}
+            spawn { finish_audio(input_player, id, state.generation, observed_round, epoch) }
+        advance_lesson(input_player, accepted_event(id))
+
+    finish_halo(input_player:player, id:int, token:int, round:int, epoch:int)<suspends>:void =
+        Sleep(0.5)
+        if (valid(input_player, token, round)?, halo_epochs[id] = epoch, halo := course_hit_halos[id]):
+            halo.End()
+
+    finish_audio(input_player:player, id:int, token:int, round:int, epoch:int)<suspends>:void =
+        Sleep(0.175)
+        if (valid(input_player, token, round)?, audio_epochs[id] = epoch, target := course_targets[id]):
+            target.hit_sound.Stop(input_player)
+
+    accepted_event(id:int):string =
+        if (id = 0):
+            return "load"
+        if (id = 1):
+            return "heat"
+        if (id = 2):
+            return "pop_pending"
+        if (id = 3):
+            return "reuse_first_pending"
+        if (id = 4):
+            return "reuse_fork_pending"
+        if (id = 5 or id = 6):
+            return "branch_pending"
+        return "final_pending"
+
+    committed_lesson<override>(input_player:player, target_id:int):void =
+        var event_id:string = "final_done"
+        if (target_id = 2):
+            set recipe_saved = true
+            set event_id = "saved"
+        else if (target_id = 3):
+            set event_id = "reuse_first_done"
+        else if (target_id = 4):
+            set event_id = "reuse_fork_done"
+        else if (target_id = 5 or target_id = 6):
+            set event_id = "branch_done"
+        advance_lesson(input_player, event_id)
+        if (target_id = 7):
+            final_board.SetText(text(card_for("final_done")))
+            final_board.UpdateDisplay()
+
+    landed_lesson<override>(input_player:player, landing_id:int):void =
+        var event_id:string = "land_finish"
+        if (landing_id = 1):
+            set event_id = "land_first"
+        else if (landing_id = 2):
+            set event_id = "land_reuse"
+        else if (landing_id = 3):
+            set event_id = "land_fork"
+        else if (landing_id = 4 or landing_id = 5):
+            set event_id = "land_branch"
+        advance_lesson(input_player, event_id)
+
+    retry_lesson<override>(input_player:player, event_id:string):void =
+        # Repeated monitor recovery/rejected callbacks cannot extend a cue.
+        if (event_id = "wrong_position", GetSimulationElapsedTime() - last_rejection < 1.0):
+            return
+        if (override_id = event_id):
+            return
+        set last_rejection = GetSimulationElapsedTime()
+        set lesson_epoch += 1
+        set override_id = event_id
+        render_card(input_player)
+        spawn { finish_override(input_player, state.generation, observed_round, lesson_epoch) }
+
+    finish_override(input_player:player, token:int, round:int, epoch:int)<suspends>:void =
+        Sleep(2.0)
+        if (valid(input_player, token, round)?, lesson_epoch = epoch):
+            set override_id = ""
+            render_card(input_player)
+
+    stop_presentation_effects<override>():void =
+        close_finish_portal()
+        set lesson_epoch += 1
+        for (halo : course_hit_halos):
+            halo.End()
+        if (current := presentation_owner?):
+            for (target : course_targets):
+                target.hit_sound.Stop(current)
+            feedback.Hide(current)
+        set presentation_owner = false
+        set halo_epochs = map{}
+        set audio_epochs = map{}
+        set lesson_id = "entry"
+        set override_id = ""
+        set recipe_saved = false
+        set journal_masked = false
+
+    var presentation_owner:?player = false
+
+    # Feature042 exit gate: reward hook is synchronous; monitor only arms fresh entry.
+    var portal_player:?player = false
+    var portal_token:int = -1
+    var portal_round:int = -1
+    var portal_pending:logic = false
+    var portal_ready:logic = false
+
+    close_finish_portal():void =
+        set portal_ready = false
+        set portal_pending = false
+        set portal_player = false
+        set portal_token = -1
+        set portal_round = -1
+        finish_hub_portal.Disable()
+
+    completion_ready<override>(input_player:player):void =
+        if (current := owner?, current = input_player, state.finished?, valid(input_player, state.generation, observed_round)?):
+            close_finish_portal()
+            set portal_player = option{input_player}
+            set portal_token = state.generation
+            set portal_round = observed_round
+            set portal_pending = true
+            arm_finish_portal(input_player)
+
+    arm_finish_portal(input_player:player):void =
+        if (portal_pending?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, character := input_player.GetFortCharacter[], character.IsActive[]):
+            position := character.GetTransform().Translation
+            centre := finish_hub_portal.GetTransform().Translation
+            dx := position.X - centre.X
+            dy := position.Y - centre.Y
+            if (dx * dx + dy * dy > 10000.0):
+                set portal_pending = false
+                set portal_ready = true
+                finish_hub_portal.Enable()
+
+    entered_finish_portal(input_agent:agent):void =
+        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, inside_finish_portal(input_player)?):
+            close_finish_portal()
+            return_to_hub(input_player)
+
+    # Destinationless native rifts cannot be trusted to signal a raw overlap.
+    # The owner's existing 0.1s monitor samples the measured capsule, not the 1m arm margin.
+    inside_finish_portal(input_player:player)<transacts>:logic =
+        if (character := input_player.GetFortCharacter[], character.IsActive[]):
+            position := character.GetTransform().Translation
+            centre := finish_hub_portal.GetTransform().Translation
+            dx := position.X - centre.X
+            dy := position.Y - centre.Y
+            var dz:float = position.Z - centre.Z
+            if (dz < 0.0):
+                set dz = -dz
+            # Effective capsule r44/h61.6: nearest point on the +/-17.6cm axis segment.
+            var cap_distance:float = 0.0
+            if (dz > 17.6):
+                set cap_distance = dz - 17.6
+            if (dx * dx + dy * dy + cap_distance * cap_distance <= 1936.0):
+                return true
+        return false
+
+    poll_finish_portal(input_player:player):void =
+        if (portal_ready?, inside_finish_portal(input_player)?):
+            entered_finish_portal(input_player)

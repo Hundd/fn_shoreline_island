@@ -1,0 +1,160 @@
+--- Content/fn_shoreline_island_popbridge_controller.verse before
++++ Content/fn_shoreline_island_popbridge_controller.verse
+@@ -294,38 +294,40 @@
+                         release()
+                     else:
+                         sync_card(current)
+-                        # Grounded edge contact is safe to credit after a proven
+-                        # jump; firing still requires the separately inset area.
+-                        landed := grounded_landing(current, 0.0)
+-                        if (character.IsOnGround[]):
+-                            before := state.checkpoint
+-                            if (landed >= 0, landed = before or (jump_anchor = before and jump_generation = state.generation)):
+-                                accepted := fixtures.land(state, edges, landed, true, state.generation)
+-                                if (accepted?, before <> landed):
+-                                    debug("LAND node={landed} token={state.generation} jump_from={jump_anchor}")
+-                                    landed_lesson(current, landed)
+-                                if (accepted?, before <> landed, node := fixtures.find_node(nodes, landed)?, node.milestone >= 0):
+-                                    progress.complete_challenge(current, node.milestone)
+-                                if (accepted?):
+-                                    report_state(current)
+-                            # Every grounded observation consumes departure proof,
+-                            # including jumping in place and uncredited far decks.
+-                            clear_jump()
+-                            set was_grounded = true
+-                            set last_grounded_landing = landed
+-                        else:
+-                            if (was_grounded?):
+-                                set airborne_eligible = false
+-                                if (last_grounded_landing = state.checkpoint):
+-                                    set airborne_eligible = true
+-                                set was_grounded = false
+-                            if (airborne_eligible?, node := fixtures.find_node(nodes, state.checkpoint)?, position.Z > node.center.Z + landing_height_tolerance):
+-                                if (jump_anchor <> state.checkpoint or jump_generation <> state.generation):
+-                                    debug("JUMP from={state.checkpoint} feet_z={position.Z} token={state.generation}")
+-                                set jump_anchor = state.checkpoint
+-                                set jump_generation = state.generation
+-                        if (not state.finished?, landed < 0, state.prefix > 0, inside(position, catch_min, catch_max)?, GetSimulationElapsedTime() - last_recovery >= 0.2):
+-                            recover(current)
++                        # A presentation exit can release/teleport this owner during sync.
++                        if (valid(current, state.generation, observed_round)?):
++                            # Grounded edge contact is safe to credit after a proven
++                            # jump; firing still requires the separately inset area.
++                            landed := grounded_landing(current, 0.0)
++                            if (character.IsOnGround[]):
++                                before := state.checkpoint
++                                if (landed >= 0, landed = before or (jump_anchor = before and jump_generation = state.generation)):
++                                    accepted := fixtures.land(state, edges, landed, true, state.generation)
++                                    if (accepted?, before <> landed):
++                                        debug("LAND node={landed} token={state.generation} jump_from={jump_anchor}")
++                                        landed_lesson(current, landed)
++                                    if (accepted?, before <> landed, node := fixtures.find_node(nodes, landed)?, node.milestone >= 0):
++                                        progress.complete_challenge(current, node.milestone)
++                                    if (accepted?):
++                                        report_state(current)
++                                # Every grounded observation consumes departure proof,
++                                # including jumping in place and uncredited far decks.
++                                clear_jump()
++                                set was_grounded = true
++                                set last_grounded_landing = landed
++                            else:
++                                if (was_grounded?):
++                                    set airborne_eligible = false
++                                    if (last_grounded_landing = state.checkpoint):
++                                        set airborne_eligible = true
++                                    set was_grounded = false
++                                if (airborne_eligible?, node := fixtures.find_node(nodes, state.checkpoint)?, position.Z > node.center.Z + landing_height_tolerance):
++                                    if (jump_anchor <> state.checkpoint or jump_generation <> state.generation):
++                                        debug("JUMP from={state.checkpoint} feet_z={position.Z} token={state.generation}")
++                                    set jump_anchor = state.checkpoint
++                                    set jump_generation = state.generation
++                            if (not state.finished?, landed < 0, state.prefix > 0, inside(position, catch_min, catch_max)?, GetSimulationElapsedTime() - last_recovery >= 0.2):
++                                recover(current)
+                 else:
+                     release()
+ 
+--- Content/fn_shoreline_island_popbridge_production.verse before
++++ Content/fn_shoreline_island_popbridge_production.verse
+@@ -302,6 +302,7 @@
+ 
+     sync_card<override>(input_player:player):void =
+         arm_finish_portal(input_player)
++        poll_finish_portal(input_player)
+         panel_visible := navigation_journal.is_panel_open(input_player)
+         if (panel_visible <> journal_masked):
+             render_card(input_player)
+@@ -474,9 +475,32 @@
+                 finish_hub_portal.Enable()
+ 
+     entered_finish_portal(input_agent:agent):void =
+-        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?):
++        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, inside_finish_portal(input_player)?):
+             close_finish_portal()
+             return_to_hub(input_player)
++
++    # Destinationless native rifts cannot be trusted to signal a raw overlap.
++    # The owner's existing 0.1s monitor samples the measured capsule, not the 1m arm margin.
++    inside_finish_portal(input_player:player)<transacts>:logic =
++        if (character := input_player.GetFortCharacter[], character.IsActive[]):
++            position := character.GetTransform().Translation
++            centre := finish_hub_portal.GetTransform().Translation
++            dx := position.X - centre.X
++            dy := position.Y - centre.Y
++            var dz:float = position.Z - centre.Z
++            if (dz < 0.0):
++                set dz = -dz
++            # Effective capsule r44/h61.6: nearest point on the +/-17.6cm axis segment.
++            var cap_distance:float = 0.0
++            if (dz > 17.6):
++                set cap_distance = dz - 17.6
++            if (dx * dx + dy * dy + cap_distance * cap_distance <= 1936.0):
++                return true
++        return false
++
++    poll_finish_portal(input_player:player):void =
++        if (portal_ready?, inside_finish_portal(input_player)?):
++            entered_finish_portal(input_player)
+ 
+     lesson_line(event_id:string):string =
+         if (event_id = "entry"):
+--- tools/popbridge_presentation.verse.txt before
++++ tools/popbridge_presentation.verse.txt
+@@ -34,6 +34,7 @@
+ 
+     sync_card<override>(input_player:player):void =
+         arm_finish_portal(input_player)
++        poll_finish_portal(input_player)
+         panel_visible := navigation_journal.is_panel_open(input_player)
+         if (panel_visible <> journal_masked):
+             render_card(input_player)
+@@ -206,6 +207,29 @@
+                 finish_hub_portal.Enable()
+ 
+     entered_finish_portal(input_agent:agent):void =
+-        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?):
++        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, inside_finish_portal(input_player)?):
+             close_finish_portal()
+             return_to_hub(input_player)
++
++    # Destinationless native rifts cannot be trusted to signal a raw overlap.
++    # The owner's existing 0.1s monitor samples the measured capsule, not the 1m arm margin.
++    inside_finish_portal(input_player:player)<transacts>:logic =
++        if (character := input_player.GetFortCharacter[], character.IsActive[]):
++            position := character.GetTransform().Translation
++            centre := finish_hub_portal.GetTransform().Translation
++            dx := position.X - centre.X
++            dy := position.Y - centre.Y
++            var dz:float = position.Z - centre.Z
++            if (dz < 0.0):
++                set dz = -dz
++            # Effective capsule r44/h61.6: nearest point on the +/-17.6cm axis segment.
++            var cap_distance:float = 0.0
++            if (dz > 17.6):
++                set cap_distance = dz - 17.6
++            if (dx * dx + dy * dy + cap_distance * cap_distance <= 1936.0):
++                return true
++        return false
++
++    poll_finish_portal(input_player:player):void =
++        if (portal_ready?, inside_finish_portal(input_player)?):
++            entered_finish_portal(input_player)

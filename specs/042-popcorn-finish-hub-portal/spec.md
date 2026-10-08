@@ -1,0 +1,21 @@
+# Feature042 — completed Popcorn walk-in Hub portal
+
+Status: proposed concrete design for human review. Owner asks for a teleporter the player enters after finishing the mission, returning to Hub. This is a new visible exit/device and gated behavior;042 has no approval record. Prior041 approvals remain untouched. Testing remains owner manual.
+
+- R01: Add exactly one native walk-in visible Hub rift on the existing finish deck, at proposedworld(-4900,-17320,2600)cm,yaw0,scale1. Keep all existing decks, targets, landings, gap/collision, both Return buttons and Replay. No new label actor; reuse completion HUD/final board guidance.
+- R02: Portal starts disabled and opens only after actual final target7 completion for currentowner/generation/round, after existing reward completion call returns. A rejected/early/cancelled/stale hit, landing alone, previous earned badge or Replay never unlocks it.
+- R03: EnterEvent validates owned finished state and captured gate token/round. Close/disable synchronously before existing return_to_hub(agent): release cleanup then same hub_destination.Teleport(agent). No native automatic group destination or event binding bypasses cleanup; foreign/stale entry stays inert.
+- R04: After reward, enable only once owner is more than 1 m horizontally from portal centre; while inside this margin remain disabled, then existing monitor arms after owner steps clear. Replay, either Return, round reset, departure/removal and release close/invalidate portal. Badge/Core/journal state follows existing once-per-round authority; no new award, no stale lesson/sound/halo after return, no automatic teleport when portal enables near a stationary player.
+- R05: Completion HUD/final_board retain lesson and recipe, action becomes `Walk into the glowing HUB portal, or use Return.` Portal is voluntary: free finish jumping and existing Replay/Return remain. No quiz/timer/new learning burden.
+- R06: New entrance lies within measured deck bounds; approach is a short flat2.4m walk from finish centre, with native default overlap height intersecting standing body. No invisible wall, compulsory jump or obstruction of final ring/board/button. Existing Hub arrival transform/settings stay unchanged.
+- R07: Serialized implementation after explicit042 design approval: checkpoint, configure/gate/bind, compile source and save/read back native settings/full transform/identity/count. No automatic tests, QA, Project Validate, cook, push or session; owner manual evidence required for gameplay acceptance. Stop any active game at handoff and leave editor open.
+
+Acceptance (manual, unrun):
+
+- A01 [R01,R02,R06]: Given a fresh/replayed unfinished attempt, when the player reaches the finish deck or shoots target7 early, then portal remains disabled and both Return controls still work. After valid branch/finish arrival and successful final commit/reward, the visible portal becomes available on spare deck space.
+- A02 [R02,R03,R04]: Given an eligible completed owner, when they walk into the rift, then gate closes, attempt/journal/presentation cleanup executes once, same Hub destination is used and earned progress remains. A repeated queued enter, foreign agent or old gate token does not teleport or reward.
+- A03 [R04,R05]: Given a completed attempt, when player stays/jumps freely or chooses Replay/Return instead, then no forced teleport occurs; Replay resets gate/attempt and retained badge stays once. Newround resets through existing authority.
+- A04 [R01,R05,R06]: Given muted audio and each branch, when final completion occurs, then clear completion guidance identifies walking into the glowing Hub portal plus Return fallback; stepping in needs no jump and does not obscure final target/board/button or move existing actors.
+- A05 [R04,R07]: Given entry/cosmetic work in flight, when Return/Replay/round/departure removes ownership, then portal cannot leak an old return and existing audio/HUD/halo cleanup remains. Source build/native readback/save evidence is separate from manual gameplay/validation evidence.
+
+- A06 [R02,R04]: Given the owner stands within 1 m of the portal while successfully completing target7, when reward returns, then no teleport occurs and entrance stays disabled until they step outside the margin. A subsequent fresh walk-in returns them to Hub.

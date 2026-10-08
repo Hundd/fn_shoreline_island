@@ -1,0 +1,267 @@
+--- tools/build_popbridge_production.py before
++++ tools/build_popbridge_production.py
+@@ -17,8 +17,9 @@
+ arrays = [('course_decks','creative_prop',7),('course_targets','fn_shoreline_island_data_target',0),('course_mechanisms','creative_prop',24),('course_instructions','vfx_creator_device',24),('course_puffs','vfx_creator_device',8),('course_flourishes','vfx_creator_device',8),('course_hit_halos','vfx_creator_device',8),('course_decor','creative_prop',53),('course_returns','button_device',2)]
+ for name,kind,count in arrays:
+     lines += ['    @editable', f'    {name}:[]{kind} = array{{' + ', '.join(kind+'{}' for _ in range(count)) + '}']
++lines += ['    @editable', '    finish_hub_portal:teleporter_device = teleporter_device{}']
+ lines += ['    @editable', '    mission_board:billboard_device = billboard_device{}', '    @editable', '    final_board:billboard_device = billboard_device{}']
+-lines += ['    @editable', '    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}', '    @editable', '    pix:creative_prop = creative_prop{}', '    var pix_home:transform = transform{}', '    var decor_homes:[]transform = array{}', '    var claimed_station:logic = false', '', '    OnBegin<override>()<suspends>:void =', '        Hide()', '        set return_buttons = course_returns', '        if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_hit_halos.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):', '            Print("PopBridge production support count invalid; inactive")', '            return', '        reference_failure := supports_failure()', '        if (reference_failure <> 0):', '            Print("PopBridge production reference invalid code={reference_failure}; inactive")', '            return', '        set pix_home = pix.GetTransform()', '        for (prop : course_decor):', '            set decor_homes += array{prop.GetTransform()}', '        set landings = array{}', '        set machines = array{}']
++lines += ['    @editable', '    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}', '    @editable', '    pix:creative_prop = creative_prop{}', '    var pix_home:transform = transform{}', '    var decor_homes:[]transform = array{}', '    var claimed_station:logic = false', '', '    OnBegin<override>()<suspends>:void =', '        Hide()', '        close_finish_portal()', '        finish_hub_portal.EnterEvent.Subscribe(entered_finish_portal)', '        set return_buttons = course_returns', '        if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_hit_halos.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):', '            Print("PopBridge production support count invalid; inactive")', '            return', '        reference_failure := supports_failure()', '        if (reference_failure <> 0):', '            Print("PopBridge production reference invalid code={reference_failure}; inactive")', '            return', '        set pix_home = pix.GetTransform()', '        for (prop : course_decor):', '            set decor_homes += array{prop.GetTransform()}', '        set landings = array{}', '        set machines = array{}']
+ nodes = contract['nodes']
+ ids = {n['id']:n['index'] for n in nodes}
+ for n in nodes:
+@@ -80,6 +81,8 @@
+             for (other_index -> other : course_targets):
+                 if (index <> other_index, target.hit_sound.GetTransform().Translation = other.hit_sound.GetTransform().Translation):
+                     return 9400 + index
++        if (finish_hub_portal.GetTransform().Translation = vector3{} or finish_hub_portal.GetTransform().Translation = hub_destination.GetTransform().Translation):
++            return 9500
+         return 0
+ 
+     claim_owner<override>(input_player:player):logic =
+@@ -92,6 +95,7 @@
+         return true
+ 
+     release_owner<override>(input_player:player):void =
++        close_finish_portal()
+         player_state := progress.ensure_player(input_player)
+         if (claimed_station?, player_state.station_id = 0):
+             set player_state.station_id = -1
+@@ -147,6 +151,7 @@
+                     prop.Show()
+ 
+     reset_presentation<override>():void =
++        close_finish_portal()
+         if (pix.TeleportTo[pix_home]) {}
+         for (index -> prop : course_decor):
+             if (home := decor_homes[index]):
+--- tools/popbridge_presentation.verse.txt before
++++ tools/popbridge_presentation.verse.txt
+@@ -33,6 +33,7 @@
+                 feedback.Show(input_player, text(current_card()), ?DisplayTime := 0.0)
+ 
+     sync_card<override>(input_player:player):void =
++        arm_finish_portal(input_player)
+         panel_visible := navigation_journal.is_panel_open(input_player)
+         if (panel_visible <> journal_masked):
+             render_card(input_player)
+@@ -151,6 +152,7 @@
+             render_card(input_player)
+ 
+     stop_presentation_effects<override>():void =
++        close_finish_portal()
+         set lesson_epoch += 1
+         for (halo : course_hit_halos):
+             halo.End()
+@@ -167,3 +169,43 @@
+         set journal_masked = false
+ 
+     var presentation_owner:?player = false
++
++    # Feature042 exit gate: reward hook is synchronous; monitor only arms fresh entry.
++    var portal_player:?player = false
++    var portal_token:int = -1
++    var portal_round:int = -1
++    var portal_pending:logic = false
++    var portal_ready:logic = false
++
++    close_finish_portal():void =
++        set portal_ready = false
++        set portal_pending = false
++        set portal_player = false
++        set portal_token = -1
++        set portal_round = -1
++        finish_hub_portal.Disable()
++
++    completion_ready<override>(input_player:player):void =
++        if (current := owner?, current = input_player, state.finished?, valid(input_player, state.generation, observed_round)?):
++            close_finish_portal()
++            set portal_player = option{input_player}
++            set portal_token = state.generation
++            set portal_round = observed_round
++            set portal_pending = true
++            arm_finish_portal(input_player)
++
++    arm_finish_portal(input_player:player):void =
++        if (portal_pending?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, character := input_player.GetFortCharacter[], character.IsActive[]):
++            position := character.GetTransform().Translation
++            centre := finish_hub_portal.GetTransform().Translation
++            dx := position.X - centre.X
++            dy := position.Y - centre.Y
++            if (dx * dx + dy * dy > 10000.0):
++                set portal_pending = false
++                set portal_ready = true
++                finish_hub_portal.Enable()
++
++    entered_finish_portal(input_agent:agent):void =
++        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?):
++            close_finish_portal()
++            return_to_hub(input_player)
+--- Content/fn_shoreline_island_popbridge_controller.verse before
++++ Content/fn_shoreline_island_popbridge_controller.verse
+@@ -241,6 +241,8 @@
+                     cancel_if_current(token)
+                     return
+                 progress.complete_challenge(input_player, 2)
++                if (machine.receiver.target_id = 7, valid(input_player, token, round)?, state.finished?):
++                    completion_ready(input_player)
+             Sleep(0.5)
+             if (valid(input_player, token, round)?):
+                 machine.flourish.End()
+@@ -426,6 +428,7 @@
+             show(input_player, "Back on your last popcorn. Your bridges are safe!")
+         else if (event_id = "recovery_fail"):
+             show(input_player, "Return is available. Trying your last popcorn again.")
++    completion_ready(input_player:player):void = {}
+     sync_card(input_player:player):void = {}
+     stop_presentation_effects():void = {}
+ 
+--- Content/fn_shoreline_island_popbridge_production.verse before
++++ Content/fn_shoreline_island_popbridge_production.verse
+@@ -24,6 +24,8 @@
+     @editable
+     course_returns:[]button_device = array{button_device{}, button_device{}}
+     @editable
++    finish_hub_portal:teleporter_device = teleporter_device{}
++    @editable
+     mission_board:billboard_device = billboard_device{}
+     @editable
+     final_board:billboard_device = billboard_device{}
+@@ -37,6 +39,8 @@
+ 
+     OnBegin<override>()<suspends>:void =
+         Hide()
++        close_finish_portal()
++        finish_hub_portal.EnterEvent.Subscribe(entered_finish_portal)
+         set return_buttons = course_returns
+         if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_hit_halos.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):
+             Print("PopBridge production support count invalid; inactive")
+@@ -163,6 +167,8 @@
+             for (other_index -> other : course_targets):
+                 if (index <> other_index, target.hit_sound.GetTransform().Translation = other.hit_sound.GetTransform().Translation):
+                     return 9400 + index
++        if (finish_hub_portal.GetTransform().Translation = vector3{} or finish_hub_portal.GetTransform().Translation = hub_destination.GetTransform().Translation):
++            return 9500
+         return 0
+ 
+     claim_owner<override>(input_player:player):logic =
+@@ -175,6 +181,7 @@
+         return true
+ 
+     release_owner<override>(input_player:player):void =
++        close_finish_portal()
+         player_state := progress.ensure_player(input_player)
+         if (claimed_station?, player_state.station_id = 0):
+             set player_state.station_id = -1
+@@ -230,6 +237,7 @@
+                     prop.Show()
+ 
+     reset_presentation<override>():void =
++        close_finish_portal()
+         if (pix.TeleportTo[pix_home]) {}
+         for (index -> prop : course_decor):
+             if (home := decor_homes[index]):
+@@ -293,6 +301,7 @@
+                 feedback.Show(input_player, text(current_card()), ?DisplayTime := 0.0)
+ 
+     sync_card<override>(input_player:player):void =
++        arm_finish_portal(input_player)
+         panel_visible := navigation_journal.is_panel_open(input_player)
+         if (panel_visible <> journal_masked):
+             render_card(input_player)
+@@ -411,6 +420,7 @@
+             render_card(input_player)
+ 
+     stop_presentation_effects<override>():void =
++        close_finish_portal()
+         set lesson_epoch += 1
+         for (halo : course_hit_halos):
+             halo.End()
+@@ -427,6 +437,46 @@
+         set journal_masked = false
+ 
+     var presentation_owner:?player = false
++
++    # Feature042 exit gate: reward hook is synchronous; monitor only arms fresh entry.
++    var portal_player:?player = false
++    var portal_token:int = -1
++    var portal_round:int = -1
++    var portal_pending:logic = false
++    var portal_ready:logic = false
++
++    close_finish_portal():void =
++        set portal_ready = false
++        set portal_pending = false
++        set portal_player = false
++        set portal_token = -1
++        set portal_round = -1
++        finish_hub_portal.Disable()
++
++    completion_ready<override>(input_player:player):void =
++        if (current := owner?, current = input_player, state.finished?, valid(input_player, state.generation, observed_round)?):
++            close_finish_portal()
++            set portal_player = option{input_player}
++            set portal_token = state.generation
++            set portal_round = observed_round
++            set portal_pending = true
++            arm_finish_portal(input_player)
++
++    arm_finish_portal(input_player:player):void =
++        if (portal_pending?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, character := input_player.GetFortCharacter[], character.IsActive[]):
++            position := character.GetTransform().Translation
++            centre := finish_hub_portal.GetTransform().Translation
++            dx := position.X - centre.X
++            dy := position.Y - centre.Y
++            if (dx * dx + dy * dy > 10000.0):
++                set portal_pending = false
++                set portal_ready = true
++                finish_hub_portal.Enable()
++
++    entered_finish_portal(input_agent:agent):void =
++        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?):
++            close_finish_portal()
++            return_to_hub(input_player)
+ 
+     lesson_line(event_id:string):string =
+         if (event_id = "entry"):
+@@ -515,7 +565,7 @@
+         if (event_id = "final_pending"):
+             return "Running LOAD > HEAT > POP."
+         if (event_id = "final_done"):
+-            return "You can return to the hub. Use Return."
++            return "Walk into the glowing HUB portal, or use Return."
+         if (event_id = "wrong_order"):
+             return "Next: {instruction_name(state.prefix)}."
+         if (event_id = "recovery"):
+--- specs/041-popcorn-feedback-and-learning/learning-content.yaml before
++++ specs/041-popcorn-feedback-and-learning/learning-content.yaml
+@@ -74,7 +74,7 @@
+ - id: final_done
+   trigger: Target7 successful commit; existing reward
+   lesson: Mission complete! You saved three steps and reused them.
+-  action: You can return to the hub. Use Return.
++  action: Walk into the glowing HUB portal, or use Return.
+ - id: wrong_order
+   trigger: Fixture result3, retain actual prefix
+   lesson: Steps work in order. Your finished steps are safe.
+--- specs/041-popcorn-feedback-and-learning/map.yaml before
++++ specs/041-popcorn-feedback-and-learning/map.yaml
+@@ -647,7 +647,7 @@
+       - id: final_done
+         trigger: Target7 successful commit; existing reward
+         lesson: Mission complete! You saved three steps and reused them.
+-        action: You can return to the hub. Use Return.
++        action: Walk into the glowing HUB portal, or use Return.
+       - id: wrong_order
+         trigger: Fixture result3, retain actual prefix
+         lesson: Steps work in order. Your finished steps are safe.
+@@ -817,7 +817,7 @@
+ 
+         PopBridge = LOAD > HEAT > POP.
+ 
+-        You can return to the hub. Use Return.'
++        Walk into the glowing HUB portal, or use Return.'
+       unchanged: No raw-hit completion or extra trigger/device; existing commit/cancellation/reward/Return
+         guards preserved
+ - id: targets

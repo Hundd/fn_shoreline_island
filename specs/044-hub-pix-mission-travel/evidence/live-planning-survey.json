@@ -1,0 +1,1280 @@
+{
+  "initial": {
+    "points": [
+      {
+        "id": "pix_proposed",
+        "x": -300,
+        "y": 2700,
+        "ground_distance_from_z3400": 988,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "approach",
+        "x": -750,
+        "y": 2700,
+        "ground_distance_from_z3400": 998,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "prompt",
+        "x": 2600,
+        "y": 200,
+        "ground_distance_from_z3400": 998,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "pattern",
+        "x": -650,
+        "y": 3400,
+        "ground_distance_from_z3400": 350,
+        "headroom_distance_from_z2420": 530
+      },
+      {
+        "id": "classifier",
+        "x": -1700,
+        "y": 900,
+        "ground_distance_from_z3400": 1000,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "confidence",
+        "x": -1700,
+        "y": -900,
+        "ground_distance_from_z3400": 1000,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "error",
+        "x": -2000,
+        "y": -4300,
+        "ground_distance_from_z3400": 723.657958984375,
+        "headroom_distance_from_z2420": 246.01698303222656
+      },
+      {
+        "id": "tools",
+        "x": -2000,
+        "y": -8000,
+        "ground_distance_from_z3400": 1000,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "popcorn",
+        "x": -1700,
+        "y": -17100,
+        "ground_distance_from_z3400": 988,
+        "headroom_distance_from_z2420": null
+      },
+      {
+        "id": "agent",
+        "x": -2200,
+        "y": -13500,
+        "ground_distance_from_z3400": 350,
+        "headroom_distance_from_z2420": 430.0000305175781
+      }
+    ],
+    "pix": [
+      {
+        "label": "pix_hub_helper_figure",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5740403_1367639481",
+        "transform": {
+          "location": {
+            "x": 200,
+            "y": 1900,
+            "z": 2400
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "bounds": {
+          "min": {
+            "x": 72,
+            "y": 1772,
+            "z": 2272
+          },
+          "max": {
+            "x": 328,
+            "y": 2028,
+            "z": 2665
+          },
+          "isValid": true
+        }
+      }
+    ],
+    "hub_overlap": [
+      {
+        "label": "cargo_circuit_active_vfx_predict_b",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1383416698",
+        "bounds": {
+          "min": {
+            "x": -2100,
+            "y": 2500,
+            "z": 580
+          },
+          "max": {
+            "x": 1900,
+            "y": 6500,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "cargo_circuit_shared_hit_flash",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1143968691",
+        "bounds": {
+          "min": {
+            "x": -1900,
+            "y": 2600,
+            "z": 580
+          },
+          "max": {
+            "x": 2100,
+            "y": 6600,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "cargo_circuit_shared_complete_burst",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1144971692",
+        "bounds": {
+          "min": {
+            "x": -1900,
+            "y": 2600,
+            "z": 580
+          },
+          "max": {
+            "x": 2100,
+            "y": 6600,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "cargo_circuit_shared_wrong_sparks",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1145973693",
+        "bounds": {
+          "min": {
+            "x": -1900,
+            "y": 2600,
+            "z": 580
+          },
+          "max": {
+            "x": 2100,
+            "y": 6600,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "cargo_circuit_active_vfx_predict_a",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1103994690",
+        "bounds": {
+          "min": {
+            "x": -2400,
+            "y": 2500,
+            "z": 580
+          },
+          "max": {
+            "x": 1600,
+            "y": 6500,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "field_note_human_button",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B5880403_1997375006",
+        "bounds": {
+          "min": {
+            "x": -828,
+            "y": 2572,
+            "z": 2372
+          },
+          "max": {
+            "x": -572,
+            "y": 2828,
+            "z": 2628
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CreativeCoreDevices/Device_Button_V2.Device_Button_V2_C"
+        }
+      },
+      {
+        "label": "field_note_human_board",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5880403_2014686007",
+        "bounds": {
+          "min": {
+            "x": -800.7102188389028,
+            "y": 2467.552666473389,
+            "z": 2649.984686279297
+          },
+          "max": {
+            "x": -764.1453826904296,
+            "y": 2932.4472343444822,
+            "z": 2859.958529663086
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CreativeCoreDevices/Device_Billboard_V2.Device_Billboard_V2_C"
+        }
+      },
+      {
+        "label": "LevelBounds",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.LevelBounds_0",
+        "bounds": {
+          "min": {
+            "x": -4057600.0010681152,
+            "y": -4057600.0010681152,
+            "z": -57082.18910217285
+          },
+          "max": {
+            "x": 4057600.0021362305,
+            "y": 4057600.0021362305,
+            "z": 102241.787109625
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Script/Engine.LevelBounds"
+        }
+      },
+      {
+        "label": "cargo_circuit_active_vfx_predict_c",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1392083703",
+        "bounds": {
+          "min": {
+            "x": -1800,
+            "y": 2500,
+            "z": 580
+          },
+          "max": {
+            "x": 2200,
+            "y": 6500,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "cargo_circuit_finale_effect",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5470603_1990229783",
+        "bounds": {
+          "min": {
+            "x": -2100,
+            "y": 2700,
+            "z": 780
+          },
+          "max": {
+            "x": 1900,
+            "y": 6700,
+            "z": 4780
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "classifier_fx_active_2",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5790603_1179623489",
+        "bounds": {
+          "min": {
+            "x": -4700,
+            "y": -900,
+            "z": 580
+          },
+          "max": {
+            "x": -700,
+            "y": 3100,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "pix_agent_core_restoration_vfx",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5710403_2015792948",
+        "bounds": {
+          "min": {
+            "x": -1200,
+            "y": -1000,
+            "z": 900
+          },
+          "max": {
+            "x": 2800,
+            "y": 3000,
+            "z": 4900
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "WaterZone",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.WaterZone_0",
+        "bounds": {
+          "min": {
+            "x": -4057600.0010681152,
+            "y": -4057600.0010681152,
+            "z": -57082.18910217285
+          },
+          "max": {
+            "x": 4057600.0021362305,
+            "y": 4057600.0021362305,
+            "z": 58117.81410217285
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Script/Water.WaterZone"
+        }
+      },
+      {
+        "label": "classifier_fx_hit",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5790603_1180630490",
+        "bounds": {
+          "min": {
+            "x": -5000,
+            "y": -900,
+            "z": 580
+          },
+          "max": {
+            "x": -1000,
+            "y": 3100,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "classifier_fx_complete",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5790603_1181644491",
+        "bounds": {
+          "min": {
+            "x": -5000,
+            "y": -900,
+            "z": 580
+          },
+          "max": {
+            "x": -1000,
+            "y": 3100,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "classifier_fx_wrong",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5790603_1182663492",
+        "bounds": {
+          "min": {
+            "x": -5000,
+            "y": -900,
+            "z": 580
+          },
+          "max": {
+            "x": -1000,
+            "y": 3100,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "classifier_fx_active_1",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5790603_1178611488",
+        "bounds": {
+          "min": {
+            "x": -5000,
+            "y": -900,
+            "z": 580
+          },
+          "max": {
+            "x": -1000,
+            "y": 3100,
+            "z": 4580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "classifier_finale",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5780603_1872715310",
+        "bounds": {
+          "min": {
+            "x": -5000,
+            "y": -700,
+            "z": 900
+          },
+          "max": {
+            "x": -1000,
+            "y": 3300,
+            "z": 4900
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "campus_main_promenade",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C30303_2042537342",
+        "bounds": {
+          "min": {
+            "x": -15200,
+            "y": -18000,
+            "z": 2272
+          },
+          "max": {
+            "x": 7200,
+            "y": 3515,
+            "z": 2580
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Script/Engine.Actor"
+        }
+      },
+      {
+        "label": "pix_module_restored_vfx",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5720403_1706924125",
+        "bounds": {
+          "min": {
+            "x": -950,
+            "y": -1000,
+            "z": 900
+          },
+          "max": {
+            "x": 3050,
+            "y": 3000,
+            "z": 4900
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "pix_ai_core_module_pulse_vfx",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B5730403_1774547304",
+        "bounds": {
+          "min": {
+            "x": -1200,
+            "y": -1000,
+            "z": 900
+          },
+          "max": {
+            "x": 2800,
+            "y": 3000,
+            "z": 4900
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C"
+        }
+      },
+      {
+        "label": "loop_hub_walkway",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5CD0003_1331795989",
+        "bounds": {
+          "min": {
+            "x": -950,
+            "y": 2400,
+            "z": 2302
+          },
+          "max": {
+            "x": -350,
+            "y": 3400,
+            "z": 2402
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+        }
+      },
+      {
+        "label": "campus_path_station_identity",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C50303_1091212704",
+        "bounds": {
+          "min": {
+            "x": -128,
+            "y": -128,
+            "z": 2272
+          },
+          "max": {
+            "x": 1610,
+            "y": 2540,
+            "z": 2819.999967956538
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Script/Engine.Actor"
+        }
+      },
+      {
+        "label": "DSA_UEFN_Ch5S1_C0",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.DSA_UEFN_Ch5S1_C_0",
+        "bounds": {
+          "min": {
+            "x": -3607798.681640625,
+            "y": -3607798.828125,
+            "z": -250001000
+          },
+          "max": {
+            "x": 3607798.974609375,
+            "y": 3607798.828125,
+            "z": 249999000
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch5/DSA_UEFN_Ch5S1.DSA_UEFN_Ch5S1_C"
+        }
+      },
+      {
+        "label": "SmartObjectSubsystemRenderingActor0",
+        "ref": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.SmartObjectSubsystemRenderingActor_0",
+        "bounds": {
+          "min": {
+            "x": -2387028.126218795,
+            "y": -2289176.1244085194,
+            "z": -57082.18910217285
+          },
+          "max": {
+            "x": 2816195.5757518904,
+            "y": 3484926.197275123,
+            "z": 102241.787109625
+          },
+          "isValid": true
+        },
+        "class": {
+          "refPath": "/Script/SmartObjectsModule.SmartObjectSubsystemRenderingActor"
+        }
+      }
+    ]
+  },
+  "selected": {
+    "points": [
+      {
+        "id": "guide",
+        "x": -100,
+        "y": 2700,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "invite",
+        "x": -100,
+        "y": 2450,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "prompt",
+        "x": 2600,
+        "y": 200,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 398,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 398,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 398,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 398,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 398,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "pattern",
+        "x": -100,
+        "y": 3500,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "classifier",
+        "x": -1700,
+        "y": 900,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "confidence",
+        "x": -1700,
+        "y": -900,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "error",
+        "x": -2000,
+        "y": -4800,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "x": -2000,
+        "y": -8000,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "popcorn",
+        "x": -1700,
+        "y": -16130,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "agent",
+        "x": -1700,
+        "y": -13500,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 496.2503662109375,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      }
+    ]
+  },
+  "refinement": {
+    "points": [
+      {
+        "id": "popcorn",
+        "x": -1700,
+        "y": -17100,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 388,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "agent_a",
+        "x": -2400,
+        "y": -12000,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "agent_b",
+        "x": -2400,
+        "y": -12200,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      },
+      {
+        "id": "agent_c",
+        "x": -2400,
+        "y": -13000,
+        "probes": [
+          {
+            "offset": [
+              0,
+              0
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              -60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              -60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          },
+          {
+            "offset": [
+              60,
+              60
+            ],
+            "ground_from2800": 400.00006103515625,
+            "vertical_from2440_to2840": null
+          }
+        ]
+      }
+    ]
+  }
+}

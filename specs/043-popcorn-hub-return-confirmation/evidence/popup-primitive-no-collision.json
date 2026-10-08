@@ -1,0 +1,13 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "line 4: RuntimeError: Script error in editor_toolset.toolsets.object.ObjectTools.set_properties:\nSetObjectProperties: property 'ResponseArray' — ArrayRemove: elements changed alongside the size change; removed elements are ambiguous.\nSetObjectProperties on '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.StaticMeshComponent0' (BaseBuildingStaticMeshComponent): the following properties could not be set: bodyInstance\nTraceback (script frames only):\n  File \"<script>\", line 12, in run\n    success=set_values(c[\"ref\"],c[\"values\"])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<script>\", line 4, in set_values\n    return execute_tool(\"editor_toolset.toolsets.object.ObjectTools.set_properties\",json.dumps({\"instance\":ref,\"values\":json.dumps(values)}))[\"returnValue\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+      }
+    ],
+    "isError": true
+  }
+}

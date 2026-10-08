@@ -33,6 +33,8 @@
                 feedback.Show(input_player, text(current_card()), ?DisplayTime := 0.0)
 
     sync_card<override>(input_player:player):void =
+        arm_finish_portal(input_player)
+        poll_finish_portal(input_player)
         panel_visible := navigation_journal.is_panel_open(input_player)
         if (panel_visible <> journal_masked):
             render_card(input_player)
@@ -151,6 +153,7 @@
             render_card(input_player)
 
     stop_presentation_effects<override>():void =
+        close_finish_portal()
         set lesson_epoch += 1
         for (halo : course_hit_halos):
             halo.End()
@@ -167,3 +170,116 @@
         set journal_masked = false
 
     var presentation_owner:?player = false
+
+    # Feature042 exit gate: reward hook is synchronous; monitor only arms fresh entry.
+    var portal_player:?player = false
+    var portal_token:int = -1
+    var portal_round:int = -1
+    var portal_pending:logic = false
+    var portal_ready:logic = false
+
+    close_finish_portal():void =
+        close_hub_confirmation()
+        set portal_ready = false
+        set portal_pending = false
+        set portal_player = false
+        set portal_token = -1
+        set portal_round = -1
+        finish_hub_portal.Disable()
+
+    completion_ready<override>(input_player:player):void =
+        if (current := owner?, current = input_player, state.finished?, valid(input_player, state.generation, observed_round)?):
+            close_finish_portal()
+            set portal_player = option{input_player}
+            set portal_token = state.generation
+            set portal_round = observed_round
+            set portal_pending = true
+            arm_finish_portal(input_player)
+
+    arm_finish_portal(input_player:player):void =
+        if (portal_pending?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, character := input_player.GetFortCharacter[], character.IsActive[]):
+            position := character.GetTransform().Translation
+            centre := finish_hub_portal.GetTransform().Translation
+            dx := position.X - centre.X
+            dy := position.Y - centre.Y
+            if (dx * dx + dy * dy > 10000.0):
+                set portal_pending = false
+                set portal_ready = true
+                finish_hub_portal.Enable()
+
+    entered_finish_portal(input_agent:agent):void =
+        if (input_player := player[input_agent], portal_ready?, captured := portal_player?, captured = input_player, current := owner?, current = input_player, state.finished?, portal_round = observed_round, valid(input_player, portal_token, portal_round)?, inside_finish_portal(input_player)?):
+            set portal_ready = false
+            set portal_pending = false
+            open_hub_confirmation(input_player)
+
+    # Destinationless native rifts cannot be trusted to signal a raw overlap.
+    # The owner's existing 0.1s monitor samples the measured capsule, not the 1m arm margin.
+    inside_finish_portal(input_player:player)<transacts>:logic =
+        if (character := input_player.GetFortCharacter[], character.IsActive[]):
+            position := character.GetTransform().Translation
+            centre := finish_hub_portal.GetTransform().Translation
+            dx := position.X - centre.X
+            dy := position.Y - centre.Y
+            var dz:float = position.Z - centre.Z
+            if (dz < 0.0):
+                set dz = -dz
+            # Effective capsule r44/h61.6: nearest point on the +/-17.6cm axis segment.
+            var cap_distance:float = 0.0
+            if (dz > 17.6):
+                set cap_distance = dz - 17.6
+            if (dx * dx + dy * dy + cap_distance * cap_distance <= 1936.0):
+                return true
+        return false
+
+    poll_finish_portal(input_player:player):void =
+        if (portal_ready?, inside_finish_portal(input_player)?):
+            entered_finish_portal(input_player)
+
+    # Feature043: every Show receives a new immutable callback scope.
+    var dialog_owner:?player = false
+    var dialog_active:logic = false
+    var dialog_epoch:int = 0
+    var dialog_subscriptions:[]cancelable = array{}
+
+    configure_hub_confirmation():void =
+        hub_return_confirmation.SetButtonCount(2)
+        hub_return_confirmation.SetTitleText(text("Return to Hub?"))
+        hub_return_confirmation.SetDescriptionText(text("Mission complete! Return to the hub now?"))
+        hub_return_confirmation.SetButtonText(text("Return to Hub"), 0)
+        hub_return_confirmation.SetButtonText(text("Cancel"), 1)
+        hub_return_confirmation.Enable()
+
+    close_hub_confirmation():void =
+        captured := dialog_owner
+        set dialog_active = false
+        set dialog_epoch += 1
+        set dialog_owner = false
+        for (subscription : dialog_subscriptions):
+            subscription.Cancel()
+        set dialog_subscriptions = array{}
+        if (current := captured?):
+            hub_return_confirmation.Hide(current)
+
+    open_hub_confirmation(input_player:player):void =
+        close_hub_confirmation()
+        set dialog_owner = option{input_player}
+        set dialog_active = true
+        listener := popbridge_confirmation_listener{controller := Self, captured_player := input_player, token := portal_token, round := portal_round, epoch := dialog_epoch}
+        set dialog_subscriptions = array{
+            hub_return_confirmation.RespondingButtonEvent.Subscribe(listener.respond),
+            hub_return_confirmation.DismissedEvent.Subscribe(listener.dismiss),
+            hub_return_confirmation.TimeOutEvent.Subscribe(listener.dismiss)}
+        hub_return_confirmation.Show(input_player)
+
+    hub_confirmation_response(input_agent:agent, button:int, captured_player:player, token:int, round:int, epoch:int):void =
+        if (dialog_active?, epoch = dialog_epoch, displayed := dialog_owner?, displayed = captured_player, input_agent = captured_player, current := owner?, current = captured_player, state.finished?, round = observed_round, valid(captured_player, token, round)?):
+            if (button = 0):
+                # Invalidate/cancel BEFORE Hide and cleanup; no suspension/reward.
+                close_finish_portal()
+                return_to_hub(captured_player)
+            else if (button = 1):
+                close_hub_confirmation()
+                set portal_ready = false
+                set portal_pending = true
+                finish_hub_portal.Disable()

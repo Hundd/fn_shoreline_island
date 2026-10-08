@@ -1,0 +1,514 @@
+version: 1
+map:
+  id: hub_pix_mission_travel
+  title: 'Pix hub: choose any of eight missions'
+  theme: ai_companion_travel
+  units: meters
+  origin_cm:
+  - -16000
+  - -20000
+  - 2300
+  size:
+  - 290
+  - 260
+  - 30
+  learning_objective: Choose an independent AI lesson and deliberately enter its normal
+    start; preserve legitimate eight-module learning and rewards.
+  source_feature: specs/044-hub-pix-mission-travel/spec.md
+  intent: propose_change
+  min_path_width: 1.2
+  position_tolerance: 0.1
+player_flow:
+- guide
+- campus
+zones:
+- id: campus
+  label: Existing campus survey envelope; no new geometry
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 290
+  - 260
+  - 30
+  purpose: Spatial inventory of all eight independent destinations; not a linear mission
+    route or new walls.
+  parameters:
+    width_m: 1.2
+    access: Existing routes/Return preserved; destination annotations are UI alternatives,
+      not sequential visits.
+  devices:
+  - journal
+  - arrival_teleports
+  overlap_with:
+  - guide
+  completion: Actual selected lesson completed only by its existing controller.
+  reset: Travel preserves badge data; existing round reset remains authoritative.
+- id: guide
+  label: Pix and deliberate approach beside eight hub screens
+  pattern: portal
+  position:
+  - 157.6
+  - 223
+  - 1
+  size:
+  - 3.8
+  - 5.4
+  - 4
+  purpose: Move existing Pix helper; approach opens invitation, list, then confirmation.
+    Destination selection is per-player UI, no mandatory quiz.
+  parameters:
+    destination: campus
+    bidirectional: false
+  devices:
+  - travel
+  - talk
+  - arrival_teleports
+  - pix
+  overlap_with:
+  - campus
+  completion: Valid owning player confirms and arrives once without starting lesson
+    or receiving reward.
+  reset: Cancel stays in hub; clear dialog and input, step-clear 2m before auto reentry;
+    existing earned badge data unchanged.
+connections:
+- from: campus
+  to: guide
+  mode: walk
+  width: 1.2
+  points:
+  - - 153
+    - 215
+    - 1.12
+  - - 157
+    - 221
+    - 1.12
+  - - 159
+    - 224.5
+    - 1.12
+  gate: always
+- from: guide
+  to: campus
+  mode: portal
+  width: 1.2
+  points:
+  - - 159
+    - 224.5
+    - 1.12
+  - - 186
+    - 202
+    - 2.02
+  gate: confirm
+markers:
+- id: hub_arrival
+  kind: spawn
+  zone: campus
+  label: Existing external Hub return destination
+  position:
+  - 153
+  - 215
+  - 2
+  source: 033 saved native pose; reuse existing Hub, no new spawn
+- id: pix
+  kind: knowledge
+  zone: guide
+  label: Existing Pix figure moved beside screens
+  position:
+  - 159
+  - 227
+  - 2.12
+  source: Proposed assembly pivot(-100,2700,2412), same scale1; measured ground2412.
+    Static figure plus greeting.
+- id: approach
+  kind: checkpoint
+  zone: guide
+  label: Approach Pix; invitation once
+  position:
+  - 159
+  - 224.5
+  - 1.12
+  source: Proposed cylinder radius1.25m/re-arm2m; vertical samples recorded, not a
+    new floor.
+- id: cancel
+  kind: exit
+  zone: guide
+  label: Cancel / Not now restores hub movement
+  position:
+  - 159
+  - 224.5
+  - 2.12
+  source: UI information marker at approach; not a physical exit actor
+- id: arrival_prompt
+  kind: exit
+  zone: campus
+  label: 1 Prompt Workshop
+  position:
+  - 186
+  - 202
+  - 2.02
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_pattern
+  kind: exit
+  zone: campus
+  label: 2 Pattern Scanner
+  position:
+  - 159
+  - 235
+  - 2.12
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_classifier
+  kind: exit
+  zone: campus
+  label: 3 AI Classifier
+  position:
+  - 143
+  - 209
+  - 2
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_confidence
+  kind: exit
+  zone: campus
+  label: 4 Confidence Core
+  position:
+  - 143
+  - 191
+  - 2
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_error
+  kind: exit
+  zone: campus
+  label: 5 AI Error Lab
+  position:
+  - 140
+  - 152
+  - 2
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_tools
+  kind: exit
+  zone: campus
+  label: 6 AI Tool Lab
+  position:
+  - 140
+  - 120
+  - 2
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_popcorn
+  kind: exit
+  zone: campus
+  label: 7 Pix's Popcorn Parkour
+  position:
+  - 143
+  - 29
+  - 2.12
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+- id: arrival_agent
+  kind: exit
+  zone: campus
+  label: 8 AI Agent Mission
+  position:
+  - 136
+  - 80
+  - 2
+  source: Proposed destination pivot; five measured ground/vertical samples in044
+    evidence. Does not auto-start lesson; existing Return preserved.
+devices:
+- id: arrival_teleports
+  class: teleporter_device
+  count: 8
+  source: Eight proposed native destination-only teleports; 042 catalogue/schema establishes
+    class, new destinations measured044.
+  settings:
+    native_class: /CreativeCoreDevices/Device_Teleporter_V2.Device_Teleporter_V2_C
+    group: None
+    target_group: None
+    visible: false
+    skydive: false
+    preserve_momentum: false
+    destinations:
+    - id: prompt
+      label: 1 Prompt Workshop
+      module_index: 0
+      world_location_cm:
+      - 2600
+      - 200
+      - 2502
+      rotation:
+        pitch: 0
+        yaw: 0
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2402
+    - id: pattern
+      label: 2 Pattern Scanner
+      module_index: 1
+      world_location_cm:
+      - -100
+      - 3500
+      - 2512
+      rotation:
+        pitch: 0
+        yaw: 90
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2412
+    - id: classifier
+      label: 3 AI Classifier
+      module_index: 2
+      world_location_cm:
+      - -1700
+      - 900
+      - 2500
+      rotation:
+        pitch: 0
+        yaw: 180
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2400
+    - id: confidence
+      label: 4 Confidence Core
+      module_index: 3
+      world_location_cm:
+      - -1700
+      - -900
+      - 2500
+      rotation:
+        pitch: 0
+        yaw: 180
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2400
+    - id: error
+      label: 5 AI Error Lab
+      module_index: 4
+      world_location_cm:
+      - -2000
+      - -4800
+      - 2500
+      rotation:
+        pitch: 0
+        yaw: 180
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2400
+    - id: tools
+      label: 6 AI Tool Lab
+      module_index: 5
+      world_location_cm:
+      - -2000
+      - -8000
+      - 2500
+      rotation:
+        pitch: 0
+        yaw: 180
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2400
+    - id: popcorn
+      label: 7 Pix's Popcorn Parkour
+      module_index: 6
+      world_location_cm:
+      - -1700
+      - -17100
+      - 2512
+      rotation:
+        pitch: 0
+        yaw: 180
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2412
+    - id: agent
+      label: 8 AI Agent Mission
+      module_index: 7
+      world_location_cm:
+      - -2400
+      - -12000
+      - 2500
+      rotation:
+        pitch: 0
+        yaw: -125
+        roll: 0
+      scale:
+      - 1
+      - 1
+      - 1
+      measured_ground_cm: 2400
+    readiness: Valid bound controller/configuration, journal.module_available, destination
+      identity. Teleport only on explicit guarded Confirm.
+- id: travel
+  class: fn_shoreline_island_hub_travel
+  count: 1
+  source: New scoped Verse adapter required; existing journal canvas/buttons used
+    as basis. No current installed travel controller claim.
+  settings:
+    configured: false
+    new: true
+    guide_center_cm:
+    - -100
+    - 2450
+    - 2412
+    approach_radius_cm: 125
+    rearm_radius_cm: 200
+    dialog_states:
+    - invite
+    - list
+    - confirm
+    canonical_order:
+    - 1 Prompt Workshop
+    - 2 Pattern Scanner
+    - 3 AI Classifier
+    - 4 Confidence Core
+    - 5 AI Error Lab
+    - 6 AI Tool Lab
+    - 7 Pix's Popcorn Parkour
+    - 8 AI Agent Mission
+    ui_owner: per-player; journal arbitration; immutable epochs
+    reward_authority: none
+    agent_independence: remove prerequisite eligibility, preserve verified puzzle
+      and real total
+    scene_scope: plan.md exact transforms only; envelopes/markers are information
+- id: talk
+  class: button_device
+  count: 1
+  source: One new native existing catalog button class
+  settings:
+    label: Talk to Pix
+    world_location_cm:
+    - -100
+    - 2500
+    - 2500
+    rotation:
+      pitch: 0
+      yaw: 180
+      roll: 0
+    scale:
+    - 1
+    - 1
+    - 1
+    interaction_range_cm: 150
+    hold_seconds: 0
+- id: pix
+  class: existing_actor_assembly
+  count: 1
+  source: Measured pix_hub_helper_figure, evidence/live-planning-survey.json
+  settings:
+    reuse_existing: true
+    world_location_cm:
+    - -100
+    - 2700
+    - 2412
+    rotation:
+      pitch: 0
+      yaw: 180
+      roll: 0
+    scale:
+    - 1
+    - 1
+    - 1
+    new_asset: false
+- id: journal
+  class: fn_shoreline_island_academy_journal
+  count: 1
+  source: Existing canonical status/reward presentation and per-player UI, source
+    inspected044
+  settings:
+    reuse_existing: true
+    canonical_tracker_order:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 5
+    - 4
+    changes: UI arbitration, independent Agent ready/recommendation, accurate earlyAgent
+      copy, any-last-module8/8 guidance; no new badges
+stages:
+- id: invite
+  zone: guide
+  purpose: Pix offers help choosing an independent learning activity.
+  requires: []
+  active_targets: []
+  completion: Choose a mission opens list; Not now stays with input restored.
+- id: choice
+  zone: guide
+  purpose: Read all eight numbered lesson names and authoritative status; no mission-order
+    prerequisite.
+  requires:
+  - invite
+  active_targets: []
+  completion: Selection opens named confirmation only; Cancel closes.
+- id: confirm
+  zone: guide
+  purpose: Deliberately confirm the desired lesson destination; wrong selection recoverable
+    by Back.
+  requires:
+  - choice
+  active_targets: []
+  completion: Validate player/round/dialog/destination; invalidate UI then transport
+    once.
+- id: arrival
+  zone: campus
+  purpose: Reach selected existing safe entrance; normal walk-in start and legitimate
+    lesson actions preserved.
+  requires:
+  - confirm
+  active_targets: []
+  completion: Arrive without badge/attempt mutation; choose to walk into normal lesson
+    and Return normally.
+assumptions:
+- id: a01_geometry
+  status: resolved
+  detail: Selected guide/arrival positions measured with five ground/vertical rays
+    each; candidate obstructions rejected. Native pawn capsule, facing, route readability
+    remain implementation owner acceptance; don't infer those from rays.
+  evidence: evidence/live-planning-survey.json; plan.md exact selected positions
+- id: a02_guide
+  status: resolved
+  detail: Existing pix_hub_helper_figure native actor with full pose/bounds verified;
+    reuse/move assembly, static figure plus text greeting. No new character asset
+    dependency.
+  evidence: evidence/live-planning-survey.json initial.pix
+- id: a03_adapter
+  status: resolved
+  detail: Custom per-player travel adapter is explicit work in this approved proposal
+    using existing canvas/button/journal APIs and native teleporters; portal pattern
+    alone doesn't supply menus. Verify local focus/Back route during implementation,
+    return to planning if unavailable.
+  evidence: Content/fn_shoreline_island_academy_journal.verse show_panel; plan.md
+    Modal specification
+- id: a04_independence
+  status: resolved
+  detail: Remove Agent prior-badge checks from rescue/legacy/journal; preserve self-contained
+    puzzle/reward gates. Existing count already queries real eight flags;8/8 guidance
+    uses total and remains order-independent.
+  evidence: Content/fn_shoreline_island_bot_station.verse rescue_monitor/agent_mission_ready;
+    Content/fn_shoreline_island_academy_journal.verse module_restored/navigation_refresh

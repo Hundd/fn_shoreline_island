@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "map_id": "popcorn_finish_hub_portal",
+  "review_digest": "276de9851132415136586690da8581d7eae5a80583f581651767d63b01db89f1",
+  "verdict": "pass",
+  "violations": [],
+  "advisories": [
+    {
+      "code": "WALK_SEGMENT_LONG",
+      "zone": null,
+      "detail": "connection finish_portal->hub is 192.8m; review walking burden"
+    },
+    {
+      "code": "WALK_ROUTE_LONG",
+      "zone": null,
+      "detail": "total route is 195.2m; review cumulative walking"
+    },
+    {
+      "code": "INTERACTION_CROWDED",
+      "zone": "course",
+      "detail": "10 devices in course; review interaction density"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage teach_pop has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage first_reuse has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage finale has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "LEARN_NO_LESSON",
+      "zone": null,
+      "detail": "no knowledge_room zone; verify the learning objective is introduced before action"
+    }
+  ],
+  "blockers": [],
+  "counts": {
+    "zones": 3,
+    "stages": 8,
+    "markers": 22,
+    "connections": 2,
+    "devices": 11,
+    "targets": 8,
+    "violations": 0,
+    "advisories": 7,
+    "blockers": 0
+  }
+}

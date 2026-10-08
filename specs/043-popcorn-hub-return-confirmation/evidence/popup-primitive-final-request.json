@@ -1,0 +1,15 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "editor_toolset.toolsets.programmatic.ProgrammaticToolset",
+      "tool_name": "execute_tool_script",
+      "arguments": {
+        "script": "import json\n\ndef values(ref,keys):\n    return json.loads(execute_tool(\"editor_toolset.toolsets.object.ObjectTools.get_properties\",json.dumps({\"instance\":ref,\"properties\":keys}))[\"returnValue\"])\n\ndef run():\n    result=[]\n    for ref in [{'refPath': '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.StaticMeshComponent0'}, {'refPath': '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.BoundingBoxComponent'}, {'refPath': '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.EditorOnlyStaticMeshComponent'}, {'refPath': '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.CreativeEditOnlyMesh'}, {'refPath': '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.CreativeEditOnlyBase'}, {'refPath': '/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_PopUpDialog_V2_C_UAID_E89C2592D1B53B0903_1943422741.CreativeEditOnlyBeam'}]:\n        actual=values(ref,[\"bodyInstance\",\"bHiddenInGame\",\"bRenderInMainPass\",\"bIsEditorOnly\"])\n        if not actual[\"bIsEditorOnly\"]:\n            if actual[\"bodyInstance\"][\"collisionEnabled\"]!=\"NoCollision\" or not actual[\"bHiddenInGame\"] or actual[\"bRenderInMainPass\"]:raise RuntimeError(\"Gameplay primitive is not inert\")\n        result.append({\"component\":ref,\"values\":actual})\n    return {\"primitives\":result}\n"
+      }
+    }
+  }
+}

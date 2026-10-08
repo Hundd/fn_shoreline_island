@@ -1,0 +1,3 @@
+# Feature042 operational copy supersession
+
+Owner explicitly approved Feature042 portal review digest99c2859e5c11c9bca99ac8c81a205658e0e85cd6d180b19549a3d93a172c0ded (“go for it”). Its implementation authorizes changing final_done action in041 learning-content.yaml/map.yaml to “Walk into the glowing HUB portal, or use Return.” Production generator uses this copy;136-character completion retains original lesson/recipe. Historical041 approvals/generated review remain unchanged and are historical, not approval for042 or the superseded current copy. See042/evidence/implementation.md and source-diff.patch. Gameplay/validation acceptance remains manual and unchecked.
