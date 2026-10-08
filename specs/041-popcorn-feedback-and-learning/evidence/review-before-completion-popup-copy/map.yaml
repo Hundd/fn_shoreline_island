@@ -646,8 +646,8 @@ devices:
         action: Running LOAD > HEAT > POP.
       - id: final_done
         trigger: Target7 successful commit; existing reward
-        lesson: Mission complete! You saved three steps and reused them.
-        action: You can return to the hub. Use Return.
+        lesson: One skill. Many bridges! You saved three steps and reused them.
+        action: Try Replay, Return, or keep jumping.
       - id: wrong_order
         trigger: Fixture result3, retain actual prefix
         lesson: Steps work in order. Your finished steps are safe.
@@ -807,19 +807,6 @@ devices:
         integration: Small is_panel_open(player)<transacts>:logic query of existing
           panels map; PopBridge presentation monitor watches changes and masks/resumes
           card. No progression/award authority changes.
-    completion_popup_copy_refinement:
-      owner_request: When hitting the last pop039_ring_7 add a popup to user, that
-        they completed the mission and can return to the hub
-      existing_event: Target7 successful fixtures.complete -> committed_lesson ->
-        advance_lesson final_done, owner HUD and final board
-      card_chars: 126
-      card: 'Mission complete! You saved three steps and reused them.
-
-        PopBridge = LOAD > HEAT > POP.
-
-        You can return to the hub. Use Return.'
-      unchanged: No raw-hit completion or extra trigger/device; existing commit/cancellation/reward/Return
-        guards preserved
 - id: targets
   class: fn_shoreline_island_data_target
   count: 8

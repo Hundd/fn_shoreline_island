@@ -13,3 +13,5 @@ Owner's2026-10-08 manual validation found the original internal sound disallowed
 - [ ] A07: Miss jumps before finish; recovery preserves progress and shows honest steps/saved-skill variant, with Return available on failure. After actual finish, drops/free jumping cause no recovery teleport/card.
 - [ ] A07/A08: Both equal five-jump branches, finish, Replay and both Returns work; reward remains once per round and journal/HUD/Core agree. Confirm route geometry/hides are unchanged.
 - [ ] V04: Owner runs Project Validate and manual cook/session acceptance, records warnings/errors/evidence, and stops the playtest afterwards. Leave editor open.
+
+- [ ] A09: Complete the successful final pop039_ring_7 commit; read “Mission complete!” and “You can return to the hub. Use Return.” in the persistent popup and final board. Check Return reaches hub, journal open/close masks/resumes latest card, and early/rejected/stale/repeated input does not announce completion. New copy compiled/saved; this gameplay scenario was not run.

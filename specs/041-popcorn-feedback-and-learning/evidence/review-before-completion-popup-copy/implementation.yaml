@@ -1,6 +1,6 @@
 version: 1
 map_id: popcorn_feedback_and_learning
-spec_digest: ce9f9800054c651c008e4f96b0ced3a29f200289fbe15139822d83f68ce7bb16
+spec_digest: 00a89d3d63b5294659dd82895e126e9651e35dc209fd5b9bb892c63e51ec4599
 patterns_digest: 52d014a8d922169a2a5fe0f688dbbb5e454494d469c70dd1776071e038758c8f
 status: draft_requires_explicit_human_approval
 executable: false
@@ -623,8 +623,8 @@ implementation:
           action: Running LOAD > HEAT > POP.
         - id: final_done
           trigger: Target7 successful commit; existing reward
-          lesson: Mission complete! You saved three steps and reused them.
-          action: You can return to the hub. Use Return.
+          lesson: One skill. Many bridges! You saved three steps and reused them.
+          action: Try Replay, Return, or keep jumping.
         - id: wrong_order
           trigger: Fixture result3, retain actual prefix
           lesson: Steps work in order. Your finished steps are safe.
@@ -784,19 +784,6 @@ implementation:
           integration: Small is_panel_open(player)<transacts>:logic query of existing
             panels map; PopBridge presentation monitor watches changes and masks/resumes
             card. No progression/award authority changes.
-      completion_popup_copy_refinement:
-        owner_request: When hitting the last pop039_ring_7 add a popup to user, that
-          they completed the mission and can return to the hub
-        existing_event: Target7 successful fixtures.complete -> committed_lesson ->
-          advance_lesson final_done, owner HUD and final board
-        card_chars: 126
-        card: 'Mission complete! You saved three steps and reused them.
-
-          PopBridge = LOAD > HEAT > POP.
-
-          You can return to the hub. Use Return.'
-        unchanged: No raw-hit completion or extra trigger/device; existing commit/cancellation/reward/Return
-          guards preserved
   verify: Discover class/editable schemas; resolve existing references; assert count/settings
     after any approved edit.
 - step: reconcile_device

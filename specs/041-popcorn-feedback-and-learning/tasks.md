@@ -14,3 +14,6 @@ Human design approval and readiness are recorded. Authorized implementation is c
 - [ ] V02 (OWNER MANUAL; no automatic test) [R04,R05] Muted every stage/landing copy, stable recipe, aim/landing visibility and Academy HUD/journal open-close arbitration; first-use learning explanation.
 - [ ] V03 (OWNER MANUAL; no automatic test) [R06,R07] Both paths, recovery, finished free jumps, earned Replay, entry/finish Return, re-entry and round reset with once-only reward/HUD/Core agreement.
 - [ ] V04 [R08] Owner manual Project Validate rerun and acceptance evidence after restricted-audio correction. Owner validation2026-10-08 failed; native repair is saved but revalidation was not run during this delivery. Supervisor verified no running game and editor open at handoff.
+
+- [x] I04 [R09] Generate exact final_done completion/hub Return copy; preserve successful target7 commit trigger and lifecycle; native Verse compile diagnostics[], SaveAll true, map clean and nonrunning handoff. Evidence: evidence/completion-popup-implementation.md and source/native captures.
+- [ ] V05 (OWNER MANUAL; no automatic test) [R09/A09] Successful finale7 shows completion/Return popup and matching final board; early/rejected/stale/repeated callbacks do not announce completion, journal masking/resume and Return remain correct.

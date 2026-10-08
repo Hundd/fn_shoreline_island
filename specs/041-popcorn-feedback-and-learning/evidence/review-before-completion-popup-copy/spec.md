@@ -29,15 +29,3 @@ Owner reports the current playtest worked well, asks for a pop sound and glowing
 ## Excluded scope and assumptions
 
 No geometry redesign, new jumps/rewards/modules, live AI, narration or unrelated island acceptance audit. Native assets/bindings and HUD overlap are unmeasured; open assumptions A02–A04 in map.yaml deliberately block readiness. Historical no-testing040 delivery remains untouched; future041 implementation validation is prospective and needs implementation authorization. No implementation or QA is dispatched by this planning request.
-
-## Owner-requested completion popup clarity refinement — 2026-10-08
-
-Owner: “When hitting the last pop039_ring_7 add a popup to user, that they completed the mission and can return to the hub”. R09: successful target7 commit displays the existing owner HUD popup with explicit mission-complete wording and hub Return instruction. Reuse final_done; no new device/modal/trigger, gameplay or reward change. Exact three-line126-character card:
-
-```text
-Mission complete! You saved three steps and reused them.
-PopBridge = LOAD > HEAT > POP.
-You can return to the hub. Use Return.
-```
-
-A09 [R04,R05,R06,R07,R09]: Given the actual finish landing and valid branch/owner/attempt, when the final ring7 shot successfully commits the existing routine, then the owner sees that exact completion popup and existing Return can take them to the hub. An early/rejected/stale/cancelled final shot does not say mission complete; no duplicate reward/new interaction occurs. Given journal open, latest completed card follows existing masking/resume policy. Verification remains owner manual; no testing requested.

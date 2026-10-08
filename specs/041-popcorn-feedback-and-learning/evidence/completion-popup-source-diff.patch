@@ -1,0 +1,20 @@
+--- Content\fn_shoreline_island_popbridge_production.verse
++++ Content\fn_shoreline_island_popbridge_production.verse
+@@ -464,7 +464,7 @@
+         if (event_id = "final_pending"):
+             return "The final machine runs the same saved steps."
+         if (event_id = "final_done"):
+-            return "One skill. Many bridges! You saved three steps and reused them."
++            return "Mission complete! You saved three steps and reused them."
+         if (event_id = "wrong_order"):
+             return "Steps work in order. Your finished steps are safe."
+         if (event_id = "recovery"):
+@@ -515,7 +515,7 @@
+         if (event_id = "final_pending"):
+             return "Running LOAD > HEAT > POP."
+         if (event_id = "final_done"):
+-            return "Try Replay, Return, or keep jumping."
++            return "You can return to the hub. Use Return."
+         if (event_id = "wrong_order"):
+             return "Next: {instruction_name(state.prefix)}."
+         if (event_id = "recovery"):

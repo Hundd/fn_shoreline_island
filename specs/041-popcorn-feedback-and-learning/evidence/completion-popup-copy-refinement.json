@@ -1,0 +1,30 @@
+{
+  "owner_request": "When hitting the last pop039_ring_7 add a popup to user, that they completed the mission and can return to the hub",
+  "prior_review_digest": "0bd1f08bf14be91f87977d67624debe847ccba0d53d63dde4ed7de5213edec79",
+  "changed_row": "final_done",
+  "before": {
+    "id": "final_done",
+    "trigger": "Target7 successful commit; existing reward",
+    "lesson": "One skill. Many bridges! You saved three steps and reused them.",
+    "action": "Try Replay, Return, or keep jumping."
+  },
+  "after": {
+    "id": "final_done",
+    "trigger": "Target7 successful commit; existing reward",
+    "lesson": "Mission complete! You saved three steps and reused them.",
+    "action": "You can return to the hub. Use Return."
+  },
+  "card": "Mission complete! You saved three steps and reused them.\nPopBridge = LOAD > HEAT > POP.\nYou can return to the hub. Use Return.",
+  "card_chars": 126,
+  "trigger_preserved": "Successful target7 commit only, existing owner HUD and final_board",
+  "source_evidence": [
+    "Content/fn_shoreline_island_popbridge_controller.verse execute complete success",
+    "Content/fn_shoreline_island_popbridge_production.verse committed_lesson/advance_lesson final_done"
+  ],
+  "new_device_or_gameplay_change": false,
+  "original_human_approval_preserved": true,
+  "new_approval_requested_or_fabricated": false,
+  "tests_run": false,
+  "archive": "evidence/review-before-completion-popup-copy",
+  "current_review_digest": "e8a90c247a73f3aabcd695863bb9199700073294edd096779dd8ef17533fe5e1"
+}

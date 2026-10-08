@@ -1,12 +1,12 @@
 status: approved
 reviewer: Project owner (human user)
 approved_at: '2026-10-08T08:57:52Z'
-evidence: 'Actual owner instruction: ''yes, approve! Build it but ask implementer
-  to not perform testing, it will be done manually''. Original reviewed digest72c3683915afd8fbb567c216d611a1c27750330ca0fd90cd80ba7823170532eb;
-  faithful supported-native refinement7f68ecb8584ae3e9781fd5c07c140c770dc97ad34f0abc6adcfcf7d788709017;
-  current corrective project-owned audio pointer digest0bd1f08bf14be91f87977d67624debe847ccba0d53d63dde4ed7de5213edec79.
-  See evidence/approval-lineage.json and audio-permission-correction-lineage.json.
-  Same approved short-pop/learning scope; no new human approval fabricated. Owner
-  manually reported restricted previous audio; repair does not claim revalidation/gameplay
-  acceptance.'
-review_digest: 0bd1f08bf14be91f87977d67624debe847ccba0d53d63dde4ed7de5213edec79
+evidence: 'Actual owner original approval: ''yes, approve! Build it but ask implementer
+  to not perform testing, it will be done manually''; original digest72c3683915afd8fbb567c216d611a1c27750330ca0fd90cd80ba7823170532eb.
+  Current owner directly requested: ''When hitting the last pop039_ring_7 add a popup
+  to user, that they completed the mission and can return to the hub''. Bounded final_done
+  copy refinement, existing successful-commit popup/recipe/guards unchanged. Current
+  digeste8a90c247a73f3aabcd695863bb9199700073294edd096779dd8ef17533fe5e1; see evidence/approval-lineage.json
+  and completion-popup-copy-refinement.json. No new approval fabricated or requested;
+  manual-testing condition remains.'
+review_digest: e8a90c247a73f3aabcd695863bb9199700073294edd096779dd8ef17533fe5e1
