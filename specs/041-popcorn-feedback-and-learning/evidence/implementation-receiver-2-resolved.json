@@ -1,0 +1,164 @@
+{
+  "halo": {
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_VFX_Creator_V2_C_UAID_E89C2592D1B52A0903_1449852736"
+    },
+    "transform": {
+      "location": {
+        "x": -2580,
+        "y": -17120,
+        "z": 2680
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "settings": {
+      "effectGenerationAmount": 1,
+      "spawnZoneShape": "Point",
+      "spriteRotationAlignment": "Planar",
+      "spriteSpeed": 0,
+      "effectGravity": 0,
+      "spriteDuration": 0.5,
+      "loop": "Never",
+      "loopDuration": 0.5,
+      "startEffectsWhenEnabled": false,
+      "enabledDuringPhase": "Gameplay Only",
+      "spriteSize": 0.65,
+      "bKeepSize": false,
+      "sizeOverTime": 0.9,
+      "useRandomColor": false,
+      "mainColor": {
+        "r": 0.18000000715255737,
+        "g": 0.8999999761581421,
+        "b": 0.6499999761581421,
+        "a": 1
+      },
+      "mainColorBrightness": 2,
+      "useSecondaryColor": true,
+      "secondaryColor": {
+        "r": 0.18000000715255737,
+        "g": 0.8999999761581421,
+        "b": 0.6499999761581421,
+        "a": 0
+      },
+      "secondaryColorBrightness": 0.1,
+      "spriteShape": {
+        "smallIcon": {
+          "refPath": "/CRD_VFX_Creator/Assets/Icons_64/T_UI_IconLibrary_Shockwave01_64.T_UI_IconLibrary_Shockwave01_64"
+        },
+        "largeIcon": {
+          "refPath": "/CRD_VFX_Creator/Assets/Icons_64/T_UI_IconLibrary_Shockwave01_64.T_UI_IconLibrary_Shockwave01_64"
+        }
+      }
+    },
+    "before": {
+      "effectGenerationAmount": 50,
+      "spawnZoneShape": "Sphere",
+      "spriteRotationAlignment": "Random",
+      "spriteSpeed": 50,
+      "effectGravity": 50,
+      "spriteDuration": 1,
+      "loop": "Forever",
+      "loopDuration": 1,
+      "startEffectsWhenEnabled": true,
+      "enabledDuringPhase": "Always",
+      "spriteSize": 1,
+      "bKeepSize": true,
+      "sizeOverTime": 75,
+      "useRandomColor": false,
+      "mainColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "mainColorBrightness": 3.7,
+      "useSecondaryColor": false,
+      "secondaryColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "secondaryColorBrightness": 3.7,
+      "spriteShape": {
+        "smallIcon": null,
+        "largeIcon": null
+      }
+    }
+  },
+  "audio": {
+    "actor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_CRD_AudioPlayer_C_UAID_E89C2592D1B52A0903_1451372737"
+    },
+    "transform": {
+      "location": {
+        "x": -2580,
+        "y": -17120,
+        "z": 2680
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "settings": {
+      "audio": {
+        "refPath": "/Game/Sounds/Quests/SFX/Device/Device_Call_End_Pop_01.Device_Call_End_Pop_01"
+      },
+      "volume": 0.35,
+      "play On Hit": false,
+      "can Be Heard By": "Instigator Only",
+      "play Location": "Device",
+      "loopAudio": false,
+      "restart Audio When Activated": false,
+      "enable Spatialization": true,
+      "enable Volume Attenuation": true,
+      "attenuation Function": "Linear",
+      "attenuation Min Distance": 600,
+      "attenuation Falloff Distance": 1200,
+      "fadeInDuration": 0,
+      "fadeOutDuration": 0.02500000037252903,
+      "playDuringWaitingForPlayers": false,
+      "playDuringGameCountdown": false,
+      "playDuringGameplay": false,
+      "playDuringRoundEnd": false,
+      "playDuringGameEnd": false
+    },
+    "before": {
+      "audio": null,
+      "volume": 1,
+      "play On Hit": true,
+      "can Be Heard By": "Everyone",
+      "play Location": "Device",
+      "loopAudio": false,
+      "restart Audio When Activated": false,
+      "enable Spatialization": true,
+      "enable Volume Attenuation": true,
+      "attenuation Function": "Linear",
+      "attenuation Min Distance": 4,
+      "attenuation Falloff Distance": 32,
+      "fadeInDuration": 0,
+      "fadeOutDuration": 0,
+      "playDuringWaitingForPlayers": false,
+      "playDuringGameCountdown": false,
+      "playDuringGameplay": false,
+      "playDuringRoundEnd": false,
+      "playDuringGameEnd": false
+    }
+  }
+}

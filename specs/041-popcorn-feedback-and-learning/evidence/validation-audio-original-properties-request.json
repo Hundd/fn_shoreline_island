@@ -1,0 +1,25 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "editor_toolset.toolsets.object.ObjectTools",
+      "tool_name": "get_properties",
+      "arguments": {
+        "instance": {
+          "refPath": "/fn_shoreline_island/Audio/popcorn_hit_original.popcorn_hit_original"
+        },
+        "properties": [
+          "duration",
+          "numChannels",
+          "importedSampleRate",
+          "sampleRate",
+          "assetImportData",
+          "bLooping"
+        ]
+      }
+    }
+  }
+}

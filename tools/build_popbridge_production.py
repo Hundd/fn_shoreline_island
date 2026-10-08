@@ -3,7 +3,7 @@ from pathlib import Path
 import yaml
 
 root = Path(__file__).resolve().parents[1]
-spec = yaml.safe_load((root / 'specs/039-popcorn-parkour/map.yaml').read_text(encoding='utf-8'))
+spec = yaml.safe_load((root / 'specs/041-popcorn-feedback-and-learning/map.yaml').read_text(encoding='utf-8'))
 contract = next(d for d in spec['devices'] if d['id'] == 'controller')['settings']['course_contract']
 scene = yaml.safe_load((root / 'specs/039-popcorn-parkour/production-scene.yaml').read_text(encoding='utf-8'))
 origin = scene['origin_cm']
@@ -14,11 +14,11 @@ def world(values):
 def boolean(value):
     return 'true' if value else 'false'
 lines = ['using { /Fortnite.com/Devices }', 'using { /Fortnite.com/Characters }', 'using { /Verse.org/Simulation }', 'using { /UnrealEngine.com/Temporary/SpatialMath }', '', '# Reviewed profile data only; the generic controller owns every transition.', 'fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_controller):']
-arrays = [('course_decks','creative_prop',7),('course_targets','fn_shoreline_island_data_target',0),('course_mechanisms','creative_prop',24),('course_instructions','vfx_creator_device',24),('course_puffs','vfx_creator_device',8),('course_flourishes','vfx_creator_device',8),('course_decor','creative_prop',53),('course_returns','button_device',2)]
+arrays = [('course_decks','creative_prop',7),('course_targets','fn_shoreline_island_data_target',0),('course_mechanisms','creative_prop',24),('course_instructions','vfx_creator_device',24),('course_puffs','vfx_creator_device',8),('course_flourishes','vfx_creator_device',8),('course_hit_halos','vfx_creator_device',8),('course_decor','creative_prop',53),('course_returns','button_device',2)]
 for name,kind,count in arrays:
     lines += ['    @editable', f'    {name}:[]{kind} = array{{' + ', '.join(kind+'{}' for _ in range(count)) + '}']
 lines += ['    @editable', '    mission_board:billboard_device = billboard_device{}', '    @editable', '    final_board:billboard_device = billboard_device{}']
-lines += ['    @editable', '    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}', '    @editable', '    pix:creative_prop = creative_prop{}', '    var pix_home:transform = transform{}', '    var decor_homes:[]transform = array{}', '    var claimed_station:logic = false', '', '    OnBegin<override>()<suspends>:void =', '        Hide()', '        set return_buttons = course_returns', '        if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):', '            Print("PopBridge production support count invalid; inactive")', '            return', '        reference_failure := supports_failure()', '        if (reference_failure <> 0):', '            Print("PopBridge production reference invalid code={reference_failure}; inactive")', '            return', '        set pix_home = pix.GetTransform()', '        for (prop : course_decor):', '            set decor_homes += array{prop.GetTransform()}', '        set landings = array{}', '        set machines = array{}']
+lines += ['    @editable', '    navigation_journal:fn_shoreline_island_academy_journal = fn_shoreline_island_academy_journal{}', '    @editable', '    pix:creative_prop = creative_prop{}', '    var pix_home:transform = transform{}', '    var decor_homes:[]transform = array{}', '    var claimed_station:logic = false', '', '    OnBegin<override>()<suspends>:void =', '        Hide()', '        set return_buttons = course_returns', '        if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_hit_halos.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):', '            Print("PopBridge production support count invalid; inactive")', '            return', '        reference_failure := supports_failure()', '        if (reference_failure <> 0):', '            Print("PopBridge production reference invalid code={reference_failure}; inactive")', '            return', '        set pix_home = pix.GetTransform()', '        for (prop : course_decor):', '            set decor_homes += array{prop.GetTransform()}', '        set landings = array{}', '        set machines = array{}']
 nodes = contract['nodes']
 ids = {n['id']:n['index'] for n in nodes}
 for n in nodes:
@@ -32,7 +32,7 @@ for r in contract['receivers']:
     refs=', '.join(f'{name} := {arr}[{index}]' for name,arr,index in [('target','course_targets',i),('a','course_mechanisms',i*3),('b','course_mechanisms',i*3+1),('c','course_mechanisms',i*3+2),('ea','course_instructions',i*3),('eb','course_instructions',i*3+1),('ec','course_instructions',i*3+2),('puff','course_puffs',i),('flourish','course_flourishes',i)])
     lines += [f'        if ({refs}):', f"            set machines += array{{popbridge_machine{{receiver := popbridge_receiver{{target_id := {i}, from_landing := {ids[r['from_landing']]}, creates := {creates}, instruction := {r['instruction']}}}, target := target, mechanisms := array{{a, b, c}}, instructions := array{{ea, eb, ec}}, wrong_puff := puff, flourish := flourish}}}}"]
 lines += ['        checks := fixtures.self_check(array{', *[f'            landing.node,' for n in []], '        }, array{}, array{})'] if False else []
-lines += ['        var checked_nodes:[]popbridge_node = array{}', '        var checked_receivers:[]popbridge_receiver = array{}', '        for (landing : landings):', '            set checked_nodes += array{landing.node}', '        for (machine : machines):', '            set checked_receivers += array{machine.receiver}', '        fixture_result := fixtures.self_check(checked_nodes, edges, checked_receivers)', '        Print("POPBRIDGE_PRODUCTION FIXTURE result={fixture_result}")', '        if (fixture_result <> 0):', '            return', '        targets_started := await_target_startup()', '        if (targets_started?):', '            if (final_machine := machines[7]):', '                set final_machine.target.display_label = "FINISH"', '            initialize()', '            if (ready?, debug_tag <> ""):','                spawn { observe_playtest() }', '            reset_presentation()', '            mission_board.SetText(text("POPCORN PARKOUR -> ramp. Shoot LOAD HEAT POP. Jump onto what you make."))', '            mission_board.ShowText()', '            mission_board.UpdateDisplay()', '            final_board.SetText(text("\\nSTART AT LOAD ->\\nFollow the ramp."))', '            final_board.ShowText()', '            final_board.UpdateDisplay()', '            replay_button.SetInteractionText(text("Replay Popcorn Parkour"))', '            for (button : return_buttons):', '                button.SetInteractionText(text("Return to Hub"))', '']
+lines += ['        var checked_nodes:[]popbridge_node = array{}', '        var checked_receivers:[]popbridge_receiver = array{}', '        for (landing : landings):', '            set checked_nodes += array{landing.node}', '        for (machine : machines):', '            set checked_receivers += array{machine.receiver}', '        fixture_result := fixtures.self_check(checked_nodes, edges, checked_receivers)', '        Print("POPBRIDGE_PRODUCTION FIXTURE result={fixture_result}")', '        if (fixture_result <> 0):', '            return', '        targets_started := await_target_startup()', '        if (targets_started?):', '            if (final_machine := machines[7]):', '                set final_machine.target.display_label = "FINISH"', '            initialize()', '            if (ready?, debug_tag <> ""):','                spawn { observe_playtest() }', '            reset_presentation()', '            mission_board.SetText(text(card_for("entry")))', '            mission_board.ShowText()', '            mission_board.UpdateDisplay()', '            final_board.SetText(text("\\nSTART AT LOAD ->\\nFollow the ramp."))', '            final_board.ShowText()', '            final_board.UpdateDisplay()', '            replay_button.SetInteractionText(text("Replay Popcorn Parkour"))', '            for (button : return_buttons):', '                button.SetInteractionText(text("Return to Hub"))', '']
 lines += '''    # Diagnostic codes retain the same strict checks; prop order: decks, mechanisms, decor, Pix.
     supports_failure()<transacts>:int =
         for (index -> prop : course_decks + course_mechanisms + course_decor + array{pix}):
@@ -68,6 +68,18 @@ lines += '''    # Diagnostic codes retain the same strict checks; prop order: de
         for (index -> button : return_buttons):
             if (button.GetTransform().Translation = vector3{}):
                 return 8000 + index
+        for (index -> halo : course_hit_halos):
+            if (halo.GetTransform().Translation = vector3{}):
+                return 9000 + index
+            for (other_index -> other : course_hit_halos):
+                if (index <> other_index, halo.GetTransform().Translation = other.GetTransform().Translation):
+                    return 9100 + index
+        for (index -> target : course_targets):
+            if (target.hit_sound.GetTransform().Translation = vector3{}):
+                return 9300 + index
+            for (other_index -> other : course_targets):
+                if (index <> other_index, target.hit_sound.GetTransform().Translation = other.hit_sound.GetTransform().Translation):
+                    return 9400 + index
         return 0
 
     claim_owner<override>(input_player:player):logic =
@@ -94,7 +106,7 @@ lines += '''    # Diagnostic codes retain the same strict checks; prop order: de
                 set step = 2
             if (state.checkpoint >= 2):
                 set step = 3
-            navigation_journal.report_activity(input_player, 6, 6, step, 3, text("PopBridge: LOAD > HEAT > POP. Shoot, then jump onto what you make."), state.generation)
+            navigation_journal.report_activity(input_player, 6, 6, step, 3, text(card_for(lesson_id)), state.generation)
 
     geometry_changed<override>():void =
         for (deck_index := 1..5):
@@ -145,6 +157,13 @@ lines += '''    # Diagnostic codes retain the same strict checks; prop order: de
                 else:
                     prop.Hide()
         geometry_changed()
+        mission_board.SetText(text(card_for("entry")))
+        mission_board.ShowText()
+        mission_board.UpdateDisplay()
+        final_board.SetText(text("START AT LOAD ->\\nFollow the ramp."))
+        final_board.ShowText()
+        final_board.UpdateDisplay()
+        set_ribbon("Draft: LOAD > HEAT > POP (0/3). Next: LOAD.")
 '''.splitlines()
 lines += '''
     observe_playtest()<suspends>:void =
@@ -158,6 +177,25 @@ lines += '''
                         set grounded = 1
                     debug("PROBE time={GetSimulationElapsedTime()} x={pose.X} y={pose.Y} z={pose.Z} ground={grounded} present={present_landing(input_player)} prefix={state.prefix} checkpoint={state.checkpoint} pending={state.pending}")
 '''.splitlines()
+learning = yaml.safe_load((root/'specs/041-popcorn-feedback-and-learning/learning-content.yaml').read_text(encoding='utf-8'))
+lines += (root/'tools/popbridge_presentation.verse.txt').read_text(encoding='utf-8').splitlines()
+import json
+lines += ['', '    lesson_line(event_id:string):string =']
+for row in learning['rows']:
+    lines += [f'        if (event_id = {json.dumps(row["id"])}):']
+    if row['id'] == 'recovery':
+        lines += ['            if (recipe_saved?):', '                return '+json.dumps(learning['recovery_saved_variant'])]
+    lines += ['            return '+json.dumps(row['lesson'])]
+lines += ['        return ""', '', '    action_line(event_id:string):string =']
+for row in learning['rows']:
+    lines += [f'        if (event_id = {json.dumps(row["id"])}):']
+    if row['id'] == 'wrong_order':
+        lines += ['            return "Next: {instruction_name(state.prefix)}."']
+    elif row['id'] in {'wrong_position','consumed'}:
+        lines += ['            return "Next: {action_line(lesson_id)}"']
+    else:
+        lines += ['            return '+json.dumps(row['action'])]
+lines += ['        return ""']
 (root/'Content/fn_shoreline_island_popbridge_production.verse').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 
 

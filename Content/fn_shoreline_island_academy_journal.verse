@@ -338,6 +338,12 @@ fn_shoreline_island_academy_journal := class(creative_device):
     show_core_restored(input_player:player, expected_round:int)<suspends>:void =
         # Kept for the Agent's existing call; presentation owns deduplication.
         Sleep(0.0)
+    # Read-only presentation query; module activity/rewards remain authoritative.
+    is_panel_open(input_player:player)<transacts>:logic =
+        if (panels[input_player]?):
+            return true
+        return false
+
     close_panel(input_player:player):void =
         if (panel := panels[input_player]?, personal_ui := GetPlayerUI[input_player]):
             personal_ui.RemoveWidget(panel)

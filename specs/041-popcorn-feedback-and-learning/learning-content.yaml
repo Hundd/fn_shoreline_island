@@ -1,0 +1,118 @@
+version: 1
+lesson_card: Lesson line + recipe/status line + next action; no quiz or delay
+recipe_before_commit: 'Draft: LOAD > HEAT > POP ({accepted prefix}/3).'
+recipe_after_commit: PopBridge = LOAD > HEAT > POP.
+rows:
+- id: entry
+  trigger: Existing mission board at arrival; also starter card when owner acquired
+  lesson: A skill is a few steps you can use again.
+  action: 'Build PopBridge: shoot LOAD.'
+- id: load
+  trigger: Accepted LOAD (fixture result1, prefix1)
+  lesson: LOAD puts in a kernel. One instruction, one action.
+  action: 'Next: shoot HEAT.'
+- id: heat
+  trigger: Accepted HEAT (fixture result1, prefix2)
+  lesson: HEAT warms the kernel. Steps work in order.
+  action: 'Next: shoot POP.'
+- id: pop_pending
+  trigger: Accepted teaching POP, before commit
+  lesson: POP releases the popcorn.
+  action: Running POP; wait for the platform.
+- id: saved
+  trigger: Teaching POP successfully commits first platform
+  lesson: POP made popcorn. Three steps are saved as one skill!
+  action: Jump onto your popcorn.
+- id: land_first
+  trigger: Actual accepted starter -> first landing
+  lesson: You used the popcorn you made. Now reuse the skill.
+  action: Shoot PopBridge to make the next one.
+- id: reuse_first_pending
+  trigger: Accepted target3 invocation, before commit
+  lesson: One shot runs all three saved steps.
+  action: Running LOAD > HEAT > POP.
+- id: reuse_first_done
+  trigger: Target3 commit
+  lesson: One shot ran all three saved steps.
+  action: Jump onto the new popcorn.
+- id: land_reuse
+  trigger: Actual accepted first -> reuse landing
+  lesson: Same steps, another bridge. You checked the result by jumping.
+  action: Shoot PopBridge at the next machine.
+- id: reuse_fork_pending
+  trigger: Accepted target4 invocation
+  lesson: Same skill, new machine.
+  action: Running LOAD > HEAT > POP.
+- id: reuse_fork_done
+  trigger: Target4 commit
+  lesson: The same steps made another bridge.
+  action: Jump to the wide popcorn landing.
+- id: land_fork
+  trigger: Actual accepted reuse -> fork landing
+  lesson: Pick either path. Both use the same skill.
+  action: Shoot the moustache or bucket machine.
+- id: branch_pending
+  trigger: Accepted target5 or6 invocation
+  lesson: Your chosen machine runs the same three steps.
+  action: Running LOAD > HEAT > POP.
+- id: branch_done
+  trigger: Target5 or6 commit
+  lesson: Same skill, a different popcorn surprise!
+  action: Jump onto your chosen popcorn.
+- id: land_branch
+  trigger: Actual accepted fork -> left or right landing
+  lesson: Different path, same skill. Your instructions still work.
+  action: Jump onto the finish landing.
+- id: land_finish
+  trigger: Actual accepted left/right -> finish landing
+  lesson: Use PopBridge once more. A skill can be reused many times.
+  action: Shoot the final machine.
+- id: final_pending
+  trigger: Accepted target7, valid final landing and branch
+  lesson: The final machine runs the same saved steps.
+  action: Running LOAD > HEAT > POP.
+- id: final_done
+  trigger: Target7 successful commit; existing reward
+  lesson: One skill. Many bridges! You saved three steps and reused them.
+  action: Try Replay, Return, or keep jumping.
+- id: wrong_order
+  trigger: Fixture result3, retain actual prefix
+  lesson: Steps work in order. Your finished steps are safe.
+  action: 'Next: {LOAD|HEAT|POP from current prefix}.'
+- id: recovery
+  trigger: Successful existing recovery teleport, unfinished only
+  lesson: Missed the jump? Your steps and bridges are safe.
+  action: Try the jump again.
+- id: recovery_fail
+  trigger: Existing recovery teleport failure
+  lesson: Your bridges are safe. Trying your last landing again.
+  action: Return is available.
+- id: wrong_position
+  trigger: Current owner valid shot rejected for landing/progression
+  lesson: Use the machine from your last completed landing.
+  action: 'Next: {action from current committed state}.'
+- id: consumed
+  trigger: Fixture result4 if reachable; no pulse
+  lesson: Already popped. Your bridge stays.
+  action: 'Next: {action from current committed state}.'
+timing:
+  base: Persistent until next meaningful event; no enforced reading time or queued
+    captions
+  retry_seconds: 2.0
+  instruction_beats_seconds: 0.25
+  accepted_halo_seconds: 0.5
+  audio_max_seconds: 0.2
+  accepted_onset_target_seconds: 0.15
+priority:
+- Release/round/Return/departure hides all and invalidates epochs
+- Journal open masks lesson card; closing renders current state without replaying
+  sound/halo
+- Recovery or rejection action overrides for2s; newer actual accepted shot/commit/landing
+  replaces immediately
+- Accepted event/commit/changed accepted landing updates base card
+- Repeated monitor/report_state calls update journal only; never redraw base card
+  or extend override timer
+cancel: Owner+attempt generation+round+lesson epoch; no speech/message queue; stale
+  timers never restore old stage card
+recovery_saved_variant: 'After committed saved recipe only: Missed the jump? Your
+  skill and bridges are safe.'

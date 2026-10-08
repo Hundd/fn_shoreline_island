@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "map_id": "popcorn_feedback_and_learning",
+  "review_digest": "5320a98f22b37398f23a0bd151047fc9ba0325be08205f4a7f83dea07c01c457",
+  "verdict": "blocked",
+  "violations": [],
+  "advisories": [
+    {
+      "code": "INTERACTION_CROWDED",
+      "zone": "course",
+      "detail": "10 devices in course; review interaction density"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage teach_pop has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage first_reuse has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage finale has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "LEARN_NO_LESSON",
+      "zone": null,
+      "detail": "no knowledge_room zone; verify the learning objective is introduced before action"
+    }
+  ],
+  "blockers": [
+    {
+      "code": "OPEN_ASSUMPTION",
+      "detail": "a02_halo_asset: Exact supported native VFX asset/configuration and eight reusable candidates must be inspected. Must show hollow0.5s pulse independently of target deactivate and instruction/flourish lifecycles; no asset path invented."
+    },
+    {
+      "code": "OPEN_ASSUMPTION",
+      "detail": "a03_pop_audio: Exact short pop asset and target.hit_sound bindings, instigator-only play/stop and attenuation/volume schema need live discovery. Distinct positioned players avoid relocating shared audio or stacking two pops."
+    },
+    {
+      "code": "OPEN_ASSUMPTION",
+      "detail": "a04_hud_layout: Inspect feedback HUD layer/anchor/scale, Academy HUD and journal open state; verify proposed persistent3-line card and journal suppression are supported and legible on actual standing views."
+    }
+  ],
+  "counts": {
+    "zones": 1,
+    "stages": 6,
+    "markers": 20,
+    "connections": 0,
+    "devices": 10,
+    "targets": 8,
+    "violations": 0,
+    "advisories": 5,
+    "blockers": 3
+  }
+}

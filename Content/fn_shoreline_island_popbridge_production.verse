@@ -18,6 +18,8 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
     @editable
     course_flourishes:[]vfx_creator_device = array{vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}}
     @editable
+    course_hit_halos:[]vfx_creator_device = array{vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}, vfx_creator_device{}}
+    @editable
     course_decor:[]creative_prop = array{creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}, creative_prop{}}
     @editable
     course_returns:[]button_device = array{button_device{}, button_device{}}
@@ -36,7 +38,7 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
     OnBegin<override>()<suspends>:void =
         Hide()
         set return_buttons = course_returns
-        if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):
+        if (course_decks.Length <> 7 or course_targets.Length <> 8 or course_mechanisms.Length <> 24 or course_instructions.Length <> 24 or course_puffs.Length <> 8 or course_flourishes.Length <> 8 or course_hit_halos.Length <> 8 or course_decor.Length <> 53 or return_buttons.Length <> 2):
             Print("PopBridge production support count invalid; inactive")
             return
         reference_failure := supports_failure()
@@ -104,7 +106,7 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
             if (ready?, debug_tag <> ""):
                 spawn { observe_playtest() }
             reset_presentation()
-            mission_board.SetText(text("POPCORN PARKOUR -> ramp. Shoot LOAD HEAT POP. Jump onto what you make."))
+            mission_board.SetText(text(card_for("entry")))
             mission_board.ShowText()
             mission_board.UpdateDisplay()
             final_board.SetText(text("\nSTART AT LOAD ->\nFollow the ramp."))
@@ -149,6 +151,18 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
         for (index -> button : return_buttons):
             if (button.GetTransform().Translation = vector3{}):
                 return 8000 + index
+        for (index -> halo : course_hit_halos):
+            if (halo.GetTransform().Translation = vector3{}):
+                return 9000 + index
+            for (other_index -> other : course_hit_halos):
+                if (index <> other_index, halo.GetTransform().Translation = other.GetTransform().Translation):
+                    return 9100 + index
+        for (index -> target : course_targets):
+            if (target.hit_sound.GetTransform().Translation = vector3{}):
+                return 9300 + index
+            for (other_index -> other : course_targets):
+                if (index <> other_index, target.hit_sound.GetTransform().Translation = other.hit_sound.GetTransform().Translation):
+                    return 9400 + index
         return 0
 
     claim_owner<override>(input_player:player):logic =
@@ -175,7 +189,7 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
                 set step = 2
             if (state.checkpoint >= 2):
                 set step = 3
-            navigation_journal.report_activity(input_player, 6, 6, step, 3, text("PopBridge: LOAD > HEAT > POP. Shoot, then jump onto what you make."), state.generation)
+            navigation_journal.report_activity(input_player, 6, 6, step, 3, text(card_for(lesson_id)), state.generation)
 
     geometry_changed<override>():void =
         for (deck_index := 1..5):
@@ -226,6 +240,13 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
                 else:
                     prop.Hide()
         geometry_changed()
+        mission_board.SetText(text(card_for("entry")))
+        mission_board.ShowText()
+        mission_board.UpdateDisplay()
+        final_board.SetText(text("START AT LOAD ->\nFollow the ramp."))
+        final_board.ShowText()
+        final_board.UpdateDisplay()
+        set_ribbon("Draft: LOAD > HEAT > POP (0/3). Next: LOAD.")
 
     observe_playtest()<suspends>:void =
         loop:
@@ -237,3 +258,272 @@ fn_shoreline_island_popbridge_production := class(fn_shoreline_island_popbridge_
                     if (character.IsOnGround[]):
                         set grounded = 1
                     debug("PROBE time={GetSimulationElapsedTime()} x={pose.X} y={pose.Y} z={pose.Z} ground={grounded} present={present_landing(input_player)} prefix={state.prefix} checkpoint={state.checkpoint} pending={state.pending}")
+    # Feature041 presentation only; fixture/progress decisions stay in controller.
+    var lesson_id:string = "entry"
+    var override_id:string = ""
+    var lesson_epoch:int = 0
+    var recipe_saved:logic = false
+    var journal_masked:logic = false
+    var last_rejection:float = -10.0
+    var last_pop_audio:float = -10.0
+    var halo_epochs:[int]int = map{}
+    var audio_epochs:[int]int = map{}
+
+    recipe_line():string =
+        if (recipe_saved?):
+            return "PopBridge = LOAD > HEAT > POP."
+        return "Draft: LOAD > HEAT > POP ({state.prefix}/3)."
+
+    card_for(event_id:string):string =
+        return "{lesson_line(event_id)}\n{recipe_line()}\n{action_line(event_id)}"
+
+    current_card():string =
+        if (override_id <> ""):
+            return card_for(override_id)
+        return card_for(lesson_id)
+
+    render_card(input_player:player):void =
+        if (valid(input_player, state.generation, observed_round)?):
+            set journal_masked = navigation_journal.is_panel_open(input_player)
+            if (journal_masked?):
+                feedback.Hide(input_player)
+            else:
+                # Replace this owner's previous card; never enqueue captions.
+                feedback.Hide(input_player)
+                feedback.Show(input_player, text(current_card()), ?DisplayTime := 0.0)
+
+    sync_card<override>(input_player:player):void =
+        panel_visible := navigation_journal.is_panel_open(input_player)
+        if (panel_visible <> journal_masked):
+            render_card(input_player)
+
+    advance_lesson(input_player:player, event_id:string):void =
+        set lesson_epoch += 1
+        set override_id = ""
+        set lesson_id = event_id
+        render_card(input_player)
+        report_state(input_player)
+
+    owner_acquired<override>(input_player:player):void =
+        set presentation_owner = option{input_player}
+        set recipe_saved = false
+        set last_rejection = -10.0
+        set last_pop_audio = -10.0
+        advance_lesson(input_player, "entry")
+
+    accepted_feedback<override>(machine:popbridge_machine, input_player:player):void =
+        id := machine.receiver.target_id
+        # Snapshot before teaching refresh/commit parks the disabled hit surface.
+        if (halo := course_hit_halos[id]):
+            var pose:transform = halo.GetTransform()
+            set pose.Translation = machine.target.hit_surface.GetTransform().Translation
+            if (halo.TeleportTo[pose]):
+                var epoch:int = 0
+                if (previous := halo_epochs[id]):
+                    set epoch = previous
+                set epoch += 1
+                if (set halo_epochs[id] = epoch) {}
+                halo.Begin()
+                spawn { finish_halo(input_player, id, state.generation, observed_round, epoch) }
+        var play_pop:logic = false
+        if (GetSimulationElapsedTime() - last_pop_audio >= 0.15):
+            set play_pop = true
+            set last_pop_audio = GetSimulationElapsedTime()
+        machine.target.accept(input_player, false, ?play_audio := play_pop)
+        if (play_pop?):
+            var epoch:int = 0
+            if (previous := audio_epochs[id]):
+                set epoch = previous
+            set epoch += 1
+            if (set audio_epochs[id] = epoch) {}
+            spawn { finish_audio(input_player, id, state.generation, observed_round, epoch) }
+        advance_lesson(input_player, accepted_event(id))
+
+    finish_halo(input_player:player, id:int, token:int, round:int, epoch:int)<suspends>:void =
+        Sleep(0.5)
+        if (valid(input_player, token, round)?, halo_epochs[id] = epoch, halo := course_hit_halos[id]):
+            halo.End()
+
+    finish_audio(input_player:player, id:int, token:int, round:int, epoch:int)<suspends>:void =
+        Sleep(0.175)
+        if (valid(input_player, token, round)?, audio_epochs[id] = epoch, target := course_targets[id]):
+            target.hit_sound.Stop(input_player)
+
+    accepted_event(id:int):string =
+        if (id = 0):
+            return "load"
+        if (id = 1):
+            return "heat"
+        if (id = 2):
+            return "pop_pending"
+        if (id = 3):
+            return "reuse_first_pending"
+        if (id = 4):
+            return "reuse_fork_pending"
+        if (id = 5 or id = 6):
+            return "branch_pending"
+        return "final_pending"
+
+    committed_lesson<override>(input_player:player, target_id:int):void =
+        var event_id:string = "final_done"
+        if (target_id = 2):
+            set recipe_saved = true
+            set event_id = "saved"
+        else if (target_id = 3):
+            set event_id = "reuse_first_done"
+        else if (target_id = 4):
+            set event_id = "reuse_fork_done"
+        else if (target_id = 5 or target_id = 6):
+            set event_id = "branch_done"
+        advance_lesson(input_player, event_id)
+        if (target_id = 7):
+            final_board.SetText(text(card_for("final_done")))
+            final_board.UpdateDisplay()
+
+    landed_lesson<override>(input_player:player, landing_id:int):void =
+        var event_id:string = "land_finish"
+        if (landing_id = 1):
+            set event_id = "land_first"
+        else if (landing_id = 2):
+            set event_id = "land_reuse"
+        else if (landing_id = 3):
+            set event_id = "land_fork"
+        else if (landing_id = 4 or landing_id = 5):
+            set event_id = "land_branch"
+        advance_lesson(input_player, event_id)
+
+    retry_lesson<override>(input_player:player, event_id:string):void =
+        # Repeated monitor recovery/rejected callbacks cannot extend a cue.
+        if (event_id = "wrong_position", GetSimulationElapsedTime() - last_rejection < 1.0):
+            return
+        if (override_id = event_id):
+            return
+        set last_rejection = GetSimulationElapsedTime()
+        set lesson_epoch += 1
+        set override_id = event_id
+        render_card(input_player)
+        spawn { finish_override(input_player, state.generation, observed_round, lesson_epoch) }
+
+    finish_override(input_player:player, token:int, round:int, epoch:int)<suspends>:void =
+        Sleep(2.0)
+        if (valid(input_player, token, round)?, lesson_epoch = epoch):
+            set override_id = ""
+            render_card(input_player)
+
+    stop_presentation_effects<override>():void =
+        set lesson_epoch += 1
+        for (halo : course_hit_halos):
+            halo.End()
+        if (current := presentation_owner?):
+            for (target : course_targets):
+                target.hit_sound.Stop(current)
+            feedback.Hide(current)
+        set presentation_owner = false
+        set halo_epochs = map{}
+        set audio_epochs = map{}
+        set lesson_id = "entry"
+        set override_id = ""
+        set recipe_saved = false
+        set journal_masked = false
+
+    var presentation_owner:?player = false
+
+    lesson_line(event_id:string):string =
+        if (event_id = "entry"):
+            return "A skill is a few steps you can use again."
+        if (event_id = "load"):
+            return "LOAD puts in a kernel. One instruction, one action."
+        if (event_id = "heat"):
+            return "HEAT warms the kernel. Steps work in order."
+        if (event_id = "pop_pending"):
+            return "POP releases the popcorn."
+        if (event_id = "saved"):
+            return "POP made popcorn. Three steps are saved as one skill!"
+        if (event_id = "land_first"):
+            return "You used the popcorn you made. Now reuse the skill."
+        if (event_id = "reuse_first_pending"):
+            return "One shot runs all three saved steps."
+        if (event_id = "reuse_first_done"):
+            return "One shot ran all three saved steps."
+        if (event_id = "land_reuse"):
+            return "Same steps, another bridge. You checked the result by jumping."
+        if (event_id = "reuse_fork_pending"):
+            return "Same skill, new machine."
+        if (event_id = "reuse_fork_done"):
+            return "The same steps made another bridge."
+        if (event_id = "land_fork"):
+            return "Pick either path. Both use the same skill."
+        if (event_id = "branch_pending"):
+            return "Your chosen machine runs the same three steps."
+        if (event_id = "branch_done"):
+            return "Same skill, a different popcorn surprise!"
+        if (event_id = "land_branch"):
+            return "Different path, same skill. Your instructions still work."
+        if (event_id = "land_finish"):
+            return "Use PopBridge once more. A skill can be reused many times."
+        if (event_id = "final_pending"):
+            return "The final machine runs the same saved steps."
+        if (event_id = "final_done"):
+            return "One skill. Many bridges! You saved three steps and reused them."
+        if (event_id = "wrong_order"):
+            return "Steps work in order. Your finished steps are safe."
+        if (event_id = "recovery"):
+            if (recipe_saved?):
+                return "After committed saved recipe only: Missed the jump? Your skill and bridges are safe."
+            return "Missed the jump? Your steps and bridges are safe."
+        if (event_id = "recovery_fail"):
+            return "Your bridges are safe. Trying your last landing again."
+        if (event_id = "wrong_position"):
+            return "Use the machine from your last completed landing."
+        if (event_id = "consumed"):
+            return "Already popped. Your bridge stays."
+        return ""
+
+    action_line(event_id:string):string =
+        if (event_id = "entry"):
+            return "Build PopBridge: shoot LOAD."
+        if (event_id = "load"):
+            return "Next: shoot HEAT."
+        if (event_id = "heat"):
+            return "Next: shoot POP."
+        if (event_id = "pop_pending"):
+            return "Running POP; wait for the platform."
+        if (event_id = "saved"):
+            return "Jump onto your popcorn."
+        if (event_id = "land_first"):
+            return "Shoot PopBridge to make the next one."
+        if (event_id = "reuse_first_pending"):
+            return "Running LOAD > HEAT > POP."
+        if (event_id = "reuse_first_done"):
+            return "Jump onto the new popcorn."
+        if (event_id = "land_reuse"):
+            return "Shoot PopBridge at the next machine."
+        if (event_id = "reuse_fork_pending"):
+            return "Running LOAD > HEAT > POP."
+        if (event_id = "reuse_fork_done"):
+            return "Jump to the wide popcorn landing."
+        if (event_id = "land_fork"):
+            return "Shoot the moustache or bucket machine."
+        if (event_id = "branch_pending"):
+            return "Running LOAD > HEAT > POP."
+        if (event_id = "branch_done"):
+            return "Jump onto your chosen popcorn."
+        if (event_id = "land_branch"):
+            return "Jump onto the finish landing."
+        if (event_id = "land_finish"):
+            return "Shoot the final machine."
+        if (event_id = "final_pending"):
+            return "Running LOAD > HEAT > POP."
+        if (event_id = "final_done"):
+            return "Try Replay, Return, or keep jumping."
+        if (event_id = "wrong_order"):
+            return "Next: {instruction_name(state.prefix)}."
+        if (event_id = "recovery"):
+            return "Try the jump again."
+        if (event_id = "recovery_fail"):
+            return "Return is available."
+        if (event_id = "wrong_position"):
+            return "Next: {action_line(lesson_id)}"
+        if (event_id = "consumed"):
+            return "Next: {action_line(lesson_id)}"
+        return ""

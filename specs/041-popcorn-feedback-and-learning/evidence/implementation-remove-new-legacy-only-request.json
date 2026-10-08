@@ -1,0 +1,17 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "editor_toolset.toolsets.scene.SceneTools",
+      "tool_name": "remove_from_scene",
+      "arguments": {
+        "actor": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BP_Device_VFX_Creator_C_UAID_E89C2592D1B52A0903_1238039731"
+        }
+      }
+    }
+  }
+}

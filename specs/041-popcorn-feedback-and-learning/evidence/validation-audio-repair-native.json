@@ -1,0 +1,13 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "line 27: RuntimeError: Script error in editor_toolset.toolsets.asset.AssetTools.get_dependencies:\nAsset does not exist: /fn_shoreline_island/__ExternalActors__/fn_shoreline_island/0/FZ/2QINTZ4I9YHXL2XBDNBX9O\nTraceback (script frames only):\n  File \"<script>\", line 54, in run\n    deps=dependencies(path)\n         ^^^^^^^^^^^^^^^^^^\n  File \"<script>\", line 27, in dependencies\n    return execute_tool(\"editor_toolset.toolsets.asset.AssetTools.get_dependencies\",json.dumps({\"asset_path\":path}))[\"returnValue\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+      }
+    ],
+    "isError": true
+  }
+}

@@ -172,24 +172,27 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                     return
                 set owner = option{input_player}
                 blaster.equip(input_player)
+                owner_acquired(input_player)
             if (current := owner?, current = input_player, valid(input_player, state.generation, observed_round)?):
                 shot_result := fixtures.shot(state, machine.receiver, true, state.generation, present_landing(input_player))
                 debug("SHOT target={machine.receiver.target_id} result={shot_result} prefix={state.prefix} checkpoint={state.checkpoint} token={state.generation}")
                 if (shot_result = 3):
                     machine.wrong_puff.Begin()
-                    show(input_player, "Tiny puff! Next: {instruction_name(state.prefix)}.")
+                    retry_lesson(input_player, "wrong_order")
                     teaching_cues()
                     spawn { clear_puff(machine, state.generation) }
                 else if (shot_result = 4):
-                    show(input_player, "Already popped!")
+                    retry_lesson(input_player, "consumed")
                 else if (shot_result = 1):
-                    machine.target.accept(input_player, false)
+                    accepted_feedback(machine, input_player)
                     set machine.teaching_animation = true
                     spawn { teach_effect(machine, machine.receiver.instruction, state.generation) }
                     teaching_cues()
                 else if (shot_result = 2):
-                    machine.target.accept(input_player, false)
+                    accepted_feedback(machine, input_player)
                     spawn { execute(machine, input_player, state.generation, observed_round) }
+                else if (shot_result = 0):
+                    retry_lesson(input_player, "wrong_position")
 
     valid(input_player:player, token:int, round:int)<transacts>:logic =
         if (current := owner?, current = input_player, input_player.IsActive[], token = state.generation, round = progress.round_generation, character := input_player.GetFortCharacter[], character.IsActive[], inside(character.GetTransform().Translation, bay_min, bay_max)?):
@@ -230,6 +233,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
             debug("COMMIT target={machine.receiver.target_id} creates={machine.receiver.creates} token={token}")
             refresh_geometry()
             committed(machine.receiver.target_id)
+            committed_lesson(input_player, machine.receiver.target_id)
             machine.flourish.Begin()
             set_ribbon("PopBridge = Load > Heat > Pop. Jump onto your popcorn!")
             if (state.finished?):
@@ -237,7 +241,6 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                     cancel_if_current(token)
                     return
                 progress.complete_challenge(input_player, 2)
-                show(input_player, "PopBridge crossed the course! Replay tries the other route.")
             Sleep(0.5)
             if (valid(input_player, token, round)?):
                 machine.flourish.End()
@@ -288,6 +291,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                     if (not inside(position, bay_min, bay_max)?):
                         release()
                     else:
+                        sync_card(current)
                         # Grounded edge contact is safe to credit after a proven
                         # jump; firing still requires the separately inset area.
                         landed := grounded_landing(current, 0.0)
@@ -297,6 +301,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                                 accepted := fixtures.land(state, edges, landed, true, state.generation)
                                 if (accepted?, before <> landed):
                                     debug("LAND node={landed} token={state.generation} jump_from={jump_anchor}")
+                                    landed_lesson(current, landed)
                                 if (accepted?, before <> landed, node := fixtures.find_node(nodes, landed)?, node.milestone >= 0):
                                     progress.complete_challenge(current, node.milestone)
                                 if (accepted?):
@@ -330,9 +335,9 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
         if (node := fixtures.find_node(nodes, state.checkpoint)?, character := input_player.GetFortCharacter[], character.IsActive[]):
             if (character.TeleportTo[node.center + vector3{Z := 20.0}, character.GetTransform().Rotation]):
                 debug("RECOVER node={state.checkpoint} time={GetSimulationElapsedTime()} prefix={state.prefix} built={state.built.Length}")
-                show(input_player, "Back on your last popcorn. Your bridges are safe!")
+                retry_lesson(input_player, "recovery")
             else:
-                show(input_player, "Return is available. Trying your last popcorn again.")
+                retry_lesson(input_player, "recovery_fail")
 
     machine_used(machine:popbridge_machine)<transacts>:logic =
         if (machine.receiver.instruction < 2):
@@ -377,6 +382,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
             set_ribbon("PopBridge = LOAD > HEAT > POP. Saved {state.prefix}/3. Next: {instruction_name(state.prefix)}")
 
     stop_effects():void =
+        stop_presentation_effects()
         for (machine : machines):
             set machine.teaching_animation = false
             for (effect : machine.instructions):
@@ -404,6 +410,24 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
     committed(target_id:int):void = {}
     reset_presentation():void = {}
     geometry_changed():void = {}
+    owner_acquired(input_player:player):void = {}
+    accepted_feedback(machine:popbridge_machine, input_player:player):void =
+        machine.target.accept(input_player, false)
+    committed_lesson(input_player:player, target_id:int):void =
+        if (target_id = 7):
+            show(input_player, "PopBridge crossed the course! Replay tries the other route.")
+    landed_lesson(input_player:player, landing_id:int):void = {}
+    retry_lesson(input_player:player, event_id:string):void =
+        if (event_id = "wrong_order"):
+            show(input_player, "Tiny puff! Next: {instruction_name(state.prefix)}.")
+        else if (event_id = "consumed"):
+            show(input_player, "Already popped!")
+        else if (event_id = "recovery"):
+            show(input_player, "Back on your last popcorn. Your bridges are safe!")
+        else if (event_id = "recovery_fail"):
+            show(input_player, "Return is available. Trying your last popcorn again.")
+    sync_card(input_player:player):void = {}
+    stop_presentation_effects():void = {}
 
     clear_jump():void =
         set last_grounded_landing = -1
@@ -420,6 +444,7 @@ fn_shoreline_island_popbridge_controller := class(creative_device):
                     claimed := claim_owner(current)
                     if (claimed?):
                         set owner = option{current}
+                        owner_acquired(current)
                 else:
                     show(current, "Replay cleared. Return or walk to the starter.")
 

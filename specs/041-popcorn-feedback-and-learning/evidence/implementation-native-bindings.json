@@ -1,0 +1,13 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "line 55: RuntimeError: HUD unsupported setting\nTraceback (script frames only):\n  File \"<script>\", line 55, in run\n    if not all(k in hud_schema for k in intended): raise RuntimeError(\"HUD unsupported setting\")\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+      }
+    ],
+    "isError": true
+  }
+}

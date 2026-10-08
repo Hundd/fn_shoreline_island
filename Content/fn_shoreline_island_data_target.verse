@@ -166,13 +166,14 @@ fn_shoreline_island_data_target := class(creative_device):
         if (hit_surface.TeleportTo[parked]) {}
 
     # Called only after the owning mission has validated its current stage.
-    accept(input_agent:agent, consume:logic):void =
+    accept(input_agent:agent, consume:logic, ?play_audio:logic = true):void =
         if (state <> data_target_state.active):
             return
         position_hit_effects()
         hit_flash.Begin()
         set feedback_generation += 1
-        hit_sound.Play(input_agent)
+        if (play_audio?):
+            hit_sound.Play(input_agent)
         if (explicit_answer_feedback?):
             label_board.SetText(label_text("CORRECT!\n{display_label}"))
             label_board.UpdateDisplay()

@@ -1,0 +1,26 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "editor_toolset.toolsets.object.ObjectTools",
+      "tool_name": "get_properties",
+      "arguments": {
+        "instance": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5160103_1360785784"
+        },
+        "properties": [
+          "message Priority",
+          "displayTimeOption",
+          "messageCharLimit",
+          "placement",
+          "screenAnchor",
+          "layer",
+          "toyOptionsComponent"
+        ]
+      }
+    }
+  }
+}

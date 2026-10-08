@@ -1,0 +1,12 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[{\"severity\":\"Error\",\"code\":3509,\"message\":\"This function parameter expects a value of type tuple(comparable,comparable), but this argument is an incompatible value of type tuple(vfx_creator_device,vfx_creator_device).\",\"filePath\":\"/fn_shoreline_island/fn_shoreline_island_popbridge_production.verse\",\"span\":{\"startLine\":157,\"startCharacter\":42,\"endLine\":157,\"endCharacter\":54}},{\"severity\":\"Error\",\"code\":3509,\"message\":\"This function parameter expects a value of type tuple(comparable,comparable), but this argument is an incompatible value of type tuple(vfx_creator_device,vfx_creator_device).\",\"filePath\":\"/fn_shoreline_island/fn_shoreline_island_popbridge_production.verse\",\"span\":{\"startLine\":160,\"startCharacter\":20,\"endLine\":160,\"endCharacter\":33}},{\"severity\":\"Error\",\"code\":3509,\"message\":\"This function parameter expects a value of type tuple(comparable,comparable), but this argument is an incompatible value of type tuple(audio_player_device,audio_player_device).\",\"filePath\":\"/fn_shoreline_island/fn_shoreline_island_popbridge_production.verse\",\"span\":{\"startLine\":166,\"startCharacter\":42,\"endLine\":166,\"endCharacter\":76}},{\"severity\":\"Error\",\"code\":3514,\"message\":\"Cannot use reserved identifier `open` as definition name.\",\"filePath\":\"/fn_shoreline_island/fn_shoreline_island_popbridge_production.verse\",\"span\":{\"startLine\":296,\"startCharacter\":8,\"endLine\":296,\"endCharacter\":12}},{\"severity\":\"Error\",\"code\":3588,\"message\":\"Ambiguous identifier; could be (/hunddr@fortnite.com/fn_shoreline_island/fn_shoreline_island_popbridge_production/sync_card:)open or (/Verse.org/Verse:)open\",\"filePath\":\"/fn_shoreline_island/fn_shoreline_island_popbridge_production.verse\",\"span\":{\"startLine\":297,\"startCharacter\":12,\"endLine\":297,\"endCharacter\":16}},{\"severity\":\"Error\",\"code\":3532,\"message\":\"The data (/hunddr@fortnite.com/fn_shoreline_island/fn_shoreline_island_popbridge_production/sync_card:)open in package fn_shoreline_island is ambiguous with this definition:\\n    class (/Verse.org/Verse:)open in package $BuiltIn\",\"filePath\":\"/fn_shoreline_island/fn_shoreline_island_popbridge_production.verse\",\"span\":{\"startLine\":296,\"startCharacter\":8,\"endLine\":296,\"endCharacter\":62}}]}"
+      }
+    ]
+  }
+}

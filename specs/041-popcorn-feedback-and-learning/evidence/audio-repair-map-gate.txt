@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "map_id": "popcorn_feedback_and_learning",
+  "review_digest": "93596832dd1e5356f9c1bd66956ed37c392a265c455282650efd12dc6072d828",
+  "verdict": "pass",
+  "violations": [],
+  "advisories": [
+    {
+      "code": "INTERACTION_CROWDED",
+      "zone": "course",
+      "detail": "10 devices in course; review interaction density"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage teach_pop has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage first_reuse has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "FLOW_NO_WRONG_CHOICE",
+      "zone": "course",
+      "detail": "stage finale has a single active target; verify wrong-choice recovery nearby"
+    },
+    {
+      "code": "LEARN_NO_LESSON",
+      "zone": null,
+      "detail": "no knowledge_room zone; verify the learning objective is introduced before action"
+    }
+  ],
+  "blockers": [],
+  "counts": {
+    "zones": 1,
+    "stages": 6,
+    "markers": 20,
+    "connections": 0,
+    "devices": 10,
+    "targets": 8,
+    "violations": 0,
+    "advisories": 5,
+    "blockers": 0
+  }
+}

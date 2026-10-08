@@ -1,0 +1,15 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "call_tool",
+    "arguments": {
+      "toolset_name": "ValkyrieToolset.DeviceToolset",
+      "tool_name": "ListDeviceAssets",
+      "arguments": {
+        "nameFilter": "VFX_Creator"
+      }
+    }
+  }
+}

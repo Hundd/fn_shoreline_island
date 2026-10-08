@@ -1,0 +1,124 @@
+{
+  "halo": {
+    "device_class": "/CRD_VFX_Creator/Assets/Device_VFX_Creator_V2.Device_VFX_Creator_V2_C",
+    "count": 8,
+    "sprite_table_row": "Shockwave",
+    "spriteShape": {
+      "smallIcon": {
+        "refPath": "/CRD_VFX_Creator/Assets/Icons_64/T_UI_IconLibrary_Shockwave01_64.T_UI_IconLibrary_Shockwave01_64"
+      },
+      "largeIcon": {
+        "refPath": "/CRD_VFX_Creator/Assets/Icons_64/T_UI_IconLibrary_Shockwave01_64.T_UI_IconLibrary_Shockwave01_64"
+      }
+    },
+    "resolved_texture": "/Game/Effects/Fort_Effects/Textures/Outlander/T_InTheZone_GroundRing_01.T_InTheZone_GroundRing_01",
+    "native_values": {
+      "effectGenerationAmount": 1,
+      "spawnZoneShape": "Point",
+      "spriteRotationAlignment": "Planar",
+      "spriteSpeed": 0,
+      "effectGravity": 0,
+      "spriteDuration": 0.5,
+      "loop": "Never",
+      "loopDuration": 0.5,
+      "startEffectsWhenEnabled": false,
+      "enabledDuringPhase": "Gameplay Only",
+      "spriteSize": 0.65,
+      "bKeepSize": false,
+      "sizeOverTime": 0.9,
+      "useRandomColor": false,
+      "mainColor": {
+        "r": 0.18,
+        "g": 0.9,
+        "b": 0.65,
+        "a": 1
+      },
+      "mainColorBrightness": 2,
+      "useSecondaryColor": true,
+      "secondaryColor": {
+        "r": 0.18,
+        "g": 0.9,
+        "b": 0.65,
+        "a": 0
+      },
+      "secondaryColorBrightness": 0.1
+    },
+    "lifecycle": "Controller independent Begin/End0.5s; no target-deactivate ownership; receiver ring orientation full native readback at binding; exact apparent diameter/fade manual calibration."
+  },
+  "audio": {
+    "device_class": "/CRD_AudioPlayer/Device_CRD_AudioPlayer.Device_CRD_AudioPlayer_C",
+    "catalogue": "/CRD_AudioPlayer/SetupAssets/PID_CP_Devices_CRD_AudioPlayer.PID_CP_Devices_CRD_AudioPlayer",
+    "count": 8,
+    "native_values": {
+      "audio": {
+        "refPath": "/fn_shoreline_island/Audio/popcorn_hit_original.popcorn_hit_original"
+      },
+      "volume": 0.35,
+      "play On Hit": false,
+      "can Be Heard By": "Instigator Only",
+      "play Location": "Device",
+      "loopAudio": false,
+      "restart Audio When Activated": false,
+      "enable Spatialization": true,
+      "enable Volume Attenuation": true,
+      "attenuation Function": "Linear",
+      "attenuation Min Distance": 600,
+      "attenuation Falloff Distance": 1200,
+      "fadeInDuration": 0,
+      "fadeOutDuration": 0.025,
+      "playDuringWaitingForPlayers": false,
+      "playDuringGameCountdown": false,
+      "playDuringGameplay": false,
+      "playDuringRoundEnd": false,
+      "playDuringGameEnd": false
+    },
+    "source_duration_seconds": 0.175,
+    "playback_window_seconds": 0.2,
+    "stop_at_seconds": 0.175,
+    "lifecycle": "Explicit existing accept Play(agent), same epoch-guarded Stop(agent) at0.175s plus0.025s fade; original project-owned source naturally ends at0.175s. Maximum0.2s window unchanged; no audition/revalidation/timing gameplay proof. Native distances cm; no autoplay phase flags.",
+    "source_provenance": {
+      "source_wav": "Resources/Audio/popcorn_hit_original.wav",
+      "generator": "tools/create_popcorn_hit_audio.py",
+      "original_synthesized_audio": true,
+      "sha256": "0ffa24c83dea5dd2011e1d3082cd31a187395221c786b16c1ef8afb7ba05841b",
+      "format": "48000Hz mono16-bit PCM,8400 frames",
+      "native_evidence": "evidence/original-pop-audio-provenance-imported.json",
+      "native_dependencies": []
+    }
+  },
+  "hud": {
+    "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_HUDMessage_V2_C_UAID_E89C2592D1B5160103_1360785784",
+    "native_values": {
+      "placement": "Custom",
+      "screenAnchor": "Bottom Left",
+      "placementHorizontal": 80,
+      "placementVertical": -120,
+      "layer": 5,
+      "message Priority": "Priority",
+      "allow Multiple in Queue": false,
+      "queue Message for Join in Progress Players": false,
+      "displayTimeOption": 0,
+      "override Default Text Style": true,
+      "size": 24,
+      "messageCharLimit": 500,
+      "backgroundOpacity": 80,
+      "textColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "backgroundColor": {
+        "r": 0.015,
+        "g": 0.04,
+        "b": 0.08,
+        "a": 1
+      }
+    },
+    "runtime": "Explicit Show(player,message,DisplayTime0), Hide(player) on journal/release. Lower-left intended composition via supported native offsets; fixed native widget wrap width/apparent safe margins checked manually, no invented width property. Preserve stage labels/action table."
+  },
+  "journal": {
+    "existing_source": "Content/fn_shoreline_island_academy_journal.verse panels[player]?canvas and show_panel/close_panel",
+    "integration": "Small is_panel_open(player)<transacts>:logic query of existing panels map; PopBridge presentation monitor watches changes and masks/resumes card. No progression/award authority changes."
+  }
+}
