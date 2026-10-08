@@ -232,11 +232,6 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
 
     on_exit(input_agent:agent):void =
         if (input_player := player[input_agent]):
-            # Release pending execution before hub travel; preserve earned state.
-            if (current := execution_owner?, current = input_player):
-                set generation += 1
-                set execution_owner = false
-                reset_props()
             request_hud.Hide(input_player)
             feedback.Hide(input_player)
             navigation_journal.clear_activity(input_player)

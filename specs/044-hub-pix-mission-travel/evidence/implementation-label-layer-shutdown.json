@@ -1,0 +1,37 @@
+{
+  "push": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Completed\"}"
+      }
+    ]
+  },
+  "session": "Connected",
+  "after_push": "Running",
+  "stop": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Completed\"}"
+      }
+    ]
+  },
+  "final_game": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"CanStart\"}"
+      }
+    ]
+  },
+  "level_dirty": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":false}"
+      }
+    ]
+  },
+  "manual_runtime_checks": "NOT RUN; content push restarted connected match automatically; supported StopGame used; no StartGame call"
+}

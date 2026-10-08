@@ -1,0 +1,91 @@
+{
+  "actor": {
+    "guid": "22F063D1-491D-3185-9AA3-0A8ACF6A30F9",
+    "nativeClass": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "class": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "name": "VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103",
+    "label": "pix_travel_controller",
+    "bounds": {
+      "min": {
+        "x": -226.72035598754877,
+        "y": 2641.3575592041016,
+        "z": 2500
+      },
+      "max": {
+        "x": 26.66852951049799,
+        "y": 2758.2804946899414,
+        "z": 2658.1131439208984
+      },
+      "isValid": true
+    },
+    "runtimeGrid": "None",
+    "bIsSpatiallyLoaded": false,
+    "bActorIsEditorOnly": false,
+    "actorPackage": "None",
+    "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103",
+    "folderPath": "None",
+    "dataLayerAssets": []
+  },
+  "path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/7/3W/GMF7V5QDO4G5L0GCNS3XIG.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103",
+  "save": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":null}"
+      }
+    ]
+  },
+  "level_save": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":true}"
+      }
+    ]
+  },
+  "dirty": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":false}"
+      }
+    ]
+  },
+  "level_dirty": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":false}"
+      }
+    ]
+  },
+  "source_readback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"\\n    # Fortnite's normal button styling provides pointer hover, pressed and\\n    # keyboard/controller focus feedback; raw UI.button has no such style.\\n    make_button(input_player:player, state:pix_travel_state, label:string, choice:int, is_back:logic):button_regular =\\n        action_button := button_regular{DefaultText := text(label)}\\n        if (is_back?):\\n            set action_button.TriggeringInputAction = option{Back}\\n        action := pix_travel_action{controller := Self, input_player := input_player, epoch := state.epoch, round := round, choice := choice}\\n        set state.subscriptions += array{action_button.OnClick().Subscribe(action.on_click)}\\n        return action_button\\n\\n    make_card(input_player:player, state:pix_travel_state, label:string, status:string, choice:int):button_regular =\\n        # Keep the status in the accessible/focused button label as well.\\n        make_button(input_player, state, \\\"{label}\\\\n{status}\\\", choice, false)\\n\\n    show(input_player:player, stage:int, selected:int):void =\\n        if (not configured? or not owner_clear(input_player)?):\\n            return\\n        if (personal_ui := GetPlayerUI[input_player], character := input_player.GetFortCharacter[], character.IsActive[]):\\n            close(input_player)\\n            state := state_for(input_player)\\n\"}"
+      }
+    ]
+  },
+  "build": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[]}"
+      }
+    ]
+  },
+  "final_game": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"CanStart\"}"
+      }
+    ]
+  },
+  "no_automatic_push_cook_launch_or_testing": true
+}

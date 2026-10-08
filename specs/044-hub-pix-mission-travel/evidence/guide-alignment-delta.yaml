@@ -1,0 +1,47 @@
+version: 1
+feature: specs/044-hub-pix-mission-travel
+kind: nonmaterial_corrective_alignment
+requirement: R01
+baseline_review_digest: "6f594395a6bbf4c927d6495c2349c084b2d1f753b580d96ec819597b83edfe7f"
+authority:
+  baseline: ../approval.yaml
+  direct_owner_feedback: "also talk to Pix and Pix are far from each other"
+  disposition: guide-alignment-design-review.md
+  new_human_design_approval_claimed: false
+actor:
+  label: pix_hub_helper_figure
+  refPath: /fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5740403_1367639481
+  before:
+    location_cm: [-100, 2700, 2412]
+    rotation_degrees: {pitch: 0, yaw: 180, roll: 0}
+    scale: [1, 1, 1]
+  intended_after:
+    location_cm: [-100, 2575, 2412]
+    rotation_degrees: {pitch: 0, yaw: 180, roll: 0}
+    scale: [1, 1, 1]
+  translation_delta_cm: [0, -125, 0]
+  preserve_all_component_local_transforms: true
+  existing_component_count: 15
+unchanged:
+  talk_location_cm: [-100, 2500, 2500]
+  talk_yaw_degrees: 180
+  invitation_center_xy_cm: [-100, 2450]
+  approach_radius_cm: 125
+  rearm_radius_cm: 200
+  scope: screens, field notes, walk routes, travel controller, all eight destination transforms, modal behavior, mission learning and badge semantics
+expected_after:
+  horizontal_talk_separation_cm: 75
+  horizontal_approach_center_separation_cm: 125
+ground_evidence:
+  provenance: Sole editor owner Implementer measured readback relayed to Planner on 2026-10-08
+  center_and_four_25cm_corners:
+    start_z_cm: 2450
+    end_z_cm: 2200
+    returned_distance_cm: 38
+    surface_z_cm: 2412
+  larger_60cm_corners: west2412/east2400; no raised surface; same existing12cm X platform detail
+  high_ray_caveat: Some2800cm rays hit existing helper geometry, not floor; not used as ground evidence
+verification:
+  post_move_readback: Pending Implementer evidence
+  save_and_clean_readback: Pending Implementer evidence
+  cooked_owner_acceptance: Pending; bounded rays do not prove pawn collision or appearance

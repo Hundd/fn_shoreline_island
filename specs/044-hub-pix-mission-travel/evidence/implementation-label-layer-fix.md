@@ -1,0 +1,15 @@
+# Label visibility and guide alignment correction
+
+Owner feedback: “No label displayed over buttons, probably font is too small ?” and “and also talk to Pix and Pix are far from each other”. User subsequently authorized “push changes when you ready”.
+
+The previous separate InputModeNone label canvas failed the owner's runtime check. Its no-input contract did not prove rendering above the modal panel. Removed that canvas and its state entirely. Custom navy labels now occupy ZOrder2 slots in the same InputModeAll modal canvas as native blank button_regular controls at ZOrder0. The installed SDK explicitly defines higher canvas-slot ZOrder as rendered last/on top. Names and control labels remain22px; statuses20px,12px inset. Native hover/pressed/controller focus and Back bindings remain. No explicit visibility/input behavior is applied to passive text blocks. Pointer click-through and actual modal rendering remain owner runtime checks, not established by compilation.
+
+BuildAll returned an empty diagnostic array; native ReadFile confirmed the changed source. Existing match was stopped and state became CanStart. No automatic playtest/project validation/session launch was performed.
+
+Planner and Supervisor accepted a nonmaterial R01 corrective delta under direct owner feedback, preserving the historical approved bundle. Only the existing Pix actor moved: (-100,2700,2412) to(-100,2575,2412), yaw180, unit scale. Talk remains(-100,2500,2500), approach remains(-100,2450),125cm radius/200cm re-arm unchanged. Pix–Talk horizontal center gap becomes75cm. Body/head have no lateral component offset; their local Z centers62/137 and scales(.58,.52,.60)/(.84,.84,.84) remain unchanged.
+
+Ground center and four±25cm foot corners traced from2450 to2200 hitZ2412. Outer±60cm west corners hit2412/east2400, a12cm lower platform detail; high2800 rays intercepted helper geometry and were not treated as floor. Center2600 ray independently hit2412. Saved actor pose readback exactly matches the expected transform. Overall bounds translated from(-228,2572,2284)..(28,2828,2677) to(-228,2447,2284)..(28,2703,2677); bounds include root helper and do not establish visible feet clearance. Pix and level packages read dirty=false after save.
+
+Manual checks after push: invitation/list/confirmation/cancel labels visible; full longest mission name and status readable; clicking directly on text activates the intended control; pointer hover/pressed and keyboard/controller focus visible; Back works; close/departure/respawn leaves no stale label; Pix appearance/ground clearance and Talk reach feel aligned. Overall gameplay acceptance remains pending. Push result and final shutdown are recorded in the companion JSON.
+
+Full PushChanges(bVerseOnly=false) returned Completed; session Connected. The push automatically left the match Running, so supported StopGame was invoked and returned Completed; final game CanStart and level dirty=false. No StartGame call or runtime test was performed. See implementation-label-layer-shutdown.json.

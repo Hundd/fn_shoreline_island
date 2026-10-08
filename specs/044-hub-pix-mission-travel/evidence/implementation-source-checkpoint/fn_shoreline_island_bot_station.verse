@@ -191,10 +191,10 @@ fn_shoreline_island_bot_station := class(creative_device):
     return_text<localizes>:message = "Return to Academy Hub"
     occupied_text<localizes>:message = "This robot is in use. Choose another station."
     other_text<localizes>:message = "Leave your current AI Agent Mission station before claiming another."
-    locked_text<localizes>:message = "AI Agent Mission is unavailable. Return to Pix to choose another mission."
+    locked_text<localizes>:message = "Agent Mode is LOCKED. Restore Pix's first seven AI Core modules, then return here."
     unused_text<localizes>:message = "This control belongs to another mission stage."
     wait_text<localizes>:message = "Finish this stage first. Help shows a worked answer."
-    available_text<localizes>(number:int):message = "AI AGENT MISSION | Station {number}\nAn AI agent gets a goal, makes choices, uses tools, and acts to finish a task.\nEmergency supplies for Animal Research Station.\nIndependent mission. Claim to begin.\n1 Medical practice | 2 Pattern dock | 3 Final delivery"
+    available_text<localizes>(number:int):message = "AI AGENT MISSION | Station {number}\nAn AI agent gets a goal, makes choices, uses tools, and acts to finish a task.\nEmergency supplies for Animal Research Station.\nUnlock: 7 modules online. Claim to begin.\n1 Medical practice | 2 Pattern dock | 3 Final delivery"
     seed_goal<localizes>:message = "MEDICAL PRACTICE: Choose Medical for Animal Research Station.\nUse Pickup, Repeat Move, Drop."
     dock_goal<localizes>:message = "PATTERN PRACTICE: Light dock cells 1, 2, 3. Finish with energy 0."
     route_goal<localizes>:message = "FINAL MISSION: Medical crate to Animal Research Station.\nReach the scanner and choose an open route.\nRun DeliverPackage, then Verify."
@@ -202,7 +202,7 @@ fn_shoreline_island_bot_station := class(creative_device):
     done_text<localizes>:message = "done"
     pending_text<localizes>:message = "to do"
     solved_text<localizes>:message = "Stage complete! Next or Replay."
-    agent_mode_text<localizes>:message = "AI Agent Badge earned.\nPix completed your rescue plan.\nReturn to Pix to choose another mission.\nPeople should check important decisions."
+    agent_mode_text<localizes>:message = "We did it! Pix's Agent Mode is online.\nYou taught me to follow instructions, spot patterns, classify, check uncertainty, fix mistakes, use tools, and combine skills.\nAI can help with a task; people should check important decisions. See your AI Core Journal for every module.\nAI Agent Badge earned."
     final_text<localizes>:message = "PIX AI CORE FULLY RESTORED!\nInstructions, Patterns, Classification, Confidence, Error Checking, Tools, Skills, and Agent Mode are ONLINE.\nYou taught me to follow instructions, spot patterns, classify, check uncertainty, fix mistakes, use tools, and combine skills.\nAI can help with a task; people should check important decisions. AI Agent Badge earned."
     retained_text<localizes>:message = "Mission completed again! Your AI Agent Badge and earlier badges stay earned."
     ready_text<localizes>:message = "Ready. Run to see each command."
@@ -598,11 +598,7 @@ fn_shoreline_island_bot_station := class(creative_device):
         return false
 
     agent_mission_ready(input_player:player)<transacts>:logic =
-        if (solo_active?):
-            if (rescue_mode?):
-                return rescue_configured
-            return true
-        return false
+        return academy_journal.first_seven_online(input_player)
 
     objective(input_player:player, state:bot_player_progress):message =
         if (state.solved?):
@@ -1342,7 +1338,12 @@ fn_shoreline_island_bot_station := class(creative_device):
                         feedback.Show(current, rescue_text(hint), ?DisplayTime := 6.0)
             else:
                 for (input_player : GetPlayspace().GetPlayers(), rescue_in_bounds[input_player]):
-                    if (rescue_configured?, not owner?, rescue_near[input_player, 0], character := input_player.GetFortCharacter[], character.IsActive[]):
+                    if (not academy_journal.first_seven_online(input_player)?):
+                        if (board := rescue_boards[0]):
+                            next := rescue_missing(input_player)
+                            display(board, rescue_text("DELIVER MEDICAL\nAGENT MODE LOCKED\nRestore 7 modules to unlock."))
+                            feedback.Show(input_player, next, ?DisplayTime := 1.0)
+                    else if (not owner?, rescue_near[input_player, 0], character := input_player.GetFortCharacter[], character.IsActive[]):
                         state := progress.ensure_player(input_player)
                         if (state.station_id < 0):
                             rescue_reset()

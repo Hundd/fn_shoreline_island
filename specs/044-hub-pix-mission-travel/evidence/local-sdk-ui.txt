@@ -1,0 +1,75 @@
+Installed SDK UI feasibility, read-only 2026-10-08
+
+UnrealEngine/UnrealEngine.digest.verse
+801:             # Adds `Widget` to this `player_ui` using `Slot` for configuration options.
+802:             AddWidget<native><public>(Widget:widget, Slot:player_ui_slot):void
+803: 
+804:             # Removes `Widget` from this `player_ui`.
+805:             RemoveWidget<native><public>(Widget:widget):void
+806: 
+807:             # Sets the user's focus on this `Widget`. The target `Widget`must be focusable, otherwise this has no effect.
+808:             # If `SetFocus` is called before `AddWidget`, the `widget` will be focused after `AddWidget` is called, 
+809:             # unless a SetFocus is called on a different `widget` by the time `AddWidget` is called.
+810:             SetFocus<native><public>(Widget:widget):void
+811: 
+
+UnrealEngine/UnrealEngine.digest.verse
+930: 
+931:             HighlightEvent<public>():listenable(widget_message) = external {}
+932: 
+933:             UnhighlightEvent<public>():listenable(widget_message) = external {}
+934: 
+935:             # The UI input action that will trigger the Click event of this button.
+936:             var TriggeringInputAction<public>:?input_action(logic) = external {}
+937: 
+
+Verse/Verse.digest.verse
+1779:     # Module import path: /Verse.org/Input/UI
+1780:     # The module contains a set of Input Actions that are available in UI mode, given that they're bound to an interactive UI element.
+1781:     UI<public> := module:
+1782:         using {/Verse.org/SpatialMath}
+1783:         using {/Verse.org/Native}
+1784:         using {/Verse.org/Assets}
+1785:         @available {MinUploadedAtFNVersion := 4000}
+1786:         # MenuNavigationMapping includes the following actions with default key bindings:
+1787:         #   * NextTab: E/Gamepad Right Shoulder
+1788:         #   * PreviousTab: Q/Gamepad Left Shoulder
+1789:         #   * NextPage: C/Gamepad Right Trigger
+1790:         #   * PreviousPage: Z/Gamepad Left Trigger
+1791:         #   * Back: Escape/Gamepad Back Button
+1792:         MenuNavigationMapping<public>:input_mapping = external {}
+1793: 
+1794:         @available {MinUploadedAtFNVersion := 4000}
+1795:         NextTab<public>:input_action(logic) = external {}
+1796: 
+1797:         @available {MinUploadedAtFNVersion := 4000}
+1798:         PreviousTab<public>:input_action(logic) = external {}
+1799: 
+1800:         @available {MinUploadedAtFNVersion := 4000}
+1801:         NextPage<public>:input_action(logic) = external {}
+1802: 
+1803:         @available {MinUploadedAtFNVersion := 4000}
+1804:         PreviousPage<public>:input_action(logic) = external {}
+1805: 
+1806:         @available {MinUploadedAtFNVersion := 4030}
+1807:         Back<public>:input_action(logic) = external {}
+1808: 
+
+Fortnite/Fortnite.digest.verse
+20:     text_button_base<native><public> := class<abstract><epic_internal>(widget):
+21:         # The text to display to the user. Used only during initialization of the widget and not modified by SetText.
+22:         DefaultText<localizes><native><public>:message = external {}
+23: 
+24:         # Subscribable event that fires when the button is clicked.
+25:         OnClick<public>():listenable(widget_message) = external {}
+26: 
+27:         # Sets the text displayed in the widget.
+28:         SetText<native><public>(InText:message):void
+29: 
+30:         # Gets the text currently in the widget.
+31:         GetText<native><public>():string
+32: 
+33:         # The UI input action that will trigger the Click event of this button.
+34:         var TriggeringInputAction<public>:?input_action(logic) = external {}
+35: 
+36:     # Text button with big and loud styling applied.

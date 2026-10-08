@@ -109,7 +109,6 @@ fn_shoreline_island_academy_journal := class(creative_device):
     var core_celebrations:[player]?canvas = map{}
     var core_celebration_generations:[player]int = map{}
     var next_core_celebration_generation:int = 0
-    var travel_adapter:?fn_shoreline_island_pix_travel = false
     var round_generation:int = 0
     close_text<localizes>:message = "Close"
     work_text<localizes>:message = "Work"
@@ -118,7 +117,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
     earned_text<localizes>:message = "Completed"
     earned_badge_text<localizes>:message = "Completed"
     ready_text<localizes>:message = "Available"
-    locked_text<localizes>:message = "Unavailable"
+    locked_text<localizes>:message = "Locked - restore all 7 other modules"
     agent_ready_text<localizes>:message = "Available"
     unavailable_text<localizes>:message = "Not yet available"
     garden_next<localizes>:message = "1 Prompt Workshop: choose a core, size and destination for Pix."
@@ -128,12 +127,12 @@ fn_shoreline_island_academy_journal := class(creative_device):
     debug_next<localizes>:message = "5 AI Error Lab: shoot a correction, then check Pix's route."
     event_next<localizes>:message = "6 AI Tool Lab: choose a useful tool response."
     nursery_next<localizes>:message = "7 Popcorn Parkour: shoot PopBridge, then jump onto what you make."
-    bot_next<localizes>:message = "8 AI Agent Mission: plan and verify a rescue delivery."
+    bot_next<localizes>:message = "8 AI Agent Mission: combine Pix's restored abilities."
     replay_next<localizes>:message = "Try a replay or explore another open path."
     core_progress<localizes>(online_modules:int):message = "PIX AI CORE: {online_modules}/8 MODULES ONLINE"
     core_restored_title<localizes>:message = "PIX AI CORE FULLY RESTORED"
     core_restored_body<localizes>:message = "All eight modules are ONLINE.\nYou helped Pix follow instructions, spot patterns, classify, check confidence, fix mistakes, use tools, build skills, and complete an agent mission."
-    journal_text<localizes>(core_state:message, guidance:message, garden_status:message, loop_status:message, signal_status:message, energy_status:message, debug_status:message, event_status:message, nursery_status:message, bot_status:message, destination:message):message = "{core_state}\n{guidance}\n1 Prompt Workshop: {garden_status} | 2 Pattern Scanner: {loop_status}\n3 AI Classifier: {signal_status} | 4 Confidence Core: {energy_status}\n5 AI Error Lab: {debug_status} | 6 AI Tool Lab: {event_status}\n7 Pix's Popcorn Parkour: {nursery_status}\n8 AI Agent Mission: {bot_status}\nNext: {destination}\nEvery open module is yours to explore."
+    journal_text<localizes>(core_state:message, guidance:message, garden_status:message, loop_status:message, signal_status:message, energy_status:message, debug_status:message, event_status:message, nursery_status:message, bot_status:message, destination:message):message = "{core_state}\n{guidance}\n1 Prompt Workshop: {garden_status} | 2 Pattern Scanner: {loop_status}\n3 AI Classifier: {signal_status} | 4 Confidence Core: {energy_status}\n5 AI Error Lab: {debug_status} | 6 AI Tool Lab: {event_status}\n7 AI Skills Lab: {nursery_status}\n8 AI Agent Mission: {bot_status}\nNext: {destination}\nEvery open module is yours to explore."
     garden_name<localizes>:message = "1 Prompt Workshop"
     loop_name<localizes>:message = "2 Pattern Scanner"
     signal_name<localizes>:message = "3 AI Classifier"
@@ -141,7 +140,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
     debug_name<localizes>:message = "5 AI Error Lab"
     event_name<localizes>:message = "6 AI Tool Lab"
     bot_name<localizes>:message = "8 AI Agent Mission"
-    nursery_name<localizes>:message = "7 Pix's Popcorn Parkour"
+    nursery_name<localizes>:message = "7 AI Skills Lab"
     garden_work<localizes>:message = "Clear instructions help AI understand what you want."
     loop_work<localizes>:message = "AI can use patterns in examples to help make predictions."
     signal_work<localizes>:message = "Classification means sorting things into categories."
@@ -200,9 +199,9 @@ fn_shoreline_island_academy_journal := class(creative_device):
     agent_status(input_player:player):message =
         if (badge := later_badge_trackers[4], badge.GetValue(input_player) >= 1):
             return earned_badge_text
-        if (module_available(input_player, 7)?):
+        if (first_seven_online(input_player)?):
             return agent_ready_text
-        return unavailable_text
+        return locked_text
     first_seven_online(input_player:player)<transacts>:logic =
         for (index := 0..6):
             if (not module_restored(input_player, index)?):
@@ -269,8 +268,6 @@ fn_shoreline_island_academy_journal := class(creative_device):
             else:
                 show_panel(input_player, false)
     show_panel(input_player:player, show_work:logic):void =
-        if (travel := travel_adapter?):
-            travel.close(input_player)
         if (personal_ui := GetPlayerUI[input_player]):
             close_panel(input_player)
             set next_generation += 1
@@ -422,6 +419,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
     navigation_step<localizes>(name:message, step:int, total:int, instruction:message):message = "{name} | Step {step}/{total}\n{instruction}"
     navigation_next<localizes>(name:message):message = "Next: {name}\nFollow its numbered map marker."
     navigation_handoff<localizes>(name:message, count:int, destination:message):message = "{name} restored - {count}/8\nNext: {destination}"
+    navigation_unlocked<localizes>:message = "7/8 restored - AI Agent Mission unlocked!\nNext: 8 AI Agent Mission."
     navigation_done<localizes>:message = "All eight abilities restored!\nReplay a lesson or explore an optional path."
     in_progress_text<localizes>:message = "In progress"
     segment_text<localizes>(name:string, state:string):message = "{name}\n{state}"
@@ -495,7 +493,10 @@ fn_shoreline_island_academy_journal := class(creative_device):
     next_module(input_player:player)<transacts>:int =
         for (module_index := 0..7):
             if (module_available(input_player, module_index)?, not module_restored(input_player, module_index)?):
-                return module_index
+                if (module_index < 7):
+                    return module_index
+                if (first_seven_online(input_player)?):
+                    return module_index
         return -1
     module_status(input_player:player, module_index:int):message =
         if (not module_available(input_player, module_index)?):
@@ -509,6 +510,8 @@ fn_shoreline_island_academy_journal := class(creative_device):
                     return unavailable_text
             else:
                 return unavailable_text
+        if (module_index = 7, not first_seven_online(input_player)?):
+            return locked_text
         if (state := navigation[input_player], state.module_index = module_index, GetSimulationElapsedTime() - state.reported_at < 0.75):
             return in_progress_text
         return ready_text
@@ -532,8 +535,8 @@ fn_shoreline_island_academy_journal := class(creative_device):
                         if (state.initialized?, restored?, previous := state.snapshot[module_index], not previous?, name := module_names()[module_index]):
                             destination := recommendation(input_player)
                             set state.handoff = navigation_handoff(name, completed_modules(input_player), destination)
-                            if (completed_modules(input_player) >= 8):
-                                set state.handoff = navigation_done
+                            if (first_seven_online(input_player)?, not module_restored(input_player, 7)?):
+                                set state.handoff = navigation_unlocked
                             set state.handoff_until = now + 4.0
                     set state.snapshot = snapshot
                     set state.initialized = true

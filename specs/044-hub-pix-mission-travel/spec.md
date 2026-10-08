@@ -16,13 +16,13 @@ Players can choose any of the eight independent Academy missions from Pix beside
 - R09: Preserve screens, walk routes, mission geometry, Return controls, optional lessons and solo matchmaking. UI readable and fully keyboard/controller navigable.
 
 ## Acceptance scenarios
-- AC01 (R01): Given hub arrival, when walking normal transit routes, then no forced invitation; when entering Pix approach, one invitation opens; decline and remain, no reopen; leave 2m and reenter, invitation returns.
+- AC01 (R01): Given hub arrival, when walking normal transit routes, then no forced invitation; when entering Pix approach, one invitation opens; decline and remain, no reopen; leave 2 m and reenter, invitation returns.
 - AC02 (R02,R03,R09): Given invitation accepted, when choices open, all eight statuses and Cancel appear together; keyboard/controller can reach each; Back on confirmation returns to list, Close returns movement without travel.
-- AC03 (R04,R05): Given fresh zero-badge round, when choosing each mission, confirmation identifies it and a single confirm lands safely; no reward/start on landing; walking into its normal start makes the real lesson playable. Agent accepts its own puzzle without prerequisites.
+- AC03 (R04,R05): Given fresh zero badge round, when choosing each mission, confirmation identifies it and a single confirm lands safely; no reward/start on landing; walking into its normal start makes the real lesson playable. Agent accepts its own puzzle without prerequisites.
 - AC04 (R05,R08): Given an earned badge, visit again and play/retry/return; earned total remains and no duplicate module award occurs.
 - AC05 (R06,R07): Given selected destination, when reset/respawn/departure/unavailable binding or stale response occurs, no obsolete/default teleport; UI cleans up. Rapid Confirm twice moves once.
 - AC06 (R07): Given journal open, approach does not overlap UI; explicit Talk closes journal before invitation. Given travel open, Journal closes travel first. Leaving approach with menu open cancels.
-- AC07 (R08): Given Agent is completed first, Core reads1/8 and remaining missions playable; completion of any seventh missing lesson later produces8/8 guidance/restoration once.
+- AC07 (R08): Given Agent is completed first, Core reads 1/8 and remaining missions playable; completion of any seventh missing lesson later produces 8/8 guidance/restoration once.
 - AC08 (R05,R09): Given each of eight arrivals, verify visible instruction, normal start, wrong action, reset/replay, legitimate completion and Return. Preserve all existing solo constraints; no multiplayer expansion.
 
-Current evidence is planning source inspection and bounded editor rays, not cooked acceptance. Respect the owner's existing manual gameplay-testing constraint recorded in043; implementation compile/save/readback is followed by owner acceptance, without automatic cook/push/session.
+Current evidence is planning source inspection and bounded editor rays, not cooked acceptance. Respect the owner's existing manual gameplay-testing constraint recorded in 043; implementation compile/save/readback is followed by owner acceptance, without automatic cook/push/session.

@@ -1,0 +1,250 @@
+{
+  "build": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[]}"
+      }
+    ]
+  },
+  "source_readback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"        canvas_slot{Anchors := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}, SizeToContent := false, Offsets := margin{Left := left, Top := top, Right := width, Bottom := height}, ZOrder := layer, Widget := item}\\n\\n    # Fortnite's normal button styling provides pointer hover, pressed and\\n    # keyboard/controller focus feedback; raw UI.button has no such style.\\n    make_button(input_player:player, state:pix_travel_state, label:string, choice:int, is_back:logic):button_regular =\\n        # Visible labels are higher-ZOrder slots in the same modal canvas. The native\\n        # button keeps its themed hover/pressed/focus without oversized text.\\n        action_button := button_regular{DefaultText := text(\\\"\\\")}\\n        if (is_back?):\\n            set action_button.TriggeringInputAction = option{Back}\\n        action := pix_travel_action{controller := Self, input_player := input_player, epoch := state.epoch, round := round, choice := choice}\\n        set state.subscriptions += array{action_button.OnClick().Subscribe(action.on_click)}\\n        return action_button\\n\\n    make_card(input_player:player, state:pix_travel_state, label:string, status:string, choice:int):button_regular =\\n        make_button(input_player, state, \\\"{label}\\\\n{status}\\\", choice, false)\\n\\n    button_labels(label:string, status:string, left:float, top:float, width:float):[]canvas_slot =\\n        ink := color{R := 0.015, G := 0.04, B := 0.08}\\n        var label_top:float = top + 20.0\\n        if (status <> \\\"\\\"):\\n            set label_top = top + 8.0\\n        var text_slots:[]canvas_slot = array{slot(text_block{DefaultText := text(label), DefaultTextSize := 22.0, DefaultTextColor := ink, DefaultJustification := text_justification.Center}, left + 12.0, label_top, width - 24.0, 30.0, ?layer := 2)}\\n        if (status <> \\\"\\\"):\\n            set text_slots += array{slot(text_block{DefaultText := text(status), DefaultTextSize := 20.0, DefaultTextColor := ink, DefaultJustification := text_justification.Center}, left + 12.0, top + 39.0, width - 24.0, 25.0, ?layer := 2)}\\n        return text_slots\\n\\n    show(input_player:player, stage:int, selected:int):void =\\n        if (not configured? or not owner_clear(input_player)?):\\n            return\\n        if (personal_ui := GetPlayerUI[input_player], character := input_player.GetFortCharacter[], character.IsActive[]):\\n            close(input_player)\\n            state := state_for(input_player)\\n            set state.armed = false\\n            set state.character = option{character}\\n            set state.stage = stage\\n            set state.selected = selected\\n            if (destination := destinations()[selected]):\\n                set state.destination = option{destination}\\n                set state.destination_position = destination.GetTransform().Translation\\n            set state.confirm_after = GetSimulationElapsedTime() + 0.2\\n            var slots:[]canvas_slot = array{slot(color_block{DefaultColor := color{R := 0.015, G := 0.04, B := 0.08}, DefaultOpacity := 0.98}, -460.0, -310.0, 920.0, 620.0)}\\n            var label_slots:[]canvas_slot = array{}\\n            var heading:string = \\\"Pix\\\"\\n            var body:string = \\\"Ready for an adventure?\\\\nChoose a mission and I'll take you there.\\\"\\n            var initial:?widget = false\\n            if (stage = 0):\\n                choose := make_button(input_player, state, \\\"Choose a mission\\\", -2, false)\\n                cancel := make_button(input_player, state, \\\"Not now\\\", -1, true)\\n                set slots += array{slot(choose, -420.0, 180.0, 400.0, 72.0), slot(cancel, 20.0, 180.0, 400.0, 72.0)}\\n                set label_slots += button_labels(\\\"Choose a mission\\\", \\\"\\\", -420.0, 180.0, 400.0) + button_labels(\\\"Not now\\\", \\\"\\\", 20.0, 180.0, 400.0)\\n                set initial = option{choose}\\n            else if (stage = 1):\\n                set heading = \\\"Choose a mission\\\"\\n                set body = \\\"Choose freely. Your earned badges stay.\\\"\\n                # Row-major slots give focus order1,5,2,6,3,7,4,8.\\n                for (row := 0..3, column := 0..1):\\n                    index := row + column * 4\\n                    if (name := names[index]):\\n                        var status:string = \\\"Unavailable - travel is not ready\\\"\\n                        available := destination_ready(input_player, index)\\n                        if (available?):\\n                            set status = \\\"Ready\\\"\\n                            if (journal.module_restored(input_player, index)?):\\n                                set status = \\\"Completed\\\"\\n                        card := make_card(input_player, state, \\\"{index + 1} {name}\\\", status, index)\\n                        card.SetEnabled(available)\\n                        set slots += array{slot(card, -420.0 + column * 440.0, -160.0 + row * 80.0, 400.0, 72.0)}\\n                        set label_slots += button_labels(\\\"{index + 1} {name}\\\", status, -420.0 + column * 440.0, -160.0 + row * 80.0, 400.0)\\n                        if (available?, not initial?):\\n                            set initial = option{card}\\n                cancel := make_button(input_player, state, \\\"Cancel\\\", -1, true)\\n                set slots += array{slot(cancel, -180.0, 190.0, 360.0, 72.0)}\\n                set label_slots += button_labels(\\\"Cancel\\\", \\\"\\\", -180.0, 190.0, 360.0)\\n                if (not initial?):\\n                    set initial = option{cancel}\\n            else if (name := names[selected], activity := activities[selected]):\\n                set heading = \\\"Go to {name}?\\\"\\n                set body = activity\\n                var label:string = \\\"Go\\\"\\n                if (journal.module_restored(input_player, selected)?):\\n                    set heading = \\\"Visit {name} again?\\\"\\n                    set body = \\\"Your earned badge stays.\\\\n{activity}\\\"\\n                    set label = \\\"Visit again\\\"\\n                go := make_button(input_player, state, label, -3, false)\\n                back := make_button(input_player, state, \\\"Back\\\", -2, true)\\n                set slots += array{slot(go, -420.0, 180.0, 400.0, 72.0), slot(back, 20.0, 180.0, 400.0, 72.0)}\\n                set label_slots += button_labels(label, \\\"\\\", -420.0, 180.0, 400.0) + button_labels(\\\"Back\\\", \\\"\\\", 20.0, 180.0, 400.0)\\n                set initial = option{back}\\n            set slots += array{slot(text_block{DefaultText := text(heading), DefaultTextSize := 28.0, DefaultTextColor := NamedColors.White}, -420.0, -280.0, 840.0, 48.0), slot(text_block{DefaultText := text(body), DefaultTextSize := 22.0, DefaultTextColor := NamedColors.White}, -420.0, -225.0, 840.0, 60.0)}\\n            # Same-canvas slot ZOrder is the SDK's documented draw-order contract.\\n            # Text blocks keep native default passive display semantics; focus and\\n            # callbacks belong only to the underlying styled native buttons.\\n            panel := canvas{Slots := slots + label_slots}\\n            set state.panel = option{panel}\\n            if (input := GetPlayerInput[input_player]):\\n                input.AddInputMapping(MenuNavigationMapping)\\n                set state.mapping_owned = true\\n            personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All, ZOrder := 20})\\n            if (focus := initial?):\\n                personal_ui.SetFocus(focus)\\n\"}"
+      }
+    ]
+  },
+  "alignment": {
+    "expected": {
+      "location": {
+        "x": -100,
+        "y": 2575,
+        "z": 2412
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 180,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "set": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":true}"
+        }
+      ]
+    },
+    "save": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":null}"
+        }
+      ]
+    },
+    "pose": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":{\"location\":{\"x\":-100,\"y\":2575,\"z\":2412},\"rotation\":{\"pitch\":0,\"yaw\":180,\"roll\":-0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+        }
+      ]
+    },
+    "bounds": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":{\"min\":{\"x\":-228,\"y\":2447,\"z\":2284},\"max\":{\"x\":28,\"y\":2703,\"z\":2677},\"isValid\":true}}"
+        }
+      ]
+    },
+    "package": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/C/IZ/HJNLKLOPYTPUTAMJ3LCQ9S.Actor_UAID_E89C2592D1B5740403_1367639481\"}"
+        }
+      ]
+    }
+  },
+  "ground_high": [
+    {
+      "x": -160,
+      "y": 2515,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":163.91267395019531}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -40,
+      "y": 2515,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":163.91267395019531}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -160,
+      "y": 2635,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":280.26333618164062}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -40,
+      "y": 2635,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":280.26315307617188}"
+          }
+        ]
+      }
+    }
+  ],
+  "ground_below_helpers": [
+    {
+      "x": -100,
+      "y": 2575,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -160,
+      "y": 2515,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -40,
+      "y": 2515,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":50.000003814697266}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -160,
+      "y": 2635,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -40,
+      "y": 2635,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":50.000003814697266}"
+          }
+        ]
+      }
+    }
+  ],
+  "foot_corners": [
+    {
+      "x": -125,
+      "y": 2550,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -75,
+      "y": 2550,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -125,
+      "y": 2600,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    },
+    {
+      "x": -75,
+      "y": 2600,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":38}"
+          }
+        ]
+      }
+    }
+  ],
+  "push": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Completed\"}"
+      }
+    ]
+  },
+  "owner_push_authorization": "push changes when you ready",
+  "runtime_acceptance": "NOT RUN; manual owner checks pending",
+  "project_validation": "NOT RUN"
+}

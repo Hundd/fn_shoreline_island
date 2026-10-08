@@ -1,0 +1,749 @@
+{
+  "approved_digest": "6f594395a6bbf4c927d6495c2349c084b2d1f753b580d96ec819597b83edfe7f",
+  "travel": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103"
+  },
+  "talk": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B53D0903_2017260095"
+  },
+  "pix": {
+    "guid": "AA59DB43-4A7F-36CC-FAA3-8BA1AF682AF7",
+    "nativeClass": {
+      "refPath": "/Script/Engine.Actor"
+    },
+    "class": {
+      "refPath": "/Script/Engine.Actor"
+    },
+    "name": "Actor_UAID_E89C2592D1B5740403_1367639481",
+    "label": "pix_hub_helper_figure",
+    "bounds": {
+      "min": {
+        "x": 72,
+        "y": 1772,
+        "z": 2272
+      },
+      "max": {
+        "x": 328,
+        "y": 2028,
+        "z": 2665
+      },
+      "isValid": true
+    },
+    "runtimeGrid": "None",
+    "bIsSpatiallyLoaded": false,
+    "bActorIsEditorOnly": false,
+    "actorPackage": "None",
+    "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5740403_1367639481",
+    "folderPath": "None",
+    "dataLayerAssets": []
+  },
+  "arrivals": [
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_1966844094"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2069845096"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2071706097"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2073304098"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2074840099"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2076786100"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2078558101"
+    },
+    {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2080728102"
+    }
+  ],
+  "bindings": [
+    {
+      "prop": "talk",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x5A51783F_talk"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B53D0903_2017260095"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B53D0903_2017260095"
+      }
+    },
+    {
+      "prop": "arrival_0",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x2454F2FA_arrival_0"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_1966844094"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_1966844094"
+      }
+    },
+    {
+      "prop": "arrival_1",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x41334E42_arrival_1"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2069845096"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2069845096"
+      }
+    },
+    {
+      "prop": "arrival_2",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0xAF9CFB50_arrival_2"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2071706097"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2071706097"
+      }
+    },
+    {
+      "prop": "arrival_3",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0xCAFB47E8_arrival_3"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2073304098"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2073304098"
+      }
+    },
+    {
+      "prop": "arrival_4",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x73C39075_arrival_4"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2074840099"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2074840099"
+      }
+    },
+    {
+      "prop": "arrival_5",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x16A42CCD_arrival_5"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2076786100"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2076786100"
+      }
+    },
+    {
+      "prop": "arrival_6",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0xF80B99DF_arrival_6"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2078558101"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2078558101"
+      }
+    },
+    {
+      "prop": "arrival_7",
+      "wrapper": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x9D6C2567_arrival_7"
+      },
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2080728102"
+      },
+      "actual": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Teleporter_V2_C_UAID_E89C2592D1B53D0903_2080728102"
+      }
+    }
+  ],
+  "audit": [
+    {
+      "label": "pix_travel_arrival_2_pattern",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_2_pattern",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_2_pattern",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_2_pattern",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-100,\"y\":3500,\"z\":2512},\"rotation\":{\"pitch\":0,\"yaw\":-179.99999999999997,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_2_pattern",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_3_classifier",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_3_classifier",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_3_classifier",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_3_classifier",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-1700,\"y\":900,\"z\":2500},\"rotation\":{\"pitch\":0,\"yaw\":-90.000000000000014,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_3_classifier",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_4_confidence",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_4_confidence",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_4_confidence",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_4_confidence",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-1700,\"y\":-900,\"z\":2500},\"rotation\":{\"pitch\":0,\"yaw\":-90.000000000000014,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_4_confidence",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_5_error",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_5_error",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_5_error",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_5_error",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-2000,\"y\":-4800,\"z\":2500},\"rotation\":{\"pitch\":0,\"yaw\":-90.000000000000014,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_5_error",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_6_tool",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_6_tool",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_6_tool",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_6_tool",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-2000,\"y\":-8000,\"z\":2500},\"rotation\":{\"pitch\":0,\"yaw\":-90.000000000000014,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_6_tool",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_7_popcorn",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_7_popcorn",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_7_popcorn",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_7_popcorn",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-1700,\"y\":-17100,\"z\":2512},\"rotation\":{\"pitch\":0,\"yaw\":-90.000000000000014,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_7_popcorn",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_8_agent",
+      "tool": "set_label",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_8_agent",
+      "tool": "set_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":true}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_8_agent",
+      "tool": "get_properties",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"knob_TeleporterGroup\\\":\\\"Group_None\\\",\\\"knob_TargetTeleporterGroup\\\":\\\"Group_None\\\",\\\"teleporter Rift Visible\\\":false,\\\"play Visual Effects\\\":false,\\\"play Sound Effects\\\":false,\\\"conserve Momentum\\\":false,\\\"maintainMomentumDuringTeleportToEvent\\\":\\\"Off\\\",\\\"face Player In Teleporter Direction\\\":\\\"Yes\\\",\\\"effect Radius\\\":0,\\\"maintain Relative Position\\\":false,\\\"skydive After Teleport\\\":false,\\\"enabledDuringPhase\\\":\\\"Always\\\"}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_8_agent",
+      "tool": "get_actor_transform",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":{\"location\":{\"x\":-2400,\"y\":-12000,\"z\":2500},\"rotation\":{\"pitch\":0,\"yaw\":-35,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+          }
+        ]
+      }
+    },
+    {
+      "label": "pix_travel_arrival_8_agent",
+      "tool": "save_actor",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "journal",
+      "name": "academy_journal",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934.fn_shoreline_island_academy_journal_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "workshop",
+      "name": "fn_shoreline_island_prompt_workshop",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113.fn_shoreline_island_prompt_workshop_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "pattern",
+      "name": "fn_shoreline_island_pattern_line",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "classifier",
+      "name": "signal_station_0",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1585213294.fn_shoreline_island_signal_station_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "confidence",
+      "name": "energy_station_0",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "error_lab",
+      "name": "error_lab_solo_controller",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "tool_lab",
+      "name": "event_station_1_station",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002.fn_shoreline_island_event_station_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "popcorn",
+      "name": "pop039_production_controller",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541.fn_shoreline_island_popbridge_production_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    },
+    {
+      "prop": "agent_mission",
+      "name": "fn_shoreline_bot_1_station",
+      "script": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":null}"
+          }
+        ]
+      }
+    }
+  ],
+  "source_compile": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[]}"
+      }
+    ]
+  },
+  "disabled_preflight": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\r\\n\\t\\\"configured\\\": false,\\r\\n\\t\\\"talk\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x5A51783F_talk\\\"\\r\\n\\t},\\r\\n\\t\\\"journal\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934.fn_shoreline_island_academy_journal_0\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_0\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x2454F2FA_arrival_0\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_1\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x41334E42_arrival_1\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_2\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0xAF9CFB50_arrival_2\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_3\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0xCAFB47E8_arrival_3\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_4\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x73C39075_arrival_4\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_5\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x16A42CCD_arrival_5\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_6\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0xF80B99DF_arrival_6\\\"\\r\\n\\t},\\r\\n\\t\\\"arrival_7\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103.fn_shoreline_island_pix_travel_0.__verse_0x9D6C2567_arrival_7\\\"\\r\\n\\t},\\r\\n\\t\\\"destination_enabled\\\": [\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue,\\r\\n\\t\\ttrue\\r\\n\\t],\\r\\n\\t\\\"workshop\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113.fn_shoreline_island_prompt_workshop_0\\\"\\r\\n\\t},\\r\\n\\t\\\"pattern\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563.fn_shoreline_island_pattern_line_0\\\"\\r\\n\\t},\\r\\n\\t\\\"classifier\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1585213294.fn_shoreline_island_signal_station_0\\\"\\r\\n\\t},\\r\\n\\t\\\"confidence\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846.fn_shoreline_island_energy_station_0\\\"\\r\\n\\t},\\r\\n\\t\\\"error_lab\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0\\\"\\r\\n\\t},\\r\\n\\t\\\"tool_lab\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002.fn_shoreline_island_event_station_0\\\"\\r\\n\\t},\\r\\n\\t\\\"popcorn\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541.fn_shoreline_island_popbridge_production_0\\\"\\r\\n\\t},\\r\\n\\t\\\"agent_mission\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013.fn_shoreline_island_bot_station_0\\\"\\r\\n\\t}\\r\\n}\"}"
+      }
+    ]
+  }
+}

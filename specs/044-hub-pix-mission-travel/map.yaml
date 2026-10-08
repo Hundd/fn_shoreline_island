@@ -396,6 +396,19 @@ devices:
     agent_independence: remove prerequisite eligibility, preserve verified puzzle
       and real total
     scene_scope: plan.md exact transforms only; envelopes/markers are information
+    ui_contract:
+      SetFocus: first available row; Back at confirmation
+      Back: /Verse.org/Input/UI.Back via MenuNavigationMapping and button.TriggeringInputAction;
+        remove mapping onclose
+      logical_size:
+      - 920
+      - 620
+      copy: plan.md Modal specification
+      review_assets_sha256:
+        spec.md: a2ae274c19e82abcfaf1ac42651f3b89e76f3669e679feec0089d0cf003a206b
+        plan.md: ecc91ede91f3a9f563be66e0af561662edc9088886508055e6e8f8868bb7d13c
+        generated/travel-review.html: fe61d0bc0645de3064e342b3c6ad773d72b1fbde43dd02a4d66b5cc63956e74c
+        generated/travel-review.png: 41ad33c0dddc7c6bc093ecad9956c7cfa262c56349ed3619210ad17f8a48952c
 - id: talk
   class: button_device
   count: 1

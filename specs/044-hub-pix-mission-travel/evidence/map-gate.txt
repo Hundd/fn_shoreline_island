@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "map_id": "hub_pix_mission_travel",
+  "review_digest": "0ec41bd5ccc5892e7d00ae10503941802775a8823618329fa933554eea2885bd",
+  "verdict": "pass",
+  "violations": [],
+  "advisories": [
+    {
+      "code": "LEARN_NO_LESSON",
+      "zone": null,
+      "detail": "no knowledge_room zone; verify the learning objective is introduced before action"
+    }
+  ],
+  "blockers": [],
+  "counts": {
+    "zones": 2,
+    "stages": 4,
+    "markers": 12,
+    "connections": 2,
+    "devices": 5,
+    "targets": 0,
+    "violations": 0,
+    "advisories": 1,
+    "blockers": 0
+  }
+}
