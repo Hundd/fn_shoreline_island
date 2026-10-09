@@ -1,0 +1,103 @@
+version: 1
+map_id: fortnite_campus_extension
+spec_digest: c710b09e7d11ccd3542f10f68a65c704111a808e184ced79b473d2b1dd81c830
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.02
+implementation:
+- step: inspect_existing
+  map: fortnite_campus_extension
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: campus
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -17000
+  - -20000
+  - 2200
+  size_cm:
+  - 31000
+  - 27000
+  - 4500
+  parameters:
+    width_m: 1.2
+    access: All existing eight arrivals, return paths, gates and gameplay remain.
+  markers:
+  - id: arrival
+    kind: spawn
+    zone: campus
+    label: Existing Hub return
+    position:
+    - 163
+    - 215
+    - 3
+    source: 044/045 existing Hub; no new spawn
+  - id: return
+    kind: exit
+    zone: campus
+    label: Existing Return network
+    position:
+    - 163
+    - 215
+    - 3
+    source: Existing devices retained; no new teleport
+  - id: learning
+    kind: knowledge
+    zone: campus
+    label: Existing numbered lesson signs and boards
+    position:
+    - 196
+    - 202
+    - 4
+    source: Existing Prompt entrance illustration only; all actual boards retained
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: architecture
+    class: static_mesh_actor
+    count: 1457
+    source: Measured architectural components and neutral floor inventories in evidence;
+      scene-delta.json is exact execution source
+    settings:
+      scene_delta_sha256: ab48a123ec67bbe4f8c582a3cbca93e2e112a409cfef934ab66fa5bc80108841
+      coverage_sha256: 3b87d9f38120a7ae2cd235815980bfebd8d75c680b0eee1b69c03de722393aae
+      collision: NoCollision
+      default_materials: true
+      render_only_changes: 39
+      review_artifacts_sha256:
+        spec.md: b40049496deed4ef5c744024b2f153e76d5ad21a5e2e776deb95cf245cc85e8d
+        plan.md: 53eed44fad263469212395ce80951f8e7326905e340abd229364f4a0647efb0b
+        coverage.md: 2e0fe6e75c24d1857a8f85a82af7b825a417aaa42e9467ebdd78e51c29bd435a
+        generated\coverage.svg: 84fd3938b5d2662690a79ebed21d0b96924b15e8075053c88a1ce1f59c46c7d3
+        generated\coverage.png: d53157d93c9a03fdbd0d3261dafc4e2dde98a83247e914fa4fd29330fce5c760
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: visit
+    zone: campus
+    purpose: Choose any existing independent numbered lesson using unchanged Pix travel
+      or physical routes.
+    requires: []
+    active_targets: []
+    completion: Existing controller handles learning and legitimate reward.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

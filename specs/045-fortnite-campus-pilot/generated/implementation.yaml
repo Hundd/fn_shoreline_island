@@ -1,0 +1,179 @@
+version: 1
+map_id: fortnite_campus_pilot
+spec_digest: 819e4c058f8ec96949283be8852ebc2b979c0cfe943e214609025c73106a0c75
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.02
+implementation:
+- step: inspect_existing
+  map: fortnite_campus_pilot
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: promenade
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -750.0
+  - -3000
+  - 2300
+  size_cm:
+  - 700
+  - 3000
+  - 500
+  parameters:
+    width_m: 1.2
+    access: Existing movement, entry and Return remain; envelopes are annotations,
+      not walls.
+  markers: []
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: hub
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -1700
+  - 0
+  - 2300
+  size_cm:
+  - 4500
+  - 3000
+  - 1800
+  parameters:
+    width_m: 1.2
+    access: Existing movement, entry and Return remain; envelopes are annotations,
+      not walls.
+  markers:
+  - id: arrival
+    kind: spawn
+    zone: hub
+    label: Existing Hub return
+    position:
+    - 11
+    - 46
+    - 2
+    source: 044 existing hub_destination pivot(-700,1500,2500); no spawn mutation
+  - id: pix
+    kind: knowledge
+    zone: hub
+    label: Existing Pix and eight mission screens
+    position:
+    - 17
+    - 56.75
+    - 1.12
+    source: Live pix_hub_helper_figure at(-100,2575,2412); 044 followup supersedes
+      initial Y2700
+  - id: return
+    kind: exit
+    zone: hub
+    label: Existing campus return access
+    position:
+    - 11
+    - 46
+    - 2
+    source: Existing Return and hub destination reused; no new teleport
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: prompt
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 2800
+  - -550.0
+  - 2300
+  size_cm:
+  - 9000
+  - 2950.0
+  - 2200
+  parameters:
+    width_m: 1.2
+    access: Existing movement, entry and Return remain; envelopes are annotations,
+      not walls.
+  markers:
+  - id: lesson
+    kind: knowledge
+    zone: prompt
+    label: Existing Prompt entrance instructions
+    position:
+    - 50
+    - 33
+    - 4
+    source: Live visual entry assembly, unchanged
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: architecture
+    class: static_mesh_actor
+    count: 160
+    source: Live Fortnite Neo mesh inventory, evidence/asset-bounds.json; exact scene-delta.json
+    settings:
+      scene_delta_sha256: bfd95a01450f46538a46484a4b06a52c192954b5b893031c875a8acac60e13c1
+      collision: NoCollision
+      no_gameplay_changes: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: approach
+    zone: promenade
+    purpose: Follow existing walkway to the hub; no new task.
+    requires: []
+    active_targets: []
+    completion: Reach the existing hub.
+  - id: orient
+    zone: hub
+    purpose: Identify Pix and select a familiar numbered mission; no added task.
+    requires:
+    - approach
+    active_targets: []
+    completion: Player uses unchanged guide or walks onward.
+  - id: learn
+    zone: prompt
+    purpose: Observe, compose, test and deliver through existing Prompt Workshop.
+    requires:
+    - orient
+    active_targets: []
+    completion: Existing controller alone grants existing badge. Art-pass flow is
+      illustrative, not enforced.
+  connections:
+  - from: promenade
+    to: hub
+    mode: walk
+    width: 7
+    points:
+    - - 14
+      - 29
+      - 1.12
+    - - 14
+      - 32
+      - 1.12
+    gate: always
+  - from: hub
+    to: prompt
+    mode: walk
+    width: 3
+    points:
+    - - 43
+      - 33
+      - 1.02
+    - - 50
+      - 33
+      - 1.02
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

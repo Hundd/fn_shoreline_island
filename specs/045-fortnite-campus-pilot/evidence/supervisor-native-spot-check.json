@@ -1,0 +1,89 @@
+{
+  "actors": [
+    {
+      "label": "campus045_hub_paving_00_00",
+      "transform": {
+        "location": {
+          "x": -1700,
+          "y": 500,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.9765625,
+          "y": 0.9765625,
+          "z": 0.05
+        }
+      },
+      "mesh": {
+        "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+      },
+      "materials": [],
+      "collision": "NoCollision",
+      "defaultCollision": false,
+      "dirty": false
+    },
+    {
+      "label": "campus045_lab_south_post_3200",
+      "transform": {
+        "location": {
+          "x": 3200,
+          "y": -450,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "mesh": {
+        "refPath": "/Game/Environments/Sets/Neo/Conduits/Meshes/S_NeoTilted_Conduit_Pole.S_NeoTilted_Conduit_Pole"
+      },
+      "materials": [],
+      "collision": "NoCollision",
+      "defaultCollision": false,
+      "dirty": false
+    },
+    {
+      "label": "campus045_lab_north_clerestory_00",
+      "transform": {
+        "location": {
+          "x": 3456,
+          "y": 2350,
+          "z": 3300
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "mesh": {
+        "refPath": "/Game/Environments/Sets/Neo/Architecture/Exports/Neo_StoreFront_Window_01_Str.Neo_StoreFront_Window_01_Str"
+      },
+      "materials": [],
+      "collision": "NoCollision",
+      "defaultCollision": false,
+      "dirty": false
+    }
+  ],
+  "level_dirty": false,
+  "game": "Unconnected",
+  "session": "Disconnected",
+  "scope": "Supervisor independent native read-only spot check after Builder released editor ownership; no gameplay tests."
+}

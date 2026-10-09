@@ -1,0 +1,32 @@
+{
+  "scope": "Independent offline reconciliation of native saved receipts; not gameplay testing",
+  "expected": 1457,
+  "verified_receipts": 1457,
+  "complete": true,
+  "by_group": {
+    "error": 272,
+    "confidence": 313,
+    "tools": 275,
+    "agent": 247,
+    "pattern": 44,
+    "nursery": 66,
+    "prompt": 36,
+    "classifier": 80,
+    "discovery": 10,
+    "circulation": 114
+  },
+  "by_role": {
+    "paving": 514,
+    "columns": 39,
+    "cornice": 310,
+    "wall_panels": 594
+  },
+  "maximum_numeric_transform_error": 1.4210854715202004e-14,
+  "unchanged_verse_files": 41,
+  "all_receipts_match": true,
+  "original_actors_preserved": 2046,
+  "pilot_complete_mesh_records_preserved": 160,
+  "support_changes_limited_to_render_flags": 39,
+  "final_clean_actor_packages": 1465,
+  "level_saved_clean": true
+}

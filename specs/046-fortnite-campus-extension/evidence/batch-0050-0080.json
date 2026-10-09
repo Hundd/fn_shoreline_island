@@ -1,0 +1,5016 @@
+{
+  "records": [
+    {
+      "label": "campus046_error_paving_0050",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1960391250"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1960391250.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -15792,
+          "y": -5025,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/E/HQ/TNP0569YBCIQH5YKFBC6RF.FortStaticMeshActor_UAID_E89C2592D1B5480903_1960391250",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0051",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1961570251"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1961570251.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -15792,
+          "y": -4100,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/4/HA/R2X2Z4JSQZ3HKOR5WXQOOX.FortStaticMeshActor_UAID_E89C2592D1B5480903_1961570251",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0052",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1962626252"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1962626252.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14861.333333333334,
+          "y": -6875,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/2/PN/BS3VP293C6F76RFKQBPY86.FortStaticMeshActor_UAID_E89C2592D1B5480903_1962626252",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0053",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1963607253"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1963607253.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14861.333333333334,
+          "y": -5950,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/5/1J/6HQ2WK3OG3IE5W2X2BQE7P.FortStaticMeshActor_UAID_E89C2592D1B5480903_1963607253",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0054",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1964434254"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1964434254.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14861.333333333334,
+          "y": -5025,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/E/PG/VS8RWPJG9Y43T5592ELET5.FortStaticMeshActor_UAID_E89C2592D1B5480903_1964434254",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0055",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1965338255"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1965338255.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14861.333333333334,
+          "y": -4100,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/4/XG/BNJX437WW7Z86NRX3JOAL7.FortStaticMeshActor_UAID_E89C2592D1B5480903_1965338255",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0056",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1966586256"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1966586256.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13930.666666666666,
+          "y": -6875,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/4/XF/QFZ8DVD4AH5AID0N30VEPL.FortStaticMeshActor_UAID_E89C2592D1B5480903_1966586256",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0057",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1967535257"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1967535257.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13930.666666666666,
+          "y": -5950,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/3/6Z/8GTVTUY0UXT31F52UWWEAY.FortStaticMeshActor_UAID_E89C2592D1B5480903_1967535257",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0058",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1968651258"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1968651258.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13930.666666666666,
+          "y": -5025,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/B/DZ/AFSL1MX7OS42FVMZKDIM4X.FortStaticMeshActor_UAID_E89C2592D1B5480903_1968651258",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0059",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1458827219",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1969570259"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1969570259.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13930.666666666666,
+          "y": -4100,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.8177083333333333,
+          "y": 1.806640625,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/C/SG/28LAJB9BOM6AP5ZWXDWOSK.FortStaticMeshActor_UAID_E89C2592D1B5480903_1969570259",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0060",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1970779260"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1970779260.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -15792,
+          "y": -3177,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/B/72/TQBRF1TJ0W2D79Z6681S3P.FortStaticMeshActor_UAID_E89C2592D1B5480903_1970779260",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0061",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1971612261"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1971612261.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -15792,
+          "y": -2254,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/3/I6/5OJL8LJA5R3U8ZTD6KY8QK.FortStaticMeshActor_UAID_E89C2592D1B5480903_1971612261",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0062",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1972822262"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1972822262.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -15792,
+          "y": -1331,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/3/2G/F7D3OJS9PGUJBVQOY6G0WC.FortStaticMeshActor_UAID_E89C2592D1B5480903_1972822262",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0063",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1973682263"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1973682263.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -15792,
+          "y": -408,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/7/UB/YG4W2FALN6UWDTNQ9NJLOR.FortStaticMeshActor_UAID_E89C2592D1B5480903_1973682263",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0064",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1974887264"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1974887264.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14874.666666666666,
+          "y": -3177,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/6/HG/UZV1ATH5QAX0U3UN15MXPC.FortStaticMeshActor_UAID_E89C2592D1B5480903_1974887264",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0065",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1975828265"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1975828265.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14874.666666666666,
+          "y": -2254,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/8/AE/G82BCJ2GSQ4HXTZZD964AL.FortStaticMeshActor_UAID_E89C2592D1B5480903_1975828265",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0066",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1977413266"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1977413266.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14874.666666666666,
+          "y": -1331,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/4/6B/D17A6JS1GP1CIH6U2OXMJI.FortStaticMeshActor_UAID_E89C2592D1B5480903_1977413266",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0067",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1978714267"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1978714267.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -14874.666666666666,
+          "y": -408,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/4/TZ/CTUO35VHLPIDSB7RDM5SFF.FortStaticMeshActor_UAID_E89C2592D1B5480903_1978714267",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0068",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1979672268"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1979672268.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13957.333333333334,
+          "y": -3177,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/7/UL/QRABYTFFGLBA0MQVBLJY06.FortStaticMeshActor_UAID_E89C2592D1B5480903_1979672268",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0069",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1980511269"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1980511269.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13957.333333333334,
+          "y": -2254,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/E/RC/7BVUQEZQKMM2MXASLCKU9R.FortStaticMeshActor_UAID_E89C2592D1B5480903_1980511269",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0070",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1981712270"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1981712270.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13957.333333333334,
+          "y": -1331,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/8/4T/5VVP0ONQTEYTUNA0262J30.FortStaticMeshActor_UAID_E89C2592D1B5480903_1981712270",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0071",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1481606221",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1982593271"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1982593271.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13957.333333333334,
+          "y": -408,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/D/U6/5F7RZT5ZUEM8BVT24IAGKK.FortStaticMeshActor_UAID_E89C2592D1B5480903_1982593271",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0072",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1983457272"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1983457272.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13000,
+          "y": -3177,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/7/UO/GKMUN1RMJ67PM27B4U2LRD.FortStaticMeshActor_UAID_E89C2592D1B5480903_1983457272",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0073",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1984417273"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1984417273.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13000,
+          "y": -2254,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/1/YT/AEYEEJQI8MLPYX19WNDR64.FortStaticMeshActor_UAID_E89C2592D1B5480903_1984417273",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0074",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1985712274"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1985712274.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13000,
+          "y": -1331,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/E/XZ/VY07ICEHHIMYEFZIFMBCSO.FortStaticMeshActor_UAID_E89C2592D1B5480903_1985712274",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0075",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1986577275"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1986577275.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -13000,
+          "y": -408,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/6/48/J8SDGK20ROBT16IJWVT779.FortStaticMeshActor_UAID_E89C2592D1B5480903_1986577275",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0076",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1987507276"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1987507276.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -12082.666666666666,
+          "y": -3177,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/6/QH/GQ9NZCE63SH5P8UWHQQVY4.FortStaticMeshActor_UAID_E89C2592D1B5480903_1987507276",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0077",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1988570277"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1988570277.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -12082.666666666666,
+          "y": -2254,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/3/2F/U2A14N01ST8TFJK4I5S3PD.FortStaticMeshActor_UAID_E89C2592D1B5480903_1988570277",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0078",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1990571278"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1990571278.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -12082.666666666666,
+          "y": -1331,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/B/SR/7SSPAW0I159ADMCFPY3EQ6.FortStaticMeshActor_UAID_E89C2592D1B5480903_1990571278",
+      "dirty": false
+    },
+    {
+      "label": "campus046_error_paving_0079",
+      "group": "error",
+      "role": "paving",
+      "source": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5230403_1508597222",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1991393279"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5480903_1991393279.StaticMeshComponent0"
+      },
+      "transform": {
+        "location": {
+          "x": -12082.666666666666,
+          "y": -408,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.7916666666666667,
+          "y": 1.802734375,
+          "z": 0.05
+        }
+      },
+      "properties": {
+        "staticMesh": {
+          "refPath": "/Game/Environments/Sets/Neo/Architecture/Sidewalk/Neo_Sidewalk_Str_1x1_NoCurb.Neo_Sidewalk_Str_1x1_NoCurb"
+        },
+        "overrideMaterials": [],
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "NoCollision",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "NoCollision",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "FCC_Trace_Interaction",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponCapsule",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_PawnAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_NonDestructible",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Weapon",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_Projectile",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileIgnoreAI",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_World",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_ProjectileMesh",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Object_SpectatorDroneCamera",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+                "response": "ECR_Block"
+              },
+              {
+                "channel": "FCC_Trace_Audio",
+                "response": "ECR_Block"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3600,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bUseDefaultCollision": false
+      },
+      "saved": true,
+      "asset_path": "/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/5/2Y/VR4E4CXD5PGS6DTCRPWLN3.FortStaticMeshActor_UAID_E89C2592D1B5480903_1991393279",
+      "dirty": false
+    }
+  ],
+  "saved": true,
+  "count": 30
+}

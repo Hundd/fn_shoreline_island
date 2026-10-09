@@ -1,0 +1,38 @@
+import json, hashlib
+from pathlib import Path
+import yaml
+
+root=Path(__file__).parent
+measure=json.loads((root/'evidence/asset-bounds.json').read_text())
+assets={p.split('.')[-1]:p for p in measure['bounds']}
+pole=json.loads((root/'evidence/pole-bounds.json').read_text())
+assets['S_NeoTilted_Conduit_Pole']=pole['path']
+placements=[]
+def add(label,asset,x,y,z,sx=1,sy=1,sz=1,yaw=0):
+    placements.append(dict(label='campus045_'+label,asset=assets[asset],transform=dict(location=dict(x=x,y=y,z=z),rotation=dict(pitch=0,yaw=yaw,roll=0),scale=dict(x=sx,y=sy,z=sz)),collision='NoCollision',materials='asset defaults; no overrides'))
+for i in range(9):
+    for j in range(6):
+        add(f'hub_paving_{i:02}_{j:02}','Neo_Sidewalk_Str_1x1_NoCurb',-1700+i*500,(j+1)*500,2400.8,500/512,500/512,.05)
+for i in range(2):
+    for j in range(12):
+        add(f'promenade_paving_{i:02}_{j:02}','Neo_Sidewalk_Str_1x1_NoCurb',-750+i*350,-3000+(j+1)*500,2412.8,350/512,500/512,.05)
+for side,y,yaw in [('south',-450,0),('north',2350,180)]:
+    for x in [3200,4300,5400,6500,7600,8700,9800,10900,11700]:
+        add(f'lab_{side}_post_{x}','S_NeoTilted_Conduit_Pole',x,y,2400.250447,1.5,1.5,1300/(pole['max']['z']-pole['min']['z']))
+    for i in range(16):
+        add(f'lab_{side}_clerestory_{i:02}','Neo_StoreFront_Window_01_Str',3456+i*512,y,3300,yaw=yaw)
+        add(f'lab_{side}_cornice_{i:02}','Neo_StoreTrim_Str',3456+i*512,y,3700,yaw=yaw)
+hidden=json.loads((root/'evidence/post-visibility.json').read_text())['posts']
+delta=dict(version=1,feature='045-fortnite-campus-pilot',origin='world XYZ centimeters',placements=placements,component_render_changes=[dict(component=p['component'],before=dict(bVisible=p['properties']['bVisible'],bHiddenInGame=p['properties']['bHiddenInGame']),after=dict(bVisible=False,bHiddenInGame=True),preserve='BodyInstance, transform, StaticMesh and every other property') for p in hidden],retained='All existing actors/components, transforms, collision, materials, bindings and Verse retained; only exact18 post rendering properties change.',visual_contract='Noncolliding overlays. Ground skins lie0.48..1.25cm above retained surface. Neo conduit columns render2400..3700cm instead of primitive posts; original100cm post collision remains. Unit-ish height scale1.04,XY1.5; shaft estimated from rendered image about100cm, exact shaft collision match unmeasured. Bases236cm wide expand visual footprints68cm per side and remain outside lesson route. Clerestories start3300cm; existing open lower sides remain open.',reconcile='Labels unique. Before spawning, find exact label; reuse only if same approved identity and settings. Stop on duplicates.',verification='Read back full transforms, assets, NoCollision, override materials empty, count160, saves; compare original18 BodyInstance unchanged and render state false/true; no runtime tests per user.')
+(root/'scene-delta.json').write_text(json.dumps(delta,indent=2)+'\n')
+digest=hashlib.sha256((root/'scene-delta.json').read_bytes()).hexdigest()
+data=dict(version=1,map=dict(id='fortnite_campus_pilot',title='Fortnite Neo campus: hub and Prompt pavilion',theme='shoreline_research_campus',units='meters',origin_cm=[-1800,-3100,2300],size=[138,64,22],learning_objective='Recognize the welcoming Academy hub and numbered Prompt Workshop while retaining every existing lesson and immediate retry.',source_feature='specs/045-fortnite-campus-pilot/spec.md',intent='propose_change',min_path_width=1.2,position_tolerance=.02),player_flow=['promenade','hub','prompt'],zones=[],connections=[],markers=[],devices=[dict(id='architecture',**{'class':'static_mesh_actor'},count=len(placements),source='Live Fortnite Neo mesh inventory, evidence/asset-bounds.json; exact scene-delta.json',settings=dict(scene_delta_sha256=digest,collision='NoCollision',no_gameplay_changes=True))],stages=[],assumptions=[])
+for zid,label,pos,size,purpose in [('promenade','Immediate promenade',[10.5,1,0],[7,30,5],'Follow existing teal spine into the Academy; textured modular paving.'),('hub','Hub plaza',[1,31,0],[45,30,18],'Orient using existing Core, Pix and eight numbered screens.'),('prompt','Prompt Workshop pavilion',[46,25.5,0],[90,29.5,22],'Keep original open lesson pavilion with upper Fortnite window band and cornice.')]:
+    data['zones'].append(dict(id=zid,label=label,pattern='corridor',position=pos,size=size,purpose=purpose,parameters=dict(width_m=1.2,access='Existing movement, entry and Return remain; envelopes are annotations, not walls.'),devices=['architecture'],overlap_with=[],completion='Reach existing destination without extra interaction.',reset='Existing controllers preserve legitimate badges and reset their own transient state.'))
+data['connections']=[dict(**{'from':'promenade','to':'hub'},mode='walk',width=7,points=[[14,29,1.12],[14,32,1.12]],gate='always'),dict(**{'from':'hub','to':'prompt'},mode='walk',width=3,points=[[43,33,1.02],[50,33,1.02]],gate='always')]
+for mid,kind,zone,label,pos,source in [('arrival','spawn','hub','Existing Hub return',[11,46,2],'044 existing hub_destination pivot(-700,1500,2500); no spawn mutation'),('pix','knowledge','hub','Existing Pix and eight mission screens',[17,56.75,1.12],'Live pix_hub_helper_figure at(-100,2575,2412); 044 followup supersedes initial Y2700'),('lesson','knowledge','prompt','Existing Prompt entrance instructions',[50,33,4],'Live visual entry assembly, unchanged'),('return','exit','hub','Existing campus return access',[11,46,2],'Existing Return and hub destination reused; no new teleport')]:
+    data['markers'].append(dict(id=mid,kind=kind,zone=zone,label=label,position=pos,source=source))
+data['stages']=[dict(id='approach',zone='promenade',purpose='Follow existing walkway to the hub; no new task.',requires=[],active_targets=[],completion='Reach the existing hub.'),dict(id='orient',zone='hub',purpose='Identify Pix and select a familiar numbered mission; no added task.',requires=['approach'],active_targets=[],completion='Player uses unchanged guide or walks onward.'),dict(id='learn',zone='prompt',purpose='Observe, compose, test and deliver through existing Prompt Workshop.',requires=['orient'],active_targets=[],completion='Existing controller alone grants existing badge. Art-pass flow is illustrative, not enforced.')]
+data['assumptions']=[dict(id='measured_assets',detail='Neo meshes, bounds and pivot offsets measured live; native materials inspected in real asset captures.',status='resolved',evidence='evidence/asset-bounds.json; evidence/Neo_*.png'),dict(id='collision_policy',detail='All new meshes decorative NoCollision; retained original floors/routes/supports and gameplay props supply original collision. Upper band is above player and target sightlines; player-height Neo conduit columns replace rendering of exact18 existing primitive posts; collision is retained. Runtime quality accepted for owner walkthrough, not proven.',status='resolved',evidence='scene-delta.json; evidence/before-hub.png; evidence/before-lab.png'),dict(id='delegated_review',detail='Owner explicitly delegates plan verification to Supervisor while unavailable, then builder, and requests skipping tests. Supervisor records actual delegated review authority and digest; no claim of personal owner digest review.',status='resolved',evidence='evidence/supervisor.md; current user instruction'),dict(id='budget',detail='Bounded pilot160 static meshes,4 shared existing Fortnite meshes,zero new lights/devices/textures. Cooked memory not measured because user skips tests; owner acceptance pending.',status='resolved',evidence='scene-delta.json; plan.md')]
+(root/'map.yaml').write_text(yaml.safe_dump(data,sort_keys=False))
+print(f'Wrote {len(placements)} placements and map.yaml')

@@ -1,0 +1,125 @@
+version: 1
+map:
+  id: fortnite_campus_extension
+  title: Fortnite Neo architecture across the remaining Academy
+  theme: shoreline_research_campus
+  units: meters
+  origin_cm:
+  - -17000
+  - -20000
+  - 2200
+  size:
+  - 310
+  - 270
+  - 45
+  learning_objective: Recognize each numbered AI lesson and follow the existing routes;
+    preserve the teaching evidence, actions, retries and rewards.
+  source_feature: specs/046-fortnite-campus-extension/spec.md
+  intent: propose_change
+  min_path_width: 1.2
+  position_tolerance: 0.02
+player_flow:
+- campus
+zones:
+- id: campus
+  label: Existing Academy survey envelope; not a new room
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 310
+  - 270
+  - 45
+  purpose: Art-pass inventory of independent existing zones; not a mandatory long
+    mission route.
+  parameters:
+    width_m: 1.2
+    access: All existing eight arrivals, return paths, gates and gameplay remain.
+  devices:
+  - architecture
+  overlap_with: []
+  completion: Existing lesson controllers remain authoritative.
+  reset: Existing controllers reset transient state and preserve earned badge data.
+connections: []
+markers:
+- id: arrival
+  kind: spawn
+  zone: campus
+  label: Existing Hub return
+  position:
+  - 163
+  - 215
+  - 3
+  source: 044/045 existing Hub; no new spawn
+- id: return
+  kind: exit
+  zone: campus
+  label: Existing Return network
+  position:
+  - 163
+  - 215
+  - 3
+  source: Existing devices retained; no new teleport
+- id: learning
+  kind: knowledge
+  zone: campus
+  label: Existing numbered lesson signs and boards
+  position:
+  - 196
+  - 202
+  - 4
+  source: Existing Prompt entrance illustration only; all actual boards retained
+devices:
+- id: architecture
+  class: static_mesh_actor
+  count: 1457
+  source: Measured architectural components and neutral floor inventories in evidence;
+    scene-delta.json is exact execution source
+  settings:
+    scene_delta_sha256: ab48a123ec67bbe4f8c582a3cbca93e2e112a409cfef934ab66fa5bc80108841
+    coverage_sha256: 3b87d9f38120a7ae2cd235815980bfebd8d75c680b0eee1b69c03de722393aae
+    collision: NoCollision
+    default_materials: true
+    render_only_changes: 39
+    review_artifacts_sha256:
+      spec.md: b40049496deed4ef5c744024b2f153e76d5ad21a5e2e776deb95cf245cc85e8d
+      plan.md: 53eed44fad263469212395ce80951f8e7326905e340abd229364f4a0647efb0b
+      coverage.md: 2e0fe6e75c24d1857a8f85a82af7b825a417aaa42e9467ebdd78e51c29bd435a
+      generated\coverage.svg: 84fd3938b5d2662690a79ebed21d0b96924b15e8075053c88a1ce1f59c46c7d3
+      generated\coverage.png: d53157d93c9a03fdbd0d3261dafc4e2dde98a83247e914fa4fd29330fce5c760
+stages:
+- id: visit
+  zone: campus
+  purpose: Choose any existing independent numbered lesson using unchanged Pix travel
+    or physical routes.
+  requires: []
+  active_targets: []
+  completion: Existing controller handles learning and legitimate reward.
+assumptions:
+- id: scope
+  status: resolved
+  detail: All remaining primary labs, circulation and Discovery greenhouse receive
+    the measured art pass. Authentic optional cottage/east hangar retained. Active
+    parkour substrate and legacy navy teaching surfaces explicitly excluded from cosmetic
+    floor skins.
+  evidence: coverage.json; plan.md
+- id: assets
+  status: resolved
+  detail: Reuse actual measured Neo sidewalk, wall panel, cornice and conduit column
+    meshes; scaled modular panels max1000cm floor,800cm wall width,600cm wall height.
+    No new asset import or light.
+  evidence: ../045-fortnite-campus-pilot/evidence/asset-bounds.json and pole-bounds.json
+- id: authority
+  status: resolved
+  detail: Owner visually accepts045 and requests rest of map. Delegated Supervisor
+    design review and owner manual walkthrough continue; no claim of user review of
+    future digest.
+  evidence: evidence/supervisor.md
+- id: runtime
+  status: resolved
+  detail: Collision retained and new meshes noncolliding. Memory, cooked visibility
+    and playability remain owner checks per skip-tests instruction; counts are scope
+    control, not measured memory.
+  evidence: review.md; tasks.md

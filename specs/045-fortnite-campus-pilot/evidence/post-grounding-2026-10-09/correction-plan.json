@@ -1,0 +1,574 @@
+{
+  "date": "2026-10-09",
+  "user_request": "Please also check pillows related to campus045_lab_north_post_11700 they are hanging in the air or partially hanging",
+  "scope": "Vertical grounding correction of ten existing decorative pilot columns; no new assets, original collision or gameplay changes",
+  "review_status": "Exact transforms pending Supervisor approval",
+  "mesh_local_bounds_z": {
+    "min": -0.24066162109375,
+    "max": 1248.9264526367188
+  },
+  "embedding_cm": 2,
+  "measurement_limit": "Eight footprint perimeter samples per column; collision traces at Z2442 are unrelated foreground blockers and excluded. Surface continuity between samples remains editor visual verification.",
+  "floor_union": {
+    "x": [
+      2900,
+      11700
+    ],
+    "y": [
+      -600,
+      2200
+    ],
+    "top_z": 2400
+  },
+  "changes": [
+    {
+      "label": "campus045_lab_south_post_11700",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1494501598"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1494501598.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 11700,
+          "y": -450,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 11700,
+          "y": -450,
+          "z": 2302.0151119426014
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193492436161918
+        }
+      },
+      "terrain_sample_min": 2303.7457275390625,
+      "terrain_sample_max": 2303.7457275390625,
+      "excluded_nonterrain_hit_heights": [
+        2399.999984741211,
+        2399.999984741211,
+        2399.999984741211,
+        2399.999984741211,
+        2399.999984741211
+      ],
+      "target_bottom_z": 2301.7457275390625,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23533505739852,
+      "scale_z_delta": 0.07865582064500698
+    },
+    {
+      "label": "campus045_lab_north_post_3200",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1539571631"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1539571631.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 3200,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 3200,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2304.4778900146484,
+      "excluded_nonterrain_hit_heights": [
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_4300",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1541338632"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1541338632.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 4300,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 4300,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442,
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_5400",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1542152633"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1542152633.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 5400,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 5400,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_6500",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1543075634"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1543075634.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 6500,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 6500,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442,
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_7600",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1543860635"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1543860635.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 7600,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 7600,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_8700",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1544758636"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1544758636.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 8700,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 8700,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442,
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_9800",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1545604637"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1545604637.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 9800,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9800,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_10900",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1546378638"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1546378638.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 10900,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 10900,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [
+        2442,
+        2442
+      ],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    },
+    {
+      "label": "campus045_lab_north_post_11700",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1547090639"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1547090639.StaticMeshComponent0"
+      },
+      "before": {
+        "location": {
+          "x": 11700,
+          "y": 2350,
+          "z": 2400.250447
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0406934229711848
+        }
+      },
+      "after": {
+        "location": {
+          "x": 11700,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "terrain_sample_min": 2303.746124267578,
+      "terrain_sample_max": 2303.746124267578,
+      "excluded_nonterrain_hit_heights": [],
+      "target_bottom_z": 2301.746124267578,
+      "preserved_top_z": 3699.999992033766,
+      "location_z_delta": -98.23493840531592,
+      "scale_z_delta": 0.07865550305057845
+    }
+  ],
+  "unchanged_labels": [
+    "campus045_lab_south_post_3200",
+    "campus045_lab_south_post_4300",
+    "campus045_lab_south_post_5400",
+    "campus045_lab_south_post_6500",
+    "campus045_lab_south_post_7600",
+    "campus045_lab_south_post_8700",
+    "campus045_lab_south_post_9800",
+    "campus045_lab_south_post_10900"
+  ],
+  "preservation": [
+    "XY locations, rotations and XY scales",
+    "Current decorative column roof-top elevation",
+    "All original hidden support physics and transforms",
+    "All 046 actors and Verse"
+  ],
+  "evidence": [
+    "native-before.json",
+    "footprint-traces.json",
+    "before-north-11700.png",
+    "before-south-11700.png",
+    "before-north-row.png"
+  ]
+}

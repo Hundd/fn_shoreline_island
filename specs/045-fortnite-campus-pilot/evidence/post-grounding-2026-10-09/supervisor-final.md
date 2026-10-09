@@ -1,0 +1,5 @@
+# Grounding correction accepted — 2026-10-09
+
+Independently checked all ten repair receipt transforms against the reviewed correction plan and compared full mesh/material/physics properties against native-before.json. Exact transform comparison passed within 1e-8 native units and all recorded properties were unchanged. Reviewed after-north-11700.png, after-south-11700.png and after-north-row.png: visible air gaps are closed. The south-east base extends through the existing slab edge into terrain as intended; roof elevation and horizontal alignment remain unchanged.
+
+Builder preservation evidence reports the eight supported columns unchanged, original support pose/properties unchanged, all 1,457 feature 046 transform/property records unchanged and 41 Verse files unchanged. All affected packages saved cleanly. Root final live checks confirm session Disconnected, game Unconnected and level is_dirty=false. Editor remains open. Accepted as the requested saved-editor appearance correction; runtime walkthrough remains deferred under the owner's instruction.

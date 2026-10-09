@@ -1,0 +1,212 @@
+version: 1
+map:
+  id: fortnite_campus_pilot
+  title: 'Fortnite Neo campus: hub and Prompt pavilion'
+  theme: shoreline_research_campus
+  units: meters
+  origin_cm:
+  - -1800
+  - -3100
+  - 2300
+  size:
+  - 138
+  - 64
+  - 22
+  learning_objective: Recognize the welcoming Academy hub and numbered Prompt Workshop
+    while retaining every existing lesson and immediate retry.
+  source_feature: specs/045-fortnite-campus-pilot/spec.md
+  intent: propose_change
+  min_path_width: 1.2
+  position_tolerance: 0.02
+player_flow:
+- promenade
+- hub
+- prompt
+zones:
+- id: promenade
+  label: Immediate promenade
+  pattern: corridor
+  position:
+  - 10.5
+  - 1
+  - 0
+  size:
+  - 7
+  - 30
+  - 5
+  purpose: Follow existing teal spine into the Academy; textured modular paving.
+  parameters:
+    width_m: 1.2
+    access: Existing movement, entry and Return remain; envelopes are annotations,
+      not walls.
+  devices:
+  - architecture
+  overlap_with: []
+  completion: Reach existing destination without extra interaction.
+  reset: Existing controllers preserve legitimate badges and reset their own transient
+    state.
+- id: hub
+  label: Hub plaza
+  pattern: corridor
+  position:
+  - 1
+  - 31
+  - 0
+  size:
+  - 45
+  - 30
+  - 18
+  purpose: Orient using existing Core, Pix and eight numbered screens.
+  parameters:
+    width_m: 1.2
+    access: Existing movement, entry and Return remain; envelopes are annotations,
+      not walls.
+  devices:
+  - architecture
+  overlap_with: []
+  completion: Reach existing destination without extra interaction.
+  reset: Existing controllers preserve legitimate badges and reset their own transient
+    state.
+- id: prompt
+  label: Prompt Workshop pavilion
+  pattern: corridor
+  position:
+  - 46
+  - 25.5
+  - 0
+  size:
+  - 90
+  - 29.5
+  - 22
+  purpose: Keep original open lesson pavilion with upper Fortnite window band and
+    cornice.
+  parameters:
+    width_m: 1.2
+    access: Existing movement, entry and Return remain; envelopes are annotations,
+      not walls.
+  devices:
+  - architecture
+  overlap_with: []
+  completion: Reach existing destination without extra interaction.
+  reset: Existing controllers preserve legitimate badges and reset their own transient
+    state.
+connections:
+- from: promenade
+  to: hub
+  mode: walk
+  width: 7
+  points:
+  - - 14
+    - 29
+    - 1.12
+  - - 14
+    - 32
+    - 1.12
+  gate: always
+- from: hub
+  to: prompt
+  mode: walk
+  width: 3
+  points:
+  - - 43
+    - 33
+    - 1.02
+  - - 50
+    - 33
+    - 1.02
+  gate: always
+markers:
+- id: arrival
+  kind: spawn
+  zone: hub
+  label: Existing Hub return
+  position:
+  - 11
+  - 46
+  - 2
+  source: 044 existing hub_destination pivot(-700,1500,2500); no spawn mutation
+- id: pix
+  kind: knowledge
+  zone: hub
+  label: Existing Pix and eight mission screens
+  position:
+  - 17
+  - 56.75
+  - 1.12
+  source: Live pix_hub_helper_figure at(-100,2575,2412); 044 followup supersedes initial
+    Y2700
+- id: lesson
+  kind: knowledge
+  zone: prompt
+  label: Existing Prompt entrance instructions
+  position:
+  - 50
+  - 33
+  - 4
+  source: Live visual entry assembly, unchanged
+- id: return
+  kind: exit
+  zone: hub
+  label: Existing campus return access
+  position:
+  - 11
+  - 46
+  - 2
+  source: Existing Return and hub destination reused; no new teleport
+devices:
+- id: architecture
+  class: static_mesh_actor
+  count: 160
+  source: Live Fortnite Neo mesh inventory, evidence/asset-bounds.json; exact scene-delta.json
+  settings:
+    scene_delta_sha256: bfd95a01450f46538a46484a4b06a52c192954b5b893031c875a8acac60e13c1
+    collision: NoCollision
+    no_gameplay_changes: true
+stages:
+- id: approach
+  zone: promenade
+  purpose: Follow existing walkway to the hub; no new task.
+  requires: []
+  active_targets: []
+  completion: Reach the existing hub.
+- id: orient
+  zone: hub
+  purpose: Identify Pix and select a familiar numbered mission; no added task.
+  requires:
+  - approach
+  active_targets: []
+  completion: Player uses unchanged guide or walks onward.
+- id: learn
+  zone: prompt
+  purpose: Observe, compose, test and deliver through existing Prompt Workshop.
+  requires:
+  - orient
+  active_targets: []
+  completion: Existing controller alone grants existing badge. Art-pass flow is illustrative,
+    not enforced.
+assumptions:
+- id: measured_assets
+  detail: Neo meshes, bounds and pivot offsets measured live; native materials inspected
+    in real asset captures.
+  status: resolved
+  evidence: evidence/asset-bounds.json; evidence/Neo_*.png
+- id: collision_policy
+  detail: All new meshes decorative NoCollision; retained original floors/routes/supports
+    and gameplay props supply original collision. Upper band is above player and target
+    sightlines; player-height Neo conduit columns replace rendering of exact18 existing
+    primitive posts; collision is retained. Runtime quality accepted for owner walkthrough,
+    not proven.
+  status: resolved
+  evidence: scene-delta.json; evidence/before-hub.png; evidence/before-lab.png
+- id: delegated_review
+  detail: Owner explicitly delegates plan verification to Supervisor while unavailable,
+    then builder, and requests skipping tests. Supervisor records actual delegated
+    review authority and digest; no claim of personal owner digest review.
+  status: resolved
+  evidence: evidence/supervisor.md; current user instruction
+- id: budget
+  detail: Bounded pilot160 static meshes,4 shared existing Fortnite meshes,zero new
+    lights/devices/textures. Cooked memory not measured because user skips tests;
+    owner acceptance pending.
+  status: resolved
+  evidence: scene-delta.json; plan.md
