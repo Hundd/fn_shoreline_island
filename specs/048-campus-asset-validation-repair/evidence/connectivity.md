@@ -1,0 +1,4 @@
+# MCP connectivity evidence
+
+2026-10-09: initial ALL_TOOLS exposed Unreal list_toolsets/describe_toolset/call_tool metadata. list_toolsets invocation returned isError with "MCP tool unreal-mcp/list_toolsets is not available to the model". A subsequent describe_toolset invocation raised TypeError because the tool was no longer a function. Fresh ALL_TOOLS contained no Unreal MCP tools. No editor mutations were attempted. Parent notified to restore tool exposure. Current game state cannot be newly verified; parent had reported Unconnected before dispatch.
+Parent OS probe: UnrealEditorFortnite-Win64-Shipping PID 42344 responds, but localhost port 8000 has no listener or connections. Endpoint server is stopped. Parent requested owner run ModelContextProtocol.StartServer. Latest 06:46:52 validation expanded failure inventory to 12 meshes / 1,732 unique labels; sanitized manifest records it. No editor mutation or new game state verification is possible until MCP resumes.

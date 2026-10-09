@@ -1,0 +1,1005 @@
+{
+  "records": [
+    {
+      "label": "campus046_agent_wall_panels_0000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B54A0903_1614837672"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Neo/Walls/Neo_Residential_Wall_01.Neo_Residential_Wall_01_C",
+      "transform": {
+        "location": {
+          "x": -1111.5,
+          "y": -15287.5,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 89.99999999999999,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.7928888690504725,
+          "y": 0.05,
+          "z": 1.388888888888889
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B54A0903_1614837672.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Sets/Neo/Architecture/Exports/Neo_Residential_Wall_01.Neo_Residential_Wall_01"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_M_Neo_ResidentialConcrete_01_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": -1111.5,
+              "y": -15287.5,
+              "z": 2400
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 89.99999999999999,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 0.7928888690504725,
+              "y": 0.05,
+              "z": 1.388888888888889
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B54A0903_1614837672.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus045_lab_north_cornice_00",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1574208641"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Neo/Trims/Neo_StoreTrim_Str_Prop.Neo_StoreTrim_Str_Prop_C",
+      "transform": {
+        "location": {
+          "x": 3456,
+          "y": 2350,
+          "z": 3700
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1574208641.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Sets/Neo/Architecture/Exports/Neo_StoreTrim_Str.Neo_StoreTrim_Str"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_M_Neo_StoreTrim_01_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": 3456,
+              "y": 2350,
+              "z": 3700
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1574208641.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus045_lab_north_clerestory_00",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1573041640"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Neo/Walls/Neo_StoreFront_Window_01_Str.Neo_StoreFront_Window_01_Str_C",
+      "transform": {
+        "location": {
+          "x": 3456,
+          "y": 2350,
+          "z": 3300
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1573041640.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Sets/Neo/Architecture/Exports/Neo_StoreFront_Window_01_Str.Neo_StoreFront_Window_01_Str"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_M_Neo_BuildingTrim_01_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": 3456,
+              "y": 2350,
+              "z": 3300
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1573041640.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus045_lab_north_post_10900",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1546378638"
+      },
+      "asset": "/CRP_SplineSupportActors/SetupAssets/Blueprints/CP_NeoTilted_Conduit_Pole.CP_NeoTilted_Conduit_Pole_C",
+      "transform": {
+        "location": {
+          "x": 10900,
+          "y": 2350,
+          "z": 2302.015508594684
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.1193489260217633
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1546378638.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Sets/Neo/Conduits/Meshes/S_NeoTilted_Conduit_Pole.S_NeoTilted_Conduit_Pole"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_NeoTilted_Conduits_Pole_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": 10900,
+              "y": 2350,
+              "z": 2302.015508594684
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 1.1193489260217633
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5450903_1546378638.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus047_discovery_planter_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1292606072"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Neo/Props/NeoTilted_Planter_Rectangle.NeoTilted_Planter_Rectangle_C",
+      "transform": {
+        "location": {
+          "x": 1500,
+          "y": 775,
+          "z": 2490.1
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 89.99999999999999,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.1749671359592508,
+          "y": 0.854854300777235,
+          "z": 0.85
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1292606072.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_Planter_Rectangle.S_NeoTilted_Planter_Rectangle"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_NeoTilted_Planter_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": 1500,
+              "y": 775,
+              "z": 2490.1
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 89.99999999999999,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1.1749671359592508,
+              "y": 0.854854300777235,
+              "z": 0.85
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1292606072.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus047_confidence_worktable_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1349394102"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Neo/Props/NeoTilted_StoreDisplay_02.NeoTilted_StoreDisplay_02_C",
+      "transform": {
+        "location": {
+          "x": -4250,
+          "y": -3750,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1349394102.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_ComputerStore_Display_02.S_NeoTilted_ComputerStore_Display_02"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_NeoTilted_StoreDisplay_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": -4250,
+              "y": -3750,
+              "z": 2400.8
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1349394102.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus047_discovery_shrub_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1293904073"
+      },
+      "asset": "/Game/Athena/BuildingActors/Props/Building/ActorBlueprints/Containers/Athena_Prop_Plant_Shrub_04.Athena_Prop_Plant_Shrub_04_C",
+      "transform": {
+        "location": {
+          "x": 1500,
+          "y": 625,
+          "z": 2545
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1293904073.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Props/Shrubs/Meshes/Shrub_23.Shrub_23"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_Shrub_23_Ambient_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": 1500,
+              "y": 625,
+              "z": 2545
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 0.65,
+              "y": 0.65,
+              "z": 0.65
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1293904073.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus047_popcorn_greenery_008",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1119938006"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Prop/Hedge_High_Round.Hedge_High_Round_C",
+      "transform": {
+        "location": {
+          "x": -3170,
+          "y": -15760,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1119938006.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Props/Shrubs/Meshes/Shrub_Cylindrical_384.Shrub_Cylindrical_384"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_Cylindrical384_Ambient_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": -3170,
+              "y": -15760,
+              "z": 2400
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1119938006.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus047_error_service_cabinet_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1362959105"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Prop/IND_ControlModule01.IND_ControlModule01_C",
+      "transform": {
+        "location": {
+          "x": -3980,
+          "y": -7485,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1362959105.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Props/Industrial/Meshes/Prop_Industrial_Control_Module_01.Prop_Industrial_Control_Module_01"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_ControlModules_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": -3980,
+              "y": -7485,
+              "z": 2400.8
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1362959105.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    },
+    {
+      "label": "campus047_confidence_service_cabinet_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1350648103"
+      },
+      "asset": "/Game/Building/ActorBlueprints/Prop/ServerRacks01.ServerRacks01_C",
+      "transform": {
+        "location": {
+          "x": -3980,
+          "y": -3785,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1350648103.StaticMeshComponent0"
+          },
+          "properties": {
+            "staticMesh": {
+              "refPath": "/Game/Environments/Props/Industrial/Meshes/Prop_Server_Racks_01_a.Prop_Server_Racks_01_a"
+            },
+            "overrideMaterials": [
+              {
+                "refPath": "/Engine/Transient.MID_MI_ServerRacks01_0"
+              }
+            ],
+            "bVisible": true,
+            "bHiddenInGame": false,
+            "relativeLocation": {
+              "x": -3980,
+              "y": -3785,
+              "z": 2400.8
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        },
+        {
+          "component": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1350648103.EditorOnlyStaticMeshComponent"
+          },
+          "properties": {
+            "staticMesh": null,
+            "overrideMaterials": [],
+            "bVisible": true,
+            "bHiddenInGame": true,
+            "relativeLocation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "relativeRotation": {
+              "pitch": 0,
+              "yaw": 0,
+              "roll": 0
+            },
+            "relativeScale3D": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "bodyInstance": {
+              "collisionEnabled": "NoCollision",
+              "collisionProfileName": "NoCollision"
+            }
+          }
+        }
+      ],
+      "actor_settings": {
+        "bCanBeDamaged": false,
+        "bNoCollision": true,
+        "bIsSpatiallyLoaded": true,
+        "bRegisterWithStructuralGrid": false,
+        "bForciblyStructurallySupported": true,
+        "tags": []
+      }
+    }
+  ],
+  "saved": true
+}

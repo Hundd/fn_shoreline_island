@@ -1,0 +1,228 @@
+{
+  "descriptor": {
+    "guid": "454D2308-40C4-CA6B-3DC1-879B19A4C03B",
+    "nativeClass": {
+      "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+    },
+    "class": {
+      "refPath": "/Script/FortniteGame.FortStaticMeshActor"
+    },
+    "name": "FortStaticMeshActor_UAID_E89C2592D1B56B0903_2067892817",
+    "label": "campus047_circulation_bench_000",
+    "bounds": {
+      "min": {
+        "x": 648.4309844970703,
+        "y": -4049.7567138671875,
+        "z": 2400.7
+      },
+      "max": {
+        "x": 752,
+        "y": -3750.2432861328125,
+        "z": 2517.976252746582
+      },
+      "isValid": true
+    },
+    "runtimeGrid": "None",
+    "bIsSpatiallyLoaded": false,
+    "bActorIsEditorOnly": false,
+    "actorPackage": "None",
+    "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56B0903_2067892817",
+    "folderPath": "None",
+    "dataLayerAssets": []
+  },
+  "actor": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56B0903_2067892817"
+  },
+  "component": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56B0903_2067892817.StaticMeshComponent0"
+  },
+  "transform": {
+    "location": {
+      "x": 752,
+      "y": -3900,
+      "z": 2400.7
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 89.99999999999999,
+      "roll": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "actor_fields": {
+    "bHidden": {
+      "type": "boolean",
+      "description": "Allows us to only see this Actor in the Editor, and not in the actual game.\n@see SetActorHiddenInGame()"
+    },
+    "bCanBeDamaged": {
+      "type": "boolean",
+      "description": "Whether this actor can take damage. Must be true for damage events (e.g. ReceiveDamage()) to be called.\n@see https://www.unrealengine.com/blog/damage-in-ue4\n@see TakeDamage(), ReceiveDamage()"
+    },
+    "bIsSpatiallyLoaded": {
+      "type": "boolean",
+      "description": "Determine if this actor is spatially loaded when placed in a partitioned world.\n     If true, this actor will be loaded when in the range of any streaming sources and if (1) in no data layers, or (2) one or more of its data layers are enabled.\n     If false, this actor will be loaded if (1) in no data layers, or (2) one or more of its data layers are enabled."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of tags that can be used for grouping and categorizing."
+    }
+  },
+  "component_properties": {
+    "staticMesh": {
+      "refPath": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_Bench.S_NeoTilted_Bench"
+    },
+    "overrideMaterials": [],
+    "bodyInstance": {
+      "positionSolverIterationCount": 8,
+      "velocitySolverIterationCount": 2,
+      "projectionSolverIterationCount": 1,
+      "objectType": "ECC_WorldStatic",
+      "collisionEnabled": "QueryOnly",
+      "sleepFamily": "Normal",
+      "dOFMode": "Default",
+      "bUseCCD": false,
+      "bUseMACD": false,
+      "bAllowPartialIslandSleep": true,
+      "bIgnoreAnalyticCollisions": false,
+      "bNotifyRigidBodyCollision": false,
+      "bSmoothEdgeCollisions": false,
+      "bLockTranslation": true,
+      "bLockRotation": true,
+      "bLockXTranslation": false,
+      "bLockYTranslation": false,
+      "bLockZTranslation": false,
+      "bLockXRotation": false,
+      "bLockYRotation": false,
+      "bLockZRotation": false,
+      "bOverrideMaxAngularVelocity": false,
+      "bOverrideMaxDepenetrationVelocity": false,
+      "bOverrideWalkableSlopeOnInstance": false,
+      "bOverrideIterationCounts": false,
+      "bInterpolateWhenSubStepping": true,
+      "bInertiaConditioning": true,
+      "bOneWayInteraction": false,
+      "bOverrideSolverAsyncDeltaTime": false,
+      "solverAsyncDeltaTime": 0.01666666753590107,
+      "collisionProfileName": "BlockAll",
+      "collisionResponses": {
+        "responseArray": [
+          {
+            "channel": "FCC_Trace_Interaction",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_WeaponCapsule",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Object_PawnAI",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_WeaponMulti",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_NonDestructible",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_Weapon",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Object_Projectile",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Object_ProjectileIgnoreAI",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_World",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Object_ProjectileMesh",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Object_SpectatorDroneCamera",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "response": "ECR_Block"
+          },
+          {
+            "channel": "FCC_Trace_Audio",
+            "response": "ECR_Block"
+          }
+        ]
+      },
+      "maxDepenetrationVelocity": 0,
+      "massInKgOverride": 100,
+      "linearDamping": 0.009999999776482582,
+      "angularDamping": 0,
+      "customDOFPlaneNormal": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "cOMNudge": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "massScale": 1,
+      "gravityGroupIndex": 0,
+      "inertiaTensorScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "walkableSlopeOverride": {
+        "walkableSlopeBehavior": "WalkableSlope_Default",
+        "walkableSlopeAngle": 0
+      },
+      "physMaterialOverride": null,
+      "maxAngularVelocity": 3600,
+      "customSleepThresholdMultiplier": 1,
+      "stabilizationThresholdMultiplier": 1,
+      "physicsBlendWeight": 0,
+      "bSimulatePhysics": false,
+      "bOverrideMass": false,
+      "bEnableGravity": true,
+      "bUpdateKinematicFromSimulation": false,
+      "bGyroscopicTorqueEnabled": false,
+      "bAutoWeld": true,
+      "bStartAwake": true,
+      "bGenerateWakeEvents": false,
+      "bUpdateMassWhenScaleChanges": true
+    },
+    "bUseDefaultCollision": false,
+    "relativeLocation": {
+      "x": 752,
+      "y": -3900,
+      "z": 2400.7
+    },
+    "relativeRotation": {
+      "pitch": 0,
+      "yaw": 89.99999999999999,
+      "roll": 0
+    },
+    "relativeScale3D": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "saved": true
+}

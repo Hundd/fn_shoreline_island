@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-09T06:59:46Z",
+  "operation": "StartSession",
+  "result": "Failed: Validation failed",
+  "unique_illegal_campus_actor_count": 1731,
+  "repaired_bench_in_errors": false,
+  "untouched_benches_in_errors": [
+    "campus047_circulation_bench_001",
+    "campus047_circulation_bench_002"
+  ],
+  "checkpoint_saved": true,
+  "notes": "Pilot native Blueprint bench is exempt from disallowed raw mesh reference; remaining actors still fail as expected. No cook reached."
+}
