@@ -1,0 +1,15 @@
+# 047 - Passive campus polish
+
+Owner says "Do it" following the remaining-assets recommendation. Earlier instructions delegate concrete plan verification to Supervisor and reserve gameplay testing for the owner. This feature adds real Fortnite dressing to the remaining passive scenery; it does not replace the working Popcorn machines.
+
+| Requirement | Observable acceptance |
+|---|---|
+| R01: Improve passive Popcorn surroundings | Given the current course, when looking along the north edge, real shrubs/topiary replace 12 architectural cone/sphere parts and native trim details all four stationary canopy roofs. All course decks, rings, cones, mechanisms, kernels, bucket/moustache surprises and growth-state props remain unchanged. |
+| R02: Replace exactly three primitive benches | Given each existing rest deck, when viewing or approaching its bench, one grounded native Neo bench replaces the six primitive parts. Old bench collision is retired and native seat/back/feet hulls provide the replacement. Existing authentic seating remains. |
+| R03: Upgrade measured planter pockets | Given eight Prompt beam planters and two Discovery spine plinths, when viewing them, 26 native troughs and 28 small shrubs sit on supported surfaces with clear gaps around all 045 columns. Existing structural bases and their collision remain visible and unchanged. |
+| R04: Add restrained architectural and lab detail | Given the four Agent assembly frames, eight native uprights and 16 beam trims improve their passive forms. Given Confidence, Error and Tool peripheral pockets, each gains one worktable and one service cabinet without new interactions or obstructing existing controls. |
+| R05: Preserve gameplay and previous work | Given any lesson, when the owner later plays it, all instructions, inputs, motion, targets, Popcorn 7/24/53 ordered references, travel, replay, return, rewards, 045 grounded posts and 046 surfaces behave as before. Agent execution records exact readback/source preservation; gameplay acceptance remains owner evidence. |
+| R06: Grounding, proportion and clearance | Given the exact delta, all 55 supported ground/plinth props have four successful corner support reads; planter foliage roots sit in the new trough soil; trim sits on measured stationary edges. No new opaque mass crosses an entrance or teaching shot lane. Default materials and moderate dimensions preserve authored art. |
+| R07: Authorized workflow | Given the reviewed bundle, Supervisor records the actual delegated review authority and digest, readiness passes, and Builder performs serialized edits/readback/save. No automated tests, project validation, cook, push or gameplay session. Leave editor open and game stopped. |
+
+Scope is 115 new meshes and 38 original component changes. The only original physics changes are the 18 retired bench components; three native benches provide replacement collision. Other 20 source-component changes affect rendering only. No asset import, asset mesh modification, source edit, new light, audio, VFX, mission or target.

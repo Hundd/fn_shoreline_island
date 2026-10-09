@@ -1,0 +1,110 @@
+version: 1
+map_id: passive_campus_polish
+spec_digest: 19433b48334f373997163bf8b3ee15e6e25a158a3cccd3402346c000bad349c4
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.02
+implementation:
+- step: inspect_existing
+  map: passive_campus_polish
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: campus
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -17000
+  - -20000
+  - 2200
+  size_cm:
+  - 31000
+  - 27000
+  - 4500
+  parameters:
+    width_m: 1.2
+    access: All existing eight arrivals, return paths, gates and gameplay remain.
+  markers:
+  - id: arrival
+    kind: spawn
+    zone: campus
+    label: Existing Hub return
+    position:
+    - 163
+    - 215
+    - 3
+    source: 044/045 existing Hub; no new spawn
+  - id: return
+    kind: exit
+    zone: campus
+    label: Existing Return network
+    position:
+    - 163
+    - 215
+    - 3
+    source: Existing devices retained; no new teleport
+  - id: learning
+    kind: knowledge
+    zone: campus
+    label: Existing numbered lesson signs and boards
+    position:
+    - 196
+    - 202
+    - 4
+    source: Existing Prompt entrance illustration only; all actual boards retained
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: architecture
+    class: static_mesh_actor
+    count: 115
+    source: scene-delta.json exact world transforms and component_changes; no inferred
+      substitutions
+    settings:
+      scene_delta_sha256: 23a22c5afe1bd6367372b84b7e314c81605597a5782c0dbf23f4a853e2face09
+      collision: 112 NoCollision props; 3 native BlockAll QueryOnly benches
+      component_changes: 38
+      original_collision_exceptions: 18
+      review_artifacts_sha256:
+        scene-delta.json: 23a22c5afe1bd6367372b84b7e314c81605597a5782c0dbf23f4a853e2face09
+        spec.md: f26595860c20ce736d8fb0856e9e67c86f304dd6ecb7429914ad2fc675cdaebc
+        plan.md: b5bf14a82f00fb1659096e20765d176ef44907b3ac046525f84097a4d582f51f
+        generated/coverage.svg: 9ee9864de44dd2726491fe052a8a7c0f10ce636bf3574cd120cbbc20a5556ddf
+        generated/coverage.png: 7b6516a02b64b4ac9ccf648a3e953c06e6926ffefba0b1354f24c25c44deff06
+        evidence/grounding-corners-final.json: bed3942314a99f15bc393f77878af79d1fa7ec950e21a7b189189cae7febcf07
+        evidence/bench-body-setup.json: c0bb4d649df99385ecf21c7320a8fa345a2379a37afd6865d5c1b8fc8d5479f3
+        evidence/offline-geometry-review.json: d7314bc6f20df53b256192bbf25d06077f7f59193e203bc425de9cf7d1104f8b
+        evidence/assemblies.json: 254aa34ac282df961d7fde0081014da2795cc6b1dd4029f071f73ea97af15a62
+        evidence/used-assets.json: bd666a47aaeba4df6541406d7cd978346eb4e3584ddfca26712c50ac14c7f22f
+        evidence/popcorn-bindings.json: fd0db550df1c47117a24f8edf2e4e1764a6418a73deeb12a9c66c0bcc296e8a2
+        evidence/implementation-furnishing-correction-proposal.json: f93e60d2fa66033e39770fbc79541988899d264d8453f4a52a09abef2f83a801
+        review.md: 3e8c1d98ade43603749b8248c8c90c092b5a0a79b3c8de4f85f53cd28c5a71b2
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: visit
+    zone: campus
+    purpose: Choose any existing independent numbered lesson using unchanged Pix travel
+      or physical routes.
+    requires: []
+    active_targets: []
+    completion: Existing controller handles learning and legitimate reward.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

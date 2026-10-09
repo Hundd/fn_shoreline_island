@@ -1,0 +1,274 @@
+{
+  "reason": "Both Tool furnishing meshes lie within original event_factory_tower_4 solid volume; table crosses west face, cabinet concealed inside. Error console/table bounds are separated by30.092206954956 cm in Y; no correction proposed there.",
+  "tower_owner": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5C20303_1424475150"
+  },
+  "tower_world_bounds": {
+    "min": {
+      "x": -4300,
+      "y": -11800,
+      "z": 2400
+    },
+    "max": {
+      "x": -2100,
+      "y": -10900,
+      "z": 5150
+    }
+  },
+  "all_six_native_bounds": [
+    {
+      "label": "campus047_confidence_worktable_000",
+      "bounds": {
+        "min": {
+          "x": -4396.853630065918,
+          "y": -3811.6272945404053,
+          "z": 2400.643505859375
+        },
+        "max": {
+          "x": -4103.146354675293,
+          "y": -3688.3727016448975,
+          "z": 2479.552593994141
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "campus047_confidence_service_cabinet_000",
+      "bounds": {
+        "min": {
+          "x": -4015.528051376343,
+          "y": -3785.3084983825684,
+          "z": 2400.8
+        },
+        "max": {
+          "x": -3947.1398525238037,
+          "y": -3728.040126800537,
+          "z": 2607.909283447266
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "campus047_error_worktable_000",
+      "bounds": {
+        "min": {
+          "x": -4396.853630065918,
+          "y": -7511.627294540405,
+          "z": 2400.643505859375
+        },
+        "max": {
+          "x": -4103.146354675293,
+          "y": -7388.3727016448975,
+          "z": 2479.552593994141
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "campus047_error_service_cabinet_000",
+      "bounds": {
+        "min": {
+          "x": -3980,
+          "y": -7552.003608703613,
+          "z": 2400.8
+        },
+        "max": {
+          "x": -3912.904800415039,
+          "y": -7485,
+          "z": 2601.1181762695314
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "campus047_tools_worktable_000",
+      "bounds": {
+        "min": {
+          "x": -4396.853630065918,
+          "y": -11311.627294540405,
+          "z": 2400.643505859375
+        },
+        "max": {
+          "x": -4103.146354675293,
+          "y": -11188.372701644897,
+          "z": 2479.552593994141
+        },
+        "isValid": true
+      }
+    },
+    {
+      "label": "campus047_tools_service_cabinet_000",
+      "bounds": {
+        "min": {
+          "x": -3980,
+          "y": -11352.003608703613,
+          "z": 2400.8
+        },
+        "max": {
+          "x": -3912.904800415039,
+          "y": -11285,
+          "z": 2601.1181762695314
+        },
+        "isValid": true
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "label": "campus047_tools_worktable_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1364076106"
+      },
+      "before": {
+        "location": {
+          "x": -4250,
+          "y": -11250,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -4250,
+          "y": -10750,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "delta_cm": {
+        "x": 0,
+        "y": 500,
+        "z": 0
+      },
+      "north_face_clearance_cm": 85.671976280212
+    },
+    {
+      "label": "campus047_tools_service_cabinet_000",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B56C0903_1365192107"
+      },
+      "before": {
+        "location": {
+          "x": -3980,
+          "y": -11285,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -3980,
+          "y": -10785,
+          "z": 2400.8
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "delta_cm": {
+        "x": 0,
+        "y": 500,
+        "z": 0
+      },
+      "north_face_clearance_cm": 45.295662117004
+    }
+  ],
+  "support_samples": {
+    "records": [
+      {
+        "label": "campus047_tools_worktable_000",
+        "hits": [
+          {
+            "x": -4395.853630065918,
+            "y": -10810.627294540405,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          },
+          {
+            "x": -4395.853630065918,
+            "y": -10689.372701644897,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          },
+          {
+            "x": -4104.146354675293,
+            "y": -10810.627294540405,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          },
+          {
+            "x": -4104.146354675293,
+            "y": -10689.372701644897,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          }
+        ]
+      },
+      {
+        "label": "campus047_tools_service_cabinet_000",
+        "hits": [
+          {
+            "x": -3979,
+            "y": -10851.003608703613,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          },
+          {
+            "x": -3979,
+            "y": -10786,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          },
+          {
+            "x": -3913.904800415039,
+            "y": -10851.003608703613,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          },
+          {
+            "x": -3913.904800415039,
+            "y": -10786,
+            "distance": 100.00001525878906,
+            "surface_z": 2399.999984741211
+          }
+        ]
+      }
+    ]
+  },
+  "other113_placements": "unchanged",
+  "review_status": "Pending exact Supervisor review; no correction applied"
+}

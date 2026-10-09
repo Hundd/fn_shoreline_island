@@ -1,0 +1,196 @@
+{
+  "candidates": [
+    {
+      "path": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_WoodCrate_01.S_NeoTilted_WoodCrate_01",
+      "bounds": {
+        "min": {
+          "x": -57.27425193786621,
+          "y": -67.35698318481445,
+          "z": 0.6298141479492188
+        },
+        "max": {
+          "x": 58.0634708404541,
+          "y": 61.93479537963867,
+          "z": 122.09760284423828
+        },
+        "isValid": true
+      },
+      "materials": {
+        "NEO_Prop_Wood_Crate": {
+          "refPath": "/Game/Environments/Sets/Neo/Props/Materials/MI_NeoTilted_WoodCrates.MI_NeoTilted_WoodCrates"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_Planter_Rectangle.S_NeoTilted_Planter_Rectangle",
+      "bounds": {
+        "min": {
+          "x": -253.62411499023438,
+          "y": -126.33731842041016,
+          "z": -0.08058929443359375
+        },
+        "max": {
+          "x": 253.62411499023438,
+          "y": 126.33731842041016,
+          "z": 104.88459014892578
+        },
+        "isValid": true
+      },
+      "materials": {
+        "WorldGridMaterial": {
+          "refPath": "/Game/Environments/Sets/Neo/Props/Materials/MI_NeoTilted_Planter.MI_NeoTilted_Planter"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_ComputerStore_Display_02.S_NeoTilted_ComputerStore_Display_02",
+      "bounds": {
+        "min": {
+          "x": -146.85363006591797,
+          "y": -61.62729454040527,
+          "z": -0.156494140625
+        },
+        "max": {
+          "x": 146.85364532470703,
+          "y": 61.62729835510254,
+          "z": 78.75259399414062
+        },
+        "isValid": true
+      },
+      "materials": {
+        "03 - Default": {
+          "refPath": "/Game/Environments/Sets/Neo/Props/Materials/MI_NeoTilted_StoreDisplay.MI_NeoTilted_StoreDisplay"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Sets/Neo/Props/Exports/S_NeoTilted_Bench.S_NeoTilted_Bench",
+      "bounds": {
+        "min": {
+          "x": -149.7567138671875,
+          "y": 0.6027069091796875,
+          "z": 0.37448883056640625
+        },
+        "max": {
+          "x": 149.7567138671875,
+          "y": 103.56901550292969,
+          "z": 117.27625274658203
+        },
+        "isValid": true
+      },
+      "materials": {
+        "M_NeoTilted_Bench": {
+          "refPath": "/Game/Environments/Sets/Neo/Props/Materials/MI_NeoTilted_Bench.MI_NeoTilted_Bench"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Props/Lab/Meshes/SM_Lab_Container_Open.SM_Lab_Container_Open",
+      "bounds": {
+        "min": {
+          "x": -94.89677429199219,
+          "y": -64.3865737915039,
+          "z": 1.454681396484375
+        },
+        "max": {
+          "x": 94.92063903808594,
+          "y": 85.23600006103516,
+          "z": 311.4048156738281
+        },
+        "isValid": true
+      },
+      "materials": {
+        "MatID1": {
+          "refPath": "/Game/Environments/Props/Lab/Materials/M_Lab_Container.M_Lab_Container"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Props/Shrubs/Meshes/Shrub_23.Shrub_23",
+      "bounds": {
+        "min": {
+          "x": -110.95761108398438,
+          "y": -106.2177734375,
+          "z": -8.48858642578125
+        },
+        "max": {
+          "x": 110.95761108398438,
+          "y": 106.2177734375,
+          "z": 152.06735229492188
+        },
+        "isValid": true
+      },
+      "materials": {
+        "lambert2": {
+          "refPath": "/Game/Environments/Props/Shrubs/Materials/PP2/MI_Shrub_23_Ambient.MI_Shrub_23_Ambient"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Props/Industrial/Meshes/Prop_Industrial_Control_Module_01.Prop_Industrial_Control_Module_01",
+      "bounds": {
+        "min": {
+          "x": 0.4445037841796875,
+          "y": -67.00360870361328,
+          "z": 0.40521240234375
+        },
+        "max": {
+          "x": 67.09519958496094,
+          "y": -0.04793548583984375,
+          "z": 200.31817626953125
+        },
+        "isValid": true
+      },
+      "materials": {
+        "MI_ControlModules": {
+          "refPath": "/Game/Environments/Props/Industrial/Materials/MI_ControlModules.MI_ControlModules"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Props/Industrial/Meshes/IND_Kitchen_Counter_01.IND_Kitchen_Counter_01",
+      "bounds": {
+        "min": {
+          "x": -255.66899871826172,
+          "y": -80,
+          "z": 0
+        },
+        "max": {
+          "x": 256.1033401489258,
+          "y": 81.78602600097656,
+          "z": 210.4891357421875
+        },
+        "isValid": true
+      },
+      "materials": {
+        "MI_IND_Kitchen_Counter_01": {
+          "refPath": "/Game/Environments/Props/Industrial/Materials/MI_IND_Kitchen_Counter_01.MI_IND_Kitchen_Counter_01"
+        },
+        "02 - Default": {
+          "refPath": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      }
+    },
+    {
+      "path": "/Game/Environments/Props/Industrial/Meshes/Prop_Server_Racks_01_a.Prop_Server_Racks_01_a",
+      "bounds": {
+        "min": {
+          "x": -35.52805137634277,
+          "y": -0.3084983825683594,
+          "z": 0.0153350830078125
+        },
+        "max": {
+          "x": 32.86014747619629,
+          "y": 56.95987319946289,
+          "z": 207.10928344726562
+        },
+        "isValid": true
+      },
+      "materials": {
+        "MI_ServerRacks01": {
+          "refPath": "/Game/Environments/Props/Industrial/Materials/MI_ServerRacks01.MI_ServerRacks01"
+        }
+      }
+    }
+  ]
+}

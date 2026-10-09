@@ -1,0 +1,127 @@
+version: 1
+map:
+  id: passive_campus_polish
+  title: Passive Fortnite campus polish
+  theme: shoreline_research_campus
+  units: meters
+  origin_cm:
+  - -17000
+  - -20000
+  - 2200
+  size:
+  - 310
+  - 270
+  - 45
+  learning_objective: Keep each existing AI lesson readable while adding grounded
+    native planting, seating and passive lab detail.
+  source_feature: specs/047-passive-campus-polish/spec.md
+  intent: propose_change
+  min_path_width: 1.2
+  position_tolerance: 0.02
+player_flow:
+- campus
+zones:
+- id: campus
+  label: Existing campus passive-art survey
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 310
+  - 270
+  - 45
+  purpose: Measured passive-art improvements to existing independent destinations;
+    no new walking requirement or lesson.
+  parameters:
+    width_m: 1.2
+    access: All existing eight arrivals, return paths, gates and gameplay remain.
+  devices:
+  - architecture
+  overlap_with: []
+  completion: Existing lesson controllers remain authoritative.
+  reset: Existing controllers reset transient state and preserve earned badge data.
+connections: []
+markers:
+- id: arrival
+  kind: spawn
+  zone: campus
+  label: Existing Hub return
+  position:
+  - 163
+  - 215
+  - 3
+  source: 044/045 existing Hub; no new spawn
+- id: return
+  kind: exit
+  zone: campus
+  label: Existing Return network
+  position:
+  - 163
+  - 215
+  - 3
+  source: Existing devices retained; no new teleport
+- id: learning
+  kind: knowledge
+  zone: campus
+  label: Existing numbered lesson signs and boards
+  position:
+  - 196
+  - 202
+  - 4
+  source: Existing Prompt entrance illustration only; all actual boards retained
+devices:
+- id: architecture
+  class: static_mesh_actor
+  count: 115
+  source: scene-delta.json exact world transforms and component_changes; no inferred
+    substitutions
+  settings:
+    scene_delta_sha256: d503c8902f79d7eed100328cebf5b6606ad658b0684bccb2ac90dee5ba84bd67
+    collision: 112 NoCollision props; 3 native BlockAll QueryOnly benches
+    component_changes: 38
+    original_collision_exceptions: 18
+    review_artifacts_sha256:
+      scene-delta.json: d503c8902f79d7eed100328cebf5b6606ad658b0684bccb2ac90dee5ba84bd67
+      spec.md: f26595860c20ce736d8fb0856e9e67c86f304dd6ecb7429914ad2fc675cdaebc
+      plan.md: 5fe2b4c1b120cd92038153d4fe37549dbb936034820b3ed3317023b107ec4a7c
+      generated/coverage.svg: 6be2522e73b23665cee740f45ea4c9c92054e6ac8c67c35caa3a9559c5d4389a
+      generated/coverage.png: 9394b6580bf89bc054bde0d139371eda77d7f41b6c96db4fd99d378bd176d061
+      evidence/grounding-corners-final.json: bb1838982ca0a7e102f4d4408fc6d6c1dd17f2da25d0d70ad0b14fb5921741e0
+      evidence/bench-body-setup.json: c0bb4d649df99385ecf21c7320a8fa345a2379a37afd6865d5c1b8fc8d5479f3
+      evidence/offline-geometry-review.json: d7314bc6f20df53b256192bbf25d06077f7f59193e203bc425de9cf7d1104f8b
+      evidence/assemblies.json: 254aa34ac282df961d7fde0081014da2795cc6b1dd4029f071f73ea97af15a62
+      evidence/used-assets.json: bd666a47aaeba4df6541406d7cd978346eb4e3584ddfca26712c50ac14c7f22f
+      evidence/popcorn-bindings.json: fd0db550df1c47117a24f8edf2e4e1764a6418a73deeb12a9c66c0bcc296e8a2
+stages:
+- id: visit
+  zone: campus
+  purpose: Choose any existing independent numbered lesson using unchanged Pix travel
+    or physical routes.
+  requires: []
+  active_targets: []
+  completion: Existing controller handles learning and legitimate reward.
+assumptions:
+- id: scope
+  status: resolved
+  detail: 115 passive native meshes; exact 38 source changes. No active course, growing
+    plant, semantic target or dynamic prop substitution.
+  evidence: scene-delta.json; spec.md
+- id: grounding
+  status: resolved
+  detail: 220 corner reads match floor/plinth support. Planter roots embed in inspected
+    native soil. Real bench convex hulls replace only retired bench collision.
+  evidence: evidence/grounding-corners-final.json; evidence/bench-body-setup.json;
+    plan.md
+- id: authority
+  status: resolved
+  detail: Owner says Do it after this recommendation; earlier delegated Supervisor
+    verification and skip-tests instruction persist. Supervisor reviews current concrete
+    digest; no claim of owner digest review.
+  evidence: evidence/supervisor.md
+- id: runtime
+  status: resolved
+  detail: No gameplay testing, validation, cook, push or session. Saved editor integrity
+    and visual checks required; owner runtime and memory acceptance pending.
+  evidence: tasks.md; review.md
