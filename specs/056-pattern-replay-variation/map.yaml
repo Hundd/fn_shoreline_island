@@ -1,0 +1,380 @@
+version: 1
+map:
+  id: pattern_replay_variation
+  title: Pattern Scanner - one authored alternate Replay set
+  theme: clear_coastal_puzzle_bay
+  units: meters
+  origin_cm:
+  - -1100
+  - 3000
+  - 2400
+  size:
+  - 88
+  - 25
+  - 9
+  learning_objective: Recognize repeating groups, fill a missing member, and verify
+    the completed pattern.
+  source_feature: specs/056-pattern-replay-variation/spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- play_bay
+zones:
+- id: arrival
+  label: Walk in
+  pattern: corridor
+  position:
+  - 0
+  - 0
+  - 0
+  size:
+  - 22
+  - 6
+  - 9
+  purpose: Short hub approach; no Start button or countdown.
+  parameters:
+    width_m: 3
+    access: Always open hub approach with a short direction sign; no lesson timer
+  devices:
+  - board
+  - hud
+  - controller
+  overlap_with: []
+  completion: Sole player enters play bay; first puzzle ready within 0.5 seconds.
+  reset: Cancel old generation; same owner restarts selected set. New round/disconnect/replacement
+    owner restores original. Only completed Replay toggles set.
+- id: play_bay
+  label: All 3 rounds here
+  pattern: shooting_gallery
+  position:
+  - 0
+  - 6
+  - 0
+  size:
+  - 22
+  - 16
+  - 9
+  purpose: Solve three persistent strips using the same A/B/C answers; reward and
+    replay here.
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  devices:
+  - controller
+  - answers
+  - blaster
+  - board
+  - hud
+  - controls
+  - progress
+  - badge
+  - lights
+  - effect
+  overlap_with: []
+  completion: Solve original B/A/C or alternate C/B/A in the same bay. Existing guarded
+    badge once.
+  reset: Cancel old generation; same owner restarts selected set. New round/disconnect/replacement
+    owner restores original. Only completed Replay toggles set.
+connections:
+- from: arrival
+  to: play_bay
+  mode: walk
+  width: 3
+  points:
+  - - 6
+    - 4
+    - 0
+  - - 6
+    - 6
+    - 0
+  - - 10
+    - 9
+    - 0
+  gate: always
+markers:
+- id: hub_arrival
+  kind: spawn
+  zone: arrival
+  label: Existing hub walkway arrival; no new spawn
+  position:
+  - 6
+  - 4
+  - 0
+  source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+    at this annotation.
+- id: inventory
+  kind: weapon
+  zone: arrival
+  label: Existing Pulse Rifle grant; no new granter
+  position:
+  - 10
+  - 3
+  - 1
+  source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+    at this annotation.
+- id: rule
+  kind: knowledge
+  zone: play_bay
+  label: 'Persistent pattern: shoot the missing symbol'
+  position:
+  - 10
+  - 17.0802658
+  - 2.79
+  source: Measured current board transform; evidence/live-baseline.json. Preserve
+    unchanged.
+- id: answer_0
+  kind: target
+  zone: play_bay
+  label: A circle - stationary
+  position:
+  - 7
+  - 15
+  - 1.8
+  source: Measured current native actor world transform converted to local meters;
+    evidence/live-baseline.json. Preserve unchanged.
+  target_id: 0
+- id: answer_1
+  kind: target
+  zone: play_bay
+  label: B triangle - stationary
+  position:
+  - 10
+  - 15
+  - 1.8
+  source: Measured current native actor world transform converted to local meters;
+    evidence/live-baseline.json. Preserve unchanged.
+  target_id: 1
+- id: answer_2
+  kind: target
+  zone: play_bay
+  label: C square - stationary
+  position:
+  - 13
+  - 15
+  - 1.8
+  source: Measured current native actor world transform converted to local meters;
+    evidence/live-baseline.json. Preserve unchanged.
+  target_id: 2
+- id: firing_point
+  kind: knowledge
+  zone: play_bay
+  label: Stand here for every round; no physical floor control
+  position:
+  - 10
+  - 9
+  - 0
+  source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+    at this annotation.
+- id: badge
+  kind: reward
+  zone: play_bay
+  label: Three lights and Pattern Badge at completion
+  position:
+  - 16
+  - 19
+  - 1
+  source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+    at this annotation.
+- id: replay
+  kind: knowledge
+  zone: play_bay
+  label: Replay button - enabled after completion
+  position:
+  - 15
+  - 9
+  - 1
+  source: Measured current native actor world transform converted to local meters;
+    evidence/live-baseline.json. Preserve unchanged.
+- id: return
+  kind: exit
+  zone: play_bay
+  label: Return button - always available
+  position:
+  - 4.5
+  - 11
+  - 1
+  source: Measured current native actor world transform converted to local meters;
+    evidence/live-baseline.json. Preserve unchanged.
+devices:
+- id: controller
+  class: configured_pattern_line_controller
+  count: 1
+  source: Existing pattern_line; scoped selected-puzzle/owner adapter REQUIRED by
+    plan.md. No scene edits.
+  settings:
+    action: local_source_adapter_after_delegated_review
+    preserve_saved_original_arrays: true
+    original_success_ids:
+    - 1
+    - 0
+    - 2
+    alternate_success_ids:
+    - 2
+    - 1
+    - 0
+    selection: Toggle only valid completed Replay; retain same owner; new round/disconnect/replacement
+      owner original
+    content: Exact six-field table in spec.md; all board/HUD/journal/answer consumers
+      share selected record
+    geometry: Preserve every actor transform and binding
+- id: answers
+  class: fn_shoreline_island_data_target
+  count: 3
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    stationary: true
+    surface_size_m: 1.5
+    labels:
+    - A circle
+    - B triangle
+    - C square
+    fixed_order: true
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    duplicate_granter: false
+- id: board
+  class: billboard_device
+  count: 1
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    persistent_six_slot_strip: true
+    action_text: SHOOT THE MISSING SYMBOL
+    max_size_m:
+    - 10
+    - 2
+    no_shootable_examples: true
+- id: hud
+  class: hud_message_device
+  count: 1
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    audience: sole active player
+    automatic_hints: true
+- id: controls
+  class: button_device
+  count: 2
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    roles:
+    - Replay after completion
+    - Return anytime
+- id: progress
+  class: fn_shoreline_island_loop_progress
+  count: 1
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    ordered_indices:
+    - 0
+    - 1
+    - 2
+    badge_once_per_round: true
+- id: badge
+  class: tracker_device
+  count: 1
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings: {}
+- id: lights
+  class: customizable_light_device
+  count: 3
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    one_per_round: true
+    numeric_board_copy: true
+- id: effect
+  class: vfx_creator_device
+  count: 1
+  source: Existing accepted028 identity; preserve unchanged. Current controller/native
+    evidence in evidence/live-baseline.json.
+  settings:
+    duration_seconds: 1
+stages:
+- id: approach
+  zone: arrival
+  purpose: Understand one instruction while approaching
+  requires: []
+  active_targets: []
+  completion: Enter play bay; no timer or manual Start. Original first-run stage shown;
+    alternate substitutes C/B/A in the same stages. No additional walk or sequential
+    stages.
+- id: pair
+  zone: play_bay
+  purpose: A B A B A ? -> B
+  requires:
+  - approach
+  active_targets:
+  - answer_0
+  - answer_1
+  - answer_2
+  success_target: answer_1
+  completion: Fill gap immediately, confirm rule and light next progress indicator;
+    credit ordered round. Same place and inputs. Original first-run stage shown; alternate
+    substitutes C/B/A in the same stages. No additional walk or sequential stages.
+- id: gap
+  zone: play_bay
+  purpose: A B ? B A B -> A
+  requires:
+  - pair
+  active_targets:
+  - answer_0
+  - answer_1
+  - answer_2
+  success_target: answer_0
+  completion: Fill gap immediately, confirm rule and light next progress indicator;
+    credit ordered round. Same place and inputs. Original first-run stage shown; alternate
+    substitutes C/B/A in the same stages. No additional walk or sequential stages.
+- id: triple
+  zone: play_bay
+  purpose: A B C A B ? -> C
+  requires:
+  - gap
+  active_targets:
+  - answer_0
+  - answer_1
+  - answer_2
+  success_target: answer_2
+  completion: Fill gap immediately, confirm rule and light next progress indicator;
+    credit ordered round. Same place and inputs. Original first-run stage shown; alternate
+    substitutes C/B/A in the same stages. No additional walk or sequential stages.
+- id: complete
+  zone: play_bay
+  purpose: Hold 3/3 badge result; Replay or Return
+  requires:
+  - triple
+  active_targets: []
+  completion: Badge once per round through existing progress; no dispatch walk or
+    wait. Original first-run stage shown; alternate substitutes C/B/A in the same
+    stages. No additional walk or sequential stages.
+assumptions:
+- id: context
+  detail: Accepted028 envelopes/routes are context, not walls or new placements. Native
+    target/board/control markers measured; no scene delta.
+  status: resolved
+  evidence: evidence/live-baseline.json; plan.md
+- id: adapter
+  detail: Current hardcoded controller lacks set selection. Bounded local adapter
+    specified with inspected lifecycle and reusable target/progress APIs.
+  status: resolved
+  evidence: plan.md; current pattern_line source hash
+- id: learning
+  detail: Exact alternate table audited for intended periods1-3; engagement and readability
+    remain manual, not established by static checks.
+  status: resolved
+  evidence: ../../docs/specialists/pattern-replay/learning-designer.md; spec.md
+- id: review
+  detail: User delegates agent/Producer review for this task; no fabricated human
+    approval. Standard ready gate may remain human-approval blocked. No games/session/cook/push.
+  status: resolved
+  evidence: plan.md; review.md

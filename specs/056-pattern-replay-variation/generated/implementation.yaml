@@ -1,0 +1,384 @@
+version: 1
+map_id: pattern_replay_variation
+spec_digest: 782d37cd8809e4637fe775b40f805cd4c6c1e52de9971f719e6c49877c0d8f81
+patterns_digest: 8a4742b9b975339573390959480b33480edb39fd6f38a5d601066fd1b71e8ea8
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: pattern_replay_variation
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -1100
+  - 3000
+  - 2400
+  size_cm:
+  - 2200
+  - 600
+  - 900
+  parameters:
+    width_m: 3
+    access: Always open hub approach with a short direction sign; no lesson timer
+  markers:
+  - id: hub_arrival
+    kind: spawn
+    zone: arrival
+    label: Existing hub walkway arrival; no new spawn
+    position:
+    - 6
+    - 4
+    - 0
+    source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+      at this annotation.
+  - id: inventory
+    kind: weapon
+    zone: arrival
+    label: Existing Pulse Rifle grant; no new granter
+    position:
+    - 10
+    - 3
+    - 1
+    source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+      at this annotation.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: play_bay
+  pattern: shooting_gallery
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -1100
+  - 3600
+  - 2400
+  size_cm:
+  - 2200
+  - 1600
+  - 900
+  parameters:
+    target_count: 3
+    friendly_fire: false
+  markers:
+  - id: rule
+    kind: knowledge
+    zone: play_bay
+    label: 'Persistent pattern: shoot the missing symbol'
+    position:
+    - 10
+    - 17.0802658
+    - 2.79
+    source: Measured current board transform; evidence/live-baseline.json. Preserve
+      unchanged.
+  - id: answer_0
+    kind: target
+    zone: play_bay
+    label: A circle - stationary
+    position:
+    - 7
+    - 15
+    - 1.8
+    source: Measured current native actor world transform converted to local meters;
+      evidence/live-baseline.json. Preserve unchanged.
+    target_id: 0
+  - id: answer_1
+    kind: target
+    zone: play_bay
+    label: B triangle - stationary
+    position:
+    - 10
+    - 15
+    - 1.8
+    source: Measured current native actor world transform converted to local meters;
+      evidence/live-baseline.json. Preserve unchanged.
+    target_id: 1
+  - id: answer_2
+    kind: target
+    zone: play_bay
+    label: C square - stationary
+    position:
+    - 13
+    - 15
+    - 1.8
+    source: Measured current native actor world transform converted to local meters;
+      evidence/live-baseline.json. Preserve unchanged.
+    target_id: 2
+  - id: firing_point
+    kind: knowledge
+    zone: play_bay
+    label: Stand here for every round; no physical floor control
+    position:
+    - 10
+    - 9
+    - 0
+    source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+      at this annotation.
+  - id: badge
+    kind: reward
+    zone: play_bay
+    label: Three lights and Pattern Badge at completion
+    position:
+    - 16
+    - 19
+    - 1
+    source: Accepted028 diagram context only; preserve existing scene. No creation/placement
+      at this annotation.
+  - id: replay
+    kind: knowledge
+    zone: play_bay
+    label: Replay button - enabled after completion
+    position:
+    - 15
+    - 9
+    - 1
+    source: Measured current native actor world transform converted to local meters;
+      evidence/live-baseline.json. Preserve unchanged.
+  - id: return
+    kind: exit
+    zone: play_bay
+    label: Return button - always available
+    position:
+    - 4.5
+    - 11
+    - 1
+    source: Measured current native actor world transform converted to local meters;
+      evidence/live-baseline.json. Preserve unchanged.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: controller
+    class: configured_pattern_line_controller
+    count: 1
+    source: Existing pattern_line; scoped selected-puzzle/owner adapter REQUIRED by
+      plan.md. No scene edits.
+    settings:
+      action: local_source_adapter_after_delegated_review
+      preserve_saved_original_arrays: true
+      original_success_ids:
+      - 1
+      - 0
+      - 2
+      alternate_success_ids:
+      - 2
+      - 1
+      - 0
+      selection: Toggle only valid completed Replay; retain same owner; new round/disconnect/replacement
+        owner original
+      content: Exact six-field table in spec.md; all board/HUD/journal/answer consumers
+        share selected record
+      geometry: Preserve every actor transform and binding
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: answers
+    class: fn_shoreline_island_data_target
+    count: 3
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      stationary: true
+      surface_size_m: 1.5
+      labels:
+      - A circle
+      - B triangle
+      - C square
+      fixed_order: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: blaster
+    class: fn_shoreline_island_data_blaster
+    count: 1
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      duplicate_granter: false
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: board
+    class: billboard_device
+    count: 1
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      persistent_six_slot_strip: true
+      action_text: SHOOT THE MISSING SYMBOL
+      max_size_m:
+      - 10
+      - 2
+      no_shootable_examples: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hud
+    class: hud_message_device
+    count: 1
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      audience: sole active player
+      automatic_hints: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controls
+    class: button_device
+    count: 2
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      roles:
+      - Replay after completion
+      - Return anytime
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: fn_shoreline_island_loop_progress
+    count: 1
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      ordered_indices:
+      - 0
+      - 1
+      - 2
+      badge_once_per_round: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: badge
+    class: tracker_device
+    count: 1
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings: {}
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: lights
+    class: customizable_light_device
+    count: 3
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      one_per_round: true
+      numeric_board_copy: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: effect
+    class: vfx_creator_device
+    count: 1
+    source: Existing accepted028 identity; preserve unchanged. Current controller/native
+      evidence in evidence/live-baseline.json.
+    settings:
+      duration_seconds: 1
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: approach
+    zone: arrival
+    purpose: Understand one instruction while approaching
+    requires: []
+    active_targets: []
+    completion: Enter play bay; no timer or manual Start. Original first-run stage
+      shown; alternate substitutes C/B/A in the same stages. No additional walk or
+      sequential stages.
+  - id: pair
+    zone: play_bay
+    purpose: A B A B A ? -> B
+    requires:
+    - approach
+    active_targets:
+    - answer_0
+    - answer_1
+    - answer_2
+    success_target: answer_1
+    completion: Fill gap immediately, confirm rule and light next progress indicator;
+      credit ordered round. Same place and inputs. Original first-run stage shown;
+      alternate substitutes C/B/A in the same stages. No additional walk or sequential
+      stages.
+  - id: gap
+    zone: play_bay
+    purpose: A B ? B A B -> A
+    requires:
+    - pair
+    active_targets:
+    - answer_0
+    - answer_1
+    - answer_2
+    success_target: answer_0
+    completion: Fill gap immediately, confirm rule and light next progress indicator;
+      credit ordered round. Same place and inputs. Original first-run stage shown;
+      alternate substitutes C/B/A in the same stages. No additional walk or sequential
+      stages.
+  - id: triple
+    zone: play_bay
+    purpose: A B C A B ? -> C
+    requires:
+    - gap
+    active_targets:
+    - answer_0
+    - answer_1
+    - answer_2
+    success_target: answer_2
+    completion: Fill gap immediately, confirm rule and light next progress indicator;
+      credit ordered round. Same place and inputs. Original first-run stage shown;
+      alternate substitutes C/B/A in the same stages. No additional walk or sequential
+      stages.
+  - id: complete
+    zone: play_bay
+    purpose: Hold 3/3 badge result; Replay or Return
+    requires:
+    - triple
+    active_targets: []
+    completion: Badge once per round through existing progress; no dispatch walk or
+      wait. Original first-run stage shown; alternate substitutes C/B/A in the same
+      stages. No additional walk or sequential stages.
+  connections:
+  - from: arrival
+    to: play_bay
+    mode: walk
+    width: 3
+    points:
+    - - 6
+      - 4
+      - 0
+    - - 6
+      - 6
+      - 0
+    - - 10
+      - 9
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

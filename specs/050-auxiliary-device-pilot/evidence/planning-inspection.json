@@ -1,0 +1,3096 @@
+{
+  "pilot": {
+    "guid": "96BE09BE-46A7-B94D-2932-739392FB07F8",
+    "nativeClass": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "class": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "name": "VerseDevice_C_UAID_E89C2592D1B5160103_1358634782",
+    "label": "fn_shoreline_island_nursery_progress",
+    "bounds": {
+      "min": {
+        "x": -3626.668529510498,
+        "y": -18558.28049468994,
+        "z": 2450
+      },
+      "max": {
+        "x": -3373.279644012451,
+        "y": -18441.3575592041,
+        "z": 2608.1131439208984
+      },
+      "isValid": true
+    },
+    "runtimeGrid": "None",
+    "bIsSpatiallyLoaded": false,
+    "bActorIsEditorOnly": false,
+    "actorPackage": "None",
+    "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782",
+    "folderPath": "None",
+    "dataLayerAssets": []
+  },
+  "get_current_level": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"/fn_shoreline_island/fn_shoreline_island\"}"
+      }
+    ]
+  },
+  "GetGameState": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Unconnected\"}"
+      }
+    ]
+  },
+  "get_actor_transform": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":{\"location\":{\"x\":-3500,\"y\":-18500,\"z\":2450},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":-0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+      }
+    ]
+  },
+  "get_components": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.StaticMeshComponent0\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.BoundingBoxComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.EditorOnlyStaticMeshComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.ToyOptionsComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.VisibleInGameComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.EnabledComponent\"}]}"
+      }
+    ]
+  },
+  "pilotProperties": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"visibleInGame\\\":true,\\\"enabled at Game Start\\\":true,\\\"staticMesh\\\":null,\\\"bNoCollision\\\":false,\\\"bNoPawnCollision\\\":false,\\\"bHidden\\\":false,\\\"script\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"},\\\"rootComponent\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.StaticMeshComponent0\\\"}}\"}"
+      }
+    ]
+  },
+  "meshBefore": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"},\\\"bodyInstance\\\":{\\\"positionSolverIterationCount\\\":8,\\\"velocitySolverIterationCount\\\":2,\\\"projectionSolverIterationCount\\\":1,\\\"objectType\\\":\\\"ECC_WorldStatic\\\",\\\"collisionEnabled\\\":\\\"QueryAndPhysics\\\",\\\"sleepFamily\\\":\\\"Normal\\\",\\\"dOFMode\\\":\\\"Default\\\",\\\"bUseCCD\\\":false,\\\"bUseMACD\\\":false,\\\"bAllowPartialIslandSleep\\\":true,\\\"bIgnoreAnalyticCollisions\\\":false,\\\"bNotifyRigidBodyCollision\\\":false,\\\"bSmoothEdgeCollisions\\\":false,\\\"bLockTranslation\\\":true,\\\"bLockRotation\\\":true,\\\"bLockXTranslation\\\":false,\\\"bLockYTranslation\\\":false,\\\"bLockZTranslation\\\":false,\\\"bLockXRotation\\\":false,\\\"bLockYRotation\\\":false,\\\"bLockZRotation\\\":false,\\\"bOverrideMaxAngularVelocity\\\":false,\\\"bOverrideMaxDepenetrationVelocity\\\":false,\\\"bOverrideWalkableSlopeOnInstance\\\":false,\\\"bOverrideIterationCounts\\\":false,\\\"bInterpolateWhenSubStepping\\\":true,\\\"bInertiaConditioning\\\":true,\\\"bOneWayInteraction\\\":false,\\\"bOverrideSolverAsyncDeltaTime\\\":false,\\\"solverAsyncDeltaTime\\\":0.01666666753590107,\\\"collisionProfileName\\\":\\\"FortBuildingMeshPhysics\\\",\\\"collisionResponses\\\":{\\\"responseArray\\\":[{\\\"channel\\\":\\\"FCC_Trace_Interaction\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Trace_WeakSpot\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Trace_WeaponCapsule\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Object_PawnAI\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Trace_WeaponMulti\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Trace_Weapon\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Object_Projectile\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Object_ProjectileIgnoreAI\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Trace_World\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Object_ProjectileMesh\\\",\\\"response\\\":\\\"ECR_Block\\\"},{\\\"channel\\\":\\\"FCC_Trace_WeaponPawnAndWorldMulti\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Trace_Audio\\\",\\\"response\\\":\\\"ECR_Block\\\"}]},\\\"maxDepenetrationVelocity\\\":0,\\\"massInKgOverride\\\":100,\\\"linearDamping\\\":0.0099999997764825821,\\\"angularDamping\\\":0,\\\"customDOFPlaneNormal\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"cOMNudge\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"massScale\\\":1,\\\"gravityGroupIndex\\\":0,\\\"inertiaTensorScale\\\":{\\\"x\\\":1,\\\"y\\\":1,\\\"z\\\":1},\\\"walkableSlopeOverride\\\":{\\\"walkableSlopeBehavior\\\":\\\"WalkableSlope_Default\\\",\\\"walkableSlopeAngle\\\":0},\\\"physMaterialOverride\\\":null,\\\"maxAngularVelocity\\\":3599.999755859375,\\\"customSleepThresholdMultiplier\\\":1,\\\"stabilizationThresholdMultiplier\\\":1,\\\"physicsBlendWeight\\\":0,\\\"bSimulatePhysics\\\":false,\\\"bOverrideMass\\\":false,\\\"bEnableGravity\\\":true,\\\"bUpdateKinematicFromSimulation\\\":false,\\\"bGyroscopicTorqueEnabled\\\":false,\\\"bAutoWeld\\\":true,\\\"bStartAwake\\\":true,\\\"bGenerateWakeEvents\\\":false,\\\"bUpdateMassWhenScaleChanges\\\":true},\\\"bVisible\\\":true,\\\"bHiddenInGame\\\":false,\\\"bIsEditorOnly\\\":false}\"}"
+      }
+    ]
+  },
+  "actorAsset": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"/fn_shoreline_island/__ExternalActors__/fn_shoreline_island/C/Z3/G0F6U5CW96NQ3NNEA2DFHL.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782\"}"
+      }
+    ]
+  },
+  "ListEventBindings": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[]}"
+      }
+    ]
+  },
+  "children": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[{\"guid\":\"96BE09BE-46A7-B94D-2932-739392FB07F8\",\"nativeClass\":{\"refPath\":\"/CRD_VerseDevices/VerseDevice.VerseDevice_C\"},\"class\":{\"refPath\":\"/CRD_VerseDevices/VerseDevice.VerseDevice_C\"},\"name\":\"VerseDevice_C_UAID_E89C2592D1B5160103_1358634782\",\"label\":\"fn_shoreline_island_nursery_progress\",\"bounds\":{\"min\":{\"x\":-3626.668529510498,\"y\":-18558.280494689941,\"z\":2450},\"max\":{\"x\":-3373.2796440124512,\"y\":-18441.357559204102,\"z\":2608.1131439208984},\"isValid\":true},\"runtimeGrid\":\"None\",\"bIsSpatiallyLoaded\":false,\"bActorIsEditorOnly\":false,\"actorPackage\":\"None\",\"actorPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782\",\"folderPath\":\"None\",\"dataLayerAssets\":[]}]}"
+      }
+    ]
+  },
+  "incoming": [
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783",
+      "label": "fn_shoreline_island_nursery_station",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "label": "fn_shoreline_island_nursery_station4",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541",
+      "label": "pop039_production_controller",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "label": "fn_shoreline_island_nursery_station3",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "label": "fn_shoreline_island_nursery_station2",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    }
+  ],
+  ".BoundingBoxComponent": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"bIsEditorOnly\\\":true,\\\"bodyInstance\\\":{\\\"positionSolverIterationCount\\\":8,\\\"velocitySolverIterationCount\\\":2,\\\"projectionSolverIterationCount\\\":1,\\\"objectType\\\":\\\"ECC_WorldDynamic\\\",\\\"collisionEnabled\\\":\\\"QueryOnly\\\",\\\"sleepFamily\\\":\\\"Normal\\\",\\\"dOFMode\\\":\\\"Default\\\",\\\"bUseCCD\\\":false,\\\"bUseMACD\\\":false,\\\"bAllowPartialIslandSleep\\\":true,\\\"bIgnoreAnalyticCollisions\\\":false,\\\"bNotifyRigidBodyCollision\\\":false,\\\"bSmoothEdgeCollisions\\\":false,\\\"bLockTranslation\\\":true,\\\"bLockRotation\\\":true,\\\"bLockXTranslation\\\":false,\\\"bLockYTranslation\\\":false,\\\"bLockZTranslation\\\":false,\\\"bLockXRotation\\\":false,\\\"bLockYRotation\\\":false,\\\"bLockZRotation\\\":false,\\\"bOverrideMaxAngularVelocity\\\":false,\\\"bOverrideMaxDepenetrationVelocity\\\":false,\\\"bOverrideWalkableSlopeOnInstance\\\":false,\\\"bOverrideIterationCounts\\\":false,\\\"bInterpolateWhenSubStepping\\\":true,\\\"bInertiaConditioning\\\":true,\\\"bOneWayInteraction\\\":false,\\\"bOverrideSolverAsyncDeltaTime\\\":false,\\\"solverAsyncDeltaTime\\\":0.01666666753590107,\\\"collisionProfileName\\\":\\\"OverlapAllDynamic\\\",\\\"collisionResponses\\\":{\\\"responseArray\\\":[{\\\"channel\\\":\\\"WorldStatic\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"WorldDynamic\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Pawn\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Visibility\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Camera\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"PhysicsBody\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Vehicle\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Destructible\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Object_PawnAI\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Object_Projectile\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Object_ProjectileIgnoreAI\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Object_ProjectileMesh\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"FCC_Object_Water\\\",\\\"response\\\":\\\"ECR_Overlap\\\"}]},\\\"maxDepenetrationVelocity\\\":0,\\\"massInKgOverride\\\":100,\\\"linearDamping\\\":0.0099999997764825821,\\\"angularDamping\\\":0,\\\"customDOFPlaneNormal\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"cOMNudge\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"massScale\\\":1,\\\"gravityGroupIndex\\\":0,\\\"inertiaTensorScale\\\":{\\\"x\\\":1,\\\"y\\\":1,\\\"z\\\":1},\\\"walkableSlopeOverride\\\":{\\\"walkableSlopeBehavior\\\":\\\"WalkableSlope_Default\\\",\\\"walkableSlopeAngle\\\":0},\\\"physMaterialOverride\\\":null,\\\"maxAngularVelocity\\\":3600,\\\"customSleepThresholdMultiplier\\\":1,\\\"stabilizationThresholdMultiplier\\\":1,\\\"physicsBlendWeight\\\":0,\\\"bSimulatePhysics\\\":false,\\\"bOverrideMass\\\":false,\\\"bEnableGravity\\\":true,\\\"bUpdateKinematicFromSimulation\\\":false,\\\"bGyroscopicTorqueEnabled\\\":false,\\\"bAutoWeld\\\":true,\\\"bStartAwake\\\":true,\\\"bGenerateWakeEvents\\\":false,\\\"bUpdateMassWhenScaleChanges\\\":true},\\\"bHiddenInGame\\\":true,\\\"bVisible\\\":true}\"}"
+      }
+    ]
+  },
+  ".EditorOnlyStaticMeshComponent": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"staticMesh\\\":null,\\\"bIsEditorOnly\\\":true,\\\"bodyInstance\\\":{\\\"positionSolverIterationCount\\\":8,\\\"velocitySolverIterationCount\\\":2,\\\"projectionSolverIterationCount\\\":1,\\\"objectType\\\":\\\"ECC_WorldStatic\\\",\\\"collisionEnabled\\\":\\\"NoCollision\\\",\\\"sleepFamily\\\":\\\"Normal\\\",\\\"dOFMode\\\":\\\"Default\\\",\\\"bUseCCD\\\":false,\\\"bUseMACD\\\":false,\\\"bAllowPartialIslandSleep\\\":true,\\\"bIgnoreAnalyticCollisions\\\":false,\\\"bNotifyRigidBodyCollision\\\":false,\\\"bSmoothEdgeCollisions\\\":false,\\\"bLockTranslation\\\":true,\\\"bLockRotation\\\":true,\\\"bLockXTranslation\\\":false,\\\"bLockYTranslation\\\":false,\\\"bLockZTranslation\\\":false,\\\"bLockXRotation\\\":false,\\\"bLockYRotation\\\":false,\\\"bLockZRotation\\\":false,\\\"bOverrideMaxAngularVelocity\\\":false,\\\"bOverrideMaxDepenetrationVelocity\\\":false,\\\"bOverrideWalkableSlopeOnInstance\\\":false,\\\"bOverrideIterationCounts\\\":false,\\\"bInterpolateWhenSubStepping\\\":true,\\\"bInertiaConditioning\\\":true,\\\"bOneWayInteraction\\\":false,\\\"bOverrideSolverAsyncDeltaTime\\\":false,\\\"solverAsyncDeltaTime\\\":0.01666666753590107,\\\"collisionProfileName\\\":\\\"NoCollision\\\",\\\"collisionResponses\\\":{\\\"responseArray\\\":[{\\\"channel\\\":\\\"Visibility\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Camera\\\",\\\"response\\\":\\\"ECR_Ignore\\\"}]},\\\"maxDepenetrationVelocity\\\":0,\\\"massInKgOverride\\\":100,\\\"linearDamping\\\":0.0099999997764825821,\\\"angularDamping\\\":0,\\\"customDOFPlaneNormal\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"cOMNudge\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"massScale\\\":1,\\\"gravityGroupIndex\\\":0,\\\"inertiaTensorScale\\\":{\\\"x\\\":1,\\\"y\\\":1,\\\"z\\\":1},\\\"walkableSlopeOverride\\\":{\\\"walkableSlopeBehavior\\\":\\\"WalkableSlope_Default\\\",\\\"walkableSlopeAngle\\\":0},\\\"physMaterialOverride\\\":null,\\\"maxAngularVelocity\\\":3600,\\\"customSleepThresholdMultiplier\\\":1,\\\"stabilizationThresholdMultiplier\\\":1,\\\"physicsBlendWeight\\\":0,\\\"bSimulatePhysics\\\":false,\\\"bOverrideMass\\\":false,\\\"bEnableGravity\\\":true,\\\"bUpdateKinematicFromSimulation\\\":false,\\\"bGyroscopicTorqueEnabled\\\":false,\\\"bAutoWeld\\\":true,\\\"bStartAwake\\\":true,\\\"bGenerateWakeEvents\\\":false,\\\"bUpdateMassWhenScaleChanges\\\":true},\\\"bHiddenInGame\\\":true,\\\"bVisible\\\":true}\"}"
+      }
+    ]
+  },
+  "meshAudit": [
+    {
+      "actor": {
+        "guid": "2AC2ADA6-4CCB-993C-FA56-6C8ADEF9AA1E",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012",
+        "label": "fn_shoreline_bot_1_progress",
+        "bounds": {
+          "min": {
+            "x": -3626.668529510498,
+            "y": -14858.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -3373.279644012451,
+            "y": -14741.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1844127012",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "7C662D4F-4AFF-DFCF-6E29-6C9E1ECCD5B9",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5470603_1379088694",
+        "label": "cargo_circuit_target_predict_b",
+        "bounds": {
+          "min": {
+            "x": -226.66852951049805,
+            "y": 4441.719505310059,
+            "z": 2400
+          },
+          "max": {
+            "x": 26.720355987548828,
+            "y": 4558.642440795898,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1379088694",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "DEAB765D-47B5-492B-24E1-A59E4B3B450C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013",
+        "label": "fn_shoreline_bot_1_station",
+        "bounds": {
+          "min": {
+            "x": -3626.668529510498,
+            "y": -14058.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -3373.279644012451,
+            "y": -13941.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50D0103_1845356013",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "E1AC4461-42C5-059B-5584-ABB49C19FB55",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1229010956",
+        "label": "rescue_run_target_0",
+        "bounds": {
+          "min": {
+            "x": -4826.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -4573.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1229010956",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "643102EE-4CBC-7934-F5B9-43832F457646",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1939043958",
+        "label": "rescue_run_target_1",
+        "bounds": {
+          "min": {
+            "x": -4526.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -4273.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1939043958",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "CAD41CF5-4162-2ACA-1CD9-09A6393BBEAE",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1939387960",
+        "label": "rescue_run_target_2",
+        "bounds": {
+          "min": {
+            "x": -4226.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -3973.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1939387960",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "EB10A9DE-48B6-790F-6A20-FB8CCA0A77F5",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1940143962",
+        "label": "rescue_run_target_3",
+        "bounds": {
+          "min": {
+            "x": -7026.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -6773.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1940143962",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "DF6E05EB-489F-5A6A-4E57-60A33B773D95",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1940449964",
+        "label": "rescue_run_target_4",
+        "bounds": {
+          "min": {
+            "x": -6726.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -6473.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1940449964",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "BF112D8A-4405-E97C-054B-A4AC57F9443D",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1940852966",
+        "label": "rescue_run_target_5",
+        "bounds": {
+          "min": {
+            "x": -6426.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -6173.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1940852966",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "13944B2C-4C55-2439-60DA-B48A83EEA0A2",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1941216968",
+        "label": "rescue_run_target_6",
+        "bounds": {
+          "min": {
+            "x": -9426.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -9173.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1941216968",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "83722639-414D-65DB-E0E7-FB801E42A4D7",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1941584970",
+        "label": "rescue_run_target_7",
+        "bounds": {
+          "min": {
+            "x": -9126.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -8873.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1941584970",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "68E42E3C-4E6E-1028-727C-C7B6249D2ED7",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B54E0703_1941913972",
+        "label": "rescue_run_target_8",
+        "bounds": {
+          "min": {
+            "x": -8826.668529510498,
+            "y": -14358.280494689941,
+            "z": 2580
+          },
+          "max": {
+            "x": -8573.279644012451,
+            "y": -14241.357559204102,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B54E0703_1941913972",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "24D3B443-482C-7657-FBFD-0A80E136075F",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934",
+        "label": "academy_journal",
+        "bounds": {
+          "min": {
+            "x": -426.72035598754877,
+            "y": 541.3575592041016,
+            "z": 2410
+          },
+          "max": {
+            "x": -173.331470489502,
+            "y": 658.2804946899414,
+            "z": 2568.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "D746A831-4D74-52FB-E8DD-27BEEDDC018C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5C80003_1773009032",
+        "label": "byte_island_game_manager",
+        "bounds": {
+          "min": {
+            "x": -126.66852951049805,
+            "y": -58.280494689941406,
+            "z": 2500
+          },
+          "max": {
+            "x": 126.72035598754883,
+            "y": 58.64244079589844,
+            "z": 2658.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80003_1773009032",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "F621F99E-444F-C306-1A15-30A161628BBC",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5CD0003_1277002985",
+        "label": "loop_progress",
+        "bounds": {
+          "min": {
+            "x": 373.33147048950195,
+            "y": 3541.7195053100586,
+            "z": 2450
+          },
+          "max": {
+            "x": 626.7203559875488,
+            "y": 3658.6424407958984,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5CD0003_1277002985",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "23434A6D-4CAF-C66F-4B9F-9687B86EFE2C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5F50003_1584565293",
+        "label": "signal_progress",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": 141.7195053100586,
+            "z": 2450
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": 258.64244079589844,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1584565293",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "F7E20140-41A1-ACD5-B7FB-0496A8E334A1",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845",
+        "label": "energy_progress_0",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": -3358.2804946899414,
+            "z": 2450
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": -3241.3575592041016,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1784724845",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "A6A0FD63-477A-6B82-A289-8FB25CF873CB",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5030103_1792824005",
+        "label": "debug_station_1_progress",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": -7158.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": -7041.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5030103_1792824005",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "8B880EA7-40BF-8716-56CB-D082B1A0C605",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5080103_1709487001",
+        "label": "event_station_1_progress",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": -10958.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": -10841.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1709487001",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "96BE09BE-46A7-B94D-2932-739392FB07F8",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5160103_1358634782",
+        "label": "fn_shoreline_island_nursery_progress",
+        "bounds": {
+          "min": {
+            "x": -3626.668529510498,
+            "y": -18558.28049468994,
+            "z": 2450
+          },
+          "max": {
+            "x": -3373.279644012451,
+            "y": -18441.3575592041,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "980C228A-44C1-F4C7-C184-1BBCD3F05011",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392",
+        "label": "error_lab_solo_controller",
+        "bounds": {
+          "min": {
+            "x": -4326.668529510498,
+            "y": -7358.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -4073.279644012451,
+            "y": -7241.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "1BED1A98-4630-4B60-8C24-C9A3ADDDFC45",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5C80603_1755959393",
+        "label": "error_lab_target_left",
+        "bounds": {
+          "min": {
+            "x": -3626.668529510498,
+            "y": -5758.280494689941,
+            "z": 2550
+          },
+          "max": {
+            "x": -3373.279644012451,
+            "y": -5641.357559204102,
+            "z": 2708.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755959393",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "1FE5D585-4BF9-AAD6-ED50-D18151079D11",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5C80603_1756731396",
+        "label": "error_lab_target_stop",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": -5758.280494689941,
+            "z": 2550
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": -5641.357559204102,
+            "z": 2708.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1756731396",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "4DCF093D-438B-B6C2-E331-9C810A744B8E",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5C80603_1756918399",
+        "label": "error_lab_target_right",
+        "bounds": {
+          "min": {
+            "x": -3026.668529510498,
+            "y": -5758.280494689941,
+            "z": 2550
+          },
+          "max": {
+            "x": -2773.279644012451,
+            "y": -5641.357559204102,
+            "z": 2708.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1756918399",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "050D8D3B-4742-29CB-69D9-A3BF44CAF185",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5220103_1961655064",
+        "label": "field_note_controller",
+        "bounds": {
+          "min": {
+            "x": 473.33147048950195,
+            "y": 341.7195053100586,
+            "z": 2450
+          },
+          "max": {
+            "x": 726.7203559875488,
+            "y": 458.64244079589844,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5220103_1961655064",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "B9AF1787-4D47-2DE6-7ED8-23BE99F90545",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5160103_1359952783",
+        "label": "fn_shoreline_island_nursery_station",
+        "bounds": {
+          "min": {
+            "x": -3626.668529510498,
+            "y": -17058.28049468994,
+            "z": 1800
+          },
+          "max": {
+            "x": -3373.279644012451,
+            "y": -16941.3575592041,
+            "z": 1958.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "41E08A7B-4D3E-48E5-C46F-90A52567B1D0",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5470603_1387749699",
+        "label": "cargo_circuit_target_predict_c",
+        "bounds": {
+          "min": {
+            "x": 73.33147048950195,
+            "y": 4441.719505310059,
+            "z": 2400
+          },
+          "max": {
+            "x": 326.7203559875488,
+            "y": 4558.642440795898,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5470603_1387749699",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "A96A98C6-4C83-C72D-0187-78B9568BD2D9",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5B50703_1945114084",
+        "label": "hangar_route_controller",
+        "bounds": {
+          "min": {
+            "x": 6373.331470489502,
+            "y": -12958.280494689941,
+            "z": 2330
+          },
+          "max": {
+            "x": 6626.720355987549,
+            "y": -12841.357559204102,
+            "z": 2488.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5B50703_1945114084",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "7B4FC101-4DB6-221F-6260-E1B457018F77",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5150703_2091052927",
+        "label": "tool_lab_target_light",
+        "bounds": {
+          "min": {
+            "x": -3026.720355987549,
+            "y": -9558.642440795898,
+            "z": 2580
+          },
+          "max": {
+            "x": -2773.331470489502,
+            "y": -9441.719505310059,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2091052927",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "E34FDE8E-4CA2-8AA3-6877-63B83BBFA019",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1527752703",
+        "label": "prompt_blaster_target_0",
+        "bounds": {
+          "min": {
+            "x": 8873.331470489502,
+            "y": -3358.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 9126.720355987549,
+            "y": -3241.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "1902FC14-4218-30AA-DBA1-9DAB74DCB2C8",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563",
+        "label": "fn_shoreline_island_pattern_line",
+        "bounds": {
+          "min": {
+            "x": -626.668529510498,
+            "y": 4041.7195053100586,
+            "z": 2450
+          },
+          "max": {
+            "x": -373.2796440124512,
+            "y": 4158.642440795898,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B52A0603_1883729563",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "BB8577C8-4C46-DEE5-1863-5EA26D888F39",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5460603_1792460510",
+        "label": "cargo_circuit_target_predict_a",
+        "bounds": {
+          "min": {
+            "x": -526.668529510498,
+            "y": 4441.719505310059,
+            "z": 2400
+          },
+          "max": {
+            "x": -273.2796440124512,
+            "y": 4558.642440795898,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5460603_1792460510",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "5DD66295-40CC-CC86-0E93-AB9C82C253F2",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+        "label": "fn_shoreline_island_nursery_station4",
+        "bounds": {
+          "min": {
+            "x": -13826.668529510498,
+            "y": -17058.28049468994,
+            "z": 2450
+          },
+          "max": {
+            "x": -13573.279644012451,
+            "y": -16941.3575592041,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "D3442F2B-4EFC-BF48-171C-EB8729B03D01",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113",
+        "label": "fn_shoreline_island_prompt_workshop",
+        "bounds": {
+          "min": {
+            "x": 6373.331470489502,
+            "y": 1741.7195053100586,
+            "z": 2450
+          },
+          "max": {
+            "x": 6626.720355987549,
+            "y": 1858.6424407958984,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B50B0603_1965824113",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "DDA5FD7E-4478-E76E-E9F5-E18F471C6273",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1779919723",
+        "label": "academy_data_energy_manager",
+        "bounds": {
+          "min": {
+            "x": 7673.331470489502,
+            "y": -2458.2804946899414,
+            "z": 2500
+          },
+          "max": {
+            "x": 7926.720355987549,
+            "y": -2341.3575592041016,
+            "z": 2658.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1779919723",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "C3A10D83-49AE-71C2-E6FC-A99E8404F995",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+        "label": "fn_shoreline_island_bot_4_station",
+        "bounds": {
+          "min": {
+            "x": -13826.668529510498,
+            "y": -14058.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -13573.279644012451,
+            "y": -13941.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5130103_1582077194",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "38552C61-4C4B-D78E-78C3-97882B992A0B",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529318715",
+        "label": "prompt_blaster_target_6",
+        "bounds": {
+          "min": {
+            "x": 10473.331470489502,
+            "y": -3158.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 10726.720355987549,
+            "y": -3041.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "47E94226-4F1A-435F-539A-2CAC61FC04BD",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B59D0603_2088526809",
+        "label": "confidence_target_cool",
+        "bounds": {
+          "min": {
+            "x": -3126.668529510498,
+            "y": -2958.2804946899414,
+            "z": 2400
+          },
+          "max": {
+            "x": -2873.279644012451,
+            "y": -2841.3575592041016,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B59D0603_2088526809",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "4EAFF009-4139-85B8-AF6A-719291DCD805",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1480366702",
+        "label": "prompt_lab_blaster_controller",
+        "bounds": {
+          "min": {
+            "x": 7573.331470489502,
+            "y": -2558.2804946899414,
+            "z": 2500
+          },
+          "max": {
+            "x": 7826.720355987549,
+            "y": -2441.3575592041016,
+            "z": 2658.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "D49B0AFA-4933-B2B2-6487-2BBDD9613FCC",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528133705",
+        "label": "prompt_blaster_target_1",
+        "bounds": {
+          "min": {
+            "x": 8873.331470489502,
+            "y": -4558.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 9126.720355987549,
+            "y": -4441.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "A1CBC0CE-4F19-D6AA-5D3B-30BB169F2D2C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528359707",
+        "label": "prompt_blaster_target_2",
+        "bounds": {
+          "min": {
+            "x": 8873.331470489502,
+            "y": -3958.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 9126.720355987549,
+            "y": -3841.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "0DB2239B-4497-23A4-920D-4292CF007F9F",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528582709",
+        "label": "prompt_blaster_target_3",
+        "bounds": {
+          "min": {
+            "x": 9473.331470489502,
+            "y": -4758.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 9726.720355987549,
+            "y": -4641.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "340AC64F-4C05-5303-5955-33BE63697D1B",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528830711",
+        "label": "prompt_blaster_target_4",
+        "bounds": {
+          "min": {
+            "x": 9673.331470489502,
+            "y": -4258.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 9926.720355987549,
+            "y": -4141.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "53597FDE-4B44-3947-D47C-C48D18429F71",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529077713",
+        "label": "prompt_blaster_target_5",
+        "bounds": {
+          "min": {
+            "x": 9673.331470489502,
+            "y": -3458.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 9926.720355987549,
+            "y": -3341.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "3933DB8B-423A-C50F-B0CC-61BF9E004879",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529545717",
+        "label": "prompt_blaster_target_7",
+        "bounds": {
+          "min": {
+            "x": 10473.331470489502,
+            "y": -3758.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 10726.720355987549,
+            "y": -3641.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "86CBB1CE-4E4D-10B5-8054-F89474563567",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529781719",
+        "label": "prompt_blaster_target_8",
+        "bounds": {
+          "min": {
+            "x": 10473.331470489502,
+            "y": -4358.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 10726.720355987549,
+            "y": -4241.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "676B1503-4440-B466-2856-0E93888F16A6",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1463654793",
+        "label": "pop039_target_5",
+        "bounds": {
+          "min": {
+            "x": -4206.668529510498,
+            "y": -17538.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -3953.279644012451,
+            "y": -17421.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1463654793",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "E0C2E86B-4106-2177-3D8D-CEAE9EB170FF",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1473568808",
+        "label": "pop039_target_6",
+        "bounds": {
+          "min": {
+            "x": -4206.668529510498,
+            "y": -16738.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -3953.279644012451,
+            "y": -16621.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1473568808",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "402B3A4F-4110-A13F-AC7A-659816F38DBE",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5F50003_1585213294",
+        "label": "signal_station_0",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": 841.7195053100586,
+            "z": 2400
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": 958.6424407958984,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5F50003_1585213294",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "D8C73525-4353-D2C6-A2DA-A1B104897B7C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5780603_1709945298",
+        "label": "classifier_target_food",
+        "bounds": {
+          "min": {
+            "x": -3426.668529510498,
+            "y": 1041.7195053100586,
+            "z": 2400
+          },
+          "max": {
+            "x": -3173.279644012451,
+            "y": 1158.6424407958984,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5780603_1709945298",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "D257D8B9-44A9-5105-BCF8-788D8EAA4920",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5780603_1711630301",
+        "label": "classifier_target_furniture",
+        "bounds": {
+          "min": {
+            "x": -3126.668529510498,
+            "y": 1041.7195053100586,
+            "z": 2400
+          },
+          "max": {
+            "x": -2873.279644012451,
+            "y": 1158.6424407958984,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5780603_1711630301",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "F6EFB98F-41FF-C864-6060-4FBDA76C80D9",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5780603_1713328304",
+        "label": "classifier_target_vehicle",
+        "bounds": {
+          "min": {
+            "x": -2826.668529510498,
+            "y": 1041.7195053100586,
+            "z": 2400
+          },
+          "max": {
+            "x": -2573.279644012451,
+            "y": 1158.6424407958984,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5780603_1713328304",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "598373C9-4C59-7F88-73AF-8DBD55917EB9",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5C50403_1960683798",
+        "label": "prompt_lab_data_core_rescue_controller",
+        "bounds": {
+          "min": {
+            "x": 7473.331470489502,
+            "y": -3858.2804946899414,
+            "z": 2500
+          },
+          "max": {
+            "x": 7726.720355987549,
+            "y": -3741.3575592041016,
+            "z": 2658.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C50403_1960683798",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "22F063D1-491D-3185-9AA3-0A8ACF6A30F9",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103",
+        "label": "pix_travel_controller",
+        "bounds": {
+          "min": {
+            "x": -226.72035598754877,
+            "y": 2641.3575592041016,
+            "z": 2500
+          },
+          "max": {
+            "x": 26.66852951049799,
+            "y": 2758.2804946899414,
+            "z": 2658.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B53D0903_2105400103",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "231DE4FC-491A-D840-BFCF-5EAC27A64B2D",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846",
+        "label": "energy_station_0",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": -2658.2804946899414,
+            "z": 2450
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": -2541.3575592041016,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FD0003_1785963846",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "A29718D9-49A2-83D7-BFD6-80851E8C3AF6",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B59D0603_1707542805",
+        "label": "confidence_target_check",
+        "bounds": {
+          "min": {
+            "x": -3426.668529510498,
+            "y": -2958.2804946899414,
+            "z": 2400
+          },
+          "max": {
+            "x": -3173.279644012451,
+            "y": -2841.3575592041016,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B59D0603_1707542805",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "A0966E30-4575-1678-B4F6-53A6C116BEA7",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B59E0603_1167785989",
+        "label": "confidence_target_release",
+        "bounds": {
+          "min": {
+            "x": -2826.668529510498,
+            "y": -2958.2804946899414,
+            "z": 2400
+          },
+          "max": {
+            "x": -2573.279644012451,
+            "y": -2841.3575592041016,
+            "z": 2558.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B59E0603_1167785989",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "8ECB0F3D-460B-66C0-4BE9-37BEAEA2C74C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5080103_1710282002",
+        "label": "event_station_1_station",
+        "bounds": {
+          "min": {
+            "x": -3326.668529510498,
+            "y": -10258.280494689941,
+            "z": 2450
+          },
+          "max": {
+            "x": -3073.279644012451,
+            "y": -10141.357559204102,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5080103_1710282002",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "F1BAFAC6-4C68-283A-46DC-E19E8C7425F0",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5150703_2089865923",
+        "label": "tool_lab_target_scanner",
+        "bounds": {
+          "min": {
+            "x": -3626.720355987549,
+            "y": -9558.642440795898,
+            "z": 2580
+          },
+          "max": {
+            "x": -3373.331470489502,
+            "y": -9441.719505310059,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2089865923",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "BB1E1C4F-412F-6C42-7176-CA9987C01214",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5150703_2090584925",
+        "label": "tool_lab_target_speaker",
+        "bounds": {
+          "min": {
+            "x": -3326.720355987549,
+            "y": -9558.642440795898,
+            "z": 2580
+          },
+          "max": {
+            "x": -3073.331470489502,
+            "y": -9441.719505310059,
+            "z": 2738.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5150703_2090584925",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "34803931-4B42-A40F-30B1-BDADF6DF2144",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541",
+        "label": "pop039_production_controller",
+        "bounds": {
+          "min": {
+            "x": -4926.668529510498,
+            "y": -17058.28049468994,
+            "z": 1800
+          },
+          "max": {
+            "x": -4673.279644012451,
+            "y": -16941.3575592041,
+            "z": 1958.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "A94861E0-42C5-CE44-95AE-97BDE9D5775C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1127724718",
+        "label": "pop039_target_0",
+        "bounds": {
+          "min": {
+            "x": -2706.668529510498,
+            "y": -17498.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -2453.279644012451,
+            "y": -17381.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1127724718",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "88F26C1C-4BF6-112F-9129-B9B62F6076C3",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1423914733",
+        "label": "pop039_target_1",
+        "bounds": {
+          "min": {
+            "x": -2706.668529510498,
+            "y": -17338.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -2453.279644012451,
+            "y": -17221.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1423914733",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "3ACDC728-4776-5033-54A6-5FB72DB76CFF",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1433786748",
+        "label": "pop039_target_2",
+        "bounds": {
+          "min": {
+            "x": -2706.668529510498,
+            "y": -17178.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -2453.279644012451,
+            "y": -17061.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1433786748",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "3BB1D7DA-4BF3-B7D5-B773-5D906FDEE88D",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1443847763",
+        "label": "pop039_target_3",
+        "bounds": {
+          "min": {
+            "x": -3206.668529510498,
+            "y": -17338.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -2953.279644012451,
+            "y": -17221.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1443847763",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "EFCD1531-4EC2-C4D6-4605-838F0E3D331D",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1453751778",
+        "label": "pop039_target_4",
+        "bounds": {
+          "min": {
+            "x": -3706.668529510498,
+            "y": -17138.28049468994,
+            "z": 2680
+          },
+          "max": {
+            "x": -3453.279644012451,
+            "y": -17021.3575592041,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1453751778",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "45D271BE-4CA0-1BDC-5E23-E39D5F7DCE71",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5FB0703_1483578823",
+        "label": "pop039_target_7",
+        "bounds": {
+          "min": {
+            "x": -4958.280494689941,
+            "y": -16926.72035598755,
+            "z": 2680
+          },
+          "max": {
+            "x": -4841.357559204102,
+            "y": -16673.331470489502,
+            "z": 2838.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FB0703_1483578823",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "9BBF5D8C-436B-9D0D-5B35-60B4BFE04F91",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1128908701",
+        "label": "fn_shoreline_island_data_blaster",
+        "bounds": {
+          "min": {
+            "x": 7373.331470489502,
+            "y": -2458.2804946899414,
+            "z": 2500
+          },
+          "max": {
+            "x": 7626.720355987549,
+            "y": -2341.3575592041016,
+            "z": 2658.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1128908701",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "AB76BE94-4569-480B-B834-DF9F257B83F6",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+        "label": "fn_shoreline_island_nursery_station3",
+        "bounds": {
+          "min": {
+            "x": -10426.668529510498,
+            "y": -17058.28049468994,
+            "z": 2450
+          },
+          "max": {
+            "x": -10173.279644012451,
+            "y": -16941.3575592041,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "F01A9211-43F1-2B95-1128-02AE57A4971B",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+        "label": "fn_shoreline_island_nursery_station2",
+        "bounds": {
+          "min": {
+            "x": -7026.668529510498,
+            "y": -17058.28049468994,
+            "z": 2450
+          },
+          "max": {
+            "x": -6773.279644012451,
+            "y": -16941.3575592041,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "guid": "EC326827-487C-8A95-028D-08BD43B9640B",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5290103_1378411311",
+        "label": "hub_static_sign_refresh",
+        "bounds": {
+          "min": {
+            "x": 473.33147048950195,
+            "y": 141.7195053100586,
+            "z": 2450
+          },
+          "max": {
+            "x": 726.7203559875488,
+            "y": 258.64244079589844,
+            "z": 2608.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5290103_1378411311",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"}}\"}"
+          }
+        ]
+      }
+    }
+  ]
+}

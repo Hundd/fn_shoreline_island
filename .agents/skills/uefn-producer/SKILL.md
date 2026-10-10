@@ -7,6 +7,14 @@ description: Act as creative producer and game designer for this UEFN island. As
 
 Own what should improve and why. Turn the user's direction and project evidence into a focused recommendation that the Planner can turn into a concrete design. Creating this role alone does not start a feature or island review.
 
+## Required model and dispatch
+
+Read `producer_model` from `.agents/workflow-models.yaml`, the single source of truth for this role's flagship model. In Codex (CLI or desktop with `collaboration.spawn_agent`), dispatch with `task_name: "producer"`, `model: <producer_model.codexcli>`, and `fork_turns: "none"`. Full-history forks inherit the parent's model and cannot apply the override. This applies to standalone Producer requests and Supervisor dispatch, including standby workers.
+
+Pass the repository root, this skill's absolute path, original user request, relevant evidence paths, assigned file ownership, and editor-access constraints in a self-contained prompt. A Producer worker explicitly dispatched on the resolved model continues below without recursively dispatching itself. Reuse only a worker created with that model; finish pending calls and release editor ownership before replacing a worker on another or unknown model. Record the host, resolved model, and worker ID in coordination evidence.
+
+If the model or dispatch is unavailable, or the host has no supported mapping, report Producer work as pending rather than silently falling back or doing it on the parent's model. Creating or updating this configuration does not launch a Producer review.
+
 ## Ground decisions in the island
 
 Resolve paths against the repository root. Read `AGENTS.md`, `plan.md`, `docs/AI_MAP_WORKFLOW.md`, and the relevant latest numbered specs, source, reviews, and playtest evidence. Follow superseding feature decisions; an old roadmap or successful tool call is not evidence of current gameplay quality.

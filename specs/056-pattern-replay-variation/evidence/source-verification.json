@@ -1,0 +1,47 @@
+{
+  "source_sha256": "10ACE34D961682EFDAA6ACE8D006D4D82BE29561132ADA5AA942CD0161FED95D",
+  "loop_progress_sha256": "4A8DB1DDF0331BAA9B6D22A6A68329936306B467EC00308987FA89F9C8C54E3E",
+  "exact_content_spec_match": true,
+  "original_editables_byte_identical": true,
+  "delayed_hint_and_next_round_byte_identical": true,
+  "encoding": "UTF-8/CRLF preserved",
+  "manifest": "bcf58eab3124cef8009b035133b43b2dc2b7e962476b2d884ef86a74be0aefaf",
+  "finite_content_audit": [
+    {
+      "pattern": "B▲  C■  B▲  C■  B▲  ?",
+      "correct": 2,
+      "solutions_within_periods_1_to_3": [
+        {
+          "candidate": "C",
+          "periods": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "pattern": "B▲  C■  ?  C■  B▲  C■",
+      "correct": 1,
+      "solutions_within_periods_1_to_3": [
+        {
+          "candidate": "B",
+          "periods": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "pattern": "B▲  C■  A●  B▲  C■  ?",
+      "correct": 0,
+      "solutions_within_periods_1_to_3": [
+        {
+          "candidate": "A",
+          "periods": [
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}

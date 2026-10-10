@@ -1,0 +1,27 @@
+# Design review
+
+Superseded recommendation, 2026-10-09: the owner questioned the scale of the redo; an independent Producer review recommends withdrawing the row redesign and planning a focused repair. The previous positive blockout review below is historical. Do not request approval or execute this revision. See [Producer brief](../../docs/producer/prompt-lab-focused-improvement.md). The regenerated preview now displays WITHDRAWN and the scope-review assumption blocks readiness.
+
+## Evidence and diagnosis
+
+The current controller's on_exit calls on_leave and resets when the last participant leaves; the older feature026 contract saying volume exit has no effect is superseded by actual source. Native survey confirms platform66x62m, topZ2410cm, volume actor[7500,-5200,2600] and6x12x3 dimensions. This supports investigating a floating/partial occupancy volume, not claiming a reproduced runtime root cause. The editor BoundingBoxComponent has zero extents and cannot establish runtime FNE volume bounds. A grounded/full-platform enrollment test is mandatory (FR-001/002).
+
+Fresh editor capture from historical firing point[8400,-3900,2580] shows a visually dense edit-mode scene including device bodies. Those are not evidence that the same bodies render in Fortnite. The owner's report supplies the cooked visibility problem. Targets currently occupy several depths, and core visual bounds are metres behind their hit anchors; the proposed single plane and recentered visuals address these avoidable ambiguities (FR-003/004).
+
+## Blockout review
+
+Inspected generated preview.svg, preview.html source/marker table and generated implementation.yaml; visually inspected the offline raster of the actual SVG at evidence/preview-review.png. Browser file navigation was unavailable, so render_review.py rasterized its basic shapes and text locally without browser access. The raster is review evidence; preview.html and preview.svg remain the canonical generated artifacts.
+
+- Entry/control to firing point is5m, with no mandatory walking between shots or to claim reward. Arrival, knowledge and reward overlaps represent information at the same place, not new walls or movement gates. West exit is always open (FR-001/006).
+- Firing rectangle X14..20,Y27..33 stays east of the current campus_main_promenade aggregate bound ending atX12. This avoids putting a proposed firing corner inside that unsurveyed composite. Target rowX50 has minimum30m distance from the firing rectangle; largest target-center horizontal offset is27m, about42degrees off east at the worst corner. A90degree view contains the centers; actual labels, peripheral hit coverage, camera and muzzle clearance still require cooked tests. Do not turn this angular calculation into collision acceptance (FR-003).
+- Current target-owned rings/cone must move with anchors. Nearby passive objects have an explicit retirement ledger; no generic deletion or blanket hiding of unrelated assets. Destination machines are behind the hit plane, cores align with their own rings, and old tall console/pedestal/leaf/bolt decoration retires (FR-003/004).
+- Revised ordered targetY values[12,24,36,54,42,48,6,18,30] keep SMALL/LARGE only6m apart for a useful size comparison. Color and destination active triples each span24m. Target5 sweep48+/-2.5m stays within the platform and has no simultaneously active neighboring target. Existing generosity of hit volumes is preserved and must be tested, not inferred (FR-003/005).
+- Persistent request and step solve reliance on a timed disappearing hint. Explanations identify the mismatch and allow immediate retry. The useful-detail demonstration and actual delivery connect shooting with the lesson. This is still matching a fixed request; it does not teach writing arbitrary prompts. First-time enjoyment/comprehension remains a human acceptance gate (FR-005).
+- Deterministic gate's two FLOW_NO_WRONG_CHOICE advisories are accepted: LARGE is a single detail-demonstration beat, acquisition is a motor-control beat. Actual wrong-choice learning occurs in color, size and destination stages. No extra distractors, timers or punitive progress loss are added just to satisfy a heuristic (FR-005).
+- Preserving the shared room, badge, progress and fixed sequence avoids a new mission engine. Readiness/reconciliation and participant-reset edits are real proposed controller work, not existing capabilities implied by YAML settings (FR-002/007).
+
+## Remaining verification and scope control
+
+No offline schema blockers. The row proposal remains subject to explicit approval and implementation preflight resolving owned component transforms/foreign references. An unexpected live ownership conflict, additional obstruction or changed art asset requires a concrete plan amendment, not silent scope expansion. Readability at30..36m, crouched shots, full sweep, repeated starts, burst handoffs, respawn, shared lifecycle and the west exit are mandatory cooked checks. The latest feature048 result records an authentication/upload failure before cook; verify the current session when testing. No cook, second-player acceptance or first-time learning success is claimed here.
+
+Approval must bind the current generated/review-manifest.json review_digest, not the map_gate.py verdict digest. No approval.yaml has been created. On explicit human approval, use uefn-map-implementation with this feature path, current digest, original user request, spec acceptance scenarios and this native survey. UEFN gameplay remains unchanged during planning.

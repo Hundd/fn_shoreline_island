@@ -38,6 +38,12 @@ rebuild existing missions or replace UEFN's authoritative build/playtest process
 - No existing CLAUDE, Cursor, GitHub agent configuration or separate `.mcp`
   configuration was found. CLAUDE.md now points to the shared project rules.
 
+## Specialist inputs
+
+The Supervisor can call five specialists on demand: Learning Designer for learning objectives and checks, Player Experience Reviewer for first-time clarity and pacing, Technical Scout for capability and reuse evidence, Art Director for visual identity and hierarchy, and Playtest Analyst for synthesis of recorded player evidence. Their skills live under `.agents/skills/uefn-<role>/`; shared dispatch and report rules are in [specialist workflow](../.agents/specialist-workflow.md).
+
+All five initially use the host's `worker_model` in `.agents/workflow-models.yaml`. Producer retains its separate flagship setting. Specialists contribute assigned reports; Producer owns priorities and Planner consolidates recommendations into the spec/map bundle. Call only the specialists needed, respect worker capacity and serialized editor ownership, and preserve human approval and independent QA. Adding the roles does not initiate a review or change the island.
+
 ## Lifecycle
 
 **A — Understand.** Inspect the feature, controller, assets, bindings and newest

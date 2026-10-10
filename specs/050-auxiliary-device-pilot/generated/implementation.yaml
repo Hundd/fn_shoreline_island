@@ -1,0 +1,73 @@
+version: 1
+map_id: auxiliary_device_pilot
+spec_digest: 3448d7475a7384b299efb3d751bb46693700d8cd7f9cd5b8274970fef2241ac7
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.01
+implementation:
+- step: inspect_existing
+  map: auxiliary_device_pilot
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: context
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -4000
+  - -19000
+  - 2400
+  size_cm:
+  - 1000
+  - 1000
+  - 400
+  parameters:
+    width_m: 1
+    access: unchanged existing Skills context
+  markers: []
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: progress
+    class: fn_shoreline_island_nursery_progress
+    count: 1
+    source: evidence/planning-inspection.json pilot GUID 96BE09BE-46A7-B94D-2932-739392FB07F8
+    settings:
+      reuse_existing: true
+      measured_local_position_m:
+      - 5
+      - 5
+      - 0.5
+      visibleInGame: false
+      bNoCollision: true
+      editor_folder: Infrastructure/Skills
+      preserve_identity_transform_bindings: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: preserve_skills
+    zone: context
+    purpose: Preserve existing Skills progress support; documentation stage only,
+      no new gameplay stage.
+    requires: []
+    active_targets: []
+    completion: Existing three milestones and badge guard remain unchanged.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

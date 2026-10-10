@@ -1,3 +1,93 @@
+# Next cycle: distinguish the optional Prompt activity
+
+Status: proposed for planning after053 implementation; 2026-10-09. This is the current handoff and supersedes the cycle3 recommendation retained below.
+
+**Recommend naming the optional shooting activity correctly in its active HUD header.** Show `Optional Prompt Arena` while that activity reports, while the main physical composition lesson remains `1 Prompt Workshop`. Preserve their shared module1 badge and8-module denominator. A player should know which activity they are doing without mistaking an optional alternative for another required lesson.
+
+## Evidence and choice
+
+The current [journal](../../Content/fn_shoreline_island_academy_journal.verse) derives every active header from `module_names()[state.module_index]`. Both [Workshop](../../Content/fn_shoreline_island_prompt_workshop.verse) and [shooting arena](../../Content/fn_shoreline_island_prompt_blaster.verse) report module_index0, so both display `1 Prompt Workshop`. They already have distinct existing source IDs: Workshop0 and arena8. The saved [049 stage3 capture](../../specs/049-prompt-lab-clear-start/evidence/diagnostic-core-overlap.png), inspected earlier by Producer, shows the shooting mission labelled `1 Prompt Workshop | Step 3/5`. This corroborates the source finding; no fresh playtest is claimed.
+
+[033 spec](../../specs/033-progress-and-navigation/spec.md) explicitly makes the older arena an optional alternative sharing the Prompt badge. Current arena instructions say optional while preparing/completed, but active shooting instructions omit that context. Correcting the header keeps that distinction visible throughout play and preserves current product direction.
+
+[053 implementation](../../specs/053-post-restoration-lesson-guidance/evidence/implementation-summary.md) now lets fresh activity instructions display at8/8. Keep that completed priority repair. Compared with more speculative onboarding copy, this naming mismatch is directly evidenced. Bulk auxiliary rollout and more target geometry still need their pending manual feedback to justify expansion; neither belongs in this change.
+
+## Bounded Planner handoff
+
+Change only the active activity display-name selection in the journal. Reuse current state.source and state.module_index: override the name only for the exact arena pair source8/module0. For Workshop0/module0 and every other pair retain the existing resolved module name. Keep the module-name lookup/freshness validity guard; unexpected source/module combinations must not acquire a new special identity.
+
+Add one localized header string, provisionally `Optional Prompt Arena`. Do not globally rename garden_name, alter module_names, change report_activity signatures, add reporter state, change source IDs, or introduce a ninth module. Preserve count, badges, reward/handoff naming, next Workshop recommendation, marker1, journal/travel titles and mapping, controller instructions/steps,053 branch priority, handoff/freshness timing, report cleanup/tokens, travel arbitration, geometry and native devices. This is an activity header, not a change to the canonical module name.
+
+Planner should document the narrow source-presentation exception in a new numbered spec/plan and prepare exact reviewable code scope. No map-layout revision or source mutation by Producer. Provisional small effort; no new dependency or native actor inspection expected unless source review reveals a mismatch.
+
+## Observable success and limits
+
+- Source cases: fresh valid source8/module0 renders `Optional Prompt Arena` with its current step/action; source0/module0 renders `1 Prompt Workshop`; all other or mismatched pairs retain their prior module name. Stale/invalid reports still take existing fallback paths.
+- Preservation/diff review: only the active header selection changes. Native compile passes; native bindings and prior controller sources remain untouched. No sessions/games/cooking/push.
+- Owner manual acceptance remains pending: enter the arena and observe its optional header through shooting and replay, leave and see canonical next-module guidance, enter Workshop and see its existing title. Check header fits the existing HUD with Step/total at actual display resolution and does not imply a second badge. Existing completion/8/8 handoff remains canonical.
+
+The exact label's fit and player understanding require manual evidence; source identity alone cannot prove readability. All050–053 manual acceptance remains independent and open. This proposal does not expand that evidence into a global gate or claim those features accepted.
+
+Producer used local source, existing spec/capture context and053 implementation evidence. Changed only this brief. Supervisor owns editor and shutdown; Planner/Implementer own subsequent numbered work.
+
+---
+
+# Progress and navigation — current Producer handoff
+
+Status: proposed for planning, cycle3 of the owner's autonomous improvement loop.
+Date: 2026-10-09.
+Source request: compile successful work, ask Producer for the next high-level improvement and continue; gameplay testing remains owner-manual.
+
+## Recommendation: keep lesson instructions visible during post-restoration replays
+
+When a player with8/8 modules restored enters or replays a lesson, show that lesson's current step and action in the existing HUD. While they are idle, retain the existing all-restored invitation to replay or explore. Keep the visible8/8 count and brief completion handoff. No new UI, reward or progression system is needed.
+
+This is one bounded, independent improvement for cycle3. It does not depend on accepting050 support-host behavior,051 target geometry or052 retry-hint readability. Those owner-manual checks remain open.
+
+## Source evidence and player value
+
+In [current journal source](../../Content/fn_shoreline_island_academy_journal.verse), `navigation_refresh` chooses HUD content in this order: active handoff; completed_modules>=8; fresh active lesson report; next destination. The all-restored branch therefore masks `navigation_step` whenever8/8 is true, even if a controller is reporting its current activity every0.25s. The current message invites “Replay a lesson,” but the HUD then withholds the usual step/action during that replay. This is a source-established display-precedence finding, not a newly observed cooked failure.
+
+The existing `report_activity` state already stores source, module index, step, total, instruction, token and freshness. Current controllers report through it, including Workshop, Pattern, Classifier, Confidence, Error, Tools, Popcorn, Agent and the optional Prompt arena. Reuse that information rather than adding a new progress state or subscription. Optional Prompt still shares the Prompt badge; do not turn it into a ninth module.
+
+Keeping the next action available helps children continue a familiar lesson after success, supporting experimentation and safe retries. It also makes the existing replay invitation internally consistent. No measured improvement in enjoyment or retention is claimed.
+
+The latest [052 implementation](../../specs/052-prompt-retry-hints/evidence/implementation-summary.md) records its narrow controller-only feedback change, native compile success and pending manual checks; it does not touch this journal branch. [044 tasks](../../specs/044-hub-pix-mission-travel/tasks.md) preserve independent mission access; do not restore the historical Agent prerequisite described in the older brief below.
+
+## Scope and preservation
+
+Planner should resolve a minimal presentation-priority change in `fn_shoreline_island_academy_journal.verse`: existing active handoff first; then a fresh valid active lesson report; then all-restored guidance when no report qualifies; then the existing incomplete-module recommendation/unavailable behavior. Preserve the current valid-module/freshness checks and0.75s expiry, four-second handoff timing, action formatting, report ownership/token rules and state cleanup. Recheck current source before implementation rather than assuming line numbers remain fixed.
+
+Preserve the count text, eight module identities, badge/reward state, module availability, `next_module`, marker pulse behavior, map markers, Core panels/lights, travel UI arbitration, journal panels, controller reports, reset/respawn behavior and all mission mechanics. Do not change every controller, add new widgets/timers, extend handoff duration, or make idle8/8 show a false next required module. The final celebration and its handoff still take priority while active; replay instructions resume after that existing interval.
+
+This is a proposed narrow source presentation repair. Planner should document the small-code-change/map-geometry exception and numbered requirements; no layout changes or new map revision are intended. Exact implementation remains Planner/Implementer responsibility. Producer recommendation is delegated agent review input, not human design approval.
+
+## Observable success and next handoff
+
+- Source-review case: before8/8, ordinary handoff, fresh lesson, stale report and next-module behavior remain as before.
+- Source-review case: at8/8 with an active completion handoff, the existing handoff remains; after it expires, a fresh valid report reaches `navigation_step` while count remains8/8.
+- Source-review case: at8/8 with no report, an expired report, or an invalid module report, the HUD shows existing all-restored guidance. Reuse current validity semantics without inventing state corrections.
+- Native Verse BuildAll passes with captured diagnostics; diff shows only the bounded journal presentation decision. No actor delta, sessions, games, cooking or push.
+- Owner manual acceptance remains pending: earn eighth badge, observe celebration, replay a previously completed lesson and see advancing step/action with8/8 retained; leave it and see idle all-restored guidance; confirm a normal incomplete-round lesson still works. Repeat with a second lesson if practical to check shared presentation. Do not infer this from compilation.
+
+Unknowns: actual owner8/8 lifecycle behavior and other UI overlap remain untested; this change must not claim full044 integration acceptance. Source review can establish intended branch selection but not child readability or whole-island completion quality.
+
+## Alternatives considered
+
+| Opportunity | Decision |
+|---|---|
+| Post-restoration active lesson guidance | Select: exact shared source precedence, reaches replay across modules, no geometry or new mechanic. |
+| Distinguish optional arena title from main Workshop in HUD | Credible separate naming follow-up, but lower priority than missing active instructions after8/8; do not combine scopes. |
+| More Prompt geometry or support-host rollout | Defer changes until current manual evidence clarifies their value. |
+
+Local-only Producer review: read current journal/reporting call sites and052 implementation evidence. Changed only this existing brief; no source, assets, specs or acceptance records changed. Supervisor owns editor and shutdown.
+
+---
+
+## Historical 2026-10-03 brief (superseded where noted above)
+
+The following is retained as feature033 design history. Its original unimplemented status and seven-module Agent lock are not current behavior; later033/037/044 decisions and the current handoff above take precedence.
+
 # Progress and navigation — Producer brief
 
 Status: Proposed for planning; Producer handoff complete, implementation not approved.
@@ -141,3 +231,5 @@ the roadmap and the cited latest mission evidence. No gameplay or editor asset
 was modified. A supported GetGameState readback returned Unconnected during this
 task; no playtest was launched and the editor was left open. Offline document-link
 and map-contract checks are recorded with the feature review.
+
+

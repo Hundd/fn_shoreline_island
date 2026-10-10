@@ -1,0 +1,73 @@
+{
+  "status": "proposed_revision_3_requires_human_approval",
+  "approval": "none",
+  "reason": "QA twice reproduced stationary jump-only enrollment with landing exit/reset. Native generated overlap mesh VolumeDevice_Box localZ0..384, relativeLocation0 and scale6/12/3 confirms bottom2600/top3752 versus floor2410. Lower only Z240cm to2360, placing bottom50cm below floor; grounded post-fix acceptance required.",
+  "operations": [
+    {
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5860503_1590440721",
+      "label": "prompt_blaster_entry_zone",
+      "operation": "set_actor_transform",
+      "before": {
+        "location": {
+          "x": 7500,
+          "y": -5200,
+          "z": 2600
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": 7500,
+          "y": -5200,
+          "z": 2360
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "preserve_device_properties": {
+        "zoneWidth": 6,
+        "zoneDepth": 12,
+        "zoneHeight": 3,
+        "blocksVolumeLow": {
+          "x": -256,
+          "y": -256,
+          "z": 0
+        },
+        "blocksVolumeHigh": {
+          "x": 256,
+          "y": 256,
+          "z": 384
+        },
+        "enabledOnPhase": "Gameplay Only",
+        "selectedTeam": {
+          "teamType": "Any",
+          "teamIndex": 1
+        },
+        "selectedClass": {
+          "classType": "Any",
+          "classSlot": 1
+        },
+        "bAllowWeaponFire": true
+      },
+      "verification": "Read back exact full transform and preserved native settings/bindings; validate/cook and run spec AC-01..04, including ten grounded approach/re-entry/replay trials, crouch/jump/landing/departure/respawn and unchanged full sequence/rewards."
+    }
+  ],
+  "unchanged": "All other actors, entry XY/tiles/filters/permissions, Verse source, exit semantics, layout, stages/timing, rewards, Pix and target IDs."
+}

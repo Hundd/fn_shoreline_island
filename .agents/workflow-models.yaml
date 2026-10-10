@@ -1,7 +1,9 @@
-# Single source of truth for which model each cost-controlled workflow role
-# (Implementer and QA/Gameplay Verifier) must run on, per execution host.
+# Single source of truth for workflow role models, per execution host.
+# Producer uses the flagship model; Implementer, QA, and all five specialists
+# (Learning Designer, Player Experience Reviewer, Technical Scout, Art Director,
+# Playtest Analyst) use worker_model until the user updates their model policy.
 #
-# The Supervisor and the Implementer/QA skills read this file to resolve the
+# The Supervisor, Implementer/QA, and specialist skills read this file to resolve the
 # worker model for whichever host is actually executing, then dispatch on that
 # host's native subagent mechanism:
 #   - Codex CLI   -> `collaboration.spawn_agent` with `model` and `fork_turns: "none"`
@@ -17,3 +19,8 @@ worker_model:
   # Cline subagent tools expose no `model` override, so the worker inherits the
   # parent model; "inherit" records that the intended pin cannot be applied here.
   cline: inherit
+
+# Flagship model for Producer dispatch in Codex. Other hosts require an explicit
+# supported mapping before claiming that Producer is pinned to a flagship model.
+producer_model:
+  codexcli: gpt-6-astra

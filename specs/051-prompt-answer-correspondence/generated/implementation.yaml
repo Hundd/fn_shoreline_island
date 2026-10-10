@@ -1,0 +1,516 @@
+version: 1
+map_id: prompt_answer_correspondence
+spec_digest: 950d1980a483e7ed8964ba5fbae488fc20ef2183924f433ae1069acb6fafc3c7
+patterns_digest: 18ddda2fcef5edbb7f1d19fbe85cbb29a1821b863bf5a8cdf1a23218d5d8d981
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: prompt_answer_correspondence
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 6000
+  - -5500
+  - 2410
+  size_cm:
+  - 2000
+  - 3200
+  - 1500
+  parameters:
+    width_m: 3
+    access: existing west ramp
+  markers:
+  - id: arrival_point
+    kind: spawn
+    zone: arrival
+    label: Existing grounded entry (preserved)
+    position:
+    - 15
+    - 33
+    - 0
+    source: Feature049 completed repair; native current Z2360 unchanged. Ground-level
+      arrival annotation, not new geometry.
+  - id: blaster_inventory
+    kind: weapon
+    zone: arrival
+    label: Data Blaster retained from hub
+    position:
+    - 12
+    - 37
+    - 0
+    source: Conceptual inventory cue; fn_shoreline_island_data_blaster.verse; not
+      a placed weapon
+  - id: walk_return
+    kind: exit
+    zone: arrival
+    label: Walk back west / always open
+    position:
+    - 0
+    - 40
+    - 0
+    source: Existing route annotation, not new geometry. Preserve west approach; reverse
+      walking requires current cooked check.
+  - id: replay_control
+    kind: checkpoint
+    zone: arrival
+    label: Existing Replay control (unchanged)
+    position:
+    - 16
+    - 34
+    - 0.9
+    source: MEASURED native replay transform in evidence/live-survey.json; no relocation
+      or new control proposed.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: knowledge
+  pattern: knowledge_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 8000
+  - -5100
+  - 2410
+  size_cm:
+  - 1400
+  - 1400
+  - 1500
+  parameters:
+    lesson: A prompt tells AI what you want. Useful details help it choose.
+    duration_seconds: 7
+    hud_copy: true
+  markers:
+  - id: lesson_board
+    kind: knowledge
+    zone: knowledge
+    label: 'Pix hints: existing board + HUD'
+    position:
+    - 30
+    - 34
+    - 4
+    source: Existing feature026 saved board anchor; unchanged. Native readback and
+      cooked readability must be confirmed during diagnosis.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: arena
+  pattern: target_sequence
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 8000
+  - -5500
+  - 2410
+  size_cm:
+  - 3500
+  - 3200
+  - 1500
+  parameters:
+    target_count: 9
+    sequence:
+    - 0
+    - 3
+    - 5
+    - 5
+    - 6
+    shared_state: true
+  markers:
+  - id: blue
+    kind: target
+    zone: arena
+    label: BLUE
+    target_id: 0
+    position:
+    - 30.0
+    - 52.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: red
+    kind: target
+    zone: arena
+    label: RED
+    target_id: 1
+    position:
+    - 30.0
+    - 40.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: green
+    kind: target
+    zone: arena
+    label: GREEN
+    target_id: 2
+    position:
+    - 30.0
+    - 46.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: large_detail
+    kind: target
+    zone: arena
+    label: LARGE detail
+    target_id: 3
+    position:
+    - 36.0
+    - 38.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: small_blue
+    kind: target
+    zone: arena
+    label: SMALL BLUE
+    target_id: 4
+    position:
+    - 38
+    - 35
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: large_blue
+    kind: target
+    zone: arena
+    label: LARGE BLUE / moving acquisition
+    target_id: 5
+    position:
+    - 38.0
+    - 51.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: reactor
+    kind: target
+    zone: arena
+    label: REACTOR
+    target_id: 6
+    position:
+    - 46.0
+    - 54.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: scanner
+    kind: target
+    zone: arena
+    label: SCANNER
+    target_id: 7
+    position:
+    - 46.0
+    - 48.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  - id: storage
+    kind: target
+    zone: arena
+    label: STORAGE
+    target_id: 8
+    position:
+    - 46.0
+    - 42.0
+    - 2.2
+    source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+      unless target4, whose Y-800cm delta is explicit.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: reward
+  pattern: reward_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 11500
+  - -8500
+  - 2410
+  size_cm:
+  - 1100
+  - 6200
+  - 1500
+  parameters:
+    badge: Prompt Badge
+    return_mode: walk back via west approach; existing rail is optional and unverified
+  markers:
+  - id: module
+    kind: reward
+    zone: reward
+    label: Prompt Module / badge finale
+    position:
+    - 64
+    - 23
+    - 2.7
+    source: MEASURED unchanged module anchor in specs/026-prompt-lab-aim-refine-deliver/evidence/read-only-inspection.json;
+      automatic reward, not required walk
+  - id: return_exit
+    kind: exit
+    zone: reward
+    label: Optional rail / boarding unverified
+    position:
+    - 63
+    - 20
+    - 3.4
+    source: MEASURED rail actor anchor in specs/026-prompt-lab-aim-refine-deliver/evidence/read-only-inspection.json;
+      spline and hub endpoint not surveyed
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: entry
+    class: mutator_zone_device
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+      world_location_cm:
+      - 7500
+      - -5200
+      - 2360
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controller
+    class: fn_shoreline_island_prompt_blaster
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: targets
+    class: fn_shoreline_island_data_target
+    count: 9
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_ids_and_order: true
+      small_blue_target4_y_cm: -5000
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hit_surfaces
+    class: trigger_device
+    count: 9
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: energy
+    class: fn_shoreline_island_data_energy
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: blaster
+    class: fn_shoreline_island_data_blaster
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: board
+    class: billboard_device
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: feedback
+    class: hud_message_device
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: byte_island_game_manager
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: replay
+    class: button_device
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: return_rail
+    class: grind_rail_device
+    count: 1
+    source: Preserve existing feature049 device; exact delta only in this feature
+      plan.md and evidence/planning-inspection.json.
+    settings:
+      preserve_existing: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: enter
+    zone: arrival
+    purpose: Enroll player with existing loadout
+    requires: []
+    active_targets: []
+    completion: Player enters existing volume
+  - id: intro
+    zone: knowledge
+    purpose: Existing 2s spectacle then 7s scripted AI Knowledge; board stays visible
+      after timed HUD
+    requires:
+    - enter
+    active_targets: []
+    completion: Existing seven-second Knowledge phase finishes
+  - id: color
+    zone: arena
+    purpose: Choose WHAT using color
+    requires:
+    - intro
+    active_targets:
+    - blue
+    - red
+    - green
+    success_target: blue
+    completion: BLUE hit advances; wrong hits retry
+  - id: detail
+    zone: arena
+    purpose: Resolve ambiguity by adding LARGE
+    requires:
+    - color
+    active_targets:
+    - large_detail
+    success_target: large_detail
+    completion: LARGE objective hit advances
+  - id: select_large
+    zone: arena
+    purpose: Apply the useful detail
+    requires:
+    - detail
+    active_targets:
+    - red
+    - small_blue
+    - large_blue
+    success_target: large_blue
+    completion: LARGE BLUE hit then two-second instruction handoff
+  - id: acquire
+    zone: arena
+    purpose: Acquire the slowly moving core
+    requires:
+    - select_large
+    active_targets:
+    - large_blue
+    success_target: large_blue
+    completion: Hit freezes both core and hit surface
+  - id: destination
+    zone: arena
+    purpose: Choose WHERE the core belongs
+    requires:
+    - acquire
+    active_targets:
+    - reactor
+    - scanner
+    - storage
+    success_target: reactor
+    completion: REACTOR hit starts existing delivery
+  - id: finale
+    zone: reward
+    purpose: Watch result and earn Prompt Badge
+    requires:
+    - destination
+    active_targets: []
+    completion: Existing Pix delivery and module spectacle; eligible participants
+      get badge and 3 DATA; return rail enabled; walking exit stays open
+  connections:
+  - from: arrival
+    to: knowledge
+    mode: walk
+    width: 3
+    points:
+    - - 15
+      - 33
+      - 0
+    - - 20
+      - 40
+      - 0
+    - - 24
+      - 46
+      - 0
+    gate: always
+  - from: knowledge
+    to: arena
+    mode: walk
+    width: 3
+    points:
+    - - 24
+      - 46
+      - 0
+    - - 24
+      - 47
+      - 0
+    gate: always
+  - from: arena
+    to: reward
+    mode: walk
+    width: 3
+    points:
+    - - 24
+      - 47
+      - 0
+    - - 24
+      - 59
+      - 0
+    - - 55
+      - 59
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

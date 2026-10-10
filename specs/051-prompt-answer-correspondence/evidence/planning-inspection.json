@@ -1,0 +1,3972 @@
+{
+  "targets": [
+    {
+      "actor": {
+        "guid": "E34FDE8E-4CA2-8AA3-6877-63B83BBFA019",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1527752703",
+        "label": "prompt_blaster_target_0",
+        "bounds": {
+          "min": {
+            "x": 8873.331470489502,
+            "y": -3358.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 9126.720355987549,
+            "y": -3241.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 0,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1527965704"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1575046905"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1663232915"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 9000,
+              "y": -3300,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8166.165065765381,
+              "y": -4350,
+              "z": 1580
+            },
+            "max": {
+              "x": 9166.16506576538,
+              "y": -2250,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 8990,
+              "y": -3300,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8990,
+              "y": -3440,
+              "z": 2490
+            },
+            "max": {
+              "x": 8990,
+              "y": -3160,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 8980,
+              "y": -3300,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8801.194435119629,
+              "y": -3300.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 9158.805641174316,
+              "y": -3272.4195251464844,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "38552C61-4C4B-D78E-78C3-97882B992A0B",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529318715",
+        "label": "prompt_blaster_target_6",
+        "bounds": {
+          "min": {
+            "x": 10473.331470489502,
+            "y": -3158.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 10726.720355987549,
+            "y": -3041.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 6,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1529410716"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1578610911"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1722215945"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 10600,
+              "y": -3100,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9766.16506576538,
+              "y": -4150,
+              "z": 1580
+            },
+            "max": {
+              "x": 10766.16506576538,
+              "y": -2050,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 10590,
+              "y": -3100,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 10590,
+              "y": -3240,
+              "z": 2490
+            },
+            "max": {
+              "x": 10590,
+              "y": -2960,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 10580,
+              "y": -3100,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 10401.194435119629,
+              "y": -3100.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 10758.805641174316,
+              "y": -3072.4195251464844,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "D49B0AFA-4933-B2B2-6487-2BBDD9613FCC",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528133705",
+        "label": "prompt_blaster_target_1",
+        "bounds": {
+          "min": {
+            "x": 8873.331470489502,
+            "y": -4558.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 9126.720355987549,
+            "y": -4441.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 1,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1528215706"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1575649906"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1708884920"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 9000,
+              "y": -4500,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8166.165065765381,
+              "y": -5550,
+              "z": 1580
+            },
+            "max": {
+              "x": 9166.16506576538,
+              "y": -3450,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 8990,
+              "y": -4500,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8990,
+              "y": -4640,
+              "z": 2490
+            },
+            "max": {
+              "x": 8990,
+              "y": -4360,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 8980,
+              "y": -4500,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8801.194435119629,
+              "y": -4500.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 9158.805641174316,
+              "y": -4472.419525146484,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "A1CBC0CE-4F19-D6AA-5D3B-30BB169F2D2C",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528359707",
+        "label": "prompt_blaster_target_2",
+        "bounds": {
+          "min": {
+            "x": 8873.331470489502,
+            "y": -3958.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 9126.720355987549,
+            "y": -3841.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 2,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1528460708"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1576282907"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1712013925"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 9000,
+              "y": -3900,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8166.165065765381,
+              "y": -4950,
+              "z": 1580
+            },
+            "max": {
+              "x": 9166.16506576538,
+              "y": -2850,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 8990,
+              "y": -3900,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8990,
+              "y": -4040,
+              "z": 2490
+            },
+            "max": {
+              "x": 8990,
+              "y": -3760,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 8980,
+              "y": -3900,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8801.194435119629,
+              "y": -3900.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 9158.805641174316,
+              "y": -3872.4195251464844,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "0DB2239B-4497-23A4-920D-4292CF007F9F",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528582709",
+        "label": "prompt_blaster_target_3",
+        "bounds": {
+          "min": {
+            "x": 9473.331470489502,
+            "y": -4758.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 9726.720355987549,
+            "y": -4641.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 3,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1528687710"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1576842908"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1714677930"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 9600,
+              "y": -4700,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8766.16506576538,
+              "y": -5750,
+              "z": 1580
+            },
+            "max": {
+              "x": 9766.16506576538,
+              "y": -3650,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 9590,
+              "y": -4700,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9590,
+              "y": -4840,
+              "z": 2490
+            },
+            "max": {
+              "x": 9590,
+              "y": -4560,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 9580,
+              "y": -4700,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9401.194435119629,
+              "y": -4700.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 9758.805641174316,
+              "y": -4672.419525146484,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "340AC64F-4C05-5303-5955-33BE63697D1B",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1528830711",
+        "label": "prompt_blaster_target_4",
+        "bounds": {
+          "min": {
+            "x": 9673.331470489502,
+            "y": -4258.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 9926.720355987549,
+            "y": -4141.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 4,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1528945712"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1577406909"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1717116935"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 9800,
+              "y": -4200,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8966.16506576538,
+              "y": -5250,
+              "z": 1580
+            },
+            "max": {
+              "x": 9966.16506576538,
+              "y": -3150,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 9790,
+              "y": -4200,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9790,
+              "y": -4340,
+              "z": 2490
+            },
+            "max": {
+              "x": 9790,
+              "y": -4060,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 9780,
+              "y": -4200,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9601.194435119629,
+              "y": -4200.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 9958.805641174316,
+              "y": -4172.419525146484,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "53597FDE-4B44-3947-D47C-C48D18429F71",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529077713",
+        "label": "prompt_blaster_target_5",
+        "bounds": {
+          "min": {
+            "x": 9673.331470489502,
+            "y": -3458.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 9926.720355987549,
+            "y": -3341.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 5,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1529182714"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1577991910"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1719672940"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 9800,
+              "y": -3400,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 8966.16506576538,
+              "y": -4450,
+              "z": 1580
+            },
+            "max": {
+              "x": 9966.16506576538,
+              "y": -2350,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 9790,
+              "y": -3400,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9790,
+              "y": -3540,
+              "z": 2490
+            },
+            "max": {
+              "x": 9790,
+              "y": -3260,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 9780,
+              "y": -3400,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9601.194435119629,
+              "y": -3400.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 9958.805641174316,
+              "y": -3372.4195251464844,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "3933DB8B-423A-C50F-B0CC-61BF9E004879",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529545717",
+        "label": "prompt_blaster_target_7",
+        "bounds": {
+          "min": {
+            "x": 10473.331470489502,
+            "y": -3758.2804946899414,
+            "z": 2630
+          },
+          "max": {
+            "x": 10726.720355987549,
+            "y": -3641.3575592041016,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 7,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1529644718"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1579194912"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1724716950"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 10600,
+              "y": -3700,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9766.16506576538,
+              "y": -4750,
+              "z": 1580
+            },
+            "max": {
+              "x": 10766.16506576538,
+              "y": -2650,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 10590,
+              "y": -3700,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 10590,
+              "y": -3840,
+              "z": 2490
+            },
+            "max": {
+              "x": 10590,
+              "y": -3560,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 10580,
+              "y": -3700,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 10401.194435119629,
+              "y": -3700.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 10758.805641174316,
+              "y": -3672.4195251464844,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    },
+    {
+      "actor": {
+        "guid": "86CBB1CE-4E4D-10B5-8054-F89474563567",
+        "nativeClass": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "class": {
+          "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+        },
+        "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1529781719",
+        "label": "prompt_blaster_target_8",
+        "bounds": {
+          "min": {
+            "x": 10473.331470489502,
+            "y": -4358.280494689941,
+            "z": 2630
+          },
+          "max": {
+            "x": 10726.720355987549,
+            "y": -4241.357559204102,
+            "z": 2788.1131439208984
+          },
+          "isValid": true
+        },
+        "runtimeGrid": "None",
+        "bIsSpatiallyLoaded": false,
+        "bActorIsEditorOnly": false,
+        "actorPackage": "None",
+        "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719",
+        "folderPath": "None",
+        "dataLayerAssets": []
+      },
+      "settings": {
+        "target_id": 8,
+        "hit_surface": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface"
+        },
+        "ring_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh"
+        },
+        "cone_mesh": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh"
+        },
+        "label_board": {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board"
+        },
+        "stationary_x_facing": false,
+        "stationary_y_facing": false,
+        "stationary_label_offset_z": -12
+      },
+      "refs": {
+        "hit_surface": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1529878720"
+          }
+        },
+        "ring_mesh": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1579784913"
+          }
+        },
+        "label_board": {
+          "savedActor": {
+            "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1727785955"
+          }
+        }
+      },
+      "geometry": {
+        "hit_surface": {
+          "transform": {
+            "location": {
+              "x": 10600,
+              "y": -4300,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 3.5,
+              "y": 3.5,
+              "z": 2
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 9766.16506576538,
+              "y": -5350,
+              "z": 1580
+            },
+            "max": {
+              "x": 10766.16506576538,
+              "y": -3250,
+              "z": 3680
+            },
+            "isValid": true
+          }
+        },
+        "ring_mesh": {
+          "transform": {
+            "location": {
+              "x": 10590,
+              "y": -4300,
+              "z": 2630
+            },
+            "rotation": {
+              "pitch": 90,
+              "yaw": 0,
+              "roll": 0
+            },
+            "scale": {
+              "x": 2.8,
+              "y": 2.8,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 10590,
+              "y": -4440,
+              "z": 2490
+            },
+            "max": {
+              "x": 10590,
+              "y": -4160,
+              "z": 2770
+            },
+            "isValid": true
+          }
+        },
+        "label_board": {
+          "transform": {
+            "location": {
+              "x": 10580,
+              "y": -4300,
+              "z": 2830
+            },
+            "rotation": {
+              "pitch": 0,
+              "yaw": 180,
+              "roll": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "bounds": {
+            "min": {
+              "x": 10401.194435119629,
+              "y": -4300.546322183771,
+              "z": 2829.9882202148438
+            },
+            "max": {
+              "x": 10758.805641174316,
+              "y": -4272.419525146484,
+              "z": 2991.506561279297
+            },
+            "isValid": true
+          }
+        }
+      }
+    }
+  ],
+  "cores": [
+    {
+      "role": "blue",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1614380772"
+      },
+      "transform": {
+        "location": {
+          "x": 9350,
+          "y": -3300,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 9225,
+          "y": -3424.999990463257,
+          "z": 2480
+        },
+        "max": {
+          "x": 9475,
+          "y": -3174.999990463257,
+          "z": 2730
+        },
+        "isValid": true
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1614380772.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1614380772.BoundingBoxComponent"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1614380772.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "mesh": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "QueryOnly",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "Custom",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "WorldStatic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "WorldDynamic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Pawn",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Visibility",
+                "response": "ECR_Overlap"
+              },
+              {
+                "channel": "Camera",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "PhysicsBody",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Vehicle",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Destructible",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel2",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel3",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel4",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel5",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel6",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Trace_WeaponWorldMulti",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_NoGhost",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_Water",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel20",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel21",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel22",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel23",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel24",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel25",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel26",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel27",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel28",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel29",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel30",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel31",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel32",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel33",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel34",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel35",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel36",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel37",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel38",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel39",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel40",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel41",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel42",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel43",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel44",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel45",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel46",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel47",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel48",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel49",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel50",
+                "response": "ECR_Ignore"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3599.999755859375,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bIsEditorOnly": false,
+        "relativeLocation": {
+          "x": 9350,
+          "y": -3300,
+          "z": 2605
+        },
+        "relativeScale3D": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "native_collision": {
+        "bNoCollision": true,
+        "bNoWeaponCollision": false,
+        "bNoRangedWeaponCollision": false,
+        "bNoProjectileCollision": false
+      }
+    },
+    {
+      "role": "red",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1653808173"
+      },
+      "transform": {
+        "location": {
+          "x": 9350,
+          "y": -4500,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 9225,
+          "y": -4624.999990463257,
+          "z": 2480
+        },
+        "max": {
+          "x": 9475,
+          "y": -4374.999990463257,
+          "z": 2730
+        },
+        "isValid": true
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1653808173.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1653808173.BoundingBoxComponent"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1653808173.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "mesh": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "QueryOnly",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "Custom",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "WorldStatic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "WorldDynamic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Pawn",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Visibility",
+                "response": "ECR_Overlap"
+              },
+              {
+                "channel": "Camera",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "PhysicsBody",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Vehicle",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Destructible",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel2",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel3",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel4",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel5",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel6",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Trace_WeaponWorldMulti",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_NoGhost",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_Water",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel20",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel21",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel22",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel23",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel24",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel25",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel26",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel27",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel28",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel29",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel30",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel31",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel32",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel33",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel34",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel35",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel36",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel37",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel38",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel39",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel40",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel41",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel42",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel43",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel44",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel45",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel46",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel47",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel48",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel49",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel50",
+                "response": "ECR_Ignore"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3599.999755859375,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bIsEditorOnly": false,
+        "relativeLocation": {
+          "x": 9350,
+          "y": -4500,
+          "z": 2605
+        },
+        "relativeScale3D": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "native_collision": {
+        "bNoCollision": true,
+        "bNoWeaponCollision": false,
+        "bNoRangedWeaponCollision": false,
+        "bNoProjectileCollision": false
+      }
+    },
+    {
+      "role": "green",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B59C0503_1396988571"
+      },
+      "transform": {
+        "location": {
+          "x": 9350,
+          "y": -3900,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 9225,
+          "y": -4024.999990463257,
+          "z": 2480
+        },
+        "max": {
+          "x": 9475,
+          "y": -3774.999990463257,
+          "z": 2730
+        },
+        "isValid": true
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B59C0503_1396988571.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B59C0503_1396988571.BoundingBoxComponent"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B59C0503_1396988571.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "mesh": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "QueryOnly",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "Custom",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "WorldStatic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "WorldDynamic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Pawn",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Visibility",
+                "response": "ECR_Overlap"
+              },
+              {
+                "channel": "Camera",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "PhysicsBody",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Vehicle",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Destructible",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel2",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel3",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel4",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel5",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel6",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Trace_WeaponWorldMulti",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_NoGhost",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_Water",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel20",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel21",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel22",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel23",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel24",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel25",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel26",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel27",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel28",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel29",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel30",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel31",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel32",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel33",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel34",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel35",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel36",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel37",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel38",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel39",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel40",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel41",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel42",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel43",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel44",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel45",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel46",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel47",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel48",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel49",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel50",
+                "response": "ECR_Ignore"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3599.999755859375,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bIsEditorOnly": false,
+        "relativeLocation": {
+          "x": 9350,
+          "y": -3900,
+          "z": 2605
+        },
+        "relativeScale3D": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "native_collision": {
+        "bNoCollision": true,
+        "bNoWeaponCollision": false,
+        "bNoRangedWeaponCollision": false,
+        "bNoProjectileCollision": false
+      }
+    },
+    {
+      "role": "small_blue",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1639151778"
+      },
+      "transform": {
+        "location": {
+          "x": 10100,
+          "y": -4200,
+          "z": 2555
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 10025,
+          "y": -4274.999994277954,
+          "z": 2480
+        },
+        "max": {
+          "x": 10175,
+          "y": -4124.999994277954,
+          "z": 2630
+        },
+        "isValid": true
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1639151778.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1639151778.BoundingBoxComponent"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1639151778.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "mesh": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "QueryOnly",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "Custom",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "WorldStatic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "WorldDynamic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Pawn",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Visibility",
+                "response": "ECR_Overlap"
+              },
+              {
+                "channel": "Camera",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "PhysicsBody",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Vehicle",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Destructible",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel2",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel3",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel4",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel5",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel6",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Trace_WeaponWorldMulti",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_NoGhost",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_Water",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel20",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel21",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel22",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel23",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel24",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel25",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel26",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel27",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel28",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel29",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel30",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel31",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel32",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel33",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel34",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel35",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel36",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel37",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel38",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel39",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel40",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel41",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel42",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel43",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel44",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel45",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel46",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel47",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel48",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel49",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel50",
+                "response": "ECR_Ignore"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3599.999755859375,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bIsEditorOnly": false,
+        "relativeLocation": {
+          "x": 10100,
+          "y": -4200,
+          "z": 2555
+        },
+        "relativeScale3D": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      },
+      "native_collision": {
+        "bNoCollision": true,
+        "bNoWeaponCollision": false,
+        "bNoRangedWeaponCollision": false,
+        "bNoProjectileCollision": false
+      }
+    },
+    {
+      "role": "large_blue",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1615583773"
+      },
+      "transform": {
+        "location": {
+          "x": 10150,
+          "y": -3400,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": 10025,
+          "y": -3524.999990463257,
+          "z": 2480
+        },
+        "max": {
+          "x": 10275,
+          "y": -3274.999990463257,
+          "z": 2730
+        },
+        "isValid": true
+      },
+      "components": [
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1615583773.StaticMeshComponent0"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1615583773.BoundingBoxComponent"
+        },
+        {
+          "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1615583773.EditorOnlyStaticMeshComponent"
+        }
+      ],
+      "mesh": {
+        "staticMesh": {
+          "refPath": "/Engine/BasicShapes/Sphere.Sphere"
+        },
+        "bodyInstance": {
+          "positionSolverIterationCount": 8,
+          "velocitySolverIterationCount": 2,
+          "projectionSolverIterationCount": 1,
+          "objectType": "ECC_WorldStatic",
+          "collisionEnabled": "QueryOnly",
+          "sleepFamily": "Normal",
+          "dOFMode": "Default",
+          "bUseCCD": false,
+          "bUseMACD": false,
+          "bAllowPartialIslandSleep": true,
+          "bIgnoreAnalyticCollisions": false,
+          "bNotifyRigidBodyCollision": false,
+          "bSmoothEdgeCollisions": false,
+          "bLockTranslation": true,
+          "bLockRotation": true,
+          "bLockXTranslation": false,
+          "bLockYTranslation": false,
+          "bLockZTranslation": false,
+          "bLockXRotation": false,
+          "bLockYRotation": false,
+          "bLockZRotation": false,
+          "bOverrideMaxAngularVelocity": false,
+          "bOverrideMaxDepenetrationVelocity": false,
+          "bOverrideWalkableSlopeOnInstance": false,
+          "bOverrideIterationCounts": false,
+          "bInterpolateWhenSubStepping": true,
+          "bInertiaConditioning": true,
+          "bOneWayInteraction": false,
+          "bOverrideSolverAsyncDeltaTime": false,
+          "solverAsyncDeltaTime": 0.01666666753590107,
+          "collisionProfileName": "Custom",
+          "collisionResponses": {
+            "responseArray": [
+              {
+                "channel": "WorldStatic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "WorldDynamic",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Pawn",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Visibility",
+                "response": "ECR_Overlap"
+              },
+              {
+                "channel": "Camera",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "PhysicsBody",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Vehicle",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "Destructible",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel2",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel3",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel4",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel5",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "EngineTraceChannel6",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Trace_WeaponWorldMulti",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_NoGhost",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "FCC_Object_Water",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel20",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel21",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel22",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel23",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel24",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel25",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel26",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel27",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel28",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel29",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel30",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel31",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel32",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel33",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel34",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel35",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel36",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel37",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel38",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel39",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel40",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel41",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel42",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel43",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel44",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel45",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel46",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel47",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel48",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel49",
+                "response": "ECR_Ignore"
+              },
+              {
+                "channel": "GameTraceChannel50",
+                "response": "ECR_Ignore"
+              }
+            ]
+          },
+          "maxDepenetrationVelocity": 0,
+          "massInKgOverride": 100,
+          "linearDamping": 0.009999999776482582,
+          "angularDamping": 0,
+          "customDOFPlaneNormal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cOMNudge": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "massScale": 1,
+          "gravityGroupIndex": 0,
+          "inertiaTensorScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "walkableSlopeOverride": {
+            "walkableSlopeBehavior": "WalkableSlope_Default",
+            "walkableSlopeAngle": 0
+          },
+          "physMaterialOverride": null,
+          "maxAngularVelocity": 3599.999755859375,
+          "customSleepThresholdMultiplier": 1,
+          "stabilizationThresholdMultiplier": 1,
+          "physicsBlendWeight": 0,
+          "bSimulatePhysics": false,
+          "bOverrideMass": false,
+          "bEnableGravity": true,
+          "bUpdateKinematicFromSimulation": false,
+          "bGyroscopicTorqueEnabled": false,
+          "bAutoWeld": true,
+          "bStartAwake": true,
+          "bGenerateWakeEvents": false,
+          "bUpdateMassWhenScaleChanges": true
+        },
+        "bIsEditorOnly": false,
+        "relativeLocation": {
+          "x": 10150,
+          "y": -3400,
+          "z": 2605
+        },
+        "relativeScale3D": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "native_collision": {
+        "bNoCollision": true,
+        "bNoWeaponCollision": false,
+        "bNoRangedWeaponCollision": false,
+        "bNoProjectileCollision": false
+      }
+    }
+  ],
+  "controller": {
+    "actor": {
+      "guid": "4EAFF009-4139-85B8-AF6A-719291DCD805",
+      "nativeClass": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "class": {
+        "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+      },
+      "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1480366702",
+      "label": "prompt_lab_blaster_controller",
+      "bounds": {
+        "min": {
+          "x": 7573.331470489502,
+          "y": -2558.2804946899414,
+          "z": 2500
+        },
+        "max": {
+          "x": 7826.720355987549,
+          "y": -2441.3575592041016,
+          "z": 2658.1131439208984
+        },
+        "isValid": true
+      },
+      "runtimeGrid": "None",
+      "bIsSpatiallyLoaded": false,
+      "bActorIsEditorOnly": false,
+      "actorPackage": "None",
+      "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702",
+      "folderPath": "None",
+      "dataLayerAssets": []
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\r\\n\\t\\\"navigation_journal\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5EE0003_1737524934.fn_shoreline_island_academy_journal_0\\\"\\r\\n\\t},\\r\\n\\t\\\"configured\\\": true,\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80003_1773009032.byte_island_game_manager_0\\\"\\r\\n\\t},\\r\\n\\t\\\"entry_zone\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x05240ED7_entry_zone\\\"\\r\\n\\t},\\r\\n\\t\\\"replay\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x7C805D21_replay\\\"\\r\\n\\t},\\r\\n\\t\\\"board\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x7F2172B4_board\\\"\\r\\n\\t},\\r\\n\\t\\\"feedback\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80003_1773009032.byte_island_game_manager_0.__verse_0x65FCABD4_pix_feedback\\\"\\r\\n\\t},\\r\\n\\t\\\"data_energy\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1779919723.fn_shoreline_island_data_energy_0\\\"\\r\\n\\t},\\r\\n\\t\\\"targets\\\": [\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528133705.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528359707.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528582709.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1528830711.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529077713.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529318715.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529545717.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t},\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1529781719.fn_shoreline_island_data_target_0\\\"\\r\\n\\t\\t}\\r\\n\\t],\\r\\n\\t\\\"blue\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xFD5A4A97_blue\\\"\\r\\n\\t},\\r\\n\\t\\\"red\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x8F17EB9F_red\\\"\\r\\n\\t},\\r\\n\\t\\\"green\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x8E6E506A_green\\\"\\r\\n\\t},\\r\\n\\t\\\"small_blue\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x13A106C8_small_blue\\\"\\r\\n\\t},\\r\\n\\t\\\"large_blue\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xFCE9407C_large_blue\\\"\\r\\n\\t},\\r\\n\\t\\\"pix\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x7874B03E_pix\\\"\\r\\n\\t},\\r\\n\\t\\\"reactor\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xF1D5F646_reactor\\\"\\r\\n\\t},\\r\\n\\t\\\"prompt_module\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xE7EA8987_prompt_module\\\"\\r\\n\\t},\\r\\n\\t\\\"door\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x2CA3F093_door\\\"\\r\\n\\t},\\r\\n\\t\\\"delivery_beam\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xDCF2FF56_delivery_beam\\\"\\r\\n\\t},\\r\\n\\t\\\"spectacle\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xC7044D89_spectacle\\\"\\r\\n\\t},\\r\\n\\t\\\"reactor_energy\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xC0BF1B14_reactor_energy\\\"\\r\\n\\t},\\r\\n\\t\\\"module_energy\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x68495DC5_module_energy\\\"\\r\\n\\t},\\r\\n\\t\\\"light_a\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x025D28F7_light_a\\\"\\r\\n\\t},\\r\\n\\t\\\"light_b\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xECF29DE5_light_b\\\"\\r\\n\\t},\\r\\n\\t\\\"light_c\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x8995215D_light_c\\\"\\r\\n\\t},\\r\\n\\t\\\"light_d\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x30ADF6C0_light_d\\\"\\r\\n\\t},\\r\\n\\t\\\"cable_a\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x0C478544_cable_a\\\"\\r\\n\\t},\\r\\n\\t\\\"cable_b\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0xE2E83056_cable_b\\\"\\r\\n\\t},\\r\\n\\t\\\"cable_c\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x878F8CEE_cable_c\\\"\\r\\n\\t},\\r\\n\\t\\\"cable_d\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x3EB75B73_cable_d\\\"\\r\\n\\t},\\r\\n\\t\\\"return_ride\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x98B4403B_return_ride\\\"\\r\\n\\t},\\r\\n\\t\\\"success_sound\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1480366702.fn_shoreline_island_prompt_blaster_0.__verse_0x067F5482_success_sound\\\"\\r\\n\\t}\\r\\n}\"}"
+        }
+      ]
+    }
+  },
+  "trigger_components": {
+    "StaticMeshComponent0": {
+      "staticMesh": {
+        "refPath": "/Game/Tools/Turntable/Mesh/Plane1x1NoCollision.Plane1x1NoCollision"
+      },
+      "bodyInstance": {
+        "positionSolverIterationCount": 8,
+        "velocitySolverIterationCount": 2,
+        "projectionSolverIterationCount": 1,
+        "objectType": "ECC_WorldStatic",
+        "collisionEnabled": "QueryAndPhysics",
+        "sleepFamily": "Normal",
+        "dOFMode": "Default",
+        "bUseCCD": false,
+        "bUseMACD": false,
+        "bAllowPartialIslandSleep": true,
+        "bIgnoreAnalyticCollisions": false,
+        "bNotifyRigidBodyCollision": false,
+        "bSmoothEdgeCollisions": false,
+        "bLockTranslation": true,
+        "bLockRotation": true,
+        "bLockXTranslation": false,
+        "bLockYTranslation": false,
+        "bLockZTranslation": false,
+        "bLockXRotation": false,
+        "bLockYRotation": false,
+        "bLockZRotation": false,
+        "bOverrideMaxAngularVelocity": false,
+        "bOverrideMaxDepenetrationVelocity": false,
+        "bOverrideWalkableSlopeOnInstance": false,
+        "bOverrideIterationCounts": false,
+        "bInterpolateWhenSubStepping": true,
+        "bInertiaConditioning": true,
+        "bOneWayInteraction": false,
+        "bOverrideSolverAsyncDeltaTime": false,
+        "solverAsyncDeltaTime": 0.01666666753590107,
+        "collisionProfileName": "FortBuildingMeshPhysics",
+        "collisionResponses": {
+          "responseArray": [
+            {
+              "channel": "FCC_Trace_Interaction",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_WeakSpot",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Trace_WeaponCapsule",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_PawnAI",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_WeaponMulti",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_Weapon",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_Projectile",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_ProjectileIgnoreAI",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_World",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_ProjectileMesh",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Trace_Audio",
+              "response": "ECR_Block"
+            }
+          ]
+        },
+        "maxDepenetrationVelocity": 0,
+        "massInKgOverride": 100,
+        "linearDamping": 0.009999999776482582,
+        "angularDamping": 0,
+        "customDOFPlaneNormal": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "cOMNudge": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "massScale": 1,
+        "gravityGroupIndex": 0,
+        "inertiaTensorScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "walkableSlopeOverride": {
+          "walkableSlopeBehavior": "WalkableSlope_Default",
+          "walkableSlopeAngle": 0
+        },
+        "physMaterialOverride": null,
+        "maxAngularVelocity": 3599.999755859375,
+        "customSleepThresholdMultiplier": 1,
+        "stabilizationThresholdMultiplier": 1,
+        "physicsBlendWeight": 0,
+        "bSimulatePhysics": false,
+        "bOverrideMass": false,
+        "bEnableGravity": true,
+        "bUpdateKinematicFromSimulation": false,
+        "bGyroscopicTorqueEnabled": false,
+        "bAutoWeld": true,
+        "bStartAwake": true,
+        "bGenerateWakeEvents": false,
+        "bUpdateMassWhenScaleChanges": true
+      },
+      "bIsEditorOnly": false,
+      "relativeLocation": {
+        "x": 9000,
+        "y": -3300,
+        "z": 2630
+      },
+      "relativeRotation": {
+        "pitch": 90,
+        "yaw": 0,
+        "roll": 0
+      },
+      "relativeScale3D": {
+        "x": 3.5,
+        "y": 3.5,
+        "z": 2
+      }
+    },
+    "Mesh": {
+      "staticMesh": {
+        "refPath": "/Game/Creative/Devices/Trigger/Mesh/SM_CreativeTrigger.SM_CreativeTrigger"
+      },
+      "bodyInstance": {
+        "positionSolverIterationCount": 8,
+        "velocitySolverIterationCount": 2,
+        "projectionSolverIterationCount": 1,
+        "objectType": "ECC_WorldDynamic",
+        "collisionEnabled": "QueryOnly",
+        "sleepFamily": "Normal",
+        "dOFMode": "Default",
+        "bUseCCD": false,
+        "bUseMACD": false,
+        "bAllowPartialIslandSleep": true,
+        "bIgnoreAnalyticCollisions": false,
+        "bNotifyRigidBodyCollision": false,
+        "bSmoothEdgeCollisions": false,
+        "bLockTranslation": true,
+        "bLockRotation": true,
+        "bLockXTranslation": false,
+        "bLockYTranslation": false,
+        "bLockZTranslation": false,
+        "bLockXRotation": false,
+        "bLockYRotation": false,
+        "bLockZRotation": false,
+        "bOverrideMaxAngularVelocity": false,
+        "bOverrideMaxDepenetrationVelocity": false,
+        "bOverrideWalkableSlopeOnInstance": false,
+        "bOverrideIterationCounts": false,
+        "bInterpolateWhenSubStepping": true,
+        "bInertiaConditioning": true,
+        "bOneWayInteraction": false,
+        "bOverrideSolverAsyncDeltaTime": false,
+        "solverAsyncDeltaTime": 0.01666666753590107,
+        "collisionProfileName": "Custom",
+        "collisionResponses": {
+          "responseArray": [
+            {
+              "channel": "FCC_Trace_Interaction",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_WeaponCapsule",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_PawnAI",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_WeaponMulti",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_Weapon",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_Projectile",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_ProjectileIgnoreAI",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Object_ProjectileMesh",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "response": "ECR_Block"
+            },
+            {
+              "channel": "FCC_Trace_Audio",
+              "response": "ECR_Block"
+            }
+          ]
+        },
+        "maxDepenetrationVelocity": 0,
+        "massInKgOverride": 100,
+        "linearDamping": 0.009999999776482582,
+        "angularDamping": 0,
+        "customDOFPlaneNormal": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "cOMNudge": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "massScale": 1,
+        "gravityGroupIndex": 0,
+        "inertiaTensorScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "walkableSlopeOverride": {
+          "walkableSlopeBehavior": "WalkableSlope_Default",
+          "walkableSlopeAngle": 0
+        },
+        "physMaterialOverride": null,
+        "maxAngularVelocity": 3599.999755859375,
+        "customSleepThresholdMultiplier": 1,
+        "stabilizationThresholdMultiplier": 1,
+        "physicsBlendWeight": 0,
+        "bSimulatePhysics": false,
+        "bOverrideMass": false,
+        "bEnableGravity": true,
+        "bUpdateKinematicFromSimulation": false,
+        "bGyroscopicTorqueEnabled": false,
+        "bAutoWeld": true,
+        "bStartAwake": true,
+        "bGenerateWakeEvents": false,
+        "bUpdateMassWhenScaleChanges": true
+      },
+      "bIsEditorOnly": false,
+      "relativeLocation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "relativeRotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "relativeScale3D": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "StepBox": {
+      "bodyInstance": {
+        "positionSolverIterationCount": 8,
+        "velocitySolverIterationCount": 2,
+        "projectionSolverIterationCount": 1,
+        "objectType": "ECC_WorldDynamic",
+        "collisionEnabled": "QueryOnly",
+        "sleepFamily": "Normal",
+        "dOFMode": "Default",
+        "bUseCCD": false,
+        "bUseMACD": false,
+        "bAllowPartialIslandSleep": true,
+        "bIgnoreAnalyticCollisions": false,
+        "bNotifyRigidBodyCollision": false,
+        "bSmoothEdgeCollisions": false,
+        "bLockTranslation": true,
+        "bLockRotation": true,
+        "bLockXTranslation": false,
+        "bLockYTranslation": false,
+        "bLockZTranslation": false,
+        "bLockXRotation": false,
+        "bLockYRotation": false,
+        "bLockZRotation": false,
+        "bOverrideMaxAngularVelocity": false,
+        "bOverrideMaxDepenetrationVelocity": false,
+        "bOverrideWalkableSlopeOnInstance": false,
+        "bOverrideIterationCounts": false,
+        "bInterpolateWhenSubStepping": true,
+        "bInertiaConditioning": true,
+        "bOneWayInteraction": false,
+        "bOverrideSolverAsyncDeltaTime": false,
+        "solverAsyncDeltaTime": 0.01666666753590107,
+        "collisionProfileName": "Custom",
+        "collisionResponses": {
+          "responseArray": [
+            {
+              "channel": "Pawn",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "Camera",
+              "response": "ECR_Ignore"
+            },
+            {
+              "channel": "Vehicle",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Object_PawnAI",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "WorldStatic",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "WorldDynamic",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "Visibility",
+              "response": "ECR_Ignore"
+            },
+            {
+              "channel": "PhysicsBody",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "Destructible",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Object_Projectile",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Object_ProjectileIgnoreAI",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Object_ProjectileMesh",
+              "response": "ECR_Overlap"
+            },
+            {
+              "channel": "FCC_Trace_WeaponWorldMulti",
+              "response": "ECR_Ignore"
+            }
+          ]
+        },
+        "maxDepenetrationVelocity": 0,
+        "massInKgOverride": 100,
+        "linearDamping": 0.009999999776482582,
+        "angularDamping": 0,
+        "customDOFPlaneNormal": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "cOMNudge": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "massScale": 1,
+        "gravityGroupIndex": 0,
+        "inertiaTensorScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "walkableSlopeOverride": {
+          "walkableSlopeBehavior": "WalkableSlope_Default",
+          "walkableSlopeAngle": 0
+        },
+        "physMaterialOverride": null,
+        "maxAngularVelocity": 3600,
+        "customSleepThresholdMultiplier": 1,
+        "stabilizationThresholdMultiplier": 1,
+        "physicsBlendWeight": 0,
+        "bSimulatePhysics": false,
+        "bOverrideMass": false,
+        "bEnableGravity": true,
+        "bUpdateKinematicFromSimulation": false,
+        "bGyroscopicTorqueEnabled": false,
+        "bAutoWeld": true,
+        "bStartAwake": true,
+        "bGenerateWakeEvents": false,
+        "bUpdateMassWhenScaleChanges": true
+      },
+      "bIsEditorOnly": false,
+      "relativeLocation": {
+        "x": 0,
+        "y": 0,
+        "z": 32
+      },
+      "relativeRotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "relativeScale3D": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "boxExtent": {
+        "x": 64,
+        "y": 64,
+        "z": 15
+      }
+    }
+  },
+  "ring_component": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Engine/BasicShapes/Plane.Plane\\\"},\\\"bodyInstance\\\":{\\\"positionSolverIterationCount\\\":8,\\\"velocitySolverIterationCount\\\":2,\\\"projectionSolverIterationCount\\\":1,\\\"objectType\\\":\\\"ECC_WorldStatic\\\",\\\"collisionEnabled\\\":\\\"QueryOnly\\\",\\\"sleepFamily\\\":\\\"Normal\\\",\\\"dOFMode\\\":\\\"Default\\\",\\\"bUseCCD\\\":false,\\\"bUseMACD\\\":false,\\\"bAllowPartialIslandSleep\\\":true,\\\"bIgnoreAnalyticCollisions\\\":false,\\\"bNotifyRigidBodyCollision\\\":false,\\\"bSmoothEdgeCollisions\\\":false,\\\"bLockTranslation\\\":true,\\\"bLockRotation\\\":true,\\\"bLockXTranslation\\\":false,\\\"bLockYTranslation\\\":false,\\\"bLockZTranslation\\\":false,\\\"bLockXRotation\\\":false,\\\"bLockYRotation\\\":false,\\\"bLockZRotation\\\":false,\\\"bOverrideMaxAngularVelocity\\\":false,\\\"bOverrideMaxDepenetrationVelocity\\\":false,\\\"bOverrideWalkableSlopeOnInstance\\\":false,\\\"bOverrideIterationCounts\\\":false,\\\"bInterpolateWhenSubStepping\\\":true,\\\"bInertiaConditioning\\\":true,\\\"bOneWayInteraction\\\":false,\\\"bOverrideSolverAsyncDeltaTime\\\":false,\\\"solverAsyncDeltaTime\\\":0.01666666753590107,\\\"collisionProfileName\\\":\\\"Custom\\\",\\\"collisionResponses\\\":{\\\"responseArray\\\":[{\\\"channel\\\":\\\"WorldStatic\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"WorldDynamic\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Pawn\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Visibility\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Camera\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"PhysicsBody\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Vehicle\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Destructible\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel2\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel3\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel4\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel5\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel6\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"FCC_Trace_WeaponWorldMulti\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"FCC_Object_NoGhost\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"FCC_Object_Water\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel20\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel21\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel22\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel23\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel24\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel25\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel26\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel27\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel28\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel29\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel30\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel31\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel32\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel33\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel34\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel35\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel36\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel37\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel38\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel39\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel40\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel41\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel42\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel43\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel44\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel45\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel46\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel47\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel48\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel49\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel50\\\",\\\"response\\\":\\\"ECR_Ignore\\\"}]},\\\"maxDepenetrationVelocity\\\":0,\\\"massInKgOverride\\\":100,\\\"linearDamping\\\":0.0099999997764825821,\\\"angularDamping\\\":0,\\\"customDOFPlaneNormal\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"cOMNudge\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"massScale\\\":1,\\\"gravityGroupIndex\\\":0,\\\"inertiaTensorScale\\\":{\\\"x\\\":1,\\\"y\\\":1,\\\"z\\\":1},\\\"walkableSlopeOverride\\\":{\\\"walkableSlopeBehavior\\\":\\\"WalkableSlope_Default\\\",\\\"walkableSlopeAngle\\\":0},\\\"physMaterialOverride\\\":null,\\\"maxAngularVelocity\\\":3599.999755859375,\\\"customSleepThresholdMultiplier\\\":1,\\\"stabilizationThresholdMultiplier\\\":1,\\\"physicsBlendWeight\\\":0,\\\"bSimulatePhysics\\\":false,\\\"bOverrideMass\\\":false,\\\"bEnableGravity\\\":true,\\\"bUpdateKinematicFromSimulation\\\":false,\\\"bGyroscopicTorqueEnabled\\\":false,\\\"bAutoWeld\\\":true,\\\"bStartAwake\\\":true,\\\"bGenerateWakeEvents\\\":false,\\\"bUpdateMassWhenScaleChanges\\\":true}}\"}"
+      }
+    ]
+  },
+  "delta": [
+    {
+      "role": "blue",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1614380772"
+      },
+      "before": {
+        "location": {
+          "x": 9350,
+          "y": -3300,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9000,
+          "y": -3300,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      }
+    },
+    {
+      "role": "red",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C70403_1653808173"
+      },
+      "before": {
+        "location": {
+          "x": 9350,
+          "y": -4500,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9000,
+          "y": -4500,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      }
+    },
+    {
+      "role": "green",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B59C0503_1396988571"
+      },
+      "before": {
+        "location": {
+          "x": 9350,
+          "y": -3900,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9000,
+          "y": -3900,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      }
+    },
+    {
+      "role": "small_blue",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1639151778"
+      },
+      "before": {
+        "location": {
+          "x": 10100,
+          "y": -4200,
+          "z": 2555
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9800,
+          "y": -5000,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      }
+    },
+    {
+      "role": "large_blue",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5C50403_1615583773"
+      },
+      "before": {
+        "location": {
+          "x": 10150,
+          "y": -3400,
+          "z": 2605
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9800,
+          "y": -3400,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
+        }
+      }
+    },
+    {
+      "role": "small_blue_hit_surface",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Trigger_V2_C_UAID_E89C2592D1B5860503_1528945712"
+      },
+      "before": {
+        "location": {
+          "x": 9800,
+          "y": -4200,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9800,
+          "y": -5000,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 2
+        }
+      }
+    },
+    {
+      "role": "small_blue_ring_mesh",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5870503_1577406909"
+      },
+      "before": {
+        "location": {
+          "x": 9790,
+          "y": -4200,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9790,
+          "y": -5000,
+          "z": 2630
+        },
+        "rotation": {
+          "pitch": 90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.8,
+          "y": 2.8,
+          "z": 1
+        }
+      }
+    },
+    {
+      "role": "small_blue_label_board",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5870503_1717116935"
+      },
+      "before": {
+        "location": {
+          "x": 9780,
+          "y": -4200,
+          "z": 2830
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": 9780,
+          "y": -5000,
+          "z": 2830
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    }
+  ],
+  "session_state": "Unconnected"
+}

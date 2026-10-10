@@ -1,0 +1,104 @@
+{
+  "observed": "2026-10-10 Europe/Kyiv",
+  "controllerActor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392",
+  "settings": {
+    "configured": true,
+    "marker": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xC65ABD53_marker"
+    },
+    "goal_marker": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0x8F5954A0_goal_marker"
+    },
+    "goal_label": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0x9FC98A50_goal_label"
+    },
+    "stages": [
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xA790F3F7_stages___verse_0xA790F3F7_stages"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xA790F3F7_stages_1___verse_0xA790F3F7_stages"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xA790F3F7_stages_2___verse_0xA790F3F7_stages"
+      }
+    ],
+    "track_origin": {
+      "x": -3600,
+      "y": -6000,
+      "z": 2700
+    },
+    "tile_spacing": 200,
+    "targets": [
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755959393.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1756731396.fn_shoreline_island_data_target_0"
+      },
+      {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1756918399.fn_shoreline_island_data_target_0"
+      }
+    ],
+    "progress": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5030103_1792824005.fn_shoreline_island_debug_progress_0"
+    },
+    "replay_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xAC48FAD2_replay_button"
+    },
+    "return_button": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0xBCDCE77B_return_button"
+    },
+    "board": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5C80603_1755479392.fn_shoreline_island_debug_station_0.__verse_0x7F2172B4_board"
+    }
+  },
+  "marker": {
+    "savedActor": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.BuildingProp_UAID_E89C2592D1B5030103_1836922034"
+    }
+  },
+  "markerTransform": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":{\"location\":{\"x\":-3600,\"y\":-6000,\"z\":2700},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":-0},\"scale\":{\"x\":0.80000000000000004,\"y\":0.69999999999999996,\"z\":0.80000000000000004}}}"
+      }
+    ]
+  },
+  "stageReadbackLimitation": "ObjectTools.list_properties exposes start_tile/goal_tile/commands/editable_slot; get_properties rejects these friendly fields. DeviceGet nested path returns empty. Preserve all three parent stage refs. Inner values are source/031 contract, NOT newly measured values.",
+  "sourceStages": [
+    {
+      "start": 0,
+      "goal": 3,
+      "commands": [
+        2,
+        0,
+        2
+      ],
+      "slot": 1
+    },
+    {
+      "start": 2,
+      "goal": 1,
+      "commands": [
+        2
+      ],
+      "slot": 0
+    },
+    {
+      "start": 1,
+      "goal": 2,
+      "commands": [
+        2,
+        2
+      ],
+      "slot": 1
+    }
+  ],
+  "geometry": {
+    "spacing_cm": 200,
+    "tolerance_cm": 5,
+    "reason": "5cm is2.5% of measured200cm spacing, well below100cm nearest-tile midpoint; checks full3D destination."
+  }
+}

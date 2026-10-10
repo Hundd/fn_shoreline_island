@@ -1,0 +1,571 @@
+version: 1
+map_id: prompt_lab_clear_start
+spec_digest: 8dbfb73ca3a4bc80299aa16bb0260bcb310211021ace67aabd661039ce49a7ba
+patterns_digest: 18ddda2fcef5edbb7f1d19fbe85cbb29a1821b863bf5a8cdf1a23218d5d8d981
+status: draft_requires_explicit_human_approval
+executable: false
+blockers:
+- 'producer_scope_revision: Owner questioned excessive redo; independent Producer
+  withdrew this row redesign from approval review. Diagnose runtime failures and replace
+  with a focused repair preserving unaffected layout, mission and timings before approval
+  or implementation.'
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: prompt_lab_clear_start
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 6000
+  - -8500
+  - 2410
+  size_cm:
+  - 1400
+  - 6200
+  - 1500
+  parameters:
+    width_m: 3
+    access: existing west ramp
+  markers:
+  - id: arrival_point
+    kind: spawn
+    zone: arrival
+    label: Arrival from hub (no new spawn pad)
+    position:
+    - 5
+    - 30
+    - 0
+    source: PROPOSED grounded external hub/west-ramp arrival annotation; no spawn
+      pad.
+  - id: blaster_inventory
+    kind: weapon
+    zone: arrival
+    label: Data Blaster retained from hub
+    position:
+    - 6
+    - 33
+    - 0
+    source: Conceptual inventory cue; fn_shoreline_island_data_blaster.verse; not
+      a placed weapon
+  - id: walk_return
+    kind: exit
+    zone: arrival
+    label: Walk back west / always open
+    position:
+    - 0
+    - 30
+    - 0
+    source: PROPOSED always-open west walking exit annotation; preserve existing ramp,
+      retest reverse route.
+  - id: start_control
+    kind: checkpoint
+    zone: arrival
+    label: Start / Restart / Play again
+    position:
+    - 12
+    - 30
+    - 0.9
+    source: PROPOSED relocation of existing prompt_lab_replay_button; no additional
+      controller.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: knowledge
+  pattern: knowledge_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 7400
+  - -6000
+  - 2410
+  size_cm:
+  - 800
+  - 1200
+  - 1500
+  parameters:
+    lesson: Useful details help Pix choose the right core and its destination.
+    duration_seconds: 4
+    hud_copy: true
+  markers:
+  - id: firing_area
+    kind: checkpoint
+    zone: knowledge
+    label: 'Firing area: X14..20, Y27..33; face east'
+    position:
+    - 17
+    - 30
+    - 0
+    source: PROPOSED noncolliding outline; center plus four corners are sightline
+      acceptance points.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: arena
+  pattern: target_sequence
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 7400
+  - -8500
+  - 2410
+  size_cm:
+  - 5200
+  - 6200
+  - 1500
+  parameters:
+    target_count: 9
+    sequence:
+    - 0
+    - 3
+    - 5
+    - 5
+    - 6
+    shared_state: true
+  markers:
+  - id: lesson_board
+    kind: knowledge
+    zone: arena
+    label: 'Pix hints: existing board + HUD'
+    position:
+    - 52
+    - 30
+    - 6.5
+    source: PROPOSED existing board anchor, west-facing yaw180, persistent request
+      and step; no new board controller.
+  - id: blue
+    kind: target
+    zone: arena
+    label: BLUE
+    target_id: 0
+    position:
+    - 50
+    - 12
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: red
+    kind: target
+    zone: arena
+    label: RED
+    target_id: 1
+    position:
+    - 50
+    - 24
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: green
+    kind: target
+    zone: arena
+    label: GREEN
+    target_id: 2
+    position:
+    - 50
+    - 36
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: large_detail
+    kind: target
+    zone: arena
+    label: LARGE detail
+    target_id: 3
+    position:
+    - 50
+    - 54
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: small_blue
+    kind: target
+    zone: arena
+    label: SMALL BLUE
+    target_id: 4
+    position:
+    - 50
+    - 42
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: large_blue
+    kind: target
+    zone: arena
+    label: LARGE BLUE / moving acquisition
+    target_id: 5
+    position:
+    - 50
+    - 48
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: reactor
+    kind: target
+    zone: arena
+    label: REACTOR
+    target_id: 6
+    position:
+    - 50
+    - 6
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: scanner
+    kind: target
+    zone: arena
+    label: SCANNER
+    target_id: 7
+    position:
+    - 50
+    - 18
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: storage
+    kind: target
+    zone: arena
+    label: STORAGE
+    target_id: 8
+    position:
+    - 50
+    - 30
+    - 2.2
+    source: PROPOSED row anchor; current measured anchor in evidence/live-survey.json.
+      Full owned assembly reconciliation and cooked sightlines required.
+  - id: return_exit
+    kind: exit
+    zone: arena
+    label: Optional rail / boarding unverified
+    position:
+    - 63
+    - 20
+    - 3.4
+    source: 'Historical measured rail anchor: specs/026-prompt-lab-aim-refine-deliver/evidence/read-only-inspection.json;
+      preserve unchanged; actual boarding remains unverified.'
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: reward
+  pattern: reward_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 7400
+  - -5800
+  - 2410
+  size_cm:
+  - 800
+  - 600
+  - 1500
+  parameters:
+    badge: Prompt Badge
+    return_mode: walk west any time; existing rail optional only
+  markers:
+  - id: module
+    kind: reward
+    zone: reward
+    label: Automatic badge and visible delivery; no required reward walk
+    position:
+    - 21
+    - 32
+    - 0
+    source: Information overlay at firing area; preserve actual distant module at
+      local[64,23,2.7]. No reward prop placement here.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: entry
+    class: mutator_zone_device
+    count: 1
+    source: specs/024-data-blaster-redesign/evidence/prompt-blaster-actors.json#entry
+    settings:
+      action: reuse
+      purpose: Whole-platform grounded occupancy; automatic enrollment and departure
+        lifecycle
+      tiles:
+      - 13
+      - 13
+      - 3
+      native_actor_world_cm:
+      - 9300
+      - -5400
+      - 2360
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controller
+    class: fn_shoreline_island_prompt_blaster
+    count: 1
+    source: Content/fn_shoreline_island_prompt_blaster.verse
+    settings:
+      action: reuse
+      configured: true
+      targets:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      progress: progress
+      data_energy: energy
+      entry_zone: entry
+      sequence_policy: Retain fixed [0,3,5,5,6]; scoped readiness, lifecycle and feedback
+        changes in existing controller
+      hints: Persistent evolving request and stage-specific mismatch explanations
+      lifecycle: Reset only after actual full-platform last departure; restart cancels
+        work and reenrolls current occupants
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: targets
+    class: fn_shoreline_island_data_target
+    count: 9
+    source: specs/024-data-blaster-redesign/evidence/handoff-binding-readback-2026-09-27.json#targets
+    settings:
+      action: reuse; one visible row; recenter core visual bounds; move machinery
+        behind row
+      reward_value: 1
+      objective_target_ids:
+      - 3
+      proposed_anchor_height_m: 2.2
+      required_hit_coverage: Center and outer third from center/four corners standing/crouched,
+        plus full moving sweep
+      resolved_delta: plan.md coordinate delta; native wrappers resolved in implementation
+        preflight
+      machinery_height_policy: Retain measured floor Z; machine centers X53 at matching
+        target Y
+      shared_audio_policy: preserve shared hit/retry pair at current transforms
+      moving_target_id: 5
+      moving_offset_y_m: 2.5
+      moving_leg_seconds: 4
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: hit_surfaces
+    class: trigger_device
+    count: 9
+    source: specs/024-data-blaster-redesign/evidence/prompt-blaster-actors.json#surfaces
+    settings:
+      action: reuse; relocate with target assemblies
+      interaction: damage_only
+      attribution: actual_shooting_agent
+      inactive_behavior: preserve runtime parking 100m below home
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: energy
+    class: fn_shoreline_island_data_energy
+    count: 1
+    source: Content/fn_shoreline_island_data_energy.verse
+    settings:
+      action: reuse
+      replay_retains_data: true
+      round_clears_data: true
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: blaster
+    class: fn_shoreline_island_data_blaster
+    count: 1
+    source: Content/fn_shoreline_island_data_blaster.verse
+    settings:
+      action: reuse
+      scope: shared_hub
+      item: existing_allowed_rare_pulse_rifle
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: board
+    class: billboard_device
+    count: 1
+    source: specs/024-data-blaster-redesign/evidence/handoff-binding-readback-2026-09-27.json#controller.board
+    settings:
+      action: reuse; reposition existing board
+      knowledge_seconds: 4
+      proposed_local_anchor:
+      - 52
+      - 30
+      - 6.5
+      current_copy: Evolving request, next action and step; stage-specific useful-detail
+        feedback
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: feedback
+    class: hud_message_device
+    count: 1
+    source: specs/024-data-blaster-redesign/evidence/handoff-binding-readback-2026-09-27.json#controller.feedback
+    settings:
+      action: reuse
+      scope: participants
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: byte_island_game_manager
+    count: 1
+    source: Content/byte_island_game_manager.verse
+    settings:
+      action: reuse
+      badge: existing_prompt_badge_guard
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: replay
+    class: button_device
+    count: 1
+    source: specs/024-data-blaster-redesign/evidence/handoff-binding-readback-2026-09-27.json#controller.replay
+    settings:
+      action: reuse; move existing button to [12,30,0.9], yaw180, scale1, max radius2m
+      label: Start mission / Restart mission / Play again
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: return_rail
+    class: grind_rail_device
+    count: 1
+    source: specs/024-data-blaster-redesign/evidence/handoff-binding-readback-2026-09-27.json#controller.return_ride
+    settings:
+      action: preserve unchanged; optional return only; west walking exit is authoritative
+      enable_after: finale
+      acceptance: optional only; existing boarding/endpoint acceptance open
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: enter
+    zone: arrival
+    purpose: Enroll player with existing loadout
+    requires: []
+    active_targets: []
+    completion: Ready grounded entry or explicit Start enrolls; no invisible movement
+      requirement
+  - id: intro
+    zone: knowledge
+    purpose: One-second welcome, four-second lesson; persistent request stays readable
+    requires:
+    - enter
+    active_targets: []
+    completion: Choices activate by6s from ready entry
+  - id: color
+    zone: arena
+    purpose: Choose WHAT using color
+    requires:
+    - intro
+    active_targets:
+    - blue
+    - red
+    - green
+    success_target: blue
+    completion: BLUE hit advances; wrong hits retry
+  - id: detail
+    zone: arena
+    purpose: Resolve ambiguity by adding LARGE
+    requires:
+    - color
+    active_targets:
+    - large_detail
+    success_target: large_detail
+    completion: LARGE objective hit advances
+  - id: select_large
+    zone: arena
+    purpose: Apply the useful detail
+    requires:
+    - detail
+    active_targets:
+    - red
+    - small_blue
+    - large_blue
+    success_target: large_blue
+    completion: LARGE BLUE hit then two-second instruction handoff
+  - id: acquire
+    zone: arena
+    purpose: Acquire the slowly moving core
+    requires:
+    - select_large
+    active_targets:
+    - large_blue
+    success_target: large_blue
+    completion: Hit freezes both core and hit surface
+  - id: destination
+    zone: arena
+    purpose: Choose WHERE the core belongs
+    requires:
+    - acquire
+    active_targets:
+    - reactor
+    - scanner
+    - storage
+    success_target: reactor
+    completion: REACTOR hit starts existing delivery
+  - id: finale
+    zone: reward
+    purpose: Watch result and earn Prompt Badge
+    requires:
+    - destination
+    active_targets: []
+    completion: Automatic delivery, same Prompt Badge and3 DATA; completion explanation
+      and west return visible from firing area
+  connections:
+  - from: arrival
+    to: knowledge
+    mode: walk
+    width: 3
+    points:
+    - - 12
+      - 30
+      - 0
+    - - 17
+      - 30
+      - 0
+    gate: always
+  - from: knowledge
+    to: arena
+    mode: walk
+    width: 3
+    points:
+    - - 17
+      - 30
+      - 0
+    - - 18
+      - 30
+      - 0
+    gate: always
+  - from: arena
+    to: reward
+    mode: walk
+    width: 3
+    points:
+    - - 18
+      - 30
+      - 0
+    - - 17
+      - 30
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

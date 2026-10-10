@@ -56,11 +56,18 @@ Follow [docs/AI_MAP_WORKFLOW.md](docs/AI_MAP_WORKFLOW.md) for requests to build 
 
 Project-local roles use the existing skill mechanism. All agents should read the relevant file directly if their client does not auto-discover `.agents/skills/`:
 
-- Producer: `.agents/skills/uefn-producer/SKILL.md` (product direction and feature briefs upstream of planning)
+- Producer: `.agents/skills/uefn-producer/SKILL.md` (product direction and feature briefs upstream of planning; resolve the flagship model from `producer_model` in `.agents/workflow-models.yaml`, with explicit Codex model override and `fork_turns: "none"`)
 - Planner & Reviewer: `.agents/skills/uefn-map-planning/SKILL.md` (pattern-backed map spec, blockout review, and the human-approval gate)
 - Implementer: `.agents/skills/uefn-map-implementation/SKILL.md` (dispatch on a cost-controlled worker; resolve the model per host from `worker_model` in `.agents/workflow-models.yaml` — Codex CLI `gpt-6.1-sol` with `fork_turns: "none"`, Claude Code frontmatter `model:`, Cline inherits parent; no inherited frontier model or silent model fallback)
 - QA / Gameplay Verifier: `.agents/skills/uefn-gameplay-verifier/SKILL.md` (same host-resolved cost-controlled worker rule as Implementer; no inherited frontier model or silent model fallback)
 - Supervisor: `.agents/skills/uefn-supervisor/SKILL.md`
+- Learning Designer: `.agents/skills/uefn-learning-designer/SKILL.md`
+- Player Experience Reviewer: `.agents/skills/uefn-player-experience-reviewer/SKILL.md`
+- Technical Scout: `.agents/skills/uefn-technical-scout/SKILL.md`
+- Art Director: `.agents/skills/uefn-art-director/SKILL.md`
+- Playtest Analyst: `.agents/skills/uefn-playtest-analyst/SKILL.md`
+
+The five specialists read `.agents/specialist-workflow.md` and use `worker_model` in `.agents/workflow-models.yaml` for their host. Call them on demand with distinct report ownership; they provide advisory inputs and do not approve designs or edit gameplay.
 
 PCG domain skills extend these roles when procedural content is requested:
 

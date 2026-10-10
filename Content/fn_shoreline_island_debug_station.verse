@@ -81,6 +81,8 @@ fn_shoreline_island_debug_station := class(creative_device):
     var active_character:?fort_character = false
     var marker_home:transform = transform{}
     var goal_home:transform = transform{}
+    var before_verified:logic = false
+    var actual_verified:logic = false
     var before_tile:int = 0
     var actual_tile:int = 0
     var current_commands:[]int = array{}
@@ -196,10 +198,14 @@ fn_shoreline_island_debug_station := class(creative_device):
         current := active_player?
         is_active_player[current]
 
-    move_pix(tile:int):void =
-        var pose:transform = marker_home
-        set pose.Translation = track_origin + vector3{X := tile * tile_spacing}
-        if (marker.TeleportTo[pose]) {}
+    move_pix(tile:int):logic =
+        if (marker.IsValid[]):
+            var pose:transform = marker_home
+            set pose.Translation = track_origin + vector3{X := tile * tile_spacing}
+            if (marker.TeleportTo[pose]):
+                if (marker.IsValid[], Distance(marker.GetTransform().Translation, pose.Translation) <= 5.0):
+                    return true
+        return false
 
     move_goal(tile:int):void =
         var pose:transform = goal_home
@@ -233,7 +239,13 @@ fn_shoreline_island_debug_station := class(creative_device):
     show_result(status:string):void =
         if (stage := stages[phase]):
             program := program_text(current_commands, stage.editable_slot)
-            display(board, text("{phase}/3 FIXED | GOAL {stage.goal_tile}\nStart {stage.start_tile}: {program}\nBEFORE {before_tile} | NOW {actual_tile}\n{status}"))
+            var before_text:string = "--"
+            var actual_text:string = "--"
+            if (before_verified?):
+                set before_text = "{before_tile}"
+            if (actual_verified?):
+                set actual_text = "{actual_tile}"
+            display(board, text("{phase}/3 FIXED | GOAL {stage.goal_tile}\nStart {stage.start_tile}: {program}\nBEFORE {before_text} | NOW {actual_text}\n{status}"))
 
     reset_bay():void =
         set generation += 1
@@ -244,6 +256,8 @@ fn_shoreline_island_debug_station := class(creative_device):
         set phase = -1
         set busy = false
         set mistakes = 0
+        set before_verified = false
+        set actual_verified = false
         set before_tile = 0
         set actual_tile = 0
         set current_commands = array{}
@@ -292,12 +306,18 @@ fn_shoreline_island_debug_station := class(creative_device):
             return
         if (stage := stages[phase]):
             set current_commands = stage.commands
-            set before_tile = stage.start_tile
-            for (command : stage.commands):
-                set before_tile += fixtures.move_delta(command)
-            set actual_tile = stage.start_tile
+            set before_verified = false
+            set actual_verified = false
             move_goal(stage.goal_tile)
-            move_pix(actual_tile)
+            placed := move_pix(stage.start_tile)
+            if (not run_valid[token, expected_phase]):
+                return
+            if (placed?):
+                set actual_tile = stage.start_tile
+                set actual_verified = true
+            else:
+                recover_movement(token, expected_phase)
+                return
             show_result("WATCH PIX'S PLAN")
             Sleep(0.5)
             execute_plan(token, expected_phase, true)
@@ -327,8 +347,16 @@ fn_shoreline_island_debug_station := class(creative_device):
         if (not run_valid[token, expected_phase]):
             return
         if (stage := stages[phase]):
-            set actual_tile = stage.start_tile
-            move_pix(actual_tile)
+            set actual_verified = false
+            placed := move_pix(stage.start_tile)
+            if (not run_valid[token, expected_phase]):
+                return
+            if (placed?):
+                set actual_tile = stage.start_tile
+                set actual_verified = true
+            else:
+                recover_movement(token, expected_phase)
+                return
             for (step -> command : current_commands):
                 if (not run_valid[token, expected_phase]):
                     return
@@ -336,9 +364,21 @@ fn_shoreline_island_debug_station := class(creative_device):
                 Sleep(0.5)
                 if (not run_valid[token, expected_phase]):
                     return
-                set actual_tile += fixtures.move_delta(command)
-                move_pix(actual_tile)
+                candidate_tile := actual_tile + fixtures.move_delta(command)
+                moved := move_pix(candidate_tile)
+                if (not run_valid[token, expected_phase]):
+                    return
+                if (moved?):
+                    set actual_tile = candidate_tile
+                    set actual_verified = true
+                else:
+                    recover_movement(token, expected_phase)
+                    return
+            if (not run_valid[token, expected_phase]):
+                return
             if (demonstration?):
+                set before_tile = actual_tile
+                set before_verified = true
                 show_result("MISMATCH - SHOOT A CORRECTION")
             else if (actual_tile = stage.goal_tile):
                 if (current := active_player?, light := lights[phase]):
@@ -390,7 +430,21 @@ fn_shoreline_island_debug_station := class(creative_device):
             if (run_valid[token, expected_phase]):
                 await_quiet(token, expected_phase)
 
+    recover_movement(token:int, expected_phase:int)<suspends>:void =
+        if (not run_valid[token, expected_phase]):
+            return
+        set actual_verified = false
+        show_result("PIX COULDN'T MOVE - TRY AGAIN")
+        if (current := active_player?):
+            feedback.Show(current, text("Pix couldn't move. Try your correction again."), ?DisplayTime := 0.0)
+        Sleep(1.0)
+        if (not run_valid[token, expected_phase]):
+            return
+        await_quiet(token, expected_phase)
+
     await_quiet(token:int, expected_phase:int)<suspends>:void =
+        if (not run_valid[token, expected_phase]):
+            return
         set last_hit = GetSimulationElapsedTime()
         for (target : targets):
             target.activate()

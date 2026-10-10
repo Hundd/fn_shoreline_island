@@ -1,6 +1,9 @@
 using { /Fortnite.com/Devices }
 using { /Verse.org/Simulation }
 using { /Verse.org/Colors }
+using { /Verse.org/Input }
+using { /Verse.org/Input/UI }
+using { /Verse.org/Verse }
 using { /Fortnite.com/UI }
 using { /UnrealEngine.com/Temporary/UI }
 using { /UnrealEngine.com/Temporary/SpatialMath }
@@ -8,8 +11,13 @@ academy_journal_action := class:
     journal:fn_shoreline_island_academy_journal
     generation:int
     choice:int
+    expected_round:int
     on_click(click_message:widget_message):void =
-        journal.on_choice(click_message.Player, generation, choice)
+        spawn{journal.pressed_choice(click_message.Player, generation, expected_round, choice)}
+academy_journal_input := class:
+    var subscriptions:[]cancelable = array{}
+    var mapping_owned:logic = false
+
 academy_core_route_action := class:
     journal:fn_shoreline_island_academy_journal
     source_index:int
@@ -102,6 +110,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
     var navigation_ready:logic = false
     var panels:[player]?canvas = map{}
     var panel_generations:[player]int = map{}
+    var panel_inputs:[player]academy_journal_input = map{}
     var next_generation:int = 0
     var core_routes:[player]?canvas = map{}
     var core_route_generations:[player]int = map{}
@@ -260,6 +269,16 @@ fn_shoreline_island_academy_journal := class(creative_device):
                     return work_unavailable(zone)
             return work_pending(zone)
         return unavailable_text
+    pressed_choice(input_player:player, generation:int, expected_round:int, choice:int)<suspends>:void =
+        Sleep(0.06)
+        if (round_generation = expected_round, panels[input_player]?, panel_generations[input_player] = generation):
+            on_choice(input_player, generation, choice)
+
+    deferred_focus(input_player:player, generation:int, expected_round:int, control:widget)<suspends>:void =
+        Sleep(0.0)
+        if (round_generation = expected_round, panels[input_player]?, panel_generations[input_player] = generation, personal_ui := GetPlayerUI[input_player]):
+            personal_ui.SetFocus(control)
+
     on_choice(input_player:player, generation:int, choice:int):void =
         if (panels[input_player]?, panel_generations[input_player] = generation):
             if (choice = 0):
@@ -287,6 +306,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
             var panel_height:float = 420.0
             var body_top:float = -180.0
             var body_height:float = 290.0
+            resources := academy_journal_input{}
             page_button := button_regular{DefaultText := work_text}
             if (show_work?):
                 set page_text = work_page(work_row(input_player, 0), work_row(input_player, 1),
@@ -297,16 +317,19 @@ fn_shoreline_island_academy_journal := class(creative_device):
                 set body_top = -260.0
                 set body_height = 370.0
                 page_button.SetText(overview_text)
-                action := academy_journal_action{journal := Self, generation := generation, choice := 2}
-                page_button.OnClick().Subscribe(action.on_click)
+                set page_button.TriggeringInputAction = option{Back}
+                action := academy_journal_action{journal := Self, generation := generation, expected_round := round_generation, choice := 2}
+                set resources.subscriptions += array{page_button.OnClick().Subscribe(action.on_click)}
             else:
-                action := academy_journal_action{journal := Self, generation := generation, choice := 1}
-                page_button.OnClick().Subscribe(action.on_click)
+                action := academy_journal_action{journal := Self, generation := generation, expected_round := round_generation, choice := 1}
+                set resources.subscriptions += array{page_button.OnClick().Subscribe(action.on_click)}
             body := text_block{DefaultText := page_text,
                 DefaultTextColor := NamedColors.White, DefaultTextSize := 22.0}
             close_button := button_regular{DefaultText := close_text}
-            close_action := academy_journal_action{journal := Self, generation := generation, choice := 0}
-            close_button.OnClick().Subscribe(close_action.on_click)
+            close_action := academy_journal_action{journal := Self, generation := generation, expected_round := round_generation, choice := 0}
+            set resources.subscriptions += array{close_button.OnClick().Subscribe(close_action.on_click)}
+            if (not show_work?):
+                set close_button.TriggeringInputAction = option{Back}
             center := anchors{Minimum := vector2{X := 0.5, Y := 0.5}, Maximum := vector2{X := 0.5, Y := 0.5}}
             panel := canvas:
                 Slots := array:
@@ -330,8 +353,17 @@ fn_shoreline_island_academy_journal := class(creative_device):
                         SizeToContent := false
                         Offsets := margin{Left := -140.0, Top := 130.0, Right := 280.0, Bottom := 55.0}
                         Widget := close_button
-            if (set panels[input_player] = option{panel}):
+            if (set panels[input_player] = option{panel}, set panel_inputs[input_player] = resources):
+                if (input := GetPlayerInput[input_player]):
+                    input.AddInputMapping(MenuNavigationMapping)
+                    set resources.mapping_owned = true
+                personal_ui.SetFocus(close_button)
                 personal_ui.AddWidget(panel, player_ui_slot{InputMode := ui_input_mode.All})
+                spawn{deferred_focus(input_player, generation, round_generation, close_button)}
+            else:
+                for (subscription : resources.subscriptions):
+                    subscription.Cancel()
+                set resources.subscriptions = array{}
     close_core_restored(input_player:player):void =
         if (celebration := core_celebrations[input_player]?, personal_ui := GetPlayerUI[input_player]):
             personal_ui.RemoveWidget(celebration)
@@ -348,9 +380,19 @@ fn_shoreline_island_academy_journal := class(creative_device):
         return false
 
     close_panel(input_player:player):void =
+        set next_generation += 1
+        if (set panel_generations[input_player] = next_generation) {}
+        if (resources := panel_inputs[input_player]):
+            for (subscription : resources.subscriptions):
+                subscription.Cancel()
+            set resources.subscriptions = array{}
         if (panel := panels[input_player]?, personal_ui := GetPlayerUI[input_player]):
             personal_ui.RemoveWidget(panel)
         if (set panels[input_player] = false) {}
+        if (resources := panel_inputs[input_player]):
+            if (resources.mapping_owned?, input := GetPlayerInput[input_player]):
+                input.RemoveInputMapping(MenuNavigationMapping)
+            set resources.mapping_owned = false
     on_spawn(input_agent:agent):void =
         if (input_player := player[input_agent]):
             close_panel(input_player)
@@ -369,6 +411,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
         close_core_restored(input_player)
         var remaining_panels:[player]?canvas = map{}
         var remaining_generations:[player]int = map{}
+        var remaining_inputs:[player]academy_journal_input = map{}
         var remaining_routes:[player]?canvas = map{}
         var remaining_route_generations:[player]int = map{}
         var remaining_celebrations:[player]?canvas = map{}
@@ -387,6 +430,9 @@ fn_shoreline_island_academy_journal := class(creative_device):
             if (set remaining_celebration_generations[other] = generation) {}
         set panels = remaining_panels
         set panel_generations = remaining_generations
+        for (other -> resources : panel_inputs, other <> input_player):
+            if (set remaining_inputs[other] = resources) {}
+        set panel_inputs = remaining_inputs
         set core_routes = remaining_routes
         set core_route_generations = remaining_route_generations
         set core_celebrations = remaining_celebrations
@@ -405,6 +451,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
             close_core_restored(input_player)
         set panels = map{}
         set panel_generations = map{}
+        set panel_inputs = map{}
         set core_routes = map{}
         set core_route_generations = map{}
         set core_celebrations = map{}
@@ -419,6 +466,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
         array{garden_name, loop_name, signal_name, energy_name, debug_name, event_name, nursery_name, bot_name}
 
     navigation_count<localizes>(count:int):message = "PIX AI CORE: {count}/8 restored"
+    optional_prompt_arena_name<localizes>:message = "Optional Prompt Arena"
     navigation_step<localizes>(name:message, step:int, total:int, instruction:message):message = "{name} | Step {step}/{total}\n{instruction}"
     navigation_next<localizes>(name:message):message = "Next: {name}\nFollow its numbered map marker."
     navigation_handoff<localizes>(name:message, count:int, destination:message):message = "{name} restored - {count}/8\nNext: {destination}"
@@ -543,11 +591,14 @@ fn_shoreline_island_academy_journal := class(creative_device):
                         set pulse = -1
                     if (now < state.handoff_until):
                         state.action.SetText(state.handoff)
+                    else if (state.module_index >= 0, now - state.reported_at < 0.75, name := module_names()[state.module_index]):
+                        var activity_name:message = name
+                        if (state.source = 8, state.module_index = 0):
+                            set activity_name = optional_prompt_arena_name
+                        state.action.SetText(navigation_step(activity_name, state.step, state.total, state.instruction))
+                        set pulse = -1
                     else if (completed_modules(input_player) >= 8):
                         state.action.SetText(navigation_done)
-                    else if (state.module_index >= 0, now - state.reported_at < 0.75, name := module_names()[state.module_index]):
-                        state.action.SetText(navigation_step(name, state.step, state.total, state.instruction))
-                        set pulse = -1
                     else if (name := module_names()[pulse]):
                         if (not module_available(input_player, pulse)?):
                             state.action.SetText(unavailable_text)

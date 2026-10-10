@@ -1,0 +1,513 @@
+version: 1
+map:
+  id: prompt_answer_correspondence
+  title: Prompt Lab - coherent core answers
+  theme: ai_training
+  units: meters
+  origin_cm:
+  - 6000
+  - -8500
+  - 2410
+  size:
+  - 66
+  - 62
+  - 15
+  learning_objective: Choose WHAT, add WHICH ONE, then choose WHERE; useful details
+    make a prompt actionable.
+  source_feature: specs\051-prompt-answer-correspondence\spec.md
+  intent: propose_change
+  min_path_width: 3
+  position_tolerance: 0.25
+player_flow:
+- arrival
+- knowledge
+- arena
+- reward
+zones:
+- id: arrival
+  label: Approach / walk back
+  pattern: corridor
+  position:
+  - 0
+  - 30
+  - 0
+  size:
+  - 20
+  - 32
+  - 15
+  purpose: Preserve completed049 grounded-entry repair and existing west access.
+  parameters:
+    width_m: 3
+    access: existing west ramp
+  devices:
+  - entry
+  - blaster
+  overlap_with: []
+  completion: Existing entry volume enrolls the player.
+  reset: Current source removes participation on entry-volume exit; last participant
+    exit resets the room. Replay retains earned DATA and badge.
+- id: knowledge
+  label: Pix hints
+  pattern: knowledge_room
+  position:
+  - 20
+  - 34
+  - 0
+  size:
+  - 14
+  - 14
+  - 15
+  purpose: Read existing scripted Pix hints from the firing area; no walk to a board
+    is required.
+  parameters:
+    lesson: A prompt tells AI what you want. Useful details help it choose.
+    duration_seconds: 7
+    hud_copy: true
+  devices:
+  - board
+  - feedback
+  - controller
+  overlap_with:
+  - arena
+  completion: Seven-second knowledge phase completes.
+  reset: Replay replays the lesson and cancels stale delayed events.
+- id: arena
+  label: Aim / Refine / Deliver
+  pattern: target_sequence
+  position:
+  - 20
+  - 30
+  - 0
+  size:
+  - 35
+  - 32
+  - 15
+  purpose: Preserve five-shot lesson; center five noncolliding colored cores on damage
+    anchors and separate small-blue target4 toward -Y.
+  parameters:
+    target_count: 9
+    sequence:
+    - 0
+    - 3
+    - 5
+    - 5
+    - 6
+    shared_state: true
+  devices:
+  - controller
+  - targets
+  - hit_surfaces
+  - energy
+  - blaster
+  overlap_with:
+  - knowledge
+  completion: Five correct hits start the existing Pix delivery finale.
+  reset: Current source removes participation on entry-volume exit; last participant
+    exit resets the room. Replay retains earned DATA and badge.
+- id: reward
+  label: Finale
+  pattern: reward_room
+  position:
+  - 55
+  - 0
+  - 0
+  size:
+  - 11
+  - 62
+  - 15
+  purpose: Distant finale spectacle; reward is automatic without walking here. Existing
+    optional walk annotation is not a required reward route.
+  parameters:
+    badge: Prompt Badge
+    return_mode: walk back via west approach; existing rail is optional and unverified
+  devices:
+  - progress
+  - replay
+  - controller
+  - return_rail
+  overlap_with: []
+  completion: Finale completes and the existing badge guard awards eligible participants.
+  reset: Replay preserves badge and DATA, resets spectacle and disables the return
+    rail until completion.
+connections:
+- from: arrival
+  to: knowledge
+  mode: walk
+  width: 3
+  points:
+  - - 15
+    - 33
+    - 0
+  - - 20
+    - 40
+    - 0
+  - - 24
+    - 46
+    - 0
+  gate: always
+- from: knowledge
+  to: arena
+  mode: walk
+  width: 3
+  points:
+  - - 24
+    - 46
+    - 0
+  - - 24
+    - 47
+    - 0
+  gate: always
+- from: arena
+  to: reward
+  mode: walk
+  width: 3
+  points:
+  - - 24
+    - 47
+    - 0
+  - - 24
+    - 59
+    - 0
+  - - 55
+    - 59
+    - 0
+  gate: always
+markers:
+- id: arrival_point
+  kind: spawn
+  zone: arrival
+  label: Existing grounded entry (preserved)
+  position:
+  - 15
+  - 33
+  - 0
+  source: Feature049 completed repair; native current Z2360 unchanged. Ground-level
+    arrival annotation, not new geometry.
+- id: blaster_inventory
+  kind: weapon
+  zone: arrival
+  label: Data Blaster retained from hub
+  position:
+  - 12
+  - 37
+  - 0
+  source: Conceptual inventory cue; fn_shoreline_island_data_blaster.verse; not a
+    placed weapon
+- id: lesson_board
+  kind: knowledge
+  zone: knowledge
+  label: 'Pix hints: existing board + HUD'
+  position:
+  - 30
+  - 34
+  - 4
+  source: Existing feature026 saved board anchor; unchanged. Native readback and cooked
+    readability must be confirmed during diagnosis.
+- id: blue
+  kind: target
+  zone: arena
+  label: BLUE
+  target_id: 0
+  position:
+  - 30.0
+  - 52.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: red
+  kind: target
+  zone: arena
+  label: RED
+  target_id: 1
+  position:
+  - 30.0
+  - 40.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: green
+  kind: target
+  zone: arena
+  label: GREEN
+  target_id: 2
+  position:
+  - 30.0
+  - 46.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: large_detail
+  kind: target
+  zone: arena
+  label: LARGE detail
+  target_id: 3
+  position:
+  - 36.0
+  - 38.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: small_blue
+  kind: target
+  zone: arena
+  label: SMALL BLUE
+  target_id: 4
+  position:
+  - 38
+  - 35
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: large_blue
+  kind: target
+  zone: arena
+  label: LARGE BLUE / moving acquisition
+  target_id: 5
+  position:
+  - 38.0
+  - 51.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: reactor
+  kind: target
+  zone: arena
+  label: REACTOR
+  target_id: 6
+  position:
+  - 46.0
+  - 54.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: scanner
+  kind: target
+  zone: arena
+  label: SCANNER
+  target_id: 7
+  position:
+  - 46.0
+  - 48.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: storage
+  kind: target
+  zone: arena
+  label: STORAGE
+  target_id: 8
+  position:
+  - 46.0
+  - 42.0
+  - 2.2
+  source: Current measured target anchor in evidence/planning-inspection.json. Preserve
+    unless target4, whose Y-800cm delta is explicit.
+- id: module
+  kind: reward
+  zone: reward
+  label: Prompt Module / badge finale
+  position:
+  - 64
+  - 23
+  - 2.7
+  source: MEASURED unchanged module anchor in specs/026-prompt-lab-aim-refine-deliver/evidence/read-only-inspection.json;
+    automatic reward, not required walk
+- id: return_exit
+  kind: exit
+  zone: reward
+  label: Optional rail / boarding unverified
+  position:
+  - 63
+  - 20
+  - 3.4
+  source: MEASURED rail actor anchor in specs/026-prompt-lab-aim-refine-deliver/evidence/read-only-inspection.json;
+    spline and hub endpoint not surveyed
+- id: walk_return
+  kind: exit
+  zone: arrival
+  label: Walk back west / always open
+  position:
+  - 0
+  - 40
+  - 0
+  source: Existing route annotation, not new geometry. Preserve west approach; reverse
+    walking requires current cooked check.
+- id: replay_control
+  kind: checkpoint
+  zone: arrival
+  label: Existing Replay control (unchanged)
+  position:
+  - 16
+  - 34
+  - 0.9
+  source: MEASURED native replay transform in evidence/live-survey.json; no relocation
+    or new control proposed.
+devices:
+- id: entry
+  class: mutator_zone_device
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+    world_location_cm:
+    - 7500
+    - -5200
+    - 2360
+- id: controller
+  class: fn_shoreline_island_prompt_blaster
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: targets
+  class: fn_shoreline_island_data_target
+  count: 9
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_ids_and_order: true
+    small_blue_target4_y_cm: -5000
+- id: hit_surfaces
+  class: trigger_device
+  count: 9
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: energy
+  class: fn_shoreline_island_data_energy
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: blaster
+  class: fn_shoreline_island_data_blaster
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: board
+  class: billboard_device
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: feedback
+  class: hud_message_device
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: progress
+  class: byte_island_game_manager
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: replay
+  class: button_device
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+- id: return_rail
+  class: grind_rail_device
+  count: 1
+  source: Preserve existing feature049 device; exact delta only in this feature plan.md
+    and evidence/planning-inspection.json.
+  settings:
+    preserve_existing: true
+stages:
+- id: enter
+  zone: arrival
+  purpose: Enroll player with existing loadout
+  requires: []
+  active_targets: []
+  completion: Player enters existing volume
+- id: intro
+  zone: knowledge
+  purpose: Existing 2s spectacle then 7s scripted AI Knowledge; board stays visible
+    after timed HUD
+  requires:
+  - enter
+  active_targets: []
+  completion: Existing seven-second Knowledge phase finishes
+- id: color
+  zone: arena
+  purpose: Choose WHAT using color
+  requires:
+  - intro
+  active_targets:
+  - blue
+  - red
+  - green
+  success_target: blue
+  completion: BLUE hit advances; wrong hits retry
+- id: detail
+  zone: arena
+  purpose: Resolve ambiguity by adding LARGE
+  requires:
+  - color
+  active_targets:
+  - large_detail
+  success_target: large_detail
+  completion: LARGE objective hit advances
+- id: select_large
+  zone: arena
+  purpose: Apply the useful detail
+  requires:
+  - detail
+  active_targets:
+  - red
+  - small_blue
+  - large_blue
+  success_target: large_blue
+  completion: LARGE BLUE hit then two-second instruction handoff
+- id: acquire
+  zone: arena
+  purpose: Acquire the slowly moving core
+  requires:
+  - select_large
+  active_targets:
+  - large_blue
+  success_target: large_blue
+  completion: Hit freezes both core and hit surface
+- id: destination
+  zone: arena
+  purpose: Choose WHERE the core belongs
+  requires:
+  - acquire
+  active_targets:
+  - reactor
+  - scanner
+  - storage
+  success_target: reactor
+  completion: REACTOR hit starts existing delivery
+- id: finale
+  zone: reward
+  purpose: Watch result and earn Prompt Badge
+  requires:
+  - destination
+  active_targets: []
+  completion: Existing Pix delivery and module spectacle; eligible participants get
+    badge and 3 DATA; return rail enabled; walking exit stays open
+assumptions:
+- id: native_feasibility
+  status: resolved
+  detail: Five actual controller-bound cores already have native bNoCollision=true.
+    Align centers without changing policy; target4 is the sole changed hit anchor.
+    No source change.
+  evidence: evidence/planning-inspection.json; plan.md
+- id: manual_runtime
+  status: resolved
+  detail: Static projections are limited evidence; owner explicitly assigns gameplay
+    testing to manual acceptance. No game session, cooking or push.
+  evidence: spec.md authorization and review.md; AC03/04 pending

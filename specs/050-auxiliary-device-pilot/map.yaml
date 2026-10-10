@@ -1,0 +1,56 @@
+version: 1
+map:
+  id: auxiliary_device_pilot
+  title: Skills background progress host - representation pilot
+  theme: ai_training
+  units: meters
+  origin_cm: [-4000, -19000, 2400]
+  size: [10, 10, 4]
+  learning_objective: Preserve the Skills lesson of teaching and reusing PopBridge without suggesting that infrastructure is another activity.
+  source_feature: specs/050-auxiliary-device-pilot/spec.md
+  intent: propose_change
+  min_path_width: 1
+  position_tolerance: 0.01
+player_flow: [context]
+zones:
+  - id: context
+    label: Existing support area - schematic crop only
+    pattern: corridor
+    position: [0, 0, 0]
+    size: [10, 10, 4]
+    purpose: Preserve existing space; change only hidden background host settings. No new route or geometry.
+    parameters: {width_m: 1, access: unchanged existing Skills context}
+    devices: [progress]
+    overlap_with: []
+    completion: Existing mission remains authoritative; this crop introduces no objective.
+    reset: Existing progress OnBegin and RoundBegin behavior preserved.
+connections: []
+markers: []
+devices:
+  - id: progress
+    class: fn_shoreline_island_nursery_progress
+    count: 1
+    source: evidence/planning-inspection.json pilot GUID 96BE09BE-46A7-B94D-2932-739392FB07F8
+    settings:
+      reuse_existing: true
+      measured_local_position_m: [5, 5, 0.5]
+      visibleInGame: false
+      bNoCollision: true
+      editor_folder: Infrastructure/Skills
+      preserve_identity_transform_bindings: true
+stages:
+  - id: preserve_skills
+    zone: context
+    purpose: Preserve existing Skills progress support; documentation stage only, no new gameplay stage.
+    requires: []
+    active_targets: []
+    completion: Existing three milestones and badge guard remain unchanged.
+assumptions:
+  - id: manual_runtime
+    status: resolved
+    detail: Runtime visibility and collision remain unverified; user assigns gameplay acceptance to manual testing. Editor/native configuration is implementation scope, not proof of gameplay success.
+    evidence: Latest user instruction quoted in spec.md; no game testing permitted.
+  - id: representation
+    status: resolved
+    detail: Native actor fields expose visibility and no-collision semantics. Preserve current mesh and runtime Hide; no arbitrary replacement asset.
+    evidence: Live property schemas and pilot baseline in evidence/planning-inspection.json.

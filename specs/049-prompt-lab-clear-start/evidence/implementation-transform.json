@@ -1,0 +1,54 @@
+{
+  "host": "Codex CLI",
+  "worker": "/root/implementer",
+  "model": "gpt-6.1-sol",
+  "approval_digest": "bacc213826fadff58e69677e0176359ff23bfd7870addbf81ccb152a8088647e",
+  "actor": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_MutatorVolume_V2_C_UAID_E89C2592D1B5860503_1590440721"
+  },
+  "before_transform": {
+    "location": {
+      "x": 7500,
+      "y": -5200,
+      "z": 2600
+    },
+    "rotation": {
+      "pitch": 0,
+      "yaw": 0,
+      "roll": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "after_transform": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":{\"location\":{\"x\":7500,\"y\":-5200,\"z\":2360},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":-0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+      }
+    ]
+  },
+  "before_properties": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"zoneWidth\\\":6,\\\"zoneDepth\\\":12,\\\"zoneHeight\\\":3,\\\"blocksVolumeLow\\\":{\\\"x\\\":-256,\\\"y\\\":-256,\\\"z\\\":0},\\\"blocksVolumeHigh\\\":{\\\"x\\\":256,\\\"y\\\":256,\\\"z\\\":384},\\\"enabledOnPhase\\\":\\\"Gameplay Only\\\",\\\"selectedTeam\\\":{\\\"teamType\\\":\\\"Any\\\",\\\"teamIndex\\\":1},\\\"selectedClass\\\":{\\\"classType\\\":\\\"Any\\\",\\\"classSlot\\\":1},\\\"bAllowWeaponFire\\\":true,\\\"update Selected Class\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\",\\\"update Selected Team\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\",\\\"on Player Starts Emoting\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Stops Emoting\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Starts Jamming\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Stops Jamming\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Exiting Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Entering Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Agent Exiting Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Agent Entering Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"disable\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\",\\\"enable\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\"}\"}"
+      }
+    ]
+  },
+  "after_properties": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"zoneWidth\\\":6,\\\"zoneDepth\\\":12,\\\"zoneHeight\\\":3,\\\"blocksVolumeLow\\\":{\\\"x\\\":-256,\\\"y\\\":-256,\\\"z\\\":0},\\\"blocksVolumeHigh\\\":{\\\"x\\\":256,\\\"y\\\":256,\\\"z\\\":384},\\\"enabledOnPhase\\\":\\\"Gameplay Only\\\",\\\"selectedTeam\\\":{\\\"teamType\\\":\\\"Any\\\",\\\"teamIndex\\\":1},\\\"selectedClass\\\":{\\\"classType\\\":\\\"Any\\\",\\\"classSlot\\\":1},\\\"bAllowWeaponFire\\\":true,\\\"update Selected Class\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\",\\\"update Selected Team\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\",\\\"on Player Starts Emoting\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Stops Emoting\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Starts Jamming\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Stops Jamming\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Exiting Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Player Entering Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Agent Exiting Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"on Agent Entering Zone\\\":\\\"(DefaultEventDefinition=(),Instance=())\\\",\\\"disable\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\",\\\"enable\\\":\\\"(DefaultHandlerFunctions=(),Instance=())\\\"}\"}"
+      }
+    ]
+  },
+  "checkpoint_save": true,
+  "post_mutation_save": true,
+  "save_scope_limitation": "save_assets asset_paths=[] saves all dirty assets. Preexisting dirty inventory was not captured; unrelated preexisting unsaved content cannot be excluded from save scope. Only explicit mutation was single approved actor full transform.",
+  "acceptance": "Pending current validation/cook and solo acceptance."
+}

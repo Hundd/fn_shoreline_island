@@ -1,0 +1,166 @@
+diff --git a/Content/fn_shoreline_island_pattern_line.verse b/Content/fn_shoreline_island_pattern_line.verse
+index a88d951..47b6898 100644
+--- a/Content/fn_shoreline_island_pattern_line.verse
++++ b/Content/fn_shoreline_island_pattern_line.verse
+@@ -3,6 +3,14 @@ using { /Fortnite.com/Characters }
+ using { /Verse.org/Simulation }
+ using { /UnrealEngine.com/Temporary/SpatialMath }
+ 
++pattern_line_puzzle := class:
++    correct:int
++    pattern:string
++    hint:string
++    answer:string
++    group:string
++    solved:string
++
+ # Solo pattern completion: the same three stationary answers serve every round.
+ fn_shoreline_island_pattern_line := class(creative_device):
+     @editable
+@@ -71,6 +79,8 @@ fn_shoreline_island_pattern_line := class(creative_device):
+         "A● B▲ / A● B▲ / A● B▲",
+         "A● B▲ C■ / A● B▲ C■"}
+ 
++    var selection_owner:?player = false
++    var alternate_set:logic = false
+     var phase:int = -1
+     var generation:int = 0
+     var hint_generation:int = 0
+@@ -83,7 +93,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
+     var lights:[]customizable_light_device = array{}
+ 
+     text<localizes>(value:string):message = "{value}"
+-    welcome<localizes>:message = "PATTERN SCANNER\nSHOOT THE MISSING SYMBOL\nA●  B▲  A●  B▲  A●  ?"
++    welcome<localizes>:message = "PATTERN SCANNER\nSHOOT THE MISSING SYMBOL"
+     finished<localizes>:message = "3/3 - PATTERN BADGE EARNED\nSpot the group. Fill the gap. Check the pattern.\nReplay or Return to Hub"
+ 
+     OnBegin<override>()<suspends>:void =
+@@ -131,6 +141,24 @@ fn_shoreline_island_pattern_line := class(creative_device):
+         third_answer >= 0
+         third_answer < 3
+ 
++    alternate_puzzles()<transacts>:[]pattern_line_puzzle =
++        array{
++            pattern_line_puzzle{correct := 2, pattern := "B▲  C■  B▲  C■  B▲  ?", hint := "Triangle, square. The pair repeats.", answer := "After triangle comes square. Shoot C ■.", group := "B▲ C■", solved := "B▲ C■ / B▲ C■ / B▲ C■"},
++            pattern_line_puzzle{correct := 1, pattern := "B▲  C■  ?  C■  B▲  C■", hint := "Each pair starts with triangle.", answer := "The gap starts a pair. Shoot B ▲.", group := "B▲ C■", solved := "B▲ C■ / B▲ C■ / B▲ C■"},
++            pattern_line_puzzle{correct := 0, pattern := "B▲  C■  A●  B▲  C■  ?", hint := "Triangle, square, circle. Three repeat.", answer := "Finish the group with circle. Shoot A ●.", group := "B▲ C■ A●", solved := "B▲ C■ A● / B▲ C■ A●"}}
++
++    selected_puzzle(index:int)<transacts><decides>:pattern_line_puzzle =
++        if (alternate_set?):
++            alternate_puzzles()[index]
++        else:
++            pattern_line_puzzle{correct := success_ids[index], pattern := round_patterns[index], hint := round_hints[index], answer := round_answers[index], group := round_groups[index], solved := solved_patterns[index]}
++
++    show_welcome():void =
++        if (puzzle := selected_puzzle[0]):
++            board(text("PATTERN SCANNER\nSHOOT THE MISSING SYMBOL\n{puzzle.pattern}"))
++        else:
++            board(welcome)
++
+     board(content:message):void =
+         predict_board.SetText(content)
+         predict_board.ShowText()
+@@ -172,17 +200,29 @@ fn_shoreline_island_pattern_line := class(creative_device):
+             light.TurnOff()
+         replay_button.Disable()
+         finale_effect.End()
+-        board(welcome)
++        show_welcome()
+ 
+     on_round():void =
++        set selection_owner = false
++        set alternate_set = false
+         reset_line()
+ 
+     on_departure(input_player:player):void =
++        if (owner := selection_owner?, owner = input_player):
++            set selection_owner = false
++            set alternate_set = false
++            if (not active_player?):
++                show_welcome()
+         if (current := active_player?, current = input_player):
+             reset_line()
+ 
+     begin_solo(input_player:player):void =
+         if (character := input_player.GetFortCharacter[], character.IsActive[], in_course[input_player]):
++            if (owner := selection_owner?, owner = input_player):
++                set selection_owner = option{owner}
++            else:
++                set selection_owner = option{input_player}
++                set alternate_set = false
+             reset_line()
+             set active_player = option{input_player}
+             set active_character = option{character}
+@@ -206,6 +246,10 @@ fn_shoreline_island_pattern_line := class(creative_device):
+ 
+     on_replay(input_agent:agent):void =
+         if (phase = 3, is_active_player[input_agent], current := active_player?):
++            if (alternate_set?):
++                set alternate_set = false
++            else:
++                set alternate_set = true
+             begin_solo(current)
+ 
+     on_return(input_agent:agent):void =
+@@ -214,8 +258,8 @@ fn_shoreline_island_pattern_line := class(creative_device):
+         hub_destination.Teleport(input_agent)
+ 
+     show_prompt():void =
+-        if (pattern := round_patterns[phase]):
+-            board(text("{phase}/3 SOLVED | SHOOT THE MISSING SYMBOL\n{pattern}"))
++        if (puzzle := selected_puzzle[phase]):
++            board(text("{phase}/3 SOLVED | SHOOT THE MISSING SYMBOL\n{puzzle.pattern}"))
+ 
+     listen_hits(target:fn_shoreline_island_data_target, index:int)<suspends>:void =
+         loop:
+@@ -228,21 +272,20 @@ fn_shoreline_island_pattern_line := class(creative_device):
+         set last_hit = GetSimulationElapsedTime()
+         if (busy? or phase < 0 or phase >= 3):
+             return
+-        if (correct := success_ids[phase]):
+-            if (index <> correct):
++        if (puzzle := selected_puzzle[phase]):
++            if (index <> puzzle.correct):
+                 if (GetSimulationElapsedTime() < wrong_ready):
+                     return
+                 set wrong_ready = GetSimulationElapsedTime() + 0.4
+                 set mistakes += 1
+                 target.reject(input_agent)
+                 set hint_generation += 1
+-                if (pattern := round_patterns[phase], hint := round_hints[phase], answer := round_answers[phase], group := round_groups[phase]):
+-                    var guidance:string = hint
+-                    if (mistakes >= 2):
+-                        set guidance = "REPEATING GROUP: [{group}]\n{answer}"
+-                    board(text("{phase}/3 SOLVED | SHOOT THE MISSING SYMBOL\n{pattern}\n{guidance}"))
+-                    feedback.Show(input_agent, text(guidance), ?DisplayTime := 3.0)
+-                    spawn { clear_hint(generation, hint_generation, phase) }
++                var guidance:string = puzzle.hint
++                if (mistakes >= 2):
++                    set guidance = "REPEATING GROUP: [{puzzle.group}]\n{puzzle.answer}"
++                board(text("{phase}/3 SOLVED | SHOOT THE MISSING SYMBOL\n{puzzle.pattern}\n{guidance}"))
++                feedback.Show(input_agent, text(guidance), ?DisplayTime := 3.0)
++                spawn { clear_hint(generation, hint_generation, phase) }
+                 return
+             set busy = true
+             set hint_generation += 1
+@@ -250,8 +293,7 @@ fn_shoreline_island_pattern_line := class(creative_device):
+             target.accept(input_agent, false)
+             for (choice : targets):
+                 choice.hit_surface.Disable()
+-            if (solved := solved_patterns[phase]):
+-                board(text("{phase + 1}/3 SOLVED - PATTERN COMPLETE!\n{solved}"))
++            board(text("{phase + 1}/3 SOLVED - PATTERN COMPLETE!\n{puzzle.solved}"))
+             if (current := active_player?):
+                 state := progress.ensure_player(current)
+                 if (state.challenge = phase, not state.badge_earned?):
+@@ -299,8 +341,8 @@ fn_shoreline_island_pattern_line := class(creative_device):
+     report_navigation():void =
+         if (current := active_player?, is_active_player[current]):
+             var instruction:message = navigation_text("Completed. Replay or return to Hub.")
+-            if (pattern := round_patterns[phase], hint := round_hints[phase]):
+-                set instruction = text("{pattern} | {hint}")
++            if (puzzle := selected_puzzle[phase]):
++                set instruction = text("{puzzle.pattern} | {puzzle.hint}")
+             if (busy?):
+                 set instruction = navigation_text("Watch Pix's result.")
+             var step:int = phase + 1

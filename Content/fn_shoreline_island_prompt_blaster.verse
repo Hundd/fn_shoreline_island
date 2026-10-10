@@ -98,6 +98,10 @@ fn_shoreline_island_prompt_blaster := class(creative_device):
     acquired<localizes>:message = "TARGET ACQUIRED\nNow shoot its destination: REACTOR."
     connected<localizes>:message = "CLEAR DESTINATION! +1 DATA\nPix is delivering the core."
     wrong<localizes>:message = "Not quite! Check the prompt and try another target."
+    wrong_color_choice<localizes>:message = "Check the color: the prompt says BLUE."
+    wrong_large_color<localizes>:message = "Check the color: choose a BLUE core."
+    wrong_large_size<localizes>:message = "Blue is right. Now match LARGE."
+    wrong_destination<localizes>:message = "Check WHERE: the prompt says REACTOR."
     online<localizes>:message = "PROMPT MODULE ONLINE!\nPrompt Badge earned. Ride back to the hub!"
 
     OnBegin<override>()<suspends>:void =
@@ -239,7 +243,7 @@ fn_shoreline_island_prompt_blaster := class(creative_device):
                     show_board(vague)
                     activate_choices(array{3})
                 else:
-                    reject(input_player, target)
+                    reject(input_player, target, retry_hint(stage, index))
             else if (stage = 2, index = 3):
                 set stage = 3
                 reward(input_player, target, clear_reward)
@@ -252,7 +256,7 @@ fn_shoreline_island_prompt_blaster := class(creative_device):
                     end_choices(array{1, 4})
                     spawn { start_destination(generation) }
                 else:
-                    reject(input_player, target)
+                    reject(input_player, target, retry_hint(stage, index))
             else if (stage = 4, index = 5):
                 set stage = 5
                 reward(input_player, target, acquired)
@@ -268,11 +272,25 @@ fn_shoreline_island_prompt_blaster := class(creative_device):
                     end_choices(array{7, 8})
                     spawn { run_finale(generation) }
                 else:
-                    reject(input_player, target)
+                    reject(input_player, target, retry_hint(stage, index))
 
-    reject(input_player:player, target:fn_shoreline_island_data_target):void =
+    retry_hint(current_stage:int, index:int):message =
+        if (current_stage = 1):
+            if (index = 1 or index = 2):
+                return wrong_color_choice
+        else if (current_stage = 3):
+            if (index = 1):
+                return wrong_large_color
+            else if (index = 4):
+                return wrong_large_size
+        else if (current_stage = 5):
+            if (index = 7 or index = 8):
+                return wrong_destination
+        return wrong
+
+    reject(input_player:player, target:fn_shoreline_island_data_target, content:message):void =
         target.reject(input_player)
-        feedback.Show(input_player, wrong, ?DisplayTime := 2.0)
+        feedback.Show(input_player, content, ?DisplayTime := 2.0)
 
     start_destination(expected_generation:int)<suspends>:void =
         show_board(destination)

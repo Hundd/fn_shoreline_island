@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-09",
+  "worker": {
+    "host": "Codex CLI",
+    "model": "gpt-6.1-sol",
+    "id": "/root/implementer"
+  },
+  "review_digest": "e649f83591d28ce4c758e8747ba4b92ef5f31a970e8fbd12f6c9da62c0d3aa69",
+  "pilot": {
+    "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782"
+  },
+  "before": {
+    "properties": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\\"visibleInGame\\\":true,\\\"bNoCollision\\\":false,\\\"enabled at Game Start\\\":true,\\\"bHidden\\\":false,\\\"script\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"},\\\"rootComponent\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.StaticMeshComponent0\\\"},\\\"actorGuid\\\":\\\"96BE09BE-46A7-B94D-2932-739392FB07F8\\\",\\\"bIsEditorOnlyActor\\\":false}\"}"
+        }
+      ]
+    },
+    "transform": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":{\"location\":{\"x\":-3500,\"y\":-18500,\"z\":2450},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":-0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+        }
+      ]
+    },
+    "components": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":[{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.StaticMeshComponent0\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.BoundingBoxComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.EditorOnlyStaticMeshComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.ToyOptionsComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.VisibleInGameComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.EnabledComponent\"}]}"
+        }
+      ]
+    },
+    "outgoingSchema": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\r\\n\\t\\\"badge_tracker\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"type\\\": \\\"object\\\",\\r\\n\\t\\t\\\"title\\\": \\\"/CreativeCoreDevices/_Verse.tracker_device\\\",\\r\\n\\t\\t\\\"description\\\": \\\"Represents a reference to a UObject or UClass.\\\",\\r\\n\\t\\t\\\"properties\\\":\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\":\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\\"type\\\": \\\"string\\\",\\r\\n\\t\\t\\t\\t\\\"description\\\": \\\"The reference stored as a soft path string.\\\"\\r\\n\\t\\t\\t}\\r\\n\\t\\t},\\r\\n\\t\\t\\\"required\\\": [\\r\\n\\t\\t\\t\\\"refPath\\\"\\r\\n\\t\\t]\\r\\n\\t},\\r\\n\\t\\\"round_settings\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"type\\\": \\\"object\\\",\\r\\n\\t\\t\\\"title\\\": \\\"/CreativeCoreDevices/_Verse.round_settings_device\\\",\\r\\n\\t\\t\\\"description\\\": \\\"Represents a reference to a UObject or UClass.\\\",\\r\\n\\t\\t\\\"properties\\\":\\r\\n\\t\\t{\\r\\n\\t\\t\\t\\\"refPath\\\":\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\\"type\\\": \\\"string\\\",\\r\\n\\t\\t\\t\\t\\\"description\\\": \\\"The reference stored as a soft path string.\\\"\\r\\n\\t\\t\\t}\\r\\n\\t\\t},\\r\\n\\t\\t\\\"required\\\": [\\r\\n\\t\\t\\t\\\"refPath\\\"\\r\\n\\t\\t]\\r\\n\\t}\\r\\n}\"}"
+        }
+      ]
+    },
+    "outgoing": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\r\\n\\t\\\"badge_tracker\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t},\\r\\n\\t\\\"round_settings\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x3A813FFA_round_settings\\\"\\r\\n\\t}\\r\\n}\"}"
+        }
+      ]
+    }
+  },
+  "after": {
+    "properties": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\\"visibleInGame\\\":false,\\\"bNoCollision\\\":true,\\\"enabled at Game Start\\\":true,\\\"bHidden\\\":false,\\\"script\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"},\\\"rootComponent\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.StaticMeshComponent0\\\"},\\\"actorGuid\\\":\\\"96BE09BE-46A7-B94D-2932-739392FB07F8\\\",\\\"bIsEditorOnlyActor\\\":false}\"}"
+        }
+      ]
+    },
+    "transform": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":{\"location\":{\"x\":-3500,\"y\":-18500,\"z\":2450},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":-0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+        }
+      ]
+    },
+    "components": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":[{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.StaticMeshComponent0\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.BoundingBoxComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.EditorOnlyStaticMeshComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.ToyOptionsComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.VisibleInGameComponent\"},{\"refPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.EnabledComponent\"}]}"
+        }
+      ]
+    },
+    "descriptor": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":[{\"guid\":\"96BE09BE-46A7-B94D-2932-739392FB07F8\",\"nativeClass\":{\"refPath\":\"/CRD_VerseDevices/VerseDevice.VerseDevice_C\"},\"class\":{\"refPath\":\"/CRD_VerseDevices/VerseDevice.VerseDevice_C\"},\"name\":\"VerseDevice_C_UAID_E89C2592D1B5160103_1358634782\",\"label\":\"fn_shoreline_island_nursery_progress\",\"bounds\":{\"min\":{\"x\":-3626.668529510498,\"y\":-18558.280494689941,\"z\":2450},\"max\":{\"x\":-3373.2796440124512,\"y\":-18441.357559204102,\"z\":2608.1131439208984},\"isValid\":true},\"runtimeGrid\":\"None\",\"bIsSpatiallyLoaded\":false,\"bActorIsEditorOnly\":false,\"actorPackage\":\"None\",\"actorPath\":\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782\",\"folderPath\":\"None\",\"dataLayerAssets\":[]}]}"
+        }
+      ]
+    },
+    "outgoing": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":\"{\\r\\n\\t\\\"badge_tracker\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x88D94674_badge_tracker\\\"\\r\\n\\t},\\r\\n\\t\\\"round_settings\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0.__verse_0x3A813FFA_round_settings\\\"\\r\\n\\t}\\r\\n}\"}"
+        }
+      ]
+    },
+    "nativeBindings": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":[]}"
+        }
+      ]
+    },
+    "dirty": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Asset does not exist: /fn_shoreline_island/__ExternalActors__/fn_shoreline_island/C/Z3/G0F6U5CW96NQ3NNEA2DFHL"
+        }
+      ],
+      "isError": true
+    }
+  },
+  "incomingAfter": [
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1359952783",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1671213132",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5FA0703_1938542541",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1629180095",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B51D0103_1589874058",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"returnValue\":\"{\\r\\n\\t\\\"progress\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5160103_1358634782.fn_shoreline_island_nursery_progress_0\\\"\\r\\n\\t}\\r\\n}\"}"
+          }
+        ]
+      }
+    }
+  ],
+  "badge_trackerBefore": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"savedActor\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5160103_1361400785\\\"}}\"}"
+      }
+    ]
+  },
+  "badge_trackerAfter": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"savedActor\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Tracker_V2_C_UAID_E89C2592D1B5160103_1361400785\\\"}}\"}"
+      }
+    ]
+  },
+  "round_settingsBefore": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"savedActor\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_RoundSettings_V2_C_UAID_E89C2592D1B5C80003_1839433039\\\"}}\"}"
+      }
+    ]
+  },
+  "round_settingsAfter": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"savedActor\\\":{\\\"refPath\\\":\\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_RoundSettings_V2_C_UAID_E89C2592D1B5C80003_1839433039\\\"}}\"}"
+      }
+    ]
+  },
+  "meshAfter": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"},\\\"bodyInstance\\\":{\\\"positionSolverIterationCount\\\":8,\\\"velocitySolverIterationCount\\\":2,\\\"projectionSolverIterationCount\\\":1,\\\"objectType\\\":\\\"ECC_WorldStatic\\\",\\\"collisionEnabled\\\":\\\"QueryOnly\\\",\\\"sleepFamily\\\":\\\"Normal\\\",\\\"dOFMode\\\":\\\"Default\\\",\\\"bUseCCD\\\":false,\\\"bUseMACD\\\":false,\\\"bAllowPartialIslandSleep\\\":true,\\\"bIgnoreAnalyticCollisions\\\":false,\\\"bNotifyRigidBodyCollision\\\":false,\\\"bSmoothEdgeCollisions\\\":false,\\\"bLockTranslation\\\":true,\\\"bLockRotation\\\":true,\\\"bLockXTranslation\\\":false,\\\"bLockYTranslation\\\":false,\\\"bLockZTranslation\\\":false,\\\"bLockXRotation\\\":false,\\\"bLockYRotation\\\":false,\\\"bLockZRotation\\\":false,\\\"bOverrideMaxAngularVelocity\\\":false,\\\"bOverrideMaxDepenetrationVelocity\\\":false,\\\"bOverrideWalkableSlopeOnInstance\\\":false,\\\"bOverrideIterationCounts\\\":false,\\\"bInterpolateWhenSubStepping\\\":true,\\\"bInertiaConditioning\\\":true,\\\"bOneWayInteraction\\\":false,\\\"bOverrideSolverAsyncDeltaTime\\\":false,\\\"solverAsyncDeltaTime\\\":0.01666666753590107,\\\"collisionProfileName\\\":\\\"Custom\\\",\\\"collisionResponses\\\":{\\\"responseArray\\\":[{\\\"channel\\\":\\\"WorldStatic\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"WorldDynamic\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Pawn\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Visibility\\\",\\\"response\\\":\\\"ECR_Overlap\\\"},{\\\"channel\\\":\\\"Camera\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"PhysicsBody\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Vehicle\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"Destructible\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel2\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel3\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel4\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel5\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"EngineTraceChannel6\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"FCC_Trace_WeaponWorldMulti\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"FCC_Object_NoGhost\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"FCC_Object_Water\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel20\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel21\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel22\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel23\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel24\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel25\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel26\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel27\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel28\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel29\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel30\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel31\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel32\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel33\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel34\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel35\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel36\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel37\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel38\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel39\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel40\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel41\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel42\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel43\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel44\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel45\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel46\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel47\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel48\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel49\\\",\\\"response\\\":\\\"ECR_Ignore\\\"},{\\\"channel\\\":\\\"GameTraceChannel50\\\",\\\"response\\\":\\\"ECR_Ignore\\\"}]},\\\"maxDepenetrationVelocity\\\":0,\\\"massInKgOverride\\\":100,\\\"linearDamping\\\":0.0099999997764825821,\\\"angularDamping\\\":0,\\\"customDOFPlaneNormal\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"cOMNudge\\\":{\\\"x\\\":0,\\\"y\\\":0,\\\"z\\\":0},\\\"massScale\\\":1,\\\"gravityGroupIndex\\\":0,\\\"inertiaTensorScale\\\":{\\\"x\\\":1,\\\"y\\\":1,\\\"z\\\":1},\\\"walkableSlopeOverride\\\":{\\\"walkableSlopeBehavior\\\":\\\"WalkableSlope_Default\\\",\\\"walkableSlopeAngle\\\":0},\\\"physMaterialOverride\\\":null,\\\"maxAngularVelocity\\\":3599.999755859375,\\\"customSleepThresholdMultiplier\\\":1,\\\"stabilizationThresholdMultiplier\\\":1,\\\"physicsBlendWeight\\\":0,\\\"bSimulatePhysics\\\":false,\\\"bOverrideMass\\\":false,\\\"bEnableGravity\\\":true,\\\"bUpdateKinematicFromSimulation\\\":false,\\\"bGyroscopicTorqueEnabled\\\":false,\\\"bAutoWeld\\\":true,\\\"bStartAwake\\\":true,\\\"bGenerateWakeEvents\\\":false,\\\"bUpdateMassWhenScaleChanges\\\":true},\\\"bHiddenInGame\\\":true,\\\"bVisible\\\":true,\\\"bIsEditorOnly\\\":false}\"}"
+      }
+    ]
+  },
+  "folders": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":[\"Background\",\"Infrastructure\",\"Infrastructure/Skills\",\"Popcorn Parkour\",\"Popcorn Parkour/Logic\",\"Popcorn Parkour/Logic/Targets\"]}"
+      }
+    ]
+  },
+  "dirtyFinal": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":false}"
+      }
+    ]
+  },
+  "gameFinal": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"Unconnected\"}"
+      }
+    ]
+  },
+  "validation": "No project-validation tool exposed by discovered Actor/Scene/Asset/Object/Device/Session/EditorApp toolsets. No cook or gameplay operation invoked. Native readback and saved package dirty=false verified.",
+  "folderCaveat": "get_actors_in_folder(Infrastructure/Skills) returned exactly pilot; get_folders includes path; find_actors descriptor folderPath remains None.",
+  "checkpoint": "pilot-before.uasset SHA256 D7D88D8ABB197F5242D255FA42959557B225AA50695A79D318C09DC271EE5776. save_actor checkpoint rewrote package from prior hash FC1857AD8F98960AA6492A16D77F5B047815A5A0F9611DEA00D84B0A5B20303A before native mutation.",
+  "manualGameplay": "Deferred to owner, not accepted or tested."
+}
