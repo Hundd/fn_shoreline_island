@@ -23,3 +23,13 @@ These no longer block owner-requested closure. Keep them for future release veri
 - [ ] Additional AC-10/11 regression: independently measure feedback latency and replay/return cleanup across resets. Presentation repair is owner-accepted.
 
 Historical records remain under evidence/; revision 1 remains under history/revision-1/. Feature 030 remains a separate unapproved draft.
+
+## Active regression repair — 2026-10-10
+
+- [ ] R-01 S-04/S-05: diagnose cooked startup, actual player bay membership and target events with bounded diagnostics; record concrete cause.
+- [ ] R-02 S-04/S-05: repair proven defect within revision 2; build Verse, validate/cook and record exact changes.
+- [ ] R-03 AC-01/02/03/10: independently verify entry ready, seven answers, wrong prediction/retry and visible feedback in cooked play; record actual coverage and shutdown.
+
+Implementation worker /root/implementer, host Codex, resolved worker_model.codexcli=gpt-6.1-sol. Existing approval applies to restoration of promised behavior; map.yaml/design remains unchanged. Previously closed tasks remain historical acceptance, not regression passes.
+
+Regression checkpoint: exact Classifier controller host flags restored to pre059 values visibleInGame=true and bNoCollision=false; Cube mesh retained. Runtime OnBegin/configured/init now observed in LogVerse, while player measured at hub outside bay. Clean Verse source restored and BuildAll passed. See evidence/regression-repair-2026-10-10.md and regression-controller-startup-2026-10-10.log. R-01 individual flag/cook mechanism and R-03 actual category-shot acceptance remain open; no gameplay pass inferred from this correction.

@@ -1,0 +1,82 @@
+version: 1
+map_id: verse_host_representation
+spec_digest: 33f120385eff647570534c77f94608e02917e974420ed6650b78b0a59b9e4f91
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.01
+implementation:
+- step: inspect_existing
+  map: verse_host_representation
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: context
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 8500
+  - -3800
+  - 2400
+  size_cm:
+  - 1000
+  - 1000
+  - 500
+  parameters:
+    width_m: 1
+    access: unchanged existing target area
+  markers: []
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: pilot
+    class: fn_shoreline_island_data_target
+    count: 1
+    source: evidence/agency-census.json GUID E34FDE8E-4CA2-8AA3-6877-63B83BBFA019
+      prompt_blaster_target_0
+    settings:
+      reuse_existing: true
+      measured_local_position_m:
+      - 5
+      - 5
+      - 2.3
+      candidate_actor_staticMesh: /VerseEngineAssets/Cube.Cube
+      pilot_mesh_only: true
+      preserve_identity_transform_bindings: true
+      require_component_update_and_neutral_material: true
+      require_save_native_compile_persistence: true
+      stop_and_rollback_on_failure: true
+      conditional_rollout_ledger: evidence/instance-baselines.json
+      conditional_rollout_count: 71
+      conditional_auxiliary_visibleInGame: false
+      conditional_auxiliary_bNoCollision: true
+      future_placement: explicit instance configuration process; no verified global
+        default
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: preserve_targets
+    zone: context
+    purpose: Existing target gameplay remains authoritative; this is a representation
+      experiment.
+    requires: []
+    active_targets: []
+    completion: Existing target responses and lesson completion remain unchanged.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

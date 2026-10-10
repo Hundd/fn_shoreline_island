@@ -1,0 +1,219 @@
+{
+  "host": "codexcli",
+  "model": "gpt-6.1-sol",
+  "worker": "/root/implementer",
+  "digest": "45221a327b41571f98a428effb4f117788799cc1a033d7b4acdc38daef6de079",
+  "level": "/fn_shoreline_island/fn_shoreline_island",
+  "game": "Unconnected",
+  "saved": true,
+  "boards": [
+    {
+      "label": "academy_label_1",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BD0703_2137379650"
+      },
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2300,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"1 PROMPT\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_2",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1110372835"
+      },
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2300,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"2 PATTERN\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_3",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1110716836"
+      },
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2300,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"3 CLASSIFIER\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_4",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111043837"
+      },
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2300,
+          "z": 2850
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"4 CONFIDENCE\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_5",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111377838"
+      },
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2300,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"5 ERROR\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_6",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1111708839"
+      },
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2300,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"6 TOOLS\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_7",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1112037840"
+      },
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2300,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"7 SKILLS\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    },
+    {
+      "label": "academy_label_8",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Billboard_V2_C_UAID_E89C2592D1B5BE0703_1112372841"
+      },
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2300,
+          "z": 2650
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
+        }
+      },
+      "options": {
+        "returnValue": "{\"text\":\"8 AGENT\\nWAITING\",\"showBorder\":false,\"backgroundColor\":{\"r\":0.014999999664723873,\"g\":0.039999999105930328,\"b\":0.079999998211860657,\"a\":1},\"textJustification\":\"Center\",\"textSize\":16,\"displayMode\":\"Two Sided\",\"viewDistance\":10000,\"textColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"enabledDuringPhase\":\"Always\",\"textFont\":\"NotoSans\",\"outline\":\"None\",\"shadow\":\"None\",\"setTextHidden\":\"(DefaultHandlerFunctions=(),Instance=())\",\"setTextVisible\":\"(DefaultHandlerFunctions=(),Instance=())\",\"update Display When Receiving Text Data\":\"(DefaultHandlerFunctions=(),Instance=())\"}"
+      }
+    }
+  ]
+}

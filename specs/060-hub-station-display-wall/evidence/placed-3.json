@@ -1,0 +1,188 @@
+{
+  "records": [
+    {
+      "label": "hub060_left_plinth",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1285028366"
+      },
+      "transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352,
+          "z": 2410
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.4,
+          "z": 0.2
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": -1680,
+          "y": 2332,
+          "z": 2400
+        },
+        "max": {
+          "x": -980,
+          "y": 2372,
+          "z": 2420
+        },
+        "isValid": true
+      },
+      "mesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "material": [
+        {
+          "refPath": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy"
+        }
+      ],
+      "collision": "NoCollision",
+      "collisionEnabled": "NoCollision"
+    },
+    {
+      "label": "hub060_right_plinth",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1285605367"
+      },
+      "transform": {
+        "location": {
+          "x": -450,
+          "y": 2352,
+          "z": 2422
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.4,
+          "z": 0.2
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": -480,
+          "y": 2332,
+          "z": 2412
+        },
+        "max": {
+          "x": -420,
+          "y": 2372,
+          "z": 2432
+        },
+        "isValid": true
+      },
+      "mesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "material": [
+        {
+          "refPath": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy"
+        }
+      ],
+      "collision": "NoCollision",
+      "collisionEnabled": "NoCollision"
+    },
+    {
+      "label": "hub060_header_band",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1286158368"
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2332.5,
+          "z": 3005
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.6,
+          "y": 0.05,
+          "z": 0.3
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": -1680,
+          "y": 2330,
+          "z": 2990
+        },
+        "max": {
+          "x": -420,
+          "y": 2335,
+          "z": 3020
+        },
+        "isValid": true
+      },
+      "mesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "material": [
+        {
+          "refPath": "/fn_shoreline_island/Campus/Materials/MI_CampusLagoonTeal.MI_CampusLagoonTeal"
+        }
+      ],
+      "collision": "NoCollision",
+      "collisionEnabled": "NoCollision"
+    },
+    {
+      "label": "hub060_top_cap",
+      "actor": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1286681369"
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2352,
+          "z": 3064
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.7,
+          "y": 0.48,
+          "z": 0.08
+        }
+      },
+      "bounds": {
+        "min": {
+          "x": -1685,
+          "y": 2328,
+          "z": 3060
+        },
+        "max": {
+          "x": -415,
+          "y": 2376,
+          "z": 3068
+        },
+        "isValid": true
+      },
+      "mesh": {
+        "refPath": "/Engine/BasicShapes/Cube.Cube"
+      },
+      "material": [
+        {
+          "refPath": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy"
+        }
+      ],
+      "collision": "NoCollision",
+      "collisionEnabled": "NoCollision"
+    }
+  ]
+}

@@ -140,8 +140,8 @@ fn_shoreline_island_pix_travel := class(creative_device):
         feet := position.Z - 77.15
         feet >= 2350.0
         feet <= 2650.0
-        dx := position.X + 100.0
-        dy := position.Y - 2450.0
+        dx := position.X + 1050.0
+        dy := position.Y - 1925.0
         dx * dx + dy * dy <= radius * radius
 
     destination_ready(input_player:player, index:int)<transacts>:logic =

@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hub station display wall blockout</title>
+<style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 20px;color:#172e43;background:#fff}svg{width:100%;max-height:900px}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #ccd8df;padding:8px}td:last-child{font-size:12px;overflow-wrap:anywhere}li{margin:8px 0}.notice{background:#fff3cf;padding:14px}</style>
+<h1>Hub station display wall review</h1><p class="notice">DRAFT — not approved for Unreal execution. Numbered markers use the table below. This preview is a planning aid, not collision or gameplay validation.</p>
+<p>Keep the eight lesson status displays readable and visibly grounded while preserving access to independent activities.</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 653" role="img" aria-label="Hub station display wall blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="820" height="653" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Hub station display wall — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="45" y="65" width="620" height="360" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">Existing hub and rear route</text>
+<text font-size="11" x="52" y="100">62 × 36m</text>
+<g><title>Existing hub return; XYZ [25, 15, 2]; Measured hub_destination bounds center; reuse, no new spawn.</title><circle cx="295" cy="215" r="8" fill="#42a86b" stroke="white"/>
+<text x="295" y="218" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Eight framed existing status TVs; XYZ [21.5, 23, 4]; Restore checkpoint positions from repair-preflight.json; same actors retain yaw0 and bindings.</title><circle cx="260.0" cy="295" r="8" fill="#329bd0" stroke="white"/>
+<text x="260.0" y="298" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Existing east-edge route; XYZ [28.5, 24.5, 1.12]; East X-350 native traceclear,ground2412; cookedcapsule traversal required afterclosure.</title><circle cx="330.0" cy="310.0" r="8" fill="#526476" stroke="white"/>
+<text x="330.0" y="313.0" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>Existing Pix travel helper; XYZ [21.5, 20.5, 1]; Measured helper relocation:root(-1050,2050,2400),faceyaw90;Talkandexistinginvitecenter follow.</title><circle cx="260.0" cy="270.0" r="8" fill="#329bd0" stroke="white"/>
+<text x="260.0" y="273.0" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<path d="M45,460 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="465" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+<text x="45" y="503" font-size="16" font-weight="bold">Map legend</text>
+<text x="45" y="525" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
+<circle cx="54.0" cy="549" r="9" fill="#42a86b"/>
+<text x="54.0" y="552" text-anchor="middle" font-size="9" style="fill:white">1</text>
+<text x="73.0" y="553" font-size="12">Existing hub return</text>
+<circle cx="419.0" cy="549" r="9" fill="#329bd0"/>
+<text x="419.0" y="552" text-anchor="middle" font-size="9" style="fill:white">2</text>
+<text x="438.0" y="553" font-size="12">Eight framed existing status TVs</text>
+<circle cx="54.0" cy="583" r="9" fill="#526476"/>
+<text x="54.0" y="586" text-anchor="middle" font-size="9" style="fill:white">3</text>
+<text x="73.0" y="587" font-size="12">Existing east-edge route</text>
+<circle cx="419.0" cy="583" r="9" fill="#329bd0"/>
+<text x="419.0" y="586" text-anchor="middle" font-size="9" style="fill:white">4</text>
+<text x="438.0" y="587" font-size="12">Existing Pix travel helper</text>
+</svg>
+<p><span style="color:#42a86b">● spawn</span> · <span style="color:#e25757">● target</span> · <span style="color:#b377dc">● weapon</span> · <span style="color:#329bd0">● knowledge</span> · <span style="color:#526476">● exit</span> · <span style="color:#db8b29">● checkpoint</span> · <span style="color:#c79c17">● reward</span></p>
+<h2>Markers</h2><table><tr><th>#</th><th>Kind</th><th>Label</th><th>Local XYZ (m)</th><th>Source</th></tr><tr><td>1</td><td>spawn</td><td>Existing hub return</td><td>[25, 15, 2]</td><td>Measured hub_destination bounds center; reuse, no new spawn.</td></tr><tr><td>2</td><td>knowledge</td><td>Eight framed existing status TVs</td><td>[21.5, 23, 4]</td><td>Restore checkpoint positions from repair-preflight.json; same actors retain yaw0 and bindings.</td></tr><tr><td>3</td><td>exit</td><td>Existing east-edge route</td><td>[28.5, 24.5, 1.12]</td><td>East X-350 native traceclear,ground2412; cookedcapsule traversal required afterclosure.</td></tr><tr><td>4</td><td>knowledge</td><td>Existing Pix travel helper</td><td>[21.5, 20.5, 1]</td><td>Measured helper relocation:root(-1050,2050,2400),faceyaw90;Talkandexistinginvitecenter follow.</td></tr></table>
+<h2>Mission sequence</h2><ol><li><b>orient</b>: Read existing lesson status and choose a destination through unchanged routes or Pix. — Existing lesson controllers determine progress and rewards.</li></ol><h2>Assumptions and review gaps</h2><ul><li>resolved — Measured Pixground2400 and eastedgeground2412;fillformeropeningbyextendingwall/base while retainingrightpier2412. ExistingeastdetourandPixinteractionrequirecookedverification.</li><li>resolved — Use existing Engine Cube and project materials; feature048 validated the same cube representation. No restricted mesh exports or new gameplay adapter.</li></ul></html>

@@ -1,0 +1,9 @@
+# Supervisor agent review — revision 2 component pilot
+
+2026-10-10, reviewer /root Supervisor. Actual agent review under explicit task delegation and owner continuation "okay, go"; not human revision approval. Reviewed revised spec/plan/tasks/review, native UI evidence technical-scout-alternative.md, schematic preview and generated implementation. Manifest 5702182f0f647db3dbdf0f40685d2812d1dac5ed89b671ee0ce44e30b99371e2. Planner check/gate pass with no blockers; two unchanged-context advisories accepted. No approval.yaml/global gate alteration.
+
+Approve the exact one-actor revision 2 pilot, not rollout. Fresh native Details component Static Mesh picker is sufficient evidence for this bounded experiment despite unresolved inherited-root tooltip. Component path is the existing prompt_blaster_target_0.StaticMeshComponent0; native ObjectTools component setter selected as execution route. Do not retry via UI after rejection without further review. Actor staticMesh stays null; all identities, transforms, flags and bindings preserved.
+
+Mesh first to /VerseEngineAssets/Cube.Cube. Only if accepted Cube retains unsuitable Agency MID, clear that exact component overrideMaterials to [] and inspect native default material/appearance. No material assets or class defaults modified. Save original mesh/material and ensure original MID remains resolvable before mutation. Rollback must explicitly restore captured original values; generic component reset is prohibited because its class CDO may use null.
+
+Save exact external actor only; native compile and scoped clean-package reload/readback must establish persistence before rollout review. No whole-map reload/discard of unrelated work. If recovery or safe persistence cannot be established, stop and report limitation. No session/game/cook/push/playtest. Manual gameplay remains pending.

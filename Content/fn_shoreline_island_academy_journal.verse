@@ -472,7 +472,7 @@ fn_shoreline_island_academy_journal := class(creative_device):
     navigation_handoff<localizes>(name:message, count:int, destination:message):message = "{name} restored - {count}/8\nNext: {destination}"
     navigation_done<localizes>:message = "All eight abilities restored!\nReplay a lesson or explore an optional path."
     in_progress_text<localizes>:message = "In progress"
-    segment_text<localizes>(name:string, state:string):message = "{name}\n{state}"
+    segment_text<localizes>(name:message, state:string):message = "{name}\n{state}"
     # No badge mutations. Reports must come from the current guarded controller attempt.
     report_activity(input_player:player, source:int, module_index:int, step:int, total:int, instruction:message, token:int):void =
         if (state := navigation[input_player]):
@@ -563,7 +563,11 @@ fn_shoreline_island_academy_journal := class(creative_device):
     navigation_refresh()<suspends>:void =
         # A single presentation loop; actual controllers retain their own safety monitors.
         Sleep(0.25)
+        var next_core_refresh:float = 0.0
         loop:
+            var refresh_core:logic = false
+            if (GetSimulationElapsedTime() >= next_core_refresh):
+                set refresh_core = true
             for (input_player : GetPlayspace().GetPlayers()):
                 initialize_navigation(input_player)
                 if (state := navigation[input_player]):
@@ -613,23 +617,29 @@ fn_shoreline_island_academy_journal := class(creative_device):
                         if (next := markers()[pulse], next.GetTransform().Translation.Z > 1000.0):
                             next.ActivateObjectivePulse(input_player)
                         set state.pulse = pulse
-                    names := array{"1 PROMPT", "2 PATTERN", "3 CLASSIFIER", "4 CONFIDENCE", "5 ERROR", "6 TOOLS", "7 SKILLS", "8 AGENT"}
+                    names := module_names()
                     for (module_index -> restored : snapshot):
                         var changed:logic = true
                         if (previous := core_snapshot[module_index], previous = restored):
                             set changed = false
-                        if (changed?, board := core_labels()[module_index], light := core_lights()[module_index], name := names[module_index]):
+                        if (changed? or refresh_core?, board := core_labels()[module_index], light := core_lights()[module_index], name := names[module_index]):
                             if (board.GetTransform().Translation.Z > 1000.0):
                                 if (restored?):
                                     board.SetText(segment_text(name, "RESTORED"))
-                                    light.TurnOn()
+                                    if (changed?):
+                                        light.TurnOn()
                                 else:
                                     board.SetText(segment_text(name, "WAITING"))
-                                    light.TurnOff()
+                                    if (changed?):
+                                        light.TurnOff()
+                                board.ShowText()
                                 board.UpdateDisplay()
                             else:
                                 Print("ACADEMY: missing Core segment binding {module_index}")
                     set core_snapshot = snapshot
+                    if (refresh_core?):
+                        set next_core_refresh = now + 3.0
+                        set refresh_core = false
             Sleep(0.25)
 
 

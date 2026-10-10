@@ -1,0 +1,73 @@
+{
+  "observed": "2026-10-10",
+  "actor": {
+    "guid": "E34FDE8E-4CA2-8AA3-6877-63B83BBFA019",
+    "nativeClass": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "class": {
+      "refPath": "/CRD_VerseDevices/VerseDevice.VerseDevice_C"
+    },
+    "name": "VerseDevice_C_UAID_E89C2592D1B5860503_1527752703",
+    "label": "prompt_blaster_target_0",
+    "bounds": {
+      "min": {
+        "x": 8873.331470489502,
+        "y": -3358.2804946899414,
+        "z": 2630
+      },
+      "max": {
+        "x": 9126.720355987549,
+        "y": -3241.3575592041016,
+        "z": 2788.1131439208984
+      },
+      "isValid": true
+    },
+    "runtimeGrid": "None",
+    "bIsSpatiallyLoaded": false,
+    "bActorIsEditorOnly": false,
+    "actorPackage": "None",
+    "actorPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703",
+    "folderPath": "None",
+    "dataLayerAssets": []
+  },
+  "properties": {
+    "staticMesh": null,
+    "staticMeshComponent": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.StaticMeshComponent0"
+    },
+    "editorOnlyStaticMeshComponent": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.EditorOnlyStaticMeshComponent"
+    },
+    "script": {
+      "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0"
+    },
+    "visibleInGame": true,
+    "bNoCollision": false
+  },
+  "transform": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":{\"location\":{\"x\":9000,\"y\":-3300,\"z\":2630},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":-0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}"
+      }
+    ]
+  },
+  "runtimeComponent": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\\"staticMesh\\\":{\\\"refPath\\\":\\\"/Game/Environments/Apollo/Sets/Agency/Props/Meshes/S_Agency_Computer_02.S_Agency_Computer_02\\\"},\\\"relativeLocation\\\":{\\\"x\\\":9000,\\\"y\\\":-3300,\\\"z\\\":2630},\\\"relativeRotation\\\":{\\\"pitch\\\":0,\\\"yaw\\\":0,\\\"roll\\\":0},\\\"relativeScale3D\\\":{\\\"x\\\":1,\\\"y\\\":1,\\\"z\\\":1},\\\"bIsEditorOnly\\\":false}\"}"
+      }
+    ]
+  },
+  "bindings": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"returnValue\":\"{\\r\\n\\t\\\"target_id\\\": 0,\\r\\n\\t\\\"mission_id\\\": 0,\\r\\n\\t\\\"hit_surface\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0xB3E71E07_hit_surface\\\"\\r\\n\\t},\\r\\n\\t\\\"ring_mesh\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0xD4B8BD42_ring_mesh\\\"\\r\\n\\t},\\r\\n\\t\\\"cone_mesh\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0x2DD5F8A6_cone_mesh\\\"\\r\\n\\t},\\r\\n\\t\\\"label_board\\\":\\r\\n\\t{\\r\\n\\t\\t\\\"refPath\\\": \\\"/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.VerseDevice_C_UAID_E89C2592D1B5860503_1527752703.fn_shoreline_island_data_target_0.__verse_0x95AF7FD3_label_board\\\"\\r\\n\\t},\\r\\n\\t\\\"display_label\\\": \\\"◆ BLUE CORE\\\"\\r\\n}\"}"
+      }
+    ]
+  },
+  "limitations": "Read-only inspection. No mesh mutation/persistence experiment. Actor staticMesh override null; runtime component Agency; editor-only component null. No supported class/new-instance mesh default established."
+}

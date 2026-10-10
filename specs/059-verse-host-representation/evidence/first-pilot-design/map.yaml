@@ -1,0 +1,68 @@
+version: 1
+map:
+  id: verse_host_representation
+  title: Replace Agency host meshes - bounded pilot and conditional rollout
+  theme: ai_training
+  units: meters
+  origin_cm: [8500, -3800, 2400]
+  size: [10, 10, 5]
+  learning_objective: Preserve the existing target lesson while removing misleading computer representations from auxiliary logic hosts.
+  source_feature: specs/059-verse-host-representation/spec.md
+  intent: propose_change
+  min_path_width: 1
+  position_tolerance: 0.01
+player_flow: [context]
+zones:
+  - id: context
+    label: Existing target host - schematic pilot crop only
+    pattern: corridor
+    position: [0, 0, 0]
+    size: [10, 10, 5]
+    purpose: Preserve all existing space and target graphics; crop is not geometry.
+    parameters: {width_m: 1, access: unchanged existing target area}
+    devices: [pilot]
+    overlap_with: []
+    completion: Existing mission unchanged.
+    reset: Existing mission reset unchanged.
+connections: []
+markers: []
+devices:
+  - id: pilot
+    class: fn_shoreline_island_data_target
+    count: 1
+    source: evidence/agency-census.json GUID E34FDE8E-4CA2-8AA3-6877-63B83BBFA019 prompt_blaster_target_0
+    settings:
+      reuse_existing: true
+      measured_local_position_m: [5, 5, 2.3]
+      candidate_actor_staticMesh: /VerseEngineAssets/Cube.Cube
+      pilot_mesh_only: true
+      preserve_identity_transform_bindings: true
+      require_component_update_and_neutral_material: true
+      require_save_native_compile_persistence: true
+      stop_and_rollback_on_failure: true
+      conditional_rollout_ledger: evidence/instance-baselines.json
+      conditional_rollout_count: 71
+      conditional_auxiliary_visibleInGame: false
+      conditional_auxiliary_bNoCollision: true
+      future_placement: explicit instance configuration process; no verified global default
+stages:
+  - id: preserve_targets
+    zone: context
+    purpose: Existing target gameplay remains authoritative; this is a representation experiment.
+    requires: []
+    active_targets: []
+    completion: Existing target responses and lesson completion remain unchanged.
+assumptions:
+  - id: manual_runtime
+    status: resolved
+    detail: Owner manually tests gameplay; no sessions, games, cook, push or playtest allowed.
+    evidence: Current task delegation quoted in authorization-exception.md.
+  - id: mechanism_pilot
+    status: resolved
+    detail: Actor-level staticMesh is a candidate native instance override, not proven persistence. This bundle authorizes only bounded reversible experiment first; rollout requires actual pilot evidence.
+    evidence: evidence/native-property-schema.json and evidence/technical-scout-review.md; plan.md stop/rollback gates.
+  - id: scope
+    status: resolved
+    detail: Exactly 71 auxiliary hosts found, no Agency controls or scenery; maintain all actual controls and graphics.
+    evidence: 3618-actor census with no inaccessible descriptors in evidence/agency-census.json.
+

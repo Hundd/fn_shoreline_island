@@ -1,0 +1,2244 @@
+{
+  "status": "approved_closure_pix_pending_execution",
+  "units": "centimeters",
+  "update_existing_feature_actors": [
+    {
+      "label": "hub060_left_wall",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1080.0,
+          "y": 2352.5,
+          "z": 2521.0
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.0,
+          "y": 0.35,
+          "z": 2.42
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1680,
+          2335,
+          2400
+        ],
+        "max": [
+          -480,
+          2370,
+          2642
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusCream.MI_CampusCream",
+      "collision": "BlockAll",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1207933363",
+      "before_transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352.5,
+          "z": 2521
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.35,
+          "z": 2.42
+        }
+      }
+    },
+    {
+      "label": "hub060_left_plinth",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1080.0,
+          "y": 2352.0,
+          "z": 2410.0
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.0,
+          "y": 0.4,
+          "z": 0.2
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1680,
+          2332,
+          2400
+        ],
+        "max": [
+          -480,
+          2372,
+          2420
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1285028366",
+      "before_transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352,
+          "z": 2410
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.4,
+          "z": 0.2
+        }
+      }
+    }
+  ],
+  "desired_feature_actors_for_verification_only": [
+    {
+      "label": "hub060_left_wall",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1080.0,
+          "y": 2352.5,
+          "z": 2521.0
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.0,
+          "y": 0.35,
+          "z": 2.42
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1680,
+          2335,
+          2400
+        ],
+        "max": [
+          -480,
+          2370,
+          2642
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusCream.MI_CampusCream",
+      "collision": "BlockAll",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1207933363",
+      "before_transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352.5,
+          "z": 2521
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.35,
+          "z": 2.42
+        }
+      }
+    },
+    {
+      "label": "hub060_upper_wall",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2352.5,
+          "z": 2851
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.6,
+          "y": 0.35,
+          "z": 4.18
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1680,
+          2335,
+          2642
+        ],
+        "max": [
+          -420,
+          2370,
+          3060
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusCream.MI_CampusCream",
+      "collision": "BlockAll",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1242379365"
+    },
+    {
+      "label": "hub060_left_plinth",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1080.0,
+          "y": 2352.0,
+          "z": 2410.0
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.0,
+          "y": 0.4,
+          "z": 0.2
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1680,
+          2332,
+          2400
+        ],
+        "max": [
+          -480,
+          2372,
+          2420
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1285028366",
+      "before_transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352,
+          "z": 2410
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.4,
+          "z": 0.2
+        }
+      }
+    },
+    {
+      "label": "hub060_header_band",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2332.5,
+          "z": 3005
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.6,
+          "y": 0.05,
+          "z": 0.3
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1680,
+          2330,
+          2990
+        ],
+        "max": [
+          -420,
+          2335,
+          3020
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusLagoonTeal.MI_CampusLagoonTeal",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1286158368"
+    },
+    {
+      "label": "hub060_top_cap",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2352,
+          "z": 3064
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.7,
+          "y": 0.48,
+          "z": 0.08
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1685,
+          2328,
+          3060
+        ],
+        "max": [
+          -415,
+          2376,
+          3068
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1286681369"
+    },
+    {
+      "label": "hub060_tv_1_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2325,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1622,
+          2319,
+          2844
+        ],
+        "max": [
+          -1378,
+          2331,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1287612370"
+    },
+    {
+      "label": "hub060_tv_1_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2333,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1525,
+          2331,
+          2882.5
+        ],
+        "max": [
+          -1475,
+          2335,
+          2922.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1288237371"
+    },
+    {
+      "label": "hub060_tv_1_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1619.25,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1622,
+          2294,
+          2844
+        ],
+        "max": [
+          -1616.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1288858372"
+    },
+    {
+      "label": "hub060_tv_1_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1380.75,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1383.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -1378,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1289429373"
+    },
+    {
+      "label": "hub060_tv_1_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2306.5,
+          "z": 2846.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1616.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -1383.5,
+          2319,
+          2849.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1290005374"
+    },
+    {
+      "label": "hub060_tv_1_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2306.5,
+          "z": 2958.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1616.5,
+          2294,
+          2955.1000000000004
+        ],
+        "max": [
+          -1383.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1290555375"
+    },
+    {
+      "label": "hub060_tv_2_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2325,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1322,
+          2319,
+          2844
+        ],
+        "max": [
+          -1078,
+          2331,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1291529376"
+    },
+    {
+      "label": "hub060_tv_2_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2333,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1225,
+          2331,
+          2882.5
+        ],
+        "max": [
+          -1175,
+          2335,
+          2922.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1292066377"
+    },
+    {
+      "label": "hub060_tv_2_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1319.25,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1322,
+          2294,
+          2844
+        ],
+        "max": [
+          -1316.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1292604378"
+    },
+    {
+      "label": "hub060_tv_2_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1080.75,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1083.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -1078,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1293178379"
+    },
+    {
+      "label": "hub060_tv_2_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2306.5,
+          "z": 2846.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1316.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -1083.5,
+          2319,
+          2849.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1293811380"
+    },
+    {
+      "label": "hub060_tv_2_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2306.5,
+          "z": 2958.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1316.5,
+          2294,
+          2955.1000000000004
+        ],
+        "max": [
+          -1083.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1294412381"
+    },
+    {
+      "label": "hub060_tv_3_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2325,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1022,
+          2319,
+          2844
+        ],
+        "max": [
+          -778,
+          2331,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1303741382"
+    },
+    {
+      "label": "hub060_tv_3_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2333,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -925,
+          2331,
+          2882.5
+        ],
+        "max": [
+          -875,
+          2335,
+          2922.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1304300383"
+    },
+    {
+      "label": "hub060_tv_3_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1019.25,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1022,
+          2294,
+          2844
+        ],
+        "max": [
+          -1016.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1304831384"
+    },
+    {
+      "label": "hub060_tv_3_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -780.75,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -783.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -778,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1305338385"
+    },
+    {
+      "label": "hub060_tv_3_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2306.5,
+          "z": 2846.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1016.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -783.5,
+          2319,
+          2849.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1305862386"
+    },
+    {
+      "label": "hub060_tv_3_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2306.5,
+          "z": 2958.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1016.5,
+          2294,
+          2955.1000000000004
+        ],
+        "max": [
+          -783.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1306427387"
+    },
+    {
+      "label": "hub060_tv_4_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2325,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -722,
+          2319,
+          2844
+        ],
+        "max": [
+          -478,
+          2331,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1307421388"
+    },
+    {
+      "label": "hub060_tv_4_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2333,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -625,
+          2331,
+          2882.5
+        ],
+        "max": [
+          -575,
+          2335,
+          2922.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1307956389"
+    },
+    {
+      "label": "hub060_tv_4_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -719.25,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -722,
+          2294,
+          2844
+        ],
+        "max": [
+          -716.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1308517390"
+    },
+    {
+      "label": "hub060_tv_4_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -480.75,
+          "y": 2306.5,
+          "z": 2902.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -483.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -478,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1309048391"
+    },
+    {
+      "label": "hub060_tv_4_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2306.5,
+          "z": 2846.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -716.5,
+          2294,
+          2844
+        ],
+        "max": [
+          -483.5,
+          2319,
+          2849.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1309599392"
+    },
+    {
+      "label": "hub060_tv_4_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2306.5,
+          "z": 2958.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -716.5,
+          2294,
+          2955.1000000000004
+        ],
+        "max": [
+          -483.5,
+          2319,
+          2961
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1310230393"
+    },
+    {
+      "label": "hub060_tv_5_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2325,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1622,
+          2319,
+          2644
+        ],
+        "max": [
+          -1378,
+          2331,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1311238394"
+    },
+    {
+      "label": "hub060_tv_5_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2333,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1525,
+          2331,
+          2682.5
+        ],
+        "max": [
+          -1475,
+          2335,
+          2722.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1311796395"
+    },
+    {
+      "label": "hub060_tv_5_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1619.25,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1622,
+          2294,
+          2644
+        ],
+        "max": [
+          -1616.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1312414396"
+    },
+    {
+      "label": "hub060_tv_5_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1380.75,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1383.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -1378,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1313001397"
+    },
+    {
+      "label": "hub060_tv_5_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2306.5,
+          "z": 2646.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1616.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -1383.5,
+          2319,
+          2649.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1313704398"
+    },
+    {
+      "label": "hub060_tv_5_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 2306.5,
+          "z": 2758.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1616.5,
+          2294,
+          2755.1000000000004
+        ],
+        "max": [
+          -1383.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1314233399"
+    },
+    {
+      "label": "hub060_tv_6_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2325,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1322,
+          2319,
+          2644
+        ],
+        "max": [
+          -1078,
+          2331,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1327356400"
+    },
+    {
+      "label": "hub060_tv_6_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2333,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1225,
+          2331,
+          2682.5
+        ],
+        "max": [
+          -1175,
+          2335,
+          2722.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1327918401"
+    },
+    {
+      "label": "hub060_tv_6_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1319.25,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1322,
+          2294,
+          2644
+        ],
+        "max": [
+          -1316.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1328485402"
+    },
+    {
+      "label": "hub060_tv_6_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1080.75,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1083.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -1078,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1329009403"
+    },
+    {
+      "label": "hub060_tv_6_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2306.5,
+          "z": 2646.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1316.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -1083.5,
+          2319,
+          2649.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1329541404"
+    },
+    {
+      "label": "hub060_tv_6_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1200,
+          "y": 2306.5,
+          "z": 2758.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1316.5,
+          2294,
+          2755.1000000000004
+        ],
+        "max": [
+          -1083.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1330131405"
+    },
+    {
+      "label": "hub060_tv_7_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2325,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1022,
+          2319,
+          2644
+        ],
+        "max": [
+          -778,
+          2331,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1331105406"
+    },
+    {
+      "label": "hub060_tv_7_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2333,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -925,
+          2331,
+          2682.5
+        ],
+        "max": [
+          -875,
+          2335,
+          2722.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1331716407"
+    },
+    {
+      "label": "hub060_tv_7_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -1019.25,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1022,
+          2294,
+          2644
+        ],
+        "max": [
+          -1016.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1332300408"
+    },
+    {
+      "label": "hub060_tv_7_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -780.75,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -783.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -778,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1332872409"
+    },
+    {
+      "label": "hub060_tv_7_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2306.5,
+          "z": 2646.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1016.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -783.5,
+          2319,
+          2649.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1333401410"
+    },
+    {
+      "label": "hub060_tv_7_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -900,
+          "y": 2306.5,
+          "z": 2758.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -1016.5,
+          2294,
+          2755.1000000000004
+        ],
+        "max": [
+          -783.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1334165411"
+    },
+    {
+      "label": "hub060_tv_8_back",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2325,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.44,
+          "y": 0.12,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -722,
+          2319,
+          2644
+        ],
+        "max": [
+          -478,
+          2331,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1335175412"
+    },
+    {
+      "label": "hub060_tv_8_mount",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2333,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.04,
+          "z": 0.4
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -625,
+          2331,
+          2682.5
+        ],
+        "max": [
+          -575,
+          2335,
+          2722.5
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1335723413"
+    },
+    {
+      "label": "hub060_tv_8_left",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -719.25,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -722,
+          2294,
+          2644
+        ],
+        "max": [
+          -716.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1336387414"
+    },
+    {
+      "label": "hub060_tv_8_right",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -480.75,
+          "y": 2306.5,
+          "z": 2702.5
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.055,
+          "y": 0.25,
+          "z": 1.17
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -483.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -478,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1337042415"
+    },
+    {
+      "label": "hub060_tv_8_bottom",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2306.5,
+          "z": 2646.95
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -716.5,
+          2294,
+          2644
+        ],
+        "max": [
+          -483.5,
+          2319,
+          2649.8999999999996
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1337588416"
+    },
+    {
+      "label": "hub060_tv_8_top",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 2306.5,
+          "z": 2758.05
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 2.33,
+          "y": 0.25,
+          "z": 0.05900000000000091
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -716.5,
+          2294,
+          2755.1000000000004
+        ],
+        "max": [
+          -483.5,
+          2319,
+          2761
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1338141417"
+    },
+    {
+      "label": "hub060_right_pier",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -450,
+          "y": 2352.5,
+          "z": 2527
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.35,
+          "z": 2.3
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -480,
+          2335,
+          2412
+        ],
+        "max": [
+          -420,
+          2370,
+          2642
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusCream.MI_CampusCream",
+      "collision": "BlockAll"
+    },
+    {
+      "label": "hub060_right_plinth",
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "transform": {
+        "location": {
+          "x": -450,
+          "y": 2352,
+          "z": 2422
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 0.6,
+          "y": 0.4,
+          "z": 0.2
+        }
+      },
+      "bounds_cm": {
+        "min": [
+          -480,
+          2332,
+          2412
+        ],
+        "max": [
+          -420,
+          2372,
+          2432
+        ]
+      },
+      "material": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy",
+      "collision": "NoCollision"
+    }
+  ],
+  "update_existing_gameplay_actors": [
+    {
+      "label": "pix_hub_helper_figure",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5740403_1367639481",
+      "before_transform": {
+        "location": {
+          "x": -100,
+          "y": 2575,
+          "z": 2412
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2050,
+          "z": 2400
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 90,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "label": "pix_travel_talk",
+      "actor_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Device_Button_V2_C_UAID_E89C2592D1B53D0903_2017260095",
+      "before_transform": {
+        "location": {
+          "x": -100,
+          "y": 2500,
+          "z": 2500
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 1975,
+          "z": 2488
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    }
+  ],
+  "component_updates": [
+    {
+      "owner_label": "pix_hub_helper_figure",
+      "component_name": "pix_name_label",
+      "component_class": "TextRenderComponent",
+      "expected_before_relative_yaw": 195,
+      "set_relative_yaw": 180,
+      "preserve": "All other relative transform fields, text, material and component properties; discover actual component ref before edit.",
+      "component_path": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.Actor_UAID_E89C2592D1B5740403_1367639481.pix_name_label",
+      "before_relative_rotation": {
+        "pitch": 0,
+        "yaw": 195,
+        "roll": 0
+      },
+      "relative_rotation": {
+        "pitch": 0,
+        "yaw": 180,
+        "roll": 0
+      },
+      "orientation_evidence": "Measured localrotation and name; TextRender normal+X is engine-convention inference, verify label face in cooked arrival view."
+    }
+  ],
+  "source_intent": {
+    "file": "Content/fn_shoreline_island_pix_travel.verse",
+    "function": "near",
+    "invitation_center_before_xy": [
+      -100,
+      2450
+    ],
+    "invitation_center_after_xy": [
+      -1050,
+      1925
+    ],
+    "approach_radius": 125,
+    "rearm_radius": 200,
+    "preserve": "Existing near verticalbounds,eligibility,UI lifecycle,bindings,teleports,mission/reward logic. Update coordinate comment only as needed."
+  },
+  "new_actors": [],
+  "remove_existing_feature_labels": [],
+  "preserve": "All55feature identities;all8TV/lightposes,canonicaltitles,textfit,heartbeat and bindings unchanged. Travel controller and destination actors unchanged."
+}

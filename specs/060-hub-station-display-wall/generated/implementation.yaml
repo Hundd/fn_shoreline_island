@@ -1,0 +1,118 @@
+version: 1
+map_id: hub_station_display_wall
+spec_digest: 93c452c0a148ddee6091ff3a0949668d8c371ee59559196c257f3b410dc0930e
+patterns_digest: 93665cae818fc8ad08ce9cf4c45ecd535703553a9770f4040dfa5966a0564261
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.02
+implementation:
+- step: inspect_existing
+  map: hub_station_display_wall
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: hub
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - -3200
+  - 0
+  - 2300
+  size_cm:
+  - 6200
+  - 3600
+  - 1000
+  parameters:
+    width_m: 1.2
+    access: Closed central wall; approach Pix in front and use existing east-side
+      detour aroundwall toward rearwalkway.
+  markers:
+  - id: arrival
+    kind: spawn
+    zone: hub
+    label: Existing hub return
+    position:
+    - 25
+    - 15
+    - 2
+    source: Measured hub_destination bounds center; reuse, no new spawn.
+  - id: displays
+    kind: knowledge
+    zone: hub
+    label: Eight framed existing status TVs
+    position:
+    - 21.5
+    - 23
+    - 4
+    source: Restore checkpoint positions from repair-preflight.json; same actors retain
+      yaw0 and bindings.
+  - id: rear_passage
+    kind: exit
+    zone: hub
+    label: Existing east-edge route
+    position:
+    - 28.5
+    - 24.5
+    - 1.12
+    source: East X-350 native traceclear,ground2412; cookedcapsule traversal required
+      afterclosure.
+  - id: pix
+    kind: knowledge
+    zone: hub
+    label: Existing Pix travel helper
+    position:
+    - 21.5
+    - 20.5
+    - 1
+    source: Measured helper relocation:root(-1050,2050,2400),faceyaw90;Talkandexistinginvitecenter
+      follow.
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: station
+    class: static_mesh_actor
+    count: 55
+    source: scene-delta.json exact correction update/delete geometry; existing Engine
+      cube and project materials documented in feature048.
+    settings:
+      scene_delta_sha256: c8382d3f9b5ed6aa1ba310fca7047f97457eefc35ac4d1f57fe9e5dd02e591a6
+      review_artifacts_sha256:
+        spec.md: c6fadc7d8d3ae9370f115811b2f82d0149ca357c1a1214f7434373be1e4d5c42
+        plan.md: 048b5d972a0b024c7b640e85db8549c0a0937533d3e495b5960aacf87a96829e
+        scene-delta.json: c8382d3f9b5ed6aa1ba310fca7047f97457eefc35ac4d1f57fe9e5dd02e591a6
+        generated/station-elevation.svg: 3846c2f858a68662aa0a4b259d7bdf9e69046c9defd9d99e33f11373938235bd
+        generated/station-review.html: d1e3f22d7993bb7b34bb55cf8cec7fa88a5445923fa772d221a7b865803aaf34
+      retained_billboard_count: 8
+      retained_light_count: 8
+      changed_feature_actor_count: 2
+      pix_actor_count: 2
+      component_rotation_count: 1
+      collision: BlockAll for three structural pieces; other52 NoCollision
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: orient
+    zone: hub
+    purpose: Read existing lesson status and choose a destination through unchanged
+      routes or Pix.
+    requires: []
+    active_targets: []
+    completion: Existing lesson controllers determine progress and rewards.
+  connections: []
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.

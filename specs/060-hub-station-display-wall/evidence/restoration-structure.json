@@ -1,0 +1,161 @@
+{
+  "updated": [
+    {
+      "label": "hub060_left_wall",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1207933363"
+      },
+      "transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352.5,
+          "z": 2521
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.35,
+          "z": 2.42
+        }
+      }
+    },
+    {
+      "label": "hub060_upper_wall",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1242379365"
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2352.5,
+          "z": 2851
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.6,
+          "y": 0.35,
+          "z": 4.18
+        }
+      }
+    },
+    {
+      "label": "hub060_left_plinth",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1285028366"
+      },
+      "transform": {
+        "location": {
+          "x": -1330,
+          "y": 2352,
+          "z": 2410
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 7,
+          "y": 0.4,
+          "z": 0.2
+        }
+      }
+    },
+    {
+      "label": "hub060_header_band",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1286158368"
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2332.5,
+          "z": 3005
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.6,
+          "y": 0.05,
+          "z": 0.3
+        }
+      }
+    },
+    {
+      "label": "hub060_top_cap",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5C70903_1286681369"
+      },
+      "transform": {
+        "location": {
+          "x": -1050,
+          "y": 2352,
+          "z": 3064
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 12.7,
+          "y": 0.48,
+          "z": 0.08
+        }
+      }
+    }
+  ],
+  "recreated": [
+    {
+      "label": "hub060_right_pier",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5D10903_1635812182"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5D10903_1635812182.StaticMeshComponent0"
+      },
+      "values": {
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Campus/Materials/MI_CampusCream.MI_CampusCream"
+          }
+        ],
+        "bodyInstance": {
+          "collisionProfileName": "BlockAll",
+          "collisionEnabled": "QueryAndPhysics"
+        }
+      }
+    },
+    {
+      "label": "hub060_right_plinth",
+      "ref": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5D10903_1637818183"
+      },
+      "component": {
+        "refPath": "/fn_shoreline_island/fn_shoreline_island.fn_shoreline_island:PersistentLevel.FortStaticMeshActor_UAID_E89C2592D1B5D10903_1637818183.StaticMeshComponent0"
+      },
+      "values": {
+        "overrideMaterials": [
+          {
+            "refPath": "/fn_shoreline_island/Campus/Materials/MI_CampusDeepNavy.MI_CampusDeepNavy"
+          }
+        ],
+        "bodyInstance": {
+          "collisionProfileName": "NoCollision",
+          "collisionEnabled": "NoCollision"
+        }
+      }
+    }
+  ]
+}

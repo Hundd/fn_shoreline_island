@@ -57,3 +57,7 @@ Owner reports the game works, but correct/wrong answers feel unresponsive and th
 - S-06a: After the last result, hide/park the example and deactivate all answer assemblies. Keep section lights and the main recap. Show persistent LESSON COMPLETE / CLASSIFIER BADGE EARNED and PLAY AGAIN or RETURN TO HUB instructions on the existing HUD/board. Replay restores the initial example and three choices and clears the finish message. Return/departure clears the finish message.
 - AC-10: Given a live item, when choosing correctly or choosing the wrong category twice, then visible HUD/target feedback distinguishes success from retry and the board preserves the appropriate evidence. Verify with muted audio too.
 - AC-11: Given the seventh answer, when the result ends, then no example or active answer assembly remains; the completion prompt persists until Replay/Return/departure. Replay restores playable visuals without duplicating the badge; Return exits normally.
+
+## Regression reopened — 2026-10-10
+
+Existing S-04/S-05 and AC-01/02/03/10 have regressed: owner reports category shots do nothing; independent QA observes a generic welcome board and no rifle/current item in a fresh match. Restore existing approved auto-ready behavior and attributed category hits without changing design. Record runtime startup and player position evidence before assigning cause. See evidence/qa-unresponsive-2026-10-10.md.
