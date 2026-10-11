@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 777" role="img" aria-label="Workshop coherence — schematic; zero spatial delta blockout">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#246486"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172e43} .label{font-size:12px;paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round} .zone{font-size:14px;font-weight:bold}</style>
+<rect width="970" height="777" fill="#f4f7fa"/>
+<text x="45" y="25" font-size="19">Workshop coherence — schematic; zero spatial delta — DRAFT / review required</text>
+<text x="45" y="46" font-size="12">Top-down meters · X right, Y down · envelopes ≠ walls · paths are illustrative</text>
+<rect x="265" y="65" width="440" height="280" fill="#dce9f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="272" y="84">Compose / Test</text>
+<text font-size="11" x="272" y="100">44 × 28m</text>
+<rect x="705" y="65" width="220" height="280" fill="#e8e1f2" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="712" y="84">Connect</text>
+<text font-size="11" x="712" y="100">22 × 28m</text>
+<rect x="105" y="65" width="160" height="280" fill="#dbeee8" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="112" y="84">Inspect</text>
+<text font-size="11" x="112" y="100">16 × 28m</text>
+<rect x="45" y="65" width="60" height="280" fill="#f6edd4" fill-opacity="0.65" stroke="#6a8397" stroke-dasharray="5 3"/>
+<text class="zone" x="52" y="84">In</text>
+<text font-size="11" x="52" y="100">6 × 28m</text>
+<polyline points="65,145 105,145 225,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>arrival → inspect / always</title></polyline>
+<polyline points="225,145 265,145 425,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>inspect → compose / always</title></polyline>
+<polyline points="425,145 505,145 705,145 745,145" fill="none" stroke="#246486" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"><title>compose → connect / always</title></polyline>
+<g><title>Arrival from garden walkway; no spawn pad; XYZ [2, 8, 0.1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="65" cy="145" r="8" fill="#42a86b" stroke="white"/>
+<text x="65" y="148" text-anchor="middle" font-size="9" style="fill:white">1</text></g>
+<g><title>Return via garden_repair_walkway; XYZ [0, 8, 0]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="45" cy="145" r="8" fill="#526476" stroke="white"/>
+<text x="45" y="148" text-anchor="middle" font-size="9" style="fill:white">2</text></g>
+<g><title>Inspect clue; XYZ [18, 10, 1.2]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="225" cy="165" r="8" fill="#329bd0" stroke="white"/>
+<text x="225" y="168" text-anchor="middle" font-size="9" style="fill:white">3</text></g>
+<g><title>Large blue to reactor clue; XYZ [19, 17, 3]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="235" cy="235" r="8" fill="#329bd0" stroke="white"/>
+<text x="235" y="238" text-anchor="middle" font-size="9" style="fill:white">4</text></g>
+<g><title>SMALL BLUE visual; XYZ [16, 20, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="205" cy="265" r="8" fill="#329bd0" stroke="white"/>
+<text x="205" y="268" text-anchor="middle" font-size="9" style="fill:white">5</text></g>
+<g><title>LARGE BLUE visual; XYZ [20, 20, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="245" cy="265" r="8" fill="#329bd0" stroke="white"/>
+<text x="245" y="268" text-anchor="middle" font-size="9" style="fill:white">6</text></g>
+<g><title>WHAT Blue / Red; XYZ [26, 12, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="305" cy="185" r="8" fill="#329bd0" stroke="white"/>
+<text x="305" y="188" text-anchor="middle" font-size="9" style="fill:white">7</text></g>
+<g><title>WHICH Large / Small; XYZ [31, 12, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="355" cy="185" r="8" fill="#329bd0" stroke="white"/>
+<text x="355" y="188" text-anchor="middle" font-size="9" style="fill:white">8</text></g>
+<g><title>WHERE Reactor / Scanner; XYZ [36, 12, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="405" cy="185" r="8" fill="#329bd0" stroke="white"/>
+<text x="405" y="188" text-anchor="middle" font-size="9" style="fill:white">9</text></g>
+<g><title>SEND / see Pix act; XYZ [45, 12, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="495" cy="185" r="8" fill="#329bd0" stroke="white"/>
+<text x="495" y="188" text-anchor="middle" font-size="9" style="fill:white">10</text></g>
+<g><title>Persistent WHAT / WHICH / WHERE request; XYZ [38, 17, 3]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="425" cy="235" r="8" fill="#329bd0" stroke="white"/>
+<text x="425" y="238" text-anchor="middle" font-size="9" style="fill:white">11</text></g>
+<g><title>POWER REACTOR destination; XYZ [53, 20, 1.5]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="575" cy="265" r="8" fill="#329bd0" stroke="white"/>
+<text x="575" y="268" text-anchor="middle" font-size="9" style="fill:white">12</text></g>
+<g><title>SCANNER wrong destination; XYZ [60, 20, 1.5]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="645" cy="265" r="8" fill="#329bd0" stroke="white"/>
+<text x="645" y="268" text-anchor="middle" font-size="9" style="fill:white">13</text></g>
+<g><title>Workshop module + Connect on repair_3_floor; XYZ [70, 12, 2.7]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="745" cy="185" r="8" fill="#c79c17" stroke="white"/>
+<text x="745" y="188" text-anchor="middle" font-size="9" style="fill:white">14</text></g>
+<g><title>Replay; XYZ [74, 12, 1]; SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json. Current geometry unverified; preserve all existing transforms.</title><circle cx="785" cy="185" r="8" fill="#db8b29" stroke="white"/>
+<text x="785" y="188" text-anchor="middle" font-size="9" style="fill:white">15</text></g>
+<path d="M45,380 h100" stroke="#172e43" stroke-width="3"/><text x="155" y="385" font-size="12">10m | Z shown in marker table; ramps/collision need in-game checks</text>
+<text x="45" y="423" font-size="16" font-weight="bold">Map legend</text>
+<text x="45" y="445" font-size="12">Numbered circles: locations below. Dashed arrows: player route. Shaded areas: activity zones, not walls.</text>
+<circle cx="54.0" cy="469" r="9" fill="#42a86b"/>
+<text x="54.0" y="472" text-anchor="middle" font-size="9" style="fill:white">1</text>
+<text x="73.0" y="473" font-size="12">Arrival from garden walkway; no spawn pad</text>
+<circle cx="494.0" cy="469" r="9" fill="#526476"/>
+<text x="494.0" y="472" text-anchor="middle" font-size="9" style="fill:white">2</text>
+<text x="513.0" y="473" font-size="12">Return via garden_repair_walkway</text>
+<circle cx="54.0" cy="503" r="9" fill="#329bd0"/>
+<text x="54.0" y="506" text-anchor="middle" font-size="9" style="fill:white">3</text>
+<text x="73.0" y="507" font-size="12">Inspect clue</text>
+<circle cx="494.0" cy="503" r="9" fill="#329bd0"/>
+<text x="494.0" y="506" text-anchor="middle" font-size="9" style="fill:white">4</text>
+<text x="513.0" y="507" font-size="12">Large blue to reactor clue</text>
+<circle cx="54.0" cy="537" r="9" fill="#329bd0"/>
+<text x="54.0" y="540" text-anchor="middle" font-size="9" style="fill:white">5</text>
+<text x="73.0" y="541" font-size="12">SMALL BLUE visual</text>
+<circle cx="494.0" cy="537" r="9" fill="#329bd0"/>
+<text x="494.0" y="540" text-anchor="middle" font-size="9" style="fill:white">6</text>
+<text x="513.0" y="541" font-size="12">LARGE BLUE visual</text>
+<circle cx="54.0" cy="571" r="9" fill="#329bd0"/>
+<text x="54.0" y="574" text-anchor="middle" font-size="9" style="fill:white">7</text>
+<text x="73.0" y="575" font-size="12">WHAT Blue / Red</text>
+<circle cx="494.0" cy="571" r="9" fill="#329bd0"/>
+<text x="494.0" y="574" text-anchor="middle" font-size="9" style="fill:white">8</text>
+<text x="513.0" y="575" font-size="12">WHICH Large / Small</text>
+<circle cx="54.0" cy="605" r="9" fill="#329bd0"/>
+<text x="54.0" y="608" text-anchor="middle" font-size="9" style="fill:white">9</text>
+<text x="73.0" y="609" font-size="12">WHERE Reactor / Scanner</text>
+<circle cx="494.0" cy="605" r="9" fill="#329bd0"/>
+<text x="494.0" y="608" text-anchor="middle" font-size="9" style="fill:white">10</text>
+<text x="513.0" y="609" font-size="12">SEND / see Pix act</text>
+<circle cx="54.0" cy="639" r="9" fill="#329bd0"/>
+<text x="54.0" y="642" text-anchor="middle" font-size="9" style="fill:white">11</text>
+<text x="73.0" y="643" font-size="12">Persistent WHAT / WHICH / WHERE request</text>
+<circle cx="494.0" cy="639" r="9" fill="#329bd0"/>
+<text x="494.0" y="642" text-anchor="middle" font-size="9" style="fill:white">12</text>
+<text x="513.0" y="643" font-size="12">POWER REACTOR destination</text>
+<circle cx="54.0" cy="673" r="9" fill="#329bd0"/>
+<text x="54.0" y="676" text-anchor="middle" font-size="9" style="fill:white">13</text>
+<text x="73.0" y="677" font-size="12">SCANNER wrong destination</text>
+<circle cx="494.0" cy="673" r="9" fill="#c79c17"/>
+<text x="494.0" y="676" text-anchor="middle" font-size="9" style="fill:white">14</text>
+<text x="513.0" y="677" font-size="12">Workshop module + Connect on repair_3_floor</text>
+<circle cx="54.0" cy="707" r="9" fill="#db8b29"/>
+<text x="54.0" y="710" text-anchor="middle" font-size="9" style="fill:white">15</text>
+<text x="73.0" y="711" font-size="12">Replay</text>
+</svg>

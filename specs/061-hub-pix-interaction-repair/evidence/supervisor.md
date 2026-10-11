@@ -1,0 +1,7 @@
+# Supervised repair coordination
+
+2026-10-10. Supervisor /root delegates implementation to /root/implementer, Codex CLI host, worker_model.codexcli gpt-6.1-sol, fresh context. Exclusive editor owner /root/implementer; no parent/editor calls overlap. User explicitly prohibits in-game testing and will test manually. Implementation goal covers repair plus non-game verification only.
+
+Inspection checkpoint: correct project, game Unconnected; no mutations. Existing actor poses/configuration valid; native body NoCollision. Historic native log gives stale Verse class/load failures for pix_travel_controller. Supervisor authorizes narrow checkpoint/build/reload and existing-body collision repair; no speculative source guard or focus change.
+
+Saved checkpoint: exact controller/Pix packages saved and clean. BuildAll no diagnostics. Controller native external actor reload succeeded; exact class/editables/identity preserved. Six main Pix mesh bodyInstances changed to BlockAll/QueryAndPhysics, saved, clean and persisted after native exact reload. No source change, whole-level reload, runtime game/session/push or unrelated package save. Final build no diagnostics, no fresh travel-class warning, GetGameState Unconnected. Editor owner released to Supervisor /root with no in-flight call. Goal covers completed editor repair only; owner manual runtime acceptance remains open and is not supervised QA acceptance.

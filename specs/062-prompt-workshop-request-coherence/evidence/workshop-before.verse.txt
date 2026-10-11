@@ -3,8 +3,6 @@ using { /Verse.org/Simulation }
 using { /UnrealEngine.com/Temporary/SpatialMath }
 
 prompt_workshop_state := class:
-    var correction:?message = false
-    var returning:logic = false
     var inspected:logic = false
     var what:int = -1
     var which:int = -1
@@ -100,9 +98,7 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
     inspect_result<localizes>:message = "Pix needs the LARGE BLUE core at the POWER REACTOR."
     need_inspect<localizes>:message = "Inspect the request first."
     incomplete<localizes>:message = "Choose WHAT, WHICH ONE and WHERE before Send."
-    busy<localizes>:message = "Wait for Pix to finish, then try again."
-    edit_busy<localizes>:message = "Pix is showing this request. Change it when Pix is ready."
-    edit_delivered<localizes>:message = "This request powered the module. CONNECT, or Replay for a new request."
+    busy<localizes>:message = "Pix is carrying a core. Wait for the result."
     what_unknown<localizes>:message = "?"
     what_blue<localizes>:message = "BLUE"
     what_red<localizes>:message = "RED"
@@ -117,20 +113,13 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
     next_which<localizes>:message = "choose WHICH: LARGE or SMALL"
     next_where<localizes>:message = "choose WHERE: REACTOR or SCANNER"
     next_send<localizes>:message = "walk east to SEND TO PIX"
-    next_watch<localizes>:message = "Watch Pix try this request. Wait before changing it."
-    next_return<localizes>:message = "Pix is returning. Wait before changing it."
-    next_revise<localizes>:message = "Change a detail, then SEND TO PIX."
-    correction_step<localizes>(correction:message, phase:message):message = "{correction}\n{phase}"
-    next_connect<localizes>:message = "Walk east to CONNECT. Replay starts a new request."
+    next_watch<localizes>:message = "watch Pix carry the core"
+    next_connect<localizes>:message = "walk east to CONNECT"
     next_replay<localizes>:message = "REPLAY or walk back west"
     sending_text<localizes>:message = "Pix is fetching your core. Watch the display and destination."
-    wrong_what<localizes>:message = "Pix moved a RED core. Change WHAT to BLUE; keep LARGE and REACTOR."
-    wrong_what_where<localizes>:message = "Pix moved a RED core. Change WHAT to BLUE. Then check WHERE against the clue."
-    wrong_which<localizes>:message = "Pix moved the SMALL BLUE core. Change WHICH to LARGE; keep BLUE and REACTOR."
-    wrong_which_where<localizes>:message = "Pix moved the SMALL BLUE core. Change WHICH to LARGE. Then check WHERE against the clue."
-    wrong_where<localizes>:message = "Pix went to the SCANNER. Change WHERE to REACTOR; keep BLUE and LARGE."
-    unsupported_reactor<localizes>:message = "Pix cannot show a SMALL RED core here. Change WHAT to BLUE. Then check WHICH against the clue."
-    unsupported_scanner<localizes>:message = "Pix cannot show a SMALL RED core here. Change WHAT to BLUE. Then check WHICH and WHERE against the clue."
+    wrong_what<localizes>:message = "Pix moved a RED core. Change WHAT to BLUE; keep the other choices."
+    wrong_which<localizes>:message = "Pix moved the SMALL core. Change WHICH ONE to LARGE; keep the other choices."
+    wrong_where<localizes>:message = "Pix went to the SCANNER. Change WHERE to REACTOR; keep the other choices."
     delivered_text<localizes>:message = "The LARGE BLUE core powered the module. Press CONNECT."
     connected_text<localizes>:message = "Prompt Badge connected! A useful request says what, which one and where."
     repeat_text<localizes>:message = "Already connected. Replay if you want another turn."
@@ -217,10 +206,6 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
             return next_replay
         if (state.delivered?):
             return next_connect
-        if (correction := state.correction?):
-            if (state.returning?):
-                return correction_step(correction, next_return)
-            return correction_step(correction, next_revise)
         if (execution_owner?):
             return next_watch
         return next_send
@@ -247,12 +232,10 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
 
     on_exit(input_agent:agent):void =
         if (input_player := player[input_agent]):
-            state := get_state(input_player)
             # Release pending execution before hub travel; preserve earned state.
             if (current := execution_owner?, current = input_player):
                 set generation += 1
                 set execution_owner = false
-                set state.returning = false
                 reset_props()
             request_hud.Hide(input_player)
             feedback.Hide(input_player)
@@ -330,17 +313,6 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
             if (choice = 7):
                 send_request(input_player, state)
                 return
-            if (state.connected?):
-                feedback.Show(input_player, repeat_text, ?DisplayTime := 5.0)
-                return
-            if (state.delivered?):
-                feedback.Show(input_player, edit_delivered, ?DisplayTime := 5.0)
-                return
-            if (execution_owner?):
-                feedback.Show(input_player, edit_busy, ?DisplayTime := 4.0)
-                return
-            set state.correction = false
-            set state.returning = false
             if (choice = 1):
                 set state.what = 0
             else if (choice = 2):
@@ -366,17 +338,6 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
         if (state.delivered?):
             feedback.Show(input_player, delivered_text, ?DisplayTime := 4.0)
             return
-        if (state.what = 1, state.which = 1):
-            var correction:message = unsupported_reactor
-            if (state.destination_choice = 1):
-                set correction = unsupported_scanner
-            set state.correction = option{correction}
-            set state.returning = false
-            feedback.Show(input_player, correction, ?DisplayTime := 7.0)
-            show_request(input_player, state)
-            return
-        set state.correction = false
-        set state.returning = false
         set generation += 1
         set execution_owner = option{input_player}
         show_request(input_player, state)
@@ -402,12 +363,8 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
             if (core.TeleportTo[core_frame]) {}
             if (pix.TeleportTo[pix_frame]) {}
             Sleep(0.15)
-            if (not still_running[input_player, token]):
-                return
 
     run_request(input_player:player, what:int, which:int, destination_choice:int, token:int)<suspends>:void =
-        if (not still_running[input_player, token]):
-            return
         var core:creative_prop = large_blue_core
         var core_home:transform = large_home
         if (what = 1):
@@ -427,8 +384,6 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
         set core_destination.Translation = destination.Translation + vector3{Z := lift}
         var pix_destination:transform = core_destination
         set pix_destination.Translation = core_destination.Translation + vector3{Y := -180.0, Z := 90.0}
-        if (not still_running[input_player, token]):
-            return
         pix.MoveTo(pickup, 2.5)
         if (not still_running[input_player, token]):
             return
@@ -443,37 +398,20 @@ fn_shoreline_island_prompt_workshop := class(creative_device):
                     set state.send_data_awarded = true
                     energy.award(input_player, 5, reactor.GetTransform().Translation)
                 feedback.Show(input_player, delivered_text, ?DisplayTime := 8.0)
+        else if (what = 1):
+            feedback.Show(input_player, wrong_what, ?DisplayTime := 7.0)
+        else if (which = 1):
+            feedback.Show(input_player, wrong_which, ?DisplayTime := 7.0)
         else:
-            var correction:message = wrong_where
-            if (what = 1):
-                set correction = wrong_what
-                if (destination_choice = 1):
-                    set correction = wrong_what_where
-            else if (which = 1):
-                set correction = wrong_which
-                if (destination_choice = 1):
-                    set correction = wrong_which_where
-            if (state := states[input_player]):
-                set state.correction = option{correction}
-                set state.returning = true
-            feedback.Show(input_player, correction, ?DisplayTime := 7.0)
-        if (state := states[input_player]):
-            show_request(input_player, state)
-        if (not still_running[input_player, token]):
-            return
+            feedback.Show(input_player, wrong_where, ?DisplayTime := 7.0)
         Sleep(2.0)
         if (not still_running[input_player, token]):
             return
         core.MoveTo(core_home, 1.2)
-        if (not still_running[input_player, token]):
-            return
         pix.MoveTo(pix_home, 1.2)
-        if (not still_running[input_player, token]):
-            return
         if (still_running[input_player, token]):
             set execution_owner = false
             if (state := states[input_player]):
-                set state.returning = false
                 show_request(input_player, state)
 
     navigation_monitor()<suspends>:void =

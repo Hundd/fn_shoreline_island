@@ -1,0 +1,635 @@
+version: 1
+map_id: prompt_workshop_request_coherence
+spec_digest: 75355dd49f81ddf36805624001a3a4a1ec1a2150ce1bfee00bca48dcca9f0dd1
+patterns_digest: afe799579afa01f7e9526087150d2592f95408ace8d6e97e2778bc2cfeb613a5
+status: draft_requires_explicit_human_approval
+executable: false
+blockers: []
+position_tolerance_m: 0.25
+implementation:
+- step: inspect_existing
+  map: prompt_workshop_request_coherence
+  verify: Confirm project/world, actor identities, full transforms, bindings and checkpoint
+    before mutations.
+- step: reconcile_zone
+  zone: arrival
+  pattern: corridor
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 2900
+  - -600
+  - 2400
+  size_cm:
+  - 600
+  - 2800
+  - 1500
+  parameters:
+    width_m: 3
+    access: existing garden_repair_walkway at west edge
+  markers:
+  - id: arrival_point
+    kind: spawn
+    zone: arrival
+    label: Arrival from garden walkway; no spawn pad
+    position:
+    - 2
+    - 8
+    - 0.1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: west_exit
+    kind: exit
+    zone: arrival
+    label: Return via garden_repair_walkway
+    position:
+    - 0
+    - 8
+    - 0
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: inspect
+  pattern: knowledge_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 3500
+  - -600
+  - 2400
+  size_cm:
+  - 1600
+  - 2800
+  - 1500
+  parameters:
+    lesson: Find the large blue core. Take it to the power reactor.
+    duration_seconds: 4
+    hud_copy: true
+  markers:
+  - id: inspect_control
+    kind: knowledge
+    zone: inspect
+    label: Inspect clue
+    position:
+    - 18
+    - 10
+    - 1.2
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: clue_board_marker
+    kind: knowledge
+    zone: inspect
+    label: Large blue to reactor clue
+    position:
+    - 19
+    - 17
+    - 3
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: small_core_marker
+    kind: knowledge
+    zone: inspect
+    label: SMALL BLUE visual
+    position:
+    - 16
+    - 20
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: large_core_marker
+    kind: knowledge
+    zone: inspect
+    label: LARGE BLUE visual
+    position:
+    - 20
+    - 20
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: compose
+  pattern: prompt_workbench
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 5100
+  - -600
+  - 2400
+  size_cm:
+  - 4400
+  - 2800
+  - 1500
+  parameters:
+    choice_count: 6
+    shared_state: false
+  markers:
+  - id: what_controls
+    kind: knowledge
+    zone: compose
+    label: WHAT Blue / Red
+    position:
+    - 26
+    - 12
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: which_controls
+    kind: knowledge
+    zone: compose
+    label: WHICH Large / Small
+    position:
+    - 31
+    - 12
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: where_controls
+    kind: knowledge
+    zone: compose
+    label: WHERE Reactor / Scanner
+    position:
+    - 36
+    - 12
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: send_control
+    kind: knowledge
+    zone: compose
+    label: SEND / see Pix act
+    position:
+    - 45
+    - 12
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: request_board_marker
+    kind: knowledge
+    zone: compose
+    label: Persistent WHAT / WHICH / WHERE request
+    position:
+    - 38
+    - 17
+    - 3
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: reactor_marker
+    kind: knowledge
+    zone: compose
+    label: POWER REACTOR destination
+    position:
+    - 53
+    - 20
+    - 1.5
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: scanner_marker
+    kind: knowledge
+    zone: compose
+    label: SCANNER wrong destination
+    position:
+    - 60
+    - 20
+    - 1.5
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_zone
+  zone: connect
+  pattern: reward_room
+  policy: reuse_first; create or move only after an approved resolved delta
+  position_cm:
+  - 9500
+  - -600
+  - 2400
+  size_cm:
+  - 2200
+  - 2800
+  - 1500
+  parameters:
+    badge: Prompt Badge
+    return_mode: walking west to garden_repair_walkway
+  markers:
+  - id: module_marker
+    kind: reward
+    zone: connect
+    label: Workshop module + Connect on repair_3_floor
+    position:
+    - 70
+    - 12
+    - 2.7
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  - id: replay_marker
+    kind: checkpoint
+    zone: connect
+    label: Replay
+    position:
+    - 74
+    - 12
+    - 1
+    source: 'SCHEMATIC annotation inherited from 027 map.yaml, NOT a measured current
+      actor transform or placement instruction. Historical floor footprint: specs/027-prompt-workshop-redesign/evidence/repair-footprint-2026-09-28.json.
+      Current geometry unverified; preserve all existing transforms.'
+  verify: Compare envelope and marker positions; preserve full rotation/scale; save/readback.
+- step: reconcile_device
+  device:
+    id: entry
+    class: mutator_zone_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: controller
+    class: fn_shoreline_island_prompt_workshop
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+      source_delta: 'Only Content/fn_shoreline_island_prompt_workshop.verse: truthful
+        feedback, frozen choices, phase guidance, RED+SMALL rejection and bounded
+        cancellation safety.'
+      adapter: Feature 027 Workshop; feature 023 pattern adapter is historical capability
+        basis only.
+      feedback_matrix:
+      - '| BLUE / LARGE / R | Existing successful delivery: “The LARGE BLUE core powered
+        the module. Press CONNECT.” |'
+      - '| BLUE / LARGE / S | Demonstrate scanner. “Pix went to the SCANNER. Change
+        WHERE to REACTOR; keep BLUE and LARGE.” |'
+      - '| BLUE / SMALL / R | Demonstrate small blue at reactor. “Pix moved the SMALL
+        BLUE core. Change WHICH to LARGE; keep BLUE and REACTOR.” |'
+      - '| BLUE / SMALL / S | Demonstrate small blue at scanner. “Pix moved the SMALL
+        BLUE core. Change WHICH to LARGE. Then check WHERE against the clue.” |'
+      - '| RED / LARGE / R | Demonstrate red at reactor. “Pix moved a RED core. Change
+        WHAT to BLUE; keep LARGE and REACTOR.” |'
+      - '| RED / LARGE / S | Demonstrate red at scanner. “Pix moved a RED core. Change
+        WHAT to BLUE. Then check WHERE against the clue.” |'
+      - '| RED / SMALL / R | Reject before owner reservation/animation: “Pix cannot
+        show a SMALL RED core here. Change WHAT to BLUE. Then check WHICH against
+        the clue.” |'
+      - '| RED / SMALL / S | Reject before owner reservation/animation: “Pix cannot
+        show a SMALL RED core here. Change WHAT to BLUE. Then check WHICH and WHERE
+        against the clue.” |'
+      state_policy:
+      - '| Before Inspect / incomplete / ready | Existing Inspect and incomplete checks;
+        edits permitted | Existing next missing detail or Send |'
+      - '| Fetch/carry | Reject selectors; Send rejected | “Watch Pix try this request.
+        Wait before changing it.” |'
+      - '| Wrong result hold / return | Reject selectors; Send rejected; show matrix
+        correction | Correction plus “Pix is returning. Wait before changing it.”
+        |'
+      - '| Wrong ready | Edits permitted; new Send uses current values | Retained
+        matrix correction, then “Change a detail, then SEND TO PIX.” |'
+      - '| Correct delivery / return / delivered ready | Freeze values; Send does
+        not restart; valid Connect permitted | “Walk east to CONNECT. Replay starts
+        a new request.” |'
+      - '| Connected, including remaining return | Freeze values; repeated Connect
+        inert | “REPLAY or walk back west.” |'
+      cancellation: Token checks before run/moves, after every suspension, between
+        returns; existing reset recovery. STOP and return to planning if native cancellation
+        interferes; no speculative refactor.
+      success_policy: Connect during successful return; freeze values until Replay;
+        DATA5+3 once/run, Replay preserves totals/next-run earning, shared badge unchanged.
+      review_contract:
+        spec.md: f7fa819c99a690ab95c394514cdba152537ea2fd9a50a3649e3a9d7b7359b2f4
+        plan.md: 8951668038aa0394260a819755a2aaa15d654d2406835fa2b96963920201bb84
+        tasks.md: 8d68107bd99b713e2b073d88c5e3dfe1b2cea816d85203fe13c88e2e4c8e629a
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: clue_button
+    class: button_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: choices
+    class: button_device
+    count: 6
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: send
+    class: button_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: connect_button
+    class: button_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: replay
+    class: button_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: clue_board
+    class: billboard_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: prompt_board
+    class: billboard_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: feedback
+    class: hud_message_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: pix
+    class: creative_prop
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: cores
+    class: creative_prop
+    count: 3
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: reactor_prop
+    class: creative_prop
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: scanner_prop
+    class: creative_prop
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: module
+    class: creative_prop
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: progress
+    class: byte_island_game_manager
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+      badge: Existing shared Prompt badge guard unchanged; optional Arena untouched.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: energy
+    class: fn_shoreline_island_data_energy
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json plus current Content/fn_shoreline_island_prompt_workshop.verse;
+      current native bindings must be read back before implementation. Reuse existing
+      instance only.
+    settings:
+      action: PRESERVE existing instance, transform, native properties and bindings;
+        no placement or device mutation authorized.
+      accepted_send_data: 5
+      connect_data: 3
+      policy: Existing once-per-run grants; Replay preserves earned total and permits
+        another run; no reward redesign.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: reconcile_device
+  device:
+    id: request_hud
+    class: hud_message_device
+    count: 1
+    source: RECORDED 027 workshop-bindings-and-retirement.json request_hud; current
+      Workshop editable and show_request.
+    settings:
+      action: Reuse unchanged existing personal request HUD; phase/correction copy
+        supplied by controller only.
+  verify: Discover class/editable schemas; resolve existing references; assert count/settings
+    after any approved edit.
+- step: bind_logic
+  stages:
+  - id: enter
+    zone: arrival
+    purpose: Arrive from hub
+    requires: []
+    active_targets: []
+    completion: Entry records player and shows brief invitation.
+  - id: inspect_scene
+    zone: inspect
+    purpose: Discover the specific request
+    requires:
+    - enter
+    active_targets: []
+    completion: Inspect reveals large blue and power reactor.
+  - id: assemble
+    zone: compose
+    purpose: Set three editable slots
+    requires:
+    - inspect_scene
+    active_targets: []
+    completion: Fill all three values. Edits allowed only before Send, after unsupported
+      rejection or after a wrong demonstration fully returns.
+  - id: test
+    zone: compose
+    purpose: Send and observe a concrete result
+    requires:
+    - assemble
+    active_targets: []
+    completion: See spec feedback matrix and lifecycle policy; freeze submitted values
+      across motion/result/return, retain success through Connect until Replay.
+  - id: delivered
+    zone: connect
+    purpose: Connect powered module
+    requires:
+    - test
+    active_targets: []
+    completion: Badge guarded and finale DATA awarded once for this run.
+  connections:
+  - from: arrival
+    to: inspect
+    mode: walk
+    width: 3
+    points:
+    - - 2
+      - 8
+      - 0
+    - - 6
+      - 8
+      - 0
+    - - 18
+      - 8
+      - 0
+    gate: always
+  - from: inspect
+    to: compose
+    mode: walk
+    width: 3
+    points:
+    - - 18
+      - 8
+      - 0
+    - - 22
+      - 8
+      - 0
+    - - 38
+      - 8
+      - 0
+    gate: always
+  - from: compose
+    to: connect
+    mode: walk
+    width: 3
+    points:
+    - - 38
+      - 8
+      - 0
+    - - 46
+      - 8
+      - 0
+    - - 66
+      - 8
+      - 0
+    - - 70
+      - 8
+      - 0
+    gate: always
+  verify: Read back ordered target arrays, shared systems and required entry/exit
+    gates.
+- step: verify_gameplay
+  checks:
+  - Verse build if changed
+  - UEFN validation/cook
+  - spawn and approach
+  - objective sequence and wrong choices
+  - replay/round reset
+  - solo
+  - multiplayer shared state
+  - learning clarity and enjoyment
+  - stop game and confirm state
+  verify: Record expected/actual, deviations and evidence; transport success is not
+    acceptance.
